@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <title>[Aug15] Schedule - CS2103/T</title>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="styles/common.css" />
+    </head>
+    <body>
+        <div id="form-preferences">
+            <table>
+                <tr>
+                    <td>
+                        <form>
+                            Show: &nbsp;&nbsp; 
+                            <input type="checkbox" checked="checked" class="preferences" value="all">All</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="deadline">Deadlines</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="things-to-do">Things to do</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="lecture">Lectures</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="homework">Homeworks</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="tutorial">Tutorials</input>
+                            <input type="checkbox" checked="checked" class="preferences" value="ilo">Intended Learning Outcomes</input>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <div class="weeklyschedule">
+                <h3 id="header-content-week1" class="buttoned"><span>Week 1</span></h3>
+                <div id="content-week1">
+                </div>
+            </div>
+            <div class="weeklyschedule">
+                <h3 id="header-content-week2" class="buttoned"><span>Week 2</span></h3>
+                <div id="content-week2">
+                </div>
+            </div>
+            <div class="weeklyschedule">
+                <h3 id="header-content-week3" class="buttoned"><span>Week 3</span></h3>
+                <div id="content-week3">
+                </div>
+            </div>
+        </div>
+        <div id="handbook" class="handbook-empty" hidden>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="scripts/common.js"></script>
+    </body>
+</html>

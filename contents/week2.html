@@ -1,0 +1,364 @@
+<div class="things-to-do content-week2">
+    <h3 id="things-to-do-content-week2" class="buttoned"><span>Things to do</span></h3>
+    <div>
+        <div class="things-to-do things-to-do-week2">
+            <h3>Handbook sections to read</h3>
+            <div>
+                <ul>
+                    <li>
+                        Project: 
+                        <span onclick="getContentUsingAjax('handbook-ce1', '#embedded-week2');"><u>CE1</u></span> | 
+                        <span onclick="getContentUsingAjax('handbook-formingteams', '#embedded-week2');"><u>Forming Teams</u></span> | 
+                        Supervision | Project Grading | Peer Evaluations | Project Tools
+                    </li>
+                    <li>
+                        Policies: Policy on following instructions | Policy on grading smaller/larger teams | Policy on project work distribution
+                    </li>
+                    <li>
+                        FAQ: Why slides are not detailed enough, handouts are wordy? | Why so much self-study? | Why very narrow project scope? | Why project requirements are so vague? | Why I'm not allowed to use my favorite OS/IDE/etc?
+                    </li>
+                </ul>
+                <div id="embedded-week2">
+                </div>
+            </div>
+        </div>
+        <div class="things-to-do things-to-do-week2">
+            <h3>Submit IVLE quiz</h3>
+            <div>
+                Note that IVLE quizzes open on Fridays just after the lecture and closes on the following Tuesday 2359.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="homework content-week2">
+    <h3 id="homework-content-week2" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+    <div>
+        <p>
+            <span class="dim">{Pre-Tutorial Learning Activity = Work to be done before coming to the tutorial. These can earn participation points}<br> </span>
+
+        </p>
+        <div class="homework homework-week2">
+            <h3>Activity 1: Get started with IDEs</h3>
+            <div>
+                Check out 'getting started' resources for Eclipse and Visual Studio given under Lecture 1 Part 2 resources. Learn basic usage of your IDE (Eclipse/VS). Learn how to do proper debugging in your IDE.<br>
+                <span class="important">{You can claim points for this activity in Tutorial 2.}</span><br>
+                If you are planning to use C++ and you do not have Visual Studio installed in your computer, please see the <em>Week 1: things to do box</em>.
+            </div>
+        </div>
+        <div class="homework homework-week2">
+            <h3>Activity 2: Start using a task management tool</h3>
+            <div>
+                If you don't use a scheduling/task tracking tool (also known as GTD tools) to manage your schedules/tasks, start using one. There are many available (e.g. Google Calendar, Todo.txt, Fantastical, Wunderlist, Any.do, Remember The Milk, etc. <a href="http://www.priacta.com/Articles/Comparison_of_GTD_Software.php">here's</a> a long list). Not only it will help to keep track of your work, but also it will help you better understand the product domain of the module project. <span class="dim">If you feel sceptical about this, check out rule #1 in <a href="http://www.daniel-wong.com/2015/01/14/straight-a-student/">this</a> article.</span><br>
+                To encourage you to do the above, we resist sending you reminders about module deadlines etc. The deadlines are stated in this document. You are expected to keep track of the them yourself.<br>
+                <span class="important">{This learning activity can be reused for V0.0 submission.}</span>
+            </div>
+        </div>
+        <div class="homework homework-week2">
+            <h3>Activity 3 [individual, 3pts] Brainstorm user stories</h3>
+            <div>
+                
+                Reading the <span onclick="getContentUsingAjax('handbook-product', '#embedded-activity3');"><u>Product</u></span> product and the <span onclick="getContentUsingAjax('handbook-scope', '#embedded-activity3');"><u>Project Scope</u></span> sections of the handbook if you haven't already done so. <br>
+                <div id="embedded-activity3"></div>
+                If you missed lecture 1, please watch the webcast too. Then, do step 1 (i.e Brainstorm user stories) given under <span onclick="getContentUsingAjax('handbook-v0.0ofTheProjectManual', '#embedded-activity3a');"><u>V0.0 of the Project Manual</u></span> in the handbook. You should have at least 20 user stories. About 10 'obvious' ones and about 10 'non obvious' ones that you think are likely to be missed by your team members.<br>
+                <div id="embedded-activity3a"></div>
+                <table class="padded-borderless">
+                    <tr>
+                        <td style="text-align: left;">
+                            Write each one in a piece of paper (e.g. yellow sticky note, index card, or just pieces of paper about the size of a playing card). Bring your user story collection to the tutorial as proof.<br><br>
+                            <span class="highlighted">Note: each user story must be in a separate piece of paper so that they can be moved around and put in piles easily.</span>
+                        </td>
+                        <td>
+                            <img src="images/userstories.png" style="width: 249.50px; height: 157.53px;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tutorial content-week2">
+    <h3 id="tutorial-content-week2" class="buttoned"><span>Tutorial 1: User stories</span></h3>
+    <div>
+        <div class="tutorial tutorial-week2">
+            <h3> For CS2103 students only</h3>
+            <div>
+                If you do not have confirmed tutorial group yet, attend the slot you plan to bid for in the next round.<br>
+                You may work in 'temporary' teams formed during the tutorial just for this exercise. You can redo this exercise with your 'permanent' team after proper teams have been formed.
+            </div>
+        </div>
+        <div class="tutorial tutorial-week2">
+            <h3>[team, 2 points] Consolidate user stories</h3>
+            <div>
+                <p>
+                    Suggested workflow:
+                </p>
+                <ul>
+                    <li>
+                        Team members take turns to read out the 'most important' user story remaining in their own pile of user stories.
+                    </li>
+                    <li>
+                        Others give comments about the user story.
+                    </li>
+                    <li>
+                        Based on the team consensus, put the story (i.e. the piece of paper) onto one of these three piles:
+                    </li>
+                    <ul>
+                        <li>
+                            Yes - You would like to do implement this story before the end of the semester.
+                        </li>
+                        <li>
+                            Maybe - It is something nice to have, but you may not have time to do it.
+                        </li>
+                        <li>
+                            No - It is not something you want to have in your product. Write the reason for rejection in the back of the paper.
+                        </li>
+                    </ul>
+                    <li>
+                        At the same time, others can cross out duplicate user stories and put them in the No pile.
+                    </li>
+                    <li>
+                        After all individual piles are transferred to the above three piles, you can make a record of which stories are in the three piles and share that information with all team members.
+                    </li>
+                </ul>
+                <p>
+                    Here are some tips to improve the effectiveness of the above activity:
+                </p>
+                <ul>
+                    <li>
+                        <b>Define Jim:</b><br>
+                        Decide our target user Jim's work patterns. e.g. Does he work in groups or alone? Does he share his computer with others? (answer: no). Having a clear picture of Jim's work patterns will help when deciding the importance of a user story.
+                    </li>
+                    <li>
+                        <b>Don't be biased by the implementation plans:</b><br>
+                        This exercise is for identifying user needs. Clear your mind of ideas you have about what your product will look like. Assume that you don't know what product you will built yet.
+                    </li>
+                    <li>
+                        <b>Don't discuss implementation details or whether you are actually going to implement it:</b><br>
+                        At this point, your decision is whether the user's need is important enough for you to want to fulfil it. Implementation details can be discussed later. If a user story in the Yes pile turn out to be too difficult to implement later, you can always not implement it.
+                    </li>
+                    <li>
+                        <b>Don't be too hasty to discard 'unusual' user stories:</b><br>
+                        Those might make your product unique and stand out from the rest, at least for some potential users.
+                    </li>
+                    <li>
+                        <b>Don't go into too much details when sorting user stories:</b><br>
+                        For example, consider this user story:<br>
+                        <em>As a user, I want to see a list of tasks that needs my attention most at the present time, so that I pay attention to them first.</em><br>
+                        When discussing this user story, you do not need to worry about what tasks should be considered 'needs my attention most at the present time'. Those details can be worked out later.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tutorial tutorial-week2">
+            <h3>After the tutorial</h3>
+            <div>
+                If you have further questions about the lecture topics that you could not resolve even after the tutorial, there are several avenues to resolve them:
+                </p>
+                <ul>
+                    <li>
+                        Talk to the lecturer before or after the lecture. The lecturer will be at the lecture venue from 30 minutes before the start of the lecture.
+                    </li>
+                    <li>
+                        Post on IVLE forums.
+                    </li>
+                    <li>
+                        <span class="important">You can submit your help requests, suggestions, or questions using the weekly 'wrap up' session hosted on TEAMMATES (Wed-Fri). Please submit responses to that session <span class="highlighted">only after attending the corresponding tutorial</span>. There is <span class="highlighted">no need to submit responses to that session if you don't have</span> questions, suggestions, or help requests.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="ilo content-week2">
+    <h3 id="ilo-content-week2" class="buttoned"><span>Intended Learning Outcomes</span></h3>
+    <div>
+        <span class="dim">{These are the capabilities most of you should have achieved by this point. <span class="highlighted">Don't worry if you have not achieved these outcomes yet</span>. Some ILOs require further practice. It is fine as long as you achieve them by the end of the semester}</span>
+        <div class="ilo ilo-week2">
+            <h3>Know the pros and cons of the SE field</h3>
+            <div>
+            </div>
+        </div>
+        <div class="ilo ilo-week2">
+            <h3>Able to use user stories to record user requirements.</h3>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="lecture content-week2">
+    <h3 id="lecture-content-week2" class="buttoned"><span>Lecture 2: The program can be small, but the code need not be smelly.</span></h3>
+    <div>
+        <p>
+            Your classmates noticed your nifty program (what program? refer lecture 1 description above) and want to use it too. You want to polish up the code before you pass it to others. (1. because you take pride in your work 2. because you want others to tweak the code to their needs without bothering you). Let us look at things required to make code 'good'.
+        </p>
+        <div class="lecture lecture-week2">
+            <h3>[25 minutes] Lecture 1 Recap</h3>
+            <div>
+                <p>
+                    Slides
+                </p>
+            </div>
+        </div>
+        <div class="lecture lecture-week2">
+            <h3>[50 minutes] Part 1 - Good code, bad code: Toward production quality code</h3>
+            <div>
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="images/good code.png">
+                        </td>
+                        <td>
+                            <p>
+                                Handout | Slides
+                            </p>
+                            <p>
+                                Overview: Good code conforms to an accepted coding standard and follow good coding practices such as avoiding 'magic numbers'. Adding lengthy comments does not necessarily produce good code. One practice that is hard to learn but very important is to stay within the same level of abstraction inside a method.
+                            </p>
+                            <p>
+                                Topics: code quality
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        Interesting side reading
+                    </li>
+                    <ul>
+                        <li>
+                            [Article] Wikipedia entry on many styles of code indentation
+                        </li>
+                        <li>
+                            [Blog post] 7 Quality Principles we can learn from Google, Facebook, Microsoft
+                        </li>
+                        <li>
+                            [Blog post] Learning from Apple's #gotofail Security Bug - How following a coding style could have prevented a major security bug.
+                        </li>
+                        <li>
+                            [Blog post] Why coding style matters - A view from a practicing software developer
+                        </li>
+                        <li>
+                            [Blog post] Understanding your own code - Blogger Eli Bendersky says 'Code that isn't readable is as bad as, or worse than code that doesn't work'
+                        </li>
+                        <li>
+                            [Web article] Top 9 qualities of clean code
+                        </li>
+                        <li>
+                            [Developer opinions] What makes a good programmer good | What makes a good programmer | How do I train myself to code faster and with fewer bugs? | What is 'good code'?
+                        </li>
+                    </ul>
+                    <li>
+                        Humor: The six most common species of code (checkout number 6!), Commenting styles, XKCD on code quality
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="lecture lecture-week2">
+            <h3>[10 minutes] Part 2 - Refactoring: from Turkey to Peacock in thousand steps</h3>
+            <div>
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="images/bad code.png">
+                        </td>
+                        <td>
+                            <p>
+                                Handout | Slides
+                            </p>
+                            <p>
+                                Overview: Improving code quality should be done as refactoring rather than rewriting. Refactoring should go hand in hand with regression testing.
+                            </p>
+                            <p>
+                                Topics: refactoring
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        [Must visit, but not necessary to memorize reafactorings listed there] A catalog of common refactorings http://refactoring.com/catalog/index.html
+                    </li>
+                    <li>
+                        [Screencast] A short refactoring demo using Eclipse
+                    </li>
+                    <li>
+                        [Forum thread] How much refactoring should I do?
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="lecture lecture-week2">
+            <h3>[10 minutes] Part 3 - Your own private time machine: Introduction to revision control</h3>
+            <div>
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="images/rcs.png">
+                        </td>
+                        <td>
+                            <p>
+                                Handout | Slides
+                            </p>
+                            <p>
+                                Overview: As the code is being changed, you might want to use a revision control software to keep track of the code changes.
+                            </p>
+                            <p>
+                                Topics: revision control (individual)
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        <span class="highlighted">Suggested Git learning sequence:</span>
+                    </li>
+                    <ul>
+                        <li>
+                            Git overview video (right click → open in new tab): First, watch this to get a quick overview of Git (for beginners and intermediate users)
+                        </li>
+                        <li>
+                            Git demo (right click → open in new tab): Next, watch this short Git demo from C0dePorn that shows some basic Git commands in action. If the video above was too abstract for you, this view will show you some concrete Git commands in action. This video also describes how to install Git.
+                        </li>
+                        <li>
+                            Try Git - Now, try this online Git simulation + tutorial to learn Git basics hands-on
+                        </li>
+                        <li>
+                            Git commands tutorial (from Atlassian) - If you didn’t like the simulation above, try this tutorial instead.
+                        </li>
+                        <li>
+                            Install Git on your machine. Recommended: Install SourceTree which installs both a GUI client for Git and Git itself.
+                        </li>
+                        <li>
+                            The Pro Git Book - An online version of probably the most popular book on Git. Use this as a reference to learn Git usage in more detail.
+                        </li>
+                        <li>
+                            Once you know the basic terminology, try a web search to find how to perform and Git task. e.g. how to undo a Git commit 
+                        </li>
+                    </ul>
+                    <li>
+                        GUI Clients:
+                    </li>
+                    <ul>
+                        <li>
+                            SourceTree, available for both Windows and Mac
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

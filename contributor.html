@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <title>Contributor guide</title>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="styles/common.css" />
+        <style>
+            body,
+            table > tbody > tr > td {
+                font-size: 16px;
+            }
+            code {
+                font-size: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Contributor guide</h2>
+        <div class="sections">
+            <h3>General</h3>
+            <div>
+                <ul>
+                    <li>
+                        HTML can be used freely in any part of the page.
+                    </li>
+                    <li>
+                        Please follow the class/id names and hierarchies strictly because the JS functions and CSS rules target very specific class/id names and hierarchies.
+                    </li>
+                    <li>
+                        Try not to use multibyte characters (e.g ‘, ’, “, ”).
+                    </li>
+                    <li>
+                        Images shall be hosted ourselves except for those taken from external website (with source acknowledged). Also, they shall be lossless-ly compressed via <a href="https://kraken.io/web-interface">this service</a>.
+                    </li>
+                    <li>
+                        Some frequently-used classes have been defined for paragraph texts. Currently there are:
+                        <ul>
+                            <li>
+                                <span class="highlighted">highlighted</span>
+                            </li>
+                            <li>
+                                <span class="highlighted-darktext">highlighted-darktext</span>, can be used if the highlighted text has bright colour, in which the previous class will do this: <span class="highlighted" style="color: #fff;">highlighted</span>
+                            </li>
+                            <li>
+                                <span class="important">important</span>
+                            </li>
+                            <li>
+                                <span class="small-font">small-font</span>
+                            </li>
+                            <li>
+                                <span class="keyword">keyword</span>
+                            </li>
+                            <li>
+                                <div class="additional-info">additional-info. This is a class for div wrapper.</div>
+                            </li>
+                        </ul>
+                        Feel free to define new styles. Place them in appropriate section in <code>common.css</code>.
+                    </li>
+                    <li>
+                        Samples can be seen in various pages in <code>contents/</code> folder.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sections">
+            <h3>Contributing to schedule</h3>
+            <div>
+                <p>
+                    Follow the template in <code>templates/weeklytemplate.html</code>.
+                </p>
+                <ul>
+                    <li>
+                        The sub-panels can be copied for as many as needed.
+                    </li>
+                    <li>
+                        Replace * with the week number and % with week number - 1.
+                    </li>
+                    <li>
+                        Please do not change the class names to allow JS functions and CSS rules to work.
+                    </li>
+                    <li>
+                        If there are links to external files for download (e.g lecture notes, slides, ...), place them in <code>files/</code> folder for better organization.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sections">
+            <h3>Contributing to handbook</h3>
+            <div>
+                <p>
+                    Contribute section contents as individual HTML files. Save as <code>contents/handbook-*.html</code>, where * is the keyword of the section. Please choose one that's representative.
+                </p>
+                <p>
+                    To make the section appear in the actual handbook (<code>handbook.html</code>), add these lines:<br>
+                    <div style="margin: 10px 0; padding-left: 20px;">
+                        <code>
+                            &lt;h2&gt;The section name&lt;/h2&gt; // use h3 for sub-sections<br>
+                            &lt;div id="handbook-*"&gt; // * is again the same keyword used<br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    Then, on the script at the bottom of the page, add the keyword to the array variable <code>sections</code>.
+                </p>
+            </div>
+        </div>
+        <div class="sections">
+            <h3>Embedding parts of handbook to the schedule</h3>
+            <div>
+                <p>
+                    To make a certain keyword/keyphrase trigger an opening of an embed handbook, follow this template:<br>
+                    <div style="margin: 10px 0; padding-left: 20px;">
+                        <code>
+                            &lt;span onclick="getHandbookSection('*', '**');"&gt;&lt;u&gt;Some keyword&lt;/u&gt;&lt;/span&gt;<br>
+                            // * = the same keyword of the section used above<br>
+                            // ** = the selector for the embedded window
+                        </code>
+                    </div>
+                </p>
+                <p>
+                    The embedded window should be a classless div wrapper with a unique id.
+                </p>
+            </div>
+        </div>
+        <div class="sections">
+            <h3>Testing new week entries</h3>
+            <div>
+                <p>
+                    Name the file <code>week*.html</code> and place it in <code>contents/</code> folder.
+                </p>
+                <p>
+                    Right after the last existing week entry on <code>schedule.html</code>, add these lines:<br>
+                    <div style="margin: 10px 0; padding-left: 20px;">
+                        <code>
+                            &lt;div class="weeklyschedule"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;h3 id="header-content-week*" class="preloaded"&gt;Week *&lt;/h3&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;div id="content-week*"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &lt;/div&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                </p>
+                <p>
+                    Load <code>index.html</code> and subsequently <code>schedule.html</code> from the sidebar, then open the newly added accordion. Check manually if everything is fine.
+                </p>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script>
+            $('.sections').accordion({
+                active: false,
+                collapsible: true,
+                heightStyle: 'content'
+            });
+        </script>
+    </body>
+</html>

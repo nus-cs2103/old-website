@@ -1,0 +1,156 @@
+<h3>CE1: TextBuddy</h3>
+<div>
+    <div class="content-ce1">
+        <h3>Overview</h3>
+        <div>
+            <p>
+                Write a CLI (Command Line Interface) program called TextBuddy using Java/C++ to manipulate text in a file. Here is a sample interaction with the program. Text in purple are commands entered by the user.
+            </p>
+            <p>
+                c:&gt; TextBuddy.exe mytextfile.txt  (OR c:&gt;java  TextBuddy mytextfile.txt)<br>
+                Welcome to TextBuddy. mytextfile.txt is ready for use<br>
+                command: add little brown fox<br>
+                added to mytextfile.txt: "little brown fox"<br>
+                command: display<br>
+                1. little brown fox<br>
+                command: add jumped over the moon<br>
+                added to mytextfile.txt: "jumped over the moon"<br>
+                command: display<br>
+                1. little brown fox<br>
+                2. jumped over the moon<br>
+                command: delete 2<br>
+                deleted from mytextfile.txt: "jumped over the moon"<br>
+                command: display<br>
+                1. little brown fox<br>
+                command: clear<br>
+                all content deleted from mytextfile.txt<br>
+                command: display<br>
+                mytextfile.txt is empty<br>
+                command: exit<br>
+                c:&gt;
+            </p>
+            <p>
+                Note that mytextfile.txt is a parameter given when running the program. i.e., The name of the file is not always mytextfile.txt. [C++ guys: Here's an article on how to handle command line parameters]
+            </p>
+            <p>
+                You may make any reasonable assumptions about program behavior not evident from the above sample. State all your assumptions in the header comment of the TextBuddy main file.
+            </p>
+            <p>
+                Things to look out for:
+            </p>
+            <ul>
+                <li>
+                    The file can be saved to the disk (a) after each user operation, (b) periodically e.g., every 5 seconds, (c) when the user exit the program. We are interested to know which option you choose. Hint: Avoid pre-mature optimizations.
+                </li>
+                <li>
+                    We are VERY interested in how human-understandable your code is, and how well it follows the specified coding standard (Java coding standard, C++ coding standard).
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-ce1">
+        <h3>Submission</h3>
+        <div>
+            <p>
+                <b>IMPORTANT: Please follow submission instructions precisely e.g. file format, file name, page header, cover page content etc. Your submissions are processed -- sometimes by automated scripts, sometimes manually -- and those processes break if the submission is not in the expected format. On a related note, we are in a field where small details matter. Train yourself to pay attention to details. We cannot afford to be sloppy.</b>
+            </p>
+            <p>
+                You need to submit your work in BOTH these formats.
+            </p>
+            <ol>
+                <li>
+                    Source format (for accuracy checking)
+                </li>
+                <ul>
+                    <li>
+                        Put testinput.txt, expected.txt files used for testing in the same folder where TextBuddy.class or TextBuddy.exe is.<br>
+                        C++ users: to reduce file size, you can remove those big *.ipch files created by Visual Studio.<br>
+                        Note: testinput.txt and expected.txt are the files you used for regression testing of your program, using the technique explained in the Lecture 1 handout about regression testing. For example,<br>
+                        TextBuddy.exe mytestfile.txt &lt;testinput.txt &gt;output.txt<br>
+                        FC output.txt expected.txt
+                    </li>
+                    <li>
+                        Zip up the entire project folder in zip format (no other archiving formats please). It should also include source files (.java, .h, .cpp etc.)
+                    </li>
+                    <li>
+                        Name it "["Tutorial group ID"]["Your full name"][CE1][java | cpp]".zip (e.g. [w10][Li Jien][CE1][java].zip) Use the exact tutorial group ID as specified in our Schedule page (See under Tutorial Schedule section)
+                    </li>
+                    <li>
+                        Upload to the appropriate IVLE folder.
+                    </li>
+                </ul>
+                <li>
+                    Document format (for code quality checking and giving feedback)
+                </li>
+                <ul>
+                    <li>
+                        Copy paste ALL your code, input.txt, and expected.txt to a single document (use this template) and save in pdf format.
+                    </li>
+                    <li>
+                        Name it similar to the zip file (e.g. [w10][Li Jien][CE1][cpp].pdf)
+                    </li>
+                    <li>
+                        Submit it to the appropriate IVLE folder.
+                    </li>
+                </ul>
+            </ol>
+            <p>
+                Notes:
+            </p>
+            <ul>
+                <li>
+                    If re-uploading an updated version, please delete the previous version first. IVLE does not overwrite the previous version.
+                </li>
+                <li>
+                    All submissions will be published to the class.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content-ce1">
+        <h3>Evaluation</h3>
+        <div>
+        	<p>
+        		Correct functionality is expected, but the focus is on code quality.
+        	</p>
+        	<p>
+        		This code will be graded by one tutor and peer-reviewed by 1-2 classmates.
+        	</p>
+        	<p>
+        		Points for code:
+        	</p>
+        	<ul>
+        		<li>
+        			On track (a reasonable submission): 15 points
+        		</li>
+        	</ul>
+        	<p>
+        		Bonus points (added to the above):
+        	</p>
+        	<ul>
+        		<li>
+        			Punctuality bonus (Submitted on time): 1 points {strictly based on the time recorded by IVLE}
+        		</li>
+        		<li>
+        			Format bouns (Followed exact submission format): 1 points
+        		</li>
+        	</ul>
+        	<p>
+        		Penalties (deducted from above)
+        	</p>
+        	<ul>
+        		<li>
+        			No evidence of effort:<br>
+        			Submissions below what we consider "reasonable quality" will be penalized further based on the quality level. e.g. No evidence of applying the materials covered in the module, such as applying SLAP, following the given coding standard etc.
+        		</li>
+        		<li>
+        			Late submissions:<br>
+        			Submissions received more than 24 hours late will be penalized by -2 points per each 24 hours delayed beyond the first 24 hours.
+        		</li>
+        	</ul>
+        	<p>
+        		Total points will be in the range of 0 - 15, most submissions are expected to earn 15.
+        	</p>
+        </div>
+    </div>
+</div>
