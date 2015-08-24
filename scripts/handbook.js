@@ -3,11 +3,11 @@ for (var i in sections) {
     $.ajax({
         type: 'GET',
         async: false,
-        url: 'handbook-' + section + '.html',
+        url: section + '.html',
         error: function() {
         },
         success: function(data) {
-            $('#handbook-' + section).html(data);
+            $('#' + section).html(data);
         }
     });
 }
