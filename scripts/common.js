@@ -123,7 +123,7 @@ $(document).ready(function() {
         $('#content').css('height', calculateContainerSize());
     });
 
-    for (var week = 1; week <= 3; week++) {
+    for (var week = 0; week <= 3; week++) {
         $('#content-week' + week).html('<img height="75" width="75" class="margin-center-horizontal" src="images/ajax-preload.gif"/>');
         $.ajax({
             type: 'GET',
