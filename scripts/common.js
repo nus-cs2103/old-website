@@ -9,7 +9,7 @@ function makeAccordion(elementSelector) {
 function getContentUsingAjax(section, elementSelector) {
     $.ajax({
         type: 'GET',
-        url: 'contents/' + section + '.html',
+        url: section + '.html',
         error: function() {
 
         },
@@ -128,7 +128,7 @@ $(document).ready(function() {
         $.ajax({
             type: 'GET',
             async: false,
-            url: 'contents/week' + week + '.html',
+            url: 'week' + week + '.html',
             error: function() {
 
             },

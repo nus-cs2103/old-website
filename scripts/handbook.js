@@ -3,7 +3,7 @@ for (var i in sections) {
     $.ajax({
         type: 'GET',
         async: false,
-        url: 'contents/handbook-' + section + '.html',
+        url: 'handbook-' + section + '.html',
         error: function() {
         },
         success: function(data) {
