@@ -1,1 +1,163 @@
-'content goes here' 
+<p>
+	Here are the things to do for CE2 (read all instructions before you start CE2).
+</p>
+<ol>
+	<li>
+		After CE1 code written by your classmates are made available on IVLE, do look for code that reads better than
+		yours. Think about what makes them more readable than yours. If you did not attend lecture 2, please watch
+		the webcast to learn what we consider ‘good code’ in this module.
+	</li>
+	<li>
+		Refactor CE1 until it reaches a high quality standard. Remember to consider feedback received from CE1
+		code review. In particular,
+	</li>
+	<ol type="a">
+		<li>
+			Take into account the coding standards we have published (in the schedule page).
+		</li>
+		<li>
+			We expect to see short and simple methods that follow SLAP.
+		</li>
+		<li>
+			Also follow other practices recommended such as good naming and the right level of commenting.
+		</li>
+	</ol>
+	<p>
+		<span class="highlighted">Note that those who don’t reach the expected code quality in CE2 may
+		have to submit CE3 as well.</span>
+	</p>
+	<li>
+		Add these additional functionality.
+	</li>
+	<ul>
+		<li>
+			A sort command to sort lines alphabetically.
+		</li>
+		<li>
+			A search command to search for a word in the file and return the lines containing that word.
+		</li>
+	</ul>
+	<li>
+		When adding above features, do it in TDD fashion.
+	</li>
+	Hints:
+	<br>
+	<ul>
+		<li>
+			If you are new to unit testing, try adding some unit tests to existing CE1 functionality first before trying
+			TDD. However, you are not *required* to add tests for existing CE1 functionality.
+		</li>
+		<li>
+			<span class="highlighted">TDD is not simply ‘writing tests before writing functional code’.
+			</span> Refer the demo in lecture 4 to find out how
+			to TDD in small steps.
+		</li>
+		<li>
+			When unit testing the ‘sort’ command, you can use existing ‘display’ and ‘add’ commands in the testing
+			process. e.g., add a line, sort, display, and check if the display is sorted properly. This is not strict
+			unit testing since we are not testing ‘sort’ functionality in isolation from other functionality, but it
+			is acceptable since those other functions are also under your control and tested by you.
+		</li>
+		<li>
+			Having a public method that takes the user command and executes it (CityConnect uses this
+			approach) can greatly simplify the testing process. Then, you can write tests like this:
+		</li>
+		e.g.
+		<br>
+		//check if the “clear” command returns the right status message
+		<br>
+		assertEquals(“all content deleted from mytextfile.txt”,
+		<br>
+		TextBuddy.executeCommand(“clear”));
+		<br>
+		//check if the file was actually cleared
+		<br>
+		assertEquals(0, TextBuddy.getLineCount());
+		<br>
+	</ul>
+	<li>
+		There is no need to test using input/output redirection method used in CE1. Instead, you should use a proper
+		unit testing framework in CE2.
+	</li>
+	<li>
+		Commit the code to your repo frequently, after each step in refactoring/TDD (e.g., add a test →
+		commit → add code to pass the test → commit, and so on). Doing so will help us see the steps you followed during
+		coding. <span class="highlighted">VisualStudio users: Avoid adding binary files</span> and temporary files to Git. These can
+		make your repo too big. See <a href="http://stackoverflow.com/questions/4095696/mercurial-hgignore-for-visual-studio-2010-projects">
+		here</a> for a list of file types you should not add.
+	</li>
+</ol>
+<p>
+	<strong>submission:</strong> Similar to CE1 except,
+</p>
+<ul>
+	<li>
+		Use <a href="http://www.comp.nus.edu.sg/~cs2103/AY1516S1/files/%5bTutorialGroupID%5d%5bYour%20full%20name%5d%5bCE2%5d%5bjava%5d.doc">
+		this template</a>.
+	</li>
+	<li>
+		Replace ‘CE1’ with ‘CE2’ in the file name.
+	</li>
+	<li>
+		The zip file should Include the whole project folder which <span class="highlighted">
+		should also contain the hidden .git folder</span>
+		created by Git in addition to all source files (.java, .h, .cpp, .cs etc). But remember to remove binary
+		files and other temporary files before submitting.
+	</li>
+	<li>
+		Include <span class="highlighted">unit tests</span> as well (in both zip file and pdf file).
+		However, there’s no need to include
+		testInput.txt and expectedOutput.txt for CE2.
+	</li>
+</ul>
+<p>
+	<strong>evaluation:</strong> Similar to CE1 except.
+</p>
+<ul>
+	<p>
+		Points for code quality:
+	</p>
+	<ul>
+		<li>
+			On track (a reasonable submission) : 15 points
+		</li>
+		<li>
+			Leading the class in quality : 18 points
+		</li>
+		<li>
+			Code quality still needs significant catching up : 10 points
+		</li>
+	</ul>
+	<p>
+		Bonus points (added to the above):
+	</p>
+	<ul>
+		<li>
+			Submitted on time : 1 points
+		</li>
+		<li>
+			Followed exact submission format : 1 points
+		</li>
+	</ul>
+	<p>
+		Penalties
+	</p>
+	<ul>
+		<li>
+			No evidence of effort, no attention paid to CE1 comments:
+		</li>
+		Submissions below what we consider “reasonable quality” will be penalized further based on the quality
+		level. e.g. No evidence of applying the materials covered in the module. such as applying SLAP, following
+		the given coding standard etc. Problems pointed out in CE1 comments still remain.
+		<br>
+		<li>
+			Late submissions:
+		</li>
+		Submissions received more than 24 hours late will be penalized by -2 points per each 24 hours delayed beyond
+		the first 24 hours.
+		<br>
+	</ul>
+	<p>
+		Total points will be in the range of 0 - 20, most submissions are expected to earn 17.
+	</p>
+</ul>

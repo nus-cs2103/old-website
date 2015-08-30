@@ -1,1 +1,123 @@
-'content goes here' 
+<p>
+	The scope of the project will be restricted. This is to reduce your workload and discourage an ‘arms race’
+	where you try to implement as many features as possible with no time to spend on learning good software engineering
+	principles and practices.
+</p>
+<p>
+	Write the software to cater for Jim. He is an office worker who has an office computer (used when at office) and his
+	personal laptop (used when at home or travelling). His computers are not shared by other colleagues or family members.
+	He is not expected to use this software for collaborative work scheduling with others.
+</p>
+<p>
+	<span class="highlighted">Narrowing/widening the scope of the project further is discouraged. </span>
+</p>
+<p>
+	<strong>Must-have features:</strong>
+	<ol>
+		<li>
+			Support for events (i.e., has a start time and end time), deadlines (tasks that have to be done
+			before a specific deadline), and floating tasks (tasks without specific times). Note that these category
+			names are temporary names only. You should figure out what are the best names for these categories.
+			Are these names intuitive to end-users? Should they even care about consciously categorizing tasks?
+		</li>
+		<li>
+			CRUD (i.e., Create, Read, Update, Delete) support for tasks.
+		</li>
+		<li>
+			Undo operations (at least for the most recent action)
+		</li>
+		<li>
+			Some flexibility in the command format: Support a few natural variations of the command format.
+		</li>
+		<li>
+			Simple search: A simple text search for finding an item if the user remembers some keywords from the
+			item description.
+		</li>
+		<li>
+			Some way to keep track of which items are done and which are yet to be done.
+		</li>
+		<li>
+			The ability to specify a specific folder as the data storage location. With this feature,
+			Jim can choose to store the data file in a local folder controlled by a cloud syncing service (e.g. dropbox),
+			allowing him to access task data from multiple computers.
+		</li>
+	</ol>
+</p>
+<p>
+	<strong>Extra features (choose one):</strong>
+</p>
+<p>
+	Difficulty-low
+	<ul>
+		<li>
+			AutomatedTesting : Achieve a very high level of automated testing.
+		</li>
+		<li>
+			RecurringTasks: Support for managing recurring tasks. e.g. CS2103 lectures are a recurring task from week 1
+			to week 13 except in recess week.
+		</li>
+	</ul>
+</p>
+<p>
+	Difficulty-medium
+	<ul>
+		<li>
+			PowerSearch : More powerful and intelligent search. e.g. search for empty slots, near-match search,
+			auto-complete (similar to Google search box), filters for other attributes (e.g. start time).
+		</li>
+		<li>
+			FlexiCommands: High flexibility in command format. e.g., non-strict ordering of keywords, ability
+			to specify aliases for commands, support for more ‘natural’ language input, multiple undo/redo,
+			How flexible should the format be? As flexible, intuitive, and user-friendly as you can make it.
+		</li>
+	</ul>
+</p>
+<p>
+	Difficulty-high
+	<ul>
+		<li>
+			GoodGui: A good GUI to give visual feedback to the user e.g., in-built guidance for new users, good visual
+			feedback for actions, feedback while typing commands, hotkey to activate/hide, notifications, etc. conveying
+			more information visually (e.g. more important/urgent tasks stand out from the rest, longer events look
+			different from shorter events, easy to see free slots, etc.)
+		</li>
+		<li>
+			GoogleIntegration: Google Calendar integration. e.g. upload todo items to GCal, two-way sync, Support for
+			GCal quick add command format, etc. You may also use the Google Tasks API for this.
+		</li>
+		<li>
+			Propose your own (subject to approval)
+		</li>
+	</ul>
+</p>
+<p>
+	Notes:
+	<ul>
+		<li>
+			The number of marks allocated to the extra feature is the same, irrespective of the difficulty level.
+			Choose Difficulty-medium or Difficulty-high buckets if you want to flex your SE muscles or to learn extra
+			stuff (e.g. inegration with a Web app, GUI programming etc.). <span class="highlighted">Choosing higher
+				difficulty buckets will not
+			gain you more marks.</span> They are a way for you to go the extra mile.<br>
+			Why bother doing those harder ones at all? In addition to the obvious benefits (i.e. learn more by doing more),
+			doing those buckets can be beneficial when applying for CS2103 tutorships, applying for SE internships, or when
+			requesting reference letters from Damith.
+		</li>
+		<li>
+			Note that each of these extra features are “feature buckets”. You should pick a bucket and implement
+			things that can be put in that bucket. Some things can be put in multiple buckets. For example, a GUI feature
+			for auto-complete can be considered as in the PowerSearch bucket as well as in the GoodGui bucket.
+		</li>
+		<li>
+			<span class="highlighted">Only one extra feature bucket will be considered for grading.</span> If you chose
+			the GoodGui bucket but also
+			implemented a basic integration with the Google Calendar, the latter will not earn marks unless it contributes
+			to a better GUI.
+		</li>
+		<li>T
+			he list of specific features given under each bucket is examples only and is non-exhaustive.
+		</li>
+	</ul>
+	Unless you choose GoodGui as your extra feature, the product can be pure command line or have a simple GUI
+	(i.e., just a text box and display area for output).
+</p>
