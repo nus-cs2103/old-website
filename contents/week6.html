@@ -2,14 +2,8 @@
     <h3 id="deadline1-content-week6" class="buttoned"><span>Deadlines </span></h3>
     <div>
         <div class="deadline deadline1-week6">
-            <h3>[Mon 23:59] Deadline ABC</h3>
+            <h3>[Sat 19th Sep, 23.59] Deadline Coding Exercise 2 (CE2)</h3>
             <div>
-            </div>
-        </div>
-        <div class="deadline deadline1-week6">
-            <h3>[Fri 23:59] Deadline XYZ</h3>
-            <div>
-                Details about this deadline
             </div>
         </div>
     </div>
@@ -19,15 +13,53 @@
     <h3 id="things-to-do-content-week6" class="buttoned"><span>Things to do</span></h3>
     <div>
         <div class="things-to-do things-to-do-week6">
-            <h3>Task title</h3>
+            <h3>CE1 to CE2</h3>
             <div>
-                task desc
+                <ul>
+                    <li>
+                        When published, read the CE1 peer code reviews in TEAMMATES.
+                    </li>
+                    <li>
+                        You should have received<br>
+                        (a) at least one peer code review AND<br>
+                        (b) comments about SLAP from your tutor. If that is not the case, please inform your tutor.
+                    </li>
+                    <li>
+                        Don&#39;t get upset if the reviews you received seem &#39;wrong&#39; or &#39;contradictory&#39;. If you are sure a point in the review is wrong, just ignore it. If you are not sure yourself, you can get the opinion of your team members before deciding to reject it.
+                    </li>
+                    <li>
+                        Please <span class="highlighted">do not contact the peer reviewer to respond</span> to the review.  While such follow up discussions are part of real code reviews, at this time we do not have enough resources to supervise/guide such discussions among you.
+                    </li>
+                    <li>
+                        If you find something in your peer code review that you consider &#39;offensive&#39;, please inform lecturer for follow up action.
+                    </li>
+                    <li>
+                        If you haven&#39;t already, do start CE2. If you have already done CE2, you may wish to refactor further based on the comments received and Lecture 5 part 2.
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="things-to-do things-to-do-week6">
-            <h3>Task title</h3>
+            <h3>Peer evaluation 1 results</h3>
             <div>
-                task desc
+                <ul>
+                    <li>
+                        When published, read the <span style="font-style:italic">Peer Evaluation 1</span> results published on TEAMMATES.
+                    </li>
+                    <li>
+                        Refer the &#39;Peer evaluations&#39; section in the handbook for more guidance on how these evaluations will be used for grading and how to interpret these results.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="things-to-do things-to-do-week6">
+            <h3>Feedback for V0.0</h3>
+            <div>
+                <ul>
+                    <li>
+                        Read <span onclick="getContentUsingAjax('', '#embedded-week6-');"><span class="embedded-link">Common Issues Noticed in V0.0</span></span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -37,51 +69,115 @@
     <h3 id="homework-content-week6" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
         <div class="homework homework-week6">
-            <h3>Activity 1 [Individual, 3pts]</h3>
+            <h3>[Individual, 2pts] Write some unit tests for CE1</h3>
             <div>
-                desc
+                You must use a unit testing framework (JUnit or Visual Studio native unit testing framework) for this. TDD is not applicable for this exercise. But you must use TDD for CE2.
             </div>
         </div>
         <div class="homework homework-week6">
-            <h3>Activity 2 [Team, 2pts]</h3>
+            <h3>[Optional]</h3>
             <div>
-                desc
+                Download a few V0.0 submissions of other teams from IVLE and take a look. It is OK to adapt ideas from others as long as you give them credit.
+            </div>
+            <br>
+        </div>
+        <div class="homework homework-week6">
+            <div>
+                Go through &#39;<span class="highlighted" style="text-decoration: underline"><span onclick="getContentUsingAjax('', '#embedded-week6-');"><span class="embedded-link">Common Issues Noticed in V0.0</span></span></span>&#39; (<span class="highlighted" style="color: #980000;">MUST read</span><span class="highlighted">)</span> to find out how to improve your product. That document covers many more areas for improvement than the ones mentioned by tutor. If your final product has any issues mentioned in that document, you will be penalized.
             </div>
         </div>
     </div>
 </div>
 
 <div class="tutorial content-week6">
-    <h3 id="tutorial-content-week6" class="buttoned"><span>Tutorial 5: Tutorial title</span></h3>
+    <h3 id="tutorial-content-week6" class="buttoned"><span>Tutorial 5: Unit testing, project planning, task tracking</span></h3>
     <div>
         <div class="tutorial tutorial-week6">
-            <h3> [Team, 2pts] Activity 1</h3>
+            <h3> [Team, 2pts] Define project tasks.</h3>
             <div>
-                desc.
+                <ul>
+                    <li>
+                        <span style="text-decoration: underline">Re-schedule user stories</span> among milestones, if necessary. <br>
+                        You may wish to schedule &#39;risky&#39; features earlier so that you have enough time to recover if their implementation did not go according to expectations.
+                    </li>
+                    <li>
+                        <span style="text-decoration: underline">Assign components</span> in your architecture among team members. i.e. who will implement which component. If you have fewer components than team members, consider dividing bigger components into sub components.<br>
+                        <img src="../images/architecture.png" style="width: 249.50px; height: 157.53px;"><br>
+                        Note: See if <span onclick="getContentUsingAjax('', '#embedded-week6-');"><span class="embedded-link">this tip</span></span> can improve your design.
+                    </li>
+                    <li>
+                        <span style="text-decoration: underline">Decide projects tasks</span> that needs to be done in the next week, assign them to team members. The allocation of tasks (i.e. who does which task) and task status labels (status.done etc.) should be updated at least weekly.
+                        <br>
+                        You may wish to break bigger tasks into smaller manageable size. For example, you can designate a big user story as type.epic and create several smaller user stories to represent parts of that epic. Similarly, you can create smaller tasks to represent user stories. 
+                        <br>
+                        <span style="color: #980000;">Must read</span>: 
+                        <span onclick="getContentUsingAjax('', '#embedded-week6-');"><span class="embedded-link">Guidelines for using issue tracker to track project work</span></span>
+                        <br>
+                        Some example tasks for &#39;User can add a floating tasks&#39; user story:
+                        <br>
+                        <ul>
+                            <li>
+                                UI support for adding floating tasks (assignee: David, milestone V1.0)
+                            </li>
+                            <li>
+                                Parser support for adding floating tasks (assignee: Chin Chin, milestone V1.0)
+                            </li>
+                            <li>
+                                Controller support for adding floating tasks (assignee: Ravi, milestone V1.0)
+                            </li>
+                            <li>
+                                Storage support for adding floating tasks (assignee: Jean, milestone V1.0)
+                            </li>
+                            <li>
+                                Data support for adding floating tasks (assignee: Jean, milestone V1.0)
+                            </li>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="tutorial tutorial-week6">
-            <h3> [Individual, 1pt] Activity 2</h3>
+            <h3> [Individual, 2pts] Allocate next week&#39;s project tasks.</h3>
             <div>
-                desc.
+                <ul>
+                    <li>
+                        Record the assignment of tasks to yourself in the issue tracker (i.e. set the assignee property to yourself).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tutorial tutorial-week6">
+            <div>
+                You may also clarify doubts about V0.0 feedback with your tutor, if any.
+            </div>
+            <br>
+        </div>
+        <div class="tutorial tutorial-week6">
+            <div>
+                Before you leave the tutorial, show to the tutor the task assignment for each team member. You need to use <a target="_blank" href="https://github.com/HubTurbo/HubTurbo">HubTurbo</a> for this. At least one team member who can connect to the TV should use HubTurbo to show your issue assignment to the tutor.
+                <br>
+                Tip: create one panel for each team member and use the assignee:username filter to show issues assigned for a specific member in each panel (see screenshot below). You can save this board for future use.
+            </div>
+            <br>
+        </div>
+        <div class="tutorial tutorial-week6">
+            <div>
+                Remember to update task status as you complete them over the next week.
             </div>
         </div>
     </div>
 </div>
 
 
-
-
 <div class="ilo content-week6">
     <h3 id="ilo-content-week6" class="buttoned"><span>Intended Learning Outcomes</span></h3>
     <div>
         <div class="ilo ilo-week6">
-            <h3>ILO1 title</h3>
+            <h3>Can use simple teamwork tools and techniques.</h3>
             <div>
             </div>
         </div>
         <div class="ilo ilo-week6">
-            <h3>ILO2 title</h3>
+            <h3>Can use unit testing frameworks to automate testing. Understands the basics of TDD.</h3>
             <div>
             </div>
         </div>
@@ -90,25 +186,130 @@
 
 
 <div class="lecture content-week6">
-    <h3 id="lecture-content-week6" class="buttoned"><span>Lecture 6: From program to a product idea</span></h3>
+    <h3 id="lecture-content-week6" class="buttoned"><span>Lecture 6: Still doing detailed design, while getting more out of OO</span></h3>
     <div>
         <div class="lecture lecture-week6">
-            <h3>[30 minutes] Part 1 - Part 1 Title</h3>
+            <h3>[50 minutes] Part 1 - Advanced OO concepts</h3>
             <div>
-                   desc
+                 <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="../images/advanced_oo.png">
+                        </td>
+                        <td>
+                            <p>
+                                <a target="_blank" href="../files/slide/">Slides</a>
+                            </p>
+                            <span class="dim">
+                            <p>
+                                <strong>Overview:</strong>Inheritance and polymorphism are powerful OO features that can be beneficial in certain design contexts. There are a few other nitty-gritties an OO guy should know such as class-level members.
+                            </p>
+                            <p>
+                                <strong>Topics:</strong> Advanced OO concepts.
+                            </p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        [Optional reading] <a target="_blank" href="http://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OOP_ObjC/OOP_ObjC.pdf">Object-Oriented Programming with Objective-C</a>, by Apple Inc. If you liked the first part of this document you read so far (for Lecture 5), you may continue to read the remainder to strengthen your understanding of OOP.
+                    </li>
+                    <li>
+                        Java resources:
+                        <ul>
+                            <li>
+                                [Web tutorial] <a target="_blank" href="http://www.javacodegeeks.com/2014/07/abstraction-in-java.html">Using interfaces and abstract classes in Java</a>
+                            </li>
+                            <li>
+                               [Web article] <a target="_blank" href="http://www.javatpoint.com/static-binding-and-dynamic-binding">Static vs dynamic/late binding in Java</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        C++ resources:
+                        <ul>
+                            <li>
+                                [Webcasts/eLearing videos] done by Dr Soo Yuen Jien for another module [links coming soon]
+                                <br>
+                                Implementing inheritance in C++ (short version) [video 3mins][slides]
+                                <br>
+                                Implementing inheritance in C++ (longer version) [video 25mins][slides]
+                                <br>
+                                Implementing polymorphism in C++ [video 25mins][slides]
+                            </li>
+                            <li>
+                                [Screencast] <a target="_blank" href="https://www.youtube.com/watch?v=Hw8Cu4degFQ">Coding Inheritance in C++</a> , Tutorial by programminghelp.org
+                            </li>
+                            <li>
+                                [MSDN page] <a target="_blank" href="http://msdn.microsoft.com/en-us/library/s1sb61xd(v%3Dvs.110).aspx">Using the static keyword in C++</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Humor: <a target="_blank" href="http://pcp-comics.com/img/comics/2.jpg">What super can do</a>
+                    </li>
+                </ul>
             </div>
-            <h3>[40 minutes] Part 2 - Part 2 Title</h3>
+            <h3>[20 minutes] Part 2 - How to Avoid a Big Bang: Integrating Software Components</h3>
             <div>
-                   desc
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="../images/bigbang.png">
+                        </td>
+                        <td>
+                            <p>
+                                <a target="_blank" href="../files/slide/">Slides</a>
+                            </p>
+                            <span class="dim">
+                            <p>
+                                <strong>Overview:</strong>Your integration approach play an important role in how you implement components. When integrating work done by multiple developers, revision control software can be a big help.
+                            </p>
+                            <p>
+                                <strong>Topics:</strong> Integration,  Revision control (team),  Build automation
+                            </p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        [Web article] <a target="_blank" href="http://www.buzzle.com/articles/integration-testing-vs-system-testing.html">Integration testing vs system testing</a>
+                    </li>
+                    <li>
+                        Learning how to use Git remote repos: This can be a bit overwhelming if you are totally new to RCS. We recommend you learn incrementally, coming back to these learning resources as you use Git. Feel free to request for help in IVLE forums.
+                        <br>
+                        <ul>
+                            <li>
+                                If you are new to using Git in a team, re-watch the 2nd half of this <a target="_blank" href="https://www.google.com/url?q=http://www.youtube.com/watch?v%3Dv40b3ExbM0c&sa=D&usg=AFQjCNH4fOdopus4_2IY4Mp58zHlqn6mVA">Git overview video</a>.
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.google.com/url?q=http://youtu.be/U8GBXvdmHT4?t%3D21m40s&sa=D&usg=AFQjCNHDArLf4rYVKMU_xz1OReFXiV15DQ">A webinar from GitHub folks</a>on using GitHub for code sharing (note that forking and pull requests are optional to use in this module)
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.google.com/url?q=https://www.atlassian.com/git/tutorial/remote-repositories&sa=D&usg=AFQjCNHTAfPsMz0iUcS9c_BxN2Jl5Q_ybQ">Tutorial on Git remote repositories</a> - from Atlassian
+                            </li>
+                            <li>
+                                Relevant pages from the Git Pro eBook: <a target="_blank" href="https://www.google.com/url?q=http://git-scm.com/book/en/Git-Basics-Working-with-Remotes&sa=D&usg=AFQjCNGeyUu-25Hno4PuPj4UNZvALjPr6A">remotes: fetch, pull, push</a>, <a target="_blank" href="https://www.google.com/url?q=http://git-scm.com/book/en/Git-Branching-What-a-Branch-Is&sa=D&usg=AFQjCNFtd6g6eBtO45VBT-FvbvlR8B_ROA">branches</a>, <a target="_blank" href="https://www.google.com/url?q=http://git-scm.com/book/en/Git-Basics-Tagging&sa=D&usg=AFQjCNFQbnjhTo9KhtD3clcrrn-X382nOQ">tagging</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Humor: <a target="_blank" href="https://www.google.com/url?q=http://www.youtube.com/watch?v%3DCDeG4S-mJts%26gl%3DSG%26hl%3Den-GB&sa=D&usg=AFQjCNF7gmmf3oAZ528nMg26HcYUAPdo9A">Hitler users Git</a>
+                         (warning: strong language), <a target="_blank" href="https://www.google.com/url?q=https://twitter.com/nakshayn/status/471887998603100160&sa=D&usg=AFQjCNERTytcE14E-aM1hixiCrbQlJo3Tg">When I see a door with a &#39;push&#39; sign...</a>
+                    </li>
+                </ul>
             </div>
-            
-            <h3>[40 minutes] Part 3 - Part 3 Title</h3>
+            <h3>[15 minutes] Recap </h3>
             <div>
-                   desc
-            </div>
-            <h3>[10 minutes] Recap </h3>
-            <div>
-                   desc
+                 <a target="_blank" href="files/slides/L6Recap.pptx">Slides</a>
             </div>
         </div>
         
