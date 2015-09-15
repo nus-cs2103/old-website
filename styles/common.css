@@ -300,6 +300,11 @@ table.bordered tr > th {
  * embedded handbook section
  */
 
+.embedded-link {
+    color: blue;
+    text-decoration: underline;
+}
+
 .embedded {
     padding: 10px 10px;
     border: 1px dashed #000;
