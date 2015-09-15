@@ -8,19 +8,31 @@
                 <ul>
                     <li>
                         Project: 
-                        <span onclick="getContentUsingAjax('handbook-ce1', '#embedded-week2');"><u>CE1</u></span> | 
-                        <span onclick="getContentUsingAjax('handbook-formingTeams', '#embedded-week2');"><u>Forming Teams</u></span> | 
-                        Supervision | Project Grading | Peer Evaluations | Project Tools
+                        <span onclick="getContentUsingAjax('handbook-ce1', '#embedded-week2-handbook');"><u>CE1</u></span> | 
+                        <span onclick="getContentUsingAjax('handbook-formingTeams', '#embedded-week2-handbook');"><u>Forming Teams</u></span> | 
+                        <span onclick="getContentUsingAjax('handbook-supervision', '#embedded-week2-handbook');"><u>Supervision </u></span>| 
+                        <span onclick="getContentUsingAjax('handbook-projectGrading', '#embedded-week2-handbook');"><u>Project Grading </u></span>| 
+                        <span onclick="getContentUsingAjax('handbook-peerEvaluations', '#embedded-week2-handbook');"><u>Peer Evaluations </u></span>| 
+                        <span onclick="getContentUsingAjax('handbook-projectTools', '#embedded-week2-handbook');"><u>Project Tools</u></span>
+                        <div id="embedded-week2-handbook"></div>
                     </li>
                     <li>
-                        Policies: Policy on following instructions | Policy on grading smaller/larger teams | Policy on project work distribution
+                        Policies: 
+                        <span onclick="getContentUsingAjax('handbook-policy-followingInstructions', '#embedded-week2-policies');"><u>Policy on following instructions </u></span>|
+                        <span onclick="getContentUsingAjax('handbook-policy-teamSize', '#embedded-week2-policies');"><u>Policy on grading smaller/larger teams </u></span>|
+                        <span onclick="getContentUsingAjax('handbook-policy-workDistribution', '#embedded-week2-policies');"><u>Policy on project work distribution</u></span>
+                        <div id="embedded-week2-policies"></div>
                     </li>
                     <li>
-                        FAQ: Why slides are not detailed enough, handouts are wordy? | Why so much self-study? | Why very narrow project scope? | Why project requirements are so vague? | Why I'm not allowed to use my favorite OS/IDE/etc?
+                        FAQ: 
+                        <span onclick="getContentUsingAjax('handbook-faq-slideFormat', '#embedded-week2-faqs');"><u>Why slides are not detailed enough, handouts are wordy? </u></span>|
+                        <span onclick="getContentUsingAjax('handbook-faq-selfStudy', '#embedded-week2-faqs');"><u>Why so much self-study? </u></span>| 
+                        <span onclick="getContentUsingAjax('handbook-faq-narrowScope', '#embedded-week2-faqs');"><u>Why very narrow project scope? </u></span>|
+                        <span onclick="getContentUsingAjax('handbook-faq-vagueRequirements', '#embedded-week2-faqs');"><u>Why project requirements are so vague? </u></span>|
+                        <span onclick="getContentUsingAjax('handbook-faq-favoriteTool', '#embedded-week2-faqs');"><u>Why I'm not allowed to use my favorite OS/IDE/etc? </u></span>
+                        <div id="embedded-week2-faqs"></div>
                     </li>
                 </ul>
-                <div id="embedded-week2">
-                </div>
             </div>
         </div>
         <div class="things-to-do things-to-do-week2">
@@ -360,7 +372,7 @@
         <div class="lecture lecture-week2">
             <h3>[20 minutes] Recap</h3>
             <div>
-                Slides
+                <a target="_blank" href="files/slides/L2Recap.pptx">Slides</a>
             </div>
         </div>
     </div>
