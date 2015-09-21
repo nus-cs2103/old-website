@@ -1,15 +1,123 @@
+
 <div class="deadline content-week4">
     <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
     <div>
         <div class="deadline deadline1-week4">
-            <h3>[Mon 23:59] Deadline ABC</h3>
+            <h3>[Fri 23:59] CE1: Code Review</h3>
             <div>
-            </div>
-        </div>
-        <div class="deadline deadline1-week4">
-            <h3>[Fri 23:59] Deadline XYZ</h3>
-            <div>
-                Details about this deadline
+                [individual, 5x2 pts]
+                <br>
+                <br>
+                In this exercise, you will <span class="highlighted">review the code of two other classmates.</span>
+                <br>
+                <br>
+                <b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer, 
+                doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
+                <br>
+                <br>
+                <b>Procedure:</b> 
+                <ol>
+                    <li>
+                        Check the review assignment (i.e. who will review whose code) 
+                        <a href="https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit%23gid%3D0&sa=D&usg=AFQjCNE8hW2GSRuYJb3Z6ZzY29y9qVpZ0w">here</a>.
+                    </li>
+                    <li>
+                        Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways. 
+                        Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
+                    </li>
+                    <li>
+                        Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
+                    </li>
+                    <li>
+                        Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
+                        <br>
+                        <br>
+                        Formatting:
+                        <br>
+                        a) Code formatted with syntax coloring to help the reader.
+                        <br>
+                        {opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
+                        <br>
+                        <br>
+                        Names - meaning:
+                        <br>
+                        b) Class/method/variable names are meaningful and intuitive.
+                        <br>
+                        c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
+                        <br>
+                        d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
+                        <br>
+                        <br>
+                        Names - case:
+                        <br>
+                        e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
+                        e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
+                        <br>
+                        <br>
+                        Comments:
+                        <br>
+                        f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
+                        <br>
+                        g) No trivial comments.
+                        <br>
+                        h) Minimal but sufficient level of commenting.
+                        <br>
+                        <br>
+                        Magic numbers
+                        <br>
+                        i) No magic numbers/strings.
+                        <br>
+                        <br>
+                        Layout:
+                        <br>
+                        j) Code neatly laid out to improve readability.
+                        <br>
+                        k) Braces placement, indentation, and alignment follow the standard.
+                        <br>
+                        l) Braces are used even for blocks with just one statement.
+                        <br>
+                        e.g.
+                        if(isValid){<br>
+                                processInput(input);<br>
+                        }
+                        <br>
+                        <br>
+                        SLAP:
+                        <br>
+                        m) Short methods with not too-deep nesting.
+                        <br>
+                        n) Each method written generally at a similar level of abstraction.
+                        <br>
+                        <br>
+                        Testing:
+                        <br>
+                        o) A reasonable set of test cases to cover various usage scenarios.
+                        <br>
+                        <br>
+                    </li>
+                    <li>
+                        Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
+                        <br>
+                        <br>
+                        e.g.
+                        <br>
+                        a) The variable name t2 is not very meaningful
+                        <br>
+                        k) Braces in the getLines() method do not follow the standard.
+                        <br>
+                        m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
+                        <br>
+                        <br>
+                    </li>
+                    <li>
+                        A code review requires both technical skills and people skills. <span class="highlighted">Be honest</span> in the review. Your review will not affect the reviewee’s CE1 grade.
+                        <br>
+                        <span class="highlighted">Be kind</span> too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
+                    </li>
+                    <li>
+                        If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
@@ -19,15 +127,60 @@
     <h3 id="things-to-do-content-week4" class="buttoned"><span>Things to do</span></h3>
     <div>
         <div class="things-to-do things-to-do-week4">
-            <h3>Task title</h3>
+            <h3>Handbook sections to read</h3>
             <div>
-                task desc
+                <ul>
+                    <li>
+                        Project: 
+                        <span onclick="getContentUsingAjax('handbook-v00Manual', '#embedded-week4-handbook');"><span class="embedded-link">V0.0 of the Project Manual</span></span>
+                        <div id="embedded-week4-handbook"></div>
+                    </li>
+                    <li>
+                        Policies: 
+                        <span onclick="getContentUsingAjax('handbook-policy-validAbsences', '#embedded-week4-policies');"><span class="embedded-link">Policy on absence due to valid reasons (e.g. MC, LOA, University events) </span></span>|
+                        <span onclick="getContentUsingAjax('handbook-policy-responseTime', '#embedded-week4-policies');"><span class="embedded-link">Policy on email response time </span></span>|
+                        <span onclick="getContentUsingAjax('handbook-policy-submissionLength', '#embedded-week4-policies');"><span class="embedded-link">Policy on suggested length for submissions</span></span>
+                        <div id="embedded-week4-policies"></div>
+                    </li>
+                    <li>
+                        FAQ: 
+                        <span onclick="getContentUsingAjax('handbook-faq-cs2101Differences', '#embedded-week4-faqs');"><span class="embedded-link">Why submission requirements differ between CS2103T and CS2101? </span></span>
+                        <div id="embedded-week4-faqs"></div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="things-to-do things-to-do-week4">
-            <h3>Task title</h3>
+            <h3>Create spike solutions (optional)</h3>
             <div>
-                task desc
+                If you would like to get a head start on coding your project, you can do coding experiments around this time to figure out how to implement certain functionalities that you might need later in the project. 
+                Such solutions are called <a href="https://www.google.com/url?q=http://www.extremeprogramming.org/rules/spike.html&sa=D&usg=AFQjCNED4yQTUXu2OSmF3DZ9-1adEtbhUA">spike solutions</a>.
+                Here are some examples for which you can create spike solutions.
+                <div>
+                    <ul>
+                        <li>
+                            Find a library that can parse strings that represent dates. 
+                        </li>
+                        <li>
+                            Find a way to change color in text output.
+                        </li>
+                        <li>
+                            Create a simple GUI that has a text box for input and a textarea for output. 
+                        </li>
+                        <li>
+                            Explore suitable data formats (e.g json, icalendar, xml, etc.) for saving data for your project. Find libraries for easy writing/reading of data in the selected formats.
+                        </li>
+                        <li>
+                            Find how to use threads to perform tasks in the background e.g. check for expiry of a deadline periodically.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="things-to-do things-to-do-week4">
+            <h3>Do the CE1 code review</h3>
+            <div>
+                Instructions are given above. You will receive an email from TEAMMATES at the beginning of the review period. 
             </div>
         </div>
     </div>
@@ -37,33 +190,82 @@
     <h3 id="homework-content-week4" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
         <div class="homework homework-week4">
-            <h3>Activity 1 [Individual, 3pts]</h3>
+            <h3>Explore existing products [Individual, 3pts]</h3>
             <div>
-                desc
+                Do step 2 (Explore existing products) given under 
+                <span onclick="getContentUsingAjax('handbook-v00Manual', '#embedded-week4-activity');"><span class="embedded-link">&apos;V0.0 of the Project Manual&apos;</span></span>
+                 in the handbook. You need to consider only the tool assigned to you by your team. 
+                When picking tools to study, try to ensure team members study a diverse selection of tools. Share your findings with team members. Bring your notes to the tutorial.
+                <div id="embedded-week4-activity"></div>
+                <br>
+                <span class="highlighted">
+                    Note: You need to be using one of these tools sincerely for managing your own schedules. It does not have to be the same tool you explored for this learning activity. 
+                    Continue to use that tool until we are ready to switch to the tool you build in the project. 
+                </span>
             </div>
         </div>
         <div class="homework homework-week4">
-            <h3>Activity 2 [Team, 2pts]</h3>
+            <h3>Create a GitHub account for your team [Team, 1pts]</h3>
             <div>
-                desc
+                If you do not know your team ID, you can find it from the Leaderboard page in our module website.
+                Note: You can use your GitHub account to host a remote repo for your project code. However, there is no need to start using remote repos yet. 
+                If you want to start using a remote repo early, please refer to learning resources under Lecture 6 Part 2.
+                <span class="highlighted">
+                    See 
+                    <a href="https://www.google.com/url?q=https://docs.google.com/document/d/1FhJVBIsip6ShOdZ81bmssllDiz04YBBqoxpZv26_iQE/pub?embedded%3Dtrue%23h.w8d4lnkr0042&sa=D&usg=AFQjCNEjiPikJyPMfUHehufB8v6GmwueCA">here</a> 
+                    for instructions
+                </span> on how to name the repo, etc.
+            </div>
+        </div>
+        <div class="homework homework-week4">
+            <h3>Enter your team&apos;s user stories into the issue tracker [Team, 1pts]</h3>
+            <div>
+                Label them appropriately. 
+                <span class="highlighted">
+                    Phrase the issue title and the description to resemble the user story format. Here is an example (note how the benefit is given in the issue description):
+                </span>
+                <img alt="" src="https://lh4.googleusercontent.com/PhifX8Hhn2tSDXCQOvOF-A-OdamQpXYKAHc2zfnyn3bXZMyA5mkKqji8NutIoxaXO6lwwBg8a7g28-hGNnjAp9W-O-NNKJeXmN-M-ooiUoE7HNmhrZwupthqhW54KO_Whflv05o" title="">
             </div>
         </div>
     </div>
 </div>
 
 <div class="tutorial content-week4">
-    <h3 id="tutorial-content-week4" class="buttoned"><span>Tutorial 3: Tutorial title</span></h3>
+    <h3 id="tutorial-content-week4" class="buttoned"><span>Tutorial 3: More about requirements</span></h3>
     <div>
         <div class="tutorial tutorial-week4">
-            <h3> [Team, 2pts] Activity 1</h3>
+            <h3> [Team, 1pts] Revise user story priorities</h3>
             <div>
-                desc.
+                Revise user story priorities (if required) based on your exploration of existing products. You can use Issue labels on GitHub to indicate priority. 
             </div>
         </div>
         <div class="tutorial tutorial-week4">
-            <h3> [Individual, 1pt] Activity 2</h3>
+            <h3> [Team, 1pts] Do a preliminary schedule</h3>
             <div>
-                desc.
+                Decide at which milestone you will deliver each user story. Assign user stories to the appropriate milestone in GitHub.
+                <ul>
+                    <li>
+                        It may feel premature to create a schedule at this point because you have not even designed a product yet. Do it anyway. 
+                        It will give you a better sense of how much you can do during the semester. You can change the schedule later as necessary.
+                    </li>
+                    <li>
+                        When deciding under which milestone a user story should go, consider importance of user stories, dependencies among them, the time between milestones, and module requirements for different milestones (refer handbook).
+                        <br>
+                        [Now]----[V0.0]---- ---- ----[V0.1]---- ----[V0.2]----[V0.3]----[V0.4]--[V0.5]
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tutorial tutorial-week4">
+            <h3> [If you have time] Conceptualize the product</h3>
+            <div>
+               Conceptualize the product based on the use stories you have selected. You might need to create some UI prototypes at this point. After that, you can start writing the project manual V0.0.
+                <ul>
+                    <li>
+                        Before writing the user guide, you should have a very clear and detailed understanding about how your final product will look like and behave (external behavior, not internal implementation). 
+                        This understanding can change over the course of the project. The important thing is to have a clear understanding of the final goal at all times. It is not enough to have a ‘rough idea’ of the end product.   
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -76,12 +278,22 @@
     <h3 id="ilo-content-week4" class="buttoned"><span>Intended Learning Outcomes</span></h3>
     <div>
         <div class="ilo ilo-week4">
-            <h3>ILO1 title</h3>
+            <h3>Can write good quality code at small-component level.</h3>
             <div>
             </div>
         </div>
         <div class="ilo ilo-week4">
-            <h3>ILO2 title</h3>
+            <h3>Can do local revision control for individual code. (i.e. Can use the following using Git: init, add, status, ignore, commit, tag, checkout)</h3>
+            <div>
+            </div>
+        </div>
+        <div class="ilo ilo-week4">
+            <h3>Can use the knowledge of existing products when designing a new product.</h3>
+            <div>
+            </div>
+        </div>
+        <div class="ilo ilo-week4">
+            <h3>Can use basic techniques for establishing and specifying requirements.</h3>
             <div>
             </div>
         </div>
@@ -90,33 +302,193 @@
 
 
 <div class="lecture content-week4">
-    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: From program to a product idea</span></h3>
+    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: Let&apos;s split work and start building this thing</span></h3>
     <div>
         <div class="lecture lecture-week4">
-            <h3>[30 minutes] Part 1 - Part 1 Title</h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        <div class="lecture lecture-week4">
-            <h3>[40 minutes] Part 2 - Part 2 Title</h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        <div class="lecture lecture-week4">    
-            <h3>[40 minutes] Part 3 - Part 3 Title</h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        <div class="lecture lecture-week4">
-            <h3>[10 minutes] Recap </h3>
-            <div>
-                   desc
-            </div>
+            <h3>Pre-lecture activity</h3>
+                <div>
+                       Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
+                       <br>
+                       <br>
+                       Imagine you are building an online system called <b>TeamFormer</b>. TeamFormer is a system for helping CS2103 students during team forming period. It lets students record who is in which team. 
+                       Students can use the system to find teams short of members and students looking for teams, easing the team forming process. 
+                       Note that the system is not meant as a platform for students to communicate with each other to find team members. 
+                       Students are supposed to talk to each other and form teams outside the system, as they do now. 
+                       TeamFormer simply helps students to see the team forming status of the class (e.g., who has teams and who don’t) and record their own team after forming a team. 
+                       It is also meant to ease the team-forming-related workload of instructors.
+                       <br>
+                       <br>
+                       What should be the following elements of TeamFormer requirements?
+                       <ul>
+                            <li>
+                                Vision: {A short statement describing the product’s objective/direction}
+                            </li>
+                            <li>
+                                User types/roles: Students, Instructors, {any other user types?}
+                            </li>
+                            <li>
+                                High-level workflow: {In the process of team forming, who will do what first, and what will happen next, and so on? Where does TeamFormer fits into this workflow?}
+                            </li>
+                            <li>
+                                Scope: {What will TeamFormer do, and more importantly, what team-forming-related things it will NOT do?}
+                            </li>
+                       </ul>
+                       Specify important requirements of TeamFormer as a list of User Stories.
+                       <br>
+                       Write one use case (i.e., textual form) for one of the user stories that you think will result in the most complex user interaction.
+                       <br>
+                       Sketch a UI for TeamFormer.
+                </div>
         </div>
         
+        <div class="lecture lecture-week4">
+            <h3>[45 minutes] Part 1 - The View from the Top: Architecture</h3>
+            <div>
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="../images/archi roadmap.png">
+                        </td>
+                        <td>
+                            <p>
+                                <a target="_blank" href="../files/slides/todo">Slides</a>
+                            </p>
+                             <span class="dim">
+                                <p>
+                                    Overview: The architectural design should break the product into a small number of well-specified components that can be developed in parallel. 
+                                    UML sequence diagrams can be used to figure out the API of those components.
+                                </p>
+                                <p>
+                                    Topics: software architecture, components and APIs, modeling component behavior using seq diagrams, different approaches to design 
+                                </p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
+                        <a target="_blank" href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DUn80XoRT1ME&sa=D&usg=AFQjCNEUjdacZ522opkFUR3q3KosjHQ01w">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
+                    </li>
+                    <li>
+                        [Book] UML Distilled (3rd ed) by Martin Fowler - A handy guide for most used UML diagrams. Not required for the module, but can be useful for future UML usage.
+                    </li>
+                    <li>
+                        [Tools] Powerpoint is usually good enough as a UML diagramming tool if you are using UML for simple documentation purposes the way we do in this module. If you would like to try something more UML-specific, there are quite a few available.
+                        <br>
+                        e.g. <a href="https://www.google.com/url?q=https://www.draw.io/&sa=D&usg=AFQjCNHxTIR45CaPJ2Rlx_thwp8AwS4zYg">Draw.io (online)</a>, 
+                        <a href="https://www.google.com/url?q=http://yuml.me/&sa=D&usg=AFQjCNGhjCS8x-YBG11YLZ2l975YTgy9ZQ">yUML.me (online)</a>,
+                        <a href="https://www.google.com/url?q=http://www.gliffy.com/uses/uml-software/&sa=D&usg=AFQjCNHmdeN9_Mm3cB_yMQVStaY0tem7yg">Gliffy (online)</a>,
+                        <a href="https://www.google.com/url?q=http://www.umlet.com/&sa=D&usg=AFQjCNE7QBSRnsFkZPyqmF4glu54hu1sJw">UMLet</a>,
+                        <a href="https://www.google.com/url?q=http://www.visual-paradigm.com/features/uml-and-sysml-modeling/&sa=D&usg=AFQjCNHWYh25WM6Fec1jJIENTbBXZUtd7Q">Visual Paradigm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="lecture lecture-week4">
+            <h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
+            <div>
+                   <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="../images/yee ha.png">
+                        </td>
+                        <td>
+                            <p>
+                                <a target="_blank" href="../files/slides/todo">Slides</a>
+                            </p>
+                             <span class="dim">
+                                <p>
+                                    Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing. 
+                                    API testing can be automated using testing frameworks such as JUnit, and with the help of drivers and stubs. 
+                                    TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
+                                </p>
+                                <p>
+                                    Topics: developer testing, automated API testing, TDD
+                                </p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    Resources:
+                </p>
+                <ul>
+                    <li>
+                        Help on automated unit testing tools (Note: you are expected to use automated unit testing for CE2). 
+                        <ul>
+                            <li>
+                                JUnit (for Java guys): <a href="https://www.google.com/url?q=http://junit.sourceforge.net/doc/cookbook/cookbook.htm&sa=D&usg=AFQjCNHeF1TrcVw3VTQ6GOb7Z1iCjqV7lw">JUnit cookbook</a> (a short tutorial from JUnit creators), 
+                                <a href="https://www.google.com/url?q=http://www.vogella.com/articles/JUnit/article.html&sa=D&usg=AFQjCNHL_TqkTrfcznZBkGbAeIVOD_-ouw">JUnit tutorial</a> (a more detailed tutorial from a developer Lars Vogel), 
+                                <a href="https://www.google.com/url?q=http://www.comp.nus.edu.sg/~cs2103/AY1516S1/files/CityConnectTest.java&sa=D&usg=AFQjCNHgJ685fSMHitVqQIK2dj9UOsa9cA">A sample test class (partial)</a> for CityConnect.java you used in Tutorial 3. 
+                                <a href="https://www.google.com/url?q=http://stackoverflow.com/questions/5759602/how-to-simultaneously-run-all-junit-tests-for-a-eclipse-java-project-without-mav&sa=D&usg=AFQjCNGHcU_PvIYPz__10TxHMvc0WVLp6w">How do I run all JUnit tests at once?</a> 
+                                How to test private methods in Java?  <a href="https://www.google.com/url?q=http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit&sa=D&usg=AFQjCNG-h8yADb6vz6PSWS85Suq9uBtc6g">short answer</a>, 
+                                <a href="https://www.google.com/url?q=http://www.artima.com/suiterunner/private.html&sa=D&usg=AFQjCNFVeHaeZffCAKzyaazoANcDL889jg">long answer</a>
+                            </li>
+                            <li>
+                                Unit testing in Visual Studio: See chapter 6 of <a href="https://www.google.com/url?q=http://www.comp.nus.edu.sg/~cs2103/AY1516S1/files/An%2520introduction%2520to%2520Visual%2520Studio%25202012%2520-%2520part%2520II.pdf&sa=D&usg=AFQjCNFY3gHzHHb7hIVx4PbuBXw2WhEM2Q">this tutorial</a> we prepared.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        TDD resources (Note: Using TDD is optional). Before trying TDD, learn unit testing first by adding tests to existing functionality in CE1. 
+                        <ul>
+                            <li>
+                                <a href="https://www.google.com/url?q=http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd&sa=D&usg=AFQjCNGi65cwGCLdknkIp-YXvFsr_GNPvQ">Uncle Bob’s three rules of TDD</a> (Uncle Bob = Robert C. Martin, the author of Clean Code)
+                            </li>
+                            <li>
+                                Let’s play TDD screencasts by James Shore:
+                                <a href="https://www.google.com/url?q=http://jamesshore.com/Blog/Lets-Play/Lets-Play-Test-Driven-Development.html&sa=D&usg=AFQjCNGi7bnnfYjabDWXXl0256wkg14KbQ">episode 1</a>
+                                <a href="https://www.google.com/url?q=http://jamesshore.com/Blog/Lets-Play/Episode-2.html&sa=D&usg=AFQjCNFIyCiQ4d3O7-VZ5FLNZywflgd3UA">episode 2</a>
+                                <a href="https://www.google.com/url?q=http://jamesshore.com/index.index&sa=D&usg=AFQjCNFY4fhC-eFZvABHkSibA67QarCzZQ">the rest</a>
+                            </li>
+                            <li>
+                                <a href="https://www.google.com/url?q=http://www.drdobbs.com/testing/tdd-is-there-really-any-debate-any-longe/240007457&amp;sa=D&amp;usg=AFQjCNG7w7zo8KBfwq6FH8bCOwhSKQPhYw">TDD: Is There Really Any Debate Any Longer?</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com/url?q=https://docs.google.com/document/pub?id%3D1LwAFeBLRyVzdAzZxZJQ8pRMeaa-PKY6VMtUUqGm6wlg%26embedded%3Dtrue&amp;sa=D&amp;usg=AFQjCNEqExISLm__q5fI7stNBDJxui7vAQ">Questions about unit testing frequently asked by CS2103 students (and answers)</a>
+                    </li>
+                    <li>
+                        Interesting side reading
+                        <ul>
+                            <li>
+                                [Quora post]
+                                <a href="https://www.google.com/url?q=http://www.quora.com/What-are-good-ways-to-avoid-bugs-while-programming/answer/Mattias-Petter-Johansson&amp;sa=D&amp;usg=AFQjCNGht809kNqKdfizwd5w-hULCAyhpw">What is the best way to avoid bugs</a>
+                            </li>
+                            <li>
+                                [Web article]
+                                <a href="https://www.google.com/url?q=http://www.bloomberg.com/slideshow/2012-08-03/the-big-cost-of-software-bugs.html&amp;sa=D&amp;usg=AFQjCNERTdit2OugDpZ0S-qX7poFJ5YE2w">The Big Cost of Software Bugs</a>
+                                , An interesting post on 10 bugs that cost millions. 
+                            </li>
+                            <li>
+                                [Web article]
+                                <a href="https://www.google.com/url?q=http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests/&amp;sa=D&amp;usg=AFQjCNFHRMIFw0BbmsJ876Z-bnNKJ47yPA">The three pillars of unit testing</a>
+                                , A short article about what makes a good unit test.
+                            </li>
+                            <li>
+                                [Dev opinion]
+                                <a href="https://www.google.com/url?q=http://css.dzone.com/articles/programmers-without-tdd-will&amp;sa=D&amp;usg=AFQjCNGNfq7L67A2oug08kcxnBLVmxLi-g">Programmers Without TDD Will be Unemployable by 2022</a>
+                            </li>
+                            <li>
+                                [Quora thread]
+                                <a href="https://www.google.com/url?q=http://www.quora.com/What-kind-of-automated-testing-should-a-startup-have-from-the-beginning-through-the-first-six-months-of-live-operation/answer/Zach-Brock&amp;sa=D&amp;usg=AFQjCNHu_OKA0yw0inFL4S1FkA-Rx32RtA">Is automated testing relevant to startups?</a>
+                            </li>
+                            <li>
+                                [Blog post]
+                                <a href="https://www.google.com/url?q=http://avandeursen.com/2014/02/22/gotofail-security/&amp;sa=D&amp;usg=AFQjCNF1L4C552rdt5aDQSYgb66f5Pc9Sg">Learning from Apple’s #gotofail Security Bug</a>
+                                 - How unit testing (and other good coding practices) could have prevented a major security bug.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
