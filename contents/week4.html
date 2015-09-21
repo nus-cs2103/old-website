@@ -1,4 +1,128 @@
 
+<div class="deadline content-week5">
+    <h3 id="deadline1-content-week5" class="buttoned"><span>Deadlines </span></h3>
+    <div>
+        <div class="deadline deadline1-week5">
+            <h3>[Fri 23:59] CE1: Code Review</h3>
+            <div>
+				[individual, 5x2 pts]
+				<br>
+				<br>
+				In this exercise, you will review the code of two other classmates.
+				<br>
+				<br>
+				<b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer, 
+				doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
+				<br>
+				<br>
+				<b>Procedure:</b> 
+				<ol>
+					<li>
+						Check the review assignment (i.e. who will review whose code) 
+						<a href="https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit%23gid%3D0&sa=D&usg=AFQjCNE8hW2GSRuYJb3Z6ZzY29y9qVpZ0w">here</a>.
+					</li>
+					<li>
+						Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways. 
+						Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
+					</li>
+					<li>
+						Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
+					</li>
+					<li>
+						Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
+						<br>
+						<br>
+						Formatting:
+						<br>
+						a) Code formatted with syntax coloring to help the reader.
+						<br>
+						{opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
+						<br>
+						<br>
+						Names - meaning:
+						<br>
+						b) Class/method/variable names are meaningful and intuitive.
+						<br>
+						c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
+						<br>
+						d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
+						<br>
+						<br>
+						Names - case:
+						<br>
+						e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
+						e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
+						<br>
+						<br>
+						Comments:
+						<br>
+						f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
+						<br>
+						g) No trivial comments.
+						<br>
+						h) Minimal but sufficient level of commenting.
+						<br>
+						<br>
+						Magic numbers
+						<br>
+						i) No magic numbers/strings.
+						<br>
+						<br>
+						Layout:
+						<br>
+						j) Code neatly laid out to improve readability.
+						<br>
+						k) Braces placement, indentation, and alignment follow the standard.
+						<br>
+						l) Braces are used even for blocks with just one statement.
+						<br>
+						e.g.
+						if(isValid){<br>
+								processInput(input);<br>
+						}
+						<br>
+						<br>
+						SLAP:
+						<br>
+						m) Short methods with not too-deep nesting.
+						<br>
+						n) Each method written generally at a similar level of abstraction.
+						<br>
+						<br>
+						Testing:
+						<br>
+						o) A reasonable set of test cases to cover various usage scenarios.
+						<br>
+						<br>
+					</li>
+					<li>
+						Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
+						<br>
+						<br>
+						e.g.
+						<br>
+						a) The variable name t2 is not very meaningful
+						<br>
+						k) Braces in the getLines() method do not follow the standard.
+						<br>
+						m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
+						<br>
+						<br>
+					</li>
+					<li>
+						A code review requires both technical skills and people skills. Be honest in the review. Your review will not affect the reviewee’s CE1 grade.
+						<br>
+						Be kind too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
+					</li>
+					<li>
+						If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
+					</li>
+				</ol>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="things-to-do content-week4">
     <h3 id="things-to-do-content-week4" class="buttoned"><span>Things to do</span></h3>
     <div>
@@ -62,126 +186,6 @@
     </div>
 </div>
 
-<div class="ce1-instructions-week4">
-	<h3 id="ce1-instructions-content-week4" class="buttoned"><span>CE1: Code Review Instructions</span></h3>
-	<div>
-		[individual, 5x2 pts]
-		<br>
-		<br>
-		In this exercise, you will review the code of two other classmates.
-		<br>
-		<br>
-		<b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer, 
-		doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
-		<br>
-		<br>
-		<b>Procedure:</b> 
-		<ol>
-			<li>
-				Check the review assignment (i.e. who will review whose code) 
-				<a href="https://www.google.com/url?q=https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit%23gid%3D0&sa=D&usg=AFQjCNE8hW2GSRuYJb3Z6ZzY29y9qVpZ0w">here</a>.
-			</li>
-			<li>
-				Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways. 
-				Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
-			</li>
-			<li>
-				Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
-			</li>
-			<li>
-				Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
-				<br>
-				<br>
-				Formatting:
-				<br>
-				a) Code formatted with syntax coloring to help the reader.
-				<br>
-				{opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
-				<br>
-				<br>
-				Names - meaning:
-				<br>
-				b) Class/method/variable names are meaningful and intuitive.
-				<br>
-				c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
-				<br>
-				d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
-				<br>
-				<br>
-				Names - case:
-				<br>
-				e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
-				e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
-				<br>
-				<br>
-				Comments:
-				<br>
-				f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
-				<br>
-				g) No trivial comments.
-				<br>
-				h) Minimal but sufficient level of commenting.
-				<br>
-				<br>
-				Magic numbers
-				<br>
-				i) No magic numbers/strings.
-				<br>
-				<br>
-				Layout:
-				<br>
-				j) Code neatly laid out to improve readability.
-				<br>
-				k) Braces placement, indentation, and alignment follow the standard.
-				<br>
-				l) Braces are used even for blocks with just one statement.
-				<br>
-				e.g.
-				if(isValid){<br>
-						processInput(input);<br>
-				}
-				<br>
-				<br>
-				SLAP:
-				<br>
-				m) Short methods with not too-deep nesting.
-				<br>
-				n) Each method written generally at a similar level of abstraction.
-				<br>
-				<br>
-				Testing:
-				<br>
-				o) A reasonable set of test cases to cover various usage scenarios.
-				<br>
-				<br>
-			</li>
-			<li>
-				Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
-				<br>
-				<br>
-				e.g.
-				<br>
-				a) The variable name t2 is not very meaningful
-				<br>
-				k) Braces in the getLines() method do not follow the standard.
-				<br>
-				m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
-				<br>
-				<br>
-			</li>
-			<li>
-				A code review requires both technical skills and people skills. Be honest in the review. Your review will not affect the reviewee’s CE1 grade.
-				<br>
-				Be kind too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
-			</li>
-			<li>
-				If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
-			</li>
-		</ol>
-		Deadline: Week 5, Friday, 2359
-	</div>
-</div>
-
 <div class="homework content-week4">
     <h3 id="homework-content-week4" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
@@ -212,7 +216,7 @@
 </div>
 
 <div class="tutorial content-week4">
-    <h3 id="tutorial-content-week4" class="buttoned"><span>Tutorial 3: Tutorial title</span></h3>
+    <h3 id="tutorial-content-week4" class="buttoned"><span>Tutorial 3: More about requirements</span></h3>
     <div>
         <div class="tutorial tutorial-week4">
             <h3> [Team, 1pts] Revise user story priorities</h3>
@@ -284,119 +288,122 @@
 
 <div class="lecture content-week4">
     <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: Let&apos;s split work and start building this thing</span></h3>
-	<div class="prelecture-week4">
-		<h3>Pre-lecture activity</h3>
-            <div>
-                   Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
-				   <br>
-				   <br>
-				   Imagine you are building an online system called TeamFormer. TeamFormer is a system for helping CS2103 students during team forming period. It lets students record who is in which team. 
-				   Students can use the system to find teams short of members and students looking for teams, easing the team forming process. 
-				   Note that the system is not meant as a platform for students to communicate with each other to find team members. 
-				   Students are supposed to talk to each other and form teams outside the system, as they do now. 
-				   TeamFormer simply helps students to see the team forming status of the class (e.g., who has teams and who don’t) and record their own team after forming a team. 
-				   It is also meant to ease the team-forming-related workload of instructors.
-				   <br>
-				   <br>
-				   What should be the following elements of TeamFormer requirements?
-				   <ul>
-						<li>
-							Vision: {A short statement describing the product’s objective/direction}
-						</li>
-						<li>
-							User types/roles: Students, Instructors, {any other user types?}
-						</li>
-						<li>
-							High-level workflow: {In the process of team forming, who will do what first, and what will happen next, and so on? Where does TeamFormer fits into this workflow?}
-						</li>
-						<li>
-							Scope: {What will TeamFormer do, and more importantly, what team-forming-related things it will NOT do?}
-						</li>
-				   </ul>
-				   Specify important requirements of TeamFormer as a list of User Stories.
-				   <br>
-				   Write one use case (i.e., textual form) for one of the user stories that you think will result in the most complex user interaction.
-				   <br>
-				   Sketch a UI for TeamFormer.
-            </div>
-	</div>
-	
-    <div>
-        <div class="lecture lecture-week4">
-            <h3>[45 minutes] Part 1 - The View from the Top: Architecture</h3>
-            <div>
+	<div>
+		<div class="lecture lecture-week4">
+			<h3>Pre-lecture activity</h3>
+				<div>
+					   Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
+					   <br>
+					   <br>
+					   Imagine you are building an online system called TeamFormer. TeamFormer is a system for helping CS2103 students during team forming period. It lets students record who is in which team. 
+					   Students can use the system to find teams short of members and students looking for teams, easing the team forming process. 
+					   Note that the system is not meant as a platform for students to communicate with each other to find team members. 
+					   Students are supposed to talk to each other and form teams outside the system, as they do now. 
+					   TeamFormer simply helps students to see the team forming status of the class (e.g., who has teams and who don’t) and record their own team after forming a team. 
+					   It is also meant to ease the team-forming-related workload of instructors.
+					   <br>
+					   <br>
+					   What should be the following elements of TeamFormer requirements?
+					   <ul>
+							<li>
+								Vision: {A short statement describing the product’s objective/direction}
+							</li>
+							<li>
+								User types/roles: Students, Instructors, {any other user types?}
+							</li>
+							<li>
+								High-level workflow: {In the process of team forming, who will do what first, and what will happen next, and so on? Where does TeamFormer fits into this workflow?}
+							</li>
+							<li>
+								Scope: {What will TeamFormer do, and more importantly, what team-forming-related things it will NOT do?}
+							</li>
+					   </ul>
+					   Specify important requirements of TeamFormer as a list of User Stories.
+					   <br>
+					   Write one use case (i.e., textual form) for one of the user stories that you think will result in the most complex user interaction.
+					   <br>
+					   Sketch a UI for TeamFormer.
+				</div>
+		</div>
+		
+		<div class="lecture lecture-week4">
+			<h3>[45 minutes] Part 1 - The View from the Top: Architecture</h3>
+			<div>
 				<table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/todo.png">
-                        </td>
-                        <td>
-                            <p>
-                                <a target="_blank" href="../files/slides/todo">Slides</a>
-                            </p>
-                             <span class="dim">
-                                <p>
-                                    Overview: The architectural design should break the product into a small number of well-specified components that can be developed in parallel. 
+					<tr>
+						<td>
+							<img src="../images/todo.png">
+						</td>
+						<td>
+							<p>
+								<a target="_blank" href="../files/slides/todo">Slides</a>
+							</p>
+							 <span class="dim">
+								<p>
+									Overview: The architectural design should break the product into a small number of well-specified components that can be developed in parallel. 
 									UML sequence diagrams can be used to figure out the API of those components.
-                                </p>
-                                <p>
-                                    Topics: software architecture, components and APIs, modeling component behavior using seq diagrams, different approaches to design 
-                                </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
+								</p>
+								<p>
+									Topics: software architecture, components and APIs, modeling component behavior using seq diagrams, different approaches to design 
+								</p>
+							</span>
+						</td>
+					</tr>
+				</table>
 				<p>
-                    Resources:
-                </p>
-                <ul>
-                    <li>
-                        [Must watch] A three-minutes video we created for you
-                        <a target="_blank" href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DUn80XoRT1ME&sa=D&usg=AFQjCNEUjdacZ522opkFUR3q3KosjHQ01w">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
-                    </li>
-                    <li>
-                        [Book] UML Distilled (3rd ed) by Martin Fowler - A handy guide for most used UML diagrams. Not required for the module, but can be useful for future UML usage.
-                    </li>
-                    <li>
-                        [Tools] Powerpoint is usually good enough as a UML diagramming tool if you are using UML for simple documentation purposes the way we do in this module. If you would like to try something more UML-specific, there are quite a few available.
+					Resources:
+				</p>
+				<ul>
+					<li>
+						[Must watch] A three-minutes video we created for you
+						<a target="_blank" href="https://www.google.com/url?q=https://www.youtube.com/watch?v%3DUn80XoRT1ME&sa=D&usg=AFQjCNEUjdacZ522opkFUR3q3KosjHQ01w">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
+					</li>
+					<li>
+						[Book] UML Distilled (3rd ed) by Martin Fowler - A handy guide for most used UML diagrams. Not required for the module, but can be useful for future UML usage.
+					</li>
+					<li>
+						[Tools] Powerpoint is usually good enough as a UML diagramming tool if you are using UML for simple documentation purposes the way we do in this module. If you would like to try something more UML-specific, there are quite a few available.
 						<br>
 						e.g. <a href="https://www.google.com/url?q=https://www.draw.io/&sa=D&usg=AFQjCNHxTIR45CaPJ2Rlx_thwp8AwS4zYg">Draw.io (online)</a>, 
 						<a href="https://www.google.com/url?q=http://yuml.me/&sa=D&usg=AFQjCNGhjCS8x-YBG11YLZ2l975YTgy9ZQ">yUML.me (online)</a>,
 						<a href="https://www.google.com/url?q=http://www.gliffy.com/uses/uml-software/&sa=D&usg=AFQjCNHmdeN9_Mm3cB_yMQVStaY0tem7yg">Gliffy (online)</a>,
 						<a href="https://www.google.com/url?q=http://www.umlet.com/&sa=D&usg=AFQjCNE7QBSRnsFkZPyqmF4glu54hu1sJw">UMLet</a>,
 						<a href="https://www.google.com/url?q=http://www.visual-paradigm.com/features/uml-and-sysml-modeling/&sa=D&usg=AFQjCNHWYh25WM6Fec1jJIENTbBXZUtd7Q">Visual Paradigm</a>
-                    </li>
-                </ul>
-            </div>
-            <h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
-            <div>
-                   <table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/todo.png">
-                        </td>
-                        <td>
-                            <p>
-                                <a target="_blank" href="../files/slides/todo">Slides</a>
-                            </p>
-                             <span class="dim">
-                                <p>
-                                    Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing. 
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="lecture lecture-week4">
+			<h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
+			<div>
+				   <table class="padded-borderless lecture-content-table">
+					<tr>
+						<td>
+							<img src="../images/todo.png">
+						</td>
+						<td>
+							<p>
+								<a target="_blank" href="../files/slides/todo">Slides</a>
+							</p>
+							 <span class="dim">
+								<p>
+									Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing. 
 									API testing can be automated using testing frameworks such as JUnit, and with the help of drivers and stubs. 
 									TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
-                                </p>
-                                <p>
-                                    Topics: developer testing, automated API testing, TDD
-                                </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
+								</p>
+								<p>
+									Topics: developer testing, automated API testing, TDD
+								</p>
+							</span>
+						</td>
+					</tr>
+				</table>
 				<p>
-                    Resources:
-                </p>
-                <ul>
-                    <li>
+					Resources:
+				</p>
+				<ul>
+					<li>
 						Help on automated unit testing tools (Note: you are expected to use automated unit testing for CE2). 
 						<ul>
 							<li>
@@ -411,8 +418,8 @@
 								Unit testing in Visual Studio: See chapter 6 of <a href="https://www.google.com/url?q=http://www.comp.nus.edu.sg/~cs2103/AY1516S1/files/An%2520introduction%2520to%2520Visual%2520Studio%25202012%2520-%2520part%2520II.pdf&sa=D&usg=AFQjCNFY3gHzHHb7hIVx4PbuBXw2WhEM2Q">this tutorial</a> we prepared.
 							</li>
 						</ul>
-                    </li>
-                    <li>
+					</li>
+					<li>
 						TDD resources (Note: Using TDD is optional). Before trying TDD, learn unit testing first by adding tests to existing functionality in CE1. 
 						<ul>
 							<li>
@@ -428,10 +435,10 @@
 								<a href="https://www.google.com/url?q=http://www.drdobbs.com/testing/tdd-is-there-really-any-debate-any-longe/240007457&amp;sa=D&amp;usg=AFQjCNG7w7zo8KBfwq6FH8bCOwhSKQPhYw">TDD: Is There Really Any Debate Any Longer?</a>
 							</li>
 						</ul>
-                    </li>
-                    <li>
+					</li>
+					<li>
 						<a href="https://www.google.com/url?q=https://docs.google.com/document/pub?id%3D1LwAFeBLRyVzdAzZxZJQ8pRMeaa-PKY6VMtUUqGm6wlg%26embedded%3Dtrue&amp;sa=D&amp;usg=AFQjCNEqExISLm__q5fI7stNBDJxui7vAQ">Questions about unit testing frequently asked by CS2103 students (and answers)</a>
-                    </li>
+					</li>
 					<li>
 						Interesting side reading
 						<ul>
@@ -463,11 +470,10 @@
 								 - How unit testing (and other good coding practices) could have prevented a major security bug.
 							</li>
 						</ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-    </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </div>
 
