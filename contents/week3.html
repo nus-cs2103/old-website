@@ -1,33 +1,76 @@
 <div class="deadline content-week3">
     <h3 id="deadline1-content-week3" class="buttoned"><span>Deadlines </span></h3>
-    <div>
-        <div class="deadline deadline1-week3">
-            <h3>[Mon 23:59] Deadline ABC</h3>
+        <div>
+            <div class="deadline deadline1-week3">
+                <h3>[Mon 23:59] Submit Welcome Survey on TEAMMATEs</h3>
             <div>
             </div>
-        </div>
-        <div class="deadline deadline1-week3">
-            <h3>[Fri 23:59] Deadline XYZ</h3>
+            </div>
+            <div class="deadline deadline1-week3">
+                <h3>[Fri 23:59] Complete TEAMMATES profile</h3>
             <div>
-                Details about this deadline
+                More details about this is given in Week 1: Things to do.
+            </div>
             </div>
         </div>
-    </div>
 </div>
 
 <div class="things-to-do content-week3">
     <h3 id="things-to-do-content-week3" class="buttoned"><span>Things to do</span></h3>
-    <div>
+        <div>
         <div class="things-to-do things-to-do-week3">
-            <h3>Task title</h3>
+            <h3>Learn the coding standard:</h3>
             <div>
-                task desc
+                [Must do] All code written in this module must follow a common coding standard. 
+                Familiarize yourself with the coding standard applicable to you:  
+                <a target="_blank" href="https://docs.google.com/document/pub?id=1iAESIXM0zSxEa5OY7dFURam_SgLiSMhPQtU0drQagrs&amp&embedded=true">
+                Java coding standard</a> | 
+                <a target="_blank" href="https://docs.google.com/document/pub?id=1tJD2XQo3hUb0SZniswLqg0vkmccv7vGBV7_1AhTYK04&amp&embedded=true">
+                C++ coding standard</a>
             </div>
         </div>
         <div class="things-to-do things-to-do-week3">
-            <h3>Task title</h3>
+            <h3>Handbook sections to read:</h3>
             <div>
-                task desc
+            <li>
+                General: <span onclick="getContentUsingAjax('handbook-gradeBreakdown', 
+                '#embedded-week3-general');"><span class="embedded-link">
+                Grade Breakdown</span></span> | 
+                <span onclick="getContentUsingAjax('handbook-participationPoints', 
+                '#embedded-week3-general');"><span class="embedded-link">
+                Participation Points</span></span> | 
+                <div id="embedded-week3-general"></div>
+                </li>
+                <li>
+                    Project: <span onclick="getContentUsingAjax('handbook-policy-techHelp', 
+                    '#embedded-week3-project');"><span class="embedded-link">
+                    Policy on tech help</span></span> | 
+                    <span onclick="getContentUsingAjax('handbook-appendixD', 
+                    '#embedded-week3-project');"><span class="embedded-link">
+                    How to get tech help in CS2103/T</span></span> |
+                    <div id="embedded-week3-project"></div>
+                </li>
+                <li>
+                    FAQ: <span onclick="getContentUsingAjax('handbook-faq-manySubmissions', 
+                    '#embedded-week3-faqs');"><span class="embedded-link">
+                    Why that many submissions?</span></span> |
+                    <span onclick="getContentUsingAjax('handbook-faq-intermediateMarks', 
+                    '#embedded-week3-faqs');"><span class="embedded-link">
+                    Why not enough marks for intermediate submissions?</span></span> |
+                    <div id="embedded-week3-faqs"></div>
+                </li>
+            </div>
+        </div>
+        <div class="things-to-do things-to-do-week3">
+            <h3>Start product design:</h3>
+            <div>
+                After you have at least a tentative team, it is time to start thinking about product design.
+
+                Tutorial 1 exercise gave you a 'Yes' pile of user stories. Use that as a baseline 
+                for your product design. Note that what you have is just a collection of user stories 
+                which may not necessarily translate into a good product. You might have to do more 
+                reshuffling of user stories before they form a cohesive product that appeals to the 
+                target users. More about product design will be covered in a future lecture.
             </div>
         </div>
     </div>
@@ -36,36 +79,89 @@
 <div class="homework content-week3">
     <h3 id="homework-content-week3" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
+        <p>
+        </p>
         <div class="homework homework-week3">
-            <h3>Activity 1 [Individual, 3pts]</h3>
+            <h3>Subscribe to IVLE forum</h3>
             <div>
-                desc
+                Discussion forums is an important SE tool. You are required to subscribe 
+                to CS2103 discussion forum on IVLE. Some important information will be posted 
+                in that forum. e.g. which third party tools are being used by other teams
             </div>
         </div>
         <div class="homework homework-week3">
-            <h3>Activity 2 [Team, 2pts]</h3>
+            <h3>[Individual, 3pts] Refactoring</h3>
             <div>
-                desc
+                Download either the <a target="_blank" href="../files/JavaCityConnectForRefactoring.zip">
+                Java code sample</a> or <a target="_blank" href="../files/CppCityConnectForRefactoring(VS2012).zip">
+                the C++ code sample</a>. Improve code quality by refactoring while doing the below 
+                after each refactoring.
+                <ul>
+                <li>
+                    Apply automated regression testing after each refactoring (using the 
+                    technique covered in L1). Some test case are provided in the zip file. 
+                    You may add more test cases if you think the ones given are not enough.
+                </li>
+                <li>
+                    [Individual, +1pt] Commit the changes to a local Git repo after each refactoring, 
+                    remember to add a commit log message to describe the refactoring you did. e.g., 
+                    renamed variable xCo to xCoordinate.
+                </li>
+                </ul>
+                Note that there are at least 10 places where you can improve the code.  
+                (<a target="_blank" href="http://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2Ftasks%2Ftasks-importproject.htm">
+                How to import existing projects into Eclipse</a>, 
+                <a target="_blank" href="https://msdn.microsoft.com/en-us/library/vstudio/754c3hy7(v=vs.110).aspx">
+                How to import existing projects into VS2012</a>). 
+                In particular, check for compliance with the coding standards given under Lecture 2 Part 1 resources.
+
+                Remember to bring a laptop to the tutorial. (Cf: 
+                <span onclick="getContentUsingAjax('handbook-faq-noLaptop', 
+                '#embedded-week3-faq');"><span class="embedded-link">				
+                What if I don't carry around a laptop?</span></span>)
             </div>
         </div>
     </div>
 </div>
 
 <div class="tutorial content-week3">
-    <h3 id="tutorial-content-week3" class="buttoned"><span>Tutorial 2: Tutorial title</span></h3>
+    <h3 id="tutorial-content-week3" class="buttoned"><span>Tutorial 2: Code quality, refactoring, 
+    automated testing and revision control</span></h3>
     <div>
-        <div class="tutorial tutorial-week3">
-            <h3> [Team, 2pts] Activity 1</h3>
-            <div>
-                desc.
-            </div>
+    <div class="tutorial tutorial-week3">
+        <h3> [Individual, 1pt]  Demo your ability to debug using the IDE (this was a 
+        learning activity for Tutorial 1). </h3>
+        <div>
+            If you are new to Debugging in an IDE, refer the resources we have provided under 
+            Lecture 1 Part 2. Reminder: In this module you should use Eclipse or Visual Studio. 
+            Other IDEs are not allowed (
+            <a target="_blank" href="https://docs.google.com/document/d/1FhJVBIsip6ShOdZ81bmssllDiz04YBBqoxpZv26_iQE/pub?embedded=true#h.udljvsbmpmgv">
+            huh? why?</a>)
         </div>
-        <div class="tutorial tutorial-week3">
-            <h3> [Individual, 1pt] Activity 2</h3>
-            <div>
-                desc.
-            </div>
+    </div>
+    <div class="tutorial tutorial-week3">
+        <h3> [Individual, 1pt] Demo your ability to run regression tests using the technique 
+        covered in Lecture 1.</h3>
+        <div>
+            Note that regression testing using '<' and '>' should be done in a cmd window (on Windows) 
+            or a terminal (on Mac/Linux). It may not work in PowerShell, Eclipse, or VisualStudio.
+
+            OS-X users: You can use diff -w output.txt expected.txt to compare two files. 
+            -w switch is used to ignore differences in white spaces.
         </div>
+    </div>
+    <div class="tutorial tutorial-week3">
+    <h3> Team up if you haven't done so yet.</h3>
+        <div>
+            Get your team ID from your tutor.
+        </div>
+    </div>
+    <div class="tutorial tutorial-week3">
+        <h3> Share your refactorings with other team members. </h3>
+        <div>
+            Try to reach a total of at least 10 refactorings as a team. You should use the TV for this.
+        </div>
+    </div>
     </div>
 </div>
 
@@ -75,16 +171,22 @@
 <div class="ilo content-week3">
     <h3 id="ilo-content-week3" class="buttoned"><span>Intended Learning Outcomes</span></h3>
     <div>
-        <div class="ilo ilo-week3">
-            <h3>ILO1 title</h3>
-            <div>
-            </div>
+    <div class="ilo ilo-week3">
+        <h3>Reasonably proficient in using a modern IDE for project work.</h3>
+    <div>
+    </div>
+    </div>
+    <div class="ilo ilo-week3">
+        <h3>Knows how to automate regression testing (at primitive level).</h3>
+        <div>
         </div>
-        <div class="ilo ilo-week3">
-            <h3>ILO2 title</h3>
-            <div>
-            </div>
+    </div>
+    <div class="ilo ilo-week3">
+        <h3>Knows how to refactor code. Understands the difference between refactoring, 
+        redesign, and optimization.</h3>
+        <div>
         </div>
+    </div>
     </div>
 </div>
 
@@ -92,26 +194,131 @@
 <div class="lecture content-week3">
     <h3 id="lecture-content-week3" class="buttoned"><span>Lecture 3: From program to a product idea</span></h3>
     <div>
-        <div class="lecture lecture-week3">
-            <h3>[30 minutes] Part 1 - Part 1 Title</h3>
-            <div>
-                   desc
-            </div>
-            <h3>[40 minutes] Part 2 - Part 2 Title</h3>
-            <div>
-                   desc
-            </div>
-            
-            <h3>[40 minutes] Part 3 - Part 3 Title</h3>
-            <div>
-                   desc
-            </div>
-            <h3>[10 minutes] Recap </h3>
-            <div>
-                   desc
-            </div>
+    <div class="lecture lecture-week3">
+        <h3>[35 minutes] Part 1 - Problem before solution: figuring out requirements</h3>
+        <div>
+            <table class="padded-borderless lecture-content-table">
+            <tr>
+            <td>
+                <img src="../images/specifying.png"  style="width: 249.50px; height: 157.53px;">
+            </td>
+            <td>
+            <p>
+                <a target="_blank" href="../files/slide/L3P1. Problem before solution - 
+                figuring out requirements.pptx">Slides</a>
+            </p>
+            <span class="dim">
+            <p>
+                <strong>Overview:</strong> There are many ways to gather, analyze and 
+                document requirements.
+            </p>
+            <p>
+                <strong>Topics:</strong> establishing requirements, specifying requirements
+            </p>
+            </span>
+            </td>
+            </tr>
+            </table>
+            <p>
+                Resources:
+            </p>
+            <ul>
+                <li>
+                    Interesting side reading
+                </li>
+                <ul>
+                <li>
+                    Sample specifications - These show how the format of requirements/system 
+                    specification can differ based on the nature of the project.
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://docs.google.com/document/d/1hjQQHYM3YId0EUSrGnJWG5AeFpDD_G7xg_d--7jg3vU/pub?embedded=true">
+                        TEAMMATES</a> - Note that this specification is more detailed 
+                        than what is expected from you. Reason: TEAMMATES is a bigger project 
+                        than yours, has been in operation for several years now, and has 
+                        passed through several teams of developers during this time.
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://scesm04.upb.de/case-study-2/requirements.pdf">
+                        A weather-related scientific software</a> (source: NASA) - 
+                        Because of the nature of the software, the specification is very technical, 
+                        detailed, and completely text-based.
+                    </li>
+                </ul>
+                </li>
+                <li>
+                    Humor : Dilbert on user stories, Dilbert asks a user for requirements,  
+                    Alice asks a user for requirements                        
+                </li>
+                </ul>
+            </ul>
         </div>
-        
+    </div>
+    <div class="lecture lecture-week3">
+        <h3>[35 minutes] Part 2 - From the magician's hat: designing the product</h3>
+        <div>
+        <table class="padded-borderless lecture-content-table">
+        <tr>
+        <td>
+            <img src="../images/10 observations.png"  style="width: 249.50px; height: 157.53px;">
+        </td>
+        <td>
+        <p>
+            <a target="_blank" href="../files/slide/L3P2. From the magician's hat - 
+            designing the product.pptx">Slides</a>
+        </p>
+        <span class="dim">
+        <p>
+            <strong>Overview:</strong> It is important to consider the proposed product 
+            from the users' point of view and provide good solutions to users' problems 
+            rather than slap together a slew of features that you as developers find 
+            interesting. UI prototypes are especially useful in visualizing the product 
+            early and improving the user experience.
+        </p>
+        <p>
+            <strong>Topics:</strong> product design
+        </p>
+        </span>
+        </td>
+        </tr>
+        </table>
+        <p>
+            Resources:
+        </p>
+        <ul>
+            <li>
+                Interesting side reading
+            </li>
+            <ul>
+                <li>
+                    [Web article] <a target="_blank" href="http://radar.oreilly.com/2015/06/the-11-deadly-sins-of-product-development.html">
+                    The 11 deadly sins of product development</a>
+                </li>
+                <li>
+                    [Web article] <a target="_blank" href="http://asktog.com/atc/principles-of-interaction-design/">
+                    First Principles of Interaction Design</a> - This it totally out of 
+                    scope of this module, but a good read for folks who are deeply interested 
+                    in designing good products and can’t wait till you read relevant modules later.
+                </li>
+                <li>
+                    [Web article] <a target="_blank" href="http://sachagreif.com/flat-pixels/">
+                    skeuomorphism vs flat design</a> - For those who are interested in GUI design. 
+                    Out of scope of this module.
+                </li>
+                <li>
+                    [Web article] <a target="_blank" href="http://venturebeat.com/2014/11/02/founder-stories-people-dont-want-drills/">
+                    People don’t want drills, they want holes</a>
+                </li>
+            </ul>
+        </ul>
+        </div>
+    </div>
+    <div class="lecture lecture-week3">
+        <h3>[25 minutes] Recap </h3>
+        <div>
+            <a target="_blank" href="../files/slide/L3Recap.pptx">Slides</a>
+        </div>
+    </div>
     </div>
 </div>
 
