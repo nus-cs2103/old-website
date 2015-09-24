@@ -320,3 +320,11 @@ table.bordered tr > th {
     text-align: left;
     float: left;
 }
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style:italic
+}
