@@ -1,33 +1,27 @@
-<div class="deadline content-week11">
-    <h3 id="deadline1-content-week11" class="buttoned"><span>Deadlines </span></h3>
-    <div>
-        <div class="deadline deadline1-week11">
-            <h3>[Mon 23:59] Deadline ABC</h3>
-            <div>
-            </div>
-        </div>
-        <div class="deadline deadline1-week11">
-            <h3>[Fri 23:59] Deadline XYZ</h3>
-            <div>
-                Details about this deadline
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="things-to-do content-week11">
     <h3 id="things-to-do-content-week11" class="buttoned"><span>Things to do</span></h3>
     <div>
         <div class="things-to-do things-to-do-week11">
-            <h3>Task title</h3>
+            <h3>Handbook sections to read</h3>
             <div>
-                task desc
-            </div>
-        </div>
-        <div class="things-to-do things-to-do-week11">
-            <h3>Task title</h3>
-            <div>
-                task desc
+                <ul>
+                    <li>
+                        Project:
+                        <span onclick="getContentUsingAjax('handbook-v05Requirements', '#embedded-week11-handbook');">
+                            <span class="embedded-link">V0.5 [production release] Additional Requirements</span>
+                        </span> | 
+                        <span onclick="getContentUsingAjax('handbook-v05Submission', '#embedded-week11-handbook');">
+                            <span class="embedded-link">V0.5 Submission</span>
+                        </span> | 
+                        <span onclick="getContentUsingAjax('handbook-individualReport', '#embedded-week11-handbook');">
+                            <span class="embedded-link">Individual report</span>
+                        </span> | 
+                        <span onclick="getContentUsingAjax('handbook-v05Evaluation', '#embedded-week11-handbook');">
+                            <span class="embedded-link">V0.5 Evaluation</span>
+                        </span>
+                        <div id="embedded-week11-handbook"></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -37,51 +31,129 @@
     <h3 id="homework-content-week11" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
         <div class="homework homework-week11">
-            <h3>Activity 1 [Individual, 3pts]</h3>
+            <h3>Get design tips</h3>
             <div>
-                desc
+                If you haven’t already, Also look at
+                <a target="_blank" href="https://docs.google.com/document/d/1_4r9JmKvXkcqfATgNe3xPvRHnM32QuJOu4DfegUpd7I/pub?embedded=true">
+                CS2103 Project: Points to Ponder</a> for some design tips useful when refining the
+                product design.
             </div>
         </div>
         <div class="homework homework-week11">
-            <h3>Activity 2 [Team, 2pts]</h3>
+            <h3>Use other models [Individual, 2pts]</h3>
             <div>
-                desc
+                Do one of the following (try to ensure at least one member does each):
+                <ul>
+                    <li>
+                        <strong>Relate</strong> (no need to draw) at least 2 “non-examinable” UML
+                        models to your project. Explain why/where the model is potentially applicable
+                        or why it is not applicable to the project.
+                    </li>
+                    <li>
+                        <strong>Draw</strong> an activity diagram to represent a workflow/algorithm
+                        in your part of the project. If your part of the project does not have any
+                        workflows, you can draw an activity diagram to represent the workflow of a
+                        user using your team’s product.<br>Bring the diagram to the tutorial.
+                    </li>
+                    <li>
+                        <strong>Draw</strong> an OODM for your project. Remember, OODM is about the
+                        problem domain, not about the solution. Classes such as GUI, Manager,
+                        Storage should not appear in the OODM but it can have classes such as Task
+                        and Reminder.<br>It should be about how a person deals with his/her schedules
+                        and tasks. Bring the diagram to the tutorial.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="homework homework-week11">
+            <h3>Some integration/system testing [Team, 5pts]</h3>
+            <div>
+                Ensure you have *some* automated integration and/or system tests in place.<br>i.e.
+                testing beyond individual unit testing and covering a major part of the system, not
+                just one method/class.<br>e.g. a test that takes the full user command as the input
+                and verify that it is executed properly.
+            </div>
+        </div>
+        <div class="homework homework-week11">
+            <h3>Reach V0.3 [Team, 5pts]</h3>
+            <div>
+                V0.3 is noticeably better than the previous version, and preferably, ready for dog
+                fooding. The code <span class="highlighted">should be tagged as V0.3 in the repo.</span>
+                There should be <span class="highlighted">at least 20 realistic tasks</span> in the
+                demo database covering a wide variety of tasks.<br>That is, <span class="highlighted">
+                each team member</span> should try to enter 20+ realistic items into the database
+                using the product.<br>Even better if you use the product to track your own schedule
+                for real (this is called
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">
+                    dog fooding
+                </a>).<br><span class="highlighted">ALL members should have a demo-ready V0.3
+                version</span> in their computer when you come to the tutorial.<br>Any of you should
+                be able to do the demo at a moment’s notice. This demo to be done by someone who did
+                not demo the product in previous milestone demos. No debugging/integration allowed
+                prior to the demo.
+            </div>
+        </div>
+        <div class="homework homework-week11">
+            <h3>Contributed to V0.3 [Individual, 5pts]</h3>
+            <div>
+                [3 pts] Committed code for this version.<br>[1 pt] Has a demo-ready version of V0.3
+                in own computer and ready to do a demo.<br>[1 pt] Has 20+ tasks in the demo database.
+            </div>
+        </div>
+        <div class="homework homework-week11">
+            <h3>Project planning [Individual, 2pts]</h3>
+            <div>
+                As before.
+            </div>
+        </div>
+        <div class="homework homework-week11">
+            <h3>Revisit marking scheme</h3>
+            <div>
+                This may be a good time to revisit the V0.5 marking scheme given in the Handbook
+                while you still have time to tweak things to get more marks.
             </div>
         </div>
     </div>
 </div>
 
 <div class="tutorial content-week11">
-    <h3 id="tutorial-content-week11" class="buttoned"><span>Tutorial 10: Tutorial title</span></h3>
+    <h3 id="tutorial-content-week11" class="buttoned"><span>Tutorial 10: More models</span></h3>
     <div>
         <div class="tutorial tutorial-week11">
-            <h3> [Team, 2pts] Activity 1</h3>
+            <h3>Update code to V0.3</h3>
             <div>
-                desc.
+                Update the code to V0.3 tag and use that version to do the demo. This is not
+                necessarily the latest version of the code. It <span class="highlighted">should be
+                specifically the version tagged as V0.3</span>.<br>One person may do the demo, but
+                others should show the demo-ready version with the tasks already entered.
             </div>
         </div>
         <div class="tutorial tutorial-week11">
-            <h3> [Individual, 1pt] Activity 2</h3>
+            <h3>Show pre-tutorial learning activities to tutor</h3>
             <div>
-                desc.
+                Show models, integration tests, revision history, and the issue tracker to the tutor.
+            </div>
+        </div>
+        <div class="tutorial tutorial-week11">
+            <h3>After the tutorial</h3>
+            <div>
+                Dogfood your product (i.e. use it for your own task tracking) intensively and use
+                that experience to improve it as much as you can during the next 1.5 weeks.
             </div>
         </div>
     </div>
 </div>
 
-
-
-
 <div class="ilo content-week11">
     <h3 id="ilo-content-week11" class="buttoned"><span>Intended Learning Outcomes</span></h3>
     <div>
         <div class="ilo ilo-week11">
-            <h3>ILO1 title</h3>
+            <h3>Knows about a few more UML models. Can use some of them.</h3>
             <div>
             </div>
         </div>
         <div class="ilo ilo-week11">
-            <h3>ILO2 title</h3>
+            <h3>Can automate integration testing.</h3>
             <div>
             </div>
         </div>
@@ -90,33 +162,34 @@
 
 
 <div class="lecture content-week11">
-    <h3 id="lecture-content-week11" class="buttoned"><span>Lecture 11: From program to a product idea</span></h3>
+    <h3 id="lecture-content-week11" class="buttoned"><span>Lecture 11: Reusing existing things</span></h3>
     <div>
         <div class="lecture lecture-week11">
-            <h3>[30 minutes] Part 1 - Part 1 Title</h3>
+            <h3>[8 minutes] Part 1 - Part 1 Title</h3>
             <div>
-                   desc
+                <table class="padded-borderless lecture-content-table">
+                    <tr>
+                        <td>
+                            <img src="../images/frameworks.png">
+                        </td>
+                        <td>
+                            <p>
+                                <a target="_blank" href="#">Slides</a>
+                            </p>
+                            <span class="dim">
+                            <p>
+                                <strong>Overview:</strong> Often, we reuse platforms, frameworks,
+                                and libraries instead of building everything from scratch.
+                            </p>
+                            <p>
+                                <strong>Topics:</strong> platforms, frameworks and libraries
+                            </p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
-        <div class="lecture lecture-week11">
-            <h3>[40 minutes] Part 2 - Part 2 Title</h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        <div class="lecture lecture-week11">    
-            <h3>[40 minutes] Part 3 - Part 3 Title</h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        <div class="lecture lecture-week11">
-            <h3>[10 minutes] Recap </h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        
     </div>
 </div>
 
