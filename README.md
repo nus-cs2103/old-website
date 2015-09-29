@@ -1,5 +1,5 @@
-# Website Source for (CS2103 - Software Engineering) Module
-This repo hosts the source code for the CS2103 module at [SoC (NUS)](http://www.comp.nus.edu.sg)
+# Source Code for the CS2103 Module Website
+This repo hosts the source code for the CS2103 (Software Engineering) module at [SoC (NUS)](http://www.comp.nus.edu.sg)
 
 ## Released version
 The released version of this website is available [here](http://www.comp.nus.edu.sg/~cs2103). 
