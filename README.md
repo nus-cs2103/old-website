@@ -37,7 +37,9 @@ If you would like to contribute code, here is the procedure:
       the 'upstream` repo). The code in the upstream repo may have been updated while you were fixing the issue. 
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/)
    2. Push the code to your fork and create a pull request (PR) against the master 
-      branch of this repo.
+      branch of this repo.<br>
+      When naming the PR, copy paste the name of the issue you are fixing.<br>
+      e.g. `Handbook TOC links are not working in iPhone browser #19` 
    3. Check the diff view of the PR to ensure it contains the intended changes only.
 8. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
    revise the code, push the new commits to your branch, and post a comment to say the pull request
