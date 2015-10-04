@@ -3,6 +3,14 @@ table > tbody > tr > td {
     font-size: 14px;
 }
 
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
 #form-preferences {
     background-color: white;
 }
