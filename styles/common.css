@@ -1,4 +1,10 @@
-body,
+
+body {
+    max-width: 1000px;
+    font-size: 14px;
+    width:90%;
+}
+
 table > tbody > tr > td {
     font-size: 14px;
 }
