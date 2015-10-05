@@ -1,117 +1,272 @@
-<div class="deadline content-week8">
-    <h3 id="deadline1-content-week8" class="buttoned"><span>Deadlines </span></h3>
-    <div>
-        <div class="deadline deadline1-week8">
-            <h3>[Mon 23:59] Deadline ABC</h3>
-            <div>
-            </div>
-        </div>
-        <div class="deadline deadline1-week8">
-            <h3>[Fri 23:59] Deadline XYZ</h3>
-            <div>
-                Details about this deadline
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="things-to-do content-week8">
-    <h3 id="things-to-do-content-week8" class="buttoned"><span>Things to do</span></h3>
-    <div>
-        <div class="things-to-do things-to-do-week8">
-            <h3>Task title</h3>
-            <div>
-                task desc
-            </div>
-        </div>
-        <div class="things-to-do things-to-do-week8">
-            <h3>Task title</h3>
-            <div>
-                task desc
-            </div>
-        </div>
+  <h3 id="things-to-do-content-week8" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week8">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('handbook-v02Demo', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.2 Demo and Feedback Session</span>
+            </span> |
+            <span onclick="getContentUsingAjax('handbook-v02Manual', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.2-V0.4 of the Project Manual</span>
+            </span> |
+            <span onclick="getContentUsingAjax('handbook-v02Product', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.2-V0.4 of the Product</span>
+            </span> |
+            <span onclick="getContentUsingAjax('handbook-v02Grading', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.2-V0.4 Grading</span>
+            </span>
+            <div id="embedded-week8-handbook"></div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="homework content-week8">
-    <h3 id="homework-content-week8" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
-    <div>
-        <div class="homework homework-week8">
-            <h3>Activity 1 [Individual, 3pts]</h3>
-            <div>
-                desc
-            </div>
-        </div>
-        <div class="homework homework-week8">
-            <h3>Activity 2 [Team, 2pts]</h3>
-            <div>
-                desc
-            </div>
-        </div>
+  <h3 id="homework-content-week8" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <div class="homework homework-week8">
+      <h3>Reach V0.1 [Team, 10pts]</h3>
+      <div>
+        Reach V0.1. Refer the handbook to see the minimal requirement for V0.1. The milestone V0.1
+        <span class="highlighted">should be reached *before* the tutorial</span>.
+        No pre-demo code tinkering is allowed during the tutorial.
+      </div>
     </div>
+    <div class="homework homework-week8">
+      <h3>Relate Coupling and Cohesion to your component [Individual, 2pts]</h3>
+      <div>
+        Try to relate coupling and cohesion to the current architecture or the design of your component.
+        Where can you improve those two aspects?
+        Think of an alternative design and try to explain the difference between your design and the
+        alternative design using coupling and cohesion.
+        You will be asked about this during the tutorial.
+      </div>
+    </div>
+    <div class="homework homework-week8">
+      <h3>Update the project plan in the issue tracker [Individual, 2pts]</h3>
+      <div>
+        Update the issue tracker with all the project tasks you have done so far. Also enter tasks that you plan
+        to do in the next week. This plan can be revised during the tutorial.
+        All issues allocated to V0.1 and prior milestones should be closed. If any are not done yet,
+        reschedule them to future milestones.
+        A person should typically have some closed issues (in V0.1 milestone) and some open issues
+        (in the upcoming milestones) against his/her name at this point. Status of those issues should be
+        updated accordingly.
+      </div>
+    </div>
+    <div class="homework homework-week8">
+      <h3>Ask for help if you have fallen behind too far [Individual]</h3>
+      <div>
+        <span class="important">
+          We just passed the halfway point of the module and we have been pushing you to learn things by
+          yourself. However, we don’t want to leave anybody behind either. If you think you have fallen too
+          far behind and feel like you cannot catch up, please let your tutor know, or email the lecturer.
+          We’ll try to help you catch up.
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="tutorial content-week8">
-    <h3 id="tutorial-content-week8" class="buttoned"><span>Tutorial 7: Tutorial title</span></h3>
-    <div>
-        <div class="tutorial tutorial-week8">
-            <h3> [Team, 2pts] Activity 1</h3>
-            <div>
-                desc.
-            </div>
-        </div>
-        <div class="tutorial tutorial-week8">
-            <h3> [Individual, 1pt] Activity 2</h3>
-            <div>
-                desc.
-            </div>
-        </div>
+  <h3 id="tutorial-content-week8" class="buttoned">
+    <span>Tutorial 7: V0.1 demo, coupling and cohesion</span>
+  </h3>
+  <div>
+    <div class="tutorial tutorial-week8">
+      <h3> Demo V0.1 [Team]</h3>
+      <div>
+        Do a demo of your V0.1 to your tutor. It is an informal demo to show what you have done so far.
+        This demo can be done by one person. We expect you to take turns in doing the demo. Those who did not
+        do the demo this time are expected to demo in future weeks.
+        This is a live demo (i.e. use the actual product for the demo).
+        <br/>
+        Demo duration ~5min.
+        No need for slides.
+      </div>
     </div>
+    <div class="tutorial tutorial-week8">
+      <h3> Explain coupling and cohesion in your component [Individual]</h3>
+      <div>
+        Explain coupling and cohesion of the design of your component.
+        <br/>
+        Note: If you don’t have neat (can be hand drawn, but should be neat) diagrams for your architecture
+        and component designs at this stage, it is a sign that you are simply hacking together code and there
+        is no effort to follow a design.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week8">
+      <h3> Ask for help if needed [Team]</h3>
+      <div>
+        Inform your tutor if you there is something you cannot manage on your own and need our help.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week8">
+      <h3> Refine the milestone plan [Team]</h3>
+      <div>
+        Now that you have some idea about the effort it takes to implement some user stories, refine the
+        milestone plan for V0.2-V05. i.e. which story will be delivered when.
+        Use HubTurbo to show the milestone plan to the tutor. 
+        <div class="additional-info">Tip: Create a board called 'Milestone Plan', containing a panel for 
+        each milestone. Show that board to the tutor.
+        </div>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week8">
+      <h3> Refine Task Schedule [Individual]</h3>
+      <div>
+        Each person should refine in the Issue tracker your task schedule for the next week. <br>
+        One member should use HubTurbo to show the latest work allocation to the tutor.
+      </div>
+    </div>
+  </div>
 </div>
 
 
-
-
 <div class="ilo content-week8">
-    <h3 id="ilo-content-week8" class="buttoned"><span>Intended Learning Outcomes</span></h3>
-    <div>
-        <div class="ilo ilo-week8">
-            <h3>ILO1 title</h3>
-            <div>
-            </div>
-        </div>
-        <div class="ilo ilo-week8">
-            <h3>ILO2 title</h3>
-            <div>
-            </div>
-        </div>
+  <h3 id="ilo-content-week8" class="buttoned"><span>Intended Learning Outcomes</span></h3>
+  <div>
+    <div class="ilo ilo-week8">
+      <h3>Can relate coupling and cohesion to a design.</h3>
+      <div>
+        You should be able to justify some design decisions using the concepts coupling and cohesion.
+        e.g. We chose design 1 over design 2 for the Parser component because in design 1 the Parser does not 
+        execute commands, which makes it more cohesive.
+      </div>
     </div>
+  </div>
 </div>
 
 
 <div class="lecture content-week8">
-    <h3 id="lecture-content-week8" class="buttoned"><span>Lecture 8: From program to a product idea</span></h3>
-    <div>
-        <div class="lecture lecture-week8">
-            <h3>[30 minutes] Part 1 - Part 1 Title</h3>
-            <div>
-                   desc
-            </div>
-            <h3>[40 minutes] Part 2 - Part 2 Title</h3>
-            <div>
-                   desc
-            </div>
-            
-            <h3>[40 minutes] Part 3 - Part 3 Title</h3>
-            <div>
-                   desc
-            </div>
-            <h3>[10 minutes] Recap </h3>
-            <div>
-                   desc
-            </div>
-        </div>
-        
+  <h3 id="lecture-content-week8" class="buttoned"><span>Lecture 8: From program to a product idea</span></h3>
+  <div>
+    <div class="lecture lecture-week8">
+      <h3>Part 1 - Déjà vu: Using patterns to solve recurring problems [30 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/patterns.png">
+                </td>
+            <td>
+              <p>
+              Slides <span class="dim">{link coming soon}</span>
+              <!-- <a href="">Slides</a> -->
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Patterns are tried and trusted solutions to recurring problems.
+                Applying right patterns often improves our work products.
+                </p>
+                <p>
+                <strong>Topics:</strong> patterns
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+        Resources:
+        </p>
+        <ul>
+          <li>
+            Something we have already covered, presented as a pattern and an anti-pattern:
+            <a target="_blank" href="http://codebetter.com/jeremymiller/2006/12/03/composed-method-pattern/">
+              Composed method pattern (and Arrowhead anti-pattern)
+            </a>,
+            <a target="_blank" href="http://www.codinghorror.com/blog/2006/01/flattening-arrow-code.html">
+              another take one the same issue
+            </a>
+            - Note that these code-level patterns are sometimes called <em>coding idioms</em>.
+          </li>
+          <li>
+            Some good books on design patterns:
+            <a target="_blank" href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">
+              The famous ‘Gang of Four’ patterns book
+            </a>,
+            <a target="_blank" href="http://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124/">
+              Head first design patterns
+            </a>
+          </li>
+          <li>
+            Singleton is a neat pattern and it is easy to explain too. That is why it is used often to
+            illustrate  the concept of design patterns. However, there is a concern that Singletons are evil,
+            especially when used excessively.
+            <a target="_blank" href="http://blogs.msdn.com/b/scottdensmore/archive/2004/05/25/140827.aspx">
+              Here’s a blog post (from MSDN blogs) that supports that concern</a>.
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="lecture lecture-week8">
+      <h3>Part 2 - Gems of wisdom: software development principles [40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/principles.png">
+                </td>
+            <td>
+              <p>
+              Slides <span class="dim">{link coming soon}</span>
+              <!-- <a href="">Slides</a> -->
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Principles are little gems of wisdom gained from past experience.
+                It is another way to learn from others' past experience.
+                </p>
+                <p>
+                <strong>Topics:</strong> principles
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+        Resources:
+        </p>
+        <ul>
+          <li>
+            <a target="_blank" href="http://www.comp.nus.edu.sg/~damithch/pages/SE-quotes.htm?type%3DstudentQuotes">
+              Selected software engineering quotes for students -
+              These quotes capture gems of wisdom in an easy-to-remember format.
+            </a> - These quotes capture
+            gems of wisdom in an easy-to-remember format.
+          </li>
+          <li>
+            For those who want to go a bit more deeper into SE principles (certainly beyond the scope of this
+            module), this is a good place to start:
+            <a target="_blank" href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">
+              Principles of OOD
+            </a>, an article by Robert C. Martin
+            (aka Uncle Bob)
+          </li>
+          <li>
+            <a target="_blank" href="http://www.youtube.com/watch?v%3DacjvKJiOvXw">
+              A useful Google Tech Talk on “OO Design for Testability”
+            </a> that also refers to how Law of
+            Demeter principle and Singleton patterns affects testability.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week8">
+      <h3>Recap [10 minutes]</h3>
+      <div>
+        Slides <span class="dim">{link coming soon}</span>
+        <!-- <a href="">Slides</a> -->
+      </div>
+    </div>
+  </div>
+  
+</div>
 </div>
 

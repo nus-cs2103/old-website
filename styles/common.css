@@ -3,6 +3,14 @@ table > tbody > tr > td {
     font-size: 14px;
 }
 
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
 #form-preferences {
     background-color: white;
 }
@@ -319,4 +327,12 @@ table.bordered tr > th {
 .buttoned > span:nth-child(2) {
     text-align: left;
     float: left;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style:italic
 }
