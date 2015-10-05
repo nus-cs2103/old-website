@@ -47,3 +47,5 @@ If you would like to contribute code, here is the procedure:
 9. When your code is acceptable, it will be merged to this repo. Your fix will be included in the 
    next release of the website.
 
+## Acknowledgements
+Many thanks to our [contributors](CONTRIBUTORS.md). 
