@@ -53,6 +53,15 @@ function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId
         }
     });
     $(accordionHeaderSelector + ' > .btn-expand').button();
+    $(accordionHeaderSelector).on('click', function(e) {
+        if ($(accordionHeaderSelector).hasClass('ui-accordion-header-active')) {
+            $(accordionHeaderSelector + ' > .btn-collapse').show();
+            $(accordionHeaderSelector + ' > .btn-expand').hide();
+        } else {
+            $(accordionHeaderSelector + ' > .btn-collapse').hide();
+            $(accordionHeaderSelector + ' > .btn-expand').show();
+        }
+    });
 }
 
 function addCollapseAndExpandButtonsForWeek(accordionHeaderSelector, divId) {
