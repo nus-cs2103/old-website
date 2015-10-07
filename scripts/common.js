@@ -111,13 +111,7 @@ function loadContent(week) {
             for (var i in components) {
                 var component = components[i];
                 makeAccordion('.' + component + '-week' + week);
-            }
-            for (var i in components) {
-                var component = components[i];
                 addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
-            }
-            for (var i in components) {
-                var component = components[i];
             }
             $('.preferences').each(function() {
                 var type = $(this).prop('value');
