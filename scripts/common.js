@@ -33,6 +33,7 @@ function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId
         $(expandedAccordions).click();
         $(this).hide();
         $(accordionHeaderSelector + ' > .btn-expand').show();
+        showExpandAllButton(accordionHeaderSelector);
         if ($(accordionHeaderSelector).hasClass('ui-accordion-header-active')) {
             $(accordionHeaderSelector).click();
         }
@@ -54,14 +55,47 @@ function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId
     });
     $(accordionHeaderSelector + ' > .btn-expand').button();
     $(accordionHeaderSelector).on('click', function(e) {
-        if ($(accordionHeaderSelector).hasClass('ui-accordion-header-active')) {
-            $(accordionHeaderSelector + ' > .btn-collapse').show();
-            $(accordionHeaderSelector + ' > .btn-expand').hide();
+        // show [++] if any collapsed accordion exists in all children
+        var allCollapsedAccordions = $('.' + divId + ' h3:not(.ui-accordion-header-active)');
+        if (allCollapsedAccordions.length > 0) {
+            showExpandAllButton(accordionHeaderSelector);
         } else {
-            $(accordionHeaderSelector + ' > .btn-collapse').hide();
-            $(accordionHeaderSelector + ' > .btn-expand').show();
+            showCollapseAllButton(accordionHeaderSelector);
+        }
+
+        // show [+] if collapsed accordions exist in immediate children
+        var collapsedAccordions = $('.' + divId + ' > h3:not(.ui-accordion-header-active)');
+        if (collapsedAccordions.length > 0) {
+            showExpandButton(accordionHeaderSelector);
+        } else {
+            showCollapseButton(accordionHeaderSelector);
+        }
+
+        // if collapsing the header, always show [+] and [++]
+        if (!$(accordionHeaderSelector).hasClass('ui-accordion-header-active')) {
+            showExpandButton(accordionHeaderSelector);
+            showExpandAllButton(accordionHeaderSelector);
         }
     });
+}
+
+function showExpandButton(accordionHeaderSelector) {
+        $(accordionHeaderSelector + ' > .btn-collapse').hide();
+        $(accordionHeaderSelector + ' > .btn-expand').show();
+}
+function showCollapseButton(accordionHeaderSelector) {
+        $(accordionHeaderSelector + ' > .btn-collapse').show();
+        $(accordionHeaderSelector + ' > .btn-expand').hide();
+}
+
+function showExpandAllButton(accordionHeaderSelector) {
+        $(accordionHeaderSelector + ' > .btn-collapseall').hide();
+        $(accordionHeaderSelector + ' > .btn-expandall').show();
+}
+
+function showCollapseAllButton(accordionHeaderSelector) {
+        $(accordionHeaderSelector + ' > .btn-collapseall').show();
+        $(accordionHeaderSelector + ' > .btn-expandall').hide();
 }
 
 function addCollapseAndExpandButtonsForWeek(accordionHeaderSelector, divId) {
