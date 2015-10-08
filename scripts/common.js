@@ -80,22 +80,22 @@ function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId
 }
 
 function showExpandButton(accordionHeaderSelector) {
-        $(accordionHeaderSelector + ' > .btn-collapse').hide();
-        $(accordionHeaderSelector + ' > .btn-expand').show();
+    $(accordionHeaderSelector + ' > .btn-collapse').hide();
+    $(accordionHeaderSelector + ' > .btn-expand').show();
 }
 function showCollapseButton(accordionHeaderSelector) {
-        $(accordionHeaderSelector + ' > .btn-collapse').show();
-        $(accordionHeaderSelector + ' > .btn-expand').hide();
+    $(accordionHeaderSelector + ' > .btn-collapse').show();
+    $(accordionHeaderSelector + ' > .btn-expand').hide();
 }
 
 function showExpandAllButton(accordionHeaderSelector) {
-        $(accordionHeaderSelector + ' > .btn-collapseall').hide();
-        $(accordionHeaderSelector + ' > .btn-expandall').show();
+    $(accordionHeaderSelector + ' > .btn-collapseall').hide();
+    $(accordionHeaderSelector + ' > .btn-expandall').show();
 }
 
 function showCollapseAllButton(accordionHeaderSelector) {
-        $(accordionHeaderSelector + ' > .btn-collapseall').show();
-        $(accordionHeaderSelector + ' > .btn-expandall').hide();
+    $(accordionHeaderSelector + ' > .btn-collapseall').show();
+    $(accordionHeaderSelector + ' > .btn-expandall').hide();
 }
 
 function addCollapseAndExpandButtonsForWeek(accordionHeaderSelector, divId) {
