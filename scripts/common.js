@@ -140,6 +140,32 @@ function checkIfAllComponentsChecked() {
     return isAllChecked;
 }
 
+function loadContent(week) {
+    $.ajax({
+        type: 'GET',
+        url: 'week' + week + '.html',
+        error: function() {
+
+        },
+        success: function(data) {
+            var components = ['things-to-do', 'homework', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
+            $('#content-week' + week).html(data);
+            makeAccordion('.content-week' + week);
+            for (var i in components) {
+                var component = components[i];
+                makeAccordion('.' + component + '-week' + week);
+                addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
+            }
+            $('.preferences').each(function() {
+                var type = $(this).prop('value');
+                if (!$(this).prop('checked')) {
+                    $('.' + type + '.content-week' + week).hide();
+                }
+            });
+        }
+    });
+}
+
 $(document).ready(function() {
 
     makeAccordion('.weeklyschedule');
@@ -167,37 +193,8 @@ $(document).ready(function() {
     });
 
     for (var week = 0; week <= 13; week++) {
-        $('#content-week' + week).html('<img height="75" width="75" class="margin-center-horizontal" src="images/ajax-preload.gif"/>');
-        $.ajax({
-            type: 'GET',
-            async: false,
-            url: 'week' + week + '.html',
-            error: function() {
-
-            },
-            success: function(data) {
-                var components = ['things-to-do', 'homework', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
-                $('#content-week' + week).html(data);
-                makeAccordion('.content-week' + week);
-                for (var i in components) {
-                    var component = components[i];
-                    makeAccordion('.' + component + '-week' + week);
-                }
-                for (var i in components) {
-                    var component = components[i];
-                    addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
-                }
-                for (var i in components) {
-                    var component = components[i];
-                }
-                $('.preferences').each(function() {
-                    var type = $(this).prop('value');
-                    if (!$(this).prop('checked')) {
-                        $('.' + type + '.content-week' + week).hide();
-                    }
-                });
-            }
-        });
+        $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
+        loadContent(week);
     }
 
     // toggles showing/hiding certain sections according to the preferences checkbox
