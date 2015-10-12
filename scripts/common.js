@@ -1,6 +1,7 @@
 function makeAccordion(elementSelector) {
     $(elementSelector).accordion({
         active: false,
+        animate: 0,
         collapsible: true,
         heightStyle: 'content'
     });
