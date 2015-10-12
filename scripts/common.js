@@ -24,8 +24,8 @@ function getContentUsingAjax(section, elementSelector) {
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
-    $(accordionHeaderSelector).append('<button id="collapse-' + divId + '" class="btn-collapse">-</button>' +
-                                      '<button id="expand-' + divId + '" class="btn-expand">+</button>');
+    $(accordionHeaderSelector).append('<button id="collapse-' + divId + '" class="btn-collapse">- -</button>' +
+                                      '<button id="expand-' + divId + '" class="btn-expand">+ +</button>');
     $(accordionHeaderSelector + ' > .btn-collapse').on('click', function(e) {
         e.stopPropagation();
         var divId = $(this).attr('id').substr(('collapse-').length);
@@ -102,8 +102,8 @@ function addCollapseAndExpandButtonsForWeek(accordionHeaderSelector, divId) {
     addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId);
     $(accordionHeaderSelector + ' > .btn-expand').show();
     $(accordionHeaderSelector + ' > .btn-collapse').hide();
-    $(accordionHeaderSelector).append('<button id="collapseall-' + divId + '" class="btn-collapseall">--</button>' +
-                                      '<button id="expandall-' + divId + '" class="btn-expandall">++</button>');
+    $(accordionHeaderSelector).append('<button id="collapseall-' + divId + '" class="btn-collapseall">- - -</button>' +
+                                      '<button id="expandall-' + divId + '" class="btn-expandall">+ + +</button>');
     $(accordionHeaderSelector + ' > .btn-collapseall').on('click', function(e) {
         e.stopPropagation();
         var divId = $(this).attr('id').substr(('collapseall-').length);
