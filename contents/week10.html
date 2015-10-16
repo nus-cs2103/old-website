@@ -4,6 +4,9 @@
     <div class="deadline deadline1-week10">
       <h3>[Mon 23:59] CE3 submission</h3>
       <div>
+        <span class="embedded-link" onclick="pullContent('handbook-ce3', '#embedded-week10-CE3deadline', '[Handbook extract] CE3: TextBuddyPro');">
+            more info </span>
+            <div id="embedded-week10-CE3deadline"></div>
       </div>
     </div>
   </div>
@@ -18,9 +21,11 @@
       <ul>
         <li>
         Project: 
-        V0.4 [release candidate] Additional Requirements <div class="dim">[link coming soon]</div>
+        <span class="embedded-link" onclick="pullContent('handbook-v04Product', '#embedded-week10-v04', 'V0.4 [release candidate] Additional Requirements');">
+            V0.4 [release candidate] Additional Requirements</span>
         </li>
       </ul>
+      <div id="embedded-week10-v04"></div>
       </div>
     </div>
   </div>
@@ -30,7 +35,7 @@
   <h3 id="homework-content-week10" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="homework homework-week10">
-      <h3>Reach V0.2</h3>
+      <h3>Reach V0.2 [Team, 5pts]</h3>
       <div>
         This should be a working version that is better than the previous version in some way. 
         If required, update the project manual. For these intermediate milestones, the amount 
@@ -40,17 +45,16 @@
         But doing very little up to V0.4 and doing a lot in V0.5 is not acceptable.<br>
 
         Remember to <span class="highlighted-darktext">
-        <a target="_blank" href="http://git-scm.com/book/en/Git-Basics-Tagging">
-          git tag
-        </a>
-        your V0.1 and V0.2 in the repo.</span>
-        There should not be any pushing/pulling during the tutorial. You are expected to 
-        have a stable V0.2 version in the repo before you come in. This V0.2 may or may not 
-        be the latest code in the repo.
+        <a target="_blank" href="http://git-scm.com/book/en/Git-Basics-Tagging">git tag</a>
+        your V0.1 and V0.2 in the repo.</span><br><br>
+
+        <span class="highlighted-darktext">There should not be any pushing/pulling or tinkering with code 
+        during the tutorial.</span> You are expected to have a stable V0.2 version in the
+         repo before you come in. This V0.2 may or may not be the latest code in the repo.
       </div>
     </div>
     <div class="homework homework-week10">
-      <h3>[Individual, 5pts] Some systematic unit testing</h3>
+      <h3>Do some systematic unit testing [Individual, 5pts]</h3>
       <div>
         (a) Ensure at least some automated tests exist for your part of the code.<br>
         Note: If you are doing the GUI component, you might find it harder to do unit 
@@ -67,25 +71,30 @@
         test case design heuristics in practice. Locating a good example to do that is up to you.
       </div>
     </div>
+    <div class="homework homework-week10">
+      <h3>Update the issue tracker [Individual, 2pts]</h3>
+      <div>
+        Update the issue tracker to reflect what you have done for the past week and what you
+        plan to do in the next week.
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="tutorial content-week10">
   <h3 id="tutorial-content-week10" class="buttoned"><span>Tutorial 9: Starting systematic testing</span></h3>
   <div>
-    From this tutorial, we are <span class="highlighted-darktext">going to be stricter in awarding 
-    participation points</span>, 
-    especially if we think your team is capable of more than what you are doing at this time. 
-    This is an attempt to push you to your fullest potential. Because most of you have much 
-    more than 80% of the points so far, losing some points at this time is unlikely to affect 
-    your final grade.<br>
-    
-    If required, clarify doubts about the tutor feedback for Project Manual V0.1.<br>
-    <br>
-
     <div class="tutorial tutorial-week10">
-      <h3> [Team, 5pts] V0.2 demo</h3>
+      <h3>Show the work distribution</h3>
       <div>
+        One member should start HubTurbo and load the board that shows the work distribution. 
+        The tutor will check it at some point of the tutorial.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week10">
+      <h3>Do the V0.2 demo </h3>
+      <div>
+        The demo will be evaluated by the other tutor in your tutorial group (not your own tutor). <br>
         Aim to finish in 5 minutes, should not take more than 10 minutes.
         <ul>
           <li>
@@ -104,16 +113,22 @@
         </ul>
       </div>
     </div>
+
     <div class="tutorial tutorial-week10">
-      <h3> [individual, 5pts] Committed code for this version</h3>
+      <h3> Show your contribution to V0.2 [individual, 5pts]</h3>
       <div>
+        To get the points, you should have some added commits in the repo for this version
       </div>
     </div>
+
     <div class="tutorial tutorial-week10">
-      <h3> [Individual, 2pts] Project planning (as before)</h3>
+      <h3> Show your unit tests</h3>
       <div>
+        One person can run all the unit tests and point out which tests were written by who.
       </div>
     </div>
+     
+    <br><br>
     <div class="tutorial tutorial-week10">
       <h3> After the tutorial</h3>
       <div>
@@ -149,16 +164,19 @@
       <h3>Understands the role of testing in quality assurance, and what can be done beyond 
       testing to increase product quality.</h3>
       <div>
+        Based on Lecture 9.
       </div>
     </div>
     <div class="ilo ilo-week10">
       <h3>Knows some basic test case design approaches and heuristics.</h3>
       <div>
+        Based on this week's pre-tutorial activity.
       </div>
     </div>
     <div class="ilo ilo-week10">
       <h3>Can do basic requirements/task tracking with the help of an issue tracker.</h3>
       <div>
+        Based on the use of issue tracker so far.
       </div>
     </div>
   </div>
@@ -236,7 +254,7 @@
             Agile vs Waterfall
             </a>
              - one of 
-             <a target="_blank" href="https://www.google.com.sg/search?q%3Dwaterfall%2Bvs%2Bagile">
+             <a target="_blank" href="https://www.google.com.sg/webhp#q=waterfall+vs+agile">
              many articles
              </a> comparing the two
           </li>
