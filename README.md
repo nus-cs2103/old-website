@@ -38,7 +38,7 @@ If you would like to contribute code, here is the procedure:
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/)
    2. Push the code to your fork and create a pull request (PR) against the master 
       branch of this repo.<br>
-      When naming the PR, copy paste the name of the issue you are fixing.<br>
+      When naming the PR, copy paste the name of the issue you are fixing, including the original issue number.<br>
       e.g. `Handbook TOC links are not working in iPhone browser #19` <br>
       In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #24` so that the corresponding issue
       is closed automatically when the PR is merged.
