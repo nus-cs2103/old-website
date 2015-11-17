@@ -40,28 +40,28 @@
 	 approach.<br>That is not to say anything should be allowed. Disallowing certain things can even be beneficial to users. 
 	 However, a decision to disallow a certain usage should be taken after careful consideration, not simply because it makes 
 	 the implementation easier.<br>Similarly, the software must cater for the possibility of task description containing keywords
-	 such as &#145;from&#146; &#145;to&#146;. e.g., If the user wants to add the task &#145;watch day after tomorrow&#1456; 
-	 (i.e., watch the movie named &#145;day after tomorrow&#146;) to the list, there should be a way to enter it without the 
-	 software interpreting &#145;tomorrow&#146; as the day for the task.</p></li></ul>
-     <ul><li ><p class="word-limit" >Stick to users&#146; language: Using the names mentioned in the requirements (e.g. floating 
+	 such as ‘from’ ‘to’. e.g., If the user wants to add the task ‘watch day after tomorrow’; 
+	 (i.e., watch the movie named ‘day after tomorrow’) to the list, there should be a way to enter it without the 
+	 software interpreting ‘tomorrow’ as the day for the task.</p></li></ul>
+     <ul><li ><p class="word-limit" >Stick to users’ language: Using the names mentioned in the requirements (e.g. floating 
 	 tasks) in the user guide or in the app itself might not make sense to users. If you want to stick with such terms, at least 
 	 you should explain the terms to users. Do not make users learn new terms unless absolutely necessary.</p></li></ul>
      <ul><li><p class="word-limit" >Use sensible defaults: Schedule the task NOW if no time is specified? really? Choose smart 
-	 defaults when you can, but don&#146;t chose silly defaults.</p></li></ul>
+	 defaults when you can, but don’t chose silly defaults.</p></li></ul>
      <ul><li ><p class="word-limit" >Give only useful features: Reconsider features such as login, sort, hashtag, priority. 
-	 They are OK to have if you have a strong justification. Always ask yourself, &#145;What if we don&#146;t have this feature? 
-	 Is it going to be a problem for Jim?&#146;. A feature common to other similar software may turn out to be useless for Jim.
-	 <br>Similarly a feature that may be valuable to &#145;somebody&#146; may not be valuable to Jim. For example, Jim uses the 
+	 They are OK to have if you have a strong justification. Always ask yourself, ‘What if we don’t have this feature? 
+	 Is it going to be a problem for Jim?’. A feature common to other similar software may turn out to be useless for Jim.
+	 <br>Similarly a feature that may be valuable to ‘somebody’ may not be valuable to Jim. For example, Jim uses the 
 	 software from his office computer. A audio playback of the command is unlikely to be useful in such an environment. Imagine 
-	 how Jim&#146;s co-workers would feel if Jim&#146;s computer keeps making audio commentary! </p></li></ul>
+	 how Jim’s co-workers would feel if Jim’s computer keeps making audio commentary! </p></li></ul>
      <ul><li><p class="word-limit" >Avoid half-baked features: When you implement a feature, consider all aspects of it. For example,
 	 if your extra feature is GCal sync, consider things such as how to store floating tasks in GCal, how to sync older items in GCal 
 	 with your software, how to sync repeating events, and so on. It is not necessary that you implement all those things. However, you
 	 should have considered all those things and you should have good reasons why you chose what you implemented over what you did not 
-	 implement. &#147;Oh, we didn&#146;t think of that&#148; is not a good answer. </p> </li></ul>
+	 implement. “Oh, we didn’t think of that” is not a good answer. </p> </li></ul>
 
     <h1><a name="Command"></a>Command format</h1>
-    <ul><li><p class="word-limit" >Optimize command format for users, not developers: Don&#146;t design the command format solely to 
+    <ul><li><p class="word-limit" >Optimize command format for users, not developers: Don’t design the command format solely to 
 	make parsing easier. Primarily, it should be easy to remember and type. Ease of parsing is secondary.</p></li></ul><p ></p>
     <ul><li><p class="word-limit" >Unix-like commands: Excessive use of symbols make the command hard to remember/type. We are 
 	targeting fast typists, not necessarily UNIX system admins. No matter how fast you can type, normal letters are faster to 
@@ -70,14 +70,14 @@
 	the mouse. But keep in mind that Jim prefers typing, not necessarily keyboard shortcuts. Keyboard shortcuts involving key 
 	combinations often takes more time than regular typing.<br>Automatically generating a command template to fill in may not be
 	good either. For a fast typist, editing an existing text by moving around using arrow/tab keys is slower than typing 
-	everything in one burst. <br>The goal is to give Jim a faster &#145;typing&#146; alternative to anything that can be done
+	everything in one burst. <br>The goal is to give Jim a faster ‘typing’ alternative to anything that can be done
 	in other ways. </p></li></ul><p ></p>
     <ul><li><p class="word-limit" >Avoil multi-step CLIs: The user should be able to accomplish most tasks using a single command.
-	For example, the approach &#145;type add, press enter, then type description, press enter again etc. is unacceptable. 
+	For example, the approach ‘type add, press enter, then type description, press enter again etc. is unacceptable. 
 	</p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Flexible or rigid? The more you make the command &#147;natural-language-like&#148;, the higher 
+    <ul><li><p class="word-limit" >Flexible or rigid? The more you make the command “natural-language-like”, the higher 
 	the risk of misinterpreting a user command. The more you use special symbols and strict formats, the harder it is for users to 
-	use the software. How do you choose? May be you don&#146;t have to choose. Why not support both? A flexible and natural format 
+	use the software. How do you choose? May be you don’t have to choose. Why not support both? A flexible and natural format 
 	that users will use most of the time, and a more rigid one when they have to issue a command that has a risk of misinterpretation.
 	</p></li></ul>
 
@@ -101,9 +101,9 @@
 	  interfaces such as Google Calendar.</p></li></ul><p></p>
     </ul>
     <ul><li><p class="word-limit" >Give enough feedback to the user: When the user executes a command, the feedback given should
-	be informative. e.g. When giving  feedback after adding a task, &#145;Success&#146; is not good enough. Jim should see the
+	be informative. e.g. When giving  feedback after adding a task, ‘Success’ is not good enough. Jim should see the
 	details of the task added so that he can verify if it is indeed the task that he meant to add. <br>It may be even more useful
-	if the result is shown &#145;in context&#146;. e.g. showing the newly added task together with the tasks in that day, but 
+	if the result is shown ‘in context’. e.g. showing the newly added task together with the tasks in that day, but 
 	the new one is highlighted</p></li></ul><p ></p><ul><li>Make use of the welcome screen: The welcome screen (what you display 
 	at the very beginning) can be used to display something that is useful to the user, such as the tasks for the day.</p></li></ul><p ></p>
     <ul><li><p class="word-limit" >Scrolling is a design fail: Yes, the use should be able to scroll when there is more information 
@@ -115,7 +115,7 @@
 	Surely, we cannot expect them to type the original tasks name precisely?<br>When designing search options, start with the kind
 	of things users may want to search for. For example, if Jim is trying to schedule a lunch appointment, he may want to search 
 	for tasks (or free times) he has during lunch hour for the next few days, but he is unlikely to want to search for tasks 
-	scheduled during a particular time in a particular day. Instead, he can simply display that day&#146;s schedule to find that
+	scheduled during a particular time in a particular day. Instead, he can simply display that day’s schedule to find that
 	information.</p></li></ul>
 
     <h1><a name="Other"></a>Other</h1>
