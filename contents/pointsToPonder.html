@@ -15,8 +15,14 @@
           <p ><span ><a href="#UI">UI</a></span></p>
           <p ><span ><a href="#Search">Search</a></span></p>
           <p ><span ><a href="#Other">Other</a></span></p>
-          <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 199.50px; height: 119.70px;"><img alt="" src="https://lh3.googleusercontent.com/Tlcrf3o-tGf1uy0EKlqPcUSGSxOUbiI9gXt4IwGmYYZzBlFXVerpj_eQIJuNxGzhOkr2OE_1J6FmJgl-w7mtNpJ0VtshQJeAWi2XHW1oS7tDWrKy4cDmRHqEaL6Exl-wcDp5_fk" style="width: 199.50px; height: 119.70px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
-          [<a class="c9" href="https://www.google.com/url?q=http://whitenoise.gizmodo.com/i-cant-stop-laughing-at-these-funny-computer-error-mes-1091455400&amp;sa=D&amp;usg=AFQjCNEMLRPyTrFwfwkqtkJQC-U7A5VZFw">source</a>]
+          <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; 
+		  transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 199.50px; 
+		  height: 119.70px;"><img alt="" src="https://lh3.googleusercontent.com/Tlcrf3o-tGf1uy0EKlqPcUSGSxOUbiI9gXt4IwGmYYZz
+		  BlFXVerpj_eQIJuNxGzhOkr2OE_1J6FmJgl-w7mtNpJ0VtshQJeAWi2XHW1oS7tDWrKy4cDmRHqEaL6Exl-wcDp5_fk" style="width: 199.50px; 
+		  height: 119.70px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: 
+		  rotate(0.00rad) translateZ(0px);" title=""></span></p>
+          [<a class="c9" href="https://www.google.com/url?q=http://whitenoise.gizmodo.com/i-cant-stop-laughing-at-these-funny-computer
+		  -error-mes-1091455400&amp;sa=D&amp;usg=AFQjCNEMLRPyTrFwfwkqtkJQC-U7A5VZFw">source</a>]
         </td>
       </tr>
     </tbody>
@@ -26,44 +32,106 @@
     <span>Here are some things to think about when refining the design of the product.</span></p>
     <h1><a name="General"></a>
     <span>General</span></h1>
-    <ul><li ><p class="word-limit" >Make common things easy. What are the most common things a user may want to achieve using the app? e.g. To find out the schedule for today/tomorrow. Make those things VERY easy to do.</p></li></ul>
-     <ul><li><p class="word-limit" >Make rare things possible: Think twice before prohibiting things such as overlapping events, editing past events, etc. For example, people do schedule things in the same period when they are not sure which one they are going to do. Not allowing it can be a great inconvenience. Highlighting and warning about overlaps is a better approach.<br>That is not to say anything should be allowed. Disallowing certain things can even be beneficial to users. However, a decision to disallow a certain usage should be taken after careful consideration, not simply because it makes the implementation easier.<br>Similarly, the software must cater for the possibility of task description containing keywords such as &#145;from&#146; &#145;to&#146;. e.g., If the user wants to add the task &#145;watch day after tomorrow&#1456; (i.e., watch the movie named &#145;day after tomorrow&#146;) to the list, there should be a way to enter it without the software interpreting &#145;tomorrow&#146; as the day for the task.</p></li></ul>
-     <ul><li ><p class="word-limit" >Stick to users&#146; language: Using the names mentioned in the requirements (e.g. floating tasks) in the user guide or in the app itself might not make sense to users. If you want to stick with such terms, at least you should explain the terms to users. Do not make users learn new terms unless absolutely necessary.</p></li></ul>
-     <ul><li><p class="word-limit" >Use sensible defaults: Schedule the task NOW if no time is specified? really? Choose smart defaults when you can, but don&#146;t chose silly defaults.</p></li></ul>
-     <ul><li ><p class="word-limit" >Give only useful features: Reconsider features such as login, sort, hashtag, priority. They are OK to have if you have a strong justification. Always ask yourself, &#145;What if we don&#146;t have this feature? Is it going to be a problem for Jim?&#146;. A feature common to other similar software may turn out to be useless for Jim.<br>Similarly a feature that may be valuable to &#145;somebody&#146; may not be valuable to Jim. For example, Jim uses the software from his office computer. A audio playback of the command is unlikely to be useful in such an environment. Imagine how Jim&#146;s co-workers would feel if Jim&#146;s computer keeps making audio commentary! </p></li></ul>
-     <ul><li><p class="word-limit" >Avoid half-baked features: When you implement a feature, consider all aspects of it. For example, if your extra feature is GCal sync, consider things such as how to store floating tasks in GCal, how to sync older items in GCal with your software, how to sync repeating events, and so on. It is not necessary that you implement all those things. However, you should have considered all those things and you should have good reasons why you chose what you implemented over what you did not implement. &#147;Oh, we didn&#146;t think of that&#148; is not a good answer. </p> </li></ul>
+    <ul><li ><p class="word-limit" >Make common things easy. What are the most common things a user may want to achieve using 
+	the app? e.g. To find out the schedule for today/tomorrow. Make those things VERY easy to do.</p></li></ul>
+     <ul><li><p class="word-limit" >Make rare things possible: Think twice before prohibiting things such as overlapping events, 
+	 editing past events, etc. For example, people do schedule things in the same period when they are not sure which one 
+	 they are going to do. Not allowing it can be a great inconvenience. Highlighting and warning about overlaps is a better
+	 approach.<br>That is not to say anything should be allowed. Disallowing certain things can even be beneficial to users. 
+	 However, a decision to disallow a certain usage should be taken after careful consideration, not simply because it makes 
+	 the implementation easier.<br>Similarly, the software must cater for the possibility of task description containing keywords
+	 such as &#145;from&#146; &#145;to&#146;. e.g., If the user wants to add the task &#145;watch day after tomorrow&#1456; 
+	 (i.e., watch the movie named &#145;day after tomorrow&#146;) to the list, there should be a way to enter it without the 
+	 software interpreting &#145;tomorrow&#146; as the day for the task.</p></li></ul>
+     <ul><li ><p class="word-limit" >Stick to users&#146; language: Using the names mentioned in the requirements (e.g. floating 
+	 tasks) in the user guide or in the app itself might not make sense to users. If you want to stick with such terms, at least 
+	 you should explain the terms to users. Do not make users learn new terms unless absolutely necessary.</p></li></ul>
+     <ul><li><p class="word-limit" >Use sensible defaults: Schedule the task NOW if no time is specified? really? Choose smart 
+	 defaults when you can, but don&#146;t chose silly defaults.</p></li></ul>
+     <ul><li ><p class="word-limit" >Give only useful features: Reconsider features such as login, sort, hashtag, priority. 
+	 They are OK to have if you have a strong justification. Always ask yourself, &#145;What if we don&#146;t have this feature? 
+	 Is it going to be a problem for Jim?&#146;. A feature common to other similar software may turn out to be useless for Jim.
+	 <br>Similarly a feature that may be valuable to &#145;somebody&#146; may not be valuable to Jim. For example, Jim uses the 
+	 software from his office computer. A audio playback of the command is unlikely to be useful in such an environment. Imagine 
+	 how Jim&#146;s co-workers would feel if Jim&#146;s computer keeps making audio commentary! </p></li></ul>
+     <ul><li><p class="word-limit" >Avoid half-baked features: When you implement a feature, consider all aspects of it. For example,
+	 if your extra feature is GCal sync, consider things such as how to store floating tasks in GCal, how to sync older items in GCal 
+	 with your software, how to sync repeating events, and so on. It is not necessary that you implement all those things. However, you
+	 should have considered all those things and you should have good reasons why you chose what you implemented over what you did not 
+	 implement. &#147;Oh, we didn&#146;t think of that&#148; is not a good answer. </p> </li></ul>
 
     <h1><a name="Command"></a>Command format</h1>
-    <ul><li><p class="word-limit" >Optimize command format for users, not developers: Don&#146;t design the command format solely to make parsing easier. Primarily, it should be easy to remember and type. Ease of parsing is secondary.</p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Unix-like commands: Excessive use of symbols make the command hard to remember/type. We are targeting fast typists, not necessarily UNIX system admins. No matter how fast you can type, normal letters are faster to type than certain symbols such as -@#$^. But symbols such as . , / may be easier than other symbols.</p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Prefer typing over keyboard shortcuts: Keyboard shortcuts are useful and they do not require the mouse. But keep in mind that Jim prefers typing, not necessarily keyboard shortcuts. Keyboard shortcuts involving key combinations often takes more time than regular typing.<br>Automatically generating a command template to fill in may not be good either. For a fast typist, editing an existing text by moving around using arrow/tab keys is slower than typing everything in one burst. <br>The goal is to give Jim a faster &#145;typing&#146; alternative to anything that can be done in other ways. </p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Avoil multi-step CLIs: The user should be able to accomplish most tasks using a single command. For example, the approach &#145;type add, press enter, then type description, press enter again etc. is unacceptable. </p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Flexible or rigid? The more you make the command &#147;natural-language-like&#148;, the higher the risk of misinterpreting a user command. The more you use special symbols and strict formats, the harder it is for users to use the software. How do you choose? May be you don&#146;t have to choose. Why not support both? A flexible and natural format that users will use most of the time, and a more rigid one when they have to issue a command that has a risk of misinterpretation. </p></li></ul>
+    <ul><li><p class="word-limit" >Optimize command format for users, not developers: Don&#146;t design the command format solely to 
+	make parsing easier. Primarily, it should be easy to remember and type. Ease of parsing is secondary.</p></li></ul><p ></p>
+    <ul><li><p class="word-limit" >Unix-like commands: Excessive use of symbols make the command hard to remember/type. We are 
+	targeting fast typists, not necessarily UNIX system admins. No matter how fast you can type, normal letters are faster to 
+	type than certain symbols such as -@#$^. But symbols such as . , / may be easier than other symbols.</p></li></ul><p ></p>
+    <ul><li><p class="word-limit" >Prefer typing over keyboard shortcuts: Keyboard shortcuts are useful and they do not require
+	the mouse. But keep in mind that Jim prefers typing, not necessarily keyboard shortcuts. Keyboard shortcuts involving key 
+	combinations often takes more time than regular typing.<br>Automatically generating a command template to fill in may not be
+	good either. For a fast typist, editing an existing text by moving around using arrow/tab keys is slower than typing 
+	everything in one burst. <br>The goal is to give Jim a faster &#145;typing&#146; alternative to anything that can be done
+	in other ways. </p></li></ul><p ></p>
+    <ul><li><p class="word-limit" >Avoil multi-step CLIs: The user should be able to accomplish most tasks using a single command.
+	For example, the approach &#145;type add, press enter, then type description, press enter again etc. is unacceptable. 
+	</p></li></ul><p ></p>
+    <ul><li><p class="word-limit" >Flexible or rigid? The more you make the command &#147;natural-language-like&#148;, the higher 
+	the risk of misinterpreting a user command. The more you use special symbols and strict formats, the harder it is for users to 
+	use the software. How do you choose? May be you don&#146;t have to choose. Why not support both? A flexible and natural format 
+	that users will use most of the time, and a more rigid one when they have to issue a command that has a risk of misinterpretation.
+	</p></li></ul>
 
     <h1><a name="UI"></a>UI</h1>
     <ul><li><p class="word-limit" >Optimize the display format:</p></li>
-    <ul><li><p class="word-limit" >For example, listing of tasks should be nicely laid out, sorted in a meaningful way, aligned properly, etc so that the user can read the information quickly. For example, the text UIs below have similar content but one is much more readable than the other.</p>
-      <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 562.67px; height: 405.33px;"><img alt="" src="https://lh6.googleusercontent.com/JZk9dkQ4R-EqxkjtBxuXRrLnN59TZXzGfe4oQFWgUH-517l99Zxd3KmsiXsgQb0HHksNXhX60Dz7EoWkjhVLH2jrWkSslNSRu4BRQOmrOOuUEAGcMW-oT8YALYqyDa892eBRmwk" style="width: 562.67px; height: 405.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span><br></li>
-      <li><p class="word-limit" >Consider how the display area will look like for scenarios such as when you have many tasks in a single day, when you have 100s of tasks in the system, when a task has a long description, etc. Will the display are look neat and readable in those situations too?</p></li><li><p class="word-limit" >What format should you use to display date/times so that it takes less space but still easy to understand? Is there any point in displaying year, seconds? Is it better to display the day as well (e.g. Saturday)?</p></li><li><p class="word-limit" >But do be careful about going for a Calendar-like UIs (i.e., grids). They are a lot of work to implement and hard to get right. It may be easier to link up with existing calendar interfaces such as Google Calendar.</p></li></ul><p></p>
+    <ul><li><p class="word-limit" >For example, listing of tasks should be nicely laid out, sorted in a meaningful way,
+	aligned properly, etc so that the user can read the information quickly. For example, the text UIs below have similar 
+	content but one is much more readable than the other.</p>
+      <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: 
+	  rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 562.67px; height: 405.33px;">
+	  <img alt="" src="https://lh6.googleusercontent.com/JZk9dkQ4R-EqxkjtBxuXRrLnN59TZXzGfe4oQFWgUH-517l99Zxd3KmsiXsgQb0HHksNXhX60
+	  Dz7EoWkjhVLH2jrWkSslNSRu4BRQOmrOOuUEAGcMW-oT8YALYqyDa892eBRmwk" style="width: 562.67px; height: 405.33px; margin-left: 0.00px;
+	  margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+	  </span><br></li>
+      <li><p class="word-limit" >Consider how the display area will look like for scenarios such as when you have many tasks in a 
+	  single day, when you have 100s of tasks in the system, when a task has a long description, etc. Will the display are look neat
+	  and readable in those situations too?</p></li><li><p class="word-limit" >What format should you use to display date/times so
+	  that it takes less space but still easy to understand? Is there any point in displaying year, seconds? Is it better to display
+	  the day as well (e.g. Saturday)?</p></li><li><p class="word-limit" >But do be careful about going for a Calendar-like UIs 
+	  (i.e., grids). They are a lot of work to implement and hard to get right. It may be easier to link up with existing calendar
+	  interfaces such as Google Calendar.</p></li></ul><p></p>
     </ul>
-    <ul><li><p class="word-limit" >Give enough feedback to the user: When the user executes a command, the feedback given should be informative. e.g. When giving  feedback after adding a task, &#145;Success&#146; is not good enough. Jim should see the details of the task added so that he can verify if it is indeed the task that he meant to add. <br>It may be even more useful if the result is shown &#145;in context&#146;. e.g. showing the newly added task together with the tasks in that day, but the new one is highlighted</p></li></ul><p ></p><ul><li>Make use of the welcome screen: The welcome screen (what you display at the very beginning) can be used to display something that is useful to the user, such as the tasks for the day.</p></li></ul><p ></p>
-    <ul><li><p class="word-limit" >Scrolling is a design fail: Yes, the use should be able to scroll when there is more information to show than the display area allows. It is better if the user rarely need to scroll. You should design such that whatever the user was looking for is already visible in the display area, without having to scroll. </p></li></ul>
+    <ul><li><p class="word-limit" >Give enough feedback to the user: When the user executes a command, the feedback given should
+	be informative. e.g. When giving  feedback after adding a task, &#145;Success&#146; is not good enough. Jim should see the
+	details of the task added so that he can verify if it is indeed the task that he meant to add. <br>It may be even more useful
+	if the result is shown &#145;in context&#146;. e.g. showing the newly added task together with the tasks in that day, but 
+	the new one is highlighted</p></li></ul><p ></p><ul><li>Make use of the welcome screen: The welcome screen (what you display 
+	at the very beginning) can be used to display something that is useful to the user, such as the tasks for the day.</p></li></ul><p ></p>
+    <ul><li><p class="word-limit" >Scrolling is a design fail: Yes, the use should be able to scroll when there is more information 
+	to show than the display area allows. It is better if the user rarely need to scroll. You should design such that whatever 
+	the user was looking for is already visible in the display area, without having to scroll. </p></li></ul>
 
     <h1><a name="Search"></a>Search</h1>
-    <ul><li><p class="word-limit" >Give sensible search filters: <br>When searching for a task, what can we expect the user to type? Surely, we cannot expect them to type the original tasks name precisely?<br>When designing search options, start with the kind of things users may want to search for. For example, if Jim is trying to schedule a lunch appointment, he may want to search for tasks (or free times) he has during lunch hour for the next few days, but he is unlikely to want to search for tasks scheduled during a particular time in a particular day. Instead, he can simply display that day&#146;s schedule to find that information.</p></li></ul>
+    <ul><li><p class="word-limit" >Give sensible search filters: <br>When searching for a task, what can we expect the user to type?
+	Surely, we cannot expect them to type the original tasks name precisely?<br>When designing search options, start with the kind
+	of things users may want to search for. For example, if Jim is trying to schedule a lunch appointment, he may want to search 
+	for tasks (or free times) he has during lunch hour for the next few days, but he is unlikely to want to search for tasks 
+	scheduled during a particular time in a particular day. Instead, he can simply display that day&#146;s schedule to find that
+	information.</p></li></ul>
 
     <h1><a name="Other"></a>Other</h1>
-    <ul><li class="word-limit" >Saving things only at exit command is a bad idea; Data will be lost if the the program is closed without using the exit command.</li>
-      <li class="word-limit" >Is there any situation where a regular user may want to see a list *all* tasks? To sort all tasks alphabetically?</li>
+    <ul><li class="word-limit" >Saving things only at exit command is a bad idea; Data will be lost if the the program is 
+	closed without using the exit command.</li>
+      <li class="word-limit" >Is there any situation where a regular user may want to see a list *all* tasks? To sort all 
+	  tasks alphabetically?</li>
       <li class="word-limit" >Are there other types of tasks that we should consider, in addition to the three types mentioned?</li>
-      <li class="word-limit" >Should we force the user to explicitly identify task types or can the task type be dealt with internally most of the time?</li>
+      <li class="word-limit" >Should we force the user to explicitly identify task types or can the task type be dealt 
+	  with internally most of the time?</li>
       <li class="word-limit" >What about conversions from one task type to another?</li>
-      <li class="word-limit" >Is it better to show deadlines and timed tasks together or separately? Do people process those two types of things separately when they think about things they have to do?</li>
+      <li class="word-limit" >Is it better to show deadlines and timed tasks together or separately? Do people process 
+	  those two types of things separately when they think about things they have to do?</li>
       <li class="word-limit" >What is the best way to handle overdue tasks? Automatically hide or highlight?</li>
       <li class="word-limit" >Is there a need to ask for confirmation when an undo feature is available?</li>
       <li class="word-limit" >How useful is automatic scheduling? Would you follow a schedule automatically generated by an app?  </li>
     </ul>
-    
-    <div id="footer"><span>Published by <a target="_blank" title="Learn more about Google Drive" href="//docs.google.com/">Google Drive</a></span><span class="dash">&ndash;</span><a href="//docs.google.com/abuse?id=1_4r9JmKvXkcqfATgNe3xPvRHnM32QuJOu4DfegUpd7I">Report Abuse</a><span class="dash">&ndash;</span><span>Updated automatically every 5 minutes</span></div>
 </body>
 </html>
