@@ -21,7 +21,9 @@
       </td>
       <td id="win-err-prompt">
         <img alt="" src="../images/windowsErrorPrompt.png"><br>
+        <span class="dim small-font">
         [<a href="http://whitenoise.gizmodo.com/i-cant-stop-laughing-at-these-funny-computer-error-mes-1091455400">source</a>]
+        </span>
       </td>
     </tr>
   </tbody>
@@ -31,11 +33,11 @@
 <p>Here are some things to think about when refining the design of the product.</p>
 <h1><a name="General"></a>General</h1>
 <ul>
-  <li>Make common things easy. What are the most common things a user may want to achieve 
-  using the app? e.g. To find out the schedule for today/tomorrow. Make those things VERY easy 
+  <li><strong>Make common things easy</strong>. What are the most common things a user may want to 
+  achieve using the app? e.g. To find out the schedule for today/tomorrow. Make those things VERY easy 
   to do.</li>
 
-  <li>Make rare things possible: Think twice before prohibiting things such as 
+  <li><strong>Make rare things possible:</strong> Think twice before prohibiting things such as 
   overlapping events, editing past events, etc. For example, people do schedule things in the 
   same period when they are not sure which one they are going to do. Not allowing it can be a 
   great inconvenience. Highlighting and warning about overlaps is a better approach.<br>
@@ -48,16 +50,16 @@
   after tomorrow’) to the list, there should be a way to enter it without the software 
   interpreting ‘tomorrow’ as the day for the task.</li>
 
-  <li>Stick to users’ language: Using the names mentioned in the requirements (e.g. 
+  <li><strong>Stick to users’ language: </strong>Using the names mentioned in the requirements (e.g. 
   floating tasks) in the user guide or in the app itself might not make sense to users. If you 
   want to stick with such terms, at least you should explain the terms to users. Do not make 
   users learn new terms unless absolutely 
   necessary.</li>
 
-  <li>Use sensible defaults: Schedule the task NOW if no time is specified? really? 
+  <li><strong>Use sensible defaults: </strong>Schedule the task NOW if no time is specified? really? 
   Choose smart defaults when you can, but don’t chose silly defaults.</li>
 
-  <li>Give only useful features: Reconsider features such as login, sort, hashtag, priority. 
+  <li><strong>Give only useful features: </strong>Reconsider features such as login, sort, hashtag, priority. 
   They are OK to have if you have a strong justification. Always ask yourself, ‘What if we don’t 
   have this feature? Is it going to be a problem for Jim?’. A feature common to other similar 
   software may turn out to be useless for Jim.<br>
@@ -66,7 +68,7 @@
   be useful in such an environment. Imagine how Jim’s co-workers would feel if Jim’s computer 
   keeps making audio commentary! </li>
 
-  <li>Avoid half-baked features: When you implement a feature, consider all aspects of it. 
+  <li><strong>Avoid half-baked features: </strong>When you implement a feature, consider all aspects of it. 
   For example, if your extra feature is GCal sync, consider things such as how to store floating 
   tasks in GCal, how to sync older items in GCal with your software, how to sync repeating events,
   and so on. It is not necessary that you implement all those things. However, you should have 
@@ -76,30 +78,32 @@
 
 <h1><a name="Command"></a>Command format</h1>
 <ul>
-  <li>Optimize command format for users, not developers: Don’t design the command format 
+  <li><strong>Optimize command format for users, not developers: </strong>Don’t design the command format 
   solely to make parsing easier. Primarily, it should be easy to remember and type. 
   Ease of parsing is secondary.</li>
 
-  <li>Unix-like commands: Excessive use of symbols make the command hard to remember/type. We are 
+  <li><strong>Unix-like commands: </strong>
+  Excessive use of symbols make the command hard to remember/type. We are 
   targeting fast typists, not necessarily UNIX system admins. No matter how fast you can type, 
   normal letters are faster to type than certain symbols such as -@#$^. But symbols such as . , / may 
   be easier than other symbols.</li>
 
-  <li>Prefer typing over keyboard shortcuts: Keyboard shortcuts are useful and they do not require
-  the mouse. But keep in mind that Jim prefers typing, not necessarily keyboard shortcuts. Keyboard 
-  shortcuts involving key combinations often takes more time than regular typing.<br>
+  <li><strong>Prefer typing over keyboard shortcuts: </strong>Keyboard shortcuts are useful and 
+  they do not require the mouse. But keep in mind that Jim prefers typing, not necessarily keyboard shortcuts. 
+  Keyboard shortcuts involving key combinations often takes more time than regular typing.<br>
   Automatically generating a command template to fill in may not be good either. For a fast typist, 
   editing an existing text by moving around using arrow/tab keys is slower than typing everything in one 
   burst. <br>
-  The goal is to give Jim a faster ‘typing’ alternative to anything that can be done in other ways. 
+  <span class="highlighted">The goal is to give Jim a faster ‘typing’ alternative to anything that can be
+  done in other ways.</span>
   </li>
 
-  <li>Avoil multi-step CLIs: The user should be able to accomplish most tasks using a single 
+  <li><strong>Avoil multi-step CLIs: </strong>The user should be able to accomplish most tasks using a single 
   command. For example, the approach ‘type add, press enter, then type description, press enter again
   etc. is unacceptable. 
   </li>
 
-  <li>Flexible or rigid? The more you make the command “natural-language-like”, the higher 
+  <li><strong>Flexible or rigid?</strong> The more you make the command “natural-language-like”, the higher 
   the risk of misinterpreting a user command. The more you use special symbols and strict formats, 
   the harder it is for users to use the software. How do you choose? May be you don’t have to choose. 
   Why not support both? A flexible and natural format that users will use most of the time, and a 
@@ -109,7 +113,7 @@
 
 <h1><a name="UI"></a>UI</h1>
 <ul>
-  <li>Optimize the display format:</li>
+  <li><strong>Optimize the display format:</strong></li>
   <ul>
     <li>For example, listing of tasks should be nicely laid out, sorted in a meaningful way,
     aligned properly, etc so that the user can read the information quickly. For example, the text UIs 
@@ -130,17 +134,17 @@
     as Google Calendar.</li>
   </ul>	  
 
-  <li>Give enough feedback to the user: When the user executes a command, the feedback given should
+  <li><strong>Give enough feedback to the user:</strong> When the user executes a command, the feedback given should
   be informative. e.g. When giving  feedback after adding a task, ‘Success’ is not good enough. Jim should
   see the details of the task added so that he can verify if it is indeed the task that he meant to add.
   <br>It may be even more useful if the result is shown ‘in context’. e.g. showing the newly added task 
   together with the tasks in that day, but the new one is highlighted</li>
 
-  <li>Make use of the welcome screen: The welcome screen (what you display 
+  <li><strong>Make use of the welcome screen:</strong> The welcome screen (what you display 
   at the very beginning) can be used to display something that is useful to the user, such as the tasks 
   for the day.</li>
 
-  <li>Scrolling is a design fail: Yes, the use should be able to scroll when there is more 
+  <li><strong>Scrolling is a design fail:</strong> Yes, the use should be able to scroll when there is more 
   information to show than the display area allows. It is better if the user rarely need to scroll. You 
   should design such that whatever the user was looking for is already visible in the display area, without 
   having to scroll. </li>
@@ -148,7 +152,7 @@
 
 <h1><a name="Search"></a>Search</h1>
 <ul>
-  <li>Give sensible search filters: <br>When searching for a task, what can we expect the user 
+  <li><strong>Give sensible search filters: </strong><br>When searching for a task, what can we expect the user 
   to type? Surely, we cannot expect them to type the original tasks name precisely?<br>When designing 
   search options, start with the kind of things users may want to search for. For example, if Jim is 
   trying to schedule a lunch appointment, he may want to search for tasks (or free times) he has during 
