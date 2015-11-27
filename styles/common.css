@@ -39,6 +39,10 @@ a:visited {
     overflow-y: auto;
 }
 
+.align-right{
+    text-align: right;
+}
+
 /*
  * accordions
  */
@@ -354,8 +358,4 @@ table.bordered tr > th {
 
 .italic {
     font-style:italic
-}
-
-.align-right{
-    text-align: right;
 }
