@@ -355,3 +355,7 @@ table.bordered tr > th {
 .italic {
     font-style:italic
 }
+
+.align-right{
+    text-align: right;
+}
