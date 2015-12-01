@@ -39,6 +39,10 @@ a:visited {
     overflow-y: auto;
 }
 
+.align-right{
+    text-align: right;
+}
+
 /*
  * accordions
  */
