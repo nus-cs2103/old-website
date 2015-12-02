@@ -196,7 +196,7 @@ $(document).ready(function() {
         $('#content').css('height', calculateContainerSize());
     });
 
-    for (var week = 0; week <= 13; week++) {
+    for (var week = 0; week <= 14; week++) {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
