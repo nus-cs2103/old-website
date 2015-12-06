@@ -30,28 +30,25 @@
 <h3><a name="test-void"></a>How to test void methods?</h3>
 <div>Use other means to check the effect of the method. E.g., if you are testing a deleteFile(fileName) 
 method, you could do something like this.
-<div class="four-space-indent">
-  <code>deleteFile(fileName);<br>
-  assertFalse(isFileExists(fileName));</code>
-</div>
+<pre class="four-space-indent"><code>deleteFile(fileName);
+assertFalse(isFileExists(fileName));</code>
+</pre>
 </div>
 
 <br>
 <div>In addition, you can refactor to make methods return values. For example, consider the following 
 method.
-<div class="four-space-indent">
-  <code>void display(){<br>
-    // for each line in file<br>
-         //display line<br>
-  }</code>
-</div>
+<pre class="four-space-indent"><code>void display(){
+    // for each line in file
+         //display line
+}
+</code></pre>
 It can be refactored like this:
-<div class="four-space-indent">
-  <code>void display(){<br>
-    String content = getFileContent(fileName);<br>
-         print(content);<br>
-  }</code>
-</div>
+<pre class="four-space-indent"><code>void display(){
+    String content = getFileContent(fileName);
+         print(content);
+}
+</code></pre>
 Now, you can unit test getFileContent(fileName) method. There is no need to unit test display() 
 method because most of it’s logic is in getFileContent(fileName) that is already unit tested.
 </div>
@@ -77,19 +74,14 @@ See <code>CityConnectTest.java</code>(in the Schedule page) for an example.</div
 
 <br>
 <h3><a name="test-text-display"></a>How to test displaying of text to the user?</h3>
-<div>
-Similar to the previous question. Separate the generating of the text to display from displaying the 
+<div>Similar to the previous question. Separate the generating of the text to display from displaying the 
 text. The former is the more complicated part which should be unit tested.
-<div class="four-space-indent">
-  <code>String result = executeCommand(command); //unit test this method<br>
-  displayToUser(result); //simple, no need to unit test</code>
-</div>
+<pre class="four-space-indent"><code>String result = executeCommand(command); //unit test this method
+displayToUser(result); //simple, no need to unit test</code></pre>
 If your software is completely text based, you can use the I/O redirection method covered in lecture 1 
 to test the software including the input and output.
-<div class="four-space-indent">
-  <code>TextBuddy.exe < input.txt >output.txt<br>
-  FC output.txt expected.txt</code>
-</div>
+<pre class="four-space-indent"><code>TextBuddy.exe < input.txt >output.txt
+FC output.txt expected.txt</code></pre></div>
 </div>
 
 <br>
