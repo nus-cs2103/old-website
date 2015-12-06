@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>FAQ: Unit Testing</title>
+  <link rel="stylesheet" type="text/css" href="../styles/common.css">
+</head>
+<body>
+<div class="align-right dim">CS2103/T</div>
+<h1>FAQ: Unit Testing</h1>
+<table>
+  <tbody >
+    <tr>
+      <td width="20px"></td>
+      <td>
+        <a href="#test-void">How to test void methods?</a><br>
+        <a href="#is-it-enough">Is it enough to check for the correctness of status message only?</a><br>
+        <a href="#test-private">How to test private methods?</a><br>
+        <a href="#test-reading-user">How to test the reading of user commands?</a><br>
+        <a href="#test-text-display">How to test displaying of text to the user?</a><br>
+        <a href="#method-test-another">Can we use one method in our code to test another method?</a><br>
+        <a href="#why-write-test">Why write tests? Manual testing is much easier.</a><br>
+        <a href="#why-TDD">Why TDD?</a><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<h3><a name="test-void"></a>How to test void methods?</h3>
+<div>Use other means to check the effect of the method. E.g., if you are testing a deleteFile(fileName) 
+method, you could do something like this.
+<div class="four-space-indent">
+  <code>deleteFile(fileName);<br>
+  assertFalse(isFileExists(fileName));</code>
+</div>
+</div>
+
+<br>
+<div>In addition, you can refactor to make methods return values. For example, consider the following 
+method.
+<div class="four-space-indent">
+  <code>void display(){<br>
+    // for each line in file<br>
+         //display line<br>
+  }</code>
+</div>
+It can be refactored like this:
+<div class="four-space-indent">
+  <code>void display(){<br>
+    String content = getFileContent(fileName);<br>
+         print(content);<br>
+  }</code>
+</div>
+Now, you can unit test getFileContent(fileName) method. There is no need to unit test display() 
+method because most of it’s logic is in getFileContent(fileName) that is already unit tested.
+</div>
+
+<br>
+<h3><a name="is-it-enough"></a>Is it enough to check for the correctness of status message only?</h3>
+<div>Some of your methods returns the status of the method execution as a string. Just checking the return 
+message of such methods is not enough if the command is expected to change the state of the data. You 
+can use techniques used for testing void methods (given above) to check the correct execution of the 
+method, in addition to checking the status message.</div>
+
+<br>
+<h3><a name="test-private"></a>How to test private methods?</h3>
+<div>For now, make them public. In Java, there is a way to access private methods using reflection. 
+Alternatively, we can omit testing private methods because only public methods are exposed to others. 
+If public methods are working correctly, private methods must be working correctly too.<br>
+A more extensive discussion of this issue can be found here.</div>
+
+<br>
+<h3><a name="test-reading-user"></a>How to test the reading of user commands?</h3>
+<div>That part is hard to test. Separate the ‘reading user command’ part from the rest and test the rest. 
+See <code>CityConnectTest.java</code>(in the Schedule page) for an example.</div>
+
+<br>
+<h3><a name="test-text-display"></a>How to test displaying of text to the user?</h3>
+<div>
+Similar to the previous question. Separate the generating of the text to display from displaying the 
+text. The former is the more complicated part which should be unit tested.
+<div class="four-space-indent">
+  <code>String result = executeCommand(command); //unit test this method<br>
+  displayToUser(result); //simple, no need to unit test</code>
+</div>
+If your software is completely text based, you can use the I/O redirection method covered in lecture 1 
+to test the software including the input and output.
+<div class="four-space-indent">
+  <code>TextBuddy.exe < input.txt >output.txt<br>
+  FC output.txt expected.txt</code>
+</div>
+</div>
+
+<br>
+<h3><a name="method-test-another"></a>Can we use one method in our code to test another method?</h3>
+<div>Yes, it is acceptable. You can use methods that are already unit-tested to test other methods. 
+e.g., you can use clear() and add() methods when testing the sort() method.</div><br>
+<div>Note: This is not strictly ‘unit testing’ as we are not testing the unit in complete isolation from 
+the rest of the code, but it is acceptable because other units are already tested and are under your 
+control too.</div>
+
+<br>
+<h3><a name="why-write-test"></a>Why write tests? Manual testing is much easier.</h3>
+<div>Automated tests are not just to check if the code works NOW, but they help to ensure it keeps working 
+FOREVER. Their main purpose is regression testing.</div>
+
+<br>
+<h3><a name="why-TDD"></a>Why TDD?</h3>
+<div>Writing tests first makes you write more testable code. If you write the functional code first, you often 
+find such code is harder to test. Furthermore, it encourages you to think WHAT the code should do before you 
+figure out HOW the code should do it.</div>
+<p>--- End of document ---</p>
+</body>
