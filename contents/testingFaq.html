@@ -39,9 +39,9 @@ assertFalse(isFileExists(fileName));
 <br>
 <div>In addition, you can refactor to make methods return values. For example, consider the following 
 method.
-<pre class="prettyprint"><code class="language-java">void display(){
+<pre class="prettyprint"><code class="language-java">void display() {
     // for each line in file
-         //display line
+         // display line
 }</code></pre>
 It can be refactored like this:
 <pre class="prettyprint"><code class="language-java">void display(){
@@ -81,7 +81,7 @@ text. The former is the more complicated part which should be unit tested.
 displayToUser(result); //simple, no need to unit test</code></pre>
 If your software is completely text based, you can use the I/O redirection method covered in lecture 1 
 to test the software including the input and output.
-<pre class="prettyprint"><code class="language-java">TextBuddy.exe < input.txt >output.txt
+<pre class="prettyprint"><code class="language-java">TextBuddy.exe < input.txt > output.txt
 FC output.txt expected.txt</code></pre></div>
 </div>
 
