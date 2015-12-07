@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
   <title>FAQ: Unit Testing</title>
   <link rel="stylesheet" type="text/css" href="../styles/common.css">
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
 <div class="align-right dim">CS2103/T</div>
@@ -30,21 +31,21 @@
 <h3><a name="test-void"></a>How to test void methods?</h3>
 <div>Use other means to check the effect of the method. E.g., if you are testing a deleteFile(fileName) 
 method, you could do something like this.
-<pre class="four-space-indent"><code>deleteFile(fileName);
-assertFalse(isFileExists(fileName));</code>
-</pre>
+<pre class="prettyprint"><code class="language-java">deleteFile(fileName);
+assertFalse(isFileExists(fileName));
+</code></pre>
 </div>
 
 <br>
 <div>In addition, you can refactor to make methods return values. For example, consider the following 
 method.
-<pre class="four-space-indent"><code>void display(){
+<pre class="prettyprint"><code class="language-java">void display(){
     // for each line in file
          //display line
 }
 </code></pre>
 It can be refactored like this:
-<pre class="four-space-indent"><code>void display(){
+<pre class="prettyprint"><code class="language-java">void display(){
     String content = getFileContent(fileName);
          print(content);
 }
@@ -70,17 +71,17 @@ A more extensive discussion of this issue can be found here.</div>
 <br>
 <h3><a name="test-reading-user"></a>How to test the reading of user commands?</h3>
 <div>That part is hard to test. Separate the ‘reading user command’ part from the rest and test the rest. 
-See <code>CityConnectTest.java</code>(in the Schedule page) for an example.</div>
+See <code class="language-java">CityConnectTest.java</code>(in the Schedule page) for an example.</div>
 
 <br>
 <h3><a name="test-text-display"></a>How to test displaying of text to the user?</h3>
 <div>Similar to the previous question. Separate the generating of the text to display from displaying the 
 text. The former is the more complicated part which should be unit tested.
-<pre class="four-space-indent"><code>String result = executeCommand(command); //unit test this method
+<pre class="prettyprint"><code class="language-java">String result = executeCommand(command); //unit test this method
 displayToUser(result); //simple, no need to unit test</code></pre>
 If your software is completely text based, you can use the I/O redirection method covered in lecture 1 
 to test the software including the input and output.
-<pre class="four-space-indent"><code>TextBuddy.exe < input.txt >output.txt
+<pre class="prettyprint"><code class="language-java">TextBuddy.exe < input.txt >output.txt
 FC output.txt expected.txt</code></pre></div>
 </div>
 
@@ -104,3 +105,4 @@ find such code is harder to test. Furthermore, it encourages you to think WHAT t
 figure out HOW the code should do it.</div>
 <p>--- End of document ---</p>
 </body>
+</html>
