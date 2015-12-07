@@ -7,7 +7,7 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(section, elementSelector) {
-    pullContent(section, elementSelector, 'Exract from handbook');
+    pullContent(section, elementSelector, 'Extract from handbook');
 }
 
 function pullContent(section, elementSelector, title) {
@@ -133,6 +133,35 @@ function addCollapseAndExpandButtonsForWeek(accordionHeaderSelector, divId) {
     $(accordionHeaderSelector + ' > .btn-expandall').button();
 }
 
+function addCollapseAndExpandButtonsForAllContents(preferenceSelector) {
+    var tableDataElement = $("<td></td>");
+    $(preferenceSelector + " > table > tbody > tr").append(tableDataElement);
+    var expandAllButton = $('<button id="expandall-contents" ' +
+                            'class="btn-expandall-contents ui-button ui-widget ' +
+                            'ui-state-default ui-corner-all ui-button-text-only" ' +
+                            'role="button" style="display: inline-block;"> ' +
+                            '<span class="ui-button-text">+ + + +</span></button>');
+
+    var collapseAllButton = $('<button id="collapseall-contents" ' +
+                              'class="btn-collapseall-contents ui-button ui-widget ' +
+                              'ui-state-default ui-corner-all ui-button-text-only" ' +
+                              'role="button" style="display: inline-block;"> ' +
+                              '<span class="ui-button-text">- - - -</span></button>');
+    $(collapseAllButton).hide();
+    $(tableDataElement).append(expandAllButton);
+    $(tableDataElement).append(collapseAllButton);
+    $(expandAllButton).click(function() {
+        $(this).hide();
+        $(collapseAllButton).show();  
+        $(".btn-expandall").click();
+    });
+    $(collapseAllButton).click(function() {
+        $(this).hide();
+        $(expandAllButton).show();  
+        $(".btn-collapseall").click();
+    });
+}
+
 function checkIfAllComponentsChecked() {
     var isAllChecked = true;
     $('.preferences').each(function() {
@@ -200,6 +229,8 @@ $(document).ready(function() {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
+
+    addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
 
