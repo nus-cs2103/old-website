@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <title>FAQ: Unit Testing</title>
   <link rel="stylesheet" type="text/css" href="../styles/common.css">
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
 <div class="align-right dim">CS2103/T</div>
@@ -29,8 +29,8 @@
 
 <br>
 <h3><a name="test-void"></a>How to test void methods?</h3>
-<div>Use other means to check the effect of the method. E.g., if you are testing a deleteFile(fileName) 
-method, you could do something like this.
+<div>Use other means to check the effect of the method. E.g., if you are testing a 
+<code>deleteFile(fileName)</code> method, you could do something like this.
 <pre class="prettyprint"><code class="language-java">deleteFile(fileName);
 assertFalse(isFileExists(fileName));
 </code></pre>
@@ -42,16 +42,15 @@ method.
 <pre class="prettyprint"><code class="language-java">void display(){
     // for each line in file
          //display line
-}
-</code></pre>
+}</code></pre>
 It can be refactored like this:
 <pre class="prettyprint"><code class="language-java">void display(){
     String content = getFileContent(fileName);
-         print(content);
-}
-</code></pre>
-Now, you can unit test getFileContent(fileName) method. There is no need to unit test display() 
-method because most of it’s logic is in getFileContent(fileName) that is already unit tested.
+    print(content);
+}</code></pre>
+Now, you can unit test <code>getFileContent(fileName)</code> method. There is no need to unit 
+test <code>display()</code> method because most of it’s logic is in <code>getFileContent(fileName)</code> 
+that is already unit tested.
 </div>
 
 <br>
@@ -71,7 +70,7 @@ A more extensive discussion of this issue can be found here.</div>
 <br>
 <h3><a name="test-reading-user"></a>How to test the reading of user commands?</h3>
 <div>That part is hard to test. Separate the ‘reading user command’ part from the rest and test the rest. 
-See <code class="language-java">CityConnectTest.java</code>(in the Schedule page) for an example.</div>
+See <code>CityConnectTest.java</code>(in the Schedule page) for an example.</div>
 
 <br>
 <h3><a name="test-text-display"></a>How to test displaying of text to the user?</h3>
@@ -88,7 +87,8 @@ FC output.txt expected.txt</code></pre></div>
 <br>
 <h3><a name="method-test-another"></a>Can we use one method in our code to test another method?</h3>
 <div>Yes, it is acceptable. You can use methods that are already unit-tested to test other methods. 
-e.g., you can use clear() and add() methods when testing the sort() method.</div><br>
+e.g., you can use <code>clear()</code> and <code>add()</code> methods when testing the <code>sort()</code> 
+method.</div><br>
 <div>Note: This is not strictly ‘unit testing’ as we are not testing the unit in complete isolation from 
 the rest of the code, but it is acceptable because other units are already tested and are under your 
 control too.</div>
