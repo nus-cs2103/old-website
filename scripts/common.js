@@ -7,7 +7,7 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(section, elementSelector) {
-    pullContent(section, elementSelector, 'Extract from handbook');
+    pullContent(section, elementSelector, 'Exract from handbook');
 }
 
 function pullContent(section, elementSelector, title) {
