@@ -211,8 +211,10 @@ a:visited {
 
 .btn-collapse,
 .btn-collapseall,
+.btn-collapseall-contents,
 .btn-expand,
 .btn-expandall,
+.btn-expandall-contents,
 .btn-dismiss {
     margin-left: 5px;
     color: inherit !important;
@@ -224,8 +226,10 @@ a:visited {
 
 .btn-collapse,
 .btn-collapseall,
+.btn-collapseall-contents,
 .btn-expand,
-.btn-expandall {
+.btn-expandall,
+.btn-expandall-contents {
     background-color: inherit !important;
 }
 
@@ -235,16 +239,20 @@ a:visited {
 
 .btn-collapse > .ui-button-text,
 .btn-collapseall > .ui-button-text,
+.btn-collapseall-contents  > .ui-button-text,
 .btn-expand > .ui-button-text,
 .btn-expandall > .ui-button-text,
+.btn-expandall-contents > .ui-button-text,
 .btn-dismiss > .ui-button-text {
     padding: 0.1em 1em;
 }
 
 .btn-collapse:hover,
 .btn-collapseall:hover,
+.btn-collapseall-contents:hover,
 .btn-expand:hover,
 .btn-expandall:hover,
+.btn-expandall-contents:hover,
 .btn-dismiss:hover {
     background-color: #ffff00 !important;
     color: #000 !important;
