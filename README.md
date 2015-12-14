@@ -36,12 +36,19 @@ If you would like to contribute code, here is the procedure:
    1. Ensure that your fork has the latest code from this repo (the repo you forked from is called
       the 'upstream` repo). The code in the upstream repo may have been updated while you were fixing the issue. 
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/)
-   2. Push the code to your fork and create a pull request (PR) against the master 
+   2. Stage your changes:<br>
+      Your reviewer might want to see how your changes look like to a viewer of the website. To create a [*staging 
+      site*](https://en.wikipedia.org/wiki/Staging_site) using [*GitHub Pages* feature](https://help.github.com/categories/github-pages-basics/), create a branch called `gh-pages`, merge your branch to the `gh-pages` branch 
+      and push the `gh-pages` branch to your fork. A running version of the website should now be available from
+      the corresponding `github.io` URL. Here is an example [http://bobby-lin.github.io/website/](http://bobby-lin.github.io/website/).
+   3. Push the code to your fork and create a pull request (PR) against the master 
       branch of this repo.<br>
       When naming the PR, copy paste the name of the issue you are fixing, including the original issue number.<br>
       e.g. `Handbook TOC links are not working in iPhone browser #19` <br>
       In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #24` so that the corresponding issue
-      is closed automatically when the PR is merged.
+      is closed automatically when the PR is merged.<br>
+      Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/78)
+      is an example.
    3. Check the diff view of the PR to ensure it contains the intended changes only.
 8. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
    revise the code, push the new commits to your branch, and post a comment to say the pull request
