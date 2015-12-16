@@ -1,7 +1,21 @@
 # Coding Standards for C++ (Extract)
-
-![Dennis Ritchie Creator of C](https://lh3.googleusercontent.com/ptmL-lnkZidSpuMFYN0TyfEShMk3o4T9QA1BdYoHWZ9v7qF-jVA6NTWJsYWzKXWsSvFf7VYAaPwFZNtRI9X8Y1YEJ64dSbB7CdmDM81Hfkh1dJhXFkQ7lJleIQRgpJI1)
-Dennis Ritchie, Creator of C
+<table>
+    <tr>
+        <td width="500px">
+            <li><a href="#naming-conventions">Naming Conventions</a>
+            <li><a href="#indentation-rules">Indentation Rules</a>
+            <li><a href="#comments">Comments</a>
+            <li><a href="#look--feel">Look & Feel</a>
+            <li><a href="#miscellaneous">Miscellaneous</a>
+            <li><a href="#references">References</a>
+        </td>
+        <td>
+            <a style='text-decoration: none;'>
+            <img src='https://lh3.googleusercontent.com/ptmL-lnkZidSpuMFYN0TyfEShMk3o4T9QA1BdYoHWZ9v7qF-jVA6NTWJsYWzKXWsSvFf7VYAaPwFZNtRI9X8Y1YEJ64dSbB7CdmDM81Hfkh1dJhXFkQ7lJleIQRgpJI1' style='width: 140px'>
+            <div style='width: 130px; text-align: center;'>Dennis Ritchie, Creator of C</a>
+        </td>
+    </tr>
+</table>
 
 ## Naming Conventions
 - Use meaningful names.
@@ -15,7 +29,7 @@ Dennis Ritchie, Creator of C
         <th>Example</th>
     </tr>
     <tr>
-        <td><b>Class</b></td>
+        <td align="center"><b>Class</b></td>
         <td>PascalCasing</td>
         <td>Noun</td>
         <td><pre lang="cpp">
@@ -25,20 +39,20 @@ class StringList {...};
 </pre></td>
     </tr>
     <tr>
-        <td><b>Enumeration</b></td>
+        <td align="center"><b>Enumeration</b></td>
         <td>PascalCasing</td>
         <td>Noun</td>
         <td><pre lang="cpp">enum Type {...};</pre></td>
     </tr>
-    <td><b>Function, Method</b></td>
-    <td>camelCasing</td>
-    <td>Verb or Verb-Noun</td>
-    <td><pre>
+        <td align="center"><b>Function, Method</b></td>
+        <td>camelCasing</td>
+        <td>Verb or Verb-Noun</td>
+        <td><pre lang="cpp">
 void print()
 void processItem()
 </pre></td>
     <tr>
-        <td><b>Interface</b></td>
+        <td align="center"><b>Interface</b></td>
         <td>PascalCasing ‘I’ prefix</td>
         <td>Noun</td>
         <td><pre lang="cpp">
@@ -46,7 +60,7 @@ class IDictionary {...};
 </pre></td>
     </tr>
     <tr>
-        <td><b>Structure</b></td>
+        <td align="center"><b>Structure</b></td>
         <td>All capital, separate words with ‘&#95;’</td>
         <td>Noun</td>
         <td><pre>
@@ -54,7 +68,7 @@ struct FORM_STREAM_HEADER
 </pre></td>
     </tr>
     <tr>
-        <td><b>Macro, Constant</b></td>
+        <td align="center"><b>Macro, Constant</b></td>
         <td>All capital, separate words with ‘&#95;’</td>
         <td></td>
         <td><pre lang="cpp">
@@ -65,13 +79,13 @@ constint BLACK = 3;
 </pre></td>
     </tr>
     <tr>
-        <td><b>Parameter, Variable</b></td>
+        <td align="center"><b>Parameter, Variable</b></td>
         <td>camelCasing</td>
         <td>Noun</td>
         <td><code>exampleText</code>, <code>dwCount</code></td>
     </tr>
     <tr>
-        <td><b>Template parameter</b></td>
+        <td align="center"><b>Template parameter</b></td>
         <td>PascalCasing ‘T’ prefix</td>
         <td>Noun</td>
         <td><code>T</code>, <code>TItem</code>, <code>TPolicy</code></td>
@@ -86,128 +100,189 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 2. Default __indentation__ is one tab. One space is added before and after each operator or assignment symbol.
 
-  ```cpp
-  void printMessage() {                   void printMessage() {
-      cout << "Welcome\n"; /*good*/               cout<<"Welcome\n"; /*bad*/
-      cout << "Oh yeah\n";                    cout<<"Oh year\n";
-  }                                       }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    void printMessage() {
+        cout << "Welcome\n";
+        cout << "Oh yeah\n";
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    void printMessage() {
+            cout<<"Welcome\n";
+        cout<<"Oh yeah\n";
+    }
+    </pre></td>
+      </tr>
+  </table>
 
 3. Use __blank lines__ to separate groups of related statements.  Omit extra blank lines that do not make the code easier to read.
 
-  Good:
-  ```cpp
-  void sortAndPrint(int *data, int size) {
-      //sorting
-      for (int i = size - 2; i >= 0; i--) {
-          for (int j = 0; j <= i; j++) {
-              if (data[j] > data[j + 1]) {
-                  int temp = data[j];
-                  data[j] = data[j + 1];
-                  data[j + 1] = temp;
-              }
-          }
-      }
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    void sortAndPrint(int *data, int size) {
+        //sorting
+        for (int i = size - 2; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                if (data[j] > data[j + 1]) {
+                    int temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+                }
+            }
+        }
 
-      //printing
-      for (int i = 0; i < size; i++) {
-          cout << data[i] << " ";
-      }
-      cout << "\n";
-  }
-  ```
-
-  Bad:
-  ```cpp
-  void sortAndPrint(int *data, int size) {
-      //sorting
-      for (int i = size - 2; i >= 0; i--) {
-          for (int j = 0; j <= i; j++) {
-              if (data[j] > data[j + 1]) {
-                  int temp = data[j];
-                  data[j] = data[j + 1];
-                  data[j + 1] = temp;
-              }
-          }
-      }
-      //printing
-      for (int i = 0; i < size; i++) {
-          cout << data[i] << " ";
-      }
-      cout << "\n";
-  }
-  ```
+        //printing
+        for (int i = 0; i < size; i++) {
+            cout << data[i] << " ";
+        }
+        cout << "\n";
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    void sortAndPrint(int *data, int size) {
+        //sorting
+        for (int i = size - 2; i >= 0; i--) {
+            for (int j = 0; j <= i; j++) {
+                if (data[j] > data[j + 1]) {
+                    int temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = temp;
+                }
+            }
+        }
+        //printing
+        for (int i = 0; i < size; i++) {
+            cout << data[i] << " ";
+        }
+        cout << "\n";
+    }
+    </pre></td>
+      </tr>
+  </table>
 
 3. Put the __opening braces in the same line__, not in a new line.
 
-  ```cpp
-  /* this is good */                       /* this is bad */ 
-  void printMessage() {                    void printMessage()
-      if (isCorrect) {                     {
-          cout << "Welcome\n";                 if (isCorrect)
-          cout << "Oh yeah\n";                 {
-      } else {                                     cout << "Welcome\n";
-          cout << "Wrong\n";                       cout << "Oh year\n";
-      }                                        }
-  }                                            else
-                                               {
-                                                   cout << "Wrong\n";
-                                               }
-                                            }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    void printMessage() {
+        if (isCorrect) {
+            cout << "Welcome\n";
+            cout << "Oh yeah\n";
+        } else {
+            cout << "Wrong\n";
+        }
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    void printMessage()
+    {
+        if (isCorrect)
+        {
+            cout << "Welcome\n";
+            cout << "Oh yeah\n";
+        }
+        else
+        {
+            cout << "Wrong\n";
+        }
+    }
+    </pre></td>
+      </tr>
+  </table>
 
 4. __Indent comments__ at the same level as the code.
-
-  Good:
-  ```cpp
-  // Components must be initialized before they are used.
-  initializeComponent();
-  ```
-
-  Bad:
-  ```cpp
-      // Components must be initialized before they are used.
-  initializeComponent();
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    // Components must be initialized before they are used.
+    initializeComponent();
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+        // Components must be initialized before they are used.
+    initializeComponent();
+    </pre></td>
+      </tr>
+  </table>
 
 ## Comments
 1. Use `//` for all code __comments__ (even for multiple line comments; the main reason being that if you ever need to comment out a large chunk of codes for testing, debugging or whatever, you could easily use the pair `/*` and `*/` had you been using `//` for all comments, whereas you couldn’t do that had you used `/*` and `*/` for your code comments.
 
-  Good:
-  ```cpp
-  // The following code runs best when the values in
-  // array x and those in y are highly correlated.
-  // The performance is extremely poor when they are not.
-  ```
-  
-  Bad:
-  ```cpp
-  /*
-      The following code runs best when the values in
-      array x and those in y are highly correlated.
-      The performance is extremely poor when they are not.
-  */
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    // The following code runs best when the values in
+    // array x and those in y are highly correlated.
+    // The performance is extremely poor when they are not.
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    /*
+        The following code runs best when the values in
+        array x and those in y are highly correlated.
+        The performance is extremely poor when they are not.
+    */
+    </pre></td>
+      </tr>
+  </table>
 
 2. Provide relevant comments for __important functions__.
-
-  Good:
-  ```cpp
-  // This function garbage collects objects created
-  // through the factory. Use it with caution, as it
-  // may cause performance hiccups.
-  ```
-  Bad: (useless comment for not important functions, which are often self-explanatory)
-  ```cpp
-  // This function increments the value of x by 1
-  void inc() {
-      x++;
-  }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Useless comment for not important functions, which are often self-explanatory</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    // This function garbage collects objects created
+    // through the factory. Use it with caution, as it
+    // may cause performance hiccups.
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    // This function increments the value of x by 1
+    void inc() {
+        x++;
+    }
+    </pre></td>
+      </tr>
+  </table>
 
 3. Write comment for __every class definition__ to describe what it is for, and how it should be used.
 
-  Good:
   ```cpp
   // Iterates over the contents of a GargantuanTable.  Sample usage:
   //    GargantuanTableIterator* iter = table->NewIterator();
@@ -229,177 +304,280 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
   - Whether any of the arguments can be NULL.
   - If there are any performance implications of how a function is used.
 
-  Good:
-  ```cpp
-  // Returns an iterator for this table.  It is the client's
-  // responsibility to delete the iterator when it is done with it,
-  // and it must not use the iterator once the GargantuanTable object
-  // on which the iterator was created has been deleted.
-  //
-  // The iterator is initially positioned at the beginning of the table.
-  //
-  // This method is equivalent to:
-  //    Iterator* iter = table->NewIterator();
-  //    iter->Seek("");
-  //    return iter;
-  // If you are going to immediately seek to another place in the
-  // returned iterator, it will be faster to use NewIterator()
-  // and avoid the extra seek.
-  Iterator* getIterator() const;
-  ```
-
-  Bad:
-  ```cpp
-  // Returns true if the table cannot hold any more entries.
-  bool isTableFull();
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    // Returns an iterator for this table.  It is the client's
+    // responsibility to delete the iterator when it is done with it,
+    // and it must not use the iterator once the GargantuanTable object
+    // on which the iterator was created has been deleted.
+    //
+    // The iterator is initially positioned at the beginning of the table.
+    //
+    // This method is equivalent to:
+    //    Iterator* iter = table->NewIterator();
+    //    iter->Seek("");
+    //    return iter;
+    // If you are going to immediately seek to another place in the
+    // returned iterator, it will be faster to use NewIterator()
+    // and avoid the extra seek.
+    Iterator* getIterator() const;
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    // Returns true if the table cannot hold any more entries.
+    bool isTableFull();
+    </pre></td>
+      </tr>
+  </table>
 
   [Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](https://www.google.com/url?q=http://www.stack.nl/~dimitri/doxygen/&sa=D&usg=AFQjCNG8GqcHJMXJpA5H1ggz5r7Q4OISgw). The comment standard used is similar to Javadoc]
 
 ## Look & Feel
 1. Do not declare __multiple variables__ in a single line. Initialize variables whenever possible.
-
-  ```cpp
-  /* this is good */             /* this is bad */
-  int i = 0;                     int i, j, k;
-  int j = 0;
-  int k = 0;
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    int i, j, k;
+    </pre></td>
+      </tr>
+  </table>
  
 2. If there are too many parameters to put in one line, or if you want to comment on the parameters, put __one parameter per line__, each indented a tab away from the left margin.
- 
-  Good:
-  ```cpp
-  bool receive(
-      Channel c,                 //comment....
-      Request r,                 //comment....
-      int &size,                 //comment....
-      int &congestion_window,    //comment....
-      char *buf);                //comment....
-  ```
-
-  Bad:
-  ```cpp
-  bool receive(int &size, Channel c, Request r, int &congestion_window, char *buf);
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    bool receive(
+        Channel c,                 //comment....
+        Request r,                 //comment....
+        int &size,                 //comment....
+        int &congestion_window,    //comment....
+        char *buf);                //comment....
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    bool receive(int &size, Channel c, Request r, int &congestion_window, char *buf);
+    </pre></td>
+      </tr>
+  </table>
 
 3. When creating a series of methods that accept the same parameters, do use a __consistent order__ across the functions.
-
-  Good:
-  ```cpp
-  void format(Text text, Style style);
-  void align(Text text, Style style);
-  ```
-
-  Bad:
-  ```cpp
-  void format(Text text, Style style);
-  void align(Style style, Text text);  // not consistent
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    void format(Text text, Style style);
+    void align(Text text, Style style);
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    void format(Text text, Style style);
+    void align(Style style, Text text);  // not consistent
+    </pre></td>
+      </tr>
+  </table>
 
 4. The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
-
-  ```cpp
-  /* this is good */                      /* this is bad */
-  if (isRightCondition(a, b)) {           if (isRightCondition(a, b))
-      printResult();                           printResult();
-  }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    if (isRightCondition(a, b)) {
+        printResult();
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    if (isRightCondition(a, b))
+        printResult();
+    </pre></td>
+      </tr>
+  </table>
 
 5. Do not put more than one statement on a single line.
-
-  ```cpp
-  /* this is good */                      /* this is bad */
-  a = 1;                                  a = 1; b = 2;
-  b = 2;                                  if (isRight(a, b)) printResult();
-  if (isRightCondition(a, b)) {
-      printResult();
-  }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    a = 1;
+    b = 2;
+    if (isRightCondition(a, b)) {
+        printResult();
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    a = 1; b = 2;
+    if (isRightCondition(a, b)) printResult();
+    </pre></td>
+      </tr>
+  </table>
 
 ## Miscellaneous
 1. __Use an `enum`__ over `static` constants or `#define` values, for the sake of readability.
-
-  Good:
-  ```cpp
-  typedef enum{black, white, red, green} Colour;
-  ...
-  Colour myColour = red;
-  ...
-  ```
-
-  Bad:
-  ```cpp
-  #define black 0;
-  const int white = 1;
-  #define red 2;
-  #define green 3;
-  ...
-  int myColour = red;
-  ...
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    typedef enum{black, white, red, green} Colour;
+    ...
+    Colour myColour = red;
+    ...
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    #define black 0;
+    const int white = 1;
+    #define red 2;
+    #define green 3;
+    ...
+    int myColour = red;
+    ...
+    </pre></td>
+      </tr>
+  </table>
 
 2. Do not reference __unnecessary libraries__, include unnecessary header files, or reference unnecessary assemblies.
 
 3. Use named constants as `const` values, instead of `#define` values. This forces the compiler to do type checking, and also add the variable into symbol table for easy debugging.
-
-  ```cpp
-  /* this is good */                       /* this is bad */
-  const int BLACK = 3;                     #define BLACK 3
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    const int BLACK = 3;
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    #define BLACK 3
+    </pre></td>
+      </tr>
+  </table>
 
 4. Use `sizeof(var)` instead of `sizeof(TYPE)`
-
-  ```cpp
-  /* this is good */                       /* this is bad */
-  MY_STRUCT s;                             MY_STRUCT s;
-  ZeroMemory(&s, sizeof(s));               ZeroMemory(&s, sizeof(MY_STRUCT));
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    MY_STRUCT s;
+    ZeroMemory(&s, sizeof(s));
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    MY_STRUCT s;
+    ZeroMemory(&s, sizeof(MY_STRUCT));
+    </pre></td>
+      </tr>
+  </table>
  
 5. Do __not declare `public` data members__.  Use __`inline` accessor__ functions for performance.
-
-  ```cpp
-  /* this is good */                                /* this is bad */
-  private:                                          public:
-      int _size;                                        int _size;
-  public:
-      inline int getSize() { return _size; }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    private:
+        int _size;
+    public:
+        inline int getSize() { return _size; }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    public:
+        int _size;
+    </pre></td>
+      </tr>
+  </table>
 
 6. Initialize member variables in the same order that they were defined in the class declaration
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    class SampleCode {
+    public:
+        SampleCode(int size, string text);
+        ~SampleCode();
+    private:
+        string _text;
+        int _size;
+    };
 
-  Good:
-  ```cpp
-  class SampleCode {
-  public:
-      SampleCode(int size, string text);
-      ~SampleCode();
-  private:
-     string _text;
-     int _size;
-  };
-  SampleCode ::SampleCode (int size, string text) :
-      _text(text),
-      _size(size) {
-  }
-  ```
+    SampleCode ::SampleCode (int size, string text) :
+        _text(text),
+        _size(size) {
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    class SampleCode {
+    public:
+        SampleCode(int size, string text);
+        ~SampleCode();
+    private:
+        string _text;
+        int _size;
+    };
 
-  Bad:
-  ```cpp
-  class SampleCode {
-  public:
-      SampleCode(int size, string text);
-      ~SampleCode();
-  private:
-      string _text;
-      int _size;
-  };
-  SampleCode ::SampleCode (int size, string text) :
-      _size(size),  // The order is wrong
-      _text(text) {
-  }
-  ```
- 
+    SampleCode ::SampleCode (int size, string text) :
+        _size(size),  // The order is wrong
+        _text(text) {
+    }
+    </pre></td>
+      </tr>
+  </table>
+
 7. Do __minimal work__ in the constructor
  
 8. Do use a __destructor__ to centralize the resource cleanup of a class that is freed via delete
@@ -409,36 +587,42 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 10. Do ensure that all __allocated memory is freed__ using the same mechanisms. Objects allocated using ‘new’ should be freed with ‘delete’.
  
 11. Do throw exceptions __by value__ and catch exceptions __by reference__.
-
-  Good:
-  ```cpp
-  void processItem(const Item& item) {
-      try {
-          if (/* some test failed */) {
-              throw Exception(“blah blah blah”);
-          }
-      }
-      catch (Exception &excp) {
-          // Process excp
-          //
-      }
-  }
-  ```
-
-  Bad:
-  ```cpp
-  void processItem(const Item& item) {
-      try {
-          if (/* some test failed */) {
-              throw Exception();
-          }
-      }
-      catch (Exception excp) {
-          // Process excp
-          //
-      }
-  }
-  ```
+  <table>
+      <tr>
+          <th align="center">Good</th>
+          <th align="center">Bad</th>
+      </tr>
+      <tr>
+          <td>
+              <pre lang="cpp">
+    void processItem(const Item& item) {
+        try {
+            if (/* some test failed */) {
+                throw Exception(“blah blah blah”);
+            }
+        }
+        catch (Exception &excp) {
+            // Process excp
+            //
+        }
+    }
+    </pre></td>
+          <td>
+              <pre lang="cpp">
+    void processItem(const Item& item) {
+        try {
+            if (/* some test failed */) {
+                throw Exception();
+            }
+        }
+        catch (Exception excp) {
+            // Process excp
+            //
+        }
+    }
+    </pre></td>
+      </tr>
+  </table>
 
 12. Do not allow exceptions to be thrown out of destructors
  
