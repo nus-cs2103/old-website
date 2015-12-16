@@ -1,9 +1,7 @@
 # Coding Standards for C++ (Extract)
 
-<figure>
-  <img src="https://lh3.googleusercontent.com/ptmL-lnkZidSpuMFYN0TyfEShMk3o4T9QA1BdYoHWZ9v7qF-jVA6NTWJsYWzKXWsSvFf7VYAaPwFZNtRI9X8Y1YEJ64dSbB7CdmDM81Hfkh1dJhXFkQ7lJleIQRgpJI1" alt="Creator of C">
-  <figcaption><br>Dennis Ritchie<br>Creator of C</figcaption>
-</figure>
+![Dennis Ritchie Creator of C](https://lh3.googleusercontent.com/ptmL-lnkZidSpuMFYN0TyfEShMk3o4T9QA1BdYoHWZ9v7qF-jVA6NTWJsYWzKXWsSvFf7VYAaPwFZNtRI9X8Y1YEJ64dSbB7CdmDM81Hfkh1dJhXFkQ7lJleIQRgpJI1)
+Dennis Ritchie, Creator of C
 
 ## Naming Conventions
 - Use meaningful names.
@@ -88,20 +86,11 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 2. Default __indentation__ is one tab. One space is added before and after each operator or assignment symbol.
 
-  Good:
   ```cpp
-  void printMessage() {
-      cout << "Welcome\n";
-      cout << "Oh yeah\n";
-  }
-  ```
-  
-  Bad:
-  ```cpp
-  void printMessage() {
-        cout<<"Welcome\n";
-      cout<<"Oh yeah\n";
-  }
+  void printMessage() {                   void printMessage() {
+      cout << "Welcome\n"; /*good*/               cout<<"Welcome\n"; /*bad*/
+      cout << "Oh yeah\n";                    cout<<"Oh year\n";
+  }                                       }
   ```
 
 3. Use __blank lines__ to separate groups of related statements.  Omit extra blank lines that do not make the code easier to read.
@@ -131,7 +120,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
   Bad:
   ```cpp
   void sortAndPrint(int *data, int size) {
-    //sorting
+      //sorting
       for (int i = size - 2; i >= 0; i--) {
           for (int j = 0; j <= i; j++) {
               if (data[j] > data[j + 1]) {
@@ -151,32 +140,20 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 3. Put the __opening braces in the same line__, not in a new line.
 
-  Compliant:
   ```cpp
-  void printMessage() {
-      if (isCorrect) {
-          cout << "Welcome\n";
-          cout << "Oh yeah\n";
-      } else {
-          cout << "Wrong\n";
-      }
-  }
-  ```
-
-  Non-compliant:
-  ```cpp
-  void printMessage()
-  {
-      if (isCorrect)
-      {
-          cout << "Welcome\n";
-          cout << "Oh yeah\n";
-      }
-      else
-      {
-          cout << "Wrong\n";
-      }
-  }
+  /* this is good */                       /* this is bad */ 
+  void printMessage() {                    void printMessage()
+      if (isCorrect) {                     {
+          cout << "Welcome\n";                 if (isCorrect)
+          cout << "Oh yeah\n";                 {
+      } else {                                     cout << "Welcome\n";
+          cout << "Wrong\n";                       cout << "Oh year\n";
+      }                                        }
+  }                                            else
+                                               {
+                                                   cout << "Wrong\n";
+                                               }
+                                            }
   ```
 
 4. __Indent comments__ at the same level as the code.
@@ -281,17 +258,12 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 ## Look & Feel
 1. Do not declare __multiple variables__ in a single line. Initialize variables whenever possible.
-  
-  Good:
+
   ```cpp
-  int i = 0;
+  /* this is good */             /* this is bad */
+  int i = 0;                     int i, j, k;
   int j = 0;
   int k = 0;
-  ```
-
-  Bad:
-  ```cpp
-  int i, j, k;
   ```
  
 2. If there are too many parameters to put in one line, or if you want to comment on the parameters, put __one parameter per line__, each indented a tab away from the left margin.
@@ -327,34 +299,22 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 4. The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
 
-  Good:
   ```cpp
-  if (isRightCondition(a, b)) {
-      printResult();
+  /* this is good */                      /* this is bad */
+  if (isRightCondition(a, b)) {           if (isRightCondition(a, b))
+      printResult();                           printResult();
   }
-  ```
-
-  Bad:
-  ```cpp
-  if (isRightCondition(a, b))
-      printResult();
   ```
 
 5. Do not put more than one statement on a single line.
 
-  Good:
   ```cpp
-  a = 1;
-  b = 2;
+  /* this is good */                      /* this is bad */
+  a = 1;                                  a = 1; b = 2;
+  b = 2;                                  if (isRight(a, b)) printResult();
   if (isRightCondition(a, b)) {
       printResult();
   }
-  ```
-
-  Bad:
-  ```cpp
-  a = 1; b = 2;
-  if (isRightCondition(a, b)) printResult();
   ```
 
 ## Miscellaneous
@@ -383,44 +343,27 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 3. Use named constants as `const` values, instead of `#define` values. This forces the compiler to do type checking, and also add the variable into symbol table for easy debugging.
 
-  Good:
   ```cpp
-  const int BLACK = 3;
+  /* this is good */                       /* this is bad */
+  const int BLACK = 3;                     #define BLACK 3
   ```
 
-  Bad:
-  ```cpp
-  #define BLACK 3
-  ```
- 
 4. Use `sizeof(var)` instead of `sizeof(TYPE)`
 
-  Good:
   ```cpp
-  MY_STRUCT s;
-  ZeroMemory(&s, sizeof(s));
-  ```
-
-  Bad:
-  ```cpp
-  MY_STRUCT s;
-  ZeroMemory(&s, sizeof(MY_STRUCT));
+  /* this is good */                       /* this is bad */
+  MY_STRUCT s;                             MY_STRUCT s;
+  ZeroMemory(&s, sizeof(s));               ZeroMemory(&s, sizeof(MY_STRUCT));
   ```
  
 5. Do __not declare `public` data members__.  Use __`inline` accessor__ functions for performance.
 
-  Good:
   ```cpp
-  private:
-      int _size;
+  /* this is good */                                /* this is bad */
+  private:                                          public:
+      int _size;                                        int _size;
   public:
       inline int getSize() { return _size; }
-  ```
-
-  Bad:
-  ```cpp
-  public:
-      int _size;
   ```
 
 6. Initialize member variables in the same order that they were defined in the class declaration
@@ -522,9 +465,9 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
   5. Header file for the class
 
 ## References:
-- http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml">
+- http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 - http://www.literateprogramming.com/nrad.pdf
 - http://pst.web.cern.ch/PST/HandBookWorkBook/Handbook/Programming/CodingStandard/c++standard.pdf
 - http://1code.codeplex.com/releases/view/84683
 
-__Contributions by:__ Veerabadran Chandrasekaran, Li Mengran, Loke Yan Hao, Vaarnan Drolia
+__Contributions by:__ Veerabadran Chandrasekaran, Li Mengran, Loke Yan Hao, Vaarnan Drolia, Zhang Zhongwei
