@@ -113,25 +113,25 @@ a:visited {
     border-color: #f0ad4e;
 }
 
-.homework > .ui-accordion-header,
-.homework > .ui-accordion-content {
+.activity > .ui-accordion-header,
+.activity > .ui-accordion-content {
     background-color: #c9daf8;
     border-color: #c9daf8;
     color: #31708f;
 }
 
-.homework .homework > .ui-accordion-header {
+.activity .activity > .ui-accordion-header {
     background-color: #337ab7;
     color: #fff;
 }
 
-.homework .homework > .ui-accordion-content {
+.activity .activity > .ui-accordion-content {
     background-color: #fff;
     color: #000;
 }
 
-.homework .homework > .ui-accordion-header,
-.homework .homework > .ui-accordion-content {
+.activity .activity > .ui-accordion-header,
+.activity .activity > .ui-accordion-content {
     border-color: #337ab7;
 }
 
