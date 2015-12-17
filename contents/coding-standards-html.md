@@ -1,6 +1,15 @@
-# TEAMMATES HTML Style Guide
+# HTML Style Guide
 
-## Document Properties
+## Table of Contents
+- [Document Properties](#document-properties)
+- [External Files](#external-files)
+- [Tags](#tags)
+- [Attributes](#attributes)
+- [Naming Convention](#naming-convention)
+- [Indentation](#indentation)
+- [Miscellaneous](#miscellaneous)
+
+## Document Properties<a name="document-properties"></a>
 - __We will use the HTML5 Doctype and HTML5 features__
   ```html
   <!DOCTYPE html>
@@ -21,8 +30,8 @@
 - __General Rules__
   - Indentation
   
-    For all code languages, we require indentation to be done via soft tabs (using the space character).
-    Hitting Tab in your text editor shall be equivalent to four spaces.
+    Indentation should be 2 spaces for html files.
+    Spaces should be used instead of <code>tab</code>
 
   - Readability vs Compression
   
@@ -40,39 +49,38 @@
 - __General structure for HTML document__
   ```html
   <!DOCTYPE html>
-   <html>
-   <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   
-        <title>Teammates</title>
-   
-        <link rel="shortcut icon" href="/favicon.png">
-        <!-- Sample stylesheet inclusion -->
-        <link type="text/css" href="stylesheets/teammates.css" rel="stylesheet">
-   
-        <!-- Sample javascript inclusion -->
-        <script type="text/javascript" src="/js/jquery-minified.js"></script>
+    <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      <title>Teammates</title>
+      
+      <link rel="shortcut icon" href="/favicon.png">
+      <!-- Sample stylesheet inclusion -->
+      <link type="text/css" href="stylesheets/teammates.css" rel="stylesheet">
+      
+      <!-- Sample javascript inclusion -->
+      <script type="text/javascript" src="/js/jquery-minified.js"></script>
     </head>
-   
     <body>
-         <div id="frameTop">
-            stuff...
-         </div>
-         <div id=”frameBodyWrapper” class="container theme-showcase">
-            stuff...
-         </div>
-         <div id=”frameBottom”>
-            stuff...
-         </div>
-     </body>
+      <div id="frameTop">
+        stuff...
+      </div>
+      <div id="frameBodyWrapper" class="container theme-showcase">
+        stuff...
+      </div>
+      <div id="frameBottom">
+        stuff...
+      </div>
+    </body>
     </html>
   ```
 
-## External Files
+## External Files<a name="external-files"></a>
 - Each webpage should include it's own css file if there is any, as well as the general css file.
 - Each webpage should include it's own javascript file(if necessary), as well as the respective common.js, instructor/student.js, and all the 3rd party js files.
 
-## Tags
+## Tags<a name="tags"></a>
 - All HTML tags are to be closed properly
 
   Good:
@@ -113,21 +121,21 @@
   <DIV ID=”frame”>Test</div>
   ```
 
-## Attributes
+## Attributes<a name="attributes"></a>
 - Use [attr=”value”] for attribute values
- 
+
   Good:
   ```html
   <input value=”computer” id=”someInput” disabled=”disabled” tabindex=”2”>
   ```
-  
+
   Bad:
   ```html
   <input value=computer id='someInput' disabled='disabled' tabindex=2> (single/no quotes)
   <input value="computer" id="someInput" disabled tabindex="2"> (specify boolean variables in the attributes)
   ```
 
-## Naming convention
+## Naming convention<a name="naming-convention"></a>
 - Class
   See Css style guide for this section
 
@@ -138,10 +146,11 @@
   instructor-email-1
   ```
 
-## Indentation
-- Follow [this guide](https://www.google.com/url?q=http://www.w3schools.com/html/html5_syntax.asp&sa=D&usg=AFQjCNGgIh5DRQtbgMqeUG2lGKIvpNbhcA)
+## Indentation<a name="indentation"></a>
+- Indentation should be 2 spaces for html files.
+- Spaces should be used instead of <code>tab</code>
 
-## Miscellaneous
+## Miscellaneous<a name="miscellaneous"></a>
 - Take note of script tags.
  
   Good:
