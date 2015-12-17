@@ -87,7 +87,7 @@ constint BLACK = 3;</pre></td>
     </tr>
 </table>
 
-A note about __test function names__: Underscores may be used for test method names if your test method names are long and very descriptive. However, if this style is adopted for test methods, the whole team should follow it consistently. 
+> A note about __test function names__: Underscores may be used for test method names if your test method names are long and very descriptive. However, if this style is adopted for test methods, the whole team should follow it consistently. 
 e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 ## Indentation Rules
@@ -299,7 +299,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     bool isTableFull();
     ```
 
-    [Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](https://www.google.com/url?q=http://www.stack.nl/~dimitri/doxygen/&sa=D&usg=AFQjCNG8GqcHJMXJpA5H1ggz5r7Q4OISgw). The comment standard used is similar to Javadoc]
+    > Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](https://www.google.com/url?q=http://www.stack.nl/~dimitri/doxygen/&sa=D&usg=AFQjCNG8GqcHJMXJpA5H1ggz5r7Q4OISgw). The comment standard used is similar to Javadoc.
 
 ## Look & Feel
 1. Do not declare __multiple variables__ in a single line. Initialize variables whenever possible.
