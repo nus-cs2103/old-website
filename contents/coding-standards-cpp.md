@@ -95,37 +95,37 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 2. Default __indentation__ is one tab. One space is added before and after each operator or assignment symbol.
 
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td>
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td>
+                <pre lang="cpp">
     void printMessage() {
         cout << "Welcome\n";
         cout << "Oh yeah\n";
     }</pre></td>
-          <td>
-              <pre lang="cpp">
+            <td>
+                <pre lang="cpp">
     void printMessage() {
             cout<<"Welcome\n";
         cout<<"Oh yeah\n";
     }</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 3. Use __blank lines__ to separate groups of related statements.  Omit extra blank lines that do not make the code easier to read.
 
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     void sortAndPrint(int *data, int size) {
         //sorting
         for (int i = size - 2; i >= 0; i--) {
@@ -144,8 +144,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
         }
         cout << "\n";
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     void sortAndPrint(int *data, int size) {
         //sorting
         for (int i = size - 2; i >= 0; i--) {
@@ -163,19 +163,19 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
         }
         cout << "\n";
     }</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 3. Put the __opening braces in the same line__, not in a new line.
 
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     void printMessage() {
         if (isCorrect) {
             cout << "Welcome\n";
@@ -184,8 +184,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
             cout << "Wrong\n";
         }
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     void printMessage()
     {
         if (isCorrect)
@@ -198,8 +198,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
             cout << "Wrong\n";
         }
     }</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 4. __Indent comments__ at the same level as the code.
 
@@ -303,22 +303,22 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 ## Look & Feel
 1. Do not declare __multiple variables__ in a single line. Initialize variables whenever possible.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     int i = 0;
     int j = 0;
     int k = 0;</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     int i, j, k;</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
  
 2. If there are too many parameters to put in one line, or if you want to comment on the parameters, put __one parameter per line__, each indented a tab away from the left margin.
 
@@ -337,73 +337,73 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     ```
 
 3. When creating a series of methods that accept the same parameters, do use a __consistent order__ across the functions.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     void format(Text text, Style style);
     void align(Text text, Style style);</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     void format(Text text, Style style);
     void align(Style style, Text text);  // not consistent</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 4. The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     if (isRightCondition(a, b)) {
         printResult();
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     if (isRightCondition(a, b))
         printResult();</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 5. Do not put more than one statement on a single line.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     a = 1;
     b = 2;
     if (isRightCondition(a, b)) {
         printResult();
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     a = 1; b = 2;
     if (isRightCondition(a, b)) printResult();</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 ## Miscellaneous
 1. __Use an `enum`__ over `static` constants or `#define` values, for the sake of readability.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     typedef enum{black, white, red, green} Colour;
     ...
     Colour myColour = red;
@@ -417,74 +417,74 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     ...
     int myColour = red;
     ...</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 2. Do not reference __unnecessary libraries__, include unnecessary header files, or reference unnecessary assemblies.
 
 3. Use named constants as `const` values, instead of `#define` values. This forces the compiler to do type checking, and also add the variable into symbol table for easy debugging.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     const int BLACK = 3;</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     #define BLACK 3</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 4. Use `sizeof(var)` instead of `sizeof(TYPE)`
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     MY_STRUCT s;
     ZeroMemory(&s, sizeof(s));</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     MY_STRUCT s;
     ZeroMemory(&s, sizeof(MY_STRUCT));</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
  
 5. Do __not declare `public` data members__.  Use __`inline` accessor__ functions for performance.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     private:
         int _size;
     public:
         inline int getSize() { return _size; }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     public:
         int _size;</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 6. Initialize member variables in the same order that they were defined in the class declaration
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     class SampleCode {
     public:
         SampleCode(int size, string text);
@@ -498,8 +498,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
         _text(text),
         _size(size) {
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     class SampleCode {
     public:
         SampleCode(int size, string text);
@@ -513,8 +513,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
         _size(size),  // The order is wrong
         _text(text) {
     }</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 7. Do __minimal work__ in the constructor
  
@@ -525,14 +525,14 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 10. Do ensure that all __allocated memory is freed__ using the same mechanisms. Objects allocated using ‘new’ should be freed with ‘delete’.
  
 11. Do throw exceptions __by value__ and catch exceptions __by reference__.
-  <table cellspacing="0" cellpadding="0">
-      <tr>
-          <th align="center">Good</th>
-          <th align="center">Bad</th>
-      </tr>
-      <tr>
-          <td valign="top">
-              <pre lang="cpp">
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th align="center">Good</th>
+            <th align="center">Bad</th>
+        </tr>
+        <tr>
+            <td valign="top">
+                <pre lang="cpp">
     void processItem(const Item& item) {
         try {
             if (/* some test failed */) {
@@ -544,8 +544,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
             //
         }
     }</pre></td>
-          <td valign="top">
-              <pre lang="cpp">
+            <td valign="top">
+                <pre lang="cpp">
     void processItem(const Item& item) {
         try {
             if (/* some test failed */) {
@@ -557,32 +557,32 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
             //
         }
     }</pre></td>
-      </tr>
-  </table>
+        </tr>
+    </table>
 
 12. Do not allow exceptions to be thrown out of destructors
  
 13. Do not use `catch(Exception e)`. General exceptions should not be caught. You should catch a more specific exception, or re-throw the general exception as the last statement in the catch block.
  
 14. Header files are included in the following order in a __Header File__
-  1. System files
-  2. Library files
-  3. Application-specific files
-  4. Local files
+    1. System files
+    2. Library files
+    3. Application-specific files
+    4. Local files
 
-  ```cpp
-  #include <stdio.h>
-  #include <string.h>
-  #include <appSpecific.h>
-  #include “localFiles.h”
-  ```
+    ```cpp
+    #include <stdio.h>
+    #include <string.h>
+    #include <appSpecific.h>
+    #include “localFiles.h”
+    ```
  
 15. Header files are included in the following order in a __Source File__
-  1. System files
-  2. Library files
-  3. Application-specific files
-  4. Local files
-  5. Header file for the class
+    1. System files
+    2. Library files
+    3. Application-specific files
+    4. Local files
+    5. Header file for the class
 
 ## References:
 - http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
