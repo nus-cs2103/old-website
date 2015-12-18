@@ -181,7 +181,7 @@ function loadContent(week) {
 
         },
         success: function(data) {
-            var components = ['things-to-do', 'homework', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
+            var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
             $('#content-week' + week).html(data);
             makeAccordion('.content-week' + week);
             for (var i in components) {
@@ -237,7 +237,7 @@ $(document).ready(function() {
     $(document).on('change', '.preferences', function() {
         var type = $(this).prop('value');
         if (type === 'all') {
-            var components = ['things-to-do', 'homework', 'tutorial', 'lecture', 'deadline', 'ilo'];
+            var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline', 'ilo'];
             if ($(this).prop('checked')) {
                 for (var i in components) {
                     var component = components[i];
