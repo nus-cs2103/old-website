@@ -16,6 +16,8 @@ If you would like to contribute code, here is the procedure:
 2. Make sure what you want to contribute is already listed as an open issue in our issue tracker. 
    If it is not, post it as an issue first and wait for it to get accepted (an issue is considered 
    'accepted' when it is assigned a `priority.*` label).
+2. You may choose an issue labeled `forFirstTimers` as your first issue, if there are any. 
+   But do not do more than one `forFirstTimers` issues.
 3. Clone your fork onto your Computer.
 4. Create a branch. The branch name should be in the format `issue-number-some-key-words`
    i.e. issue number followed by 2-4 key words related to the issue description
