@@ -7,7 +7,7 @@ function fetchSearchData(callback) {
   });
 }
 
-function buildKeywordTree(data) {
+function buildCategoryTree(data) {
   var adjacencyList = {};
   var parent;
   for (i in data) {
@@ -17,13 +17,22 @@ function buildKeywordTree(data) {
     }
     adjacencyList[parent].push(data[i]);
   }
-
-  console.log(adjacencyList);
+  return adjacencyList;
 }
 
 function constructSearch() {
   fetchSearchData(function(data) {
-    buildKeywordTree(data);
+    var categoryTree = buildCategoryTree(data);
+
+    // First level categories
+    var mainCategories = categoryTree[""];
+    var length = mainCategories.length;
+    var firstColumnLength = Math.trunc(length/2);
+    var secondColumnLength = length - firstColumnLength;
+
+    var firstColumnCategories = mainCategories.slice(0, firstColumnLength);
+    var secondColumnCategories = mainCategories.slice(firstColumnLength, length);
+    
   });
 }
 
