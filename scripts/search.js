@@ -9,7 +9,7 @@ function fetchSearchData(callback) {
 
 function buildCategoryTree(data) {
   var adjacencyList = {};
-  var parent;
+  var parent, i;
   for (i in data) {
     parent = data[i].parent;
     if (adjacencyList[parent] == null) {
@@ -18,6 +18,24 @@ function buildCategoryTree(data) {
     adjacencyList[parent].push(data[i]);
   }
   return adjacencyList;
+}
+
+function addMainCategories(selector, category) {
+  selector.append("<h2>" + category.text + "</h2>");
+}
+
+function displaySubcategory(selector, categoryTree, category) {
+  
+}
+
+function displayCategories(selector, categoryTree, categories) {
+  var i;
+  for (i in categories) {
+    addMainCategories(selector, categories[i]);
+    var subcategoriesSelector = $("<ul></ul>");
+    selector.append(subcategoriesSelector);
+    displaySubcategory(subcategoriesSelector, categoryTree, categories[i]);
+  }
 }
 
 function constructSearch() {
@@ -32,6 +50,9 @@ function constructSearch() {
 
     var firstColumnCategories = mainCategories.slice(0, firstColumnLength);
     var secondColumnCategories = mainCategories.slice(firstColumnLength, length);
+
+    displayCategories($(".keyword-group-column:eq(0)"), categoryTree, firstColumnCategories);
+    displayCategories($(".keyword-group-column:eq(1)"), categoryTree, secondColumnCategories);
     
   });
 }
