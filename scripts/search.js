@@ -20,21 +20,35 @@ function buildCategoryTree(data) {
   return adjacencyList;
 }
 
-function addMainCategories(selector, category) {
+function addCategory(selector, category) {
+  selector.append("<li>" + category.text + "</li>");
+}
+
+function addMainCategory(selector, category) {
   selector.append("<h2>" + category.text + "</h2>");
 }
 
-function displaySubcategory(selector, categoryTree, category) {
-  
+function displayCategory(parentSelector, categoryTree, category) {
+  if (parentSelector.is("ul")) {
+    addCategory(parentSelector, category);
+  } else {
+    addMainCategory(parentSelector, category);
+  }
+
+  var selector = $("<ul></ul>");
+  parentSelector.append(selector);
+
+  var i;
+  var categories = categoryTree[category.slug];
+  for (i in categories) {
+    displayCategory(selector, categoryTree, categories[i]);
+  }
 }
 
 function displayCategories(selector, categoryTree, categories) {
   var i;
   for (i in categories) {
-    addMainCategories(selector, categories[i]);
-    var subcategoriesSelector = $("<ul></ul>");
-    selector.append(subcategoriesSelector);
-    displaySubcategory(subcategoriesSelector, categoryTree, categories[i]);
+    displayCategory(selector, categoryTree, categories[i]);
   }
 }
 
