@@ -1,208 +1,237 @@
 [
   {
-    "text":"A",
-    "alias":[
-
-    ],
-    "slug":"a",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Requirements",
+    "slug":"requirements",
+    "parent":""
   },
   {
-    "text":"B",
-    "alias":[
-
-    ],
-    "slug":"b",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Design",
+    "slug":"design",
+    "parent":""
   },
   {
-    "text":"C",
-    "alias":[
-
-    ],
-    "slug":"c",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Implementation",
+    "slug":"implementation",
+    "parent":""
   },
   {
-    "text":"D",
-    "alias":[
-
-    ],
-    "slug":"d",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Testing",
+    "slug":"testing",
+    "parent":""
   },
   {
-    "text":"EE",
-    "alias":[
-
-    ],
-    "slug":"e",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Project Management",
+    "slug":"project-management",
+    "parent":""
   },
   {
-    "text":"FF",
-    "alias":[
-
-    ],
-    "slug":"f",
-    "parent":"",
-    "references":[
-
-    ]
+    "text":"Establishing requirements",
+    "slug":"establishing-requirements",
+    "parent":"requirements"
   },
   {
-    "text":"G-g",
-    "alias":[
-
-    ],
-    "slug":"g",
-    "parent":"a",
-    "references":[
-
-    ]
+    "text":"Specifying requirements",
+    "slug":"specifying-requirements",
+    "parent":"requirements"
   },
   {
-    "text":"H-h",
-    "alias":[
-
-    ],
-    "slug":"h",
-    "parent":"a",
-    "references":[
-
-    ]
+    "text":"Product design",
+    "slug":"product-design",
+    "parent":"requirements"
   },
   {
-    "text":"I+i",
-    "alias":[
-
-    ],
-    "slug":"i",
-    "parent":"a",
-    "references":[
-
-    ]
+    "text":"Software architecture",
+    "slug":"software-architecture",
+    "parent":"design"
   },
   {
-    "text":"Jj",
-    "alias":[
-
-    ],
-    "slug":"j",
-    "parent":"b",
-    "references":[
-
-    ]
+    "text":"Good component",
+    "slug":"good-component",
+    "parent":"design"
   },
   {
-    "text":"kK",
-    "alias":[
-
-    ],
-    "slug":"k",
-    "parent":"d",
-    "references":[
-
-    ]
+    "text":"Patterns",
+    "slug":"patterns",
+    "parent":"design"
   },
   {
-    "text":"llll",
-    "alias":[
-
-    ],
-    "slug":"l",
-    "parent":"d",
-    "references":[
-
-    ]
+    "text":"Modeling",
+    "slug":"modeling",
+    "parent":"design"
   },
   {
-    "text":"mm",
-    "alias":[
-
+    "text":"IDE",
+    "alias": [
+      "Integrated development environment"
     ],
-    "slug":"m",
-    "parent":"k",
-    "references":[
-
-    ]
+    "slug":"ide",
+    "parent":"implementation"
   },
   {
-    "text":"nnn",
-    "alias":[
-
-    ],
-    "slug":"n",
-    "parent":"k",
-    "references":[
-
-    ]
+    "text":"Code quality",
+    "slug":"code-quality",
+    "parent":"implementation"
   },
   {
-    "text":"oooo",
-    "alias":[
-
-    ],
-    "slug":"o",
-    "parent":"m",
-    "references":[
-
-    ]
+    "text":"Defensive programming",
+    "slug":"defensive-programming",
+    "parent":"implementation"
   },
   {
-    "text":"p",
-    "alias":[
-
-    ],
-    "slug":"p",
-    "parent":"n",
-    "references":[
-
-    ]
+    "text":"Reusability",
+    "slug":"reusability",
+    "parent":"implementation"
   },
   {
-    "text":"q",
-    "alias":[
-
-    ],
-    "slug":"q",
-    "parent":"n",
-    "references":[
-
-    ]
+    "text":"Regression testing",
+    "slug":"regression testing",
+    "parent":"testing"
   },
   {
-    "text":"r",
-    "alias":[
-
-    ],
-    "slug":"r",
-    "parent":"e",
-    "references":[
+    "text":"Developer testing",
+    "slug":"developer testing",
+    "parent":"testing"
+  },
+  {
+    "text":"Quality assurance",
+    "alias":"QA",
+    "slug":"quality-assurance",
+    "parent":"testing"
+  },
+  {
+    "text":"Testing heuristic",
+    "slug":"testing-heuristic",
+    "parent":"testing"
+  },
+  {
+    "text":"Revision Control",
+    "slug":"revision-control",
+    "parent":"project-management"
+  },
+  {
+    "text":"Integration",
+    "slug":"integration",
+    "parent":"project-management"
+  },
+  {
+    "text":"Documentation",
+    "slug":"documentation",
+    "parent":"project-management"
+  },
+  {
+    "text":"Principles",
+    "slug":"principles",
+    "parent":"project-management"
+  },
+  {
+    "text":"Software Process Model",
+    "slug":"software-process-model",
+    "parent":"project-management"
+  },
+  {
+    "text":"Abstraction occurance",
+    "slug":"abstraction-occurance",
+    "parent":"patterns",
+    "references": [
       {
-        "text":"Budi",
-        "type":"info",
-        "hyperlink":"http://google.com"
+        "text": "Activity",
+        "hyperlink": "#",
+        "type": "info"
       },
       {
-        "text":"Budi2",
-        "type":"warning",
-        "hyperlink":"http://google.com"
+        "text": "Resource",
+        "hyperlink": "#",
+        "type": "warning"
+      }
+    ]
+  },
+  {
+    "text":"Command",
+    "slug":"command",
+    "parent":"patterns",
+    "references": [
+      {
+        "text": "Activity",
+        "hyperlink": "#",
+        "type": "info"
+      },
+      {
+        "text": "Resource",
+        "hyperlink": "#",
+        "type": "warning"
+      }
+    ]
+  },
+  {
+    "text":"Observer",
+    "slug":"observer",
+    "parent":"patterns",
+    "references": [
+      {
+        "text": "Handbook",
+        "hyperlink": "#",
+        "type": "success"
+      },
+      {
+        "text": "Activity",
+        "hyperlink": "#",
+        "type": "info"
+      },
+      {
+        "text": "Resource",
+        "hyperlink": "#",
+        "type": "warning"
+      }
+    ]
+  },
+  {
+    "text":"Activity Diagram",
+    "slug":"activity-diagram",
+    "parent":"modeling",
+    "references": [
+      {
+        "text": "Definition",
+        "hyperlink": "#",
+        "type": "default"
+      },
+      {
+        "text": "Resource",
+        "hyperlink": "#",
+        "type": "warning"
+      }
+    ]
+  },
+  {
+    "text":"State Machine Diagram",
+    "slug":"state-machine-diagram",
+    "parent":"modeling",
+    "references": [
+      {
+        "text": "Definition",
+        "hyperlink": "#",
+        "type": "default"
+      },
+      {
+        "text": "Example",
+        "hyperlink": "#",
+        "type": "primary"
+      }
+    ]
+  },
+  {
+    "text":"Package Diagram",
+    "slug":"package-diagram",
+    "parent":"modeling",
+    "references": [
+      {
+        "text": "Handbook",
+        "hyperlink": "#",
+        "type": "success"
+      },
+      {
+        "text": "Example",
+        "hyperlink": "#",
+        "type": "primary"
       }
     ]
   }
