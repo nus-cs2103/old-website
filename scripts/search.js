@@ -75,8 +75,10 @@ function addMainCategory(parentSelector, category) {
 }
 
 function displayCategory(parentSelector, categoryTree, category) {
+  // not a main category if parent is unordered list
   if (parentSelector.is("ul")) {
-    if (categoryTree[category.slug] == null) {
+    // keyword if references not empty
+    if (category.references != null) {
       addKeyword(parentSelector, category);
     } else {
       addCategory(parentSelector, category);
@@ -94,6 +96,10 @@ function displayCategory(parentSelector, categoryTree, category) {
   for (i in categories) {
     displayCategory(selector, categoryTree, categories[i]);
   }
+
+  if (parentSelector.is("ul")) {
+    selector.children().first().addClass('first-category');
+  }
 }
 
 function displayCategories(selector, categoryTree, categories) {
@@ -103,6 +109,30 @@ function displayCategories(selector, categoryTree, categories) {
   }
 }
 
+function addCategoryExpandAndCollapseEventListener() {
+  $(".category").on('click', function() {
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).next().toggle('blind');
+  });
+}
+
+function expandAll() {
+  $(".category").each(function() {
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).next().show();
+  });
+}
+
+function collapseAll() {
+  $(".category").each(function() {
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
+    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).next().hide();
+  });
+}
+
 function constructSearch() {
   fetchSearchData(function(data) {
     var categoryTree = buildCategoryTree(data);
@@ -110,7 +140,7 @@ function constructSearch() {
     // First level categories
     var mainCategories = categoryTree[""];
     var length = mainCategories.length;
-    var firstColumnLength = Math.trunc(length/2);
+    var firstColumnLength = Math.trunc((length+1)/2);
     var secondColumnLength = length - firstColumnLength;
 
     var firstColumnCategories = mainCategories.slice(0, firstColumnLength);
@@ -119,6 +149,8 @@ function constructSearch() {
     displayCategories($(".keyword-group-column:eq(0)"), categoryTree, firstColumnCategories);
     displayCategories($(".keyword-group-column:eq(1)"), categoryTree, secondColumnCategories);
     
+    addCategoryExpandAndCollapseEventListener();
+    collapseAll();
   });
 }
 
