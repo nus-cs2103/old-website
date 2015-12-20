@@ -399,6 +399,20 @@ table.bordered tr > th {
     display: block;
 }
 
+.keyword {
+    clear:both;
+    display:block;
+    padding-left:15px;
+    margin-bottom:5px;
+    margin-top:5px;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+
+.keyword:hover {
+    background:#EEEEEE;
+}
+
 .category-list {
     margin-bottom: 0;
     padding-left: 0;
@@ -407,4 +421,13 @@ table.bordered tr > th {
     margin-top: 0;
     margin-left:15px;
     box-sizing: border-box;
+}
+
+.glyphicon-none:before {
+    content: "\e094";
+    color: transparent !important;
+}
+
+.category-list a:hover {
+    text-decoration: none;
 }

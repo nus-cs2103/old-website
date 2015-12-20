@@ -48,7 +48,7 @@
     "alias":[
 
     ],
-    "slug":"ee",
+    "slug":"e",
     "parent":"",
     "references":[
 
@@ -151,6 +151,59 @@
     "parent":"k",
     "references":[
 
+    ]
+  },
+  {
+    "text":"oooo",
+    "alias":[
+
+    ],
+    "slug":"o",
+    "parent":"m",
+    "references":[
+
+    ]
+  },
+  {
+    "text":"p",
+    "alias":[
+
+    ],
+    "slug":"p",
+    "parent":"n",
+    "references":[
+
+    ]
+  },
+  {
+    "text":"q",
+    "alias":[
+
+    ],
+    "slug":"q",
+    "parent":"n",
+    "references":[
+
+    ]
+  },
+  {
+    "text":"r",
+    "alias":[
+
+    ],
+    "slug":"r",
+    "parent":"e",
+    "references":[
+      {
+        "text":"Budi",
+        "type":"info",
+        "hyperlink":"http://google.com"
+      },
+      {
+        "text":"Budi2",
+        "type":"warning",
+        "hyperlink":"http://google.com"
+      }
     ]
   }
 ]

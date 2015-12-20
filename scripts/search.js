@@ -20,6 +20,35 @@ function buildCategoryTree(data) {
   return adjacencyList;
 }
 
+function addKeyword(parentSelector, keyword) {
+  var listSelector = $('<li></li>');
+  var selector = $('<div class="keyword"></div>');
+  var titleSelector = $('<a href="#"></a>');
+  var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
+  var textSelector = $(document.createTextNode(' ' + keyword.text));
+  var emptySelector = $('<span class="glyphicon glyphicon-none" aria-hidden="true"></span>');
+
+  titleSelector.append(paperclipSelector);
+  titleSelector.append(textSelector);
+  titleSelector.append('<br/>');
+  titleSelector.append(emptySelector);
+
+  selector.append(titleSelector);
+
+  referenceList = keyword.references;
+  var i, reference;
+  for(i in referenceList) {
+    reference = referenceList[i];
+    selector.append('<a href="' + reference.hyperlink + 
+                    '" class="reference"><span class="label label-' + reference.type + '"> ' + 
+                    reference.text + ' </span></a> &nbsp');
+  }
+
+  listSelector.append(selector);
+
+  parentSelector.append(listSelector);
+}
+
 function addCategory(parentSelector, category) {
   var listSelector = $('<li class="category category-expanded"></li>');
   var selector = $('<a href="#"></a>');
@@ -47,7 +76,11 @@ function addMainCategory(parentSelector, category) {
 
 function displayCategory(parentSelector, categoryTree, category) {
   if (parentSelector.is("ul")) {
-    addCategory(parentSelector, category);
+    if (categoryTree[category.slug] == null) {
+      addKeyword(parentSelector, category);
+    } else {
+      addCategory(parentSelector, category);
+    }
   } else {
     addMainCategory(parentSelector, category);
   }
