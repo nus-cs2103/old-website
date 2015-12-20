@@ -25,6 +25,7 @@
           <li><a href="#white-space">White Space</a>
           <li><a href="#comments">Comments</a>
         </ul>
+		<li><a href="#references">References</a>
         </ul>
     </td>
     <td width="20%">
