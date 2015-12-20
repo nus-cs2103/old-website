@@ -8,6 +8,7 @@
 * [**Benjamin Heng**](https://github.com/benjaminheng) - Added asynchronous loading and minor Javascript tweaks. [2015]
 * [**Tan Chun Hui**](https://github.com/crispyfridge) - Added css to center page content [2015]
 * [**Raghav Ramesh**](https://github.com/RaghavRamesh) - Identified an easy way to adjust accordion animation. [2015]
+* [**Chan Jun Wei**](https://github.com/chanjunweimy) - Wrote the initial version of week 3 of the Schedule page. [2015]
 * [**Ng Hui Xian Lynnette**](https://github.com/quarbby) - Wrote the initial version of week 5 and fixed links in Week 4 of the Schedule page. [2015]
 * [**Sam Yong**](https://github.com/mauris) - Wrote the initial version of Week 12 of the Schedule page. [2015]
 
