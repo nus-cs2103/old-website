@@ -371,3 +371,21 @@ table.bordered tr > th {
 .italic {
     font-style:italic
 }
+
+/*
+    search
+*/
+
+.main-category {
+    border-bottom:1px solid #ccd8e2;
+    clear:both;
+    display:block;
+    font-weight:bold;
+    font-size:15px;
+    color:#697277;
+    padding-left:25px;
+    padding-bottom:1px;
+    line-height:26px;
+    margin-bottom:5px;
+    margin-top:5px;
+}

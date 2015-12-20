@@ -24,8 +24,16 @@ function addCategory(selector, category) {
   selector.append("<li>" + category.text + "</li>");
 }
 
-function addMainCategory(selector, category) {
-  selector.append("<h2>" + category.text + "</h2>");
+function addMainCategory(parentSelector, category) {
+  var selector = $('<h2></h2>');
+  var starSelector = $('<span class="glyphicon glyphicon-star" aria-hidden="true"></span>');
+  var textSelector = $(document.createTextNode(' ' + category.text));
+  
+  selector.append(starSelector);
+  selector.append(textSelector);
+  selector.addClass('main-category');
+
+  parentSelector.append(selector);
 }
 
 function displayCategory(parentSelector, categoryTree, category) {
