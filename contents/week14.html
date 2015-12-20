@@ -29,9 +29,10 @@
 </div>
 
 <script>
-  loadcss = document.createElement('link');
-  loadcss.type = 'text/css';
-  loadcss.rel = 'stylesheet';
-  loadcss.href = '../styles/comon.css';
-  document.getElementById('head')[0].append(loadcss);
+  var head = document.getElementsByTagName("head")[0];         
+  var loadCss = document.createElement('link');
+  loadCss.type = 'text/css';
+  loadCss.rel = 'stylesheet';
+  loadCss.href = '../styles/common.css';
+  head.appendChild(loadCss);
 </script>
