@@ -13,6 +13,7 @@
 * [**Lynnette Ng**](https://github.com/quarbby) - Wrote the initial version of week 5 and fixed links in Week 4 of the Schedule page. [2015]
 * [**Ryan Chang**](https://github.com/rcyq) - Wrote the initial version of Week 6 of the Schedule page. [2015]
 * [**Fazli Sapuan**](https://github.com/fuzzie360) - Wrote the initial version of Week 7 of the Schedule page. [2015]
+* [**Karan Kamath**](https://github.com/KaranKamath) - Wrote the initial version of Week 8 of the Schedule page. [2015]
 * [**Sebastian Quek**](https://github.com/sebastianquek) - Wrote the initial version of Week 10 of the Schedule page. [2015]
 * [**Ian Ngiaw**](https://github.com/ianngiaw) - Wrote the initial version of Week 11 of the Schedule page. [2015]
 * [**Sam Yong**](https://github.com/mauris) - Wrote the initial version of Week 12 of the Schedule page. [2015]
