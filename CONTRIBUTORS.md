@@ -11,6 +11,7 @@
 * [**Chan Jun Wei**](https://github.com/chanjunweimy) - Wrote the initial version of week 3 of the Schedule page. [2015]
 * [**Tong Chun Kit**](https://github.com/tongchunkit) - Wrote the initial version of week 4 of the Schedule page. [2015]
 * [**Ng Hui Xian Lynnette**](https://github.com/quarbby) - Wrote the initial version of week 5 and fixed links in Week 4 of the Schedule page. [2015]
+* [**Ian Ngiaw**](https://github.com/ianngiaw) - Wrote the initial version of Week 11 of the Schedule page. [2015]
 * [**Sam Yong**](https://github.com/mauris) - Wrote the initial version of Week 12 of the Schedule page. [2015]
 
 `//more to be added`
