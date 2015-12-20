@@ -1,6 +1,6 @@
 # Contributions
 
-## 2015
+### 2015
 
 * [**Wilson Kurniawan**](https://github.com/wkurniawan07) - Wrote the [initial version of this website](https://github.com/wkurniawan07/website)
 * [**Xianyan Jia**](https://github.com/SeaOfOcean) - Helped to convert the Handbook page
