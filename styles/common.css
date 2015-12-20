@@ -389,3 +389,22 @@ table.bordered tr > th {
     margin-bottom:5px;
     margin-top:5px;
 }
+
+.category {
+    border-right: none !important;
+    border-left: none !important;
+    list-style: none;
+    list-style-image: none;
+    position: relative;
+    display: block;
+}
+
+.category-list {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    list-style-type: none;
+    margin-top: 0;
+    margin-left:15px;
+    box-sizing: border-box;
+}

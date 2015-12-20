@@ -20,8 +20,17 @@ function buildCategoryTree(data) {
   return adjacencyList;
 }
 
-function addCategory(selector, category) {
-  selector.append("<li>" + category.text + "</li>");
+function addCategory(parentSelector, category) {
+  var listSelector = $('<li class="category category-expanded"></li>');
+  var selector = $('<a href="#"></a>');
+  var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
+  var textSelector = $(document.createTextNode(' ' + category.text));
+
+  selector.append(expandedSelector);
+  selector.append(textSelector);
+
+  listSelector.append(selector);
+  parentSelector.append(listSelector);
 }
 
 function addMainCategory(parentSelector, category) {
@@ -44,6 +53,7 @@ function displayCategory(parentSelector, categoryTree, category) {
   }
 
   var selector = $("<ul></ul>");
+  selector.addClass('category-list nav');
   parentSelector.append(selector);
 
   var i;
