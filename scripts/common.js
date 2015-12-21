@@ -6,19 +6,6 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function makeWeeklyScheduleAccordion(elementSelector) {
-    makeAccordion(elementSelector);
-    $(elementSelector).accordion({
-        activate: function(event, ui) {
-            if(checkIfContentIsExpanded()) {
-                $('#content').css('height', calculateContentContainerSize());
-            } else {
-                $('#content').css('height', 'auto');
-            }
-        }
-    });
-}
-
 function getContentUsingAjax(section, elementSelector) {
     pullContent(section, elementSelector, 'Exract from handbook');
 }
@@ -186,19 +173,6 @@ function checkIfAllComponentsChecked() {
     return isAllChecked;
 }
 
-function checkIfContentIsExpanded() {
-    var isAccordionExpanded = false;
-    $('.weeklyschedule').each(function(i) {         
-        function isCurrentAccordionActive(currentAccordion) {
-            return !(typeof currentAccordion.accordion( "option", "active" ) == "boolean");
-        }
-        if (isCurrentAccordionActive($(this))) {
-            isAccordionExpanded = true;
-        }
-    });
-    return isAccordionExpanded;
-}
-
 function loadContent(week) {
     $.ajax({
         type: 'GET',
@@ -225,17 +199,9 @@ function loadContent(week) {
     });
 }
 
-function calculateContentContainerSize() {
-    var bannerHeight = 25;
-    var headerHeight = 40;
-    var topMargin = 5;
-    var topPadding = 5;
-    return $(window).height() - headerHeight - bannerHeight - topMargin - topPadding;
-}
-
 $(document).ready(function() {
 
-    makeWeeklyScheduleAccordion('.weeklyschedule');
+    makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
         var week = id.substr(('header-content-week').length);
@@ -249,14 +215,14 @@ $(document).ready(function() {
     $('#form-preferences').css('padding-top', topPadding);
     $('#content').css('margin-top', topMargin);
 
-    $('#content').css('height', 'auto');
+    function calculateContainerSize() {
+        return $(window).height() - headerHeight - bannerHeight - topMargin - topPadding;
+    }
+
+    $('#content').css('height', calculateContainerSize());
 
     $(window).resize(function() {
-        if(checkIfContentIsExpanded()) {
-            $('#content').css('height', calculateContentContainerSize());
-        } else {
-            $('#content').css('height', 'auto');
-        }
+        $('#content').css('height', calculateContainerSize());
     });
 
     for (var week = 0; week <= 14; week++) {
