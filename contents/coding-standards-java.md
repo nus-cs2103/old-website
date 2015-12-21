@@ -419,10 +419,24 @@ Methods
 
 The `<access>` modifier (if present) must be the first modifier.
 
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 public static double square(double a);  
-// NOT: static public double square(double a);
-```
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+static public double square(double a);
+      </pre>
+    </td>
+  </tr>
+</table>
 
 ```java
 <access> = public | protected | private 
@@ -435,9 +449,24 @@ The most important lesson here is to keep the *access* modifier as the first mod
 
 **6. Array specifiers must be attached to the type not the variable.**
 
-```java
-int[] a = new int[20];   // NOT: int a[] = new int[20]
-```
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+int[] a = new int[20];
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+int a[] = new int[20]
+      </pre>
+    </td>
+  </tr>
+</table>
 
 The *arrayness* is a feature of the base type, not the variable. Sun allows both forms however.
 
@@ -445,23 +474,35 @@ The *arrayness* is a feature of the base type, not the variable. Sun allows both
 
 **7. Variables should be initialized where they are declared and they should be declared in the smallest scope possible.**
 
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 int sum = 0;                  
 for (int i = 0; i < 10; i++) {          
     for (int j = 0; j < 10; j++) {      
         sum += i * j;
     }
 }
-
-//NOT the following way
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
 int i, j, sum;
 sum = 0;
 for (i = 0; i < 10; i++) {
     for (j = 0; j < 10; j++) {
         sum += i * j;
     }
-}    
-```
+} 
+      </pre>
+    </td>
+  </tr>
+</table>
 
 This ensures that variables are valid at any time. Sometimes it is impossible to initialize a variable to a valid value where it is declared. In these cases it should be left uninitialized rather than initialized to some phony value.
 
@@ -473,16 +514,28 @@ The concept of Java information hiding and encapsulation is violated by public v
 
 **9. The loop body should be wrapped by curly brackets irrespective of how many lines there are in the body**
 
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 sum = 0;          
 for (i = 0; i < 100; i++) {                
     sum += value[i];
 }
-
-// NOT:
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
 for (i = 0, sum = 0; i < 100; i++)
     sum += value[i];
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
 When there is only one statement in the loop body it can be written without wrapping it between `{ }`, however that is error prone and *very* strongly discouraged from using.
 
@@ -490,11 +543,26 @@ When there is only one statement in the loop body it can be written without wrap
 
 **10. The conditional should be put on a separate line.**
 
-```java
-if (isDone) {       // NOT: if (isDone) doCleanup();
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+if (isDone) {
     doCleanup();
 }
-```
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+if (isDone) doCleanup();
+      </pre>
+    </td>
+  </tr>
+</table>
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
 
