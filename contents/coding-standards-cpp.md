@@ -10,9 +10,7 @@
             <li><a href="#references">References</a>
         </td>
         <td>
-            <a style='text-decoration: none;'>
-            <img src='https://lh3.googleusercontent.com/ptmL-lnkZidSpuMFYN0TyfEShMk3o4T9QA1BdYoHWZ9v7qF-jVA6NTWJsYWzKXWsSvFf7VYAaPwFZNtRI9X8Y1YEJ64dSbB7CdmDM81Hfkh1dJhXFkQ7lJleIQRgpJI1' style='width: 140px'>
-            <div style='width: 130px; text-align: center;'>Dennis Ritchie, Creator of C</a>
+            <img src='./dennis-ritchie.png'>Dennis Ritchie, Creator of C
         </td>
     </tr>
 </table>
@@ -21,7 +19,7 @@
 - Use meaningful names.
 - Use single-character variables only for counters (i, j) or for coordinates (x,y,z).
 
-<table cellspacing="0" cellpadding="0">
+<table>
     <tr>
         <th>Identifier</th>
         <th>Casing</th>
@@ -71,7 +69,7 @@ struct FORM_STREAM_HEADER</pre></td>
 #define BEGIN_MACRO_TABLE(name) ...
 #define MACRO_TABLE_ENTRY(a, b, c) ...
 #define END_MACRO_TABLE() ...
-constint BLACK = 3;</pre></td>
+const int BLACK = 3;</pre></td>
     </tr>
     <tr>
         <td align="center"><b>Parameter, Variable</b></td>
@@ -91,11 +89,11 @@ constint BLACK = 3;</pre></td>
 e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 ## Indentation Rules
-1. Avoid __lines longer than 80__ characters including preceding spaces and __functions longer than than 100 lines__ of code. [Hint: try [this plugin](https://www.google.com/url?q=http://visualstudiogallery.msdn.microsoft.com/0fbf2878-e678-4577-9fdb-9030389b338c/&sa=D&usg=AFQjCNG9m6paUexPqIQqQ0kbhkeBhwxNoA)]
+1. Avoid __lines longer than 80__ characters including preceding spaces and __functions longer than than 100 lines__ of code. [Hint: try [this plugin](https://visualstudiogallery.msdn.microsoft.com/0fbf2878-e678-4577-9fdb-9030389b338c/)]
 
 2. Default __indentation__ is one tab. One space is added before and after each operator or assignment symbol.
 
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -118,7 +116,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 3. Use __blank lines__ to separate groups of related statements.  Omit extra blank lines that do not make the code easier to read.
 
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -168,7 +166,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 3. Put the __opening braces in the same line__, not in a new line.
 
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -299,11 +297,11 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     bool isTableFull();
     ```
 
-    > Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](https://www.google.com/url?q=http://www.stack.nl/~dimitri/doxygen/&sa=D&usg=AFQjCNG8GqcHJMXJpA5H1ggz5r7Q4OISgw). The comment standard used is similar to Javadoc.
+    > Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](http://www.stack.nl/~dimitri/doxygen/). The comment standard used is similar to Javadoc.
 
 ## Look & Feel
 1. Do not declare __multiple variables__ in a single line. Initialize variables whenever possible.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -337,7 +335,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     ```
 
 3. When creating a series of methods that accept the same parameters, do use a __consistent order__ across the functions.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -355,7 +353,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     </table>
 
 4. The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -374,7 +372,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     </table>
 
 5. Do not put more than one statement on a single line.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -396,7 +394,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 ## Miscellaneous
 1. __Use an `enum`__ over `static` constants or `#define` values, for the sake of readability.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -423,7 +421,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 2. Do not reference __unnecessary libraries__, include unnecessary header files, or reference unnecessary assemblies.
 
 3. Use named constants as `const` values, instead of `#define` values. This forces the compiler to do type checking, and also add the variable into symbol table for easy debugging.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -439,7 +437,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     </table>
 
 4. Use `sizeof(var)` instead of `sizeof(TYPE)`
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -457,7 +455,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     </table>
  
 5. Do __not declare `public` data members__.  Use __`inline` accessor__ functions for performance.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -477,7 +475,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     </table>
 
 6. Initialize member variables in the same order that they were defined in the class declaration
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
@@ -525,7 +523,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 10. Do ensure that all __allocated memory is freed__ using the same mechanisms. Objects allocated using ‘new’ should be freed with ‘delete’.
  
 11. Do throw exceptions __by value__ and catch exceptions __by reference__.
-    <table cellspacing="0" cellpadding="0">
+    <table>
         <tr>
             <th align="center">Good</th>
             <th align="center">Bad</th>
