@@ -154,6 +154,8 @@ function createSearchIndex(data) {
     this.ref('slug');
   });
 
+  index.pipeline.remove(index.stemmer)
+
   for (var i in data) {
     keywords = '';
     if (data[i].alias != null) {
