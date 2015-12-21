@@ -376,11 +376,26 @@ The import statement location is enforced by the Java language. The sorting make
 
 **3. Imported classes should always be listed explicitly.**
 
-```java
-import java.util.List;      // NOT: import java.util.*;
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+import java.util.List;
 import java.util.ArrayList;
 import java.util.HashSet;
-```
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+import java.util.*;
+      </pre>
+    </td>
+  </tr>
+</table>
 
 Importing classes explicitly gives an excellent documentation value for the class at hand and makes the class easier to comprehend and maintain. Appropriate tools should be used in order to always keep the import list minimal and up to date. For example, Eclipse IDE can do this easily.
 
