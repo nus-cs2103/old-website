@@ -898,12 +898,30 @@ Javadoc of class members can be specified on a single line as follows:
 
 **15. Comments should be indented relative to their position in the code.**
 
-```java
-while (true) {              // NOT:  while (true) {
-    // Do something             // Do something
-    something();                something();
-}                           }
-```
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+while (true) {
+    // Do something
+    something();
+} 
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+while (true) {
+    // Do something
+       something();
+}
+      </pre>
+    </td>
+  </tr>
+</table>
 
 This is to avoid the comments from breaking the logical structure of the program.
 
