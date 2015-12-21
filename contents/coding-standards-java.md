@@ -31,7 +31,7 @@
     <td width="20%">
       <img src='../images/ada_lovelace.png' style='width: 140px'>
       <br>
-      <a href="http://en.wikipedia.org/wiki/Ada_Lovelace&sa=D&usg=AFQjCNHDAlAncZBC-bSxfit5yVEhNlT2AA">Ada Lovlace, the first computer programmer</a>
+      <a href="http://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovlace, the first computer programmer</a>
     </td>
   </tr>
 </table>
