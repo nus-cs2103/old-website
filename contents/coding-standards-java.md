@@ -615,24 +615,33 @@ Place the line breaks to improve readability. It is ok to exceed 110 char limit 
 
 **2. Block layout should be as illustrated in _example 1_ below, and must not be as shown in _example 2_.**
 
-###### **Example 1**
-```java
-//This way
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 while (!done) {
     doSomething();
     done = moreToDo();
 }
-```
-###### **Example 2**
-```java
-//NOT this way
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
 while (!done)
     {
         doSomething();
         done = moreToDo();
     }
-```
-Example 2 introduces an extra indentation level which doesn't emphasize the logical structure of the code as clearly as example 1.
+      </pre>
+    </td>
+  </tr>
+</table>
+
+The Bad example introduces an extra indentation level which doesn't emphasize the logical structure of the code as clearly as the Good example.
 
 **3. Method definitions should have the following form:**
 
