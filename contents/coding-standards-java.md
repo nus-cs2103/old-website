@@ -258,24 +258,30 @@ method(param1,
 
 - A method or constructor name stays attached to the open parenthesis `(` that follows it.
 
+**GOOD:**
 ```java
-// CORRECT
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
         int anArg, Object anotherArg);
-       
-// INCORRECT
+```
+
+**BAD:**
+```java
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
         (int anArg, Object anotherArg);
 ```
 
 - Prefer higher-level breaks to lower-level breaks. In the example below, the first is preferred, since the break occurs outside the parenthesized expression, which is at a higher level.
 
+**GOOD:**
 ```java
 // PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
             + 4 * longname6;
             +
+```
 
+**BAD:**
+```java
 // OVER THIS
 longName1 = longName2 * (longName3 + longName4
             - longName5) + 4 * longname6;
@@ -283,8 +289,16 @@ longName1 = longName2 * (longName3 + longName4
 
 - Single-column stacking of parameters or exceptions is discouraged in most cases, unless the column is wide enough. While such stacking improves the list of parameters/exceptions, it may not outweigh the cost of increased height of the code.
 
+**GOOD:**
 ```java
-//DISCOURAGED
+//BECAUSE THE COLUMN IS WIDE
+longMethod(someLongMenthod1(param1, param2, param3).anotherMethod(),
+           someLongMenthod2(param1, param2).anotherMethod(),
+           someLongMenthod3(param1, param2, param3));
+```
+
+**BAD:**
+```java
 method(param1,
        param2,
        param3,
@@ -292,12 +306,8 @@ method(param1,
 void method(param1,param2)throws Exception1,
                                  Exception2,
                                  Exception3 {
-                                 
-//OK TO DO THIS BECAUSE THE COLUMN IS WIDE
-longMethod(someLongMenthod1(param1, param2, param3).anotherMethod(),
-           someLongMenthod2(param1, param2).anotherMethod(),
-           someLongMenthod3(param1, param2, param3));
 ```
+
 
 - Here are three acceptable ways to format ternary expressions:
 
@@ -312,15 +322,8 @@ alpha = (aLongBooleanExpression)
 
 - If the above rules lead to confusing code or to code that’s squished up against the right margin, just indent 8 spaces instead.
 
+**GOOD:**
 ```java
-//CONVENTIONAL INDENTATION (code getting squished up against the right)
-void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg, 
-                                                   Object anotherArg, 
-                                                   String yetAnotherArg,
-                                                   Object andStillAnother) {
-    ...
-}
-
 //INDENT 8 SPACES TO AVOID VERY DEEP INDENTS
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
         String yetAnotherArg, Object andStillAnother) {
@@ -333,6 +336,18 @@ private static synchronized horkingLongMethodName(int arg, Object anotherArg,
     ...
 }
 ```
+
+**BAD:**
+```java
+//CONVENTIONAL INDENTATION (code getting squished up against the right)
+void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg, 
+                                                   Object anotherArg, 
+                                                   String yetAnotherArg,
+                                                   Object andStillAnother) {
+    ...
+}
+```
+
 ## **Statements**
 
 ### **Package and Import Statements**
