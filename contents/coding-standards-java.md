@@ -191,9 +191,9 @@ The notation is taken from mathematics where it is an established convention for
 **13. Associated constants (final variables) should be prefixed by a common type name.**
 
 ```java
-final int COLOR_RED		= 1;
-final int COLOR_GREEN	= 2;
-final int COLOR_BLUE	= 3;
+final int COLOR_RED   = 1;
+final int COLOR_GREEN = 2;
+final int COLOR_BLUE  = 3;
 ```
 
 This indicates that the constants belong together, and what concept the constants represents.
