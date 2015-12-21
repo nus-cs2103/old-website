@@ -613,7 +613,7 @@ Indentation is used to emphasize the logical structure of the code. Use 4 spaces
 
 Place the line breaks to improve readability. It is ok to exceed 110 char limit for a line, but not by too much. You can configure Eclipse to break lines after 110 chars, but sometimes the automatic line break does not give readability. In such cases, you can decide where to put the line break to have best readability.
 
-**2. Block layout should be as illustrated in _example 1_ below, and must not be as shown in _example 2_.**
+**2. Block layout should be as illustrated as shown below.**
 
 <table>
   <tr>
