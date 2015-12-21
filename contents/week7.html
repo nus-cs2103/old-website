@@ -436,3 +436,12 @@
     </div>
   </div>
 </div>
+
+<script>
+  var head = document.getElementsByTagName("head")[0];         
+  var loadCss = document.createElement('link');
+  loadCss.type = 'text/css';
+  loadCss.rel = 'stylesheet';
+  loadCss.href = '../styles/common.css';
+  head.appendChild(loadCss);
+</script>
