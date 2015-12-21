@@ -18,6 +18,7 @@ pre.cliprint{
 	-ms-border-radius: 8px;
 	-khtml-border-radius: 8px;
 	border-radius: 8px;
+	padding: 1em;
 	color:#ffec00;
 }
 
