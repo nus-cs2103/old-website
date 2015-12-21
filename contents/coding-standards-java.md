@@ -29,9 +29,9 @@
         </ul>
     </td>
     <td width="20%">
-      <img src='https://lh3.googleusercontent.com/EcEMupVi6p4Cw7_D9nqH_kimUENEvgi412Ci56fNXFUplx_u1miw_L0QMPSN7KscNHmtyK74LCMT3NIVCUSW6qh_fiHcVyShNIZfXcdaTfrD7nWWXyzU3qzA5i1JD2usMy9pvpA' style='width: 140px'>
+      <img src='../images/ada_lovelace.png' style='width: 140px'>
       <br>
-      <a href="https://www.google.com/url?q=http://en.wikipedia.org/wiki/Ada_Lovelace&sa=D&usg=AFQjCNHDAlAncZBC-bSxfit5yVEhNlT2AA">Ada Lovlace, the first computer programmer</a>
+      <a href="http://en.wikipedia.org/wiki/Ada_Lovelace&sa=D&usg=AFQjCNHDAlAncZBC-bSxfit5yVEhNlT2AA">Ada Lovlace, the first computer programmer</a>
     </td>
   </tr>
 </table>
