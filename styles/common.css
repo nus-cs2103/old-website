@@ -376,6 +376,11 @@ table.bordered tr > th {
     search
 */
 
+.search-body {
+    max-width: initial;
+    width:100%;
+}
+
 .main-category {
     border-bottom:1px solid #ccd8e2;
     clear:both;
