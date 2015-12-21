@@ -428,10 +428,12 @@ The concept of Java information hiding and encapsulation is violated by public v
 ```java
 sum = 0;          
 for (i = 0; i < 100; i++) {                
-  sum += value[i];
+    sum += value[i];
 }
-// NOT: for (i = 0, sum = 0; i < 100; i++)
-            sum += value[i];
+
+// NOT:
+for (i = 0, sum = 0; i < 100; i++)
+    sum += value[i];
 ```
 
 When there is only one statement in the loop body it can be written without wrapping it between `{ }`, however that is error prone and *very* strongly discouraged from using.
