@@ -443,8 +443,9 @@ When there is only one statement in the loop body it can be written without wrap
 **10. The conditional should be put on a separate line.**
 
 ```java
-if (isDone)       // NOT: if (isDone) doCleanup();
+if (isDone) {       // NOT: if (isDone) doCleanup();
   doCleanup();
+}
 ```
 
 This is for debugging purposes. When writing on a single line, it is not apparent whether the test is really true or not.
