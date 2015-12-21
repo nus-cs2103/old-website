@@ -147,7 +147,7 @@ boolean canEvaluate();
 boolean shouldAbort = false;
 ```
 
-Note: avoid boolean variables that represent the negation of a thing. e.g., use `isInitialized` instead of `isNotInitialized`
+>Note: Avoid boolean variables that represent the negation of a thing. e.g., use `isInitialized` instead of `isNotInitialized`
 
 **11. Plural form should be used on names representing a collection of objects.**
 
