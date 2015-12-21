@@ -1,6 +1,4 @@
 
-
-
 function fetchSearchData(callback) {
   $.getJSON('../contents/search-data.json', function(data) {
     callback(data);
@@ -133,6 +131,27 @@ function collapseAll() {
   });
 }
 
+function createSearchIndex(data) {
+  var index = lunr(function () {
+    this.field('keywords');
+    this.ref('slug');
+  });
+
+  for (var i in data) {
+    keywords = '';
+    if (data[i].alias != null) {
+      keywords = data[i].alias.join(' ');
+    }
+    keywords += ' ' + data[i].text;
+
+    data[i].keywords = keywords;
+
+    index.add(data[i]);
+  }
+
+  return index;
+}
+
 function constructSearch() {
   fetchSearchData(function(data) {
     var categoryTree = buildCategoryTree(data);
@@ -151,10 +170,13 @@ function constructSearch() {
     
     addCategoryExpandAndCollapseEventListener();
     collapseAll();
+
+    return createSearchIndex(data);
   });
 }
 
 $(document).ready(function() {
 
-  constructSearch();
+  var index = constructSearch();
+
 });

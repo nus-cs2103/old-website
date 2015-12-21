@@ -94,7 +94,9 @@
   },
   {
     "text":"Quality assurance",
-    "alias":"QA",
+    "alias": [
+      "QA"
+    ],
     "slug":"quality-assurance",
     "parent":"testing"
   },
