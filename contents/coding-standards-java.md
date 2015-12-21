@@ -85,10 +85,26 @@ Underscores may be used in test method names if your test method names are long 
 
 **6. Abbreviations and acronyms should not be uppercase when used as name.**
 
-```java
-exportHtmlSource(); // NOT: exportHTMLSource();
-openDvdPlayer();    // NOT: openDVDPlayer();
-```
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+exportHtmlSource();
+openDvdPlayer();
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+exportHTMLSource();
+openDVDPlayer();
+      </pre>
+    </td>
+  </tr>
+</table>
 
 Using all uppercase for the base name will give conflicts with the naming conventions given above. A variable of this type would have to be named `dVD, hTML etc.` which obviously is not very readable. Another problem is illustrated in the examples above; When the name is connected to another, the readability is seriously reduced; The word following the acronym does not stand out as it should.
 
