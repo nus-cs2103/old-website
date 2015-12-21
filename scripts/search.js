@@ -18,8 +18,16 @@ function buildCategoryTree(data) {
   return adjacencyList;
 }
 
+function getParentList(data) {
+  var parentList = {};
+  for (i in data) {
+    parentList[data[i].slug] = data[i].parent;
+  }
+  return parentList;
+}
+
 function addKeyword(parentSelector, keyword) {
-  var listSelector = $('<li></li>');
+  var listSelector = $('<li id=slug-"' + keyword.slug + '"></li>');
   var selector = $('<div class="keyword"></div>');
   var titleSelector = $('<a href="#"></a>');
   var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
@@ -48,7 +56,7 @@ function addKeyword(parentSelector, keyword) {
 }
 
 function addCategory(parentSelector, category) {
-  var listSelector = $('<li class="category category-expanded"></li>');
+  var listSelector = $('<li id="slug-' + category.slug + '" class="category category-expanded"></li>');
   var selector = $('<a href="#"></a>');
   var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
@@ -152,9 +160,10 @@ function createSearchIndex(data) {
   return index;
 }
 
-function constructSearch() {
+function constructSearch(callback) {
   fetchSearchData(function(data) {
     var categoryTree = buildCategoryTree(data);
+    var parentList = getParentList(data);
 
     // First level categories
     var mainCategories = categoryTree[""];
@@ -171,12 +180,15 @@ function constructSearch() {
     addCategoryExpandAndCollapseEventListener();
     collapseAll();
 
-    return createSearchIndex(data);
+    callback(createSearchIndex(data), parentList);
   });
 }
 
 $(document).ready(function() {
 
-  var index = constructSearch();
+  constructSearch(function(index, parentList) {
+    console.log(index);
+    console.log(parentList);
+  });
 
 });
