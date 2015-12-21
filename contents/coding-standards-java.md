@@ -98,8 +98,8 @@ However, minimize using abbreviations and acronyms, unless the concepts they are
 
 ```java
 class Person {
-  private String name_; // OR private String _name;
-  ...
+    private String name_; // OR private String _name;
+    ...
 }
 ```
 
@@ -110,7 +110,7 @@ A side effect of the underscore naming convention is that it nicely resolves the
 ```java
 void setName(String name) {
     name_ = name;
-  }
+}
 ```
 
 **8. All names should be written in English.**
@@ -162,10 +162,11 @@ Enhances readability since the name gives the user an immediate clue of the type
 
 ```java
 for (Iterator i = points.iterator(); i.hasNext(); ) {
-  ...
+    ...
 }
+
 for (int i = 0; i < nTables; i++) {
-  ...
+    ...
 }
 ```
 
@@ -195,10 +196,10 @@ Enforced by the Java tools.
 
 ```java
 class NusStudent extends Student {
-  //Logic related to NusStudent class
-  private class Module {
-      //Logic related to Module class
-  }
+    //Logic related to NusStudent class
+    private class Module {
+        //Logic related to Module class
+    }
 }
 ```
 Enforced by the Java tools.
@@ -244,7 +245,7 @@ method(param1,
 ```java
 // CORRECT
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
-       int anArg, Object anotherArg);
+        int anArg, Object anotherArg);
        
 // INCORRECT
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
@@ -257,7 +258,8 @@ someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
 // PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
             + 4 * longname6;
-            + 
+            +
+
 // OVER THIS
 longName1 = longName2 * (longName3 + longName4
             - longName5) + 4 * longname6;
@@ -311,7 +313,7 @@ private static synchronized horkingLongMethodName(int arg, Object anotherArg,
 
 //EVEN THIS IS ACCEPTABLE (2nd line starts to the right of method name)
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
-                               String yetAnotherArg, Object andStillAnother) {
+                                String yetAnotherArg, Object andStillAnother) {
     ...
 }
 ```
@@ -400,18 +402,18 @@ The *arrayness* is a feature of the base type, not the variable. Sun allows both
 ```java
 int sum = 0;                  
 for (int i = 0; i < 10; i++) {          
-  for (int j = 0; j < 10; j++) {      
-    sum += i * j;
-  }
+    for (int j = 0; j < 10; j++) {      
+        sum += i * j;
+    }
 }
 
 //NOT the following way
 int i, j, sum;
 sum = 0;
 for (i = 0; i < 10; i++) {
-  for (j = 0; j < 10; j++) {
-    sum += i * j;
-  }
+    for (j = 0; j < 10; j++) {
+        sum += i * j;
+    }
 }    
 ```
 
@@ -444,7 +446,7 @@ When there is only one statement in the loop body it can be written without wrap
 
 ```java
 if (isDone) {       // NOT: if (isDone) doCleanup();
-  doCleanup();
+    doCleanup();
 }
 ```
 
@@ -455,13 +457,13 @@ This is for debugging purposes. When writing on a single line, it is not apparen
 ```java
 InputStream stream = File.open(fileName, "w");
 if (stream != null) {
-   readFile(stream);
+    readFile(stream);
 }
 
 // NOT:
 InputStream stream = File.open(fileName, "w");
 if (stream != null))
-   readFile(stream);
+    readFile(stream);
 ```
 
 The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
@@ -477,7 +479,7 @@ The body of the conditional should be wrapped by curly brackets irrespective of 
 
 ```java
 for (i = 0; i < nElements; i++) {
-  a[i] = 0;
+    a[i] = 0;
 }
 ```
 
@@ -491,18 +493,18 @@ Place the line breaks to improve readability. It is ok to exceed 110 char limit 
 ```java
 //This way
 while (!done) {
-  doSomething();
-  done = moreToDo();
+    doSomething();
+    done = moreToDo();
 }
 ```
 ###### **Example 2**
 ```java
 //NOT this way
 while (!done)
-  {
-    doSomething();
-    done = moreToDo();
-  }
+    {
+        doSomething();
+        done = moreToDo();
+    }
 ```
 Example 2 introduces an extra indentation level which doesn't emphasize the logical structure of the code as clearly as example 1.
 
@@ -510,7 +512,7 @@ Example 2 introduces an extra indentation level which doesn't emphasize the logi
 
 ```java
 public void someMethod() throws SomeException {
-  ...
+    ...
 }
 ```
 
@@ -518,21 +520,21 @@ public void someMethod() throws SomeException {
 
 ```java
 if (condition) {
-  statements;
+    statements;
 }
 
 if (condition) {
-  statements;
+    statements;
 } else {
-   statements;
+    statements;
 }
 
 if (condition) {
-  statements;
+    statements;
 } else if (condition) {
-  statements;
+    statements;
 } else {
-  statements;
+    statements;
 }
 ```
 
@@ -540,7 +542,7 @@ if (condition) {
 
 ```java
 for (initialization; condition; update) {
-  statements;
+    statements;
 }
 ```
 
@@ -550,7 +552,7 @@ This follows from the general block rule above.
 
 ```java
 while (condition) {
-  statements;
+    statements;
 }
 ```
 
@@ -560,7 +562,7 @@ This follows from the general block rule above.
 
 ```java
 do {
-  statements;
+    statements;
 } while (condition);
 ```
 
@@ -570,21 +572,21 @@ This follows from the general block rule above.
 
 ```java
 switch (condition) {
-  case ABC :
-    statements;
-    // Fallthrough
+    case ABC :
+        statements;
+        // Fallthrough
     
   case DEF :
-    statements;
-    break;
+        statements;
+        break;
     
   case XYZ :
-    statements;
-    break;
+        statements;
+        break;
     
   default :
-    statements;
-    break;
+        statements;
+        break;
 }
 ```
 
@@ -596,17 +598,17 @@ The explicit `//Fallthrough` comment should be included whenever there is a `cas
 
 ```java
 try {
-  statements;
+    statements;
 } catch (Exception exception) {
-  statements;
+    statements;
 }
 
 try {
-  statements;
+    statements;
 } catch (Exception exception) {
-  statements;
+    statements;
 } finally {
-  statements;
+    statements;
 }
 ```
 This follows partly from the general block rule above. This form differs from the Sun recommendation in the same way as the `if-else` statement described above.
@@ -624,13 +626,13 @@ This follows partly from the general block rule above. This form differs from th
 a = (b + c) * d; // NOT: a=(b+c)*d
 
 while (true) {   // NOT: while(true){
-  ...
+    ...
 doSomething(a, b, c, d);  // NOT: doSomething(a,b,c,d);
 
 case 100 :  // NOT: case 100:
 
 for (i = 0; i < 10; i++) {  // NOT: for(i=0;i<10;i++){
-  ...
+    ...
 ```
 
 Makes the individual components of the statements stand out and enhances readability. It is difficult to give a complete list of the suggested use of whitespace in Java code. The examples above however should give a general idea of the intentions.
@@ -681,7 +683,7 @@ In an international environment English is the preferred language.
  * @throws IllegalArgumentException  If zone is <= 0.
  */
 public double computeLocation(double x, double y, int zone)
-  throws IllegalArgumentException {
+    throws IllegalArgumentException {
   ...
 }
 ```
@@ -701,17 +703,17 @@ Note in particular:
 Javadoc of class members can be specified on a single line as follows:
 
 ```java
-  /** Number of connections to this database */
-  private int nConnections;
+    /** Number of connections to this database */
+    private int nConnections;
 ```
 
 **15. Comments should be indented relative to their position in the code.**
 
 ```java
-while (true) {       // NOT:  while (true) {
-  // Do something             // Do something
-  something();                  something();
-}                             }
+while (true) {              // NOT:  while (true) {
+    // Do something             // Do something
+    something();                something();
+}                           }
 ```
 
 This is to avoid the comments from breaking the logical structure of the program.
