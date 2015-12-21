@@ -3,29 +3,29 @@
   <tr>
     <td width="70%" >
       <ul>
-        <li><a href="#naming-conventions">Naming Conventions</a>
+        <li><a href="#naming-conventions">Naming Conventions</a></li>
         <ul>
-          <li><a href="#general-naming-conventions">General Naming Conventions</a>
-          <li><a href="#specific-naming-conventions">Specific Naming Coonvetions</a>
+          <li><a href="#general-naming-conventions">General Naming Conventions</a></li>
+          <li><a href="#specific-naming-conventions">Specific Naming Coonvetions</a></li>
         </ul>
         <li><a href="#files">Files</a>
         <li><a href="#statements">Statements</a>
         <ul>
-          <li><a href="#package-and-import-statements">Package and Import Statements</a>
-          <li><a href="#classes-and-interfaces">Classes and Interfaces</a>
-          <li><a href="#methods">Methods</a>
-          <li><a href="#types">Types</a>
-          <li><a href="#variables">Variables</a>
-          <li><a href="#loops">Loops</a>
-          <li><a href="#conditionals">Conditionals</a>
+          <li><a href="#package-and-import-statements">Package and Import Statements</a></li>
+          <li><a href="#classes-and-interfaces">Classes and Interfaces</a></li>
+          <li><a href="#methods">Methods</a></li>
+          <li><a href="#types">Types</a></li>
+          <li><a href="#variables">Variables</a></li>
+          <li><a href="#loops">Loops</a></li>
+          <li><a href="#conditionals">Conditionals</a></li>
         </ul>
-        <li><a href="#layout-and-comments">Layout and Comments</a>
+        <li><a href="#layout-and-comments">Layout and Comments</a></li>
         <ul>
-          <li><a href="#layout">Layout</a>
-          <li><a href="#white-space">White Space</a>
-          <li><a href="#comments">Comments</a>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#white-space">White Space</a></li>
+          <li><a href="#comments">Comments</a></li>
         </ul>
-		<li><a href="#references">References</a>
+        <li><a href="#references">References</a></li>
         </ul>
     </td>
     <td width="20%">
