@@ -279,7 +279,11 @@ void method(param1,param2)throws Exception1,
 longMethod(someLongMenthod1(param1, param2, param3).anotherMethod(),
            someLongMenthod2(param1, param2).anotherMethod(),
            someLongMenthod3(param1, param2, param3));
-Here are three acceptable ways to format ternary expressions:
+```
+
+- Here are three acceptable ways to format ternary expressions:
+
+```java
 alpha = (aLongBooleanExpression) ? beta : gamma;
 alpha = (aLongBooleanExpression) ? beta
                                  : gamma;
