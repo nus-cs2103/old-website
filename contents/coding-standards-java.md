@@ -357,10 +357,10 @@ Importing classes explicitly gives an excellent documentation value for the clas
 
 >1. Class/Interface documentation (Comments)
 >2. **class** or **interface** statement
->3. Class (static) variables in the order **public**, **protected**, **package** (no access modifier), private
->4. Instance variables in the order **public**, **protected**, **package** (no access modifier), **private**.
+>3. Class (static) variables in the order **public**, **protected**, **package** (no access modifier), **private**
+>4. Instance variables in the order **public**, **protected**, **package** (no access modifier), **private**
 >5. Constructors
->6. Methods (no specific order)**
+>6. Methods (no specific order)
 
 Make code easy to navigate by making the location of each class element predictable.
 Methods
