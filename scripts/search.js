@@ -125,18 +125,27 @@ function addCategoryExpandAndCollapseEventListener() {
 
 function expandAll() {
   $(".category").each(function() {
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).children().find('.glyphicon').addClass('glyphicon-chevron-down');
+    $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-right');
     $(this).next().show();
   });
 }
 
 function collapseAll() {
   $(".category").each(function() {
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-down');
+    $(this).children().find('.glyphicon').addClass('glyphicon-chevron-right');
     $(this).next().hide();
   });
+}
+
+function expandBySlug(slug, parentList) {
+  if (slug == "") return;
+  expandBySlug(parentList[slug], parentList);
+  var selector = $('#slug-'+slug);
+  selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
+  selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
+  selector.next().show();
 }
 
 function createSearchIndex(data) {
@@ -187,8 +196,19 @@ function constructSearch(callback) {
 $(document).ready(function() {
 
   constructSearch(function(index, parentList) {
-    console.log(index);
-    console.log(parentList);
+
+    $('#search-box').keyup(function() {
+      var query = $(this).val();
+      collapseAll();
+      if (query !== '') {
+        // perform search
+        var results = index.search(query);
+        for(i in results) {
+          console.log(results[i].ref);
+          expandBySlug(results[i].ref, parentList);
+        }
+      }
+    });
   });
 
 });

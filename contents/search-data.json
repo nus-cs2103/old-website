@@ -84,12 +84,12 @@
   },
   {
     "text":"Regression testing",
-    "slug":"regression testing",
+    "slug":"regression-testing",
     "parent":"testing"
   },
   {
     "text":"Developer testing",
-    "slug":"developer testing",
+    "slug":"developer-testing",
     "parent":"testing"
   },
   {
