@@ -207,7 +207,7 @@ Enforced by the Java tools.
 
 When wrapping lines, the main objective is to improve readability. Feel free to break rules if it improves readability. Do not always accept the auto-formatting suggested by the IDE.
 
-Length: A line should be split if it exceeds the ~~80~~ 110 characters. But it is OK to exceed the limit slightly or wrap the lines much shorter than limit.
+Length: A line should be split if it exceeds the 110 characters. But it is OK to exceed the limit slightly or wrap the lines much shorter than limit.
 
 *Where to insert the break?*
 
