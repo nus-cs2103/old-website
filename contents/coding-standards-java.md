@@ -568,17 +568,29 @@ This is for debugging purposes. When writing on a single line, it is not apparen
 
 **11. Single statement conditionals should still be wrapped by curly brackets**
 
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 InputStream stream = File.open(fileName, "w");
 if (stream != null) {
     readFile(stream);
 }
-
-// NOT:
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
 InputStream stream = File.open(fileName, "w");
 if (stream != null))
     readFile(stream);
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
 The body of the conditional should be wrapped by curly brackets irrespective of how many statements are in it to avoid error prone code.
 
