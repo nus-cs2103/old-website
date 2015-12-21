@@ -757,18 +757,72 @@ This follows partly from the general block rule above. This form differs from th
 >- **Colons should be surrounded by white space.**
 >- **Semicolons in for statements should be followed by a space character.**
 
-```java
-a = (b + c) * d; // NOT: a=(b+c)*d
-
-while (true) {   // NOT: while(true){
-    ...
-doSomething(a, b, c, d);  // NOT: doSomething(a,b,c,d);
-
-case 100 :  // NOT: case 100:
-
-for (i = 0; i < 10; i++) {  // NOT: for(i=0;i<10;i++){
-    ...
-```
+<table>
+  <tr>
+    <th align="center">Good</th>
+    <th align="center">Bad</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+a = (b + c) * d;
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+a=(b+c)*d
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+while (true) { 
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+while(true){
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+doSomething(a, b, c, d); 
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+doSomething(a,b,c,d);
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+case 100 :
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+case 100:
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
+for (i = 0; i < 10; i++) {
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+for(i=0;i<10;i++){
+      </pre>
+    </td>
+  </tr>
+</table>
 
 Makes the individual components of the statements stand out and enhances readability. It is difficult to give a complete list of the suggested use of whitespace in Java code. The examples above however should give a general idea of the intentions.
 
