@@ -19,7 +19,7 @@ function buildCategoryTree(data) {
 }
 
 function addKeyword(parentSelector, keyword) {
-  var listSelector = $('<li class="keyword" id=word-' + keyword.slug + '></li>');
+  var listSelector = $('<li class="keyword" id="word-' + keyword.slug + '"></li>');
   var selector = $('<div class="references"></div>');
   var titleSelector = $('<a href="#" class="close-link"></a>');
   var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
@@ -61,7 +61,7 @@ function addCategory(parentSelector, category) {
 }
 
 function addMainCategory(parentSelector, category) {
-  var selector = $('<h2></h2>');
+  var selector = $('<h2 id="word-' + category.slug + '"></h2>');
   var starSelector = $('<span class="glyphicon glyphicon-star" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
   
@@ -132,6 +132,11 @@ function expandAndShow(parentSelector) {
   selector.find(" .keyword").each(function() {
     $(this).show();
   })
+
+  selector.find(" .main-category").each(function() {
+    $(this).show();
+    $(this).next().show();
+  })
 }
 
 function createSearchIndex(data) {
@@ -191,7 +196,7 @@ function showInResults(slug, results, categoryTree) {
     isChildInResults |= showInResults(children[i].slug, results, categoryTree);
   }
 
-  if (isInResults) {
+  if (isInResults && !selector.hasClass('main-category')) {
     selector.show();
     expandAndShow('#word-' + slug);
     if (isChildInResults) {
