@@ -277,7 +277,6 @@ someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
 // PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
             + 4 * longname6;
-            +
 ```
 
 **BAD:**
