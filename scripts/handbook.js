@@ -11,6 +11,8 @@ for (var i in sections) {
         }
     });
 }
+$('#loading').fadeOut(200);
+
 
 $('a').click(function() {
     var adjustment = 73;
