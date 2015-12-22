@@ -85,7 +85,7 @@ Underscores may be used in test method names if your test method names are long 
 
 `e.g. testLogic_addTask_nullParameters_errorMessageExpected()`
 
-**6. Abbreviations and acronyms should not be uppercase when used as name.**
+**6. Abbreviations and acronyms should not be uppercase when used as a (OR part of a) name.**
 
 <table>
   <tr>
@@ -108,9 +108,13 @@ openDVDPlayer();
   </tr>
 </table>
 
-Using all uppercase for the base name will give conflicts with the naming conventions given above. A variable of this type would have to be named `dVD, hTML etc.` which obviously is not very readable. Another problem is illustrated in the examples above; When the name is connected to another, the readability is seriously reduced; The word following the acronym does not stand out as it should.
+Using all uppercase for the base name will give conflicts with the naming conventions given above. A variable of this type would have to be named `dVD` and `hTML` which is not very readable. 
 
-However, minimize using abbreviations and acronyms, unless the concepts they are referring to is better known by their acronyms/abbreviations (In short, use whatever that is easily understood by other people).
+Another problem is illustrated in the examples above. When abbreviations/acronyms are used as part of a name, readability is seriously reduced. The word following the abbreviation/acronym does not stand out as it should.
+
+As a result, minimize usage of abbreviations/acronyms, unless the concepts they are referring to are better known otherwise
+
+>Note: A key point here is to use whatever that is easily understood by other people.
 
 **7. Private class variables can have underscore suffix or prefix (not common, but a beneficial practice)**
 
