@@ -891,8 +891,8 @@ Note in particular:
 Javadoc of class members can be specified on a single line as follows:
 
 ```java
-    /** Number of connections to this database */
-    private int nConnections;
+/** Number of connections to this database */
+private int nConnections;
 ```
 
 **15. Comments should be indented relative to their position in the code.**
