@@ -446,6 +446,6 @@ table.bordered tr > th {
     text-decoration: none;
 }
 
-.first-category {
+.separator {
     border-top:1px solid #ccd8e2;
 }

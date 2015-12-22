@@ -86,6 +86,10 @@ function displayCategory(parentSelector, categoryTree, category) {
   }
 
   var selector = $("<ul></ul>");
+  if (parentSelector.is("ul") && category.references == null) {
+    // only add on category
+    selector.append($("<div class='separator'></div>"));
+  }
   selector.addClass('category-list nav');
   parentSelector.append(selector);
 
@@ -93,10 +97,6 @@ function displayCategory(parentSelector, categoryTree, category) {
   var categories = categoryTree[category.slug];
   for (i in categories) {
     displayCategory(selector, categoryTree, categories[i]);
-  }
-
-  if (parentSelector.is("ul")) {
-    selector.children().first().addClass('first-category');
   }
 }
 
@@ -115,15 +115,21 @@ function addCategoryExpandAndCollapseEventListener() {
   });
 }
 
-function expandAndShowAll() {
-  $(".category").each(function() {
+function expandAndShow(parentSelector) {
+  var selector;
+  if (parentSelector != null) {
+    selector = $(parentSelector).next();
+  } else {
+    selector = $(document);
+  }
+  selector.find(" .category").each(function() {
     $(this).children().find('.glyphicon').addClass('glyphicon-chevron-down');
     $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-right');
     $(this).show();
     $(this).next().show();
   });
 
-  $(".keyword").each(function() {
+  selector.find(" .keyword").each(function() {
     $(this).show();
   })
 }
@@ -173,19 +179,57 @@ function constructSearch(callback) {
   });
 }
 
+function showInResults(slug, results, categoryTree) {
+
+  var selector = $('#word-' + slug);
+  var i;
+  var isInResults = false;
+  for(i in results) {
+    isInResults |= (results[i].ref === slug);
+  }
+
+  var isChildInResults = false;
+  var children = categoryTree[slug];
+  for(i in children) {
+    isChildInResults |= showInResults(children[i].slug, results, categoryTree);
+  }
+
+  if (isInResults) {
+    selector.show();
+    expandAndShow('#word-' + slug);
+    if (isChildInResults) {
+      selector.next().show();
+      selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
+      selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
+    } else {
+      selector.next().hide();
+      selector.children().find('.glyphicon').removeClass('glyphicon-chevron-down');
+      selector.children().find('.glyphicon').addClass('glyphicon-chevron-right');
+    }
+  } else {
+    if (isChildInResults) {
+      selector.show();
+      selector.next().show();
+    } else {
+      selector.hide();
+      selector.next().hide();
+    }
+  }
+
+  return isInResults | isChildInResults;
+}
+
 $(document).ready(function() {
 
   constructSearch(function(index, categoryTree) {
 
     $('#search-box').keyup(function() {
       var query = $(this).val();
-      expandAndShowAll();
+      expandAndShow();
       if (query !== '') {
         // perform search
         var results = index.search(query);
-        for(i in results) {
-          console.log(results[i].ref);
-        }
+        showInResults("", results, categoryTree);
       }
     });
   });
