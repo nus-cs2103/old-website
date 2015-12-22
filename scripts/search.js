@@ -21,7 +21,7 @@ function buildCategoryTree(data) {
 function addKeyword(parentSelector, keyword) {
   var listSelector = $('<li class="keyword" id=word-' + keyword.slug + '></li>');
   var selector = $('<div class="references"></div>');
-  var titleSelector = $('<a href="#"></a>');
+  var titleSelector = $('<a href="#" class="close-link"></a>');
   var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + keyword.text));
   var emptySelector = $('<span class="glyphicon glyphicon-none" aria-hidden="true"></span>');
@@ -49,7 +49,7 @@ function addKeyword(parentSelector, keyword) {
 
 function addCategory(parentSelector, category) {
   var listSelector = $('<li id="word-' + category.slug + '" class="word category"></li>');
-  var selector = $('<a href="#"></a>');
+  var selector = $('<a href="#" class="close-link"></a>');
   var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
 
@@ -232,6 +232,12 @@ $(document).ready(function() {
         showInResults("", results, categoryTree);
       }
     });
+
+    $('.close-link').click( function(e) {
+      e.preventDefault();
+    });
   });
+
+  
 
 });
