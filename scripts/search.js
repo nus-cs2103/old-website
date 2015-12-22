@@ -183,10 +183,7 @@ function showInResults(slug, results, categoryTree) {
 
   var selector = $('#word-' + slug);
   var i;
-  var isInResults = false;
-  for(i in results) {
-    isInResults |= (results[i].ref === slug);
-  }
+  var isInResults = (results.indexOf(slug) > -1);
 
   var isChildInResults = false;
   var children = categoryTree[slug];
@@ -227,9 +224,16 @@ $(document).ready(function() {
       var query = $(this).val();
       expandAndShow();
       if (query !== '') {
-        // perform search
-        var results = index.search(query);
-        showInResults("", results, categoryTree);
+        var queryList = query.split(' ');
+        var results, i, j;
+        var combinedResults = [];
+        for (i in queryList) {
+          results = index.search(queryList[i]);
+          for (j in results) {
+            combinedResults.push(results[j].ref);
+          }
+        }
+        showInResults("", combinedResults, categoryTree);
       }
     });
 
