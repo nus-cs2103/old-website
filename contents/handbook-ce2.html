@@ -24,45 +24,45 @@
 	</ol>
 	<p>
 		<span class="highlighted">Note that those who don’t reach the expected code quality in CE2 may
-			have to submit CE3 as well.</span>
-		</p>
+		have to submit CE3 as well.</span>
+	</p>
+	<li>
+		Add these additional functionality.
+	</li>
+	<ul>
 		<li>
-			Add these additional functionality.
+			A sort command to sort lines alphabetically.
 		</li>
-		<ul>
-			<li>
-			 A sort command to sort lines alphabetically.
-		 </li>
-		 <li>
-			 A search command to search for a word in the file and return the lines containing that word.
-		 </li>
-	 </ul>
-	 <li>
+		<li>
+			A search command to search for a word in the file and return the lines containing that word.
+		</li>
+	</ul>
+	<li>
 		When adding above features, do it in TDD fashion.
 	</li>
 	Hints:
 	<br>
 	<ul>
 		<li>
-		 If you are new to unit testing, try adding some unit tests to existing CE1 functionality first before trying
-		 TDD. However, you are not *required* to add tests for existing CE1 functionality.
-	 </li>
-	 <li>
-		 <span class="highlighted">TDD is not simply ‘writing tests before writing functional code’.
-		 </span> Refer the demo in lecture 4 to find out how
-		 to TDD in small steps.
-	 </li>
-	 <li>
-		 When unit testing the ‘sort’ command, you can use existing ‘display’ and ‘add’ commands in the testing
-		 process. e.g., add a line, sort, display, and check if the display is sorted properly. This is not strict
-		 unit testing since we are not testing ‘sort’ functionality in isolation from other functionality, but it
-		 is acceptable since those other functions are also under your control and tested by you.
-	 </li>
-	 <li>
-		 Having a public method that takes the user command and executes it (CityConnect uses this
-		 approach) can greatly simplify the testing process. Then, you can write tests like this:
-	 </li>
-	 <pre class="prettyprint"><code class="lang-java">//check if the “clear” command returns the right status message
+			If you are new to unit testing, try adding some unit tests to existing CE1 functionality first before trying
+			TDD. However, you are not *required* to add tests for existing CE1 functionality.
+		</li>
+		<li>
+			<span class="highlighted">TDD is not simply ‘writing tests before writing functional code’.
+			</span> Refer the demo in lecture 4 to find out how
+		 	to TDD in small steps.
+		</li>
+		<li>
+			When unit testing the ‘sort’ command, you can use existing ‘display’ and ‘add’ commands in the testing
+			process. e.g., add a line, sort, display, and check if the display is sorted properly. This is not strict
+			unit testing since we are not testing ‘sort’ functionality in isolation from other functionality, but it
+			is acceptable since those other functions are also under your control and tested by you.
+		</li>
+		<li>
+			Having a public method that takes the user command and executes it (CityConnect uses this
+			approach) can greatly simplify the testing process. Then, you can write tests like this:
+		</li>
+		<pre class="prettyprint"><code class="lang-java">//check if the “clear” command returns the right status message
 assertEquals(“all content deleted from mytextfile.txt”,
 TextBuddy.executeCommand(“clear”));
 //check if the file was actually cleared
