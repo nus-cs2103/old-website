@@ -710,15 +710,15 @@ switch (condition) {
         statements;
         // Fallthrough
     
-  case DEF :
+    case DEF :
         statements;
         break;
     
-  case XYZ :
+    case XYZ :
         statements;
         break;
     
-  default :
+    default :
         statements;
         break;
 }
