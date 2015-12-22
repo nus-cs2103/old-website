@@ -48,7 +48,9 @@ com.company.application.ui
 
 The usual convention in package names is that the prefix should be the internet domain of the server which hosts the application, but in reverse order. The suffix depends on the application and the grouping. `e.g. com.microsoft.word.api, code.microsoft.word.recovery:` the first package will contain the API classes of word and the second package will contain the classes which handle the document recovery logic.
 
-However, for your projects, the root name of the package should be your group name or project name followed by logical group names.` e.g. todobuddy.ui, todobuddy.file etc`. Rationale for not using `edu.nus.comp.*` or similar : Your code is not officially ‘*produced by NUS*’.
+However, for your projects, the root name of the package should be your group name or project name followed by logical group names.` e.g. todobuddy.ui, todobuddy.file etc`. 
+
+>Note: Your code is not officially ‘*produced by NUS*’, therefore do not use `edu.nus.comp.*` or anything similar.
 
 **2. Names representing classes or enum types must be nouns and written in mixed case starting with upper case.**
 
