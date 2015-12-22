@@ -11,7 +11,7 @@ for (var i in sections) {
         }
     });
 }
-$('#load-spinner').remove();
+$('#loading').fadeOut(200);
 
 
 $('a').click(function() {

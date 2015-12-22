@@ -39,6 +39,12 @@ a:visited {
     overflow-y: auto;
 }
 
+#loading{
+    background-color: #d9edf7;
+    font-size: medium;
+    padding: 12px;
+}
+
 .align-right{
     text-align: right;
 }
