@@ -408,7 +408,7 @@ table.bordered tr > th {
     color: #337ab7 !important;
 }
 
-.keyword {
+.references {
     clear:both;
     display:block;
     padding-left:15px;
@@ -418,11 +418,11 @@ table.bordered tr > th {
     padding-bottom:7px;
 }
 
-.keyword a {
+.references a {
     color: #337ab7 !important;
 }
 
-.keyword:hover {
+.references:hover {
     background:#EEEEEE;
 }
 

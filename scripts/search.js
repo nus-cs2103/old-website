@@ -18,17 +18,9 @@ function buildCategoryTree(data) {
   return adjacencyList;
 }
 
-function getParentList(data) {
-  var parentList = {};
-  for (i in data) {
-    parentList[data[i].slug] = data[i].parent;
-  }
-  return parentList;
-}
-
 function addKeyword(parentSelector, keyword) {
-  var listSelector = $('<li id=slug-"' + keyword.slug + '"></li>');
-  var selector = $('<div class="keyword"></div>');
+  var listSelector = $('<li class="keyword" id=word-' + keyword.slug + '></li>');
+  var selector = $('<div class="references"></div>');
   var titleSelector = $('<a href="#"></a>');
   var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + keyword.text));
@@ -56,7 +48,7 @@ function addKeyword(parentSelector, keyword) {
 }
 
 function addCategory(parentSelector, category) {
-  var listSelector = $('<li id="slug-' + category.slug + '" class="category category-expanded"></li>');
+  var listSelector = $('<li id="word-' + category.slug + '" class="word category"></li>');
   var selector = $('<a href="#"></a>');
   var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
@@ -123,29 +115,17 @@ function addCategoryExpandAndCollapseEventListener() {
   });
 }
 
-function expandAll() {
+function expandAndShowAll() {
   $(".category").each(function() {
     $(this).children().find('.glyphicon').addClass('glyphicon-chevron-down');
     $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-right');
+    $(this).show();
     $(this).next().show();
   });
-}
 
-function collapseAll() {
-  $(".category").each(function() {
-    $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-down');
-    $(this).children().find('.glyphicon').addClass('glyphicon-chevron-right');
-    $(this).next().hide();
-  });
-}
-
-function expandBySlug(slug, parentList) {
-  if (slug == "") return;
-  expandBySlug(parentList[slug], parentList);
-  var selector = $('#slug-'+slug);
-  selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
-  selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
-  selector.next().show();
+  $(".keyword").each(function() {
+    $(this).show();
+  })
 }
 
 function createSearchIndex(data) {
@@ -174,7 +154,6 @@ function createSearchIndex(data) {
 function constructSearch(callback) {
   fetchSearchData(function(data) {
     var categoryTree = buildCategoryTree(data);
-    var parentList = getParentList(data);
 
     // First level categories
     var mainCategories = categoryTree[""];
@@ -189,25 +168,23 @@ function constructSearch(callback) {
     displayCategories($(".keyword-group-column:eq(1)"), categoryTree, secondColumnCategories);
     
     addCategoryExpandAndCollapseEventListener();
-    collapseAll();
 
-    callback(createSearchIndex(data), parentList);
+    callback(createSearchIndex(data), categoryTree);
   });
 }
 
 $(document).ready(function() {
 
-  constructSearch(function(index, parentList) {
+  constructSearch(function(index, categoryTree) {
 
     $('#search-box').keyup(function() {
       var query = $(this).val();
-      collapseAll();
+      expandAndShowAll();
       if (query !== '') {
         // perform search
         var results = index.search(query);
         for(i in results) {
           console.log(results[i].ref);
-          expandBySlug(results[i].ref, parentList);
         }
       }
     });
