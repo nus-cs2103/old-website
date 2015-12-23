@@ -225,18 +225,18 @@ function highlightInResults(word, tokens, index, categoryTree) {
 
   if (selector.is(":visible")) {
     if (word.slug !== '') {
-      var wordTokens = word.text.split(' ');
+      var wordTokens = word.text.trim().split(' ');
       wordTokens.forEach(function(token) {
         var baseToken = getBaseWord(index, token);
         if (tokens.indexOf(baseToken) > -1) {
-          selector.find('.label-text').addBack('.label-text').highlight(token, 'false');
+          selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
         } else {
           var existInPrefix = false;
           tokens.forEach(function(resultToken) {
             existInPrefix |= token.toLowerCase().startsWith(resultToken);
           });
           if (existInPrefix) {
-            selector.find('.label-text').addBack('.label-text').highlight(token, 'false');
+            selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
           }
         }
       });
@@ -257,9 +257,9 @@ $(document).ready(function() {
     $('#search-box').keyup(function() {
       var query = $(this).val();
       expandAndShow();
-      $(document).removeHighlight();
+      $(document).unhighlight();
       if (query !== '') {
-        var queryList = query.split(' ');
+        var queryList = query.trim().split(' ');
         var tokens = index.pipeline.run(lunr.tokenizer(query));
 
         var results, i, j;
