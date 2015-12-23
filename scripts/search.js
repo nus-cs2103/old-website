@@ -1,8 +1,26 @@
 
+
 function fetchSearchData(callback) {
   $.getJSON('../contents/search-data.json', function(data) {
     callback(data);
   });
+}
+
+function convertToSlug(text) {
+    return text
+        .toLowerCase()
+        .replace(/ /g,'-')
+        .replace(/[^\w-]+/g,'')
+        ;
+}
+
+function insertSlugToData(data) {
+  for (var i in data) {
+    if (data[i].slug == null) {
+      data[i].slug = convertToSlug(data[i].text.trim());
+    }
+  }
+  return data;
 }
 
 function buildCategoryTree(data) {
@@ -38,8 +56,8 @@ function addKeyword(parentSelector, keyword) {
   for(i in referenceList) {
     reference = referenceList[i];
     selector.append('<a href="' + reference.hyperlink + 
-                    '" class="reference"><span class="label label-' + reference.type + '"> ' + 
-                    reference.text + ' </span></a> &nbsp');
+                    '" class="reference"><span class="label label-' + reference.type + '">' + 
+                    reference.text + '</span></a> &nbsp');
   }
 
   listSelector.append(selector);
@@ -164,6 +182,7 @@ function createSearchIndex(data) {
 
 function constructSearch(callback) {
   fetchSearchData(function(data) {
+    var data = insertSlugToData(data);
     var categoryTree = buildCategoryTree(data);
 
     // First level categories
