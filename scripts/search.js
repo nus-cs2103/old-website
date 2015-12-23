@@ -21,7 +21,7 @@ function buildCategoryTree(data) {
 function addKeyword(parentSelector, keyword) {
   var listSelector = $('<li class="keyword" id="word-' + keyword.slug + '"></li>');
   var selector = $('<div class="references"></div>');
-  var titleSelector = $('<a href="#" class="close-link"></a>');
+  var titleSelector = $('<a href="#" class="close-link label-text"></a>');
   var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + keyword.text));
   var emptySelector = $('<span class="glyphicon glyphicon-none" aria-hidden="true"></span>');
@@ -49,7 +49,7 @@ function addKeyword(parentSelector, keyword) {
 
 function addCategory(parentSelector, category) {
   var listSelector = $('<li id="word-' + category.slug + '" class="word category"></li>');
-  var selector = $('<a href="#" class="close-link"></a>');
+  var selector = $('<a href="#" class="close-link label-text"></a>');
   var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
 
@@ -61,7 +61,7 @@ function addCategory(parentSelector, category) {
 }
 
 function addMainCategory(parentSelector, category) {
-  var selector = $('<h2 id="word-' + category.slug + '"></h2>');
+  var selector = $('<h2 id="word-' + category.slug + '" class="label-text"></h2>');
   var starSelector = $('<span class="glyphicon glyphicon-star" aria-hidden="true"></span>');
   var textSelector = $(document.createTextNode(' ' + category.text));
   
@@ -196,18 +196,12 @@ function showInResults(slug, results, categoryTree) {
     isChildInResults |= showInResults(children[i].slug, results, categoryTree);
   }
 
-  if (isInResults && !selector.hasClass('main-category')) {
+  if (isInResults) {
     selector.show();
     expandAndShow('#word-' + slug);
-    if (isChildInResults) {
-      selector.next().show();
-      selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
-      selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
-    } else {
-      selector.next().hide();
-      selector.children().find('.glyphicon').removeClass('glyphicon-chevron-down');
-      selector.children().find('.glyphicon').addClass('glyphicon-chevron-right');
-    }
+    selector.next().show();
+    selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
+    selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
   } else {
     if (isChildInResults) {
       selector.show();
@@ -235,14 +229,14 @@ function highlightInResults(word, tokens, index, categoryTree) {
       wordTokens.forEach(function(token) {
         var baseToken = getBaseWord(index, token);
         if (tokens.indexOf(baseToken) > -1) {
-          selector.highlight(token, 'false');
+          selector.find('.label-text').addBack('.label-text').highlight(token, 'false');
         } else {
           var existInPrefix = false;
           tokens.forEach(function(resultToken) {
             existInPrefix |= token.toLowerCase().startsWith(resultToken);
           });
           if (existInPrefix) {
-            selector.highlight(token, 'false');
+            selector.find('.label-text').addBack('.label-text').highlight(token, 'false');
           }
         }
       });
@@ -284,8 +278,6 @@ $(document).ready(function() {
     $('.close-link').click( function(e) {
       e.preventDefault();
     });
-  });
-
-  
+  });  
 
 });
