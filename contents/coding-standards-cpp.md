@@ -45,8 +45,8 @@ class StringList {...};</pre></td>
         <td align="center">camelCasing</td>
         <td align="center">Verb or Verb-Noun</td>
         <td><pre lang="cpp">
-void print()
-void processItem()</pre></td>
+void print() {...};
+void processItem() {...};</pre></td>
     <tr>
         <td align="center"><b>Interface</b></td>
         <td align="center">PascalCasing ‘I’ prefix</td>
@@ -329,7 +329,8 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
         int &congestion_window,    //comment....
         char *buf);                //comment....
     ```
-
+    
+    __Bad__:
     ```cpp
     bool receive(int &size, Channel c, Request r, int &congestion_window, char *buf);
     ```
@@ -572,7 +573,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     #include <stdio.h>
     #include <string.h>
     #include <appSpecific.h>
-    #include “localFiles.h”
+    #include "localFiles.h"
     ```
  
 15. Header files are included in the following order in a __Source File__
