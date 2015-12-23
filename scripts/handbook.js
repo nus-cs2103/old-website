@@ -11,7 +11,7 @@ for (var i in sections) {
         }
     });
 }
-$('#modal').remove();
+$('#overlay').remove();
 
 
 $('a').click(function() {
