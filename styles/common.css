@@ -449,3 +449,5 @@ table.bordered tr > th {
 .separator {
     border-top:1px solid #ccd8e2;
 }
+
+.highlight { background-color: yellow; }

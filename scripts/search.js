@@ -221,6 +221,41 @@ function showInResults(slug, results, categoryTree) {
   return isInResults | isChildInResults;
 }
 
+function getBaseWord(index, text) {
+  return index.pipeline.run(lunr.tokenizer([text]))[0];
+}
+
+function highlightInResults(word, tokens, index, categoryTree) {
+
+  var selector = $('#word-' + word.slug);
+
+  if (selector.is(":visible")) {
+    if (word.slug !== '') {
+      var wordTokens = word.text.split(' ');
+      wordTokens.forEach(function(token) {
+        var baseToken = getBaseWord(index, token);
+        if (tokens.indexOf(baseToken) > -1) {
+          selector.highlight(token, 'false');
+        } else {
+          var existInPrefix = false;
+          tokens.forEach(function(resultToken) {
+            existInPrefix |= token.toLowerCase().startsWith(resultToken);
+          });
+          if (existInPrefix) {
+            selector.highlight(token, 'false');
+          }
+        }
+      });
+    }
+  }
+
+  if (categoryTree[word.slug]) {
+    categoryTree[word.slug].forEach(function(child) {
+      highlightInResults(child, tokens, index, categoryTree);
+    });
+  }
+}
+
 $(document).ready(function() {
 
   constructSearch(function(index, categoryTree) {
@@ -228,8 +263,11 @@ $(document).ready(function() {
     $('#search-box').keyup(function() {
       var query = $(this).val();
       expandAndShow();
+      $(document).removeHighlight();
       if (query !== '') {
         var queryList = query.split(' ');
+        var tokens = index.pipeline.run(lunr.tokenizer(query));
+
         var results, i, j;
         var combinedResults = [];
         for (i in queryList) {
@@ -239,6 +277,7 @@ $(document).ready(function() {
           }
         }
         showInResults("", combinedResults, categoryTree);
+        highlightInResults({ slug: "" }, tokens, index, categoryTree);
       }
     });
 
