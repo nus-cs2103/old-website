@@ -264,46 +264,76 @@ method(param1,
 
 - A method or constructor name stays attached to the open parenthesis `(` that follows it.
 
-**GOOD:**
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
         int anArg, Object anotherArg);
-```
-
-**BAD:**
-```java
+      </pre>
+    </td> 
+  <tr>
+    <th align="center">Bad</th>
+  </tr>
+    <td>
+      <pre lang="java">
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
         (int anArg, Object anotherArg);
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
 - Prefer higher-level breaks to lower-level breaks. In the example below, the first is preferred, since the break occurs outside the parenthesized expression, which is at a higher level.
 
-**GOOD:**
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 // PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
             + 4 * longname6;
-```
-
-**BAD:**
-```java
+      </pre>
+    </td> 
+  <tr>
+    <th align="center">Bad</th>
+  </tr>
+    <td>
+      <pre lang="java">
 // OVER THIS
 longName1 = longName2 * (longName3 + longName4
             - longName5) + 4 * longname6;
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
 - Single-column stacking of parameters or exceptions is discouraged in most cases, unless the column is wide enough. While such stacking improves the list of parameters/exceptions, it may not outweigh the cost of increased height of the code.
 
-**GOOD:**
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 //BECAUSE THE COLUMN IS WIDE
 longMethod(someLongMenthod1(param1, param2, param3).anotherMethod(),
            someLongMenthod2(param1, param2).anotherMethod(),
            someLongMenthod3(param1, param2, param3));
-```
-
-**BAD:**
-```java
+      </pre>
+    </td> 
+  <tr>
+    <th align="center">Bad</th>
+  </tr>
+    <td>
+      <pre lang="java">
 method(param1,
        param2,
        param3,
@@ -311,8 +341,10 @@ method(param1,
 void method(param1,param2)throws Exception1,
                                  Exception2,
                                  Exception3 {
-```
-
+      </pre>
+    </td>
+  </tr>
+</table>
 
 - Here are three acceptable ways to format ternary expressions:
 
@@ -327,23 +359,36 @@ alpha = (aLongBooleanExpression)
 
 - If the above rules lead to confusing code or to code that’s squished up against the right margin, just indent 8 spaces instead.
 
-**GOOD:**
-```java
+<table>
+  <tr>
+    <th align="center">Good</th>
+  </tr>
+  <tr>
+    <td>
+      <pre lang="java">
 //INDENT 8 SPACES TO AVOID VERY DEEP INDENTS
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
         String yetAnotherArg, Object andStillAnother) {
     ...
 }
-
+      </pre>
+    </td> 
+  <tr>
+  <tr>
+    <td>
+      <pre lang="java">
 //EVEN THIS IS ACCEPTABLE (2nd line starts to the right of method name)
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
                                 String yetAnotherArg, Object andStillAnother) {
     ...
 }
-```
-
-**BAD:**
-```java
+      </pre>
+    </td> 
+  <tr>
+    <th align="center">Bad</th>
+  </tr>
+    <td>
+      <pre lang="java">
 //CONVENTIONAL INDENTATION (code getting squished up against the right)
 void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg, 
                                                    Object anotherArg, 
@@ -351,7 +396,10 @@ void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg,
                                                    Object andStillAnother) {
     ...
 }
-```
+      </pre>
+    </td>
+  </tr>
+</table>
 
 ## **Statements**
 
