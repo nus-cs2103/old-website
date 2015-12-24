@@ -931,15 +931,15 @@ while (true) {
     <td>
       <pre lang="java">
 while (true) {
-    // Do something
-       something();
+        // Do something
+    something();
 }</pre>
     </td>
     <td>
       <pre lang="java">
 while (true) {
-    // Do something
-         something();
+// Do something
+    something();
 }</pre>
     </td>
   </tr>
