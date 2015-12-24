@@ -258,7 +258,7 @@ setText("Long line split"
          + "into two parts.");
 method(param1,
        object.method()
-           .method2(),
+             .method2(),
        param3);
 ```      
 
