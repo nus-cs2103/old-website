@@ -1,5 +1,5 @@
 # Coding Standards for C++ (Extract)
-<table>
+<table id="borderless">
     <tr>
         <td width="700px">
             <li><a href="#naming-conventions">Naming Conventions</a>

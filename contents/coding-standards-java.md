@@ -1,5 +1,5 @@
 # Java Coding Standard (Beginner/Intermediate Level)
-<table>
+<table id="borderless">
   <tr>
     <td width="70%" >
       <ul>
