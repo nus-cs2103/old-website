@@ -96,14 +96,12 @@ Underscores may be used in test method names if your test method names are long 
     <td>
       <pre lang="java">
 exportHtmlSource();
-openDvdPlayer();
-      </pre>
+openDvdPlayer();</pre>
     </td>
     <td>
       <pre lang="java">
 exportHTMLSource();
-openDVDPlayer();
-      </pre>
+openDVDPlayer();</pre>
     </td>
   </tr>
 </table>
@@ -272,8 +270,7 @@ method(param1,
     <td>
       <pre lang="java">
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
-        int anArg, Object anotherArg);
-      </pre>
+        int anArg, Object anotherArg);</pre>
     </td> 
   <tr>
     <th align="center">Bad</th>
@@ -281,8 +278,7 @@ someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName(
     <td>
       <pre lang="java">
 someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
-        (int anArg, Object anotherArg);
-      </pre>
+        (int anArg, Object anotherArg);</pre>
     </td>
   </tr>
 </table>
@@ -298,8 +294,7 @@ someMethodWithVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongName
       <pre lang="java">
 // PREFER THIS
 longName1 = longName2 * (longName3 + longName4 - longName5)
-            + 4 * longname6;
-      </pre>
+            + 4 * longname6;</pre>
     </td> 
   <tr>
     <th align="center">Bad</th>
@@ -308,8 +303,7 @@ longName1 = longName2 * (longName3 + longName4 - longName5)
       <pre lang="java">
 // OVER THIS
 longName1 = longName2 * (longName3 + longName4
-            - longName5) + 4 * longname6;
-      </pre>
+            - longName5) + 4 * longname6;</pre>
     </td>
   </tr>
 </table>
@@ -326,8 +320,7 @@ longName1 = longName2 * (longName3 + longName4
 //BECAUSE THE COLUMN IS WIDE
 longMethod(someLongMenthod1(param1, param2, param3).anotherMethod(),
            someLongMenthod2(param1, param2).anotherMethod(),
-           someLongMenthod3(param1, param2, param3));
-      </pre>
+           someLongMenthod3(param1, param2, param3));</pre>
     </td> 
   <tr>
     <th align="center">Bad</th>
@@ -340,8 +333,7 @@ method(param1,
        param4);
 void method(param1,param2)throws Exception1,
                                  Exception2,
-                                 Exception3 {
-      </pre>
+                                 Exception3 {</pre>
     </td>
   </tr>
 </table>
@@ -370,8 +362,7 @@ alpha = (aLongBooleanExpression)
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
         String yetAnotherArg, Object andStillAnother) {
     ...
-}
-      </pre>
+}</pre>
     </td> 
   <tr>
   <tr>
@@ -381,8 +372,7 @@ private static synchronized horkingLongMethodName(int arg, Object anotherArg,
 private static synchronized horkingLongMethodName(int arg, Object anotherArg,
                                 String yetAnotherArg, Object andStillAnother) {
     ...
-}
-      </pre>
+}</pre>
     </td> 
   <tr>
     <th align="center">Bad</th>
@@ -395,8 +385,7 @@ void someMethodWithVeryVeryVeryVeryVeryVeryLongName(int arg,
                                                    String yetAnotherArg,
                                                    Object andStillAnother) {
     ...
-}
-      </pre>
+}</pre>
     </td>
   </tr>
 </table>
@@ -439,13 +428,11 @@ The import statement location is enforced by the Java language. The sorting make
       <pre lang="java">
 import java.util.List;
 import java.util.ArrayList;
-import java.util.HashSet;
-      </pre>
+import java.util.HashSet;</pre>
     </td>
     <td>
       <pre lang="java">
-import java.util.*;
-      </pre>
+import java.util.*;</pre>
     </td>
   </tr>
 </table>
@@ -480,13 +467,11 @@ The `<access>` modifier (if present) must be the first modifier.
   <tr>
     <td>
       <pre lang="java">
-public static double square(double a);  
-      </pre>
+public static double square(double a);</pre>
     </td>
     <td>
       <pre lang="java">
-static public double square(double a);
-      </pre>
+static public double square(double a);</pre>
     </td>
   </tr>
 </table>
@@ -510,13 +495,11 @@ The most important lesson here is to keep the *access* modifier as the first mod
   <tr>
     <td>
       <pre lang="java">
-int[] a = new int[20];
-      </pre>
+int[] a = new int[20];</pre>
     </td>
     <td>
       <pre lang="java">
-int a[] = new int[20]
-      </pre>
+int a[] = new int[20];</pre>
     </td>
   </tr>
 </table>
@@ -540,8 +523,7 @@ for (int i = 0; i < 10; i++) {
     for (int j = 0; j < 10; j++) {      
         sum += i * j;
     }
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
@@ -551,8 +533,7 @@ for (i = 0; i < 10; i++) {
     for (j = 0; j < 10; j++) {
         sum += i * j;
     }
-} 
-      </pre>
+}</pre>
     </td>
   </tr>
 </table>
@@ -578,14 +559,12 @@ The concept of Java information hiding and encapsulation is violated by public v
 sum = 0;          
 for (i = 0; i < 100; i++) {                
     sum += value[i];
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
 for (i = 0, sum = 0; i < 100; i++)
-    sum += value[i];
-      </pre>
+    sum += value[i];</pre>
     </td>
   </tr>
 </table>
@@ -606,13 +585,11 @@ When there is only one statement in the loop body it can be written without wrap
       <pre lang="java">
 if (isDone) {
     doCleanup();
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
-if (isDone) doCleanup();
-      </pre>
+if (isDone) doCleanup();</pre>
     </td>
   </tr>
 </table>
@@ -632,15 +609,13 @@ This is for debugging purposes. When writing on a single line, it is not apparen
 InputStream stream = File.open(fileName, "w");
 if (stream != null) {
     readFile(stream);
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
 InputStream stream = File.open(fileName, "w");
 if (stream != null))
-    readFile(stream);
-      </pre>
+    readFile(stream);</pre>
     </td>
   </tr>
 </table>
@@ -679,8 +654,7 @@ Place the line breaks to improve readability. It is ok to exceed 110 char limit 
 while (!done) {
     doSomething();
     done = moreToDo();
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
@@ -688,8 +662,7 @@ while (!done)
     {
         doSomething();
         done = moreToDo();
-    }
-      </pre>
+    }</pre>
     </td>
   </tr>
 </table>
@@ -818,61 +791,51 @@ This follows partly from the general block rule above. This form differs from th
   <tr>
     <td>
       <pre lang="java">
-a = (b + c) * d;
-      </pre>
+a = (b + c) * d;</pre>
     </td>
     <td>
       <pre lang="java">
-a=(b+c)*d
-      </pre>
+a=(b+c)*d;</pre>
     </td>
   </tr>
   <tr>
     <td>
       <pre lang="java">
-while (true) { 
-      </pre>
+while (true) {</pre>
     </td>
     <td>
       <pre lang="java">
-while(true){
-      </pre>
+while(true){</pre>
     </td>
   </tr>
   <tr>
     <td>
       <pre lang="java">
-doSomething(a, b, c, d); 
-      </pre>
+doSomething(a, b, c, d);</pre>
     </td>
     <td>
       <pre lang="java">
-doSomething(a,b,c,d);
-      </pre>
+doSomething(a,b,c,d);</pre>
     </td>
   </tr>
   <tr>
     <td>
       <pre lang="java">
-case 100 :
-      </pre>
+case 100 :</pre>
     </td>
     <td>
       <pre lang="java">
-case 100:
-      </pre>
+case 100:</pre>
     </td>
   </tr>
   <tr>
     <td>
       <pre lang="java">
-for (i = 0; i < 10; i++) {
-      </pre>
+for (i = 0; i < 10; i++) {</pre>
     </td>
     <td>
       <pre lang="java">
-for(i=0;i<10;i++){
-      </pre>
+for(i=0;i<10;i++){</pre>
     </td>
   </tr>
 </table>
@@ -963,24 +926,21 @@ private int nConnections;
 while (true) {
     // Do something
     something();
-} 
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
 while (true) {
     // Do something
        something();
-}
-      </pre>
+}</pre>
     </td>
     <td>
       <pre lang="java">
 while (true) {
     // Do something
          something();
-}
-      </pre>
+}</pre>
     </td>
   </tr>
 </table>
