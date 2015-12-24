@@ -257,9 +257,9 @@ totalSum = a + b + c
 setText("Long line split"
          + "into two parts.");
 method(param1,
-           object.method()
-                 .method2(),
-           param3);
+       object.method()
+           .method2(),
+       param3);
 ```      
 
 - A method or constructor name stays attached to the open parenthesis `(` that follows it.
