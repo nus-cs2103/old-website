@@ -330,13 +330,13 @@ table.bordered tr > th {
     font-weight: bold;
  }
 
-.highlighted,
-.highlighted-darktext {
+.highlighted{
     background-color: #ffff00;
 }
 
 .highlighted-darktext {
-    color: #2b2b2b;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .important {
