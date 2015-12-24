@@ -907,6 +907,7 @@ private int nConnections;
   <tr>
     <th align="center">Good</th>
     <th align="center">Bad</th>
+    <th align="center">Bad</th>
   </tr>
   <tr>
     <td>
@@ -922,6 +923,14 @@ while (true) {
 while (true) {
     // Do something
        something();
+}
+      </pre>
+    </td>
+    <td>
+      <pre lang="java">
+while (true) {
+    // Do something
+         something();
 }
       </pre>
     </td>
