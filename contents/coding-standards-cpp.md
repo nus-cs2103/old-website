@@ -1,5 +1,5 @@
 # Coding Standards for C++ (Extract)
-<table>
+<table id="borderless">
     <tr>
         <td width="700px">
             <li><a href="#naming-conventions">Naming Conventions</a>
@@ -201,53 +201,81 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
 
 4. __Indent comments__ at the same level as the code.
 
-    __Good__:
-    ```cpp
+    <table>
+      <tr>
+        <th align="center">Good</th>
+      </tr>
+      <tr>
+        <td>
+          <pre lang="cpp">
     // Components must be initialized before they are used.
-    initializeComponent();
-    ```
-
-    __Bad__:
-    ```cpp
+    initializeComponent();</pre>
+        </td> 
+      <tr>
+        <th align="center">Bad</th>
+      </tr>
+        <td>
+          <pre lang="cpp">
         // Components must be initialized before they are used.
-    initializeComponent();
-    ```
+    initializeComponent();</pre>
+        </td>
+      </tr>
+    </table>
 
 ## Comments
 1. Use `//` for all code __comments__ (even for multiple line comments; the main reason being that if you ever need to comment out a large chunk of codes for testing, debugging or whatever, you could easily use the pair `/*` and `*/` had you been using `//` for all comments, whereas you couldn’t do that had you used `/*` and `*/` for your code comments.
 
-    __Good__:
-    ```cpp
+    <table>
+      <tr>
+        <th align="center">Good</th>
+      </tr>
+      <tr>
+        <td>
+          <pre lang="cpp">
     // The following code runs best when the values in
     // array x and those in y are highly correlated.
-    // The performance is extremely poor when they are not.
-    ```
-
-    __Bad__:
-    ```cpp
+    // The performance is extremely poor when they are not.</pre>
+        </td> 
+      <tr>
+        <th align="center">Bad</th>
+      </tr>
+        <td>
+          <pre lang="cpp">
     /*
         The following code runs best when the values in
         array x and those in y are highly correlated.
         The performance is extremely poor when they are not.
-    */
-    ```
+    */</pre>
+        </td>
+      </tr>
+    </table>
 
 2. Provide relevant comments for __important functions__.
 
-    __Good__:
-    ```cpp
+    <table>
+      <tr>
+        <th align="center">Good</th>
+      </tr>
+      <tr>
+        <td>
+          <pre lang="cpp">
     // This function garbage collects objects created
     // through the factory. Use it with caution, as it
-    // may cause performance hiccups.
-    ```
-
-    __Bad__: useless comment for not important functions, which are often self-explanatory
-    ```cpp
+    // may cause performance hiccups.</pre>
+        </td> 
+      <tr>
+        <th align="center">Bad</th>
+      </tr>
+        <td>
+          <pre lang="cpp">
+    // Useless comment for not important functions, which are often self-explanatory
     // This function increments the value of x by 1
     void inc() {
         x++;
-    }
-    ```
+    }</pre>
+        </td>
+      </tr>
+    </table>
 
 3. Write comment for __every class definition__ to describe what it is for, and how it should be used.
 
@@ -272,8 +300,13 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     - Whether any of the arguments can be NULL.
     - If there are any performance implications of how a function is used.
 
-    __Good__:
-    ```cpp
+    <table>
+      <tr>
+        <th align="center">Good</th>
+      </tr>
+      <tr>
+        <td>
+          <pre lang="cpp">
     // Returns an iterator for this table.  It is the client's
     // responsibility to delete the iterator when it is done with it,
     // and it must not use the iterator once the GargantuanTable object
@@ -288,14 +321,18 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     // If you are going to immediately seek to another place in the
     // returned iterator, it will be faster to use NewIterator()
     // and avoid the extra seek.
-    Iterator* getIterator() const;
-    ```
-
-    __Bad__:
-    ```cpp
+    Iterator* getIterator() const;</pre>
+        </td> 
+      <tr>
+        <th align="center">Bad</th>
+      </tr>
+        <td>
+          <pre lang="cpp">
     // Returns true if the table cannot hold any more entries.
-    bool isTableFull();
-    ```
+    bool isTableFull();</pre>
+        </td>
+      </tr>
+    </table>
 
     > Hint: If you are looking for a way to auto-generate online HTML documentation based on the comments written in code, try [Doxygen](http://www.stack.nl/~dimitri/doxygen/). The comment standard used is similar to Javadoc.
 
@@ -320,20 +357,29 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
  
 2. If there are too many parameters to put in one line, or if you want to comment on the parameters, put __one parameter per line__, each indented a tab away from the left margin.
 
-    __Good__:
-    ```cpp
+    <table>
+      <tr>
+        <th align="center">Good</th>
+      </tr>
+      <tr>
+        <td>
+          <pre lang="cpp">
     bool receive(
         Channel c,                 //comment....
         Request r,                 //comment....
         int &size,                 //comment....
         int &congestion_window,    //comment....
-        char *buf);                //comment....
-    ```
-    
-    __Bad__:
-    ```cpp
-    bool receive(int &size, Channel c, Request r, int &congestion_window, char *buf);
-    ```
+        char *buf);                //comment....</pre>
+        </td> 
+      <tr>
+        <th align="center">Bad</th>
+      </tr>
+        <td>
+          <pre lang="cpp">
+    bool receive(int &size, Channel c, Request r, int &congestion_window, char *buf);</pre>
+        </td>
+      </tr>
+    </table>
 
 3. When creating a series of methods that accept the same parameters, do use a __consistent order__ across the functions.
     <table>
