@@ -381,7 +381,7 @@ table.bordered tr > th {
     width:100%;
 }
 
-.main-category {
+.main-category h2 {
     border-bottom:1px solid #ccd8e2;
     clear:both;
     display:block;

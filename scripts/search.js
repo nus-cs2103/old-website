@@ -1,160 +1,48 @@
+searchData = [];
 
-
-function fetchSearchData(callback) {
-  $.getJSON('../contents/search-data.json', function(data) {
-    callback(data);
+function addCategoryExpandAndCollapseEventListener() {
+  $(".category > a").on('click', function() {
+    $(this).siblings().find('.glyphicon').toggleClass('glyphicon-chevron-down');
+    $(this).siblings().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).siblings().last().toggle('blind');
   });
 }
 
-function convertToSlug(text) {
-    return text
-        .toLowerCase()
-        .replace(/ /g,'-')
-        .replace(/[^\w-]+/g,'')
-        ;
+// Get slug string
+function getSlug(text) {
+  return text.
+        toLowerCase().
+        replace(/ /g,'-').
+        replace(/[^\w-]+/g,'');
 }
 
-function insertSlugToData(data) {
+// Add additional attribute to data
+function enhanceData(data) {
   for (var i in data) {
-    if (data[i].slug == null) {
-      data[i].slug = convertToSlug(data[i].text.trim());
+    data[i].slug = getSlug(data[i].text);
+    data[i].selector = $('#word-' + data[i].slug);
+    data[i].childSelector = data[i].selector.children().last();
+    data[i].keywords = data[i].text;
+    if (data[i].alias) {
+      data[i].keywords += ' ' + data[i].alias;
     }
   }
   return data;
 }
 
 function buildCategoryTree(data) {
-  var adjacencyList = {};
-  var parent, i;
-  for (i in data) {
-    parent = data[i].parent;
-    if (adjacencyList[parent] == null) {
-      adjacencyList[parent] = [];
+  var tree = {};
+
+  data.forEach(function(entry) {
+    if (!tree[entry.slug]) {
+      tree[entry.slug] = [];
     }
-    adjacencyList[parent].push(data[i]);
-  }
-  return adjacencyList;
-}
-
-function addKeyword(parentSelector, keyword) {
-  var listSelector = $('<li class="keyword" id="word-' + keyword.slug + '"></li>');
-  var selector = $('<div class="references"></div>');
-  var titleSelector = $('<a href="#" class="close-link label-text"></a>');
-  var paperclipSelector = $('<span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>');
-  var textSelector = $(document.createTextNode(' ' + keyword.text));
-  var emptySelector = $('<span class="glyphicon glyphicon-none" aria-hidden="true"></span>');
-
-  titleSelector.append(paperclipSelector);
-  titleSelector.append(textSelector);
-  titleSelector.append('<br/>');
-  titleSelector.append(emptySelector);
-
-  selector.append(titleSelector);
-
-  referenceList = keyword.references;
-  var i, reference;
-  for(i in referenceList) {
-    reference = referenceList[i];
-    selector.append('<a href="' + reference.hyperlink + 
-                    '" class="reference"><span class="label label-' + reference.type + '">' + 
-                    reference.text + '</span></a> &nbsp');
-  }
-
-  listSelector.append(selector);
-
-  parentSelector.append(listSelector);
-}
-
-function addCategory(parentSelector, category) {
-  var listSelector = $('<li id="word-' + category.slug + '" class="word category"></li>');
-  var selector = $('<a href="#" class="close-link label-text"></a>');
-  var expandedSelector = $('<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>');
-  var textSelector = $(document.createTextNode(' ' + category.text));
-
-  selector.append(expandedSelector);
-  selector.append(textSelector);
-
-  listSelector.append(selector);
-  parentSelector.append(listSelector);
-}
-
-function addMainCategory(parentSelector, category) {
-  var selector = $('<h2 id="word-' + category.slug + '" class="label-text"></h2>');
-  var starSelector = $('<span class="glyphicon glyphicon-star" aria-hidden="true"></span>');
-  var textSelector = $(document.createTextNode(' ' + category.text));
-  
-  selector.append(starSelector);
-  selector.append(textSelector);
-  selector.addClass('main-category');
-
-  parentSelector.append(selector);
-}
-
-function displayCategory(parentSelector, categoryTree, category) {
-  // not a main category if parent is unordered list
-  if (parentSelector.is("ul")) {
-    // keyword if references not empty
-    if (category.references != null) {
-      addKeyword(parentSelector, category);
-    } else {
-      addCategory(parentSelector, category);
+    if (!tree[entry.parent]) {
+      tree[entry.parent] = [];
     }
-  } else {
-    addMainCategory(parentSelector, category);
-  }
-
-  var selector = $("<ul></ul>");
-  if (parentSelector.is("ul") && category.references == null) {
-    // only add on category
-    selector.append($("<div class='separator'></div>"));
-  }
-  selector.addClass('category-list nav');
-  parentSelector.append(selector);
-
-  var i;
-  var categories = categoryTree[category.slug];
-  for (i in categories) {
-    displayCategory(selector, categoryTree, categories[i]);
-  }
-}
-
-function displayCategories(selector, categoryTree, categories) {
-  var i;
-  for (i in categories) {
-    displayCategory(selector, categoryTree, categories[i]);
-  }
-}
-
-function addCategoryExpandAndCollapseEventListener() {
-  $(".category").on('click', function() {
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-down');
-    $(this).children().find('.glyphicon').toggleClass('glyphicon-chevron-right');
-    $(this).next().toggle('blind');
+    tree[entry.parent].push(entry);
   });
-}
-
-function expandAndShow(parentSelector) {
-  var selector;
-  if (parentSelector != null) {
-    selector = $(parentSelector).next();
-  } else {
-    selector = $(document);
-  }
-  selector.find(" .category").each(function() {
-    $(this).children().find('.glyphicon').addClass('glyphicon-chevron-down');
-    $(this).children().find('.glyphicon').removeClass('glyphicon-chevron-right');
-    $(this).show();
-    $(this).next().show();
-  });
-
-  selector.find(" .keyword").each(function() {
-    $(this).show();
-  })
-
-  selector.find(" .main-category").each(function() {
-    $(this).show();
-    $(this).next().show();
-  })
+  return tree;
 }
 
 function createSearchIndex(data) {
@@ -163,71 +51,61 @@ function createSearchIndex(data) {
     this.ref('slug');
   });
 
-  index.pipeline.remove(index.stemmer)
-
-  for (var i in data) {
-    keywords = '';
-    if (data[i].alias != null) {
-      keywords = data[i].alias.join(' ');
-    }
-    keywords += ' ' + data[i].text;
-
-    data[i].keywords = keywords;
-
-    index.add(data[i]);
-  }
-
+  data.forEach(function(entry) {
+    index.add(entry);
+  });
   return index;
 }
 
-function constructSearch(callback) {
-  fetchSearchData(function(data) {
-    var data = insertSlugToData(data);
-    var categoryTree = buildCategoryTree(data);
+function initializeSearchData(data, callback) {
+  data = enhanceData(data);
+  callback(createSearchIndex(data), buildCategoryTree(data));
+}
 
-    // First level categories
-    var mainCategories = categoryTree[""];
-    var length = mainCategories.length;
-    var firstColumnLength = Math.trunc((length+1)/2);
-    var secondColumnLength = length - firstColumnLength;
+function expandOne(selector) {
+  selector.show();
+  selector.children().last().show();
+  if (selector.hasClass('category')) {
+    selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
+    selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
+  }
+}
 
-    var firstColumnCategories = mainCategories.slice(0, firstColumnLength);
-    var secondColumnCategories = mainCategories.slice(firstColumnLength, length);
+function expandChildren(selector) {
+  selector.find(" .category, .main-category").each(function() {
+    expandOne($(this));
+  });
 
-    displayCategories($(".keyword-group-column:eq(0)"), categoryTree, firstColumnCategories);
-    displayCategories($(".keyword-group-column:eq(1)"), categoryTree, secondColumnCategories);
-    
-    addCategoryExpandAndCollapseEventListener();
-
-    callback(createSearchIndex(data), categoryTree);
+  selector.find(" .keyword").each(function() {
+    $(this).show();
   });
 }
 
-function showInResults(slug, results, categoryTree) {
-
-  var selector = $('#word-' + slug);
-  var i;
-  var isInResults = (results.indexOf(slug) > -1);
+function hideNotInResults(word, results, categoryTree) {
+  var selector = word.selector;
+  var childSelector = word.childSelector;
+  var isInResults = (results.indexOf(word.slug) > -1);
 
   var isChildInResults = false;
-  var children = categoryTree[slug];
-  for(i in children) {
-    isChildInResults |= showInResults(children[i].slug, results, categoryTree);
-  }
+  categoryTree[word.slug].forEach(function(child) {
+    isChildInResults |= hideNotInResults(child, results, categoryTree);
+  });
 
-  if (isInResults) {
-    selector.show();
-    expandAndShow('#word-' + slug);
-    selector.next().show();
-    selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
-    selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
-  } else {
-    if (isChildInResults) {
-      selector.show();
-      selector.next().show();
+  if (selector) {
+    if (isInResults) {
+      // If this word is in results, expand everything
+      expandChildren(selector);
+      expandOne(selector);
     } else {
-      selector.hide();
-      selector.next().hide();
+      if (isChildInResults) {
+        // If this word is not in results but its child is then show this
+        selector.show();
+        childSelector.show();
+      } else {
+        // Otherwise, hide the whole tree
+        selector.hide();
+        childSelector.hide();
+      }
     }
   }
 
@@ -235,68 +113,157 @@ function showInResults(slug, results, categoryTree) {
 }
 
 function getBaseWord(index, text) {
+  // Use lunr.js stemmer to get base word
   return index.pipeline.run(lunr.tokenizer([text]))[0];
 }
 
 function highlightInResults(word, tokens, index, categoryTree) {
+  var selector = word.selector;
 
-  var selector = $('#word-' + word.slug);
-
-  if (selector.is(":visible")) {
-    if (word.slug !== '') {
-      var wordTokens = word.text.trim().split(' ');
-      wordTokens.forEach(function(token) {
-        var baseToken = getBaseWord(index, token);
-        if (tokens.indexOf(baseToken) > -1) {
-          selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
-        } else {
-          var existInPrefix = false;
-          tokens.forEach(function(resultToken) {
-            existInPrefix |= token.toLowerCase().startsWith(resultToken);
-          });
-          if (existInPrefix) {
-            selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
-          }
-        }
+  if (word.text) {
+    // Split text into tokens
+    var wordTokens = word.text.trim().split(' ');
+    wordTokens.forEach(function(token) {
+      // Get base word of each token
+      var baseToken = getBaseWord(index, token);
+      var isExistInPrefix = false;
+      // Check if this a prefix of result token
+      tokens.forEach(function(resultToken) {
+        isExistInPrefix |= token.toLowerCase().startsWith(resultToken);
       });
-    }
-  }
 
-  if (categoryTree[word.slug]) {
-    categoryTree[word.slug].forEach(function(child) {
-      highlightInResults(child, tokens, index, categoryTree);
+      // Highlight
+      if (tokens.indexOf(baseToken) > -1 || isExistInPrefix) {
+        selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
+      }
     });
   }
+
+  // Also highlight its children
+  categoryTree[word.slug].forEach(function(child) {
+    highlightInResults(child, tokens, index, categoryTree);
+  });
 }
+
+function compileSearchDirectives() {
+  // Render directives using angular.js
+  var searchDirectives = angular.module('searchDirectives', []);
+  searchDirectives.
+    directive('mainCategory', function () {
+      return {
+        restrict: 'E',
+        scope: true,
+        replace: true,
+        transclude: true,
+        templateUrl: 'search/main-category.html',
+        link: function(scope, element, attrs) {
+          scope.text = attrs.text;
+          scope.slug = getSlug(attrs.text);
+          searchData.push({
+            text: scope.text,
+            parent: "",
+            type: "main-category"
+          });
+        }
+      };
+    }).
+    directive('category', function () {
+      return {
+        restrict: 'E',
+        scope: true,
+        replace: true,
+        transclude: true,
+        templateUrl: 'search/category.html',
+        link: function(scope, element, attrs) {
+          scope.text = attrs.text;
+          scope.slug = getSlug(attrs.text);
+          scope.$parent.$parent.$watch('slug', function() {
+            searchData.push({
+              text: scope.text,
+              parent: scope.$parent.$parent.slug,
+              type: "category"
+            });
+          });
+        }
+      };
+    }).
+    directive('keyword', function () {
+      return {
+        restrict: 'E',
+        scope: true,
+        replace: true,
+        transclude: true,
+        templateUrl: 'search/keyword.html',
+        link: function(scope, element, attrs) {
+          scope.text = attrs.text;
+          scope.slug = getSlug(attrs.text);
+          scope.$parent.$parent.$watch('slug', function() {
+            searchData.push({
+              text: scope.text,
+              parent: scope.$parent.$parent.slug,
+              type: "keyword"
+            });
+          });
+        }
+      };
+    }).
+    directive('reference', function () {
+      return {
+        restrict: 'E',
+        scope: true,
+        replace: true,
+        transclude: true,
+        templateUrl: 'search/reference.html',
+        link: function(scope, element, attrs) {
+          scope.text = attrs.text;
+          scope.src = attrs.src;
+          scope.type = attrs.type;
+        }
+      };
+    });
+}
+
+function handleSearchEvent(index, categoryTree) {
+  $('#search-box').keyup(function() {
+    var query = $(this).val();
+    expandChildren($(document));
+    $(document).unhighlight();
+    if (query !== '') {
+      // Do OR search
+      var queryTokens = query.trim().split(' ');
+      var tokens = index.pipeline.run(lunr.tokenizer(query));
+
+      // Combine search results for each token
+      var results = [];
+      queryTokens.forEach(function(token) {
+        var result = index.search(token);
+        result.forEach(function(entry) {
+          results.push(entry.ref);
+        });
+      });
+
+      // Hide keyword not in results
+      hideNotInResults({ slug: "" }, results, categoryTree);
+      // Highlight keyword in results
+      highlightInResults({ slug: "" }, tokens, index, categoryTree);
+    }
+  });
+}
+
+compileSearchDirectives();
 
 $(document).ready(function() {
 
-  constructSearch(function(index, categoryTree) {
-
-    $('#search-box').keyup(function() {
-      var query = $(this).val();
-      expandAndShow();
-      $(document).unhighlight();
-      if (query !== '') {
-        var queryList = query.trim().split(' ');
-        var tokens = index.pipeline.run(lunr.tokenizer(query));
-
-        var results, i, j;
-        var combinedResults = [];
-        for (i in queryList) {
-          results = index.search(queryList[i]);
-          for (j in results) {
-            combinedResults.push(results[j].ref);
-          }
-        }
-        showInResults("", combinedResults, categoryTree);
-        highlightInResults({ slug: "" }, tokens, index, categoryTree);
-      }
-    });
+  // Wait for 20ms to let angular finish compiling directives
+  setTimeout(function() {
+    addCategoryExpandAndCollapseEventListener();
+    initializeSearchData(searchData, handleSearchEvent);
 
     $('.close-link').click( function(e) {
       e.preventDefault();
     });
-  });  
+  }, 20);
 
 });
+
+
