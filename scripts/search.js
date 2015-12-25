@@ -23,8 +23,8 @@ function enhanceData(data) {
     data[i].selector = $('#word-' + data[i].slug);
     data[i].childSelector = data[i].selector.children().last();
     data[i].keywords = data[i].text;
-    if (data[i].alias) {
-      data[i].keywords += ' ' + data[i].alias;
+    if (data[i].related) {
+      data[i].keywords += ' ' + data[i].related;
     }
   }
   return data;
@@ -160,7 +160,7 @@ function compileSearchDirectives() {
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
           searchData.push({
-            text: scope.text,
+            text: attrs.text,
             parent: "",
             type: "main-category"
           });
@@ -179,7 +179,8 @@ function compileSearchDirectives() {
           scope.slug = getSlug(attrs.text);
           scope.$parent.$parent.$watch('slug', function() {
             searchData.push({
-              text: scope.text,
+              text: attrs.text,
+              related: attrs.related,
               parent: scope.$parent.$parent.slug,
               type: "category"
             });
@@ -199,7 +200,8 @@ function compileSearchDirectives() {
           scope.slug = getSlug(attrs.text);
           scope.$parent.$parent.$watch('slug', function() {
             searchData.push({
-              text: scope.text,
+              text: attrs.text,
+              related: attrs.related,
               parent: scope.$parent.$parent.slug,
               type: "keyword"
             });
