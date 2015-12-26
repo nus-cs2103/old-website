@@ -226,35 +226,50 @@ function compileSearchDirectives() {
     });
 }
 
+function searchText(query, index, categoryTree) {
+  // Reset previous search
+  expandChildren($(document));
+  $(document).unhighlight();
+
+  if (query == '') {
+    return;
+  }
+  // Do OR search
+  var queryTokens = getWords(query);
+  var tokens = index.pipeline.run(lunr.tokenizer(query));
+
+  // Combine search results for each token
+  var results = [];
+  queryTokens.forEach(function(token) {
+    var result = index.search(token);
+    result.forEach(function(entry) {
+      results.push(entry.ref);
+    });
+  });
+
+  // Hide keyword not in results
+  hideNotInResults({ slug: "" }, results, categoryTree);
+  // Highlight keyword in results
+  highlightInResults({ slug: "" }, tokens, index, categoryTree);
+}
+
 function handleSearchEvent(index, categoryTree) {
+  var timeoutReference;
+
   $('#search-box').keyup(function(e) {
     var query = $(this).val();
 
-    if (query == '') {
-      expandChildren($(document));
-      $(document).unhighlight();
+    if (timeoutReference) {
+      clearTimeout(timeoutReference);
+    }
 
-    } else if (e.which == 13 || e.which == 32) { // If enter or space key pressed
-      expandChildren($(document));
-      $(document).unhighlight();
-      
-      // Do OR search
-      var queryTokens = getWords(query);
-      var tokens = index.pipeline.run(lunr.tokenizer(query));
+    if (query == '' || e.which == 13 || e.which == 32) { // If empty query or enter key or space key pressed
+      searchText(query, index, categoryTree);
 
-      // Combine search results for each token
-      var results = [];
-      queryTokens.forEach(function(token) {
-        var result = index.search(token);
-        result.forEach(function(entry) {
-          results.push(entry.ref);
-        });
-      });
-
-      // Hide keyword not in results
-      hideNotInResults({ slug: "" }, results, categoryTree);
-      // Highlight keyword in results
-      highlightInResults({ slug: "" }, tokens, index, categoryTree);
+    } else { // If no activity in 0.5s, search current text
+      timeoutReference = setTimeout(function() {
+                           searchText(query, index, categoryTree);
+                         }, 500);
     }
   });
 }
