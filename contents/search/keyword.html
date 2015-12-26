@@ -1,12 +1,21 @@
 <li id="{{ 'word-' + slug }}" class="keyword">
-  <div class="references">
-    <a href="#" class="close-link label-text">
-      <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> {{ text }}<br>
-      <span class="glyphicon glyphicon-none" aria-hidden="true"></span>
-    </a>
-    <span class="ng-transclude">
+  <table class="references">
+    <tr>
+      <td style="width:15px">
+        <a href="#" class="close-link label-text">
+          <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+        </a>
+      </td>
+      <td style="padding-left:5px">
+        <a href="#" class="close-link label-text">
+          {{ text }}
+        </a>
+        <br/>
+        <span class="ng-transclude">
 
-    </span>
-  </div>
+        </span>
+      </td>
+    </tr>
+  </table>
   <ul class="category-list nav"></ul>
 </li>
