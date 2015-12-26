@@ -173,16 +173,10 @@ function checkIfAllComponentsChecked() {
     return isAllChecked;
 }
 
-function loadContent(week) {
-    $.ajax({
-        type: 'GET',
-        url: 'week' + week + '.html',
-        error: function() {
-
-        },
-        success: function(data) {
+function loadContent(week){
+    $('#content-week' + week).load('week' + week + '.html #fragment', function(response, status, xhr) {
+        if(status == 'success'){            
             var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
-            $('#content-week' + week).html(data);
             makeAccordion('.content-week' + week);
             for (var i in components) {
                 var component = components[i];
@@ -195,11 +189,26 @@ function loadContent(week) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
+        } else if (status == 'error'){
+            console.log("fragment week " + week + " load error");
+        } else {
+            console.log(status);
         }
-    });
+    })
 }
 
 $(document).ready(function() {
+    if(typeof _week_no !== 'undefined'){        
+        var week = _week_no;
+        var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
+        makeAccordion('.content-week' + week);
+        for (var i in components) {
+            var component = components[i];
+            makeAccordion('.' + component + '-week' + week);
+            addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
+        }
+        return;
+    }
 
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
