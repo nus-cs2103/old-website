@@ -232,11 +232,17 @@ function compileSearchDirectives() {
 }
 
 function handleSearchEvent(index, categoryTree) {
-  $('#search-box').keyup(function() {
+  $('#search-box').keyup(function(e) {
     var query = $(this).val();
-    expandChildren($(document));
-    $(document).unhighlight();
-    if (query !== '') {
+
+    if (query == '') {
+      expandChildren($(document));
+      $(document).unhighlight();
+
+    } else if (e.which == 13 || e.which == 32) { // If enter or space key pressed
+      expandChildren($(document));
+      $(document).unhighlight();
+      
       // Do OR search
       var queryTokens = getWords(query);
       var tokens = index.pipeline.run(lunr.tokenizer(query));
