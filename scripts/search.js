@@ -132,15 +132,10 @@ function highlightInResults(word, tokens, index, categoryTree) {
     wordTokens.forEach(function(token) {
       // Get base word of each token
       var baseToken = getBaseWord(index, token);
-      var isExistInPrefix = false;
-      // Check if this a prefix of result token
-      tokens.forEach(function(resultToken) {
-        isExistInPrefix |= token.toLowerCase().startsWith(resultToken);
-      });
 
       // Highlight
-      if (tokens.indexOf(baseToken) > -1 || isExistInPrefix) {
-        selector.find('.label-text').addBack('.label-text').highlight(token, { wordsOnly: true });
+      if (tokens.indexOf(baseToken) > -1) {
+        selector.find('.label-text').addBack('.label-text').highlight(token);
       }
     });
   }
@@ -276,7 +271,10 @@ $(document).ready(function() {
     $('.close-link').click( function(e) {
       e.preventDefault();
     });
+
+    // Prepend horizontal line on every category
     $('.category > .category-list').prepend("<div class='separator'></div>");
+
   }, 20);
 
 });
