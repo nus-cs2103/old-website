@@ -32,9 +32,6 @@ function enhanceData(data) {
     if (data[i].related) {
       data[i].keywords += ' ' + getWords(data[i].related).join(' ');
     }
-    if (data[i].label) {
-      data[i].keywords += ' ' + getWords(data[i].label).join(' ');
-    }
   }
   return data;
 }
@@ -169,7 +166,6 @@ function compileSearchDirectives() {
           
           searchData.push({
             text: attrs.text,
-            label: attrs.label,
             parent: "",
             type: "main-category"
           });
