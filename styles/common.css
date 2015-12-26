@@ -381,21 +381,24 @@ table.bordered tr > th {
     width:100%;
 }
 
-.main-category h2 {
+.main-category > table {
     border-bottom:1px solid #ccd8e2;
     clear:both;
     display:block;
-    font-weight:bold;
-    font-size:15px;
-    color:#697277;
     padding-left:25px;
     padding-bottom:1px;
-    line-height:26px;
     margin-bottom:5px;
     margin-top:5px;
 }
 
-.category {
+.main-category h2 {
+    line-height:26px;
+    font-weight:bold;
+    font-size:15px;
+    color:#697277;
+}
+
+.category, .keyword {
     border-right: none !important;
     border-left: none !important;
     list-style: none;
@@ -404,26 +407,8 @@ table.bordered tr > th {
     display: block;
 }
 
-.category a {
+.category a, .keyword a {
     color: #337ab7 !important;
-}
-
-.references {
-    clear:both;
-    display:block;
-    padding-left:15px;
-    margin-bottom:5px;
-    margin-top:5px;
-    padding-top:7px;
-    padding-bottom:7px;
-}
-
-.references a {
-    color: #337ab7 !important;
-}
-
-.references:hover {
-    background:#EEEEEE;
 }
 
 .category-list {

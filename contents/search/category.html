@@ -1,9 +1,15 @@
 <li id="{{ 'word-' + slug }}" class="category">
-  <a href="#" class="close-link label-text">
-    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
-    {{ text }}
+  <a href="#" class="close-link">
+    <table>
+      <tr>
+        <td style="width:15px">
+          <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        </td>
+        <td style="padding-left:5px" class="label-text">
+          {{ text }}
+        </td>
+      </tr>
+    </table>
   </a>
-  <ul class="category-list nav ng-transclude">
-    
-  </ul>
+  <ul class="category-list nav ng-transclude"></ul>
 </li>

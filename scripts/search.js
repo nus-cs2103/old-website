@@ -32,6 +32,9 @@ function enhanceData(data) {
     if (data[i].related) {
       data[i].keywords += ' ' + getWords(data[i].related).join(' ');
     }
+    if (data[i].label) {
+      data[i].keywords += ' ' + getWords(data[i].label).join(' ');
+    }
   }
   return data;
 }
@@ -160,8 +163,12 @@ function compileSearchDirectives() {
         link: function(scope, element, attrs) {
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
+          scope.label = attrs.label;
+          scope.type = attrs.type;
+          
           searchData.push({
             text: attrs.text,
+            label: attrs.label,
             parent: "",
             type: "main-category"
           });
@@ -178,6 +185,7 @@ function compileSearchDirectives() {
         link: function(scope, element, attrs) {
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
+
           scope.$parent.$parent.$watch('slug', function() {
             searchData.push({
               text: attrs.text,
@@ -200,6 +208,7 @@ function compileSearchDirectives() {
           scope.text = attrs.text;
           scope.src = attrs.src;
           scope.slug = getSlug(attrs.text);
+
           scope.$parent.$parent.$watch('slug', function() {
             searchData.push({
               text: attrs.text,

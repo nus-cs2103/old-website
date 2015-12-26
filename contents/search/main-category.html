@@ -1,9 +1,17 @@
 <div id="{{ 'word-' + slug }}" class="main-category">
-  <h2 class="label-text">
-    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 
-    {{ text }}
-  </h2>
-  <ul class="category-list nav ng-transclude">
-    
-  </ul>
+  <table>
+    <tr>
+      <td style="width:15px">
+        <h2>
+          <span class="label label-{{ type }}">{{ label }}</span>
+        </h2>
+      </td>
+      <td style="padding-left:5px" class="label-text">
+        <h2>
+          <span class="label-text">{{ text }}</span>
+        </h2>
+      </td>
+    </tr>
+  </table>
+  <ul class="category-list nav ng-transclude"></ul>
 </div>

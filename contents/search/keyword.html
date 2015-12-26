@@ -1,17 +1,15 @@
 <li id="{{ 'word-' + slug }}" class="keyword">
-  <table class="references">
-    <tr>
-      <td style="width:15px">
-        <a href="#" class="close-link label-text">
+  <a href="{{ src }}">
+    <table>
+      <tr>
+        <td style="width:15px">
           <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-        </a>
-      </td>
-      <td style="padding-left:5px">
-        <a href="{{ src }}" class="label-text">
+        </td>
+        <td style="padding-left:5px" class="label-text">
           {{ text }}
-        </a>
-      </td>
-    </tr>
-  </table>
+        </td>
+      </tr>
+    </table>
+  </a>
   <ul class="category-list nav ng-transclude"></ul>
 </li>
