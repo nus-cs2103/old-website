@@ -1,17 +1,19 @@
 <div id="{{ 'word-' + slug }}" class="main-category">
-  <table>
-    <tr>
-      <td style="width:15px">
-        <h2>
-          <span class="label label-{{ type }}">{{ label }}</span>
-        </h2>
-      </td>
-      <td style="padding-left:5px" class="label-text">
-        <h2>
-          <span class="label-text">{{ text }}</span>
-        </h2>
-      </td>
-    </tr>
-  </table>
+  <a href="{{ src }}">
+    <table>
+      <tr>
+        <td style="width:15px">
+          <h2>
+            <span class="label label-{{ type }}">{{ label }}</span>
+          </h2>
+        </td>
+        <td style="padding-left:5px" class="label-text">
+          <h2>
+            <span class="label-text">{{ text }}</span>
+          </h2>
+        </td>
+      </tr>
+    </table>
+  </a>
   <ul class="category-list nav ng-transclude"></ul>
 </div>

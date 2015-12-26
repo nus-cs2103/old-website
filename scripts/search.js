@@ -165,6 +165,7 @@ function compileSearchDirectives() {
           scope.slug = getSlug(attrs.text);
           scope.label = attrs.label;
           scope.type = attrs.type;
+          scope.src = attrs.src;
           
           searchData.push({
             text: attrs.text,

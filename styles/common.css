@@ -381,7 +381,7 @@ table.bordered tr > th {
     width:100%;
 }
 
-.main-category > table {
+.main-category > a > table {
     border-bottom:1px solid #ccd8e2;
     clear:both;
     display:block;
@@ -422,7 +422,9 @@ table.bordered tr > th {
 }
 
 .category-list a:hover,
-.category-list a:focus {
+.category-list a:focus,
+.main-category a:hover,
+.main-category a:focus {
     text-decoration: none;
 }
 
