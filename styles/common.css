@@ -436,11 +436,6 @@ table.bordered tr > th {
     box-sizing: border-box;
 }
 
-.glyphicon-none:before {
-    content: "\e094";
-    color: transparent !important;
-}
-
 .category-list a:hover,
 .category-list a:focus {
     text-decoration: none;
@@ -450,4 +445,6 @@ table.bordered tr > th {
     border-top:1px solid #ccd8e2;
 }
 
-.highlight { background-color: yellow; }
+.highlight {
+    background-color: yellow;
+}

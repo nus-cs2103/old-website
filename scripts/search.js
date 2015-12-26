@@ -2,8 +2,8 @@ searchData = [];
 
 function addCategoryExpandAndCollapseEventListener() {
   $(".category > a").on('click', function() {
-    $(this).siblings().find('.glyphicon').toggleClass('glyphicon-chevron-down');
-    $(this).siblings().find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-down');
+    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-right');
     $(this).siblings().last().toggle('blind');
   });
 }
@@ -25,7 +25,6 @@ function getSlug(text) {
 function enhanceData(data) {
   for (var i in data) {
     data[i].cleanText = getWords(data[i].text).join(' ');
-    console.log(data[i].text + ' ' + data[i].cleanText);
     data[i].slug = getSlug(data[i].text);
     data[i].selector = $('#word-' + data[i].slug);
     data[i].childSelector = data[i].selector.children().last();
@@ -271,6 +270,7 @@ $(document).ready(function() {
     $('.close-link').click( function(e) {
       e.preventDefault();
     });
+    $('.category > .category-list').prepend("<div class='separator'></div>");
   }, 20);
 
 });
