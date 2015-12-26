@@ -198,6 +198,7 @@ function compileSearchDirectives() {
         templateUrl: 'search/keyword.html',
         link: function(scope, element, attrs) {
           scope.text = attrs.text;
+          scope.src = attrs.src;
           scope.slug = getSlug(attrs.text);
           scope.$parent.$parent.$watch('slug', function() {
             searchData.push({
@@ -207,20 +208,6 @@ function compileSearchDirectives() {
               type: "keyword"
             });
           });
-        }
-      };
-    }).
-    directive('reference', function () {
-      return {
-        restrict: 'E',
-        scope: true,
-        replace: true,
-        transclude: true,
-        templateUrl: 'search/reference.html',
-        link: function(scope, element, attrs) {
-          scope.text = attrs.text;
-          scope.src = attrs.src;
-          scope.type = attrs.type;
         }
       };
     });
