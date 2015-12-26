@@ -8,6 +8,11 @@ function addCategoryExpandAndCollapseEventListener() {
   });
 }
 
+// Get list of words in text
+function getWords(text) {
+  return text.trim().match(/[a-z0-9']+/gi);
+}
+
 // Get slug string
 function getSlug(text) {
   return text.
@@ -19,12 +24,14 @@ function getSlug(text) {
 // Add additional attribute to data
 function enhanceData(data) {
   for (var i in data) {
+    data[i].cleanText = getWords(data[i].text).join(' ');
+    console.log(data[i].text + ' ' + data[i].cleanText);
     data[i].slug = getSlug(data[i].text);
     data[i].selector = $('#word-' + data[i].slug);
     data[i].childSelector = data[i].selector.children().last();
-    data[i].keywords = data[i].text;
+    data[i].keywords = data[i].cleanText;
     if (data[i].related) {
-      data[i].keywords += ' ' + data[i].related;
+      data[i].keywords += ' ' + getWords(data[i].related).join(' ');
     }
   }
   return data;
@@ -122,7 +129,7 @@ function highlightInResults(word, tokens, index, categoryTree) {
 
   if (word.text) {
     // Split text into tokens
-    var wordTokens = word.text.trim().split(' ');
+    var wordTokens = getWords(word.text);
     wordTokens.forEach(function(token) {
       // Get base word of each token
       var baseToken = getBaseWord(index, token);
@@ -232,7 +239,7 @@ function handleSearchEvent(index, categoryTree) {
     $(document).unhighlight();
     if (query !== '') {
       // Do OR search
-      var queryTokens = query.trim().split(' ');
+      var queryTokens = getWords(query);
       var tokens = index.pipeline.run(lunr.tokenizer(query));
 
       // Combine search results for each token
