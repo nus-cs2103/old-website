@@ -2,8 +2,8 @@ searchData = [];
 
 function addCategoryExpandAndCollapseEventListener() {
   $(".category > a").on('click', function() {
-    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-down');
-    $(this).find('.glyphicon').toggleClass('glyphicon-chevron-right');
+    $(this).find('.glyphicon').toggleClass('glyphicon-triangle-bottom');
+    $(this).find('.glyphicon').toggleClass('glyphicon-triangle-right');
     $(this).siblings().last().toggle('blind');
   });
 }
@@ -72,8 +72,8 @@ function expandOne(selector) {
   selector.show();
   selector.children().last().show();
   if (selector.hasClass('category')) {
-    selector.children().find('.glyphicon').addClass('glyphicon-chevron-down');
-    selector.children().find('.glyphicon').removeClass('glyphicon-chevron-right');
+    selector.children().find('.glyphicon').addClass('glyphicon-triangle-bottom');
+    selector.children().find('.glyphicon').removeClass('glyphicon-triangle-right');
   }
 }
 
