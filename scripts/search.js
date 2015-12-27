@@ -158,7 +158,7 @@ function compileSearchDirectives(callback) {
         scope: true,
         replace: true,
         transclude: true,
-        templateUrl: 'search/main-category.html',
+        templateUrl: 'search-main-category-partial.html',
         link: function(scope, element, attrs) {
           // Start linking
           scope.$emit('linking');
@@ -184,7 +184,7 @@ function compileSearchDirectives(callback) {
         scope: true,
         replace: true,
         transclude: true,
-        templateUrl: 'search/category.html',
+        templateUrl: 'search-category-partial.html',
         link: function(scope, element, attrs) {
           // Start linking
           scope.$emit('linking');
@@ -209,7 +209,7 @@ function compileSearchDirectives(callback) {
         restrict: 'E',
         scope: true,
         replace: true,
-        templateUrl: 'search/keyword.html',
+        templateUrl: 'search-keyword-partial.html',
         link: function(scope, element, attrs) {
           // Start linking
           scope.$emit('linking');
