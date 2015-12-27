@@ -72,8 +72,8 @@ function expandOne(selector) {
   selector.show();
   selector.children().last().show();
   if (selector.hasClass('category')) {
-    selector.children().find('.glyphicon').addClass('glyphicon-triangle-bottom');
-    selector.children().find('.glyphicon').removeClass('glyphicon-triangle-right');
+    selector.children().first().find('.glyphicon').addClass('glyphicon-triangle-bottom');
+    selector.children().first().find('.glyphicon').removeClass('glyphicon-triangle-right');
   }
 }
 
@@ -146,7 +146,7 @@ function highlightInResults(word, tokens, index, categoryTree) {
   });
 }
 
-function compileSearchDirectives() {
+function compileSearchDirectives(callback) {
   // Render directives using angular.js
   var searchDirectives = angular.module('searchDirectives', []);
   searchDirectives.
@@ -158,6 +158,7 @@ function compileSearchDirectives() {
         transclude: true,
         templateUrl: 'search/main-category.html',
         link: function(scope, element, attrs) {
+          scope.$emit('linking');
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
           scope.label = attrs.label;
@@ -169,6 +170,7 @@ function compileSearchDirectives() {
             parent: "",
             type: "main-category"
           });
+          scope.$emit('complete');
         }
       };
     }).
@@ -180,6 +182,7 @@ function compileSearchDirectives() {
         transclude: true,
         templateUrl: 'search/category.html',
         link: function(scope, element, attrs) {
+          scope.$emit('linking');
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
 
@@ -190,6 +193,7 @@ function compileSearchDirectives() {
               parent: scope.$parent.$parent.slug,
               type: "category"
             });
+            scope.$emit('complete');
           });
         }
       };
@@ -199,9 +203,9 @@ function compileSearchDirectives() {
         restrict: 'E',
         scope: true,
         replace: true,
-        transclude: true,
         templateUrl: 'search/keyword.html',
         link: function(scope, element, attrs) {
+          scope.$emit('linking');
           scope.text = attrs.text;
           scope.src = attrs.src;
           scope.slug = getSlug(attrs.text);
@@ -213,10 +217,22 @@ function compileSearchDirectives() {
               parent: scope.$parent.$parent.slug,
               type: "keyword"
             });
+            scope.$emit('complete');
           });
         }
       };
     });
+
+  var linkingCount = 0;
+  searchDirectives.run(function($rootScope) {
+    $rootScope.$on('linking', function() {
+      linkingCount++;
+    });
+    $rootScope.$on('complete', function() {
+      linkingCount--;
+      if (linkingCount == 0) callback();
+    });
+  });
 }
 
 function searchText(query, index, categoryTree) {
@@ -267,24 +283,14 @@ function handleSearchEvent(index, categoryTree) {
   });
 }
 
-compileSearchDirectives();
+compileSearchDirectives(function() {
+  addCategoryExpandAndCollapseEventListener();
+  initializeSearchData(searchData, handleSearchEvent);
 
-$(document).ready(function() {
+  $('.close-link').click( function(e) {
+    e.preventDefault();
+  });
 
-  // Wait for 20ms to let angular finish compiling directives
-  setTimeout(function() {
-    addCategoryExpandAndCollapseEventListener();
-    initializeSearchData(searchData, handleSearchEvent);
-
-    $('.close-link').click( function(e) {
-      e.preventDefault();
-    });
-
-    // Prepend horizontal line on every category
-    $('.category > .category-list').prepend("<div class='separator'></div>");
-
-  }, 20);
-
+  // Prepend horizontal line on every category
+  $('.category > .category-list').prepend("<div class='separator'></div>");
 });
-
-
