@@ -24,7 +24,6 @@ function enhanceData(data) {
     for (var i in data) {
         data[i].cleanText = getWords(data[i].text).join(' ');
         data[i].slug = getSlug(data[i].text);
-        data[i].selector = $('#word-' + data[i].slug);
         data[i].childSelector = data[i].selector.children().last();
         data[i].keywords = data[i].cleanText;
         if (data[i].related) {
@@ -136,7 +135,7 @@ function highlightInResults(word, tokens, index, categoryTree) {
 
             // Highlight
             if (tokens.indexOf(baseToken) > -1) {
-                selector.find('.label-text').addBack('.label-text').highlight(token);
+                selector.find('.label-text').highlight(token);
             }
         });
     }
@@ -171,6 +170,7 @@ function compileSearchDirectives(callback) {
                 searchData.push({
                     text: attrs.text,
                     parent: "",
+                    selector: element,
                     type: "main-category"
                 });
                 // Linking complete
@@ -195,6 +195,7 @@ function compileSearchDirectives(callback) {
                     searchData.push({
                         text: attrs.text,
                         related: attrs.related,
+                        selector: element,
                         parent: scope.$parent.$parent.slug,
                         type: "category"
                     });
@@ -221,6 +222,7 @@ function compileSearchDirectives(callback) {
                     searchData.push({
                         text: attrs.text,
                         related: attrs.related,
+                        selector: element,
                         parent: scope.$parent.$parent.slug,
                         type: "keyword"
                     });
