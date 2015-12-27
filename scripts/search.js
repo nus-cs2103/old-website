@@ -1,4 +1,3 @@
-searchData = [];
 
 function addCategoryExpandAndCollapseEventListener() {
   $(".category > a").on('click', function() {
@@ -21,7 +20,7 @@ function getSlug(text) {
         replace(/[^\w-]+/g,'');
 }
 
-// Add additional attribute to data
+// Add additional attributes to data
 function enhanceData(data) {
   for (var i in data) {
     data[i].cleanText = getWords(data[i].text).join(' ');
@@ -52,11 +51,13 @@ function buildCategoryTree(data) {
 }
 
 function createSearchIndex(data) {
+  // Create search index
   var index = lunr(function () {
     this.field('keywords');
     this.ref('slug');
   });
 
+  // Input data to search index
   data.forEach(function(entry) {
     index.add(entry);
   });
@@ -147,6 +148,7 @@ function highlightInResults(word, tokens, index, categoryTree) {
 }
 
 function compileSearchDirectives(callback) {
+  searchData = [];
   // Render directives using angular.js
   var searchDirectives = angular.module('searchDirectives', []);
   searchDirectives.
@@ -158,18 +160,20 @@ function compileSearchDirectives(callback) {
         transclude: true,
         templateUrl: 'search/main-category.html',
         link: function(scope, element, attrs) {
+          // Start linking
           scope.$emit('linking');
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
           scope.label = attrs.label;
           scope.type = attrs.type;
-          scope.src = attrs.src;
+          scope.href = attrs.href;
           
           searchData.push({
             text: attrs.text,
             parent: "",
             type: "main-category"
           });
+          // Linking complete
           scope.$emit('complete');
         }
       };
@@ -182,6 +186,7 @@ function compileSearchDirectives(callback) {
         transclude: true,
         templateUrl: 'search/category.html',
         link: function(scope, element, attrs) {
+          // Start linking
           scope.$emit('linking');
           scope.text = attrs.text;
           scope.slug = getSlug(attrs.text);
@@ -193,6 +198,7 @@ function compileSearchDirectives(callback) {
               parent: scope.$parent.$parent.slug,
               type: "category"
             });
+            // Linking complete
             scope.$emit('complete');
           });
         }
@@ -205,9 +211,10 @@ function compileSearchDirectives(callback) {
         replace: true,
         templateUrl: 'search/keyword.html',
         link: function(scope, element, attrs) {
+          // Start linking
           scope.$emit('linking');
           scope.text = attrs.text;
-          scope.src = attrs.src;
+          scope.href = attrs.href;
           scope.slug = getSlug(attrs.text);
 
           scope.$parent.$parent.$watch('slug', function() {
@@ -217,6 +224,7 @@ function compileSearchDirectives(callback) {
               parent: scope.$parent.$parent.slug,
               type: "keyword"
             });
+            // Linking complete
             scope.$emit('complete');
           });
         }
@@ -230,7 +238,8 @@ function compileSearchDirectives(callback) {
     });
     $rootScope.$on('complete', function() {
       linkingCount--;
-      if (linkingCount == 0) callback();
+      // When all linking is complete, call callback function
+      if (linkingCount == 0) callback(searchData);
     });
   });
 }
@@ -262,12 +271,13 @@ function searchText(query, index, categoryTree) {
   highlightInResults({ slug: "" }, tokens, index, categoryTree);
 }
 
-function handleSearchEvent(index, categoryTree) {
+function addSearchEventListener(index, categoryTree) {
   var timeoutReference;
 
   $('#search-box').keyup(function(e) {
     var query = $(this).val();
 
+    // When an activity occurs, clear activity timeout
     if (timeoutReference) {
       clearTimeout(timeoutReference);
     }
@@ -283,14 +293,18 @@ function handleSearchEvent(index, categoryTree) {
   });
 }
 
-compileSearchDirectives(function() {
-  addCategoryExpandAndCollapseEventListener();
-  initializeSearchData(searchData, handleSearchEvent);
+compileSearchDirectives(function(searchData) {
+  // After compiling search directives complete, process data
+  initializeSearchData(searchData, addSearchEventListener);
 
+  // Add expand and collapse event listener
+  addCategoryExpandAndCollapseEventListener();
+
+  // Prevent default when linking to #
   $('.close-link').click( function(e) {
     e.preventDefault();
   });
 
-  // Prepend horizontal line on every category
+  // Prepend horizontal line on every category list
   $('.category > .category-list').prepend("<div class='separator'></div>");
 });
