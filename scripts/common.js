@@ -10,18 +10,13 @@ function getContentUsingAjax(section, elementSelector) {
     pullContent(section, elementSelector, 'Exract from handbook');
 }
 
-function pullContent(section, elementSelector, title) {
-    $.ajax({
-        type: 'GET',
-        url: section + '.html',
-        error: function() {
-
-        },
-        success: function(data) {
-            $(elementSelector).addClass('embedded');
-            $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+function pullContent(section, elementSelector, title) {   
+    $(elementSelector).load(section + '.html #fragment', function(response, status, xhr) {
+        if(status == 'success'){     
+            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
                                                          ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-                                                 'class="btn-dismiss">X</button><br><br></div>' + data);
+                                                 'class="btn-dismiss">X</button><br><br></div>');
+            $(elementSelector).addClass('embedded');
             $(elementSelector + ' > div > .btn-dismiss').button();
         }
     });
