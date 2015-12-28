@@ -199,8 +199,25 @@ function loadContent(week) {
     });
 }
 
+function setHeaderDates(moduleStartDate) {
+    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    moduleStartDate.setDate(moduleStartDate.getDate() - 7);
+    $('#header-content-week0').append('<span>Overview</span>');
+    for (var week = 1; week <= 13; week ++) {
+        if (week == 7) { //recess week
+            moduleStartDate.setDate(moduleStartDate.getDate() + 7);
+        }
+        moduleStartDate.setDate(moduleStartDate.getDate() + 7);
+        $('#header-content-week' + week).append('<span>Week ' + week + ' [' + month[moduleStartDate.getMonth()] + ' ' + moduleStartDate.getDate() + ']</span>');
+    }
+    $('#header-content-week14').append('<span>Reading Week</span>');
+}
+
 $(document).ready(function() {
 
+    //Note: Javascript's month are zero-indexed
+    var moduleStartDate = new Date(2015, 7, 10);
+    setHeaderDates(moduleStartDate);
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
