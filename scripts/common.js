@@ -199,6 +199,15 @@ function loadContent(week) {
     });
 }
 
+function addAutoScrollToClickedSection() {
+ $(".buttoned").click(function (event){
+   var scroll_target = "#" + event.target.id;
+   $('html, body').animate({
+     scrollTop: $(scroll_target).offset().top
+ }, 1000);
+});
+}
+
 $(document).ready(function() {
 
     makeAccordion('.weeklyschedule');
@@ -220,6 +229,7 @@ $(document).ready(function() {
         loadContent(week);
     }
 
+    addAutoScrollToClickedSection();
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
