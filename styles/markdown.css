@@ -1,0 +1,23 @@
+body {
+    padding: 30px 50px;
+}
+
+.example-good {
+    color: green;
+}
+
+.example-bad {
+    color: red;	
+}
+
+.borderless tbody td,
+.borderless tbody tr {
+    border: 0px solid black;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre,
+.markdown-body code,
+.markdown-body tt {
+    background-color: inherit;
+}
