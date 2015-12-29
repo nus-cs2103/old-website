@@ -138,10 +138,10 @@ This is indeed the simplest method to store keywords data.
  * Complexity and Readability
   * HTML fragment for a single keyword can consists of several lines of code. Having hundreds of keywords increase complexity of the HTML file.
   * As keywords are organized in a tree-like structure, many elements inside the HTML file will have to be nested. As complexity of the tree structure increases, complexity of the HTML file also increases.
-* Maintainability
+ * Maintainability
   * Modifying HTML fragment of a keyword means HTML fragment of all keywords must also be modified.
-* DRY
- * HTML fragment of two distinct keywords actually contains many common elements. But when using plain HTML file, these elements must be duplicated many times.
+ * DRY
+  * HTML fragment of two distinct keywords actually contains many common elements. But when using plain HTML file, these elements must be duplicated many times.
 
 #### Store data inside JSON file
 Keywords are represented as an array inside JSON file. Each entry inside the array represent a keyword object having `title`, `alias`, `parent`, and `href` attributes.
