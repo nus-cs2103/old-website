@@ -199,6 +199,15 @@ function loadContent(week) {
     });
 }
 
+function generateDates() {
+    $('.dateMarker').each(function() {
+        var week = parseInt($(this).attr('week'));
+        var day = parseInt($(this).attr('day'));
+        var date = getDate(week, day);
+        $(this).html(window.month[date.getMonth()] + ' ' + date.getDate());
+    });
+}
+
 function getDate(week, day) {
     var date = new Date();
     if (week >= 7) {
@@ -213,6 +222,9 @@ $(document).ready(function() {
 
     //Note: Javascript's month are zero-indexed
     window.moduleStartDate = new Date(2015, 7, 10);
+    window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    generateDates();
+
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
@@ -231,14 +243,6 @@ $(document).ready(function() {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
-
-    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    $('.dateMarker').each(function() {
-        var week = parseInt($(this).attr('week'));
-        var day = parseInt($(this).attr('day'));
-        var date = getDate(week, day);
-        $(this).html(month[date.getMonth()] + ' ' + date.getDate());
-    });
  
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
