@@ -199,16 +199,6 @@ function loadContent(week) {
     });
 }
 
-function setHeaderDates() {
-    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    $('#header-content-week0').append('<span>Overview</span>');
-    for (var week = 1; week <= 13; week ++) {
-        var currentWeekDate = getDate(week, 1);
-        $('#header-content-week' + week).append('<span>Week ' + week + ' [' + month[currentWeekDate.getMonth()] + ' ' + currentWeekDate.getDate() + ']</span>');
-    }
-    $('#header-content-week14').append('<span>Reading Week</span>');
-}
-
 function getDate(week, day) {
     var date = new Date();
     if (week >= 7) {
@@ -223,7 +213,6 @@ $(document).ready(function() {
 
     //Note: Javascript's month are zero-indexed
     window.moduleStartDate = new Date(2015, 7, 10);
-    setHeaderDates();
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
@@ -243,6 +232,14 @@ $(document).ready(function() {
         loadContent(week);
     }
 
+    var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    $('.dateMarker').each(function() {
+        var week = parseInt($(this).attr('week'));
+        var day = parseInt($(this).attr('day'));
+        var date = getDate(week, day);
+        $(this).html(month[date.getMonth()] + ' ' + date.getDate());
+    });
+ 
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
