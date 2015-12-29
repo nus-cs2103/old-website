@@ -1,26 +1,28 @@
 # Search Feature
 
-Search feature helps you to search for keywords from the whole CS2103/T website.
+Search feature aims to help users searching for specific keywords from the whole CS2103/T website.
 
 ## Design
-Search page is designed to be analogous to the index section of a book. But this also means, keywords on the search page will have to be added manually. This makes it easy for you to look for specific keywords. 
+Search page is designed to be analogous to the index section of a book. In such way that relevant keywords from the whole CS2103/T website are listed on this page. 
+
+[What are the alternative approaches to implement search feature?](#what-are-the-alternative-approaches-to-implement-search-feature)
 
 ### User Interface
-Keywords on search page is organized in a tree-like structure. This helps you to know the parent category of a keyword and better understand connection between keywords.
+Although search page is analogous to index section of a book, keywords are not listed in alphabetical order. Instead, keywords are organized in a tree-like structure. This aims to help users quickly understand classification of a keyword and its connection with other keywords.
 
-While searching, you can also expand or collapse a category to have a better control of the number of keywords displayed on the page.
+As the number of keywords on the page might go up to hundreds, it becomes necessary to let users have a better control of number of keywords displayed. Therefore, expanding and collapsing is implemented to show/hide children keywords of a keyword.
 
-### Data Collection
-Keywords data is collected from HTML file of the search page itself. It is designed to be easy and simple to contribute adding new keywords data by introducing three custom HTML elements (`main-category`, `category`, `keyword`).
+### Data Storage
+Just like index section of a book, keywords are selected manually not automatically. Information and structure of these keywords are added manually and stored inside HTML file of the page itself.
 
-[Why collect data from HTML file?](#why-collect-data-from-a-html-file)
+The main purpose of storing these keywords inside a HTML file is to make it easy and simple to add new keywords to search page. Three custom HTML elements (`main-category`, `category`, `keyword`) are introduced to assist contributors in adding new keywords.
+
+[Why is data stored inside a HTML file?](#why-is-data-stored-inside-a-html-file)
 
 ### Search Function
-Search function is designed to be flexible. For instance, searching for `activity` will also returns `Activities` as a result. 
+Search function is implemented on the page and it is designed to be flexible. For instance, searching for `activity` will also returns `Activities` as a result.
 
-It is also possible to search for multiple keywords (OR search), search function will returns and highlights all results that matches at least one of them.
-
-To make the search results for relevant, keywords that don't match your query will be hidden.
+The implemented nature of searching done by the search function is an OR search, that is results that are displayed must contain only at least of a word from users' query. This implemented nature is considered more flexible than an AND search nature that is more strict such that a result must contains all words from users' query.
 
 [How search function works?](#how-search-function-works)
 
@@ -28,10 +30,13 @@ To make the search results for relevant, keywords that don't match your query wi
 
 ### Adding new keywords
 
-To add new keywords, it is necessary for you to know three custom HTML elements introduced on the search page.
+**Note:** In this section, we will refer keywords that group other keywords as `category` and keywords that don't group other keywords as `keyword`.
+
+To add new keywords, it is necessary for contributors to understand three custom HTML elements and its attributes introduced on the search page.
+
 
 #### `<main-category>`
-`main-category` element acts as a root category. Typically used on a category that doesn't have any parent category.
+`main-category` element acts as a root category. Typically used on a category that doesn't have any parent category. User can click on this element to be linked to a page that contains this keyword.
 
 
 | Attribute            | Value                   | Description                                       |
@@ -42,20 +47,21 @@ To add new keywords, it is necessary for you to know three custom HTML elements 
 | type                 | [*bootstrap color class*](http://getbootstrap.com/components/#available-variations) | Specifies color of the label                      |
 | related (optional)   | *text*                  | Specifies other keywords related to this category |
 
-Children of this category can be added inside the `main-category` element.
+Keywords or subcategories that are part of main category can be added inside the `main-category` element.
 
 #### `<category>`
-`category` element acts as a non-root category that parents other categories and keywords. Collapsing and expanding children of this category is supported on this element.
+`category` element acts as a non-root category that parents other categories and keywords. This element can be collapsed and expanding by users.
 
 | Attribute            | Value                   | Description                                       |
 |----------------------|-------------------------|---------------------------------------------------|
 | text                 | *text*                  | Specifies text of the title                       |
 | related (optional)   | *text*                  | Specifies other keywords related to this category |
 
-Children of this category can be added inside the `category` element.
+Keywords or subcategories that are part of category can be added inside the `main-category` element.
 
 #### `<keyword>`
-`keyword` element acts as leaf of the tree structure. It should link to a specific part that contains this keyword.
+`keyword` element acts as leaf of the tree structure and doesn't group other keywords. User can click on this element to be linked to a page that contains this keyword.
+
 
 | Attribute            | Value                   | Description                                       |
 |----------------------|-------------------------|---------------------------------------------------|
@@ -63,7 +69,7 @@ Children of this category can be added inside the `category` element.
 | href                 | *url*                   | Specifies link to the relevant location           |
 | related (optional)   | *text*                  | Specifies other keywords related to this keyword  |
 
-You can take a look at [search.html](#) to have more understanding.
+To understand more, you can take a look at source file of [search.html](#).
 
 ### Improving user interface
 
@@ -79,61 +85,109 @@ Those fragments can be accessed at the following files:
 | category      | *contents/search-category-partial.html*      |
 | keyword       | *contents/search-keyword-partial.html*       |
 
-You can modify those fragments to change how the user interface looks.
+Those fragments can be modified to change how the user interface looks.
 
-**Note:** Text in curly bracket will be injected with suitable information on the javascript.
+**Note:** The double curly brace notation {{ }} will be injected by the logic part inside javascript file.
 
-## Implementation
-
-### User Interface
-User interface of the search page take advantage of powerful templating engine of [AngularJS](https://angularjs.org/) to compile custom elements (Angular directives). [Bootstrap](http://getbootstrap.com/) also used to do quick CSS styling.
-
-### Data Collection
-Data collection is done when [AngularJS](https://angularjs.org/) is compiling `main-category`, `category`, and `keyword` elements from the HTML file. After that, javascript will construct a tree data structure from the collected data to make it easier to analyze. 
-
-### Searching
-Searching is implemented with help of text search library [lunr.js](http://lunrjs.com/). From the collected data, a search index will be created to handle faster keywords searching.
 
 ## Appendix
 
-### Why collect data from a HTML file?
-Several different methods to store data has been implemented before I decided to use the current method.
+### What are the alternative approaches to implement search feature?
+There are indeed many approaches to implement a search feature. Search feature need to be able to search from the whole CS2103/T website. Below are some approaches that are considered:
 
-#### Using plain HTML file
-* Pros
- * Freedom in modifying the contents
+#### Use Google Custom Search Engine
+##### Pros
+* Powerful search algorithm, more relevant result
 
-* Cons
- * Since a keyword can have a complicated HTML code, large number of them can produce a messy and hard to read HTML code.
- * A lot of copy paste involved when adding new keywords (violate DRY principle).
+##### Cons
+* More suitable on website with many pages
+* Less control over search page (Advertising, Uncustomizable search page, etc..)
 
-#### Using JSON file
-* Pros
- * Can be reuse for other applications.
- * Maintainable.
- * Readable.
+#### Crawl website to build index automatically
 
-* Cons
- * Require an additional file.
- * Adding large number of new keywords are more tedious than expected since it is necessary to have a `parent` attribute on each keyword entry.
+##### Pros
+* Everything can be done programmatically
 
-#### Using HTML file and AngularJS with directives and its templating engine
-* Pros
- * Maintainable.
- * Readable.
- * Easy to add new keywords.
+##### Cons
+* Less relevant results
+* Cannot be organized accurately
 
-* Cons
- * Require additional library (AngularJS).
- * Cannot be reused for other applications, but a script can written to convert this into a JSON file.
+#### Manually add relevant keywords
 
-After considering both pros and cons of these methods, I think using AngularJS is the best method as easiness of adding new keywords is important in an open project.
+##### Pros
+* More relevant results
+* Full control over search page, keywords displayed, and keywords organization
+
+##### Cons
+* Requires a lot of manual works
+
+Although a lot of works have to be done manually, adding keywords manually seems to be the best approach. Relevance of the search results and full control over the search page is a really important point. And considering the website being an open source project, adding keywords can be done using crowdsourcing. 
+
+### Why is data stored inside a HTML file?
+Several methods to store keywords data has been implemented and analyzed before we decided to use the current method.
+
+#### Store data inside plain HTML file
+This is indeed the simplest method to store keywords data.
+
+##### Pros
+ * Centralized
+  * Keywords data are stored in a single file. 
+  * Freedom to modify an element inside the HTML file.
+
+##### Cons
+ * Complexity and Readability
+  * HTML fragment for a single keyword can consists of several lines of code. Having hundreds of keywords increase complexity of the HTML file.
+  * As keywords are organized in a tree-like structure, many elements inside the HTML file will have to be nested. As complexity of the tree structure increases, complexity of the HTML file also increases.
+* Maintainability
+  * Modifying HTML fragment of a keyword means HTML fragment of all keywords must also be modified.
+* DRY
+ * HTML fragment of two distinct keywords actually contains many common elements. But when using plain HTML file, these elements must be duplicated many times.
+
+#### Store data inside JSON file
+Keywords are represented as an array inside JSON file. Each entry inside the array represent a keyword object having `title`, `alias`, `parent`, and `href` attributes.
+
+##### Pros
+ * Readability
+  * Each entry inside the array represents a keyword, there are no redundant information. This method is more readable than using plain HTML file.  
+ * Reusability
+  * JSON being a data interchange format. This file can be used for other purposes.
+ * Maintainability
+  * Each entry inside the array is independent from another. Modifying an entry doesn't affect other entries. 
+
+##### Cons
+ * Construction
+  *  Adding large number of new keywords are more tedious than expected. Keywords are not represented in a tree-like structure inside JSON file, so additional works are needed to determine `parent` attribute of each entry.
+ * Decentralized
+  * Keywords data are stored in a separate file. Less freedom in modifying HTML file.
+
+#### Store data inside HTML file with AngularJS with directives and its templating engine
+Each keyword are represented as a single HTML element using [AngularJS](https://angularjs.org/) directives.
+
+##### Pros
+ * Maintainability
+  * Each element independent from another element. Modifying an element can be done inside HTML fragment file. 
+ * Readability
+  * Each element represents a keyword, there are no redundant information. This method is more readable than using plain HTML file. 
+ * Construction
+  * Each element represents a keyword, this makes it easy to add new keyword. But unlike JSON file, HTML being a tree-based file format, elements inside HTML file can be organized in a tree structure. This makes it easy to construct the tree structure.
+
+##### Cons
+ * Dependency
+  * Require an external library, AngularJS.
+ * Reusability
+  * HTML is not a data-interchange format. This file need to be converted to a data-interchange format like XML or JSON format.
+ * Decentralized
+  * Many separate files. Less freedom in modifying HTML file.
+
+After considering both pros and cons of these methods, storing data inside HTML file with AngularJS directives seems to be the best method. While it requires additional dependency, it makes adding new keywords a lot easier which is important for an open source project.
 
 ### How search function works?
 
-Search function begins right after data collection is completed.
+Search function is implemented with help of full-text search library [lunr.js](http://lunrjs.com/).
 
-It involves the following processes:
+[Why is search function implemented using lunr.js?](#why-is-search-function-implemented-using-lunrjs)
+
+Searching involves the following processes:
 
 #### Enhancing search data
 A new attribute `keywords` will be added to each data entry which is the concatenation of text inside `text` attribute and `related` attribute.
@@ -155,5 +209,19 @@ By default, lunr.js implements AND search to match query and keyword. So to do a
 * Reference to matching data entries will be returned.
 
 Search results from each query tokens will be combined. Javascript will them display and highlight the results.
+
+### Why is search function implemented using lunr.js?
+
+Search algorithm in general can be categorized into two types, search using stemming algorithm and fuzzy search.
+
+#### Search using stemming algorithm
+[lunr.js](http://lunrjs.com/) uses this approach. Stemming is a process of reducing a word into its [base word](https://en.wikipedia.org/wiki/Word_stem). This process allows `activity` and `activities` to be considered as the same word.
+
+#### Fuzzy search
+[fuse.js](http://kiro.me/projects/fuse.html) uses this approach. It allows misspellings in users' query by using edit distance algorithm.
+
+At first glance, allowing misspellings might be the better approach. But in practice, it produces more irrelevant results due to its tolerance and might not be suitable for CS2103/T search function. Search using stemming algorithm on the other hand produces more relevant and flexible search results.  
+
+
 
 
