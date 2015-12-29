@@ -183,6 +183,7 @@ function loadContent(week) {
         success: function(data) {
             var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
             $('#content-week' + week).html(data);
+            generateDates();
             makeAccordion('.content-week' + week);
             for (var i in components) {
                 var component = components[i];
