@@ -1,5 +1,6 @@
 function initDateVariables() {
-    // Change this to update the dates
+    // Change this to set the module start date
+    // Format: Date(Year, Month, Day)
     // Note: Javascript's month are zero-indexed
     window.moduleStartDate = new Date(2015, 7, 10);
     window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -208,8 +209,11 @@ function loadContent(week) {
 }
 
 /**
- * generateDates() iterates through 'date-marker' span class and generates the corresponding dates.
+ * Iterates through 'date-marker' span class and generates the corresponding dates based on the moduleStartDate.
+ * Refer to the initDateVariables() function to set the start of the module date.
  * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
+ * The week attribute denotes the week number while the day attribute denotes the day of the intended week.
+ * Both attributes must be a positive integer.
  * Format of the generated dates: 'Month Date'. E.g. Aug 10
  */
 function generateDates() {
