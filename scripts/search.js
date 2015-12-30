@@ -37,12 +37,10 @@ function buildCategoryTree(data) {
     var tree = {};
     // Construct adjacency list from data
     data.forEach(function(entry) {
-        if (!tree[entry.slug]) {
-            tree[entry.slug] = [];
-        }
-        if (!tree[entry.parent]) {
-            tree[entry.parent] = [];
-        }
+        // Initialize adjacency list if null
+        tree[entry.slug] = tree[entry.slug] || [];
+        tree[entry.parent] = tree[entry.parent] || [];
+
         tree[entry.parent].push(entry);
     });
     return tree;
@@ -62,11 +60,6 @@ function createSearchIndex(data) {
     return index;
 }
 
-function initializeSearchData(data, callback) {
-    data = enhanceData(data);
-    callback(createSearchIndex(data), buildCategoryTree(data));
-}
-
 function expandOne(selector) {
     selector.show();
     selector.children().last().show();
@@ -78,33 +71,33 @@ function expandOne(selector) {
 }
 
 function expandChildren(selector) {
-    selector.find(" .category, .main-category").each(function() {
+    selector.find(".category, .main-category").each(function() {
         expandOne($(this));
     });
 
-    selector.find(" .keyword").each(function() {
+    selector.find(".keyword").each(function() {
         $(this).show();
     });
 }
 
-function hideNotInResults(word, results, categoryTree) {
-    var selector = word.selector;
-    var childSelector = word.childSelector;
-    var isInResults = (results.indexOf(word.slug) > -1);
+function hideNotInResults(keyword, results, categoryTree) {
+    var selector = keyword.selector;
+    var childSelector = keyword.childSelector;
+    var isInResults = (results.indexOf(keyword.slug) > -1);
 
     var isChildInResults = false;
-    categoryTree[word.slug].forEach(function(child) {
+    categoryTree[keyword.slug].forEach(function(child) {
         isChildInResults |= hideNotInResults(child, results, categoryTree);
     });
 
     if (selector) {
         if (isInResults) {
-            // If this word is in results, expand everything
+            // If this keyword is in results, expand everything
             expandChildren(selector);
             expandOne(selector);
         } else {
             if (isChildInResults) {
-                // If this word is not in results but its child is then show this
+                // If this keyword is not in results but its child is then show this
                 selector.show();
                 childSelector.show();
             } else {
@@ -123,12 +116,12 @@ function getBaseWord(index, text) {
     return index.pipeline.run(lunr.tokenizer([text]))[0];
 }
 
-function highlightInResults(word, tokens, index, categoryTree) {
-    var selector = word.selector;
+function highlightInResults(keyword, tokens, index, categoryTree) {
+    var selector = keyword.selector;
 
-    if (word.text) {
+    if (keyword.text) {
         // Split text into tokens
-        var wordTokens = getWords(word.text);
+        var wordTokens = getWords(keyword.text);
         wordTokens.forEach(function(token) {
             // Get base word of each token
             var baseToken = getBaseWord(index, token);
@@ -141,7 +134,7 @@ function highlightInResults(word, tokens, index, categoryTree) {
     }
 
     // Also highlight its children
-    categoryTree[word.slug].forEach(function(child) {
+    categoryTree[keyword.slug].forEach(function(child) {
         highlightInResults(child, tokens, index, categoryTree);
     });
 }
@@ -167,6 +160,7 @@ function compileSearchDirectives(callback) {
                 scope.type = attrs.type;
                 scope.href = attrs.href;
 
+                // Wait until parent slug available
                 searchData.push({
                     text: attrs.text,
                     parent: "",
@@ -191,6 +185,7 @@ function compileSearchDirectives(callback) {
                 scope.text = attrs.text;
                 scope.slug = getSlug(attrs.text);
 
+                // Wait until parent slug available
                 scope.$parent.$parent.$watch('slug', function() {
                     searchData.push({
                         text: attrs.text,
@@ -218,6 +213,7 @@ function compileSearchDirectives(callback) {
                 scope.href = attrs.href;
                 scope.slug = getSlug(attrs.text);
 
+                // Wait until parent slug available
                 scope.$parent.$parent.$watch('slug', function() {
                     searchData.push({
                         text: attrs.text,
@@ -254,7 +250,7 @@ function searchText(query, index, categoryTree) {
     if (query == '') {
         return;
     }
-    // Do OR search
+    // Do an OR search
     var queryTokens = getWords(query);
     var tokens = index.pipeline.run(lunr.tokenizer(query));
 
@@ -267,18 +263,19 @@ function searchText(query, index, categoryTree) {
         });
     });
 
+    var rootKeyword = {
+        slug: ""
+    };
+
     // Hide keyword not in results
-    hideNotInResults({
-        slug: ""
-    }, results, categoryTree);
+    hideNotInResults(rootKeyword, results, categoryTree);
     // Highlight keyword in results
-    highlightInResults({
-        slug: ""
-    }, tokens, index, categoryTree);
+    highlightInResults(rootKeyword, tokens, index, categoryTree);
 }
 
 function addSearchEventListener(index, categoryTree) {
     var timeoutReference;
+    var timeout = 500;
 
     $('#search-box').keyup(function(e) {
         var query = $(this).val();
@@ -291,17 +288,27 @@ function addSearchEventListener(index, categoryTree) {
         if (query == '' || e.which == 13 || e.which == 32) { // If empty query or enter key or space key pressed
             searchText(query, index, categoryTree);
 
-        } else { // If no activity in 0.5s, search current text
+        } else { // If no activity in 500 ms, search current text
             timeoutReference = setTimeout(function() {
                 searchText(query, index, categoryTree);
-            }, 500);
+            }, timeout);
         }
     });
 }
 
-compileSearchDirectives(function(searchData) {
+compileSearchDirectives(function(searchData) { // Callback function
+
     // After compiling search directives complete, process data
-    initializeSearchData(searchData, addSearchEventListener);
+    searchData = enhanceData(searchData);
+
+    // Build search index
+    var index = createSearchIndex(searchData);
+
+    // Build tree structure
+    var categoryTree = buildCategoryTree(searchData);
+
+    // Add search event listener
+    addSearchEventListener(index, categoryTree);
 
     // Add expand and collapse event listener
     addCategoryExpandAndCollapseEventListener();
