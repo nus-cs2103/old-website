@@ -207,6 +207,11 @@ function loadContent(week) {
     });
 }
 
+/**
+ * generateDates() iterates through 'date-marker' span class and generate the corresponding dates.
+ * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
+ * Format of the generated dates: 'Month Date'. E.g. Aug 10
+ */
 function generateDates() {
     $('.date-marker').each(function() {
         var week = parseInt($(this).attr('week'));
