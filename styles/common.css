@@ -455,6 +455,10 @@ table.bordered tr > th {
     text-decoration: none;
 }
 
+.label-text {
+    padding-left:5px;
+}
+
 .separator {
     border-top:1px solid #ccd8e2;
 }
