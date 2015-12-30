@@ -6,11 +6,11 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function getContentUsingAjax(section, elementSelector, sectionName) {
+function getContentUsingAjax(fileName, elementSelector, sectionName) {
     pullContent(section, elementSelector, 'Exract from handbook', sectionName);
 }
 
-function pullContent(section, elementSelector, title, sectionName) {
+function pullContent(fileName, elementSelector, title, sectionName) {
     var url = section +'.html';
     var target = ' #' + sectionName;
     var targetSection = elementSelector + sectionName;
