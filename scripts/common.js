@@ -202,6 +202,7 @@ function loadContent(week) {
 function addAutoScrollToClickedWeekHeader() {
     $('.buttoned').click(function(event) {
         var scrollTarget = '#' + event.target.id;
+        console.log(scrollTarget);
         $('html, body').animate({
             scrollTop: $(scrollTarget).offset().top 
         }, 0);
@@ -229,7 +230,7 @@ $(document).ready(function() {
         loadContent(week);
     }
 
-    addAutoScrollToClickedSection();
+    addAutoScrollToClickedWeekHeader();
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
