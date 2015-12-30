@@ -1,3 +1,10 @@
+function initDateVariables() {
+    //Change this to update the dates
+    //Note: Javascript's month are zero-indexed
+    window.moduleStartDate = new Date(2015, 7, 10);
+    window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+}
+
 function makeAccordion(elementSelector) {
     $(elementSelector).accordion({
         active: false,
@@ -221,9 +228,7 @@ function getDate(week, day) {
 
 $(document).ready(function() {
 
-    //Note: Javascript's month are zero-indexed
-    window.moduleStartDate = new Date(2015, 7, 10);
-    window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    initDateVariables();
     generateDates();
 
     makeAccordion('.weeklyschedule');
