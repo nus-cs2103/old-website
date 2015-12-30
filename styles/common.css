@@ -398,3 +398,14 @@ table.bordered tr > th {
 .italic {
     font-style:italic
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+@media screen and (max-device-width: 1000px) {
+	body{
+		max-width: 100%;
+	}
+}
