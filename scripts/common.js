@@ -199,12 +199,12 @@ function loadContent(week) {
     });
 }
 
-function addAutoScrollToClickedSection() {
-    $(".buttoned").click(function(event) {
-        var scroll_target = "#" + event.target.id;
+function addAutoScrollToClickedWeekHeader() {
+    $('.buttoned').click(function(event) {
+        var scrollTarget = '#' + event.target.id;
         $('html, body').animate({
-            scrollTop: $(scroll_target).offset().top 
-        }, 1000);
+            scrollTop: $(scrollTarget).offset().top 
+        }, 0);
     });
 }
 
