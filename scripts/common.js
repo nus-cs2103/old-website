@@ -6,25 +6,23 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function getContentUsingAjax(section, elementSelector) {
-    pullContent(section, elementSelector, 'Exract from handbook');
+function getContentUsingAjax(section, elementSelector, sectionName) {
+    pullContent(section, elementSelector, 'Extract from handbook', sectionName);
 }
 
-function pullContent(section, elementSelector, title) {
-    $.ajax({
-        type: 'GET',
-        url: section + '.html',
-        error: function() {
+function pullContent(section, elementSelector, title, sectionName) {
+    var url = section +'.html';
+    var target = ' #' + sectionName;
+    var targetSection = elementSelector + sectionName;
+    var pageToLoad = url + target;
 
-        },
-        success: function(data) {
-            $(elementSelector).addClass('embedded');
-            $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
-                                                         ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-                                                 'class="btn-dismiss">X</button><br><br></div>' + data);
-            $(elementSelector + ' > div > .btn-dismiss').button();
-        }
-    });
+    $(elementSelector).addClass('embedded');
+    $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+       ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+       'class="btn-dismiss">X</button><br><br></div> <div id = "' + elementSelector.substring(1) + sectionName + '"></div>');
+    $(elementSelector + ' > div > .btn-dismiss').button();
+
+    $(targetSection).load(pageToLoad);
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
