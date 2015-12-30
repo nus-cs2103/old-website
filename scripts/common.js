@@ -219,12 +219,11 @@ function generateDates() {
 function getDate(week, day) {
     var date = new Date();
     var dayToMiliSec = 24 * 60 * 60 * 1000;
-    // There needs to be an extra week after week 7 due to recess week
-    if (week >= 7) {
-        date.setTime(window.moduleStartDate.getTime() + (week * 7 + day - 1 ) * dayToMiliSec);
-    } else {
-        date.setTime(window.moduleStartDate.getTime() + ((week - 1) * 7 + day - 1) * dayToMiliSec);
+    if (week < 7) { // There needs to be an extra week from week 7 onwards due to recess week
+        week -= 1;
     }
+    var numberOfDaysSinceStartDate = week * 7 + day - 1;
+    date.setTime(window.moduleStartDate.getTime() + numberOfDaysSinceStartDate * dayToMiliSec);
     return date;
 }
 
