@@ -7,11 +7,11 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(fileName, elementSelector, sectionName) {
-    pullContent(section, elementSelector, 'Exract from handbook', sectionName);
+    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
 }
 
 function pullContent(fileName, elementSelector, title, sectionName) {
-    var url = section +'.html';
+    var url = fileName +'.html';
     var target = ' #' + sectionName;
     var targetSection = elementSelector + sectionName;
     var pageToLoad = url + target;
