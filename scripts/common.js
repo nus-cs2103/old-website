@@ -200,12 +200,12 @@ function loadContent(week) {
 }
 
 function addAutoScrollToClickedSection() {
- $(".buttoned").click(function (event){
-   var scroll_target = "#" + event.target.id;
-   $('html, body').animate({
-     scrollTop: $(scroll_target).offset().top
- }, 1000);
-});
+    $(".buttoned").click(function(event) {
+        var scroll_target = "#" + event.target.id;
+        $('html, body').animate({
+            scrollTop: $(scroll_target).offset().top 
+        }, 1000);
+    });
 }
 
 $(document).ready(function() {
