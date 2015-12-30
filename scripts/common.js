@@ -201,7 +201,7 @@ function loadContent(week) {
 
 function addAutoScrollToClickedWeekHeader() {
     $('.buttoned').click(function(event) {
-        var scrollTarget = '#' + event.target.id;
+        var scrollTarget = '#' + event.currentTarget.id;
         $('html, body').animate({
             scrollTop: $(scrollTarget).offset().top 
         }, 100);
