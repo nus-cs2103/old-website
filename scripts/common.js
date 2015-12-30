@@ -208,7 +208,7 @@ function loadContent(week) {
 }
 
 /**
- * generateDates() iterates through 'date-marker' span class and generate the corresponding dates.
+ * generateDates() iterates through 'date-marker' span class and generates the corresponding dates.
  * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
  * Format of the generated dates: 'Month Date'. E.g. Aug 10
  */
@@ -223,11 +223,11 @@ function generateDates() {
 
 function getDate(week, day) {
     var date = new Date();
-    var miliSecsPerDay = 24 * 60 * 60 * 1000;
+    var milliSecsPerDay = 24 * 60 * 60 * 1000;
     var isAfterRecessWeek = week > 6;
     var weeksPassed = week - 1 + isAfterRecessWeek;
     var daysPassed = weeksPassed * 7 + day - 1;
-    date.setTime(window.moduleStartDate.getTime() + daysPassed * miliSecsPerDay);
+    date.setTime(window.moduleStartDate.getTime() + daysPassed * milliSecsPerDay);
     return date;
 }
 
