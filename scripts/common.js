@@ -205,7 +205,7 @@ function addAutoScrollToClickedWeekHeader() {
         console.log(scrollTarget);
         $('html, body').animate({
             scrollTop: $(scrollTarget).offset().top 
-        }, 0);
+        }, 100);
     });
 }
 
