@@ -3,19 +3,19 @@
 Search feature aims to help users searching for specific keywords from the whole CS2103/T website.
 
 ## Design
-Search page is designed to be analogous to the index section of a book. In such way that relevant keywords from the whole CS2103/T website are listed on this page. 
+Search page is analogous to the index section of a book in terms of how keywords are linked to revelant page and the table of contents section in terms on how keywords are organized. Search page can also be viewed as a sitemap of CS2103/T website, in such way that relevant keywords from the whole CS2103/T website are listed on this page.
 
 [What are the alternative approaches to implement search feature?](#what-are-the-alternative-approaches-to-implement-search-feature)
 
 ### User Interface
-Although search page is analogous to index section of a book, keywords are not listed in alphabetical order. Instead, keywords are organized in a tree-like structure. This aims to help users quickly understand classification of a keyword and its connection with other keywords.
+Although search page is analogous to the index section of a book, keywords are not listed in alphabetical order. Instead, keywords are organized in a tree-like structure like the table of contents section of a book. This way, context of a keyword are clearly displayed and linked with a page or section related to this keyword.
 
 As the number of keywords on the page might go up to hundreds, it becomes necessary to let users have a better control of number of keywords displayed. Therefore, expanding and collapsing is implemented to show/hide children keywords of a keyword.
 
 ### Data Storage
-Just like index section of a book, keywords are selected manually not automatically. Information and structure of these keywords are added manually and stored inside HTML file of the page itself.
+Just like the index section of a book, keywords are selected manually not automatically. Information and structure of these keywords are added manually and stored inside HTML file of the page itself.
 
-The main purpose of storing these keywords inside a HTML file is to make it easy and simple to add new keywords to search page. Three custom HTML elements (`main-category`, `category`, `keyword`) are introduced to assist contributors in adding new keywords.
+The main purpose of storing these keywords inside a HTML file is to make it easy and simple to add new keywords to search page. Three custom HTML elements (`main-category`, `category`, `keyword`) are introduced to make the keywords page easier to understand and modify.
 
 [Why is data stored inside a HTML file?](#why-is-data-stored-inside-a-html-file)
 
