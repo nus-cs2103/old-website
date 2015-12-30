@@ -208,7 +208,7 @@ function loadContent(week) {
 }
 
 function generateDates() {
-    $('.dateMarker').each(function() {
+    $('.date-marker').each(function() {
         var week = parseInt($(this).attr('week'));
         var day = parseInt($(this).attr('day'));
         var date = getDate(week, day);
