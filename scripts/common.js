@@ -1,6 +1,6 @@
 function initDateVariables() {
-    //Change this to update the dates
-    //Note: Javascript's month are zero-indexed
+    // Change this to update the dates
+    // Note: Javascript's month are zero-indexed
     window.moduleStartDate = new Date(2015, 7, 10);
     window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 }
@@ -218,10 +218,12 @@ function generateDates() {
 
 function getDate(week, day) {
     var date = new Date();
+    var dayToMiliSec = 24 * 60 * 60 * 1000;
+    // There needs to be an extra week after week 7 due to recess week
     if (week >= 7) {
-        date.setTime(window.moduleStartDate.getTime() + (week * 7 * 24 * 60 * 60 * 1000) + ((day - 1) * 24 * 60 * 60 * 1000));
+        date.setTime(window.moduleStartDate.getTime() + (week * 7 + day - 1 ) * dayToMiliSec);
     } else {
-        date.setTime(window.moduleStartDate.getTime() + ((week - 1) * 7 * 24 * 60 * 60 * 1000) + ((day - 1) * 24 * 60 * 60 * 1000));
+        date.setTime(window.moduleStartDate.getTime() + ((week - 1) * 7 + day - 1) * dayToMiliSec);
     }
     return date;
 }
@@ -249,7 +251,7 @@ $(document).ready(function() {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
- 
+
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
