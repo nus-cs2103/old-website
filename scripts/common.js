@@ -193,8 +193,8 @@ function loadContent(week){
 }
 
 $(document).ready(function() {
-    if(typeof _week_no !== 'undefined'){        
-        var week = _week_no;
+    if(typeof week_no !== 'undefined'){        
+        var week = week_no;
         var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
         makeAccordion('.content-week' + week);
         for (var i in components) {
