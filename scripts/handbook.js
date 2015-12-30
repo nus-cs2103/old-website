@@ -1,12 +1,9 @@
 for (var i in sections) {
-    var currentSection = sections[i].split(' ');
-    var htmlFile = currentSection[0];
-    var section = currentSection[1];
-
+    var section = sections[i];
     $.ajax({
         type: 'GET',
         async: false,
-        url: htmlFile + '.html',
+        url: section + '.html',
         error: function() {
         },
         success: function(data) {
