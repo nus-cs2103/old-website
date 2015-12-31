@@ -404,6 +404,8 @@ img {
     height: auto;
 }
 
+/* 1000px since the max-width of body is set to 1000px
+	 Any device whose view is below 1000px will use this*/
 @media screen and (max-device-width: 1000px) {
     body{
         max-width: 100%;
