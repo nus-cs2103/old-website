@@ -148,7 +148,7 @@ function getTemplateUrl(elementName) {
     }
 }
 
-function getDirectivesFunction(elementName, searchData) {
+function getDirectiveCompiler(elementName, searchData) {
     return function() {
         return {
             restrict: 'E',
@@ -178,19 +178,20 @@ function getDirectivesFunction(elementName, searchData) {
 
 function compileSearchDirectives(callback) {
     var searchData = [];
+
     // List of custom elements
     var elementNames = ['mainCategory', 'category', 'keyword'];
 
     // Initialize a new angular module
     var searchDirectives = angular.module('searchDirectives', []);
 
-    // Compile all elements inside the list
+    // Add directive compilers to search directives module
     elementNames.forEach(function(elementName) {
-        searchDirectives.directive(elementName, getDirectivesFunction(elementName, searchData));
+        searchDirectives.directive(elementName, getDirectiveCompiler(elementName, searchData));
     });
 
     searchDirectives.run(function($timeout) {
-        // Wait until all events complete
+        // Wait until all directives compiled
         $timeout(function() {
             callback(searchData)
         });
@@ -245,7 +246,7 @@ function addSearchEventListener(index, categoryTree) {
         if (query == '' || e.which == 13 || e.which == 32) { 
             searchText(query, index, categoryTree);
 
-        } else { // If no activity in 500 ms, search current text
+        } else { // If no activity in 500 ms, search current text anyway
             timeoutReference = setTimeout(function() {
                 searchText(query, index, categoryTree);
             }, TIMEOUT);
