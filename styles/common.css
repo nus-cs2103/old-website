@@ -79,6 +79,8 @@ a:visited {
 	top:50%;
 	left:50%;
 	z-index:11;
+	color: red;
+	font: 1.5em;
 }
 
 .align-right{
