@@ -11,14 +11,19 @@ function getWords(text) {
     return text.trim().match(/[a-z0-9']+/gi);
 }
 
+// Get text with only numbers and alphabets
+function getCleanText(text) {
+    return getWords(text).join(' ');
+}
+
 // Add additional attributes to data
 function enhanceData(data) {
     for (var i in data) {
-        data[i].cleanText = getWords(data[i].text).join(' ');
+        data[i].cleanText = getCleanText(data[i].text);
         data[i].childSelector = data[i].selector.children().last();
         data[i].keywords = data[i].cleanText;
         if (data[i].related) {
-            data[i].keywords += ' ' + getWords(data[i].related).join(' ');
+            data[i].keywords += ' ' + getCleanText(data[i].related);
         }
     }
     return data;
@@ -163,7 +168,8 @@ function getDirectivesFunction(elementName, searchData) {
                     text: scope.text,
                     related: scope.related,
                     selector: element,
-                    parent: scope.$parent.$parent ? scope.$parent.$parent.text : '' // Empty string if this element doesn't have parent
+                    // Parent is empty string if this element doesn't have parent scope
+                    parent: scope.$parent.$parent ? scope.$parent.$parent.text : '' 
                 });
             }
         }
@@ -175,7 +181,7 @@ function compileSearchDirectives(callback) {
     // List of custom elements
     var elementNames = ['mainCategory', 'category', 'keyword'];
 
-    // Render directives using angular.js
+    // Initialize a new angular module
     var searchDirectives = angular.module('searchDirectives', []);
 
     // Compile all elements inside the list
@@ -196,6 +202,7 @@ function searchText(query, index, categoryTree) {
     expandChildren($(document));
     $(document).unhighlight();
 
+    // Don't do search when query is empty
     if (query == '') {
         return;
     }
@@ -234,7 +241,8 @@ function addSearchEventListener(index, categoryTree) {
             clearTimeout(timeoutReference);
         }
 
-        if (query == '' || e.which == 13 || e.which == 32) { // If empty query or enter key or space key pressed
+        // If empty query or enter key or space key pressed
+        if (query == '' || e.which == 13 || e.which == 32) { 
             searchText(query, index, categoryTree);
 
         } else { // If no activity in 500 ms, search current text
