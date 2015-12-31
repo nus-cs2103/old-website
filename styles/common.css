@@ -3,12 +3,13 @@ body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 14px;
+    font-size: 16px;
     width:90%;
 }
 
-table > tbody > tr > td {
-    font-size: 14px;
+table > tbody > tr > td,
+table > tbody > tr > th {
+    font-size: 16px;
 }
 
 a:link {
@@ -33,6 +34,12 @@ a:visited {
 
 #form-preferences > table > tr {
     padding-top: 5px;
+}
+
+#table-headings td,
+#form-preferences td,
+#content {
+    font-size: 14px;
 }
 
 #content {
