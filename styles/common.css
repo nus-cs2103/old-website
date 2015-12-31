@@ -41,29 +41,18 @@ a:visited {
 
 #overlay {
     position: absolute;
-    top: 37%;
-    left: 39.5%;
-    width: 20%;
-    height: 20%;
+    top: 35%;
+    left: 42%;
+    width: 200px;
+    height: 100px;
     background-color: rgba(0,0,0,0.5);
     border-radius: 5px;
-    z-index: 10;
-}
-
-#modal {
-    width: 150px;
-    height: 25px;
-    line-height: 50px;
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -75px;
     text-align: center;
     font-size: large;
     font-family: sans-serif;
     color: #ffffff;
-    z-index: 11; /* 1px higher than the overlay layer */
+    line-height: 95px;
+    z-index: 10;
 }
 
 .align-right{
