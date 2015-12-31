@@ -1,10 +1,8 @@
-function initDateVariables() {
-    // Change this to set the module start date
-    // Format: Date(Year, Month, Day)
-    // Note: Javascript's month are zero-indexed
-    window.moduleStartDate = new Date(2015, 7, 10);
-    window.month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-}
+// Change this to set the module start date
+// Format: Date(Year, Month, Day)
+// Note: Javascript's month are zero-indexed
+var MODULE_START_DATE = new Date(2015, 7, 10);
+var MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function makeAccordion(elementSelector) {
     $(elementSelector).accordion({
@@ -210,7 +208,7 @@ function loadContent(week) {
 
 /**
  * Iterates through 'date-marker' span class and generates the corresponding dates based on the moduleStartDate.
- * Refer to the initDateVariables() function to set the start of the module date.
+ * Refer to the top of the file to set the start of the module date.
  * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
  * The week attribute denotes the week number while the day attribute denotes the day of the intended week.
  * Both attributes must be a positive integer.
@@ -221,25 +219,23 @@ function generateDates() {
         var week = parseInt($(this).attr('week'));
         var day = parseInt($(this).attr('day'));
         var date = getDate(week, day);
-        $(this).html(window.month[date.getMonth()] + ' ' + date.getDate());
+        $(this).html(MONTH[date.getMonth()] + ' ' + date.getDate());
     });
 }
 
 function getDate(week, day) {
     var date = new Date();
-    var milliSecsPerDay = 24 * 60 * 60 * 1000;
+    var MILLI_SECS_PER_DAY = 24 * 60 * 60 * 1000;
     var isAfterRecessWeek = week > 6;
     var weeksPassed = week - 1 + isAfterRecessWeek;
     var daysPassed = weeksPassed * 7 + day - 1;
-    date.setTime(window.moduleStartDate.getTime() + daysPassed * milliSecsPerDay);
+    date.setTime(MODULE_START_DATE.getTime() + daysPassed * MILLI_SECS_PER_DAY);
     return date;
 }
 
 $(document).ready(function() {
 
-    initDateVariables();
     generateDates();
-
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
