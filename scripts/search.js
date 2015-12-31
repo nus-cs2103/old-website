@@ -1,5 +1,5 @@
 function addCategoryExpandAndCollapseEventListener() {
-    $(".category > a").on('click', function() {
+    $('.category > a').on('click', function() {
         $(this).find('.glyphicon').toggleClass('glyphicon-triangle-bottom');
         $(this).find('.glyphicon').toggleClass('glyphicon-triangle-right');
         $(this).siblings().last().toggle('blind');
@@ -11,19 +11,10 @@ function getWords(text) {
     return text.trim().match(/[a-z0-9']+/gi);
 }
 
-// Get slug string
-function getSlug(text) {
-    return text.
-    toLowerCase().
-    replace(/ /g, '-').
-    replace(/[^\w-]+/g, '');
-}
-
 // Add additional attributes to data
 function enhanceData(data) {
     for (var i in data) {
         data[i].cleanText = getWords(data[i].text).join(' ');
-        data[i].slug = getSlug(data[i].text);
         data[i].childSelector = data[i].selector.children().last();
         data[i].keywords = data[i].cleanText;
         if (data[i].related) {
@@ -38,7 +29,7 @@ function buildCategoryTree(data) {
     // Construct adjacency list from data
     data.forEach(function(entry) {
         // Initialize adjacency list if null
-        tree[entry.slug] = tree[entry.slug] || [];
+        tree[entry.text] = tree[entry.text] || [];
         tree[entry.parent] = tree[entry.parent] || [];
 
         tree[entry.parent].push(entry);
@@ -50,7 +41,7 @@ function createSearchIndex(data) {
     // Create search index
     var index = lunr(function() {
         this.field('keywords');
-        this.ref('slug');
+        this.ref('text');
     });
 
     // Input data to search index
@@ -60,7 +51,7 @@ function createSearchIndex(data) {
     return index;
 }
 
-function expandOne(selector) {
+function expandOneChild(selector) {
     selector.show();
     selector.children().last().show();
     if (selector.hasClass('category')) {
@@ -71,11 +62,11 @@ function expandOne(selector) {
 }
 
 function expandChildren(selector) {
-    selector.find(".category, .main-category").each(function() {
-        expandOne($(this));
+    selector.find('.category, .main-category').each(function() {
+        expandOneChild($(this));
     });
 
-    selector.find(".keyword").each(function() {
+    selector.find('.keyword').each(function() {
         $(this).show();
     });
 }
@@ -83,10 +74,10 @@ function expandChildren(selector) {
 function hideNotInResults(keyword, results, categoryTree) {
     var selector = keyword.selector;
     var childSelector = keyword.childSelector;
-    var isInResults = (results.indexOf(keyword.slug) > -1);
+    var isInResults = (results.indexOf(keyword.text) > -1);
 
     var isChildInResults = false;
-    categoryTree[keyword.slug].forEach(function(child) {
+    categoryTree[keyword.text].forEach(function(child) {
         isChildInResults |= hideNotInResults(child, results, categoryTree);
     });
 
@@ -94,7 +85,7 @@ function hideNotInResults(keyword, results, categoryTree) {
         if (isInResults) {
             // If this keyword is in results, expand everything
             expandChildren(selector);
-            expandOne(selector);
+            expandOneChild(selector);
         } else {
             if (isChildInResults) {
                 // If this keyword is not in results but its child is then show this
@@ -134,110 +125,68 @@ function highlightInResults(keyword, tokens, index, categoryTree) {
     }
 
     // Also highlight its children
-    categoryTree[keyword.slug].forEach(function(child) {
+    categoryTree[keyword.text].forEach(function(child) {
         highlightInResults(child, tokens, index, categoryTree);
     });
 }
 
+function getTemplateUrl(elementName) {
+    switch(elementName) {
+        case 'mainCategory':
+            return 'search-main-category-partial.html';
+        case 'category':
+            return 'search-category-partial.html';
+        case 'keyword':
+            return 'search-keyword-partial.html';
+        default:
+            return null;
+    }
+}
+
+function getDirectivesFunction(elementName, searchData) {
+    return function() {
+        return {
+            restrict: 'E',
+            scope: { // Bind with attribute value
+                text: '@',
+                type: '@',
+                href: '@',
+                label: '@',
+                related: '@'
+            },
+            replace: true,
+            transclude: true,
+            templateUrl: getTemplateUrl(elementName),
+            link: function(scope, element) {
+                // Add entry to search data
+                searchData.push({
+                    text: scope.text,
+                    related: scope.related,
+                    selector: element,
+                    parent: scope.$parent.$parent ? scope.$parent.$parent.text : '' // Empty string if this element doesn't have parent
+                });
+            }
+        }
+    };
+}
+
 function compileSearchDirectives(callback) {
-    searchData = [];
+    var searchData = [];
+    // List of custom elements
+    var elementNames = ['mainCategory', 'category', 'keyword'];
+
     // Render directives using angular.js
     var searchDirectives = angular.module('searchDirectives', []);
-    searchDirectives.
-    directive('mainCategory', function() {
-        return {
-            restrict: 'E',
-            scope: true,
-            replace: true,
-            transclude: true,
-            templateUrl: 'search-main-category-partial.html',
-            link: function(scope, element, attrs) {
-                // Start linking
-                scope.$emit('linking');
-                scope.text = attrs.text;
-                scope.slug = getSlug(attrs.text);
-                scope.label = attrs.label;
-                scope.type = attrs.type;
-                scope.href = attrs.href;
 
-                // Wait until parent slug available
-                searchData.push({
-                    text: attrs.text,
-                    parent: "",
-                    selector: element,
-                    type: "main-category"
-                });
-                // Linking complete
-                scope.$emit('complete');
-            }
-        };
-    }).
-    directive('category', function() {
-        return {
-            restrict: 'E',
-            scope: true,
-            replace: true,
-            transclude: true,
-            templateUrl: 'search-category-partial.html',
-            link: function(scope, element, attrs) {
-                // Start linking
-                scope.$emit('linking');
-                scope.text = attrs.text;
-                scope.slug = getSlug(attrs.text);
-
-                // Wait until parent slug available
-                scope.$parent.$parent.$watch('slug', function() {
-                    searchData.push({
-                        text: attrs.text,
-                        related: attrs.related,
-                        selector: element,
-                        parent: scope.$parent.$parent.slug,
-                        type: "category"
-                    });
-                    // Linking complete
-                    scope.$emit('complete');
-                });
-            }
-        };
-    }).
-    directive('keyword', function() {
-        return {
-            restrict: 'E',
-            scope: true,
-            replace: true,
-            templateUrl: 'search-keyword-partial.html',
-            link: function(scope, element, attrs) {
-                // Start linking
-                scope.$emit('linking');
-                scope.text = attrs.text;
-                scope.href = attrs.href;
-                scope.slug = getSlug(attrs.text);
-
-                // Wait until parent slug available
-                scope.$parent.$parent.$watch('slug', function() {
-                    searchData.push({
-                        text: attrs.text,
-                        related: attrs.related,
-                        selector: element,
-                        parent: scope.$parent.$parent.slug,
-                        type: "keyword"
-                    });
-                    // Linking complete
-                    scope.$emit('complete');
-                });
-            }
-        };
+    // Compile all elements inside the list
+    elementNames.forEach(function(elementName) {
+        searchDirectives.directive(elementName, getDirectivesFunction(elementName, searchData));
     });
 
-    var linkingCount = 0;
-    searchDirectives.run(function($rootScope) {
-        $rootScope.$on('linking', function() {
-            linkingCount++;
-        });
-        $rootScope.$on('complete', function() {
-            linkingCount--;
-            // When all linking is complete, call callback function
-            if (linkingCount == 0) callback(searchData);
+    searchDirectives.run(function($timeout) {
+        // Wait until all events complete
+        $timeout(function() {
+            callback(searchData)
         });
     });
 }
@@ -264,7 +213,7 @@ function searchText(query, index, categoryTree) {
     });
 
     var rootKeyword = {
-        slug: ""
+        text: ''
     };
 
     // Hide keyword not in results
@@ -275,7 +224,7 @@ function searchText(query, index, categoryTree) {
 
 function addSearchEventListener(index, categoryTree) {
     var timeoutReference;
-    var timeout = 500;
+    var TIMEOUT = 500;
 
     $('#search-box').keyup(function(e) {
         var query = $(this).val();
@@ -291,7 +240,7 @@ function addSearchEventListener(index, categoryTree) {
         } else { // If no activity in 500 ms, search current text
             timeoutReference = setTimeout(function() {
                 searchText(query, index, categoryTree);
-            }, timeout);
+            }, TIMEOUT);
         }
     });
 }
@@ -319,5 +268,5 @@ compileSearchDirectives(function(searchData) { // Callback function
     });
 
     // Prepend horizontal line on every category list
-    $('.category > .category-list').prepend("<div class='separator'></div>");
+    $('.category > .category-list').prepend('<div class="separator">');
 });
