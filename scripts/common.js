@@ -173,6 +173,63 @@ function checkIfAllComponentsChecked() {
     return isAllChecked;
 }
 
+function autoExpandCurrentSchedule(week) {
+	var dateNotFound = 0;
+	var bracketOffset = 1;
+	var delimeter = " ";
+	var pattern = /\[(.*?)\]/g;
+	
+	//retrieve current date indicated on the week
+	var title = $("#header-content-week" + week + " .schedule-title").html();
+	var startIndex = title.search(pattern) + bracketOffset;
+	var endIndex = title.length - bracketOffset;
+	if(startIndex != dateNotFound) { 
+		title = title.substring(startIndex, endIndex);
+		title = title.split(delimeter);
+		
+		var isSameWeek = compareWeek(title);
+		triggerScheduleExpand(isSameWeek, week);
+	}
+}
+
+function triggerScheduleExpand(isSameWeek, week) {
+	var scrollOffset = 70;
+	if(isSameWeek) { 
+		var selectedWeek = $("#expandall-content-week" + week);
+		$("#content").animate({
+       		scrollTop: selectedWeek.offset().top - scrollOffset
+		}, 1500);
+		selectedWeek.trigger('click');
+	}
+}
+
+function compareWeek(title) {
+	var isSameWeek = false;
+	var startDate = retrieveStartDateOfWeek();
+	var startDay = startDate.getDate();
+	var startMonth = startDate.getMonth();
+	var month = convertMonthNametoNumeric(title[0]);
+	var day = title[1];
+	if(startDay == day && startMonth == month) {
+		isSameWeek = true;
+	}
+	return isSameWeek;
+}
+
+function retrieveStartDateOfWeek() {
+	var dayOffset = 1;
+	var today = new Date();
+	var day = today.getDay(); 
+	var startDate = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + dayOffset);
+	return startDate;
+}
+
+function convertMonthNametoNumeric(monthName) {
+	var characterOffset = 3;
+	var months = "JanFebMarAprMayJunJulAugSepOctNovDec";
+	return months.indexOf(monthName)  / characterOffset;
+}
+
 function loadContent(week) {
     $.ajax({
         type: 'GET',
@@ -195,6 +252,7 @@ function loadContent(week) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
+			autoExpandCurrentSchedule(week);
         }
     });
 }
@@ -269,5 +327,4 @@ $(document).ready(function() {
             }
         }
     });
-
 });
