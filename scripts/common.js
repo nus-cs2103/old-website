@@ -195,7 +195,7 @@ function autoExpandCurrentSchedule(week) {
 function triggerScheduleExpand(isSameWeek, week) {
 	var scrollOffset = 70;
 	if(isSameWeek) { 
-		var selectedWeek = $("#expand-content-week" + week);
+		var selectedWeek = $("#expandall-content-week" + week);
 		$("#content").animate({
        		scrollTop: selectedWeek.offset().top - scrollOffset
 		}, 1500);
