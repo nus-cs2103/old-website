@@ -22,11 +22,15 @@ There are other approaches to implement a search feature. Below are some approac
             Use Google Custom Search Engine
         </td>
         <td>
+            <ul>
             <li>Powerful search algorithm, more relevant result</li>
+            </ul>
         </td>
         <td>
+            <ul>
             <li>More suitable on website with many pages</li>
             <li>Less control over search page (Advertising, Uncustomizable search page, etc..)</li>
+            </ul>
         </td>
     </tr>
     <tr>
@@ -34,11 +38,15 @@ There are other approaches to implement a search feature. Below are some approac
             Crawl website to build index automatically
         </td>
         <td>
+            <ul>
             <li>Everything can be done programmatically</li>
+            </ul>
         </td>
         <td>
+            <ul>
             <li>Less relevant results</li>
             <li>Difficult to be organized accurately</li>
+            </ul>
         </td>
     </tr>
     <tr>
@@ -46,11 +54,15 @@ There are other approaches to implement a search feature. Below are some approac
             Add relevant keywords to build index manually
         </td>
         <td>
+            <ul>
             <li>More relevant results</li>
             <li>Full control over search page, keywords displayed, and keywords organization</li>
+            </ul>
         </td>
         <td>
+            <ul>
             <li>Requires a lot of manual works</li>
+            </ul>
         </td>
     </tr>
 </table>
