@@ -252,7 +252,6 @@ function addAutoScrollToClickedWeekHeader() {
 
 $(document).ready(function() {
 
-    generateDates();
     makeAccordion('.weeklyschedule');
     $('.weeklyschedule > h3').each(function() {
         var id = $(this).attr('id');
