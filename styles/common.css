@@ -74,12 +74,12 @@ a:visited {
 }
 
 #embedded-link-loading-img {
-	display:none;
-	position:fixed;
-	top:50%;
-	left:50%;
-	z-index:11;
-	color: red;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 11;
+	background-color: white;
 	font: 1.5em;
 }
 
