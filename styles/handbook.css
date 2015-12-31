@@ -1,3 +1,8 @@
+body {
+    padding: 0px 10px;
+    max-width: 740px;
+}
+
 h1{
 	color:purple;
 }
