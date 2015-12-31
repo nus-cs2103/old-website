@@ -1,15 +1,14 @@
 # HTML Style Guide
 
-## Table of Contents
-- [Document Properties](#document-properties)
-- [External Files](#external-files)
-- [Tags](#tags)
-- [Attributes](#attributes)
-- [Naming Convention](#naming-convention)
-- [Indentation](#indentation)
-- [Miscellaneous](#miscellaneous)
+- <a href="#document-properties">Document Properties</a>
+- <a href="#external-files">External Files</a>
+- <a href="#tags">Tags</a>
+- <a href="#attributes">Attributes</a>
+- <a href="#naming-convention">Naming Convention</a>
+- <a href="#indentation">Indentation</a>
+- <a href="#miscellaneous">Miscellaneous</a>
 
-## Document Properties<a name="document-properties"></a>
+## Document Properties
 - __We will use the HTML5 Doctype and HTML5 features__
   ```html
   <!DOCTYPE html>
@@ -76,66 +75,93 @@
     </html>
   ```
 
-## External Files<a name="external-files"></a>
+## External Files
 - Each webpage should include it's own css file if there is any, as well as the general css file.
 - Each webpage should include it's own javascript file(if necessary), as well as the respective common.js, instructor/student.js, and all the 3rd party js files.
 
-## Tags<a name="tags"></a>
+## Tags
 - All HTML tags are to be closed properly
 
-  Good:
-  ```html
-  <div>Stuff</div>
-  ```
-  
-  Bad:
-  ```html
-  <p>Stuff
-  <p>More Stuff
-  ```
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;div&gt;Stuff&lt;/div&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;p&gt;Stuff
+  &lt;p&gt;More Stuff</pre>
+      </td>
+    </tr>
+  </table>
 
 - Void elements do not have a closing tag. Do not use /> for void elements
   Void elements are: <code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>command</code>, <code>embed</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>keygen</code>, <code>link</code>, <code>meta</code>, <code>param</code>, <code>source</code>, <code>track</code>, <code>wbr</code>
 
-  Good:
-  ```html
-  <br>
-  <img src=”a” width=”5px” height=”10px”>
-  ```
-  
-  Bad:
-  ```html
-  <br />
-  <img src=”a” width=”5px” height=”10px” />
-  ```
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;br&gt;
+  &lt;img src="a" width="5px" height="10px"&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;br /&gt;
+  &lt;img src="a" width="5px" height="10px" /&gt;</pre>
+      </td>
+    </tr>
+  </table>
 
 - Use lowercase for all attributes and tag names
-  
-  Good:
-  ```html
-  <div id=”frame”>Test</div>
-  ```
-  
-  Bad:
-  ```html
-  <DIV ID=”frame”>Test</div>
-  ```
 
-## Attributes<a name="attributes"></a>
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;div id="frame"&gt;Test&lt;/div&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;DIV ID="frame"&gt;Test&lt;/div&gt;</pre>
+      </td>
+    </tr>
+  </table>
+
+## Attributes
 - Use [attr=”value”] for attribute values
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;input value="computer" id="someInput" disabled="disabled" tabindex="2"&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;input value=computer id='someInput' disabled='disabled' tabindex=2&gt; (single/no quotes)
+  &lt;input value="computer" id="someInput" disabled tabindex="2"&gt; (specify boolean variables in the attributes)</pre>
+      </td>
+    </tr>
+  </table>
 
-  Good:
-  ```html
-  <input value=”computer” id=”someInput” disabled=”disabled” tabindex=”2”>
-  ```
-
-  Bad:
-  ```html
-  <input value=computer id='someInput' disabled='disabled' tabindex=2> (single/no quotes)
-  <input value="computer" id="someInput" disabled tabindex="2"> (specify boolean variables in the attributes)
-  ```
-
-## Naming convention<a name="naming-convention"></a>
+## Naming convention
 - Class
   See Css style guide for this section
 
@@ -150,27 +176,41 @@
 - Indentation should be 2 spaces for html files.
 - Spaces should be used instead of <code>tab</code>
 
-## Miscellaneous<a name="miscellaneous"></a>
+## Miscellaneous
 - Take note of script tags.
- 
-  Good:
-  ``` html
-  <script type="text/javascript" src="/js/jquery-minified.js"></script>
-  ```
-  
-  Bad:
-  ```html
-  <script language="JavaScript" src="/js/jquery-minified.js"></script>
-  ```
+
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;script type="text/javascript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;script language="JavaScript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
+      </td>
+    </tr>
+  </table>
 
 - Do not have trailing whitespaces between opening and closing tags
 
-  Good:
-  ```html
-  <p>Student Name</p>
-  ```
-  
-  Bad:
-  ```html
-  <p> Student Name </p>
-  ```
+  <table>
+    <tr>
+      <th align="center">Good</th>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;p&gt;Student Name&lt;/p&gt;</pre>
+      </td>
+      <td>
+        <pre lang="html">
+  &lt;p&gt; Student Name &lt;/p&gt;</pre>
+      </td>
+    </tr>
+  </table>
