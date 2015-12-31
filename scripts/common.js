@@ -1,8 +1,16 @@
 // Change this to set the module start date
-// Format: Date(Year, Month, Day)
-// Note: Javascript's month are zero-indexed
-var MODULE_START_DATE = new Date(2015, 7, 10);
+// Format: 'Year.Month.Date'
+// E.g. '2015.8.10'
+var MODULE_START_DATE = setModuleStartDate('2015.8.10');
 var MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function setModuleStartDate(inputDate) {
+    var dateArray = inputDate.split('.');
+    var year = dateArray[0];
+    var month = dateArray[1] - 1; // Javascript's month are zero-indexed
+    var date = dateArray[2];
+    return new Date(year, month, date);
+}
 
 function makeAccordion(elementSelector) {
     $(elementSelector).accordion({
