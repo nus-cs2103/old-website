@@ -7,6 +7,7 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(section, elementSelector) {
+		$("#embedded-link-loading-img").show();
     pullContent(section, elementSelector, 'Exract from handbook');
 }
 
@@ -23,6 +24,7 @@ function pullContent(section, elementSelector, title) {
                                                          ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
                                                  'class="btn-dismiss">X</button><br><br></div>' + data);
             $(elementSelector + ' > div > .btn-dismiss').button();
+            $("#embedded-link-loading-img").hide();
         }
     });
 }

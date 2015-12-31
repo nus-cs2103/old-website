@@ -73,6 +73,14 @@ a:visited {
     z-index: 11; /* 1px higher than the overlay layer */
 }
 
+#embedded-link-loading-img {
+	display:none;
+	position:fixed;
+	top:50%;
+	left:50%;
+	z-index:11;
+}
+
 .align-right{
     text-align: right;
 }
