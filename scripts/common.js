@@ -199,6 +199,15 @@ function loadContent(week) {
     });
 }
 
+function addAutoScrollToClickedWeekHeader() {
+    $('.buttoned').click(function(event) {
+        var scrollTarget = '#' + event.currentTarget.id;
+        $('html, body').animate({
+            scrollTop: $(scrollTarget).offset().top 
+        }, 500);
+    });
+}
+
 $(document).ready(function() {
 
     makeAccordion('.weeklyschedule');
@@ -207,29 +216,20 @@ $(document).ready(function() {
         var week = id.substr(('header-content-week').length);
         addCollapseAndExpandButtonsForWeek('#' + id, 'content-week' + week);
     });
-    var bannerHeight = 25;
     var headerHeight = 40;
     var topMargin = 5;
     var topPadding = 5;
     $('#form-preferences').css('height', headerHeight);
     $('#form-preferences').css('padding-top', topPadding);
     $('#content').css('margin-top', topMargin);
-
-    function calculateContainerSize() {
-        return $(window).height() - headerHeight - bannerHeight - topMargin - topPadding;
-    }
-
-    $('#content').css('height', calculateContainerSize());
-
-    $(window).resize(function() {
-        $('#content').css('height', calculateContainerSize());
-    });
+    $('#content').css('height', 'auto');
 
     for (var week = 0; week <= 14; week++) {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
 
+    addAutoScrollToClickedWeekHeader();
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
