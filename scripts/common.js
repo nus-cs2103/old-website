@@ -25,8 +25,7 @@ function getContentUsingAjax(fileName, elementSelector, sectionName) {
 }
 
 function pullContent(fileName, elementSelector, title, sectionName) {
-    var fileToLoad = fileName + '.html';
-    var toBeLoaded = fileToLoad;
+    var toBeLoaded = fileName + '.html';
     var targetSection = elementSelector + '-';
 
     if (sectionName == undefined) {
