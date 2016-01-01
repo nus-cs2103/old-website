@@ -25,23 +25,18 @@ function getContentUsingAjax(fileName, elementSelector, sectionName) {
 }
 
 function pullContent(fileName, elementSelector, title, sectionName) {
-    var toBeLoaded = fileName + '.html';
-    var targetSection = elementSelector + '-';
+    var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
 
-    if (sectionName == undefined) {
-        targetSection += fileName;
-    } else {
-        toBeLoaded += ' #' + sectionName;
-        targetSection += sectionName;
-    }
+    $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
+        if (status == 'success') {
+            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+               ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+               'class="btn-dismiss">X</button><br><br></div>');
 
-    $(elementSelector).addClass('embedded');
-    $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
-       ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-       'class="btn-dismiss">X</button><br><br></div><div id="' + targetSection.substring(1) + '"></div>');
-    $(elementSelector + ' > div > .btn-dismiss').button();
-
-    $(targetSection).load(toBeLoaded); 
+            $(elementSelector).addClass('embedded');
+            $(elementSelector + ' > div > .btn-dismiss').button();
+        }
+    }); 
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
