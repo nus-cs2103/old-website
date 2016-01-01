@@ -377,6 +377,12 @@ To understand more, you can take a look at source file of [search.html](#).
 ### Spell checker on search box
 While current search function provides a fair flexibility, it wasn't able to detect misspelling error. Using fuzzy search function also might not be a good idea because it provides to much flexibility. So it might be a good idea to notify users if they misspell a word inside the search box similar to Google search box.
 
+### Load search result's content using AJAX
+With current implementation, when users click on a search result, they will be redirected to another page and their search results will be lost. To preserve search results, it might be better if users are not redirected when they click on a search result. Instead, search result's content should be loaded using AJAX to an element inside search page when they click on a search result. Then by adding a back button, search results can be preserved. This can open more possible improvements like easier navigation between search result's content, and load only a relevant part of search result's content (using CSS selector).
+
+### Word synonyms
+The way current search function works, synonyms can be inserted inside `related` attribute inside HTML elements. But this means every time `IDE` inserted as a keyword, `integrated development environment` also has to be inserted inside `related` attribute. It might be better if there is way to directly connect these two keywords without repetition.
+
 ## References
 
 - [JavaScript library for search engine style searching](http://stackoverflow.com/questions/11832591/javascript-library-for-search-engine-style-searching)
