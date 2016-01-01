@@ -135,6 +135,7 @@ function highlightInResults(keyword, tokens, index, categoryTree) {
     });
 }
 
+// Return location of html fragment template file for specified element
 function getTemplateUrl(elementName) {
     switch(elementName) {
         case 'mainCategory':
@@ -160,7 +161,9 @@ function getDirectiveCompiler(elementName, searchData) {
                 related: '@'
             },
             replace: true,
+            // This option allows elements to be nested
             transclude: true,
+            // This element will be replaced by html fragment template
             templateUrl: getTemplateUrl(elementName),
             link: function(scope, element) {
                 // Add entry to search data
