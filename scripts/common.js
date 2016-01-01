@@ -7,34 +7,28 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(fileName, elementSelector, sectionName) {
-    if (arguments.length == 3) {
-        pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
-    } else {
-        pullContent(fileName, elementSelector, 'Exract from handbook');
-    }
-    
+    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
 }
 
 function pullContent(fileName, elementSelector, title, sectionName) {
-    if (arguments.length == 4) {
-        var url = fileName +'.html';
-        var target = ' #' + sectionName;
-        var pageToLoad = url + target;
-        var targetSection = elementSelector + sectionName;
-        var newSectionName = sectionName;
+    var fileToLoad = fileName + '.html';
+    var toBeLoaded = fileToLoad;
+    var targetSection = elementSelector + '-';
+
+    if (sectionName == undefined) {
+        targetSection += fileName;
     } else {
-        var pageToLoad = fileName +'.html';
-        var targetSection = elementSelector + fileName;
-        var newSectionName = fileName;
-    }   
+        toBeLoaded += ' #' + sectionName;
+        targetSection += sectionName;
+    }
 
     $(elementSelector).addClass('embedded');
     $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
        ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-       'class="btn-dismiss">X</button><br><br></div> <div id = "' + elementSelector.substring(1) + newSectionName + '"></div>');
+       'class="btn-dismiss">X</button><br><br></div> <div id ="' + targetSection.substring(1) + '"></div>');
     $(elementSelector + ' > div > .btn-dismiss').button();
 
-    $(targetSection).load(pageToLoad); 
+    $(targetSection).load(toBeLoaded); 
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
