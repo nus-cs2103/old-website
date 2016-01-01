@@ -192,15 +192,18 @@ function loadContent(week){
     })
 }
 
+function isFragment(){
+    return typeof week_no !== 'undefined';
+}
+
 $(document).ready(function() {
-    if(typeof week_no !== 'undefined'){        
-        var week = week_no;
+    if(isFragment()){        
         var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
-        makeAccordion('.content-week' + week);
+        makeAccordion('.content-week' + week_no);
         for (var i in components) {
             var component = components[i];
-            makeAccordion('.' + component + '-week' + week);
-            addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
+            makeAccordion('.' + component + '-week' + week_no);
+            addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week_no, component + '-week' + week_no);
         }
         return;
     }
