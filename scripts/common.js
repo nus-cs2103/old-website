@@ -39,7 +39,7 @@ function pullContent(fileName, elementSelector, title, sectionName) {
     $(elementSelector).addClass('embedded');
     $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
        ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-       'class="btn-dismiss">X</button><br><br></div> <div id ="' + targetSection.substring(1) + '"></div>');
+       'class="btn-dismiss">X</button><br><br></div> <div id="' + targetSection.substring(1) + '"></div>');
     $(elementSelector + ' > div > .btn-dismiss').button();
 
     $(targetSection).load(toBeLoaded); 
