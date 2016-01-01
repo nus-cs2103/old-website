@@ -464,6 +464,7 @@ table.bordered tr > th {
 
 .label-text {
     padding-left:5px;
+    font-size: 14px;
 }
 
 .separator {
