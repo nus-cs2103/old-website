@@ -143,23 +143,17 @@
 
 ## Attributes
 - Use [attr=”value”] for attribute values
-  <table>
-    <tr>
-      <th align="center">Good</th>
-      <th align="center">Bad</th>
-    </tr>
-    <tr>
-      <td>
-        <pre lang="html">
-  &lt;input value="computer" id="someInput" disabled="disabled" tabindex="2"&gt;</pre>
-      </td>
-      <td>
-        <pre lang="html">
-  &lt;input value=computer id='someInput' disabled='disabled' tabindex=2&gt; (single/no quotes)
-  &lt;input value="computer" id="someInput" disabled tabindex="2"&gt; (specify boolean variables in the attributes)</pre>
-      </td>
-    </tr>
-  </table>
+
+  Good
+  ```html
+  <input value="computer" id="someInput" disabled="disabled" tabindex="2">
+  ```
+  
+  Bad
+  ```html
+  <input value=computer id='someInput' disabled='disabled' tabindex=2> (single/no quotes)
+  <input value="computer" id="someInput" disabled tabindex="2"> (specify boolean variables in the attributes)
+  ```
 
 ## Naming convention
 - Class
@@ -179,22 +173,15 @@
 ## Miscellaneous
 - Take note of script tags.
 
-  <table>
-    <tr>
-      <th align="center">Good</th>
-      <th align="center">Bad</th>
-    </tr>
-    <tr>
-      <td>
-        <pre lang="html">
-  &lt;script type="text/javascript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
-      </td>
-      <td>
-        <pre lang="html">
-  &lt;script language="JavaScript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
-      </td>
-    </tr>
-  </table>
+  Good
+  ```html
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+  ```
+  
+  Bad
+  ```html
+  <script language="JavaScript" src="/js/jquery-minified.js"></script>
+  ```
 
 - Do not have trailing whitespaces between opening and closing tags
 
