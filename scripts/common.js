@@ -2,7 +2,7 @@
 // Format: 'Year.Month.Date'
 // E.g. '2015.8.10'
 var MODULE_START_DATE = setModuleStartDate('2015.8.10');
-var MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var MONTH_NAMES_SHORT_FORM = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function setModuleStartDate(inputDate) {
     var dateArray = inputDate.split('.');
@@ -227,7 +227,7 @@ function generateDates() {
         var week = parseInt($(this).attr('week'));
         var day = parseInt($(this).attr('day'));
         var date = getDate(week, day);
-        $(this).html(MONTH[date.getMonth()] + ' ' + date.getDate());
+        $(this).html(MONTH_NAMES_SHORT_FORM[date.getMonth()] + ' ' + date.getDate());
     });
 }
 
