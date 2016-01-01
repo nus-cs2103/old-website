@@ -16,7 +16,7 @@
 
   Do __NOT__ include xml namespace in the document.
   ```html
-  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns="http://www.w3.org/1999/xhtml”
   ```
 
 - __Character Encoding__
@@ -142,18 +142,32 @@
   </table>
 
 ## Attributes
-- Use [attr="value"] for attribute values
+- Use [attr=”value”] for attribute values
 
-  Good
-  ```html
-  <input value="computer" id="someInput" disabled="disabled" tabindex="2">
-  ```
+  <table>
+    <tr>
+      <th align="center">Good</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;input value="computer" id="someInput" disabled="disabled" tabindex="2"&gt;</pre>
+      </td>
+    </tr>
+  </table>
   
-  Bad
-  ```html
-  <input value=computer id='someInput' disabled='disabled' tabindex=2> (single/no quotes)
-  <input value="computer" id="someInput" disabled tabindex="2"> (specify boolean variables in the attributes)
-  ```
+  <table>
+    <tr>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;input value=computer id='someInput' disabled='disabled' tabindex=2&gt;(single/no quotes)
+  &lt;input value="computer" id="someInput" disabled tabindex="2"&gt;(specify boolean variables in the attributes)</pre>
+      </td>
+    </tr>
+  </table>
 
 ## Naming convention
 - Class
@@ -173,15 +187,29 @@
 ## Miscellaneous
 - Take note of script tags.
 
-  Good
-  ```html
-  <script type="text/javascript" src="/js/jquery-minified.js"></script>
-  ```
+  <table>
+    <tr>
+      <th align="center">Good</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;script type="text/javascript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
+      </td>
+    </tr>
+  </table>
   
-  Bad
-  ```html
-  <script language="JavaScript" src="/js/jquery-minified.js"></script>
-  ```
+  <table>
+    <tr>
+      <th align="center">Bad</th>
+    </tr>
+    <tr>
+      <td>
+        <pre lang="html">
+  &lt;script language="JavaScript" src="/js/jquery-minified.js"&gt;&lt;/script&gt;</pre>
+      </td>
+    </tr>
+  </table>
 
 - Do not have trailing whitespaces between opening and closing tags
 
