@@ -16,7 +16,7 @@
 
   Do __NOT__ include xml namespace in the document.
   ```html
-  xmlns="http://www.w3.org/1999/xhtml”
+  xmlns="http://www.w3.org/1999/xhtml"
   ```
 
 - __Character Encoding__
@@ -142,7 +142,7 @@
   </table>
 
 ## Attributes
-- Use [attr=”value”] for attribute values
+- Use [attr="value"] for attribute values
 
   Good
   ```html
