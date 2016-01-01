@@ -29,11 +29,10 @@ function pullContent(fileName, elementSelector, title, sectionName) {
 
     $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
         if (status == 'success') {
+            $(elementSelector).addClass('embedded');
             $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
                ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
                'class="btn-dismiss">X</button><br><br></div>');
-
-            $(elementSelector).addClass('embedded');
             $(elementSelector + ' > div > .btn-dismiss').button();
         }
     }); 
