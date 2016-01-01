@@ -330,7 +330,8 @@ table.bordered tr > th {
     font-weight: bold;
  }
 
-.highlighted {
+.highlighted,
+.highlighted-darktext {
     background-color: #ffff00;
 }
 
@@ -338,11 +339,8 @@ table.bordered tr > th {
     color: #2b2b2b; 
 }
 
-li > .highlighted-darktext {
-    background-color: #ffff00;
-}
-
 .ui-accordion-header > .highlighted-darktext {
+    background-color: inherit;
     color: #ffffff;
     font-weight: bold;
 }
