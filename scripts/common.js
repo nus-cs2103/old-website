@@ -21,7 +21,6 @@ function makeAccordion(elementSelector) {
 }
 
 function getContentUsingAjax(section, elementSelector) {
-		$("#embedded-link-loading-img").show();
     pullContent(section, elementSelector, 'Exract from handbook');
 }
 
@@ -33,6 +32,7 @@ function pullContent(section, elementSelector, title) {
 
         },
         success: function(data) {
+            $("#embedded-link-loading-img").show();
             $(elementSelector).addClass('embedded');
             $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
                                                          ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
