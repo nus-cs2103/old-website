@@ -1,7 +1,12 @@
 function addCategoryExpandAndCollapseEventListener() {
     $('.category > a').on('click', function() {
+        // Find glyphicon element
+        // then toggle expand glyphicon
         $(this).find('.glyphicon').toggleClass('glyphicon-triangle-bottom');
+        // and toggle collapse glyphicon
         $(this).find('.glyphicon').toggleClass('glyphicon-triangle-right');
+
+        // Toggle show/hide subcategories with jQuery UI's 'blind' animation
         $(this).siblings().last().toggle('blind');
     });
 }
@@ -56,19 +61,23 @@ function createSearchIndex(data) {
     return index;
 }
 
-function expandOneChild(selector) {
+// Expand and show specified selector
+function expandAndShowSelf(selector) {
     selector.show();
     selector.children().last().show();
     if (selector.hasClass('category')) {
-        // Add expand glyphicon
-        selector.children().first().find('.glyphicon').addClass('glyphicon-triangle-bottom');
-        selector.children().first().find('.glyphicon').removeClass('glyphicon-triangle-right');
+        // Find glyphicon inside child anchor element
+        // then add expand glyphicon
+        selector.find('> a .glyphicon').addClass('glyphicon-triangle-bottom');
+        // and remove collapse glyphicon
+        selector.find('> a .glyphicon').removeClass('glyphicon-triangle-right');
     }
 }
 
-function expandChildren(selector) {
+// Expand and show all descendents of specified selector
+function expandAndShowDescendants(selector) {
     selector.find('.category, .main-category').each(function() {
-        expandOneChild($(this));
+        expandAndShowSelf($(this));
     });
 
     selector.find('.keyword').each(function() {
@@ -88,9 +97,9 @@ function hideNotInResults(keyword, results, categoryTree) {
 
     if (selector) {
         if (isInResults) {
-            // If this keyword is in results, expand everything
-            expandChildren(selector);
-            expandOneChild(selector);
+            // If this keyword is in results, expand and show self and all descendants
+            expandAndShowSelf(selector);
+            expandAndShowDescendants(selector);
         } else {
             if (isChildInResults) {
                 // If this keyword is not in results but its child is then show this
@@ -204,7 +213,7 @@ function compileSearchDirectives(callback) {
 
 function searchText(query, index, categoryTree) {
     // Expand children to reset search
-    expandChildren($(document));
+    expandAndShowDescendants($(document));
     // Remove 'highlighted' class from the whole page
     $(document).unhighlight({ className: 'highlighted' });
 
