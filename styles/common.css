@@ -412,24 +412,24 @@ table.bordered tr > th {
 
 .search-body {
     max-width: initial;
-    width:100%;
+    width: 100%;
 }
 
 .main-category > a > table {
-    border-bottom:1px solid #ccd8e2;
-    clear:both;
-    display:block;
-    padding-left:25px;
-    padding-bottom:1px;
-    margin-bottom:5px;
-    margin-top:5px;
+    border-bottom: 1px solid #ccd8e2;
+    clear: both;
+    display: block;
+    padding-left: 25px;
+    padding-bottom: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .main-category h2 {
-    line-height:26px;
-    font-weight:bold;
-    font-size:15px;
-    color:#697277;
+    line-height: 26px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #697277;
 }
 
 .category, .keyword {
@@ -463,12 +463,12 @@ table.bordered tr > th {
 }
 
 .label-text {
-    padding-left:5px;
+    padding-left: 5px;
     font-size: 14px;
 }
 
 .separator {
-    border-top:1px solid #ccd8e2;
+    border-top: 1px solid #ccd8e2;
 }
 
 .highlight {
