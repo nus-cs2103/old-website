@@ -74,13 +74,13 @@ a:visited {
 }
 
 #embedded-link-loading-img {
-	display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: 11;
-	background-color: white;
-	font: 1.5em;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  background-color: white;
+  font: 1.5em;
 }
 
 .align-right{
@@ -384,7 +384,7 @@ table.bordered tr > th {
 }
 
 .embedded-link:active {
-		color:purple;
+    color:purple;
 }
 
 .embedded {
