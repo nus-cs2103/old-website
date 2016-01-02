@@ -34,3 +34,20 @@ code.clisystem{
 code.cliuser{
 	color:#b000ff; /*purple*/
 }
+
+#back-to-top-button{
+	display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    color: white;
+    text-shadow: -1px 1px #417cb8;
+    background: #0fcbb4;
+}
+
+#back-to-top-button:hover{
+	text-shadow: -1px 1px #27496d;
+	background: #0c9d7c;
+}
