@@ -25,6 +25,7 @@ function getContentUsingAjax(section, elementSelector) {
 }
 
 function pullContent(section, elementSelector, title) {
+    $("#embedded-link-loading-img").show();
     $.ajax({
         type: 'GET',
         url: section + '.html',
@@ -32,7 +33,6 @@ function pullContent(section, elementSelector, title) {
 
         },
         success: function(data) {
-            $("#embedded-link-loading-img").show();
             $(elementSelector).addClass('embedded');
             $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
                                                          ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
