@@ -64,6 +64,7 @@ function createSearchIndex(data) {
 // Expand and show specified selector
 function expandAndShowSelf(selector) {
     selector.show();
+    // Show its subcategories
     selector.children().last().show();
     if (selector.hasClass('category')) {
         // Find glyphicon inside child anchor element
