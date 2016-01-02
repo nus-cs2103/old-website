@@ -16,7 +16,7 @@
 
   Do __NOT__ include xml namespace in the document.
   ```html
-  xmlns="http://www.w3.org/1999/xhtml”
+  <html xmlns="http://www.w3.org/1999/xhtml">
   ```
 
 - __Character Encoding__
@@ -24,6 +24,12 @@
   ```html
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
+  ```
+
+- __Responsiveness__
+  The following tag should be added in order to support mobile browsing.
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   ```
 
 - __General Rules__
@@ -43,41 +49,33 @@
     Markup defines the structure and outline of a document and offers a structured content.
     It is not intended to define the look and feel of the content on the page beyond rudimentary concepts such as headers, paragraphs, and lists.
     The presentation attributes of HTML have all been deprecated and style should be contained in style sheets.
-    No inline styling should be present in any form.
+    Inline styling should not be used, and should be minimized if its usage is really necessary.
 
 - __General structure for HTML document__
   ```html
   <!DOCTYPE html>
-    <html>
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      
-      <title>Teammates</title>
-      
-      <link rel="shortcut icon" href="/favicon.png">
-      <!-- Sample stylesheet inclusion -->
-      <link type="text/css" href="stylesheets/teammates.css" rel="stylesheet">
-      
-      <!-- Sample javascript inclusion -->
-      <script type="text/javascript" src="/js/jquery-minified.js"></script>
-    </head>
-    <body>
-      <div id="frameTop">
-        stuff...
-      </div>
-      <div id="frameBodyWrapper" class="container theme-showcase">
-        stuff...
-      </div>
-      <div id="frameBottom">
-        stuff...
-      </div>
-    </body>
-    </html>
+  <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CS2103/T (Module website)</title>
+    
+    <!-- Sample stylesheet inclusion -->
+    <link type="text/css" href="styles/common.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Body content goes here -->
+  </body>
+  
+  <!-- Sample javascript inclusion -->
+  <script type="text/javascript" src="/js/jquery-minified.js"></script>
+  </html>
   ```
 
 ## External Files
 - Each webpage should include it's own css file if there is any, as well as the general css file.
-- Each webpage should include it's own javascript file(if necessary), as well as the respective common.js, instructor/student.js, and all the 3rd party js files.
+- Each webpage should include it's own javascript file(if necessary), as well as the respective common.js and all the 3rd party js files.
 
 ## Tags
 - All HTML tags are to be closed properly
@@ -100,8 +98,9 @@
     </tr>
   </table>
 
-- Void elements do not have a closing tag. Do not use /> for void elements
-  Void elements are: <code>area</code>, <code>base</code>, <code>br</code>, <code>col</code>, <code>command</code>, <code>embed</code>, <code>hr</code>, <code>img</code>, <code>input</code>, <code>keygen</code>, <code>link</code>, <code>meta</code>, <code>param</code>, <code>source</code>, <code>track</code>, <code>wbr</code>
+- Void elements do not have a closing tag. Do not use <code>/></code> for void elements
+  Example of void elements are: <code>br</code>, <code>img</code>, <code>link</code>, <code>meta</code>
+  The full list of HTML void elements can be accessed [here](http://www.w3.org/TR/html-markup/syntax.html#void-element)
 
   <table>
     <tr>
@@ -142,7 +141,7 @@
   </table>
 
 ## Attributes
-- Use [attr=”value”] for attribute values
+- Use [attr="value"] for attribute values
 
   <table>
     <tr>
