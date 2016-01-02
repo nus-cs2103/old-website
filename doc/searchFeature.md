@@ -383,8 +383,9 @@ With current implementation, when users click on a search result, they will be r
 ### Word synonyms
 The way current search function works, synonyms can be inserted inside `related` attribute inside HTML elements. But this means every time `IDE` inserted as a keyword, `integrated development environment` also has to be inserted inside `related` attribute. It might be better if there is way to directly connect these two keywords without repetition.
 
-## References
+## Resources
 
-- [JavaScript library for search engine style searching](http://stackoverflow.com/questions/11832591/javascript-library-for-search-engine-style-searching)
+- The [Search Options for Static Websites](http://www.budparr.com/article/search/2014/08/24/search-options-for-static-websites/) is a good resource with a list of various approaches to implement search function.
 
-- [Search Options for Static Websites](http://www.budparr.com/article/search/2014/08/24/search-options-for-static-websites/)
+- The [JavaScript library for search engine style searching](http://stackoverflow.com/a/17536473/928176) is a good resource for a comparison of various javascript text search library for search function.
+
