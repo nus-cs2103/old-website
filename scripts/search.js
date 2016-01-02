@@ -122,9 +122,10 @@ function highlightInResults(keyword, tokens, index, categoryTree) {
             // Get base word of each token
             var baseToken = getBaseWord(index, token);
 
-            // Highlight
+            // If base token is in results
             if (tokens.indexOf(baseToken) > -1) {
-                selector.find('.label-text').highlight(token);
+                // Use 'highlighted' class to highlight text
+                selector.find('.label-text').highlight(token, { className: 'highlighted' });
             }
         });
     }
@@ -202,9 +203,10 @@ function compileSearchDirectives(callback) {
 }
 
 function searchText(query, index, categoryTree) {
-    // Reset previous search
+    // Expand children to reset search
     expandChildren($(document));
-    $(document).unhighlight();
+    // Remove 'highlighted' class from the whole page
+    $(document).unhighlight({ className: 'highlighted' });
 
     // Don't do search when query is empty
     if (query == '') {
