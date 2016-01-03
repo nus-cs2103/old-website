@@ -20,27 +20,23 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function getContentUsingAjax(section, elementSelector) {
-    pullContent(section, elementSelector, 'Exract from handbook');
+function getContentUsingAjax(fileName, elementSelector, sectionName) {
+    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
 }
 
-function pullContent(section, elementSelector, title) {
+function pullContent(fileName, elementSelector, title, sectionName) {
+    var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
     $("#embedded-link-loading-img").show();
-    $.ajax({
-        type: 'GET',
-        url: section + '.html',
-        error: function() {
-
-        },
-        success: function(data) {
+    $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
+        if (status == 'success') {
             $(elementSelector).addClass('embedded');
-            $(elementSelector).html('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
-                                                         ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-                                                 'class="btn-dismiss">X</button><br><br></div>' + data);
+            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+               ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+               'class="btn-dismiss">X</button><br><br></div>');
             $(elementSelector + ' > div > .btn-dismiss').button();
             $("#embedded-link-loading-img").hide();
         }
-    });
+    }); 
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
