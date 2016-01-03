@@ -380,7 +380,6 @@ table.bordered tr > th {
     color: blue;
     text-decoration: underline;
     cursor: pointer;
-    cursor: hand;
 }
 
 .embedded-link:active {
