@@ -36,7 +36,7 @@
   - Indentation
   
     Indentation should be 2 spaces for html files.
-    Spaces should be used instead of <code>tab</code>
+    Spaces should be used instead of `tab`.
 
   - Readability vs Compression
   
@@ -66,10 +66,10 @@
   </head>
   <body>
     <!-- Body content goes here -->
+    
+    <!-- Sample javascript inclusion -->
+    <script type="text/javascript" src="/js/jquery-minified.js"></script>
   </body>
-  
-  <!-- Sample javascript inclusion -->
-  <script type="text/javascript" src="/js/jquery-minified.js"></script>
   </html>
   ```
 
@@ -78,7 +78,7 @@
 - Each webpage should include it's own javascript file(if necessary), as well as the respective common.js and all the 3rd party js files.
 
 ## Tags
-- All HTML tags are to be closed properly
+- All HTML tags are to be closed properly.
 
   <table>
     <tr>
@@ -98,9 +98,9 @@
     </tr>
   </table>
 
-- Void elements do not have a closing tag. Do not use <code>/></code> for void elements
-  Example of void elements are: <code>br</code>, <code>img</code>, <code>link</code>, <code>meta</code>
-  The full list of HTML void elements can be accessed [here](http://www.w3.org/TR/html-markup/syntax.html#void-element)
+- Void elements do not have a closing tag. Do not use <code>/></code> for void elements.
+  Example of void elements are: `br`, `img`, `link`, `meta`.
+  The full list of HTML void elements can be accessed [here](http://www.w3.org/TR/html-markup/syntax.html#void-element).
 
   <table>
     <tr>
@@ -121,7 +121,7 @@
     </tr>
   </table>
 
-- Use lowercase for all attributes and tag names
+- Use lowercase for all attributes and tag names.
 
   <table>
     <tr>
@@ -141,7 +141,7 @@
   </table>
 
 ## Attributes
-- Use [attr="value"] for attribute values
+- Use [attr="value"] for attribute values.
 
   <table>
     <tr>
@@ -150,7 +150,7 @@
     <tr>
       <td>
         <pre lang="html">
-  &lt;input value="computer" id="someInput" disabled="disabled" tabindex="2"&gt;</pre>
+  &lt;input value="computer" id="some-input" disabled="disabled" tabindex="2"&gt;</pre>
       </td>
     </tr>
   </table>
@@ -162,26 +162,29 @@
     <tr>
       <td>
         <pre lang="html">
-  &lt;input value=computer id='someInput' disabled='disabled' tabindex=2&gt;(single/no quotes)
-  &lt;input value="computer" id="someInput" disabled tabindex="2"&gt;(specify boolean variables in the attributes)</pre>
+  &lt;!-- single/no quotes --&gt;
+  &lt;input value=computer id='some-input' disabled='disabled' tabindex=2&gt;
+  
+  &lt;!-- specify boolean variables in the attributes --&gt;
+  &lt;input value="computer" id="some-input" disabled tabindex="2"&gt;</pre>
       </td>
     </tr>
   </table>
 
 ## Naming convention
 - Class
-  See Css style guide for this section
+  See Css style guide for this section.
 
 - Id
-  lower-case, join-by-hyphen
+  lower-case, join-by-hyphen.
 
   ```html
-  instructor-email-1
+  header-content-week3
   ```
 
 ## Indentation<a name="indentation"></a>
 - Indentation should be 2 spaces for html files.
-- Spaces should be used instead of <code>tab</code>
+- Spaces should be used instead of `tab`.
 
 ## Miscellaneous
 - Take note of script tags.
@@ -210,7 +213,7 @@
     </tr>
   </table>
 
-- Do not have trailing whitespaces between opening and closing tags
+- Do not have trailing whitespaces between opening and closing tags. However, line breaks and indentation are encouraged if it enhances readability.
 
   <table>
     <tr>
@@ -220,7 +223,13 @@
     <tr>
       <td>
         <pre lang="html">
-  &lt;p&gt;Student Name&lt;/p&gt;</pre>
+  &lt;p&gt;Student Name&lt;/p&gt;
+  
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore
+    et dolore magna aliqua. Ut enim ad minim veniam,
+  &lt;/p&gt;</pre>
       </td>
       <td>
         <pre lang="html">
