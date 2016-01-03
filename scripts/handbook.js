@@ -14,16 +14,6 @@ for (var i in sections) {
 $('#modal').remove();
 $('#overlay').remove();
 
-
-$('a').click(function() {
-    var adjustment = 73;
-    var speed = 1;
-    var header = this.hash;
-    $('html,body').animate({
-        scrollTop: $(header).offset().top - adjustment
-    }, speed);
-});
-
 function isTableOfContentVisible() {
     var windowTop = $(window).scrollTop();
     var tableTop = $('#table-of-contents').offset().top;
@@ -31,20 +21,25 @@ function isTableOfContentVisible() {
     return windowTop < tableBottom;
 }
 
-function makeBackToTopButton(buttonAnimationDuration) {    
+$(document).ready(function() {
+    var buttonAnimationDuration = 200;
     var speed = 1;
-    $("#back-to-top-button").css("display", "none");
+
+    $('#back-to-top-button').button();
     $('#back-to-top-button').click(function(e) {
-        $("#back-to-top-button").fadeOut(buttonAnimationDuration);
         $('html, body').animate({
             scrollTop: 0
         }, speed);
     });
-}
 
-$(document).ready(function() {
-    var buttonAnimationDuration = 500;
-    makeBackToTopButton(buttonAnimationDuration);
+    $('a').click(function() {
+        var adjustment = 73;
+        var header = this.hash;
+        $('html,body').animate({
+            scrollTop: $(header).offset().top - adjustment
+        }, speed);
+    });
+
     $(window).scroll(function() {
         if (!isTableOfContentVisible()) {
             $('#back-to-top-button').fadeIn(buttonAnimationDuration);

@@ -1,6 +1,6 @@
 body {
-    padding: 0px 10px;
-    max-width: 740px;
+	padding: 0px 10px;
+	max-width: 740px;
 }
 
 h1{
@@ -36,18 +36,18 @@ code.cliuser{
 }
 
 #back-to-top-button{
-	display: block;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    border: none;
-    color: white;
-    text-shadow: -1px 1px #417cb8;
-    background: #0fcbb4;
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	border: #dff0d8;
+	color: #3c763d;
+	background: #dff0d8;
+	transition: background 0.2s ease;
 }
 
 #back-to-top-button:hover{
-	text-shadow: -1px 1px #27496d;
-	background: #0c9d7c;
+	color: #fff;
+	background: #5cb85c;
 }
