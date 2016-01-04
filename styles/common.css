@@ -73,6 +73,16 @@ a:visited {
     z-index: 11; /* 1px higher than the overlay layer */
 }
 
+#embedded-link-loading-img {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    z-index: 11;
+    background-color: white;
+    font: 1.5em;
+}
+
 .align-right{
     text-align: right;
 }
@@ -369,6 +379,11 @@ table.bordered tr > th {
 .embedded-link {
     color: blue;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.embedded-link:active {
+    color: purple;
 }
 
 .embedded {
