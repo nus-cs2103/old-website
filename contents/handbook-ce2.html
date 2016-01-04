@@ -73,18 +73,11 @@
 			Having a public method that takes the user command and executes it (CityConnect uses this
 			approach) can greatly simplify the testing process. Then, you can write tests like this:
 		</li>
-		e.g.
-		<br>
-		//check if the “clear” command returns the right status message
-		<br>
-		assertEquals(“all content deleted from mytextfile.txt”,
-		<br>
-		TextBuddy.executeCommand(“clear”));
-		<br>
-		//check if the file was actually cleared
-		<br>
-		assertEquals(0, TextBuddy.getLineCount());
-		<br>
+		<pre class="prettyprint"><code class="lang-java">//check if the “clear” command returns the right status message
+assertEquals(“all content deleted from mytextfile.txt”,
+TextBuddy.executeCommand(“clear”));
+//check if the file was actually cleared
+assertEquals(0, TextBuddy.getLineCount());</code></pre>
 	</ul>
 	<li>
 		There is no need to test using input/output redirection method used in CE1. Instead, you should use a proper

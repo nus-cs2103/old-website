@@ -1,3 +1,8 @@
+body {
+    padding: 0px 10px;
+    max-width: 740px;
+}
+
 h1{
 	color:purple;
 }
@@ -8,4 +13,54 @@ h2{
 
 h3{
 	color:purple;
+}
+
+pre.cliprint{
+	background-color: #000; /*black*/
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+	padding: 1em;
+	color:#ffec00;
+}
+
+code.clisystem{
+	color:#fff;	/*white*/
+}
+
+code.cliuser{
+	color:#b000ff; /*purple*/
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* 740px since max-width of body is set to 740px
+   Any device whose view is below 740px will use this*/
+@media screen and (max-device-width: 740px) {
+	body{
+		max-width: 100%;
+	}
+}
+
+#back-to-top-button{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	border: #dff0d8;
+	color: #fff;
+	background: #5cb85c;
+	transition: background 0.2s ease;
+}
+
+#back-to-top-button:hover{
+	color: #3c763d;
+	background: #dff0d8;
 }

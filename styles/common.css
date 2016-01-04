@@ -3,12 +3,13 @@ body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 14px;
+    font-size: 16px;
     width:90%;
 }
 
-table > tbody > tr > td {
-    font-size: 14px;
+table > tbody > tr > td,
+table > tbody > tr > th {
+    font-size: 16px;
 }
 
 a:link {
@@ -35,8 +36,51 @@ a:visited {
     padding-top: 5px;
 }
 
+#table-headings td,
+#form-preferences td,
+#content {
+    font-size: 14px;
+}
+
 #content {
     overflow-y: auto;
+}
+
+#overlay {
+    position: absolute;
+    top: 37%;
+    left: 39.5%;
+    width: 20%;
+    height: 20%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#modal {
+    width: 150px;
+    height: 25px;
+    line-height: 50px;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -75px;
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+    color: #ffffff;
+    z-index: 11; /* 1px higher than the overlay layer */
+}
+
+#embedded-link-loading-img {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    z-index: 11;
+    background-color: white;
+    font: 1.5em;
 }
 
 .align-right{
@@ -335,6 +379,11 @@ table.bordered tr > th {
 .embedded-link {
     color: blue;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.embedded-link:active {
+    color: purple;
 }
 
 .embedded {
@@ -370,4 +419,17 @@ table.bordered tr > th {
 
 .italic {
     font-style:italic
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 1000px since the max-width of body is set to 1000px
+	 Any device whose view is below 1000px will use this*/
+@media screen and (max-device-width: 1000px) {
+    body{
+        max-width: 100%;
+    }
 }

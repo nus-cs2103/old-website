@@ -13,7 +13,51 @@
 	Write a CLI (Command Line Interface) program called TextBuddy using Java/C++ to manipulate text in a file.
 	Here is a sample interaction with the program. Text in purple are commands entered by the user.
 </p>
-<img src="../images/ce1_CLI.PNG">
+
+<pre class="cliprint">
+<code class="clisystem">c:></code> <code class="cliuser">TextBuddy.exe mytextfile.txt</code>
+(OR <code class="clisystem">c:></code> <code class="cliuser">java TextBuddy mytextfile.txt</code>)
+
+<code class="clisystem">Welcome to TextBuddy. mytextfile.txt is ready for use
+
+command:</code> <code class="cliuser">add little brown fox</code>
+
+<code class="clisystem">added to mytextfile.txt: "little brown fox"
+
+command:</code> <code class="cliuser">display</code>
+
+<code class="clisystem">1. little brown fox
+
+command:</code> <code class="cliuser">add jumped over the moon</code>
+
+<code class="clisystem">added to mytextfile.txt: "jumped over the moon"
+
+command:</code> <code class="cliuser">display</code>
+
+<code class="clisystem">1. little brown fox
+
+2. jumped over the moon
+
+command:</code> <code class="cliuser">delete 2</code>
+
+<code class="clisystem">deleted from mytextfile.txt: "jumped over the moon"
+
+command:</code> <code class="cliuser">display</code>
+
+<code class="clisystem">1. little brown fox
+
+command:</code> <code class="cliuser">clear</code>
+
+<code class="clisystem">all content deleted from mytextfile.txt
+
+command:</code> <code class="cliuser">display</code>
+
+<code class="clisystem">mytextfile.txt is empty
+
+command:</code> <code class="cliuser">exit</code>
+
+<code class="clisystem">c:></code>
+</pre>
 <p>
 	Note that mytextfile.txt is a parameter given when running the program. i.e., The name of the file is not
 	always mytextfile.txt. [C++ guys: <a href="http://www.cplusplus.com/articles/DEN36Up4/">

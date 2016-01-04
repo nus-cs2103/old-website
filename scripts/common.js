@@ -1,3 +1,17 @@
+// Change this to set the module start date
+// Format: 'Year.Month.Date'
+// E.g. '2015.8.10'
+var MODULE_START_DATE = setModuleStartDate('2015.8.10');
+var MONTH_NAMES_SHORT_FORM = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function setModuleStartDate(inputDate) {
+    var dateArray = inputDate.split('.');
+    var year = dateArray[0];
+    var month = dateArray[1] - 1; // Javascript's month are zero-indexed
+    var date = dateArray[2];
+    return new Date(year, month, date);
+}
+
 function makeAccordion(elementSelector) {
     $(elementSelector).accordion({
         active: false,
@@ -6,20 +20,23 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function getContentUsingAjax(section, elementSelector) {
-    pullContent(section, elementSelector, 'Exract from handbook');
+function getContentUsingAjax(fileName, elementSelector, sectionName) {
+    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
 }
 
-function pullContent(section, elementSelector, title) {   
-    $(elementSelector).load(section + '.html #fragment', function(response, status, xhr) {
-        if(status == 'success'){     
-            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
-                                                         ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-                                                 'class="btn-dismiss">X</button><br><br></div>');
+function pullContent(fileName, elementSelector, title, sectionName) {
+    var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
+    $("#embedded-link-loading-img").show();
+    $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
+        if (status == 'success') {
             $(elementSelector).addClass('embedded');
+            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+               ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+               'class="btn-dismiss">X</button><br><br></div>');
             $(elementSelector + ' > div > .btn-dismiss').button();
+            $("#embedded-link-loading-img").hide();
         }
-    });
+    }); 
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
@@ -172,6 +189,7 @@ function loadContent(week){
     $('#content-week' + week).load('week' + week + '.html #fragment', function(response, status, xhr) {
         if(status == 'success'){            
             var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
+            generateDates();
             makeAccordion('.content-week' + week);
             for (var i in components) {
                 var component = components[i];
@@ -196,6 +214,42 @@ function isFragment(){
     return typeof week_no !== 'undefined';
 }
 
+/**
+ * Iterates through 'date-marker' span class and generates the corresponding dates based on the moduleStartDate.
+ * Refer to the top of the file to set the start of the module date.
+ * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
+ * The week attribute denotes the week number while the day attribute denotes the day of the intended week.
+ * Both attributes must be a positive integer.
+ * Format of the generated dates: 'Month Date'. E.g. Aug 10
+ */
+function generateDates() {
+    $('.date-marker').each(function() {
+        var week = parseInt($(this).attr('week'));
+        var day = parseInt($(this).attr('day'));
+        var date = getDate(week, day);
+        $(this).html(MONTH_NAMES_SHORT_FORM[date.getMonth()] + ' ' + date.getDate());
+    });
+}
+
+function getDate(week, day) {
+    var date = new Date();
+    var MILLI_SECS_PER_DAY = 24 * 60 * 60 * 1000;
+    var isAfterRecessWeek = week > 6;
+    var weeksPassed = week - 1 + isAfterRecessWeek;
+    var daysPassed = weeksPassed * 7 + day - 1;
+    date.setTime(MODULE_START_DATE.getTime() + daysPassed * MILLI_SECS_PER_DAY);
+    return date;
+}
+
+function addAutoScrollToClickedWeekHeader() {
+    $('.buttoned').click(function(event) {
+        var scrollTarget = '#' + event.currentTarget.id;
+        $('html, body').animate({
+            scrollTop: $(scrollTarget).offset().top 
+        }, 500);
+    });
+}
+
 $(document).ready(function() {
     if(isFragment()){        
         var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
@@ -214,29 +268,20 @@ $(document).ready(function() {
         var week = id.substr(('header-content-week').length);
         addCollapseAndExpandButtonsForWeek('#' + id, 'content-week' + week);
     });
-    var bannerHeight = 25;
     var headerHeight = 40;
     var topMargin = 5;
     var topPadding = 5;
     $('#form-preferences').css('height', headerHeight);
     $('#form-preferences').css('padding-top', topPadding);
     $('#content').css('margin-top', topMargin);
-
-    function calculateContainerSize() {
-        return $(window).height() - headerHeight - bannerHeight - topMargin - topPadding;
-    }
-
-    $('#content').css('height', calculateContainerSize());
-
-    $(window).resize(function() {
-        $('#content').css('height', calculateContainerSize());
-    });
+    $('#content').css('height', 'auto');
 
     for (var week = 0; week <= 14; week++) {
         $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="/images/ajax-preload.gif"/>');
         loadContent(week);
     }
 
+    addAutoScrollToClickedWeekHeader();
     addCollapseAndExpandButtonsForAllContents("#form-preferences");
 
     // toggles showing/hiding certain sections according to the preferences checkbox
