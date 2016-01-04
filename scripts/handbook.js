@@ -25,19 +25,21 @@ $(document).ready(function() {
     var buttonAnimationDuration = 200;
     var speed = 1;
 
+    function scrollToPosition(scrollTopPosition) {
+        $('html,body').animate({
+            scrollTop: scrollTopPosition
+        }, speed);
+    }
+
     $('#back-to-top-button').button();
     $('#back-to-top-button').click(function(e) {
-        $('html, body').animate({
-            scrollTop: 0
-        }, speed);
+        scrollToPosition(0);
     });
 
     $('a').click(function() {
         var adjustment = 73;
         var header = this.hash;
-        $('html,body').animate({
-            scrollTop: $(header).offset().top - adjustment
-        }, speed);
+        scrollToPosition($(header).offset().top - adjustment);
     });
 
     $(window).scroll(function() {
@@ -46,5 +48,5 @@ $(document).ready(function() {
         } else {
             $('#back-to-top-button').fadeOut(buttonAnimationDuration);
         }
-    })
+    });
 });

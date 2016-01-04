@@ -1,6 +1,6 @@
 body {
-	padding: 0px 10px;
-	max-width: 740px;
+    padding: 0px 10px;
+    max-width: 740px;
 }
 
 h1{
@@ -55,12 +55,12 @@ img {
 	right: 0;
 	padding: 10px;
 	border: #dff0d8;
-	color: #3c763d;
-	background: #dff0d8;
+	color: #fff;
+	background: #5cb85c;
 	transition: background 0.2s ease;
 }
 
 #back-to-top-button:hover{
-	color: #fff;
-	background: #5cb85c;
+	color: #3c763d;
+	background: #dff0d8;
 }
