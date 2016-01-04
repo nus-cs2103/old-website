@@ -47,3 +47,20 @@ img {
 		max-width: 100%;
 	}
 }
+
+#back-to-top-button{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	border: #dff0d8;
+	color: #fff;
+	background: #5cb85c;
+	transition: background 0.2s ease;
+}
+
+#back-to-top-button:hover{
+	color: #3c763d;
+	background: #dff0d8;
+}
