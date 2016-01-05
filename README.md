@@ -27,7 +27,7 @@ If you would like to contribute code, here is the procedure:
    * Minimize inline styles. 
    * When in doubt, you can refer to these style guides from the 
      TEAMMATES project:
-     [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true),
+     [JavaScript](https://cdn.rawgit.com/nus-cs2103/website/master/contents/coding-standards-javascript.html),
      [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub), 
      [HTML](https://docs.google.com/document/d/12PJYbQoqjK-0LzaUuguQ4kGE--eikCcHfwzZDGwFOJ0/pub?embedded=true)
 6. Test the code in your computer. <br>
