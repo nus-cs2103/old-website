@@ -26,7 +26,7 @@ function getContentUsingAjax(fileName, elementSelector, sectionName) {
 
 function pullContent(fileName, elementSelector, title, sectionName) {
     var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
-
+    $("#embedded-link-loading-img").show();
     $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
         if (status == 'success') {
             $(elementSelector).addClass('embedded');
@@ -34,6 +34,7 @@ function pullContent(fileName, elementSelector, title, sectionName) {
                ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
                'class="btn-dismiss">X</button><br><br></div>');
             $(elementSelector + ' > div > .btn-dismiss').button();
+            $("#embedded-link-loading-img").hide();
         }
     }); 
 }
