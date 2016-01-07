@@ -243,7 +243,9 @@ function addAutoScrollToClickedWeekHeader() {
     var isAnimating = false;
     $('.buttoned').click(function(event) {
         // Don't scroll when an animation is in progress
-        if (isAnimating) return;
+        if (isAnimating) {
+            return;
+        }
         var scrollTarget = '#' + event.currentTarget.id;
         isAnimating = true;
         $('html, body').animate({
