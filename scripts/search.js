@@ -192,6 +192,7 @@ function getDirectiveCompiler(elementName, searchData) {
 
 function compileSearchDirectives(callback) {
     var searchData = [];
+    var TIMEOUT = 1000;
 
     // List of custom elements
     var elementNames = ['mainCategory', 'category', 'keyword'];
@@ -208,7 +209,7 @@ function compileSearchDirectives(callback) {
         // Wait until all directives compiled
         $timeout(function() {
             callback(searchData)
-        });
+        }, TIMEOUT);
     });
 }
 
