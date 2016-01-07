@@ -201,13 +201,30 @@ function loadContent(week) {
                 var component = components[i];
                 makeAccordion('.' + component + '-week' + week);
                 addCollapseAndExpandButtonsForComponents('#' + component + '-content-week' + week, component + '-week' + week);
+               
+                var componentToBeOpened = '#' + component + '-content-week' + week;
+                addAutoExpandSubheadingsBehaviour(componentToBeOpened);
             }
+
             $('.preferences').each(function() {
                 var type = $(this).prop('value');
                 if (!$(this).prop('checked')) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
+        }
+    });
+}
+
+function addAutoExpandSubheadingsBehaviour(component) {
+    $(component).click(function(e) {
+        var id = e.currentTarget.id;
+        var componentNameAndWeek = id.split('-content-');
+        var componentName = componentNameAndWeek[0];
+        var week = componentNameAndWeek[1];
+        var buttonId = '#expand-' + componentName +'-' + week;
+        if ($('#' + id).hasClass('ui-accordion-header-active')) {
+            $(buttonId).click();
         }
     });
 }
