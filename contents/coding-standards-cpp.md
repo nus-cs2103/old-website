@@ -10,7 +10,7 @@
             <li><a href="#references">References</a>
         </td>
         <td>
-            <img src='./dennis-ritchie.png'>Dennis Ritchie, Creator of C
+            <img src='../images/dennis-ritchie.png'>Dennis Ritchie, Creator of C
         </td>
     </tr>
 </table>
