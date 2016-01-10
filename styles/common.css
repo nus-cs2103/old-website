@@ -455,6 +455,10 @@ img {
     ul {
         padding-left: 20px !important;
     }
+
+    table.bordered tr > td {
+        font-size: 12px !important;
+    }
 }
 
 /*
