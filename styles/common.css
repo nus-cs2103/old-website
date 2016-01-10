@@ -446,6 +446,15 @@ img {
         height: 100% !important;
         padding-top: 0px !important;
     }
+
+    .ui-accordion-content {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    ul {
+        padding-left: 20px !important;
+    }
 }
 
 /*
