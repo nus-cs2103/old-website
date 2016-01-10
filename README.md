@@ -6,7 +6,7 @@ The **released version** of this website is available [here](http://www.comp.nus
 The released version may be behind the latest version in this repo.
 
 ## Contributing
-**We wecome contributions from current/past CS2103 students**. 
+**We welcome contributions from current/past CS2103 students**. 
 
 The easiest way to contribute is to post bugs and suggestion in our issue tracker.
 
