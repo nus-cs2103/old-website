@@ -441,6 +441,11 @@ img {
         margin-left: 2%;
         width: 96%;
     }
+
+    #form-preferences {
+        height: 100% !important;
+        padding-top: 0px !important;
+    }
 }
 
 /*
