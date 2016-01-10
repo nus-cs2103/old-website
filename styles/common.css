@@ -434,6 +434,15 @@ img {
     }
 }
 
+/* For any device whose view is 500px or below */
+@media screen and (max-device-width: 500px) {
+    body {
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+    }
+}
+
 /*
     search
 */
