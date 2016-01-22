@@ -581,10 +581,9 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     void processItem(const Item& item) {
         try {
             if (/* some test failed */) {
-                throw Exception(“blah blah blah”);
+                /*bold*/throw Exception()/*/bold*/;
             }
-        }
-        catch (Exception &excp) {
+        } /*bold*/catch (Exception &excp)/*/bold*/ {
             // Process excp
             //
         }
@@ -594,10 +593,9 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
     void processItem(const Item& item) {
         try {
             if (/* some test failed */) {
-                throw Exception();
+                /*bold*/throw Exception()/*/bold*/;
             }
-        }
-        catch (Exception excp) {
+        } /*bold*/catch (Exception excp)/*/bold*/ {
             // Process excp
             //
         }
