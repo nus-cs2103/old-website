@@ -73,14 +73,11 @@ a:visited {
     z-index: 11; /* 1px higher than the overlay layer */
 }
 
-#embedded-link-loading-img {
-    display: none;
-    position: fixed;
-    top: 30%;
-    left: 30%;
-    z-index: 11;
-    background-color: white;
-    font: 1.5em;
+.embedded-link-loading-img {
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 10px auto;
 }
 
 .align-right{
