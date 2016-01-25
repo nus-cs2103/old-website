@@ -1,0 +1,254 @@
+<p>
+	Note that project grading is <span class="highlighted">not competitive (not bell curved)</span>.
+	Given below is the marking scheme.
+</p>
+<p>
+	<strong>Total</strong>: 50 marks
+</p>
+<ol type="a">
+	<li> <strong>Product features</strong> [max score: 15] - How good is your software as a product?
+	</li>
+	<p>
+		Evaluated based on the live demo. Evaluated by lecturer + at least one tutor.
+	</p>
+	<p>
+		‘Half-baked’ (i.e. not production quality) features will not earn marks at all and even could be
+		penalized. It may be better to remove such features before submission.
+	</p>
+	<ul>
+		<li>
+			Must-have features [max score: 10]
+		</li>
+		<ul>
+			<li>
+				-1 for each weakness
+			</li>
+		</ul>
+		<li>
+			Extra feature
+		</li>
+		<ul>
+			<li>
+				[score: 3 ] Reasonable implementation
+			</li>
+			<li>
+				[score: 5 ] Good implementation
+			</li>
+		</ul>
+	</ul>
+	<li>
+		<strong>Design </strong>[max score: 5] - How good is your internal design? Evaluated
+		<span class="highlighted">solely based on
+		what we can learn from the developer guide.</span> Evaluated by lecturer.
+	</li>
+	<ul>
+		<li>
+			Conformance with the multi-level top-down approach (i.e. design at high-level first, and do the
+			lower-level design of each component later)
+		</li>
+		<ul>
+			<li>
+				[score: 1] Some effort to apply top-down, but not entirely successful.
+			</li>
+			<li>
+				[score: 2] Almost entirely top-down, low coupling, high cohesion, good API design.
+			</li>
+		</ul>
+		<li>
+			Conformance with the OO paradigm
+		</li>
+		<ul>
+			<li>
+				[score: 1] Mostly OO, but occasional evidence of non-OO practices.
+			</li>
+			<li>
+				[score: 2] Fully OO, except in places where OO is clearly not suitable.
+			</li>
+		</ul>
+		<li>
+			Application of patterns and principles
+		</li>
+		<ul>
+			<li>
+				[score: 1] Reasonable attempt
+			</li>
+		</ul>
+	</ul>
+	<li>
+		<strong>Implementation</strong> [max score: 10 ] - How good is your implementation?
+		Evaluated based on an inspection of
+		the code (submitted in your *.col files) by at least two tutors.
+	</li>
+	<p>
+		This is graded individually.
+	</p>
+	<ul>
+		<li>
+			Graded based on following qualities of your own code.
+		</li>
+		<ul>
+			<li>
+				Following SLAP (IMPORTANT).
+			</li>
+			<li>
+				Following the coding standard given (IMPORTANT).
+			</li>
+			<li>
+				Using at least some assertions.
+			</li>
+			<li>
+				Using at least some logging.
+			</li>
+			<li>
+				Using at least some unit tests.
+			</li>
+			<li>
+				Commenting at the right level.
+			</li>
+			<li>
+				Exception handling.
+			</li>
+			<li>
+				Neatness and human readability.
+			</li>
+		</ul>
+	</ul>
+	<li>
+		<strong>Testing</strong> [max score: 7] - How good is your testing? Evaluated based on Q&A session,
+		developer guide, code inspection, and an independent testing sessions by the TA. You may be asked to run
+		your unit tests during the demo.
+	</li>
+	<p>
+		Things that may be considered: number of bugs, level of test automation
+	</p>
+	<ul>
+		<li>
+			How much effort you have invested in the testing process
+		</li>
+		<ul>
+			<li>
+				[score: 1] Some effort on systematic testing.
+			</li>
+			<li>
+				[score: 3] Comprehensive systematic testing with full automation.
+			</li>
+		</ul>
+		<li>
+			How well you have tested the product
+		</li>
+		<ul>
+			<li>
+				[score: 2] Only minor bugs.
+			</li>
+			<li>
+				[score: 4] No apparent bugs.
+			</li>
+		</ul>
+	</ul>
+	<p>
+		<strong>Expectations </strong>:
+	</p>
+	<ul>
+		<li>
+			Everyone is expected to write some code and write *some* tests. However, there is no need to write tests for
+			all the code you write. This is to reduce your workload. It is sufficient if you write enough tests to prove
+			your competency in testing. Note that in a production environment you are often required to have at least
+			90% of the code covered by tests. In this project, it can be much less.
+		</li>
+		<li>
+			How much of each type of testing should you do? We expect you to decide. You learned different types of
+			testing and what they try to achieve. Based on that, you should decide how much of each type is required.
+			Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the
+			effort required.
+		</li>
+		<li>
+			Applying TDD is optional. If you plan to test something, it is better to apply TDD because TDD ensures that
+			you write functional code in a testable way. If you do it the normal way, you often find that it is hard to test
+			the functional code because the code has low testability.
+		</li>
+	</ul>
+	<li>
+		<strong>Documentation</strong> [max score: 8 ]- How well does your user guide and developer guide achieve their
+		objectives? Evaluated based on the user guide and developer guide. Evaluated by lecturer and TA.
+	</li>
+	<ul>
+		<li>
+			User guide [max score: 3]
+		</li>
+		<ul>
+			<li>
+				[score: 1] Barely good enough to get started.
+			</li>
+			<li>
+				[score: 3] Top notch user guide, both as a quick start guide and a user manual.
+			</li>
+		</ul>
+		<li>
+			Developer guide [max score: 5]
+		</li>
+		<ul>
+			<li>
+				[score: 1] Barely enough to get started.
+			</li>
+			<li>
+				[score: 3] Reasonable documentation, having most of these features
+			</li>
+			<li>
+				Design described in two levels or more (opposite: single class diagram, only architecture diagram).
+			</li>
+			<li>
+				Standard UML notation used in diagrams (opposite: invented your own notation, used ad hoc diagrams when
+				there are UML alternatives).
+			</li>
+			<li>
+				Diagrams and text complement each other (opposite: separate sections for different types of diagrams).
+			</li>
+			<li>
+				Not too short or not too long. (opposite: too many unimportant stuff included, critical information
+				missing).
+			</li>
+			<li>
+				In the specified format (page header, front page etc.)
+			</li>
+			<li>
+				[score: 5] Top notch developer guide. All above qualities are present. Neatly done.
+			</li>
+		</ul>
+	</ul>
+	<li>
+		<STRONG>Project management</STRONG> [max score: 5] - How well you followed the a systematic process to
+		iteratively evolve
+		the product, and schedule/track project progress, and spread the work uniformly across the semester with
+		good buffers. We look for,
+	</li>
+	<ul>
+		<li>
+			Good version control, based on the repo.
+		</li>
+		<li>
+			Good task definition, assignment and tracking, based on the issue tracker.
+		</li>
+		<li>
+			Good use of buffers (opposite: everything at the last minute)
+		</li>
+		<li>
+			Iterative (opposite: fake iterative, doing most of the work in one iteration)
+		</li>
+	</ul>
+	<p>
+		<strong>Grading</strong>:
+	</p>
+	<ul>
+		<li>
+			[score: 2] Two of the above.
+		</li>
+		<li>
+			[score: 5] All of the above.
+		</li>
+	</ul>
+</ol>
+<p>
+	<strong>Penalty for late submission:</strong> <span class="highlighted">-1 mark for each hour delayed.</span>
+	Even a 1-second delay is penalized,
+	irrespective of the reason. Based on the time shown by IVLE.
+</p>

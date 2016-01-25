@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>[Aug15] Handbook - CS2103/T</title>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.css" />
+        <link type="text/css" rel="stylesheet" href="../styles/common.css" />
+        <link type="text/css" rel="stylesheet" href="../styles/handbook.css" />
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
+    </head>
+    <body>
+
+<div id="overlay"> </div>
+<div id="modal">Page Loading...</div>
+<div id="back-to-top-button">Back To Top</div>
+<div id="table-of-contents">
+    <ul>
+        <li><a href="#handbook-preliminaries">Preliminaries</a></li>
+        <li><a href="#handbook-lectures">Lectures</a></li>
+        <li><a href="#handbook-tutorials">Tutorials</a></li>
+        <li><a href="#handbook-textBooks">Text Books</a></li>
+        <li><a href="#handbook-programmingLanguages">Programming Language</a></li>
+        <li><a href="#handbook-project">Project</a></li>
+        <ul>
+            <li><a href="#handbook-theProduct">The product</a></li>
+            <li><a href="#handbook-projectScope">Project Scope</a></li>
+            <li><a href="#handbook-projectConstraints">Project Constraints</a></li>
+            <li><a href="#handbook-deliverables">Deliverables</a></li>
+            <ul>
+                <li><a href="#handbook-ce1">CE1: TextBuddy</a></li>
+                <li><a href="#handbook-ce2">CE2: TextBuddy++</a></li>
+                <li><a href="#handbook-ce3">CE3: TextBuddyPro</a></li>
+                <li><a href="#handbook-v00Manual">V0.0 of the Project Manual</a></li>
+                <li><a href="#handbook-v01Product">V0.1 : the proof-of-concept prototype</a></li>
+                <li><a href="#handbook-v01Demo">V0.1 Demo</a></li>
+                <li><a href="#handbook-v01Manual">V0.1 of the Project Manual</a></li>
+                <li><a href="#handbook-v02Demo">V0.2 Demo and Feedback Session</a></li>
+                <li><a href="#handbook-v02Manual">V0.2-V0.4 of the Project Manual</a></li>
+                <li><a href="#handbook-v02Product">V0.2-V0.4 of the Product</a></li>
+                <li><a href="#handbook-v02Grading">V0.2-V0.4 Grading</a></li>
+                <li><a href="#handbook-v04Product">V0.4 [release candidate] Additional Requirements</a></li>
+                <li><a href="#handbook-v05Requirements">V0.5 [production release] Additional Requirements</a></li>
+                <li><a href="#handbook-v05Submission">V0.5 Submission</a></li>
+                <li><a href="#handbook-v05Demo">V0.5 Demo and Q&A Session</a></li>
+                <li><a href="#handbook-projectRetrospective">Project retrospective</a></li>
+                <li><a href="#handbook-individualReport">Individual report</a></li>
+                <li><a href="#handbook-v05Evaluation">V0.5 Evaluation</a></li>
+            </ul>
+            <li><a href="#handbook-formingTeams">Forming Teams</a></li>
+            <li><a href="#handbook-supervision">Supervision</a></li>
+            <li><a href="#handbook-projectGrading">Project Grading</a></li>
+            <li><a href="#handbook-peerEvaluations">Peer Evaluations</a></li>
+            <li><a href="#handbook-projectTools">Project Tools</a></li>
+        </ul>
+        <li><a href="#handbook-exams">Exams</a></li>
+        <li><a href="#handbook-gradeBreakdown">Grade Breakdown</a></li>
+        <li><a href="#handbook-participationPoints">Participation Points</a></li>
+        <li><a href="#handbook-appendixA">Appendix A: Module Principles</a></li>
+        <li><a href="#handbook-appendixB">Appendix B: Module Policies</a></li>
+        <ul>
+            <li><a href="#policy-followingInstructions">Policy on following instructions</a></li>
+            <li><a href="#policy-teamSize">Policy on grading smaller/larger teams</a></li>
+            <li><a href="#policy-workDistribution">Policy on project work distribution</a></li>
+            <li><a href="#policy-validAbsences">Policy on absence due to valid reasons (e.g. MC, LOA, University events)</a></li>
+            <li><a href="#policy-responseTime">Policy on email response time</a></li>
+            <li><a href="#policy-techHelp">Policy on tech help</a></li>
+            <li><a href="#policy-publishingSubmissions">Policy on publishing submissions</a></li>
+            <li><a href="#policy-plagiarism">Policy on plagiarism</a></li>
+            <li><a href="#policy-reuse">Policy on reuse</a></li>
+            <li><a href="#policy-outsiderHelp">Policy on help from outsiders</a></li>
+            <li><a href="#policy-submissionLength">Policy on suggested length for submissions</a></li>
+        </ul>
+        <li><a href="#handbook-appendixC">Appendix C: Frequently Asked Questions</a></li>
+        <ul>
+            <li><a href="#handbook-faq-highWorkload">Why the workload is so high?</a></li>
+            <li><a href="#handbook-faq-beanCounting">Why so much bean counting?</a></li>
+            <li><a href="#handbook-faq-separateWebsite">Why you force me to visit a separate website instead of using IVLE?</a></li>
+            <li><a href="#handbook-faq-slideFormat">Why slides are not detailed enough, handouts are wordy?</a></li>
+            <li><a href="#handbook-faq-selfStudy">Why so much self-study?</a></li>
+            <li><a href="#handbook-faq-timelyArrival">Why do I have to come to tutorials on time?</a></li>
+            <li><a href="#handbook-faq-noLaptop">What if I don’t carry around a laptop?</a></li>
+            <li><a href="#handbook-faq-narrowScope">Why very narrow project scope?</a></li>
+            <li><a href="#handbook-faq-vagueRequirements">Why project requirements are so vague?</a></li>
+            <li><a href="#handbook-faq-favoriteTool">Why I’m not allowed to use my favorite OS/IDE/etc?</a></li>
+            <li><a href="#handbook-faq-manySubmissions">Why so many submissions?</a></li>
+            <li><a href="#handbook-faq-intermediateMarks">Why not enough marks for intermediate submissions?</a></li>
+            <li><a href="#handbook-faq-cs2101Differences">Why submission requirements differ between CS2103T and CS2101?</a></li>
+        </ul>
+        <li><a href="#handbook-appendixD">Appendix D: How to get tech help in CS2103/T</a></li>
+        <li><a href="#handbook-appendixE">Appendix E: Using GitHub Project Hosting</a></li>
+        <li><a href="#handbook-appendixF">Appendix F: What to do if there are teamwork issues</a></li>
+    </ul>
+</div>
+
+
+    <h1>Preliminaries </h1>
+    <div id="handbook-preliminaries"></div>
+    <h1>Lectures </h1>
+    <div id="handbook-lectures"></div>
+    <h1>Tutorials </h1>
+    <div id="handbook-tutorials"></div>
+    <h1>Text Books </h1>
+    <div id="handbook-textBooks"></div>
+    <h1>Programming Language </h1>
+    <div id="handbook-programmingLanguages"></div>
+    <h1>Project </h1>
+    <div id="handbook-project"></div>
+
+    <h2>The product</h2>
+    <div id="handbook-theProduct" ></div>
+    <h2>Project Scope</h2>
+    <div id="handbook-projectScope" ></div>
+    <h2>Project Constraints</h2>
+    <div id="handbook-projectConstraints" ></div>
+    <h2>Deliverables</h2>
+    <div id="handbook-deliverables" ></div>
+
+    <h3>CE1: TextBuddy</h3>
+    <div id="handbook-ce1"></div>
+    <h3>CE2: TextBuddy++</h3>
+    <div id="handbook-ce2"></div>
+    <h3>CE3: TextBuddyPro</h3>
+    <div id="handbook-ce3"></div>
+    <h3>V0.0 of the Project Manual</h3>
+    <div id="handbook-v00Manual"></div>
+    <h3>V0.1 : the proof-of-concept prototype</h3>
+    <div id="handbook-v01Product"></div>
+    <h3>V0.1 Demo</h3>
+    <div id="handbook-v01Demo"></div>
+    <h3>V0.1 of the Project Manual</h3>
+    <div id="handbook-v01Manual"></div>
+    <h3>V0.2 Demo and Feedback Session</h3>
+    <div id="handbook-v02Demo"></div>
+    <h3>V0.2-V0.4 of the Project Manual</h3>
+    <div id="handbook-v02Manual"></div>
+    <h3>V0.2-V0.4 of the Product</h3>
+    <div id="handbook-v02Product"></div>
+    <h3>V0.2-V0.4 Grading</h3>
+    <div id="handbook-v02Grading"></div>
+    <h3>V0.4 [release candidate] Additional Requirements</h3>
+    <div id="handbook-v04Product"></div>
+    <h3>V0.5 [production release] Additional Requirements</h3>
+    <div id="handbook-v05Requirements"></div>
+    <h3>V0.5 Submission</h3>
+    <div id="handbook-v05Submission"></div>
+    <h3>V0.5 Demo and Q&A Session</h3>
+    <div id="handbook-v05Demo"></div>
+    <h3>Project retrospective</h3>
+    <div id="handbook-projectRetrospective"></div>
+    <h3>Individual report</h3>
+    <div id="handbook-individualReport"></div>
+    <h3>V0.5 Evaluation</h3>
+    <div id="handbook-v05Evaluation"></div>
+    <h2>Forming Teams</h2>
+    <div id="handbook-formingTeams"></div>
+    <h2>Supervision</h2>
+    <div id="handbook-supervision"></div>
+    <h2>Project Grading</h2>
+    <div id="handbook-projectGrading"></div>
+    <h2>Peer Evaluations</h2>
+    <div id="handbook-peerEvaluations"></div>
+    <h2>Project Tools</h2>
+    <div id="handbook-projectTools"></div>
+    
+    <h1>Exams</h1>
+    <div id="handbook-exams"></div>
+    <h1>Grade Breakdown</h1>
+    <div id="handbook-gradeBreakdown"></div>
+    <h1>Participation Points</h1>
+    <div id="handbook-participationPoints"></div>
+
+    <h1>Appendix A: Module Principles</h1>
+    <div id="handbook-appendixA"></div>
+
+    <h1>Appendix B: Module Policies</h1>
+    <div id="handbook-appendixB"></div>
+    <div id="handbook-policy"></div>
+   
+    <h1>Appendix C: Frequently Asked Questions</h1>
+    <div id="handbook-appendixC"></div>
+    <h3>Why the workload is so high?</h3>
+    <div id="handbook-faq-highWorkload"></div>
+    <h3>Why so much bean counting?</h3>
+    <div id="handbook-faq-beanCounting"></div>
+    <h3>Why you force me to visit a separate website instead of using IVLE?</h3>
+    <div id="handbook-faq-separateWebsite"></div>
+    <h3>Why slides are not detailed enough, handouts are wordy?</h3>
+    <div id="handbook-faq-slideFormat"></div>
+    <h3>Why so much self-study?</h3>
+    <div id="handbook-faq-selfStudy"></div>
+    <h3>Why do I have to come to tutorials on time?</h3>
+    <div id="handbook-faq-timelyArrival"></div>
+    <h3>What if I don’t carry around a laptop?</h3>
+    <div id="handbook-faq-noLaptop"></div>
+    <h3>Why very narrow project scope?</h3>
+    <div id="handbook-faq-narrowScope"></div>
+    <h3>Why project requirements are so vague?</h3>
+    <div id="handbook-faq-vagueRequirements"></div>
+    <h3>Why I’m not allowed to use my favorite OS/IDE/etc?</h3>
+    <div id="handbook-faq-favoriteTool"></div>
+    <h3>Why so many submissions?</h3>
+    <div id="handbook-faq-manySubmissions"></div>
+    <h3>Why not enough marks for intermediate submissions?</h3>
+    <div id="handbook-faq-intermediateMarks"></div>
+    <h3>Why submission requirements differ between CS2103T and CS2101?</h3>
+    <div id="handbook-faq-cs2101Differences"></div>
+    
+    <h1>Appendix D: How to get tech help in CS2103/T</h1>
+    <div id="handbook-appendixD"></div>
+   
+    <h1>Appendix E: Using GitHub Project Hosting</h1>
+    <div id="handbook-appendixE"></div>
+
+    <h1>Appendix F: What to do if there are teamwork issues</h1>
+    <div id="handbook-appendixF"></div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script>
+        var sections = [
+        'handbook-preliminaries',
+        'handbook-lectures',
+        'handbook-tutorials',
+        'handbook-textBooks',
+        'handbook-programmingLanguages',
+        'handbook-project',
+        'handbook-theProduct',
+        'handbook-projectScope',
+        'handbook-projectConstraints',
+        'handbook-deliverables',
+        'handbook-ce1',
+        'handbook-ce2',
+        'handbook-ce3',
+        'handbook-v00Manual',
+        'handbook-v01Product',
+        'handbook-v01Demo',
+        'handbook-v01Manual',
+        'handbook-v02Demo',
+        'handbook-v02Manual',
+        'handbook-v02Product',
+        'handbook-v02Grading',
+        'handbook-v04Product',
+        'handbook-v05Requirements',
+        'handbook-v05Submission',
+        'handbook-v05Demo',
+        'handbook-projectRetrospective',
+        'handbook-individualReport',
+        'handbook-v05Evaluation',
+        'handbook-formingTeams',
+        'handbook-supervision',
+        'handbook-projectGrading',
+        'handbook-peerEvaluations',
+        'handbook-projectTools',
+        'handbook-exams',
+        'handbook-gradeBreakdown',
+        'handbook-participationPoints',
+        'handbook-appendixA',
+        'handbook-appendixB',
+        'handbook-policy',
+        'handbook-appendixC',
+        'handbook-faq-highWorkload',
+        'handbook-faq-beanCounting',
+        'handbook-faq-separateWebsite',
+        'handbook-faq-slideFormat',
+        'handbook-faq-selfStudy',
+        'handbook-faq-timelyArrival',
+        'handbook-faq-noLaptop',
+        'handbook-faq-narrowScope',
+        'handbook-faq-vagueRequirements',
+        'handbook-faq-favoriteTool',
+        'handbook-faq-manySubmissions',
+        'handbook-faq-intermediateMarks',
+        'handbook-faq-cs2101Differences',
+        'handbook-appendixD',
+        'handbook-appendixE',
+        'handbook-appendixF'];
+    </script>
+    <script type="text/javascript" src="../scripts/handbook.js"></script>
+    </body>
+</html>

@@ -1,0 +1,326 @@
+<div class="deadline content-week9">
+  <h3 id="deadline1-content-week9" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline1-week9">
+      <h3>[Mon (<span class="date-marker" week="9" day="1"></span>) 23:59] Project manual V0.1 submission</h3>
+        <div>
+          <span class="embedded-link" onclick="pullContent('handbook-v01Manual', '#embedded-week9-v01deadline', 'Handbook: Project manual V0.1 submission');">
+            more info </span>
+            <div id="embedded-week9-v01deadline"></div>
+        </div>
+    </div>
+    <div class="deadline deadline1-week9">
+      <h3>[Tue (<span class="date-marker" week="9" day="2"></span>)-Wed (<span class="date-marker" week="9" day="3"></span>)] Peer evaluation 2</h3>
+        <div>
+          Now that you are done with V0.1, tell your team members what you think of their contribution so far.
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="things-to-do content-week9">
+  <h3 id="things-to-do-content-week9" class="buttoned"><span>Things to do</span></h3>
+    <div>
+      <div class="things-to-do things-to-do-week9">
+        <h3>Resolve Team Issues</h3>
+          <div>
+            <ul>
+              <li>
+                If your team is facing difficulties due to differences in skill/motivation/availability among team 
+                members, read 
+                <span onclick="pullContent('handbook-appendixF', '#embedded-week9-teamwork', 'Handbook: Appendix F (What to do if there are teamwork issues)');">
+                <span class="embedded-link">Handbook: Appendix F (What to do if there are teamwork issues)</span>.
+                </span>
+                <div id="embedded-week9-teamwork"></div>
+              </li>
+              <li>
+                If you find some team members messing up the team repo frequently, you can attempt the 
+                safer (but a bit more complicated) workflow described in the 'A safer workflow using forks and 
+                pull requests' section of the 
+                <span onclick="pullContent('handbook-appendixE', '#embedded-week9-handbook', 'Handbook: Appendix E (Using GitHub Project Hosting)');">
+                <span class="embedded-link">Handbook: Appendix E (Using GitHub Project Hosting).</span>
+                </span>
+                <div id="embedded-week9-handbook"></div>                   
+              </li>
+              <li>
+                 Until now, stronger coders in the team may have written code in all components of the 
+                 product, to get the product up and running. It is fine for strong programmers take such initiative 
+                 in getting the product off the ground. However, as the product gets more stable, try to limit your 
+                 work to your own components only. When you need changes in a component handled by 
+                 another team member, ask that member to do the change. While this may slow down your 
+                 progress a bit, it is an essential part of working in a team. Editing others' code freely might affect 
+                 your team's morale too.
+               </li>
+             </ul>
+           </div>
+       </div>
+       <div class="things-to-do things-to-do-week9">
+         <h3>Take a peek at what's needed for the final exam</h3>
+           <div>
+             <ul>
+               <li>
+                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-exams', '#embedded-week9-exams', 'Handbook: Exams');">
+                 past exam papers</span> and note how the questions are 
+                 related to what you are doing in the project. This should motivate you to work harder in the 
+                 project. If you do the project well, you will do the exam well too. 
+                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-v05Evaluation', '#embedded-week9-exams', 'Handbook: V0.5 grading criteria');">
+                 V0.5 grading criteria</span>. In particular, note how we have 
+                 allocated marks for project management. Those who use the issue tracker well can earn more marks.
+                <div id="embedded-week9-exams"></div> 
+               </li>
+             </ul>
+           </div>
+       </div>
+    </div>
+</div>
+
+<div class="activity content-week9">
+  <h3 id="activity-content-week9" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+    <div>
+      <div class="activity activity-week9">
+        <h3>Start moving your code toward V0.2 [Team]</h3>
+          <div>
+            It may be a good idea to have an internal V0.15 milestone between V0.1 and V0.2 milestones.
+          </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>Relate patterns and principles to the project [Individual, 2pts]</h3>
+          <div>
+            Identify patterns and principles (at least one principle and one pattern) related to your part of 
+            the project. You should be able to explain the identified patterns and principles using diagrams 
+            in the project manual V0.1. This is also a good test of whether your project manual V0.1 has 
+            enough diagrams. If it doesn't, make a note to add more diagrams for the next project manual 
+            submission.
+            Optionally, you may discuss your findings with your team and refine further before coming to 
+            the tutorial. It is OK if you haven't actually applied these patterns/principles to the project yet. 
+            You can still describe how you could have applied them or even why you would not apply them 
+            for a particular scenario.
+          </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>Defend your code [Individual, 3 pts]</h3>
+          <div>
+            Ensure that at least one team member has done each of these and each team member has done at least one of these.
+            <ul>
+              <li>
+                assertions
+              </li>
+              <li>
+                exceptions
+              </li>
+              <li>
+                logging
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>Update the issue tracker [Individual, 2pts]</h3>
+          <div>
+            As before.
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="tutorial content-week9">
+  <h3 id="tutorial-content-week9" class="buttoned"><span>Tutorial 8: Patterns, Principles, Defensive coding</span></h3>
+    <div>
+      <div class="tutorial tutorial-week9">
+          <h3>Show examples of defensive coding [Individual]</h3>
+          <div>
+             Put up the latest stable code on the TV screen and use it to explain examples of your use of the 
+             below to the tutor (and the team).
+             <ul>
+               <li>
+                 assertions (Also demonstrate an assertion failure. e.g. add assert(false) to your code 
+                 and run the code to show how an assertion failure looks like)
+               </li>
+               <li>
+                 exceptions
+               </li>
+               <li>
+                 logging (Also show the log file containing the log messages).
+               </li>
+             </ul>
+           </div>
+      </div>
+      <div class="tutorial tutorial-week9">
+          <h3>Explain patterns and principles [Team]</h3>
+          <div>
+            <p>
+              <strong>Step 1. Reach a team consensus on patterns and principles</strong><br>
+              Display the project manual on the TV screen and use it to explain to the other team members 
+              how patterns and principles covered in Lecture 8 relate to the project. We expect you to cover 
+              around n patterns and n principles in total (n = team size). In case multiple members cover the 
+              same pattern/principle, look for more to fill the shortfall (i.e. what other pattern/principle can 
+              we relate to the project?). <br>
+              You must explain: <br>
+              1. the pattern/principle in general i.e. the problem it solves, how it solves the 
+              problem.<br>
+              2. How the pattern/principle is applied (or not applicable) to the project.<br>
+              <br>
+              Help each other to correct misunderstandings.
+            </p>
+            <p>
+              <strong>Step 2. Explain to the tutor how you relate patterns and principles to the project</strong><br>
+              Explain to the tutor the consensus you reached in step 1. Use the developer guide as a visual aid, 
+              as you did in step 1.<br>
+              The tutor will give feedback on whether your understanding and the application of the pattern/principle
+              is correct. But do not expect the tutor to "teach" you the pattern. If your understanding was found to
+              be incorrect, you need to go back to the handouts (or use any other resource) to correct your understanding
+              and try to explain it again to the tutor.
+            </p>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="ilo content-week9">
+  <h3 id="ilo-content-week9" class="buttoned"><span>Intended Learning Outcomes</span></h3>
+    <div>
+      <div class="ilo ilo-week9">
+        <h3>Knows a few common patterns. Can relate them to a software design.</h3>
+          <div>
+            Based on tutorial activity.
+          </div>
+      </div>
+      <div class="ilo ilo-week9">
+        <h3>Knows a few popular SE principles. Can relate them to a a project.</h3>
+          <div>
+            Based on tutorial activity.
+          </div>
+      </div>
+      <div class="ilo ilo-week9">
+        <h3>Can use exceptions, assertions, logging in code to make code more defensive</h3>
+          <div>
+            Based on tutorial activity.
+          </div>
+      </div>
+      <div class="ilo ilo-week9">
+        <h3>Can write effective developer documentation for the project.</h3>
+          <div>
+            Based on V0.1 Project Manual.
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<div class="lecture content-week9">
+  <h3 id="lecture-content-week9" class="buttoned"><span>Lecture 9: Product functional. What about quality?</span></h3>
+    <div>
+      <div class="lecture lecture-week9">
+        <h3>Part 1 - Quality Assurance: Testing and Beyond [35 minutes]</h3>
+          <div>
+            <table class="padded-borderless lecture-content-table">
+              <tr>
+                <td>
+                <img src="../images/qa methods.png">
+                </td>
+                <td>
+                  <p>
+                    <!--Slides <span class="dim">{link coming soon}</span>-->
+                    <a href="../files/slides/L9P1. Quality Assurance - Testing and Beyond.pptx">Slides</a>
+                  </p>
+                  <span class="dim">
+                    <p>
+                      <strong>Overview:</strong> The full system should be put through intensive 
+                      testing before release, even if components had been tested 
+                      earlier. Other QA techniques such as code reviews, static 
+                      analysis etc. can complement testing.
+                    </p>
+                    <p>
+                      <strong>Topics:</strong> system testing, acceptance testing,  test coverage, GUI testing,  other QA techniques
+                    </p>
+                  </span>
+                </td>
+              </tr>
+            </table>
+            <p>
+              Resources:
+            </p>
+            <ul>
+              <li>
+                Code coverage tools: You are not required to use code coverage tools in the project.
+              </li>
+              <ul>
+                <li>
+                  You can watch <a target="_blank" href="https://www.youtube.com/watch?v=NXYIFiNLwPo">this video</a> 
+                  to get an idea of how a coverage tool works. It describes EclEmma, a coverage tool for Java.
+                </li>
+                <li>
+                  [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2010/07/code-coverage-goal-80-and-no-less.html"> 
+                  How much coverage is enough coverage?</a> - A *must read* post from the Google Testing Blog.
+                </li>
+              </ul>
+              <li>
+                Interesting side reading
+              </li>
+              <ul>
+                <li>
+                  [Dev opinion] <a target="_blank" href="http://dzone.com/articles/dont-waste-time-code-reviews">
+                  Don't waste time on code reviews</a>
+                </li>
+                <li>
+                  [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2012/09/conversation-with-test-engineer.html"> 
+                  Conversation with a Test Engineer at Google</a> - A post from the Google Testing Blog.
+                </li>
+                <li>
+                  [eBook] If testing intrigues and interests you (a sign that there is a great software engineer inside you), 
+                  you will like <a target="_blank" href="http://www.scribd.com/doc/69769/TheWayOfTestivus">The Way of Testivus</a> (funny, and full of wisdom :-)
+                </li>
+                <li>
+                  [Web article] <a target="_blank" href="http://mashable.com/2013/10/29/dogfooding/#P7iYxbCK25qn">If You Want to Talk 
+                  Like a Silicon Valley CEO, Learn This Phrase</a>, An article from the Mashable about dogfooding
+                </li>
+                <li>
+                  [Web article] <a target="_blank" href="http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172222-a-second-for-45-minutes">
+                  How to lose $172,222 a second for 45 minutes</a> - An article about a software bug that make a company lose $460 million
+                </li>
+                <li>
+                  [Post from Google Testing Blog] <a target="_blank" href="http://googletesting.blogspot.sg/2014/07/measuring-coverage-at-google.html">
+                  Measuring coverage at Google</a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+      </div>
+      <div class="lecture lecture-week9">
+        <h3>Part 2 - Heuristics for Better Test Case Design [45 minutes]</h3>
+          <div>
+            <table class="padded-borderless lecture-content-table">
+              <tr>
+                <td>
+                  <img src="../images/testcases.png">
+                </td>
+                <td>
+                  <p>
+                    <!--Slides <span class="dim">{link coming soon}</span>-->
+                    <a href="../files/slides/L9P2. Heuristics for Better Test Case Design.pptx">Slides</a>
+                  </p>
+                  <span class="dim">
+                    <p>
+                      <strong>Overview:</strong> Techniques such as equivalence partitioning and 
+                      boundary value analysis can be used to increase 
+                      effectiveness and efficiency of testing.
+                    </p>
+                    <p>
+                      <strong>Topics:</strong> test case design approaches,  test case design techniques
+                    </p>
+                  </span>
+                </td>
+              </tr>
+            </table>
+          </div>
+      </div>
+      <div class="lecture lecture-week9">
+        <h3>Recap [25 minutes]</h3>
+          <div>
+            <!--Slides <span class="dim">{link coming soon}</span>-->
+            <a href="../files/slides/L9Recap.pptx">Slides</a>
+          </div>
+      </div>       
+    </div>
+</div>
+

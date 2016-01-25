@@ -1,0 +1,332 @@
+<div class="deadline content-week10">
+  <h3 id="deadline1-content-week10" class="buttoned"><span>Deadlines</span></h3>
+  <div>
+    <div class="deadline deadline1-week10">
+      <h3>[Mon (<span class="date-marker" week="10" day="1"></span>) 23:59] CE3 submission</h3>
+      <div>
+        <span class="embedded-link" onclick="pullContent('handbook-ce3', '#embedded-week10-CE3deadline', '[Handbook extract] CE3: TextBuddyPro');">
+            more info </span>
+            <div id="embedded-week10-CE3deadline"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="things-to-do content-week10">
+  <h3 id="things-to-do-content-week10" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week10">
+      <h3>Handbook sections to read</h3>
+      <div>
+      <ul>
+        <li>
+        Project: 
+        <span class="embedded-link" onclick="pullContent('handbook-v04Product', '#embedded-week10-v04', 'V0.4 [release candidate] Additional Requirements');">
+            V0.4 [release candidate] Additional Requirements</span>
+        </li>
+      </ul>
+      <div id="embedded-week10-v04"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="activity content-week10">
+  <h3 id="activity-content-week10" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <div class="activity activity-week10">
+      <h3>Reach V0.2 [Team, 5pts]</h3>
+      <div>
+        This should be a working version that is better than the previous version in some way. 
+        If required, update the project manual. For these intermediate milestones, the amount 
+        of improvements between versions is not important. What matters is you moved the 
+        product forward and everyone played a role in doing so. If your team is busy with 
+        other modules, you can chose to do less (but you should do some), improvements. 
+        But doing very little up to V0.4 and doing a lot in V0.5 is not acceptable.<br>
+
+        Remember to <span class="highlighted-darktext">
+        <a target="_blank" href="http://git-scm.com/book/en/Git-Basics-Tagging">git tag</a>
+        your V0.1 and V0.2 in the repo.</span><br><br>
+
+        <span class="highlighted-darktext">There should not be any pushing/pulling or tinkering with code 
+        during the tutorial.</span> You are expected to have a stable V0.2 version in the
+         repo before you come in. This V0.2 may or may not be the latest code in the repo.<br>
+        <br>
+          Grading: 
+          <ul>
+            <li>2 points will be given for having a proper release. i.e. tagged as V0.2 in the repo, tagged version loaded into
+              demo computer, and ready to start the demo.</li>
+            <li>3 points will be given based on the progress of the product. Those that are ready to start 
+              <span class="highlighted-darktext"><a target="_blank" href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food">
+              dog fooding</a> </span> will earn an extra bonus point.</li>
+          </ul>
+      </div>
+    </div>
+    <div class="activity activity-week10">
+      <h3>Do some systematic unit testing [Individual, 2.5+2.5=5pts]</h3>
+      <div>
+        (a) [2.5 pts] Ensure at least some automated tests exist for your part of the code.<br>
+        Note: If you are doing the GUI component, you might find it harder to do unit 
+        testing in there. In that case, you can get some more work assigned to you 
+        (e.g., writing a utility class) from somewhere else for which you can write unit tests. 
+        The important thing is to show us that you can write unit unit tests. Locating a place 
+        to do that is up to you.<br>
+        <br>
+        (b) [2.5 pts] Insert at least some comments in the code to explain the relation between your 
+        test cases and the test case design heuristics covered in the lecture.<br>
+        e.g., /* This is a <strong>boundary case</strong> for the ‘negative value’ <strong>partition</strong> */<br>
+        Note: For some SUTs, it is not easy to identify partitions and boundaries. Try harder. 
+        If still cannot, look elsewhere. The important thing is to show us that you can apply 
+        test case design heuristics in practice. Locating a good example to do that is up to you.<br>
+        During the tutorial you will be asked questions such as the below. Please read the relevant sections of the
+        module handout to beef up your knowledge about test case design heuristics.
+        <ul>
+          <li>What is an <em>equivalence partition</em>?</li>
+          <li>How does it help to improve E&E of testing?</li>
+          <li>For a selected test case: What partition does this test input belong to? 
+          What is another input from the same partition?</li>
+          <li>What is a <em>boundary value</em>?</li>
+          <li>and so on...</li>
+        </ul>
+      </div>
+    </div>
+    <div class="activity activity-week10">
+      <h3>Update the issue tracker [Individual, 2pts]</h3>
+      <div>
+        Update the issue tracker to reflect what you have done for the past week and what you
+        plan to do in the next week.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tutorial content-week10">
+  <h3 id="tutorial-content-week10" class="buttoned"><span>Tutorial 9: Starting systematic testing</span></h3>
+  <div>
+    <div class="tutorial tutorial-week10">
+      <h3>Show the work distribution</h3>
+      <div>
+        One member should start HubTurbo and load the board that shows the work distribution. 
+        The tutor will check it at some point of the tutorial.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week10">
+      <h3>Do the V0.2 demo </h3>
+      <div>
+        The demo will be evaluated by the other tutor in your tutorial group (not your own tutor). <br>
+        Aim to finish in 5 minutes, should not take more than 10 minutes.
+        <ul>
+          <li>
+            <span class="highlighted-darktext">Update the code to the version tagged V0.2 first</span>
+             before you do the demo.
+          </li>
+          <li>
+            1-2 members can do the demo.
+          </li>
+          <li>
+            To save time, please be ready with the laptop booted up the product loaded.
+          </li>
+          <li>
+            To earn full points, there should be a significant progress from V0.1.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tutorial tutorial-week10">
+      <h3> Show your contribution to V0.2 [individual, 5pts]</h3>
+      <div>
+        To get the points, you should have some added commits in the repo for this version
+      </div>
+    </div>
+
+    <div class="tutorial tutorial-week10">
+      <h3> Show your unit tests</h3>
+      <div>
+        One person can run all the unit tests and point out which tests were written by who.<br>
+        Also show the comments each one added under part (b) of the relevant pre-tutorial activity.
+      </div>
+    </div>
+     
+    <br><br>
+    <div class="tutorial tutorial-week10">
+      <h3> After the tutorial</h3>
+      <div>
+        <ul>
+          <li>
+            <span class="highlighted-darktext">Start 
+            <a target="_blank" href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food">
+            dog fooding</a>:</span>
+            If your V0.2 is reasonably feature-complete, start using it to manage your 
+            own schedule. If it is not complete enough for dog fooding, revise your 
+            project plan so that you can start dog fooding at least by V0.3.
+          </li>
+          <li>
+            You are encouraged to look at V0.1 project manuals of other teams. 
+            It is OK to adopt good ideas from others, as long as you give credit to them.
+          </li>
+          <li>
+            Also look at <a target="_blank" href="pointsToPonderAboutProductDesign.html">
+            CS2103 Project: Points to Ponder</a> 
+            for some design tips useful when refining the product design.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="ilo content-week10">
+  <h3 id="ilo-content-week10" class="buttoned"><span>Intended Learning Outcomes</span></h3>
+  <div>
+    <div class="ilo ilo-week10">
+      <h3>Understands the role of testing in quality assurance, and what can be done beyond 
+      testing to increase product quality.</h3>
+      <div>
+        Based on Lecture 9.
+      </div>
+    </div>
+    <div class="ilo ilo-week10">
+      <h3>Knows some basic test case design approaches and heuristics.</h3>
+      <div>
+        Based on this week's pre-tutorial activity.
+      </div>
+    </div>
+    <div class="ilo ilo-week10">
+      <h3>Can do basic requirements/task tracking with the help of an issue tracker.</h3>
+      <div>
+        Based on the use of issue tracker so far.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="lecture content-week10">
+  <h3 id="lecture-content-week10" class="buttoned">
+    <span>Lecture 10: Nearing completion. Gearing up for bigger projects.</span>
+  </h3>
+  <div>
+    <div class="lecture lecture-week10">
+      <h3>Pre-lecture exercise [optional]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/l10-pre.png">
+            </td>
+            <td>
+              <p>
+                
+              </p>
+              <p>
+                <a target="_blank" href="../images/L10-pre-lecture-exercise.png">Details of the exercise.</a> 
+                Bring your answers to the lecture. 
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="lecture lecture-week10">
+      <h3>Part 1 - One destination, many paths: software process models [45 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/processes.png">
+            </td>
+            <td>
+              <p>
+                <a href="../files/slides/L10P1. One destination, many paths - software process models.pptx">Slides</a>
+              </p>
+              <div class="dim">
+              <p>
+                <strong>Overview:</strong> There are numerous software process models to choose from.
+              </p>
+              <p>
+                <strong>Topics:</strong> SDLC process models.
+              </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            [Blog post]
+            <a target="_blank" href="http://stephenwalther.com/archive/2012/08/17/scrum-in-5-minutes.aspx">
+            Scrum in 5 minutes
+            </a>, by Stephen Walther
+          </li>
+          <li>
+            <a target="_blank" href="http://www.extremeprogramming.org/rules.html">
+            eXtreme Programming Rules
+            </a>, from the XP official website
+          </li>
+          <li>
+            [Blog post]
+            <a target="_blank" href="http://www.base36.com/2012/12/agile-waterfall-methodologies-a-side-by-side-comparison/">
+            Agile vs Waterfall
+            </a>
+             - one of 
+             <a target="_blank" href="https://www.google.com.sg/webhp#q=waterfall+vs+agile">
+             many articles
+             </a> comparing the two
+          </li>
+          <li>
+            [Blog post] 
+            <a target="_blank" href="http://ariya.ofilabs.com/2012/01/small-scale-software-craftsmanship.html">
+            Some process elements useful for not so huge projects
+            </a>, by Ariya Hidayat
+          </li>
+          <li>
+            [Web article] 
+            <a target="_blank" href="http://www.developer.com/tech/6-practical-agile-techniques-you-can-start-using-today.html">
+            6 Practical Agile Techniques You Can Start Using Today
+            </a>, by Ulf Eriksson
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week10">
+      <h3>Part 2 - Modeling your way out of complexity: Other useful models [30 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/activitydiagram.png">
+            </td>
+            <td>
+              <p>
+                <a href="../files/slides/L10P2. Modeling your way out of complexity - Other useful models.pptx">Slides</a>
+              </p>
+              <div class="dim">
+              <p>
+                <strong>Overview:</strong> If we are new to the problem domain, 
+                analyzing it and building domain models is necessary.
+              </p>
+              <p>
+                <strong>Topics:</strong> modeling workflow, modeling state-dependent 
+                behavior, modeling objects in the problem domain other UML models
+              </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="lecture lecture-week10">
+      <h3>Recap [10 minutes] </h3>
+      <div>
+        <!--Slides <span class="dim">{link coming soon}</span>-->
+        <a href="../files/slides/L10Recap.pptx">Slides</a> 
+      </div>
+    </div>
+    
+  </div>
+</div>
+
