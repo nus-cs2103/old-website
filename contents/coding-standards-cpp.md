@@ -584,8 +584,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
                 /*bold*/throw Exception()/*/bold*/;
             }
         } /*bold*/catch (Exception &excp)/*/bold*/ {
-            // Process excp
-            //
+            // Process exception
         }
     }</pre></td>
             <td valign="top">
@@ -596,8 +595,7 @@ e.g. `testLogic_addTask_nullParameters_errorMessageExpected()`
                 /*bold*/throw Exception()/*/bold*/;
             }
         } /*bold*/catch (Exception excp)/*/bold*/ {
-            // Process excp
-            //
+            // Process exception
         }
     }</pre></td>
         </tr>
