@@ -866,9 +866,11 @@ Enhances readability by introducing white space between logical units. Each bloc
 ### **Comments**
 
 
-**12. Messy code should not be commented but rewritten.**
+**12. Write minimal but sufficient comments.**
 
 In general, the use of comments should be minimized by making the code self-documenting by appropriate name choices and an explicit logical structure.
+
+However, you MUST write header comments for all classes, public methods, and all non-trivial private methods. The code, even if it is self-explanatory, can only tell the reader HOW the code works, not WHAT the code is supposed to do. 
 
 **13. All comments should be written in English.**
 
