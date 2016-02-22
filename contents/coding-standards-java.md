@@ -733,19 +733,16 @@ This follows from the general block rule above.
 
 ```java
 switch (condition) {
-    case ABC :
+    case ABC:
         statements;
         // Fallthrough
-    
-    case DEF :
+    case DEF:
         statements;
         break;
-    
-    case XYZ :
+    case XYZ:
         statements;
         break;
-    
-    default :
+    default:
         statements;
         break;
 }
