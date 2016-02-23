@@ -733,22 +733,20 @@ This follows from the general block rule above.
 
 ```java
 switch (condition) {
-    case ABC:
-        statements;
-        // Fallthrough
-    case DEF:
-        statements;
-        break;
-    case XYZ:
-        statements;
-        break;
-    default:
-        statements;
-        break;
+case ABC:
+    statements;
+    // Fallthrough
+case DEF:
+    statements;
+    break;
+case XYZ:
+    statements;
+    break;
+default:
+    statements;
+    break;
 }
 ```
-
-This differs slightly from the Sun recommendation both in indentation and spacing. In particular, each case keyword is indented relative to the switch statement as a whole. This makes the entire switch statement stand out. Note also the extra space before the `:` character.
 
 The explicit `//Fallthrough` comment should be included whenever there is a `case` statement without a break statement. Leaving out the `break` is a common error, and it must be made clear that it is intentional when it is not there.
 
