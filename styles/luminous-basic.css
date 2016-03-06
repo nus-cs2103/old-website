@@ -128,7 +128,7 @@
 
   .lum-lightbox-inner img {
     max-width: none;
-    max-height: none;
+    max-height: 100%;
     display: block;
   }
 }
