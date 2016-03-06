@@ -6,6 +6,7 @@
         <title>[Aug15] Schedule - CS2103/T</title>
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.css" />
         <link type="text/css" rel="stylesheet" href="../styles/common.css" />
+        <link type="text/css" rel="stylesheet" href="../styles/luminous-basic.css">
     </head>
     <body>
         <div id="form-preferences">
@@ -107,6 +108,19 @@
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../scripts/common.js"></script>
+        <script>
+            var url = "../scripts/common.js";
+            $.getScript(url, function() {
+
+                var url = "../scripts/luminous.js";
+                $.getScript(url, function() {
+
+                    var popupImages = document.querySelectorAll('a.zoom-in');
+                    for (i = 0; i < popupImages.length; i++) {
+                        new Luminous(popupImages[i]);
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
