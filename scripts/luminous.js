@@ -265,7 +265,7 @@ var Luminous = (function () {
     var _options$closeOnScrol = options.closeOnScroll;
     var
     // Automatically close when the page is scrolled.
-    closeOnScroll = _options$closeOnScrol === undefined ? false : _options$closeOnScrol;
+    closeOnScroll = _options$closeOnScrol === undefined ? true : _options$closeOnScrol;
     var _options$appendToSele = options.appendToSelector;
     var
     // A selector defining what to append the lightbox element to.
@@ -360,7 +360,7 @@ var _initialiseProps = function _initialiseProps() {
     }
 
     if (_this.settings.closeOnScroll) {
-      window.addEventListener('scroll', _this.close, false);
+      window.addEventListener('scroll', _this.closeOnScrollVertical, false);
     }
 
     var onOpen = _this.settings.onOpen;
@@ -369,6 +369,13 @@ var _initialiseProps = function _initialiseProps() {
     }
 
     _this.isOpen = true;
+    _this.verticalPosition = $(window).scrollTop();
+  };
+
+  this.closeOnScrollVertical = function (e) {
+    if (_this.verticalPosition != $(window).scrollTop()) {
+        _this.close();
+    }
   };
 
   this.close = function (e) {
@@ -377,7 +384,7 @@ var _initialiseProps = function _initialiseProps() {
     }
 
     if (_this.settings.closeOnScroll) {
-      window.removeEventListener('scroll', _this.close, false);
+      window.removeEventListener('scroll', _this.closeOnScrollVertical, false);
     }
 
     _this.lightbox.close();
