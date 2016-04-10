@@ -20,20 +20,54 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function pullContent(link) {
+function getContentUsingAjax(fileName, elementSelector, sectionName) {
+    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
+}
+
+function pullContent(fileName, elementSelector, title, sectionName) {
+    var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
+    $(elementSelector).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
+    $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
+        if (status == 'success') {
+            $(elementSelector).addClass('embedded');
+            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
+               ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+               'class="btn-dismiss">X</button><br><br></div>');
+            $(elementSelector + ' > div > .btn-dismiss').button();
+        }
+    }); 
+}
+
+function showContent(modal, link) {
     var url = link.data('url');
-    var modal = link.data('id');
-    console.log(url);
-    console.log(modal);
     $(modal).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
     $(modal).load(url, function(response, status, xhr) {
         if (status == 'success') {
             $(modal).addClass('embedded');
-            $(modal).prepend('<div><span class="embeddedHeading">' + 'Extract from handbook' + '</span><button onclick="$(\'' + modal + '\').html(\'\');' +
-               ' $(\'' + modal + '\').removeClass(\'embedded\');" ' +
-               'class="btn-dismiss">X</button><br><br></div>');
-            $(modal + ' > div > .btn-dismiss').button();
+            $(modal).prepend('<div><span class="embeddedHeading">Extract from handbook</span><button class="btn-dismiss">x</button><br><br></div>');
         }
+    });
+}
+
+function closeContent(modal) {
+    $(modal).html('');
+    $(modal).removeClass('embedded');
+}
+
+function addEmbeddedLinkBarModal(elementSelector) {
+    $(elementSelector).find('.embedded-link-bar').each(function(i, embeddedLinkBar) {
+        embeddedLinkBar = $(embeddedLinkBar);
+
+        var modal = $("<div></div>");
+        embeddedLinkBar.append(modal);
+
+        embeddedLinkBar.on('click', '.embedded-link', function() {
+            showContent(modal, $(this));
+        })
+
+        embeddedLinkBar.on('click', '.btn-dismiss', function() {
+            closeContent(modal);
+        })
     });
 }
 
@@ -210,6 +244,7 @@ function loadContent(week) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
+            addEmbeddedLinkBarModal($('#content-week' + week));
         }
     });
 }
@@ -332,9 +367,4 @@ $(document).ready(function() {
             }
         }
     });
-
-    $(document).on('click', '.embedded-link', function() {
-        pullContent($(this));
-    })
-
 });
