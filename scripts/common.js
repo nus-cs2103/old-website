@@ -20,22 +20,21 @@ function makeAccordion(elementSelector) {
     });
 }
 
-function getContentUsingAjax(fileName, elementSelector, sectionName) {
-    pullContent(fileName, elementSelector, 'Exract from handbook', sectionName);
-}
-
-function pullContent(fileName, elementSelector, title, sectionName) {
-    var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
-    $(elementSelector).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
-    $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
+function pullContent(link) {
+    var url = link.data('url');
+    var modal = link.data('id');
+    console.log(url);
+    console.log(modal);
+    $(modal).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
+    $(modal).load(url, function(response, status, xhr) {
         if (status == 'success') {
-            $(elementSelector).addClass('embedded');
-            $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
-               ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
+            $(modal).addClass('embedded');
+            $(modal).prepend('<div><span class="embeddedHeading">' + 'Extract from handbook' + '</span><button onclick="$(\'' + modal + '\').html(\'\');' +
+               ' $(\'' + modal + '\').removeClass(\'embedded\');" ' +
                'class="btn-dismiss">X</button><br><br></div>');
-            $(elementSelector + ' > div > .btn-dismiss').button();
+            $(modal + ' > div > .btn-dismiss').button();
         }
-    }); 
+    });
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
@@ -333,5 +332,9 @@ $(document).ready(function() {
             }
         }
     });
+
+    $(document).on('click', '.embedded-link', function() {
+        pullContent($(this));
+    })
 
 });
