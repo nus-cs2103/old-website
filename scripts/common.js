@@ -38,36 +38,52 @@ function pullContent(fileName, elementSelector, title, sectionName) {
     }); 
 }
 
-function showContent(modal, link) {
-    var url = link.data('url');
-    $(modal).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
-    $(modal).load(url, function(response, status, xhr) {
-        if (status == 'success') {
+function showContent(embeddedLink) {
+    var modal;
+    var modalId = embeddedLink.data('modal-id');
+    if (modalId == null) {
+        modal = embeddedLink.closest('.embedded-link-bar').find('.modal');
+    } else {
+        modal = $('#' + modalId).find('.modal');
+    }
+    var url = embeddedLink.data('url');
+
+    $.ajax({
+        type: 'GET',
+        url: url,
+        error: function() {
+
+        },
+        success: function(data) {
+            data = $(data);
+            addEmbeddedLinkBarModal(data);
+
             $(modal).addClass('embedded');
+            $(modal).html(data);
             $(modal).prepend('<div><span class="embeddedHeading">Extract from handbook</span><button class="btn-dismiss">x</button><br><br></div>');
         }
     });
 }
 
-function closeContent(modal) {
-    $(modal).html('');
+function closeContent(embeddedLink) {
+    var modal = embeddedLink.closest('.embedded-link-bar').find('.modal');
     $(modal).removeClass('embedded');
+    $(modal).html('');
 }
 
-function addEmbeddedLinkBarModal(elementSelector) {
-    $(elementSelector).find('.embedded-link-bar').each(function(i, embeddedLinkBar) {
+function addEmbeddedLinkBarModal(data) {
+    data.find('.embedded-link-bar').each(function(i, embeddedLinkBar) {
         embeddedLinkBar = $(embeddedLinkBar);
-
-        var modal = $("<div></div>");
+        var modal = $('<div class="modal"></div>');
         embeddedLinkBar.append(modal);
 
         embeddedLinkBar.on('click', '.embedded-link', function() {
-            showContent(modal, $(this));
-        })
+            showContent($(this));
+        });
 
         embeddedLinkBar.on('click', '.btn-dismiss', function() {
-            closeContent(modal);
-        })
+            closeContent($(this));
+        });
     });
 }
 
@@ -225,6 +241,9 @@ function loadContent(week) {
 
         },
         success: function(data) {
+            data = $(data);
+            addEmbeddedLinkBarModal(data);
+
             var components = ['things-to-do', 'activity', 'tutorial', 'lecture', 'deadline1', 'deadline2', 'ilo'];
             $('#content-week' + week).html(data);
             generateDates();
@@ -244,7 +263,6 @@ function loadContent(week) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
-            addEmbeddedLinkBarModal($('#content-week' + week));
         }
     });
 }
@@ -367,4 +385,5 @@ $(document).ready(function() {
             }
         }
     });
+
 });
