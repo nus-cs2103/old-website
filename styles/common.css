@@ -88,6 +88,17 @@ a:visited {
   padding-left:4em;
 }
 
+table.two-column-content {
+	border-collapse: collapse;
+}
+
+table.two-column-content td {
+	padding: 10px;
+	vertical-align: top;
+}
+
+
+
 /*
  * accordions
  */
