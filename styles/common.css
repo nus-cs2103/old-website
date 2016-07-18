@@ -88,17 +88,11 @@ a:visited {
   padding-left:4em;
 }
 
-table.two-column-content {
-	border-collapse: collapse;
+.code{
+    font-family: courier;
+    font-size: small;
+    background-color: #f2f2f2;
 }
-
-table.two-column-content td {
-	padding: 10px;
-	vertical-align: top;
-}
-
-
-
 /*
  * accordions
  */
@@ -336,6 +330,15 @@ table.bordered tr > td,
 table.bordered tr > th {
     padding: 5px 5px;
     border: 1px solid #000;
+}
+
+table.two-column-content {
+	border-collapse: collapse;
+}
+
+table.two-column-content td {
+	padding: 10px;
+	vertical-align: top;
 }
 
 /*
