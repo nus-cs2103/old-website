@@ -353,6 +353,14 @@ table.bordered tr > th {
     color: #2b2b2b;
 }
 
+.highlighted-headertext {
+    background-color: #ffffe0;
+}
+
+.highlighted-headertext {
+    color: #2b2b2b;
+}
+
 .important {
     color: #980000;
 }
