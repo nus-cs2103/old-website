@@ -1,3 +1,11 @@
+<style>
+span.highlight {
+    font-size: 200%;
+    font-weight: bold;
+    background-color: red;
+}
+</style>
+
 <div class="things-to-do content-week1">
     <h3 id="things-to-do-content-week1" class="buttoned"><span>Things to do</span></h3>
     <div>
@@ -37,26 +45,27 @@
                 If you don't feel like reading everything in it (it contains a lot of text), at least skim through the headings to know what is in there. You can go back and read the details as and when you need them.<br>
                 <b>Handbook sections to read around this time:</b>
                 <ul>
-                    <li>
-                        General: <span onclick="getContentUsingAjax('handbook-preliminaries', '#embedded-week1-general');"><span class="embedded-link">Preliminaries</span></span> | 
-                                 <span onclick="getContentUsingAjax('handbook-textBooks', '#embedded-week1-general');"><span class="embedded-link">Text Books</span></span> | 
-                                 <span onclick="getContentUsingAjax('handbook-programmingLanguages', '#embedded-week1-general');"><span class="embedded-link">Programming Language</span></span> | 
-                                 <span onclick="getContentUsingAjax('handbook-appendixA', '#embedded-week1-general');"><span class="embedded-link">Module Principles</span></span>
-                                 <div id="embedded-week1-general"></div>
+                    <li class="embedded-link-bar">
+                        General: <span class="embedded-link" data-url="handbook-preliminaries.html" data-modal-id="test">Preliminaries</span> | 
+                                 <span class="embedded-link" data-url="handbook-textBooks.html">Text Books</span> | 
+                                 <span class="embedded-link" data-url="handbook-programmingLanguages.html">Programming Language</span> | 
+                                 <span class="embedded-link" data-url="handbook-appendixA.html">Module Principles</span>
                     </li>
-                    <li>
-                        Project: <span onclick="getContentUsingAjax('handbook-theProduct', '#embedded-week1-project');"><span class="embedded-link">The Product</span></span> | 
-                                 <span onclick="getContentUsingAjax('handbook-projectScope', '#embedded-week1-project');"><span class="embedded-link">Project Scope</span></span> |
-                                 <span onclick="getContentUsingAjax('handbook-projectConstraints', '#embedded-week1-project');"><span class="embedded-link">Project Constraints</span></span> |
-                                 <span onclick="getContentUsingAjax('handbook-deliverables', '#embedded-week1-project');"><span class="embedded-link">Deliverables</span></span>
-                                 <div id="embedded-week1-project"></div>
+                    <li class="embedded-link-bar">
+                        Project: <span class="embedded-link" data-url="handbook-theProduct.html">The Product</span> | 
+                                 <span class="embedded-link" data-url="handbook-projectScope.html">Project Scope</span> |
+                                 <span class="embedded-link" data-url="handbook-projectConstraints.html">Project Constraints</span> |
+                                 <span class="embedded-link" data-url="handbook-deliverables.html">Deliverables</span>
                     </li>
-                    <li>
-                        FAQ: <span onclick="getContentUsingAjax('handbook-faq-highWorkload', '#embedded-week1-faqs');"><span class="embedded-link">Why the workload is so high?</span></span> |
-                             <span onclick="getContentUsingAjax('handbook-faq-beanCounting', '#embedded-week1-faqs');"><span class="embedded-link">Why so much bean counting?</span></span> |
-                             <span onclick="getContentUsingAjax('handbook-faq-separateWebsite', '#embedded-week1-faqs');"><span class="embedded-link">Why you force me to visit a separate website instead of using IVLE?</span></span>
-                             <div id="embedded-week1-faqs"></div>
+                    <li class="embedded-link-bar">
+                        FAQ: <span class="embedded-link" data-url="handbook-faq-highWorkload.html">Why the workload is so high?</span> |
+                             <span class="embedded-link" data-url="handbook-faq-beanCounting.html">Why so much bean counting?</span> |
+                             <span class="embedded-link" data-url="handbook-faq-separateWebsite.html">Why you force me to visit a separate website instead of using IVLE?</span>
                     </li>
+
+                    <div class="embedded-link-bar" id="test">
+                        <span class="highlight">Click on Preliminaries and Text Books ^</br>Content of Preliminaries loaded below this instead of directly below its link: </span>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -71,10 +80,8 @@
         </div>
         <div class="things-to-do things-to-do-week1">
             <h3>Attend Lecture 1 <span class="highlighted-darktext">(compulsory)</span></h3>
-            <div>
-                <span onclick="getContentUsingAjax('handbook-lectures', '#embedded-week1-lectures');"><span class="embedded-link">More about lectures</span></span>
-                <div id="embedded-week1-lectures">
-                </div>
+            <div class="embedded-link-bar">
+                <span class="embedded-link" data-url="handbook-lectures.html">More about lectures</span>
             </div>
         </div>
         <div class="things-to-do things-to-do-week1">
