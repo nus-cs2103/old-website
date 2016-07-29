@@ -1,0 +1,144 @@
+<p>For phases A and B, you only need a personal GitHub account. You are advised to choose a sensible GitHub username
+  as you are likely to use it for years to come in professional context.
+  <br>
+  The instructions below are for setting up a GitHub organization for your team, which you should do at the start of
+  Phase C.</p>
+
+<strong>Organization setup</strong>
+<p>You can create your GitHub account after receiving your team ID. Here are the instructions (<span
+    class="highlighted">
+please follow the organization/repo name format closely because we use scripts to download your code. 
+If the names are not as expected, our scripts will not work</span>):</p>
+<p></p>
+<ul>
+  <li>One team member (e.g. team leader) should create an organization with the following details:</li>
+</ul>
+<ul>
+  <li><span class="highlighted">Organization name : <span class="code">CS2103AUG2016-TEAM_ID</span></span>. e.g. <span
+      class="code">CS2103AUG2016-W09-5C</span></li>
+  <li>Plan:  Open Source ($0/month) </li>
+</ul>
+<ul>
+  <li>After that, the same person can add members to the organization:</li>
+</ul>
+<ul>
+  <li>Create a team called developers to your organization (in addition to the owners team) and give
+    that team write permission.
+  </li>
+  <li>Add your team members to either the owners team or the developers team.</li>
+</ul>
+
+<strong>Repo setup</strong>
+<ul>
+  <li>Create a <span class="highlighted">repo called main</span> under your organization
+    e.g. cs2103aug2015-w09-5j/main<br/>
+    <img src="../images/repo setup.png" width="600"/>
+  </li>
+</ul>
+<strong>Issue tracker setup</strong>
+<ul>
+  <li>When you create a repo, you get an issue tracker for that repo automatically.<br/>
+  </li>
+  <li>Delete existing labels and add the following labels.
+    <ul>
+      <li><span class="code">type.epic</span> : A big feature which can be broken down into smaller stories e.g. search
+      </li>
+      <li><span class="code">type.story</span> : A user story</li>
+      <li><span class="code">type.enhancement</: An enhancement to an existing story</li>
+      <li><span class="code">type.task</span> : Something that needs to be done, but not a story, bug, or an epic. e.g.
+        Move
+        testing code into a new folder)
+      </li>
+      <li><span class="code">type.bug</span> : A bug</li>
+      <li><span class="code">status.ongoing</span> : The issue is currently being worked on. note: remove this label
+        before
+        closing an issue.
+      </li>
+      <li><span class="code">priority.high</span> : Must do</li>
+      <li><span class="code">priority.medium</span> : Nice to have</li>
+      <li><span class="code">priority.low</span> : Unlikely to do<br/>
+      </li>
+    </ul>
+  </li>
+  <li>Create following milestones</li>
+
+  <ul>
+    <li><span class="code">V0.0</span>, <span class="code">V0.1</span>, <span class="code">V0.2</span>, <span
+        class="code">V0.3</span>, <span class="code">V0.4</span>, <span class="code">V0.5rc</span>, <span class="code">V0.5</span>
+    </li>
+  </ul>
+  <li>You may configure other project settings as you wish. e.g. more labels, more milestones</li>
+</ul>
+
+<strong>Guidelines for Task Tracking using the Issue Tracker </strong>
+<p>In general, use the issue tracker for assigning, scheduling, and tracking ALL project tasks,
+  including user stories. Update the issue tracker regularly to reflect the current status of the
+  project.</p>
+<p></p>
+
+<p>Recommended practices when using the Issue tracker:</p>
+<ul>
+  <li>When you start implementing a story, break it down to tasks. Define reasonable sized, standalone
+    tasks. A task should be able to done by one person, in a few hours. e.g. <br/>
+    Good: Update class diagram in the project manual for V0.5<br/>
+    Bad (reasons: not a one-person task, not small enough): Write the project manual
+  </li>
+  <li>Write a descriptive title for the issue. <br/>
+    e.g. Add support for the 'undo' command to the parser.
+  </li>
+  <li>There is no need to break things into VERY small tasks. Keep them as big as possible, but they
+    should be no bigger than what you are going to assign a single person to
+    do within a week. So the user story <span class="code">Implementing parser </span>  is too big because it cannot be
+    done by a single person in a week. However,<span class="code">Implementing parser support for adding of floating tasks</span> is of
+    appropriate size.
+  </li>
+  <li>Do not track things taken for granted. e.g., 'push code to repo' should not be a task to track.
+    In the example given under the previous point, it is taken for granted
+    that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need
+    not be tracked as separate tasks.
+  </li>
+  <li>Omit unnecessary details. In some cases, the summary/title is enough to describe the task. In
+    that case, no need to repeat it in the description. There is no need for
+    well-crafted and detailed descriptions for tasks. A minimal description is enough.<br/>
+    Similarly, labels such as 'priority' can be omitted if you think they don't help you.
+  </li>
+  <li>Assign tasks to team members using the 'owner' field. At any point, there should be some ongoing
+    tasks and some pending tasks against each team member.
+  </li>
+  <li>Use status labels to indicate which tasks are completed, which are ongoing, and which are to be
+    done by next milestone.
+  </li>
+  <li>Use milestones to indicate which issues are to be handled for which milestone.</li>
+</ul>
+
+<p><strong>[Optional] A safer workflow using forks and pull requests</strong></p>
+<p>The workflow below will reduce the risk of someone breaking the product. It is a bit complicated.
+  Do spend some time using the GitHub repo in a centralized (easier) way
+  before you attempt this. If the centralized workflow is good enough for you, there is no need to use
+  this one.</p>
+<p>In this example, Adam is the integrator and only he can push to the main repo. Other team members
+  create their own '<a href="https://help.github.com/articles/fork-a-repo/">fork</a>'
+  on GitHub and push their code to their own fork.</p>
+<p><img src="../images/github.png" width="300"/></p>
+<p>Scenario 1. The integrator adds some new code:</p>
+<ul>
+  <li>1.1: Adam adds some new code, ensures it works, pushes it to the main repo, and informs others.</li>
+  <li>1.2: Others pull from the main repo to get that new piece of code.</li>
+</ul>
+<p>Scenario 2. Another member adds some new code:</p>
+<ul>
+  <li>2.1: Ravi implements a new feature in his local repo.</li>
+  <li>2.2: Ravi pulls the latest code from the main repo, merges it with his code, tests his new code
+    to ensure it works with the latest version of the product, and pushes his
+    code to his own fork. He then creates a <a href="https://help.github.com/articles/using-pull-requests/">pull
+      request</a> 
+    to inform Adam that the new code is ready.
+  </li>
+  <li>2.3: Adam pulls from Ravi's fork, merges with existing code, and run the unit tests.<br/>
+    (a) If the tests fail, or if the new code is not up to the standard, he reverts back to the
+    previous version, effectively rejecting Ravi's code. He adds a comment in the
+    pull request to say the code has been rejected.<br/>
+    (b) If Ravi's code is working and of acceptable quality, he pushes it to the main repo and closes
+    the pull request.  
+  </li>
+</ul>
