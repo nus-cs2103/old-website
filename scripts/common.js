@@ -26,13 +26,17 @@ function getContentUsingAjax(fileName, elementSelector, sectionName) {
 
 function pullContent(fileName, elementSelector, title, sectionName) {
     var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
+    var directLink = 'handbook.html#'+fileName;
+    var linkNotice = '<span class="important">{Some links in this embedded content box might not work. ' +
+        'If you need to follow the links, please go to the <a href="' + directLink + '" target="_blank">relevant section</a> ' +
+        'of the handbook instead}</span>';
     $(elementSelector).html('<img class="embedded-link-loading-img" src="../images/ajax-preload.gif" alt="Loading...">');
     $(elementSelector).load(toBeLoaded, function(response, status, xhr) {
         if (status == 'success') {
             $(elementSelector).addClass('embedded');
             $(elementSelector).prepend('<div><span class="embeddedHeading">' + title + '</span><button onclick="$(\'' + elementSelector + '\').html(\'\');' +
                ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
-               'class="btn-dismiss">X</button><br><br></div>');
+               'class="btn-dismiss">X</button><br><br> '+linkNotice+' </div>');
             $(elementSelector + ' > div > .btn-dismiss').button();
         }
     }); 
