@@ -33,6 +33,16 @@
             <span onclick="getContentUsingAjax('handbook-v01Manual', '#embedded-week5-handbook');"><span class="embedded-link">V0.1 of the Project Manual</span></span>| 
             <div id="embedded-week5-handbook"></div>
           </li>
+          <li>
+            FAQ:
+            <span onclick="getContentUsingAjax('handbook-faq-manySubmissions', '#embedded-week5-faqs');">
+              <span class="embedded-link"> Why that many submissions?</span>
+            </span> |
+            <span onclick="getContentUsingAjax('handbook-faq-intermediateMarks', '#embedded-week5-faqs');">
+              <span class="embedded-link"> Why not enough marks for intermediate submissions?</span>
+            </span> |
+            <div id="embedded-week5-faqs"></div>
+          </li>
         </ul>
       </div>
     </div>
@@ -233,47 +243,124 @@
       </div>
     </div>
     <div class="lecture lecture-week5">
-      <h3>[50 minutes] Part 2 - Designing component internals using OO</h3>
+      <h3>[35 minutes] Part 1 - Problem before solution: figuring out requirements</h3>
       <div>
         <table class="padded-borderless lecture-content-table">
           <tr>
             <td>
-              <img src="../images/objects.png">
+              <img src="../images/specifying.png" style="width: 249.50px; height: 157.53px;">
             </td>
             <td>
               <p>
-                <a target="_blank" href="../files/slides/L5P2.%20Designing%20component%20internals%20using%20OO%20%28eLearning%29.pptx">Slides</a> <br>
-                [if you are new to OO, also read supplementary handout given below] <br />
-                Watch the [<a target="_blank" href="https://ivle.nus.edu.sg/default.aspx?ReturnUrl=%2fv1%2fbank%2fmedia%2fviewmedia.aspx%3fMediaItemID%3df77addbe-e8f9-48da-b2fa-e3260d02103b%26ChannelID%3d41c2d4dc-a3e8-43b4-9e54-91d2b7763f36"> eLearning video</a>]
-                [duration: 21 minutes]<br>
-                OR the [<a target="_blank" href="https://ivle.nus.edu.sg/default.aspx?ReturnUrl=%2fbank%2fmedia%2fpanopto.aspx%3fKEY%3ddf59e3ae-0c43-4324-a702-03023a35c9e6%26ChannelID%3d0599213a-1949-427e-9f38-4222af7bac12%26Referrer%3d">webcast from the previous year</a>]
-                [duration: 50 minutes]<br>
+                <a target="_blank"
+                   href="../files/slides/L3P1. Problem before solution - figuring out requirements.pptx">Slides</a>
               </p>
               <span class="dim">
-                <p>
-                  Overview: During the detailed design, which can be complex,
-                  it is good to follow a common design paradigm. OO is the paradigm followed most widely in the industry.
-                  When using OO, we view a system as interacting objects. Objects represent entities in the real world and
-                  encapsulate data and operations related to those entities.
-                </p>
-                <p>
-                  Introduction to OO,  Creating an OO solution, Object diagrams, Class diagrams
-                </p>
-              </span>
+            <p>
+                <strong>Overview:</strong> There are many ways to gather, analyze and
+                document requirements.
+            </p>
+            <p>
+                <strong>Topics:</strong> establishing requirements, specifying requirements
+            </p>
+            </span>
             </td>
           </tr>
         </table>
-        <p>Resources: </p>
+        <p>
+          Resources:
+        </p>
         <ul>
           <li>
-            [Supplementary handout, <span class="highlighted-darktext">*must read if you are new to OO</span>] <a target="_blank" href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OOP_ObjC/OOP_ObjC.pdf">Object-Oriented Programming with Objective-C</a>, 
-            by Apple Inc. Read pages 8-18 to understand the OO philosophy. 
+            Interesting side reading
           </li>
+          <ul>
+            <li>
+              Sample specifications - These show how the format of requirements/system
+              specification can differ based on the nature of the project.
+              <ul>
+                <li>
+                  <a target="_blank"
+                     href="https://docs.google.com/document/d/1hjQQHYM3YId0EUSrGnJWG5AeFpDD_G7xg_d--7jg3vU/pub?embedded=true">
+                    TEAMMATES</a> - Note that this specification is more detailed
+                  than what is expected from you. Reason: TEAMMATES is a bigger project
+                  than yours, has been in operation for several years now, and has
+                  passed through several teams of developers during this time.
+                </li>
+                <li>
+                  <a target="_blank" href="http://scesm04.upb.de/case-study-2/requirements.pdf">
+                    A weather-related scientific software</a> (source: NASA) -
+                  Because of the nature of the software, the specification is very technical,
+                  detailed, and completely text-based.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Humor : Dilbert on user stories, Dilbert asks a user for requirements,
+              Alice asks a user for requirements
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week5">
+      <h3>[35 minutes] Part 2 - From the magician's hat: designing the product</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/10 observations.png" style="width: 249.50px; height: 157.53px;">
+            </td>
+            <td>
+              <p>
+                <a target="_blank"
+                   href="../files/slides/L3P2.%20From%20the%20magician%92s%20hat%20-%20designing%20the%20product.pptx">Slides</a>
+              </p>
+              <span class="dim">
+        <p>
+            <strong>Overview:</strong> It is important to consider the proposed product
+            from the users' point of view and provide good solutions to users' problems
+            rather than slap together a slew of features that you as developers find
+            interesting. UI prototypes are especially useful in visualizing the product
+            early and improving the user experience.
+        </p>
+        <p>
+            <strong>Topics:</strong> product design
+        </p>
+        </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
           <li>
-            [Webcast] Implementing basic classes in C++  [<a target="_blank" href="http://www.comp.nus.edu.sg/~cs2103/AY1314S2/files/Implmenting%20a%20basic%20class.mp4">video </a>50mins]
-            [<a target="_blank" href="http://www.comp.nus.edu.sg/~cs2103/AY1314S2/files/Implementing%20a%20basic%20class.pdf">slides</a>] 
-            - a webcast done by Dr Soo Yuen Jien for another module
+            Interesting side reading
           </li>
+          <ul>
+            <li>
+              [Web article] <a target="_blank"
+                               href="http://radar.oreilly.com/2015/06/the-11-deadly-sins-of-product-development.html">
+              The 11 deadly sins of product development</a>
+            </li>
+            <li>
+              [Web article] <a target="_blank" href="http://asktog.com/atc/principles-of-interaction-design/">
+              First Principles of Interaction Design</a> - This it totally out of
+              scope of this module, but a good read for folks who are deeply interested
+              in designing good products and can’t wait till you read relevant modules later.
+            </li>
+            <li>
+              [Web article] <a target="_blank" href="http://sachagreif.com/flat-pixels/">
+              skeuomorphism vs flat design</a> - For those who are interested in GUI design.
+              Out of scope of this module.
+            </li>
+            <li>
+              [Web article] <a target="_blank"
+                               href="http://venturebeat.com/2014/11/02/founder-stories-people-dont-want-drills/">
+              People don’t want drills, they want holes</a>
+            </li>
+          </ul>
         </ul>
       </div>
     </div>
