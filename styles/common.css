@@ -362,13 +362,16 @@ table.two-column-content td {
     font-weight: bold;
  }
 
-.highlighted,
-.highlighted-darktext {
+.highlighted {
     background-color: #ffff00;
 }
 
 .important {
     color: #980000;
+}
+
+.important-header {
+    font-weight: bold;
 }
 
 .keyword {
