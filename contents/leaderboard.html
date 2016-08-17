@@ -31,6 +31,7 @@
         height: 5100px;
     }
   </style>
+  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
   <div class="leaderboard" id="leaderboard-data">
@@ -41,5 +42,12 @@
     <iframe class="leaderboard-iframe" id="leaderboard-header-iframe"
      src="https://docs.google.com/spreadsheets/d/1OD_SPNX8QeDO25kj8JQc7zvd7acxI16hyXhdGncRWvI/pubhtml"></iframe>
   </div>
+  <script>
+    $(document).ready(function() {
+      $('#leaderboard-data').scroll(function() {
+        $('#leaderboard-header').scrollLeft($(this).scrollLeft());
+      });
+    });
+  </script>
 </body>
 </html>
