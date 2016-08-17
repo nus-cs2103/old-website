@@ -15,6 +15,11 @@
         width: 100%;
         font-size: 0;
     }
+    #leaderboard-header {
+        height: 100px;
+        width: 5500px;
+        overflow: hidden;
+    }
     .leaderboard-iframe {
         width: 5500px;
         border: none;
@@ -22,11 +27,18 @@
     #leaderboard-data-iframe {
         height: 100%;
     }
+    #leaderboard-header-iframe {
+        height: 5100px;
+    }
   </style>
 </head>
 <body>
   <div class="leaderboard" id="leaderboard-data">
     <iframe class="leaderboard-iframe" id="leaderboard-data-iframe"
+     src="https://docs.google.com/spreadsheets/d/1OD_SPNX8QeDO25kj8JQc7zvd7acxI16hyXhdGncRWvI/pubhtml"></iframe>
+  </div>
+  <div class="leaderboard" id="leaderboard-header">
+    <iframe class="leaderboard-iframe" id="leaderboard-header-iframe"
      src="https://docs.google.com/spreadsheets/d/1OD_SPNX8QeDO25kj8JQc7zvd7acxI16hyXhdGncRWvI/pubhtml"></iframe>
   </div>
 </body>
