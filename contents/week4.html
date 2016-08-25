@@ -1,127 +1,127 @@
 
-<div class="deadline content-week4">
-    <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
-    <div>
-        <div class="deadline deadline1-week4">
-            <h3>[Fri (<span class="date-marker" week="4" day="5"></span>) 23:59] CE1: Code Review</h3>
-            <div>
-                [individual, 5x2 pts]
-                <br>
-                <br>
-                In this exercise, you will <span class="highlighted">review the code of two other classmates.</span>
-                <br>
-                <br>
-                <b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer, 
-                doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
-                <br>
-                <br>
-                <b>Procedure:</b> 
-                <ol>
-                    <li>
-                        Check the review assignment (i.e. who will review whose code) 
-                        <a href="https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit#gid=0" target="_blank">here</a>.
-                    </li>
-                    <li>
-                        Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways. 
-                        Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
-                    </li>
-                    <li>
-                        Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
-                    </li>
-                    <li>
-                        Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
-                        <br>
-                        <br>
-                        Formatting:
-                        <br>
-                        a) Code formatted with syntax coloring to help the reader.
-                        <br>
-                        {opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
-                        <br>
-                        <br>
-                        Names - meaning:
-                        <br>
-                        b) Class/method/variable names are meaningful and intuitive.
-                        <br>
-                        c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
-                        <br>
-                        d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
-                        <br>
-                        <br>
-                        Names - case:
-                        <br>
-                        e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
-                        e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
-                        <br>
-                        <br>
-                        Comments:
-                        <br>
-                        f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
-                        <br>
-                        g) No trivial comments.
-                        <br>
-                        h) Minimal but sufficient level of commenting.
-                        <br>
-                        <br>
-                        Magic numbers
-                        <br>
-                        i) No magic numbers/strings.
-                        <br>
-                        <br>
-                        Layout:
-                        <br>
-                        j) Code neatly laid out to improve readability.
-                        <br>
-                        k) Braces placement, indentation, and alignment follow the standard.
-                        <br>
-                        l) Braces are used even for blocks with just one statement.
-                        <br>
-                        e.g.
-                        if(isValid){<br>
-                                processInput(input);<br>
-                        }
-                        <br>
-                        <br>
-                        SLAP:
-                        <br>
-                        m) Short methods with not too-deep nesting.
-                        <br>
-                        n) Each method written generally at a similar level of abstraction.
-                        <br>
-                        <br>
-                        Testing:
-                        <br>
-                        o) A reasonable set of test cases to cover various usage scenarios.
-                        <br>
-                        <br>
-                    </li>
-                    <li>
-                        Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
-                        <br>
-                        <br>
-                        e.g.
-                        <br>
-                        a) The variable name t2 is not very meaningful
-                        <br>
-                        k) Braces in the getLines() method do not follow the standard.
-                        <br>
-                        m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
-                        <br>
-                        <br>
-                    </li>
-                    <li>
-                        A code review requires both technical skills and people skills. <span class="highlighted">Be honest</span> in the review. Your review will not affect the reviewee’s CE1 grade.
-                        <br>
-                        <span class="highlighted">Be kind</span> too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
-                    </li>
-                    <li>
-                        If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- <div class="deadline content-week4">
+     <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
+     <div>
+         <div class="deadline deadline1-week4">
+             <h3>[Fri (<span class="date-marker" week="4" day="5"></span>) 23:59] CE1: Code Review</h3>
+             <div>
+                 [individual, 5x2 pts]
+                 <br>
+                 <br>
+                 In this exercise, you will <span class="highlighted">review the code of two other classmates.</span>
+                 <br>
+                 <br>
+                 <b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer,
+                 doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
+                 <br>
+                 <br>
+                 <b>Procedure:</b>
+                 <ol>
+                     <li>
+                         Check the review assignment (i.e. who will review whose code)
+                         <a href="https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit#gid=0" target="_blank">here</a>.
+                     </li>
+                     <li>
+                         Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways.
+                         Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
+                     </li>
+                     <li>
+                         Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
+                     </li>
+                     <li>
+                         Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
+                         <br>
+                         <br>
+                         Formatting:
+                         <br>
+                         a) Code formatted with syntax coloring to help the reader.
+                         <br>
+                         {opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
+                         <br>
+                         <br>
+                         Names - meaning:
+                         <br>
+                         b) Class/method/variable names are meaningful and intuitive.
+                         <br>
+                         c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
+                         <br>
+                         d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
+                         <br>
+                         <br>
+                         Names - case:
+                         <br>
+                         e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
+                         e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
+                         <br>
+                         <br>
+                         Comments:
+                         <br>
+                         f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
+                         <br>
+                         g) No trivial comments.
+                         <br>
+                         h) Minimal but sufficient level of commenting.
+                         <br>
+                         <br>
+                         Magic numbers
+                         <br>
+                         i) No magic numbers/strings.
+                         <br>
+                         <br>
+                         Layout:
+                         <br>
+                         j) Code neatly laid out to improve readability.
+                         <br>
+                         k) Braces placement, indentation, and alignment follow the standard.
+                         <br>
+                         l) Braces are used even for blocks with just one statement.
+                         <br>
+                         e.g.
+                         if(isValid){<br>
+                                 processInput(input);<br>
+                         }
+                         <br>
+                         <br>
+                         SLAP:
+                         <br>
+                         m) Short methods with not too-deep nesting.
+                         <br>
+                         n) Each method written generally at a similar level of abstraction.
+                         <br>
+                         <br>
+                         Testing:
+                         <br>
+                         o) A reasonable set of test cases to cover various usage scenarios.
+                         <br>
+                         <br>
+                     </li>
+                     <li>
+                         Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
+                         <br>
+                         <br>
+                         e.g.
+                         <br>
+                         a) The variable name t2 is not very meaningful
+                         <br>
+                         k) Braces in the getLines() method do not follow the standard.
+                         <br>
+                         m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
+                         <br>
+                         <br>
+                     </li>
+                     <li>
+                         A code review requires both technical skills and people skills. <span class="highlighted">Be honest</span> in the review. Your review will not affect the reviewee’s CE1 grade.
+                         <br>
+                         <span class="highlighted">Be kind</span> too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
+                     </li>
+                     <li>
+                         If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
+                     </li>
+                 </ol>
+             </div>
+         </div>
+     </div>
+ </div>
 
 <div class="things-to-do content-week4">
     <h3 id="things-to-do-content-week4" class="buttoned"><span>Things to do</span></h3>
@@ -299,7 +299,94 @@
         </div>
     </div>
 </div>
+-->
+<div class="activity content-week4">
+    <h3 id="activity-content-week4" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+    <div>
+        <p>
+        </p>
+        <div class="activity activity-week4">
+            <h3>T3A1. Setup AddressBook-Level2 <img src="../images/star.png"/></h3>
+            <div>
+                Set up the <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2" target="_blank">
+                 AddressBook-Level2</a> in your computer.
+                Ensure the program runs and the test script runs successfully.
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A2. Encapsulation <img src="../images/star.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome
 
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#apply-encapsulation-lo-encapsulation" target="_blank">
+                        AddressBook-Level2: Apply Encapsulation [LO-Encapsulation]</a>
+                </p>
+                <p>
+                    Submission:
+                <ul>
+                    <li>Option 1 (if you are not familiar with Git yet): show your code to the tutor during the tutorial.
+                    </li>
+                    <li>
+                        Option 2 (preferred): Create a PR with your code
+                        <ol>
+                            <li>Fork this repo to your personal GitHub account</li>
+                            <li>Create a branch named after tutorial activity e.g. <code>T3A2</code></li>
+                            <li>Commit your changes to that branch. Push to your fork.</li>
+                            <li>Create a Pull Request against the master branch of repo
+                                <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2" target="_blank">
+                                    nus-cs2103-AY1617S1/addressbook-level2</a>.<br>
+                                <span class="highlighted">(do not create PRs against the upstream repo at <code>se-edu</code> org)</span><br>
+                                PR name: <code>[ACTIVITY_ID][TEAM_ID]Your Name</code> <br>
+                                e.g. If you are in team 1 of tutorial W09 (i.e. Wednesday 9am), <code>[T3A2][W09-A1]James Yong</code>
+                            </li>
+                            <li>
+                                Add a comment <code>Ready for review</code> when the PR is ready.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A3. Implementing classes <img src="../images/2stars.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#implement-a-class-lo-implementclass" target="_blank">
+                        AddressBook-Level2: Implement a class [LO-ImplementClass]</a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A4. Handling exceptions<img src="../images/2stars.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#handle-exceptions-lo-exceptions" target="_blank">
+                        AddressBook-Level2: Handle Exceptions  [LO-Exceptions]</a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A5. Apply Single Responsibility Principle<img src="../images/3stars.png"/></h3>
+            <div>
+                <p>Do the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#follow-the-single-responsibility-principle-lo-srp" target="_blank">
+                        AddressBook-Level2: Follow the Single Responsibility Principle  [LO-SRP] </a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 
 <div class="lecture content-week4">
     <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: Let&apos;s split work and start building this thing</span></h3>
