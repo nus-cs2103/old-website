@@ -428,12 +428,12 @@
   </div>
 </div>
 
-<!--
+
 
 <div class="lecture content-week4">
-    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: Let&apos;s split work and start building this thing</span></h3>
-    <div>
-        <div class="lecture lecture-week4">
+    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: More OOP, and getting started with developer testing</span></h3>
+   <div>
+     <!--    <div class="lecture lecture-week4">
             <h3>Pre-lecture activity</h3>
                 <div>
                        Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
@@ -469,7 +469,7 @@
                        Sketch a UI for TeamFormer.
                 </div>
         </div>
-        
+
         <div class="lecture lecture-week4">
             <h3>[45 minutes] Part 1 - The View from the Top: Architecture</h3>
             <div>
@@ -502,124 +502,102 @@
                         <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
                         <a target="_blank" href="https://www.youtube.com/watch?v=Un80XoRT1ME">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
                     </li>
-                    <li>
-                        [Book] UML Distilled (3rd ed) by Martin Fowler - A handy guide for most used UML diagrams. Not required for the module, but can be useful for future UML usage.
-                    </li>
-                    <li>
-                        [Tools] Powerpoint is usually good enough as a UML diagramming tool if you are using UML for simple documentation purposes the way we do in this module. If you would like to try something more UML-specific, there are quite a few available.
-                        <br>
-                        e.g. <a target="_blank" href="https://www.draw.io/">Draw.io (online)</a>,
-                        <a target="_blank" href="http://yuml.me/">yUML.me (online)</a>,
-                        <a target="_blank" href="http://www.gliffy.com/uses/uml-software/">Gliffy (online)</a>,
-                        <a target="_blank" href="http://www.umlet.com/">UMLet</a>,
-                        <a target="_blank" href="http://www.visual-paradigm.com/features/uml-and-sysml-modeling/">Visual Paradigm</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
-    
-        <div class="lecture lecture-week4">
-            <h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
-            <div>
-                   <table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/yee ha.png">
-                        </td>
-                        <td>
-                            <p>
-                                <a target="_blank" href="../files/slides/L4P2. Never Too Early to Test - an Introduction to Early Developer Testing.pptx">Slides</a>
-                            </p>
-                             <span class="dim">
-                                <p>
-                                    Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing. 
-                                    API testing can be automated using testing frameworks such as JUnit, and with the help of drivers and stubs. 
-                                    TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
-                                </p>
-                                <p>
-                                    Topics: developer testing, automated API testing, TDD
-                                </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-                <p>
-                    Resources:
-                </p>
-                <ul>
-                    <li>
-                        Help on automated unit testing tools (Note: you are expected to use automated unit testing for CE2). 
-                        <ul>
-                            <li>
-                                JUnit (for Java guys): <a target="_blank" href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> (a short tutorial from JUnit creators),
-                                <a target="_blank" href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> (a more detailed tutorial from a developer Lars Vogel),
-                                <a target="_blank" href="../files/CityConnectTest.java">A sample test class (partial)</a> for CityConnect.java you used in Tutorial 3.
-                                <a target="_blank" href="http://stackoverflow.com/questions/5759602/how-to-simultaneously-run-all-junit-tests-for-a-eclipse-java-project-without-mav">How do I run all JUnit tests at once?</a>
-                                How to test private methods in Java?  <a target="_blank" href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a>,
-                                <a target="_blank" href="http://www.artima.com/suiterunner/private.html">long answer</a>
-                            </li>
-                            <li>
-                                Unit testing in Visual Studio: See chapter 6 of <a target="_blank" href="../files/An introduction to Visual Studio 2012 - part II.pdf">this tutorial</a> we prepared.
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        TDD resources (Note: Using TDD is optional). Before trying TDD, learn unit testing first by adding tests to existing functionality in CE1. 
-                        <ul>
-                            <li>
-                                <a target="_blank" href="http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd">Uncle Bob’s three rules of TDD</a> (Uncle Bob = Robert C. Martin, the author of Clean Code)
-                            </li>
-                            <li>
-                                Let’s play TDD screencasts by James Shore:
-                                <a target="_blank" href="http://jamesshore.com/Blog/Lets-Play/Lets-Play-Test-Driven-Development.html">episode 1</a>
-                                <a target="_blank" href="http://jamesshore.com/Blog/Lets-Play/Episode-2.html">episode 2</a>
-                                <a target="_blank"  href="http://jamesshore.com/index.index">the rest</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://www.drdobbs.com/testing/tdd-is-there-really-any-debate-any-longe/240007457">TDD: Is There Really Any Debate Any Longer?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="highlighted"><a target="_blank" href="testingFaq.html">Questions about unit testing frequently asked by CS2103 students (and answers)</a></span>
-                    </li>
-                    <li>
-                        Interesting side reading
-                        <ul>
-                            <li>
-                                [Quora post]
-                                <a target="_blank" href="http://www.quora.com/What-are-good-ways-to-avoid-bugs-while-programming/answer/Mattias-Petter-Johansson">What is the best way to avoid bugs</a>
-                            </li>
-                            <li>
-                                [Web article]
-                                <a target="_blank" href="http://www.bloomberg.com/slideshow/2012-08-03/the-big-cost-of-software-bugs.html">The Big Cost of Software Bugs</a>
-                                , An interesting post on 10 bugs that cost millions. 
-                            </li>
-                            <li>
-                                [Web article]
-                                <a target="_blank" href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests/">The three pillars of unit testing</a>
-                                , A short article about what makes a good unit test.
-                            </li>
-                            <li>
-                                [Dev opinion]
-                                <a target="_blank" href="http://css.dzone.com/articles/programmers-without-tdd-will">Programmers Without TDD Will be Unemployable by 2022</a>
-                            </li>
-                            <li>
-                                [Quora thread]
-                                <a target="_blank" href="http://www.quora.com/What-kind-of-automated-testing-should-a-startup-have-from-the-beginning-through-the-first-six-months-of-live-operation/answer/Zach-Brock">Is automated testing relevant to startups?</a>
-                            </li>
-                            <li>
-                                [Blog post]
-                                <a target="_blank" href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a>
-                                 - How unit testing (and other good coding practices) could have prevented a major security bug.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    -->
+     <div class="lecture lecture-week4">
+       <h3>[35 minutes] Part 1 - Object-Oriented Programming: Intermediate Concepts</h3>
+       <div>
+         <table class="padded-borderless lecture-content-table">
+           <tr>
+             <td>
+               <img src="../images/IntermediateOop.png"  style="width: 249.50px; height: 157.53px;">
+             </td>
+             <td>
+               <p>
+                 [<a href="http://www.comp.nus.edu.sg/~cs2103/AY1617S1/files/handouts/%5bL4P1%5d%20Object-Oriented%20Programming%20-%20Intermediate%20Concepts.pdf" target="_blank">
+                   Handout</a>]
+                 [Slides]
+                 <!-- <a target="_blank" href="../files/slides/L6P1.%20Advanced%20OO%20concepts.pptx">Slides</a> -->
+               </p>
+               <span class="dim">
+              <p>
+                <strong>Overview:</strong>
+                Inheritance is a powerful OO features that can be beneficial in certain design contexts.
+                There are a few other nitty-gritties an OO guy should know such as class-level members.
+                Sequence diagrams can be used to depict interactions between objects.
+              </p>
+              <p>
+                <strong>Topics:</strong>
+                Composition, Association classes, Inheritance, Interfaces, Interface Segregation Principle.
+              </p>
+              </span>
+             </td>
+           </tr>
+         </table>
+         <p>
+           Resources:
+         </p>
+         <ul>
+           <li>
+             [Optional reading]
+             <a target="_blank"
+               href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented
+               Programming with Objective-C</a>, by Apple Inc. If you liked the first part of this document you read so
+               far(this was given as a resource in the previous lecture),
+               you may continue to read the remainder to strengthen your understanding of OOP.
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="lecture lecture-week4">
+       <h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
+       <div>
+         <table class="padded-borderless lecture-content-table">
+           <tr>
+             <td>
+               <img src="../images/yee ha.png">
+             </td>
+             <td>
+               <p>
+                 [<a href="http://www.comp.nus.edu.sg/~cs2103/AY1617S1/files/handouts/%5bL4P2%5d%20Never%20Too%20Early%20to%20Test%20-%20an%20Introduction%20to%20Early%20Developer%20Testing.pdf" target="_blank">
+                 Handout</a>]
+                 [Slides]
+                 <!-- [<a target="_blank" href="../files/slides/L4P2. Never Too Early to Test - an Introduction to Early Developer Testing.pptx">
+                    Slides</a>] -->
+               </p>
+               <span class="dim">
+                  <p>
+                      Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing.
+                      API testing can be automated using testing frameworks such as JUnit.
+                      TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
+                  </p>
+                  <p>
+                      Topics: developer testing, automated unit testing, TDD
+                  </p>
+                </span>
+             </td>
+           </tr>
+         </table>
+         <p>
+           Resources:
+         </p>
+         <ul>
+           <li>
+             <span class="highlighted"><a target="_blank" href="testingFaq.html">Questions about unit testing frequently asked by CS2103 students (and answers)</a></span>
+           </li>
+           <li>
+             More resources given at
+             <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md" target="_blank">
+               addressbook-level2</a> (see under testing-related learning outcomes).
+           </li>
+         </ul>
+       </div>
+     </div>
     </div>
-</div> -->
+</div>
 
 <div class="deadline content-week4">
   <h3 id="deadline2-content-week4" class="buttoned"><span>Deadlines </span></h3>
