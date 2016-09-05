@@ -1,127 +1,158 @@
-
 <div class="deadline content-week4">
-    <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
-    <div>
-        <div class="deadline deadline1-week4">
-            <h3>[Fri (<span class="date-marker" week="4" day="5"></span>) 23:59] CE1: Code Review</h3>
-            <div>
-                [individual, 5x2 pts]
-                <br>
-                <br>
-                In this exercise, you will <span class="highlighted">review the code of two other classmates.</span>
-                <br>
-                <br>
-                <b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer, 
-                doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
-                <br>
-                <br>
-                <b>Procedure:</b> 
-                <ol>
-                    <li>
-                        Check the review assignment (i.e. who will review whose code) 
-                        <a href="https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit#gid=0" target="_blank">here</a>.
-                    </li>
-                    <li>
-                        Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways. 
-                        Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
-                    </li>
-                    <li>
-                        Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
-                    </li>
-                    <li>
-                        Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
-                        <br>
-                        <br>
-                        Formatting:
-                        <br>
-                        a) Code formatted with syntax coloring to help the reader.
-                        <br>
-                        {opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
-                        <br>
-                        <br>
-                        Names - meaning:
-                        <br>
-                        b) Class/method/variable names are meaningful and intuitive.
-                        <br>
-                        c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
-                        <br>
-                        d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
-                        <br>
-                        <br>
-                        Names - case:
-                        <br>
-                        e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
-                        e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
-                        <br>
-                        <br>
-                        Comments:
-                        <br>
-                        f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
-                        <br>
-                        g) No trivial comments.
-                        <br>
-                        h) Minimal but sufficient level of commenting.
-                        <br>
-                        <br>
-                        Magic numbers
-                        <br>
-                        i) No magic numbers/strings.
-                        <br>
-                        <br>
-                        Layout:
-                        <br>
-                        j) Code neatly laid out to improve readability.
-                        <br>
-                        k) Braces placement, indentation, and alignment follow the standard.
-                        <br>
-                        l) Braces are used even for blocks with just one statement.
-                        <br>
-                        e.g.
-                        if(isValid){<br>
-                                processInput(input);<br>
-                        }
-                        <br>
-                        <br>
-                        SLAP:
-                        <br>
-                        m) Short methods with not too-deep nesting.
-                        <br>
-                        n) Each method written generally at a similar level of abstraction.
-                        <br>
-                        <br>
-                        Testing:
-                        <br>
-                        o) A reasonable set of test cases to cover various usage scenarios.
-                        <br>
-                        <br>
-                    </li>
-                    <li>
-                        Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
-                        <br>
-                        <br>
-                        e.g.
-                        <br>
-                        a) The variable name t2 is not very meaningful
-                        <br>
-                        k) Braces in the getLines() method do not follow the standard.
-                        <br>
-                        m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
-                        <br>
-                        <br>
-                    </li>
-                    <li>
-                        A code review requires both technical skills and people skills. <span class="highlighted">Be honest</span> in the review. Your review will not affect the reviewee’s CE1 grade.
-                        <br>
-                        <span class="highlighted">Be kind</span> too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
-                    </li>
-                    <li>
-                        If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
-                    </li>
-                </ol>
-            </div>
-        </div>
+  <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline1-week4">
+      <h3>[Tue (<span class="date-marker" week="4" day="2"></span>) 23:59] Complete TEAMMATES profile</h3>
+      <div>
+        You should have received the 'join' email from the TEAMMATES system by now.<br>
+        TEAMMATES normally allows students to access it without using Google login. In this module, we
+        <span class="highlighted">require you to login to TEAMMATES using your Google account and update your
+         TEAMMATES profile [considered for participation marks]</span>.
+        Completing the profile will count for participation marks. CS2103 is a big class. This profile helps us
+        to
+        remember you better, even after the module is over.
+        <ul>
+          <li>
+            In the profile, you are encouraged (but not compulsory) to provide your long term contact email
+            (not school email) as the contact email. This contact email is for keeping in touch after
+            graduation.<br>
+            <span style="text-decoration: line-through; color: #980000;">john@comp.nus.edu.sg</span>
+            <span style="color: #38761d;">john@gmail.com</span>
+          </li>
+          <li>
+            Please upload a recent photo showing your face clearly. We expect a mug shot, not a full body
+            shot. Some examples can be seen in the
+            'Teaching team' page. Given below are some examples of good and bad profile photos.<br>
+            <img src="../images/profilephotos.png" style="width: 365.33px">
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
+<!-- <div class="deadline content-week4">
+     <h3 id="deadline1-content-week4" class="buttoned"><span>Deadlines </span></h3>
+     <div>
+         <div class="deadline deadline1-week4">
+             <h3>[Fri (<span class="date-marker" week="4" day="5"></span>) 23:59] CE1: Code Review</h3>
+             <div>
+                 [individual, 5x2 pts]
+                 <br>
+                 <br>
+                 In this exercise, you will <span class="highlighted">review the code of two other classmates.</span>
+                 <br>
+                 <br>
+                 <b>Rationale:</b> Code reviews are an important part of a software engineer’s life. While some of you may not be experienced enough to be a good code reviewer,
+                 doing a code review is still a valuable opportunity to experience code from the reader’s point of view. It will also help you to improve the quality of your own code.
+                 <br>
+                 <br>
+                 <b>Procedure:</b>
+                 <ol>
+                     <li>
+                         Check the review assignment (i.e. who will review whose code)
+                         <a href="https://docs.google.com/spreadsheets/d/1sxGIuUgcm1U5mmzeX3saYvdO83VvXj3X-UQLrlD0Vw0/edit#gid=0" target="_blank">here</a>.
+                     </li>
+                     <li>
+                         Download the pdf files submitted by the two assigned reviewees, from the IVLE workbin. Note that some may not have followed the submission instructions closely and named their files in different ways.
+                         Do a Ctrl+F in the workbin page to find the files submitted by the reviewee. Some may even have put the pdf file inside the zip file. Yes, it is quite annoying when people do not follow the instructions :-p
+                     </li>
+                     <li>
+                         Refresh your memory about the coding standard you were expected to follow. Links to the standard are given in the Tutorial 2 description above.
+                     </li>
+                     <li>
+                         Review the code for the following aspects.  Note that we are reviewing the coding style only, not the accuracy or the performance.
+                         <br>
+                         <br>
+                         Formatting:
+                         <br>
+                         a) Code formatted with syntax coloring to help the reader.
+                         <br>
+                         {opposite: Code just dumped into a document without much regard to the readability. Some statements overflow to the next line}
+                         <br>
+                         <br>
+                         Names - meaning:
+                         <br>
+                         b) Class/method/variable names are meaningful and intuitive.
+                         <br>
+                         c) Boolean variables or methods returning boolean values are named to indicate their boolean nature e.g. isValidName hasExtraSpaces()
+                         <br>
+                         d) Variable names are based on nouns (e.g. maxValue) and method names are based on verbs (e.g. getValue)
+                         <br>
+                         <br>
+                         Names - case:
+                         <br>
+                         e) Class/method/variable/constant names use upper/lower/Camel/Pascal case appropriately
+                         e.g class name: CityConnect (Pascal case), method name : getValue (Camel case), constant name MAX_VALUE (upper case with underscores)
+                         <br>
+                         <br>
+                         Comments:
+                         <br>
+                         f) Comments are used to explain WHAT and WHY aspects of the code, not HOW aspects.
+                         <br>
+                         g) No trivial comments.
+                         <br>
+                         h) Minimal but sufficient level of commenting.
+                         <br>
+                         <br>
+                         Magic numbers
+                         <br>
+                         i) No magic numbers/strings.
+                         <br>
+                         <br>
+                         Layout:
+                         <br>
+                         j) Code neatly laid out to improve readability.
+                         <br>
+                         k) Braces placement, indentation, and alignment follow the standard.
+                         <br>
+                         l) Braces are used even for blocks with just one statement.
+                         <br>
+                         e.g.
+                         if(isValid){<br>
+                                 processInput(input);<br>
+                         }
+                         <br>
+                         <br>
+                         SLAP:
+                         <br>
+                         m) Short methods with not too-deep nesting.
+                         <br>
+                         n) Each method written generally at a similar level of abstraction.
+                         <br>
+                         <br>
+                         Testing:
+                         <br>
+                         o) A reasonable set of test cases to cover various usage scenarios.
+                         <br>
+                         <br>
+                     </li>
+                     <li>
+                         Submit your findings using the TEAMMATES session ‘CE1 code review’ (open from Week 4 Mon, 7pm). Aspect above for which the code needs improvement, give examples when you submit the review.
+                         <br>
+                         <br>
+                         e.g.
+                         <br>
+                         a) The variable name t2 is not very meaningful
+                         <br>
+                         k) Braces in the getLines() method do not follow the standard.
+                         <br>
+                         m) Not enough SLAP in the main method. It can be shorter and the nesting can be reduced.
+                         <br>
+                         <br>
+                     </li>
+                     <li>
+                         A code review requires both technical skills and people skills. <span class="highlighted">Be honest</span> in the review. Your review will not affect the reviewee’s CE1 grade.
+                         <br>
+                         <span class="highlighted">Be kind</span> too. There is no need to criticise harshly. No need to be witty. Just offer gentle suggestions on how to improve.
+                     </li>
+                     <li>
+                         If it seems the reviewee’s has not submitted CE1, review the code from another classmate (of your own choosing).
+                     </li>
+                 </ol>
+             </div>
+         </div>
+     </div>
+ </div>
 
 <div class="things-to-do content-week4">
     <h3 id="things-to-do-content-week4" class="buttoned"><span>Things to do</span></h3>
@@ -299,12 +330,110 @@
         </div>
     </div>
 </div>
+-->
+<div class="activity content-week4">
+    <h3 id="activity-content-week4" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+    <div>
+        <p>
+        </p>
+        <div class="activity activity-week4">
+            <h3>T3A1. Setup AddressBook-Level2 <img src="../images/star.png"/></h3>
+            <div>
+                Set up the <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2" target="_blank">
+                 AddressBook-Level2</a> in your computer.
+                Ensure the program runs and the test script runs successfully.
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A2. Encapsulation <img src="../images/star.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome
+
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#apply-encapsulation-lo-encapsulation" target="_blank">
+                        AddressBook-Level2: Apply Encapsulation [LO-Encapsulation]</a>
+                </p>
+                <p>
+                    Submission:
+                <ul>
+                    <li>
+                        Option 1 : Create a PR with your code
+                        [<span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week4-pr-steps', 'tutorial-pr-instructions');">
+                        <span class="embedded-link">Instructions</span></span>]
+                        <div id="embedded-week4-pr-steps"></div>
+
+                    <li><span class="dim">Option 2 (not recommended. option to be removed by Tutorial 4):
+                        show your code to the tutor during the tutorial.</span>
+                    </li>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A3. Implementing classes <img src="../images/2stars.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#implement-a-class-lo-implementclass" target="_blank">
+                        AddressBook-Level2: Implement a class [LO-ImplementClass]</a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A4. Handling exceptions<img src="../images/2stars.png"/></h3>
+            <div>
+                <p>Complete the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#handle-exceptions-lo-exceptions" target="_blank">
+                        AddressBook-Level2: Handle Exceptions  [LO-Exceptions]</a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+        <div class="activity activity-week4">
+            <h3>T3A5. Apply Single Responsibility Principle<img src="../images/3stars.png"/></h3>
+            <div>
+                <p>Do the exercise for the learning outcome: <br>
+                    <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md#follow-the-single-responsibility-principle-lo-srp" target="_blank">
+                        AddressBook-Level2: Follow the Single Responsibility Principle  [LO-SRP] </a>
+                </p>
+                <p>
+                    Submission: similar to T3A2 above.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tutorial content-week4">
+  <h3 id="tutorial-content-week4" class="buttoned">
+    <span>Tutorial 3: Encapsulation, Classes, Exceptions, SRP</span></h3>
+  <div>
+    <div class="tutorial tutorial-week4">
+      <h3>Discuss pre-tutorial learning activities</h3>
+      <div>
+        As before, discuss with tutor/peers pre-tutorial learning activities.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week4">
+      <h3>[last 15 minutes] Form phase B and phase C teams</h3>
+      <div>
+        Follow tutor's directions to form Phase B and C teams. Before leaving the tutorial,
+        <span class="highlighted">go to IVLE and sign up for the correct phase B and C teams</span>.<br>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="lecture content-week4">
-    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: Let&apos;s split work and start building this thing</span></h3>
-    <div>
-        <div class="lecture lecture-week4">
+    <h3 id="lecture-content-week4" class="buttoned"><span>Lecture 4: More OOP, and getting started with developer testing</span></h3>
+   <div>
+     <!--    <div class="lecture lecture-week4">
             <h3>Pre-lecture activity</h3>
                 <div>
                        Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
@@ -340,7 +469,7 @@
                        Sketch a UI for TeamFormer.
                 </div>
         </div>
-        
+
         <div class="lecture lecture-week4">
             <h3>[45 minutes] Part 1 - The View from the Top: Architecture</h3>
             <div>
@@ -373,122 +502,117 @@
                         <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
                         <a target="_blank" href="https://www.youtube.com/watch?v=Un80XoRT1ME">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
                     </li>
-                    <li>
-                        [Book] UML Distilled (3rd ed) by Martin Fowler - A handy guide for most used UML diagrams. Not required for the module, but can be useful for future UML usage.
-                    </li>
-                    <li>
-                        [Tools] Powerpoint is usually good enough as a UML diagramming tool if you are using UML for simple documentation purposes the way we do in this module. If you would like to try something more UML-specific, there are quite a few available.
-                        <br>
-                        e.g. <a target="_blank" href="https://www.draw.io/">Draw.io (online)</a>,
-                        <a target="_blank" href="http://yuml.me/">yUML.me (online)</a>,
-                        <a target="_blank" href="http://www.gliffy.com/uses/uml-software/">Gliffy (online)</a>,
-                        <a target="_blank" href="http://www.umlet.com/">UMLet</a>,
-                        <a target="_blank" href="http://www.visual-paradigm.com/features/uml-and-sysml-modeling/">Visual Paradigm</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
-    
-        <div class="lecture lecture-week4">
-            <h3>[35 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
-            <div>
-                   <table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/yee ha.png">
-                        </td>
-                        <td>
-                            <p>
-                                <a target="_blank" href="../files/slides/L4P2. Never Too Early to Test - an Introduction to Early Developer Testing.pptx">Slides</a>
-                            </p>
-                             <span class="dim">
-                                <p>
-                                    Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing. 
-                                    API testing can be automated using testing frameworks such as JUnit, and with the help of drivers and stubs. 
-                                    TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
-                                </p>
-                                <p>
-                                    Topics: developer testing, automated API testing, TDD
-                                </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-                <p>
-                    Resources:
-                </p>
-                <ul>
-                    <li>
-                        Help on automated unit testing tools (Note: you are expected to use automated unit testing for CE2). 
-                        <ul>
-                            <li>
-                                JUnit (for Java guys): <a target="_blank" href="http://junit.sourceforge.net/doc/cookbook/cookbook.htm">JUnit cookbook</a> (a short tutorial from JUnit creators),
-                                <a target="_blank" href="http://www.vogella.com/articles/JUnit/article.html">JUnit tutorial</a> (a more detailed tutorial from a developer Lars Vogel),
-                                <a target="_blank" href="../files/CityConnectTest.java">A sample test class (partial)</a> for CityConnect.java you used in Tutorial 3.
-                                <a target="_blank" href="http://stackoverflow.com/questions/5759602/how-to-simultaneously-run-all-junit-tests-for-a-eclipse-java-project-without-mav">How do I run all JUnit tests at once?</a>
-                                How to test private methods in Java?  <a target="_blank" href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a>,
-                                <a target="_blank" href="http://www.artima.com/suiterunner/private.html">long answer</a>
-                            </li>
-                            <li>
-                                Unit testing in Visual Studio: See chapter 6 of <a target="_blank" href="../files/An introduction to Visual Studio 2012 - part II.pdf">this tutorial</a> we prepared.
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        TDD resources (Note: Using TDD is optional). Before trying TDD, learn unit testing first by adding tests to existing functionality in CE1. 
-                        <ul>
-                            <li>
-                                <a target="_blank" href="http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd">Uncle Bob’s three rules of TDD</a> (Uncle Bob = Robert C. Martin, the author of Clean Code)
-                            </li>
-                            <li>
-                                Let’s play TDD screencasts by James Shore:
-                                <a target="_blank" href="http://jamesshore.com/Blog/Lets-Play/Lets-Play-Test-Driven-Development.html">episode 1</a>
-                                <a target="_blank" href="http://jamesshore.com/Blog/Lets-Play/Episode-2.html">episode 2</a>
-                                <a target="_blank"  href="http://jamesshore.com/index.index">the rest</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://www.drdobbs.com/testing/tdd-is-there-really-any-debate-any-longe/240007457">TDD: Is There Really Any Debate Any Longer?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <span class="highlighted"><a target="_blank" href="testingFaq.html">Questions about unit testing frequently asked by CS2103 students (and answers)</a></span>
-                    </li>
-                    <li>
-                        Interesting side reading
-                        <ul>
-                            <li>
-                                [Quora post]
-                                <a target="_blank" href="http://www.quora.com/What-are-good-ways-to-avoid-bugs-while-programming/answer/Mattias-Petter-Johansson">What is the best way to avoid bugs</a>
-                            </li>
-                            <li>
-                                [Web article]
-                                <a target="_blank" href="http://www.bloomberg.com/slideshow/2012-08-03/the-big-cost-of-software-bugs.html">The Big Cost of Software Bugs</a>
-                                , An interesting post on 10 bugs that cost millions. 
-                            </li>
-                            <li>
-                                [Web article]
-                                <a target="_blank" href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests/">The three pillars of unit testing</a>
-                                , A short article about what makes a good unit test.
-                            </li>
-                            <li>
-                                [Dev opinion]
-                                <a target="_blank" href="http://css.dzone.com/articles/programmers-without-tdd-will">Programmers Without TDD Will be Unemployable by 2022</a>
-                            </li>
-                            <li>
-                                [Quora thread]
-                                <a target="_blank" href="http://www.quora.com/What-kind-of-automated-testing-should-a-startup-have-from-the-beginning-through-the-first-six-months-of-live-operation/answer/Zach-Brock">Is automated testing relevant to startups?</a>
-                            </li>
-                            <li>
-                                [Blog post]
-                                <a target="_blank" href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a>
-                                 - How unit testing (and other good coding practices) could have prevented a major security bug.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    -->
+     <div class="lecture lecture-week4">
+       <h3>[45 minutes] Part 1 - Object-Oriented Programming: Intermediate Concepts</h3>
+       <div>
+         <table class="padded-borderless lecture-content-table">
+           <tr>
+             <td>
+               <img src="../images/IntermediateOop.png"  style="width: 249.50px; height: 157.53px;">
+             </td>
+             <td>
+               <p>
+                 [<a href="../files/handouts/%5bL4P1%5d%20Object-Oriented%20Programming%20-%20Intermediate%20Concepts.pdf" target="_blank">
+                   Handout</a>]
+                 <!-- [Slides] -->
+                 [<a target="_blank" href="../files/slides/L4P1.%20Object-Oriented%20Programming%20-%20Intermediate%20Concepts.pptx">Slides</a>]
+               </p>
+               <span class="dim">
+              <p>
+                <strong>Overview:</strong>
+                Inheritance is a powerful OO features that can be beneficial in certain design contexts.
+                There are a few other nitty-gritties an OO guy should know such as class-level members.
+                Sequence diagrams can be used to depict interactions between objects.
+              </p>
+              <p>
+                <strong>Topics:</strong>
+                Composition, Association classes, Inheritance, Interfaces, Interface Segregation Principle.
+              </p>
+              </span>
+             </td>
+           </tr>
+         </table>
+         <p>
+           Resources:
+         </p>
+         <ul>
+           <li>
+             [Optional reading]
+             <a target="_blank"
+               href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/OOP_ObjC/">Object-Oriented
+               Programming with Objective-C</a>, by Apple Inc. If you liked the first part of this document you read so
+               far(this was given as a resource in the previous lecture),
+               you may continue to read the remainder to strengthen your understanding of OOP.
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="lecture lecture-week4">
+       <h3>[30 minutes] Part 2 - Never Too Early to Test: an Introduction to Early Developer Testing</h3>
+       <div>
+         <table class="padded-borderless lecture-content-table">
+           <tr>
+             <td>
+               <img src="../images/yee ha.png">
+             </td>
+             <td>
+               <p>
+                 [<a href="../files/handouts/%5bL4P2%5d%20Never%20Too%20Early%20to%20Test%20-%20an%20Introduction%20to%20Early%20Developer%20Testing.pdf" target="_blank">
+                 Handout</a>]
+                 <!-- [Slides] -->
+                 [<a target="_blank" href="../files/slides/L4P2.%20Never%20Too%20Early%20to%20Test%20-%20an%20Introduction%20to%20Early%20Developer%20Testing.pptx">
+                    Slides</a>]
+               </p>
+               <span class="dim">
+                  <p>
+                      Overview: Testing should be done earlier and at lower levels without relying entirely on system testing or higher-level component testing.
+                      API testing can be automated using testing frameworks such as JUnit.
+                      TDD is a unique approach to ensure the testability of the component from the beginning and not as an afterthought.
+                  </p>
+                  <p>
+                      Topics: developer testing, automated unit testing, TDD
+                  </p>
+                </span>
+             </td>
+           </tr>
+         </table>
+         <p>
+           Resources:
+         </p>
+         <ul>
+           <li>
+             <span class="highlighted"><a target="_blank" href="testingFaq.html">Questions about unit testing frequently asked by CS2103 students (and answers)</a></span>
+           </li>
+           <li>
+             More resources given at
+             <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level2/blob/master/doc/LearningOutcomes.md" target="_blank">
+               addressbook-level2</a> (see under testing-related learning outcomes).
+           </li>
+         </ul>
+       </div>
+     </div>
     </div>
 </div>
 
+<div class="deadline content-week4">
+  <h3 id="deadline2-content-week4" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline2-week4">
+      <h3>[Sat (<span class="date-marker" week="4" day="6"></span>) 23:59] Phase A Peer Evaluation</h3>
+      <div>
+        The Phase A Peer Evaluation opens on [Tue (<span class="date-marker" week="4" day="2"></span>) 22:00]<br>
+        You will receive an email from TEAMMATES when the session opens.<br>
+        If you did not receive an email, you can still go to <a href="https://teammatesv4.appspot.com" target="_blank">
+        TEAMMATES</a>, login using your Google ID, and submit your peer evaluation, provided that you have joined
+        TEAMMATES previously.<br>
+        Submitting peer evaluations is compulsory. <span class="highlighted">If you routinely miss submitting peer
+        evaluations, you forfeit your participation marks.</span>
+      </div>
+    </div>
+  </div>
+</div>
