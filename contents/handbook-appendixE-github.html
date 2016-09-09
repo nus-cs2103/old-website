@@ -36,7 +36,9 @@
       e.g. <code>Some code adapted from #2431 (I followed the same technique for parsing user command)</code>
     </li>
     <li>
-      Add a comment <code>Ready for review</code> when the PR is ready.
+      If the PR is not ready for review yet, add a comment <code>Work in progress</code>.
+      When the PR is ready, add a comment <code>Ready for review</code> when the PR is ready.<br>
+      If there is no comment, we assume the PR is ready for review.
     </li>
   </ol>
 </div>
@@ -51,7 +53,7 @@
 </ul>
 <ul>
   <li><span class="highlighted">Organization name : <code>CS2103AUG2016-TEAM_ID</code></span>. e.g. 
-    <span class="code">CS2103AUG2016-W09-5C</span></li>
+    <span class="code">CS2103AUG2016-W09-C3</span></li>
   <li>Plan:  Open Source ($0/month) </li>
 </ul>
 <ul>
@@ -67,7 +69,7 @@
 <strong>Repo setup</strong>
 <ul>
   <li>Create a <span class="highlighted">repo called main</span> under your organization
-    e.g. <code>CS2103AUG2016-W09-5C/main</code><br/>
+    e.g. <code>CS2103AUG2016-W09-C3/main</code><br/>
     <img src="../images/repo setup.png" width="600"/>
   </li>
 </ul>
@@ -146,33 +148,7 @@
   <li>Use milestones to indicate which issues are to be handled for which milestone.</li>
 </ul>
 
-<p><strong>[Optional] A safer workflow using forks and pull requests</strong></p>
-<p>The workflow below will reduce the risk of someone breaking the product. It is a bit complicated.
-  Do spend some time using the GitHub repo in a centralized (easier) way
-  before you attempt this. If the centralized workflow is good enough for you, there is no need to use
-  this one.</p>
-<p>In this example, Adam is the integrator and only he can push to the main repo. Other team members
-  create their own '<a href="https://help.github.com/articles/fork-a-repo/" target="_blank">fork</a>' 
-  on GitHub and push their code to their own fork.</p>
-<p><img src="../images/github.png" width="300"/></p>
-<p>Scenario 1. The integrator adds some new code:</p>
-<ul>
-  <li>1.1: Adam adds some new code, ensures it works, pushes it to the main repo, and informs others.</li>
-  <li>1.2: Others pull from the main repo to get that new piece of code.</li>
-</ul>
-<p>Scenario 2. Another member adds some new code:</p>
-<ul>
-  <li>2.1: Ravi implements a new feature in his local repo.</li>
-  <li>2.2: Ravi pulls the latest code from the main repo, merges it with his code, tests his new code
-    to ensure it works with the latest version of the product, and pushes his
-    code to his own fork. He then creates a <a href="https://help.github.com/articles/using-pull-requests/" target="_blank">pull
-    request</a> to inform Adam that the new code is ready.
-  </li>
-  <li>2.3: Adam pulls from Ravi's fork, merges with existing code, and run the unit tests.<br/>
-    (a) If the tests fail, or if the new code is not up to the standard, he reverts back to the
-    previous version, effectively rejecting Ravi's code. He adds a comment in the
-    pull request to say the code has been rejected.<br/>
-    (b) If Ravi's code is working and of acceptable quality, he pushes it to the main repo and closes
-    the pull request.  
-  </li>
-</ul>
+<p><strong>Workflow</strong></p>
+You may use any of the workflows described
+<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/" target="_blank">here</a>.
+We recommend starting with the Centralized Workflow and moving to more complex ones only if necessary.
