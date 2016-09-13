@@ -124,110 +124,146 @@
   </div>
 </div>
 
-<!--
+
 <div class="lecture content-week6">
   <h3 id="lecture-content-week6" class="buttoned">
-    <span>Lecture 6: Still doing detailed design, while getting more out of OO</span>
+    <span>Lecture 6: Design Quality, Product Design</span>
   </h3>
   <div>
 
-      <div class="lecture lecture-week6">
-      <h3>[20 minutes] Part 2 - How to Avoid a Big Bang: Integrating Software Components</h3>
+    <div class="lecture lecture-week6">
+      <h3>Pre-lecture activity</h3>
+      <div>
+        Give this problem a try (at least some thoughts) before coming to the lecture. We are going to do it as an exercise during the lecture (30 minutes).
+        <br>
+        <br>
+        Imagine you are building an online system called <b>TeamFormer</b>. TeamFormer is a system for helping CS2103 students during team forming period. It lets students record who is in which team.
+        Students can use the system to find teams short of members and students looking for teams, easing the team forming process.
+        Note that the system is not meant as a platform for students to communicate with each other to find team members.
+        Students are supposed to talk to each other and form teams outside the system, as they do now.
+        TeamFormer simply helps students to see the team forming status of the class (e.g., who has teams and who don’t) and record their own team after forming a team.
+        It is also meant to ease the team-forming-related workload of instructors.
+        <br>
+        <br>
+        What should be the following elements of TeamFormer requirements?
+        <ul>
+          <li>
+            Vision: {A short statement describing the product’s objective/direction}
+          </li>
+          <li>
+            User types/roles: Students, Instructors, {any other user types?}
+          </li>
+          <li>
+            High-level workflow: {In the process of team forming, who will do what first, and what will happen next, and so on? Where does TeamFormer fits into this workflow?}
+          </li>
+          <li>
+            Scope: {What will TeamFormer do, and more importantly, what team-forming-related things it will NOT do?}
+          </li>
+        </ul>
+        Specify important requirements of TeamFormer as a list of User Stories.
+        <br>
+        Write one use case (i.e., textual form) for one of the user stories that you think will result in the most complex user interaction.
+        <br>
+        Sketch a UI for TeamFormer.
+      </div>
+    </div>
+
+    <div class="lecture lecture-week6">
+      <h3>Part 1 - To Tighten or Loosen: What Makes a Good Design [25 minutes]</h3>
       <div>
         <table class="padded-borderless lecture-content-table">
           <tr>
             <td>
-              <img src="https://lh3.googleusercontent.com/CIW9tXo46MlDWEls84UUl0g6z9N-4w2hypNmev8gtrlMk7I0CWPV6nI2eWn8fh4SMUmTI83EeTnPPJMKUatjxVCAewPKKIizISm6Za9SdWNbcmo93zGc8813bMacO-O8ItzmP7Q" 
-              style="width: 249.50px; height: 157.53px;">
+              <img src="../images/coupling.png">
             </td>
             <td>
               <p>
-                <a target="_blank" 
-                href="../files/slides/L6P2.%20How%20to%20Avoid%20a%20Big%20Bang%20-%20Integrating%20Software%20Components.pptx">
-                Slides</a>
+                <!-- [Handout] -->
+                [<a href="../files/handouts/%5bL6P1%5d%20To%20Tighten%20or%20Loosen%20-%20What%20Makes%20a%20Good%20Design.pdf" target="_blank">Handout</a>]
+                [Slides]
+                <!-- <a href="../files/slides/L7P1. To Tighten or Loosen - What Makes a Good Component.pptx" target="_blank">Slides</a> -->
               </p>
               <span class="dim">
               <p>
-                <strong>Overview:</strong>
-                Your integration approach play an important role in how you implement components. 
-                When integrating work done by multiple developers, revision control software can be a big help.
+                <strong>Overview:</strong> Components should have high cohesion and low coupling.
               </p>
               <p>
-                <strong>Topics:</strong> 
-                Integration,  Revision control (team),  Build automation
+                <strong>Topics:</strong> Coupling, Cohesion, Open-Closed Principle (OCP), Dependency Inversion Principle (DIP)
               </p>
               </span>
             </td>
           </tr>
         </table>
+      </div>
+    </div>
+
+    <div class="lecture lecture-week6">
+      <h3>[35 minutes] Part 2 - From the magician's hat: designing the product</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/10 observations.png" style="width: 200px0">
+            </td>
+            <td>
+              <p>
+                <!-- [Handout] -->
+                [<a href="../files/handouts/%5bL6P2%5d%20From%20the%20Magician%92s%20Hat%20-%20Designing%20the%20Product.pdf" target="_blank">Handout</a>]
+                [Slides]
+                <!-- <a target="_blank"
+                    href="../files/slides/L3P2.%20From%20the%20magician%92s%20hat%20-%20designing%20the%20product.pptx">Slides</a> -->
+              </p>
+              <span class="dim">
         <p>
-          Resources:
+            <strong>Overview:</strong> It is important to consider the proposed product
+            from the users' point of view and provide good solutions to users' problems
+            rather than slap together a slew of features that you as developers find
+            interesting. UI prototypes are especially useful in visualizing the product
+            early and improving the user experience.
+        </p>
+        <p>
+            <strong>Topics:</strong> product design
+        </p>
+        </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Interesting side reading:
         </p>
         <ul>
           <li>
-            [Web article] 
-            <a target="_blank" 
-            href="http://www.buzzle.com/articles/integration-testing-vs-system-testing.html">
-            Integration testing vs system testing</a>
+            [Web article]
+            <a target="_blank" href="http://radar.oreilly.com/2015/06/the-11-deadly-sins-of-product-development.html">
+              The 11 deadly sins of product development</a>
           </li>
           <li>
-            Learning how to use Git remote repos: This can be a bit overwhelming if you are totally new to RCS. 
-            We recommend you learn incrementally, coming back to these learning resources as you use Git. 
-            Feel free to request for help in IVLE forums.
-            <br>
-            <ul>
-              <li>
-                If you are new to using Git in a team, re-watch the 2nd half of this 
-                <a target="_blank" href="https://www.youtube.com/watch?v=v40b3ExbM0c">
-                Git overview video</a>.
-              </li>
-              <li>
-                <a target="_blank" 
-                href="https://www.youtube.com/watch?v=U8GBXvdmHT4&feature=youtu.be&t=21m40s">
-                A webinar from GitHub folks</a> 
-                on using GitHub for code sharing (note that forking and pull requests are optional to use in this module)
-              </li>
-              <li>
-                <a target="_blank" href="https://www.atlassian.com/git/tutorials/syncing/">
-                Tutorial on Git remote repositories</a> 
-                - from Atlassian
-              </li>
-              <li>
-                Relevant pages from the Git Pro eBook: 
-                <a target="_blank" 
-                href="http://git-scm.com/book/en/Git-Basics-Working-with-Remotes">
-                remotes: fetch, pull, push</a>
-                , 
-                <a target="_blank" 
-                href="http://git-scm.com/book/en/Git-Branching-What-a-Branch-Is">
-                branches</a>
-                , 
-                <a target="_blank" 
-                href="http://git-scm.com/book/en/Git-Basics-Tagging">
-                tagging</a>
-              </li>
-            </ul>
+            [Web article] <a target="_blank" href="http://asktog.com/atc/principles-of-interaction-design/">
+            First Principles of Interaction Design</a> - This it totally out of
+            scope of this module, but a good read for folks who are deeply interested
+            in designing good products and can’t wait till you read relevant modules later.
           </li>
           <li>
-            [Humor 
-            <img src="https://lh3.googleusercontent.com/4h0URumHA0XPrlcVReuodEQgJngubOO5nsDlD8XwmHM12Pt0NGN1cvCtOtCjQSmSmAd0sLVE8CXol1C4kI0j8S2sQavo3TVz3XU_4ig3AueOiM3TOeB_DjpWxQPHXco8yp2U9kQ" 
-            style="width: 39.50px; height: 39.53px;">] 
-            <a target="_blank" href="https://www.youtube.com/watch?v=CDeG4S-mJts&gl=SG&hl=en-GB">
-            Hitler users Git</a> (warning: strong language), 
-            <a target="_blank" href="https://twitter.com/nakshayn/status/471887998603100160">
-            When I see a door with a 'push' sign...</a>
+            [Web article] <a target="_blank" href="http://sachagreif.com/flat-pixels/">
+            skeuomorphism vs flat design</a> - For those who are interested in GUI design.
+            Out of scope of this module.
+          </li>
+          <li>
+            [Web article]
+            <a target="_blank" href="http://venturebeat.com/2014/11/02/founder-stories-people-dont-want-drills/">
+              People don’t want drills, they want holes</a>
           </li>
         </ul>
       </div>
-      </div>
-      <div class="lecture lecture-week6">
+    </div>
+    <div class="lecture lecture-week6">
       <h3>[15 minutes] Recap</h3>
       <div>
-         <a target="_blank" href="../files/slides/L6Recap.pptx">Slides</a>
+         [Slides]
+         <!-- <a target="_blank" href="../files/slides/L6Recap.pptx">Slides</a> -->
       </div>
     </div>
     
   </div>
 </div>
 
--->
