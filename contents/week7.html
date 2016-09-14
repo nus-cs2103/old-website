@@ -38,61 +38,63 @@
     <div class="activity activity-week7">
       <h3>T6A2. Work in a 2KLoC code base, as a team<img src="../images/2stars.png"/></h3>
       <div>
+        <p>Complete the exercise in
+          <a href="https://github.com/nus-cs2103-AY1617S1/rcs#follow-the-feature-branch-workflow-lo-featurebranchworkflow"
+                target="_blank"> Revision Control Software: Follow the Feature Branch Workflow [LO-FeatureBranchWorkflow]</a>
+          but do note the following:</p>
         <ul>
-          <li>[One team member]
+          <li>[Step 1]
             <ul>
-              <li>Create a GitHub org for your Phase B team. Organization name: <code>CS2103AUG2016-PHASE_B_TEAM_ID</code></span>.
-                e.g. <span class="code">CS2103AUG2016-W09-B3</span>
+              <li>Organization name to use: <code>CS2103AUG2016-PHASE_B_TEAM_ID</code></span>.
+                e.g. <code>CS2103AUG2016-W09-B3</code>
               </li>
-              <li>Fork <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3" target="_blank">Address Book
-                Level 3</a> to your new organization.
+              <li>Repo to fork to your new organization:
+                <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3" target="_blank">Address Book
+                Level 3</a>.
               </li>
               <li>
-                Add your Phase B team members as collaborators.
+                Collaborators to add: your Phase B team members.
               </li>
             </ul>
-          <li>[Each team member] Do the exercise in <a
-              href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#work-in-a-2kloc-code-base-lo-2kloc"
-              target="_blank">
-            AddressBook-Level3: Work in a 2KLoC code base [LO-2KLoC]</a>, but take note of the following.
+          <li>[Step 2]
             <ul>
-              <li>Discuss with team members and decide which enhancement each of you will implement (to avoid duplicating the same feature).</li>
-              <li>Name your branch with some keywords related to the enhancement e.g. <code>add-edit-command</code> instead of following the usual branch naming convention for tutorial activities.
-              </li>
+              <li>You can either clone the team repo (created above) to your computer or add the team repo as a 'remote'
+                to your existing addressbook-level3 clone (because both repos have the same ancestor).</li>
+              <li>Feature to add: Do the exercise in
+                <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#work-in-a-2kloc-code-base-lo-2kloc"
+                   target="_blank"> AddressBook-Level3: Work in a 2KLoC code base [LO-2KLoC]</a>,
+                but take note of the following.</li>
+              <ul>
+                <li>Discuss with team members and decide which feature each of you will implement (to avoid
+                  duplicating the same feature).
+                </li>
+                <li>Name your branch with some keywords related to the enhancement e.g. <code>add-edit-command</code>
+                  instead of following the usual branch naming convention for tutorial activities.
+                </li>
+              </ul>
             </ul>
-          </li>
-          <li>
-            Integrate your enhancements to the repo on your team fork by following the .
           </li>
         </ul>
-        <p>Complete the exercises for the learning outcomes: <br>
-
-
-          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#utilize-use-cases-lo-usecases" target="_blank">
-            AddressBook-Level3: Utilize Use Cases [LO-UseCases]</a><br>
-          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#use-non-functional-requirements-lo-nfr" target="_blank">
-            AddressBook-Level3: Use Non Functional Requirements [LO-NFR]</a><br>
-        </p>
         <p>
-          Submission:
-          Create a PR with your code
-          [<span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week7-pr-steps', 'tutorial-pr-instructions');">
-                        <span class="embedded-link">Instructions</span></span>]
-        <div id="embedded-week7-pr-steps"></div>
+          Submission: Create a PR from the <code>master</code> branch your team repo to
+          <code>nus-cs2103-AY1617S1/addressbook-level3</code>. PR name is similar to previous tutorial activities, but omit the student name.
+          e.g. <code>[T6A2][T11-B3]</code>
         </p>
       </div>
     </div>
     <div class="activity activity-week7">
-      <h3>T6A1. Document Project Requirements <img src="../images/star.png"/></h3>
+      <h3>T6A3. DIP, DI, OCP, C&C <img src="../images/2stars.png"/></h3>
       <div>
-        <p>Complete the exercises for the learning outcomes: <br>
+        <p>Complete *some* of the exercises given in: <br>
 
-          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#utilize-user-stories-lo-userstories" target="_blank">
-            AddressBook-Level3: Utilize User Stories [LO-UserStories]</a><br>
-          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#utilize-use-cases-lo-usecases" target="_blank">
-            AddressBook-Level3: Utilize Use Cases [LO-UseCases]</a><br>
-          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#use-non-functional-requirements-lo-nfr" target="_blank">
-            AddressBook-Level3: Use Non Functional Requirements [LO-NFR]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-dependency-inversion-principle-lo-dip" target="_blank">
+            AddressBook-Level3: Apply Dependency Inversion Principle [LO-DIP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#use-dependency-injection-lo-di" target="_blank">
+            AddressBook-Level3: Use Dependency Injection [LO-DI]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-open-closed-principle-lo-ocp" target="_blank">
+            AddressBook-Level3: Apply Open-Closed Principle [LO-OCP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#analyze-coupling-and-cohesion-of-designs-lo-couplingcohesion" target="_blank">
+            AddressBook-Level3: Analyze Coupling and Cohesion of designs [LO-CouplingCohesion]</a><br>
         </p>
         <p>
           Submission:
