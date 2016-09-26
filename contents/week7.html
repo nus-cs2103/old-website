@@ -1,26 +1,25 @@
-<div class="deadline content-week7">
-  <h3 id="deadline1-content-week7" class="buttoned"><span>Deadlines </span></h3>
-  <div>
-    <div class="deadline deadline1-week7">
-      <h3>[Sat (<span class="date-marker" week="7" day="6"></span>) 23.59] XP claims</h3>
-      <div>
-      Submit the relevant session on TEAMMATES to top up your participation points
-      using <span onclick="getContentUsingAjax('handbook-participationPoints', '#embedded-week7-xp');">
-              <span class="embedded-link">XP</span>
-            </span>
-            <div id="embedded-week7-xp"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="things-to-do content-week7">
   <h3 id="things-to-do-content-week7" class="buttoned"><span>Things to do</span></h3>
   <div>
     <div class="things-to-do things-to-do-week7">
-      <h3>Handbook sections to read</h3>
+      <h3>Read up more about project requirements</h3>
       <div>
-        N/A
+        Refresh your memory about project requirements:
+        <span onclick="getContentUsingAjax('handbook-project-product', '#embedded-week7-project');"><span
+            class="embedded-link">The Product</span></span> |
+        <span onclick="getContentUsingAjax('handbook-project-scope', '#embedded-week7-project');"><span
+            class="embedded-link">Project Scope</span></span> |
+        <span onclick="getContentUsingAjax('handbook-project-constraints', '#embedded-week7-project');"><span
+            class="embedded-link">Project Constraints</span></span> |
+        <span onclick="getContentUsingAjax('handbook-project-deliverables', '#embedded-week7-project');"><span
+            class="embedded-link">Deliverables</span></span>|
+        <span onclick="getContentUsingAjax('handbook-project-v00', '#embedded-week7-project');"><span
+            class="embedded-link">V0.0</span></span>
+        <div id="embedded-week7-project"></div>
+
+        <p>Project requirements was also covered during lecture 1. If you missed that lecture, please view the
+          webcast.</p>
+
       </div>
     </div>
   </div>
@@ -30,104 +29,100 @@
   <h3 id="activity-content-week7" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="activity activity-week7">
-      <h3>[team, 3pts] Move project past the 'Walking skeleton' stage</h3>
+      <h3>T6A1. Work in a 2KLoC code base, as a team<img src="../images/2stars.png"/></h3>
       <div>
-        <table class="padded-borderless">
-          <tr>
-            <td style="text-align: left;">
-              Move the code at least to the ‘walking skeleton’ stage. That is, we expect to see ‘some’ code
-              for your project. However, it may only do something as trivial as accept a command, store it in
-              the storage file, and display a dummy response. The important thing is it
-              <span class="highlighted">compiles, runs, and contains all the major components</span> of the
-              product even if the components are skeletal. It is preferred that all major components take part
-              in the minimal functionality the walking skeleton has.  It is also OK if the whole skeleton was
-              written by one person.
-            </td>
-            <td>
-              <img src="../images/waling skeleton.png" style="width: 249.50px; height: 157.53px;">
-            </td>
-          </tr>
-        </table>
-        <p>
-          Java teams: If this is your first software project, we recommend that <span class="highlighted">you use the
-          <a target="_blank" href="https://github.com/collate/collate">collate tool</a> code as the
-          starting point of your project</span> because it is quite similar to your project (but simpler).
-          You may also take code from the
-          <a target="_blank" href="https://github.com/HubTurbo/HubTurbo">HubTurbo</a>H project, but is more
-          complicated than your project.
-        </p>
-      </div>
-    </div>
-    <div class="activity activity-week7">
-      <h3>[individual, 2pts] Do an OOP design for your component</h3>
-      <div>
-        <p>
-          In a previous tutorial, you designed the architecture for your product. As we are following a
-          top-down approach, the next step is to design each of the components in the architecture. In other
-          words, now that we know what the ‘big boxes’ in your design are, we need to figure out what are
-          inside those big boxes.
-        </p>
-        <p>
-          Design (or refine previous design) of your own component using OO. This design need not match the
-          current code. The code can be refactored to match the design later. If you haven’t done it already,
-          define the detailed API for main components. Things to note:
-        </p>
+        <p>To be done <span class="highlighted">with your Phase C team members</span>.
+        <p>Set up a GitHub organization for your Phase C, as described
+          <a href="http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/handbook.html#handbook-appendixE-github"
+             target="_blank">here</a>. No need to set up a repo for the project yet. Setting up the org is enough.</p>
+        <p>Complete the exercise in
+          <a href="https://github.com/nus-cs2103-AY1617S1/rcs#follow-the-feature-branch-workflow-lo-featurebranchworkflow"
+             target="_blank"> Revision Control Software: Follow the Feature Branch Workflow [LO-FeatureBranchWorkflow]</a>
+          but do note the following:</p>
         <ul>
-          <li>
-            The design of each component should be a separate diagram. <span class="highlighted">Do not draw a
-            single diagram with all the classes of the entire product in it.</span><br>
-            <span class="dimmed">Rationale: We are training you to build big systems where one diagram cannot
-            contain all details of the entire design. You need to learn how to design one component at a time.
-            </span>
-          </li>
-          <li>
-            The design of a component is <span class="highlighted">a class diagram</span> that show the
-            structure of the component. It can be supplemented using object diagrams (to show object
-            structures at various points at run time) and sequence diagrams (to show how objects interact
-            within the component). Do not use other non-standard diagrams/notations.
+          <li>[Step 1]
+            <ul>
+              <li>Use the GitHub organization your created above.
+              </li>
+              <li>Repo to be forked to your new organization:
+                <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3" target="_blank">Address Book
+                  Level 3</a>.
+              </li>
+            </ul>
+          <li>[Step 2]
+            <ul>
+              <li>You can either clone the forked repo (i.e. <code>/yourorg/addressbook-level3</code>) to your computer or
+                add that repo as a 'remote' to your existing addressbook-level3 clone on your computer.
+                (a local repo can have multiple remote repos as long as they share a common revision history).</li>
+              <li>Feature to add: Do the exercise in
+                <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#work-in-a-2kloc-code-base-lo-2kloc"
+                   target="_blank"> AddressBook-Level3: Work in a 2KLoC code base [LO-2KLoC]</a>,
+                but take note of the following.</li>
+              <ul>
+                <li>Discuss with team members and decide which feature each of you will implement (to avoid
+                  duplicating the same feature).
+                </li>
+                <li>Name your branch as <code>some-keywords-related-to-the-enhancement</code> e.g. <code>add-edit-command</code>
+                  instead of following the usual branch naming convention for tutorial activities.
+                </li>
+              </ul>
+            </ul>
           </li>
         </ul>
         <p>
-          Here’s a pictorial view of how component designs should look like:
-        </p>
-        <img src="../images/component designs.png" style="width: 525.00px; height: 328.00px;">
-        <p>
-          When coming to the tutorial, bring the class diagram (and object diagrams and sequence diagrams, if
-          any) for your component design. Hand-drawn rough sketches are acceptable.
-          If you component has only one class, bring the precise API definition of that component.
-          If you are in charge of a UI component and it has only one class, bring the definition of APIs the
-          UI is supposed to call.
+          Submission: This is a team submission. Create a PR from the <code>master</code> branch your team repo to
+          <code>nus-cs2103-AY1617S1/addressbook-level3</code>. PR name is similar to previous tutorial activities,
+          but omit the student name. e.g. <code>[T6A2][T11-B3]</code>
         </p>
       </div>
     </div>
     <div class="activity activity-week7">
-      <h3>[individual, 1pts] Practice with the remote repo</h3>
+      <h3>T6A2. Get started on the project requirements and design <img src="../images/star.png"/></h3>
       <div>
-        Start using GitHub repo. Each member should push code to the team repo at least once. Don’t worry
-        about messing up the repo. This is just for practice. You can reset/overwrite the repo if it gets
-        messed up.
+        <p>To be done <span class="highlighted">with your Phase C team members</span>.
+        </p>
+        Start drafting <span onclick="getContentUsingAjax('handbook-project-v00', '#embedded-week7-t6a2');"><span
+              class="embedded-link">V0.0 Deliverables</span></span>
+        <div id="embedded-week7-t6a2"></div>
+
+        <p><strong>Suggested sequence</strong> : document product survey --> document user stories --> prioritize use stories -->
+          select user stories to include in your product --> design the product --> write the user guide <br>
+          Fill up Glossary and NFRs in parallel to the above.
+        </p>
+        <p>You may use a simple collaboration medium such as Google Docs for the above. You can transfer the content to
+          your GitHub repo in week 8 after the content has become somewhat stable. Given that you will be converting the
+          document to Markdown later, minimize effort spent on formatting.</p>
+        <p>
+          Submission: Proper submission will be in Week 8 (after converting to markdown and pushing to the repo).
+          In tutorial 7, just show your intermediate drafts to the tutor.
+        </p>
       </div>
     </div>
     <div class="activity activity-week7">
-      <h3>[individual] Update issue tracker with all the project tasks you have done so far</h3>
+      <h3>T6A3. DIP, DI, OCP, C&C <img src="../images/2stars.png"/></h3>
       <div>
-        <p>
-          This is for you to practice defining tasks and recording them for better visibility. Also enter
-          tasks that you plan to do in the next week. This plan can be revised during the tutorial. Remember
-          to ‘close’ completed issues and milestones.
+        <p>Complete *some* of the exercises given in: <br>
+
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-dependency-inversion-principle-lo-dip" target="_blank">
+            AddressBook-Level3: Apply Dependency Inversion Principle [LO-DIP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#use-dependency-injection-lo-di" target="_blank">
+            AddressBook-Level3: Use Dependency Injection [LO-DI]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-open-closed-principle-lo-ocp" target="_blank">
+            AddressBook-Level3: Apply Open-Closed Principle [LO-OCP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level3/blob/master/doc/LearningOutcomes.md#analyze-coupling-and-cohesion-of-designs-lo-couplingcohesion" target="_blank">
+            AddressBook-Level3: Analyze Coupling and Cohesion of designs [LO-CouplingCohesion]</a><br>
         </p>
         <p>
-          If you have many ‘ongoing’ issues but no ‘completed’ issues for the past week, that means your
-          issues are too big. Break them into smaller parts. Reminder: read 
-          <span onclick="getContentUsingAjax('handbook-appendixE', '#embedded-week7-handbookE');">
-          <span class="embedded-link">Appendix E of the handbook</span></span> which gives guidelines for using issue tracker to track project work.
-            <div id="embedded-week7-handbookE"></div>
+          Submission:
+          Create a PR with your code (similar to past weeks) but <span class="highlighted">use your Phase C team ID</span>
+          [<span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week7-pr-steps', 'tutorial-pr-instructions');"><span class="embedded-link">Instructions</span></span>]
+        <div id="embedded-week7-pr-steps"></div>
         </p>
       </div>
     </div>
   </div>
 </div>
-
+<!--
 <div class="tutorial content-week7">
   <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: Applying OO, starting team RCS</span></h3>
   <div>
@@ -187,74 +182,10 @@
 </div>
 
 
-
-
-<div class="ilo content-week7">
-  <h3 id="ilo-content-week7" class="buttoned"><span>Intended Learning Outcomes</span></h3>
-  <div>
-    <div class="ilo ilo-week7">
-      <h3>Can apply OOP basics to design a component.</h3>
-      <div>
-      i.e. the ability to decompose a component in terms of classes.
-      </div>
-    </div>
-    <div class="ilo ilo-week7">
-      <h3>Can apply Inheritance and polymorphism in a component design.</h3>
-      <div>
-      as per title
-      </div>
-    </div>
-    <div class="ilo ilo-week7">
-      <h3>Can use class diagrams and object diagrams to describe the structure of an OOP design.</h3>
-      <div>
-      as per title
-      </div>
-    </div>
-    <div class="ilo ilo-week7">
-      <h3>Can use sequence diagrams to explain the interactions in a OOP design.</h3>
-      <div>
-      as per title
-      </div>
-    </div>
-    <div class="ilo ilo-week7">
-      <h3>Can use RCS as a team, can follow a simple integration workflow.</h3>
-      <div>
-      (e.g. Can use the following using Git: clone, push, fetch, pull, branch, merge)
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div class="lecture content-week7">
   <h3 id="lecture-content-week7" class="buttoned"><span>Lecture 7: Improving component quality.</span></h3>
   <div>
-    <div class="lecture lecture-week7">
-      <h3>Part 1 - To Tighten or Loosen: What Makes a Good Component [15 minutes]</h3>
-      <div>
-        <table class="padded-borderless lecture-content-table">
-          <tr>
-            <td>
-              <img src="../images/coupling.png">
-            </td>
-            <td>
-              <p>
-                 <!-- Slides <span class="dim">{link coming soon}</span> -->
-               <a href="../files/slides/L7P1. To Tighten or Loosen - What Makes a Good Component.pptx" target="_blank">Slides</a>
-              </p>
-              <span class="dim">
-              <p>
-                <strong>Overview:</strong> Components should have high cohesion and low coupling.
-              </p>
-              <p>
-                <strong>Topics:</strong> coupling and cohesion
-              </p>
-              </span>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
+
     <div class="lecture lecture-week7">
       <h3>Part 2 - The M in RTFM: When Code is not Enough [15 minutes]</h3>
       <div>
@@ -265,8 +196,7 @@
             </td>
             <td>
               <p>
-                <!--Slides <span class="dim">{link coming soon}</span>-->
-                <a href="../files/slides/L7P2. The M in RTFM - When Code is not Enough.pptx" target="_blank">Slides</a> 
+                <a href="../files/slides/L7P2. The M in RTFM - When Code is not Enough.pptx" target="_blank">Slides</a>
               </p>
               <span class="dim">
               <p>
@@ -346,7 +276,6 @@
             </td>
             <td>
               <p>
-                <!--Slides <span class="dim">{link coming soon}</span>-->
                 <a href="../files/slides/L7P3. Putting up defenses to protect our code.pptx" target="_blank">Slides</a>
               </p>
               <span class="dim">
@@ -430,9 +359,28 @@
     <div class="lecture lecture-week7">
       <h3>Recap [30 minutes]</h3>
       <div>
-        <!--Slides <span class="dim">{link coming soon}</span>-->
         <a href="../files/slides/L7Recap.pptx" target="_blank">Slides</a>
       </div>
     </div>
   </div>
 </div>
+
+<div class="deadline content-week7">
+  <h3 id="deadline2-content-week7" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline2-week7">
+      <h3>[Sat (<span class="date-marker" week="7" day="6"></span>) 23:59] Phase B Peer Evaluation</h3>
+      <div>
+        The Phase B Peer Evaluation opens on [Tue (<span class="date-marker" week="4" day="2"></span>) 22:00]<br>
+        You will receive an email from TEAMMATES when the session opens.<br>
+        If you did not receive an email, you can still go to <a href="https://teammatesv4.appspot.com" target="_blank">
+        TEAMMATES</a>, login using your Google ID, and submit your peer evaluation, provided that you have joined
+        TEAMMATES previously.<br>
+        Submitting peer evaluations is compulsory. <span class="highlighted">If you routinely miss submitting peer
+        evaluations, you forfeit your participation marks.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+-->
