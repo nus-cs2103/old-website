@@ -122,60 +122,15 @@
     </div>
   </div>
 </div>
-<!--
+
 <div class="tutorial content-week7">
-  <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: Applying OO, starting team RCS</span></h3>
+  <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: Getting started with the project, Feature branch
+    flow, DIP, DI, OCP, C&C</span></h3>
   <div>
     <div class="tutorial tutorial-week7">
-      <h3>[individual, 1pt] Explain component design</h3>
+      <h3>Discuss pre-tutorial learning activities</h3>
       <div>
-        <p>
-          [Please <sapn class="highlighted">refrain from implementation-related work (coding, debugging, integrating, pulling/pushing etc.) 
-          during this tutorial</sapn>. This tutorial time should be spent on design and project planning. You may do 
-          implementation-related things only after you have completed all tutorial activities.
-        </p>
-        <p>
-          Draw your architecture and component designs (one diagram for each component) on the board and 
-          explain them to the team and the tutor. Refine the design if necessary.]
-        </p>
-        <p>
-          We ask you to draw the diagrams again (even though you have brought diagrams drawn at home)
-          <span class="highlighted">to give you more practice in on-the-spot hand drawing of minimalistic
-          diagrams to aid discussion</span>, which is different from drawing detailed diagrams to document
-          the design. When drawing quick diagrams for discussion, <span class="highlighted">avoid adding
-          unnecessary details</span>. For example, you can omit properties and methods in the class
-          diagram, unless it is an API exposed to other components. Refer the digram below for an example.
-        </p>
-        <p>
-          <span class="highlighted">Do not draw a one giant diagram</span> with all the details. Instead, draw
-          separate diagrams for each component, as shown above.
-        </p>
-        <p>
-          When explaining, <span class="highlighted">do not try to explain the program flow using class
-          diagrams</span>. Class diagrams are structure diagrams, not behavior diagrams. If you want to
-          explain program flow, you should use sequence diagrams.
-        </p>
-        <img src="../images/details.png" style="width: 604px;">
-      </div>
-    </div>
-    <div class="tutorial tutorial-week7">
-      <h3>[individual, 2pt] Refine next week’s plan:</h3>
-      <div>
-        <p>
-          Refine in the issue tracker the tasks definition and allocation for the next week. Only those with
-          their plan (past week and next week) in the issue tracker will get points.<br>
-          <span class="highlighted">We expect individual students to maintain their record in the issue
-          tracker</span>, rather than one student maintaining the whole issue tracker. However, it is OK to
-          assign one person to be in charge of the issue tracker.
-        </p>
-        <p>
-          Use HubTurbo to show your work allocation and current milestone plan.<br>
-          Hint: In HubTurbo, you can create one board to show the milestone plan and another board to 
-          show the work allocation.
-        </p>
-        <p>
-          <img src="../images/hubturboBoardsExample.png" width="750">
-        </p>
+        As usual, discuss with tutor/peers pre-tutorial learning activities.<br>
       </div>
     </div>
   </div>
@@ -186,6 +141,7 @@
   <h3 id="lecture-content-week7" class="buttoned"><span>Lecture 7: Improving component quality.</span></h3>
   <div>
 
+    <!--
     <div class="lecture lecture-week7">
       <h3>Part 2 - The M in RTFM: When Code is not Enough [15 minutes]</h3>
       <div>
@@ -265,9 +221,46 @@
           </li>
         </ul>
       </div>
+    </div> -->
+    <div class="lecture lecture-week7">
+      <h3>Part 1 - The View from the Top: Architecture [20 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/archi roadmap.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../files/handouts/%5bL7P1%5d%20The%20View%20from%20the%20Top%20-%20Architecture.pdf" target="_blank">Handout</a>]
+                [Slides]
+              </p>
+              <span class="dim">
+                  <p>
+                      Overview: The architectural design should break the product into a small number of well-specified components that can be developed in parallel.
+                      UML sequence diagrams can be used to figure out the API of those components.
+                  </p>
+                  <p>
+                      Topics: software architecture, components and APIs, modeling component behavior using seq diagrams, different approaches to design
+                  </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
+            <a target="_blank" href="https://www.youtube.com/watch?v=Un80XoRT1ME">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
+          </li>
+
+        </ul>
+      </div>
     </div>
     <div class="lecture lecture-week7">
-      <h3>Part 3 - Putting up defenses to protect our code [40 minutes]</h3>
+      <h3>Part 2 - Putting up defenses to protect our code [30 minutes]</h3>
       <div>
         <table class="padded-borderless lecture-content-table">
           <tr>
@@ -276,7 +269,9 @@
             </td>
             <td>
               <p>
-                <a href="../files/slides/L7P3. Putting up defenses to protect our code.pptx" target="_blank">Slides</a>
+                [<a href="../files/handouts/%5bL7P2%5d%20Putting%20up%20defenses%20to%20protect%20our%20code.pdf" target="_blank">Handout</a>]
+                [Slides]
+                <!-- <a href="../files/slides/L7P3. Putting up defenses to protect our code.pptx" target="_blank">Slides</a> -->
               </p>
               <span class="dim">
               <p>
@@ -284,7 +279,7 @@
                 defensive coding approach can lower the risk of component failure even further.
               </p>
               <p>
-                <strong>Topics:</strong> error handling,  defensive programming
+                <strong>Topics:</strong> assertions, logging,  defensive programming
               </p>
               </span>
             </td>
@@ -295,52 +290,23 @@
         </p>
         <ul>
           <li>
-            Assertions: At least a few assertions are expected by V0.3.
+            Assertions:
             <ul>
               <li>
-                Java: <a target="_blank"
+                <a target="_blank"
                 href="http://docs.oracle.com/javase/6/docs/technotes/guides/language/assert.html">Programming
                 With Assertions</a> (a guide from Oracle).
               </li>
-              <li>
-                C++: <a target="_blank"
-                href="https://msdn.microsoft.com/en-us/library/9sb57dw4(v=vs.110).aspx">assert</a> (from MSDN).
-              </li>
             </ul>
           </li>
           <li>
-            Exceptions: You are required to use exceptions properly by V0.3.
-            <ul>
-              <li>
-                Java: <a target="_blank"
-                href="http://docs.oracle.com/javase/tutorial/essential/exceptions/index.html">Exceptions</a>
-                (a tutorial from Oracle).
-              </li>
-              <li>
-                C++: <a target="_blank" href="https://msdn.microsoft.com/en-us/library/4t3saedz(v=vs.110).aspx">
-                Exception handling</a> (from MSDN), <a target="_blank" href="https://www.youtube.com/watch?v=01b_TFpcJ28">
-                A four-minute introduction to C++ exceptions</a> (Youtube video) ,
-                <a target="_blank" href="http://www.ozzu.com/cpp-tutorials/tutorial-exceptions-t86515.html">
-                Another tutorial written by a developer</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            Logging: You are required to do *some* logging by V0.3. However, it is enough to use normal file
-            I/O to write to a log file (similar to how you did file I/O in CE1/2). <span class="highlighted">
-            Using a logging frameworks is optional</span>.
+            Logging:
             <ul>
               <li>
                 Java: <a target="_blank" href="http://tutorials.jenkov.com/java-logging/index.html">Logging
                 using java.util.logging</a> (a tutorial by Jakob Jenkov),
                 <a target="_blank" href="http://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html">
                 A more detailed tutorial</a> (from Oracle).
-              </li>
-              <li>
-                C++: While there are a few C++ logging frameworks available (e.g.,
-                <a target="_blank" href="http://boost-log.sourceforge.net/libs/log/doc/html/index.html">
-                Boost-log</a>), they look rather complicated. You may be better off using direct file I/O for
-                writing to a log file.
               </li>
             </ul>
           </li>
@@ -357,14 +323,51 @@
       </div>
     </div>
     <div class="lecture lecture-week7">
+      <h3>Part 3 - How to Avoid a Big Bang: Integrating Software Components [20 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/BigBang.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../files/handouts/%5bL7P3%5d%20How%20to%20Avoid%20a%20Big%20Bang%20-%20Integrating%20Software%20Components.pdf" target="_blank">Handout</a>]
+                [Slides]
+              </p>
+              <span class="dim">
+                  <p>
+                    Overview: Your integration approach play an important role in how you implement components.
+                    When integrating work done by multiple developers, revision control software can be a big help.
+                  </p>
+                  <p>
+                      Topics: Integration, Build automation, Continuous Integration, Dependency Management
+                  </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
+            <a target="_blank" href="https://www.youtube.com/watch?v=Un80XoRT1ME">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week7">
       <h3>Recap [30 minutes]</h3>
       <div>
-        <a href="../files/slides/L7Recap.pptx" target="_blank">Slides</a>
+        [Slides]
       </div>
     </div>
   </div>
 </div>
-
+<!--
 <div class="deadline content-week7">
   <h3 id="deadline2-content-week7" class="buttoned"><span>Deadlines </span></h3>
   <div>
