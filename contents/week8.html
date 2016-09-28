@@ -7,17 +7,11 @@
         <ul>
           <li>
             Project:
-            <span onclick="getContentUsingAjax('handbook-v02Demo', '#embedded-week8-handbook');">
-              <span class="embedded-link">V0.2 Demo and Feedback Session</span>
+            <span onclick="getContentUsingAjax('handbook-project-v00', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.0 Requirements</span>
             </span> |
-            <span onclick="getContentUsingAjax('handbook-v02Manual', '#embedded-week8-handbook');">
-              <span class="embedded-link">V0.2-V0.4 of the Project Manual</span>
-            </span> |
-            <span onclick="getContentUsingAjax('handbook-v02Product', '#embedded-week8-handbook');">
-              <span class="embedded-link">V0.2-V0.4 of the Product</span>
-            </span> |
-            <span onclick="getContentUsingAjax('handbook-v02Grading', '#embedded-week8-handbook');">
-              <span class="embedded-link">V0.2-V0.4 Grading</span>
+            <span onclick="getContentUsingAjax('handbook-project-v01', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.1 Requirements</span>
             </span>
             <div id="embedded-week8-handbook"></div>
           </li>
@@ -31,138 +25,89 @@
   <h3 id="activity-content-week8" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="activity activity-week8">
-      <h3>Reach V0.1 [Team, 10pts]</h3>
+      <h3>T7A1. Set up the sample project<img src="../images/star.png"/></h3>
       <div>
-        Reach V0.1. Refer the handbook to see the minimal requirement for V0.1. The milestone V0.1
-        <span class="highlighted">should be reached *before* the tutorial</span>.
-        No pre-demo code tinkering is allowed during the tutorial.
+        Only one team member:
+        <ol>
+          <li>Ensure the GitHub organization name is as specified in
+            <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week8-github');">
+              <span class="embedded-link">our requirements</span>. <br>
+            Note: GitHub allows renaming orgs/repos.
+          </span>
+            <div id="embedded-week8-github"></div></li>
+          <li>Create an empty repo named <code>main</code> in your team's GitHub organization.
+            This repo is to be used as the repo for your project.</li>
+          <li>Clone <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4" target="_blank">Address Book
+            Level 4 </a> to your Computer.
+          </li>
+          <li>Edit this element <code>&lt;name&gt;addressbook-level4&lt;/name&gt;</code> in the <code>.project</code>
+            file to match the product name of your project. Commit the change.</li>
+          <li>Push to the <cod>main</cod> repo you created above.</li>
+          <li>Ensure your team members have the desired level of access to your team repo</li>
+        </ol>
+        All team members:
+        <ol>
+          <li>Clone to your Computer the <code>main</code> repo your team member created in your team's GitHub org.
+          </li>
+          <li>Set it up as an Eclipse project (follow the instructions carefully).</li>
+          <li>Ensure you can pass all the tests.</li>
+        </ol>
       </div>
     </div>
+
     <div class="activity activity-week8">
-      <h3>Relate Coupling and Cohesion to your component [Individual, 2pts]</h3>
+      <h3>T7A2. Complete V0.0<img src="../images/star.png"/></h3>
       <div>
-        Try to relate coupling and cohesion to the current architecture or the design of your component.
-        Where can you improve those two aspects?
-        Think of an alternative design and try to explain the difference between your design and the
-        alternative design using coupling and cohesion.
-        You will be asked about this during the tutorial.
-        <br>
-        Recommended: Bring two design diagrams to the tutorial -- one representing the current design 
-        of your component and the other representing an alternative design.<br>
-        If you component has only one class, you can try to come up with an alternative that has multiple classes. 
-        The alternative can be worse or better than the current design. The important thing is you can 
-        compare the two in terms of coupling and cohesion. <br>
-        The diagrams should be <span class="highlighted">proper UML diagrams</span>: class diagrams (if you plan to compare 
-        the two in terms of structure) or sequence diagrams (if you plan to compare in terms of behavior).<br>
-        Here is an example (also note how the two class diagrams omit lower level details such as methods):<br>
-        <img src="../images/alternativeDesigns.png" width="500">
+        Work as a team to complete V0.0 that you started last week.
+        Transfer the content to the relevant pages in your main repo.
+        <ul>
+          <li><span class="highlighted">MUST DO</span> : Complete the <code>UserGuide.md</code> page.
+            This page should tell us in detail what is the product you plan to deliver at the end of the semester.
+            We are going to use it to give feedback about your product design over the next week.
+          </li>
+          <li>Update the <code>AboutUs.md</code> page. In particular, indicate which member is in charge of
+          which component (i.e. UI, Logic, Storage, etc.).<br>
+            <span class="dim">Note: Being 'in charge' of a component does not mean you work in that component only.
+            Rather, you are expected to know it well and possibly review/approve
+            changes done to that component by others.</span></li>
+          <li>Update the <code>README.md</code> page to match your project. In particular, add a UI prototype of
+          your intended final product</li>
+          <li>Complete these appendices of the <code>DeveloperGuide.md</code> within the next two weeks.</li>
+        </ul>
       </div>
     </div>
+
     <div class="activity activity-week8">
-      <h3>Update the project plan in the issue tracker [Individual, 2pts]</h3>
+      <h3>T7A3. Reach V0.1<img src="../images/star.png"/></h3>
       <div>
-        Update the issue tracker with all the project tasks you have done so far. Also enter tasks that you plan
-        to do in the next week. This plan can be revised during the tutorial.
-        All issues allocated to V0.1 and prior milestones should be closed. If any are not done yet,
-        reschedule them to future milestones.
-        A person should typically have some closed issues (in V0.1 milestone) and some open issues
-        (in the upcoming milestones) against his/her name at this point. Status of those issues should be
-        updated accordingly.
+        Work as a team to deliver V0.1. Note the following:
+        <ul>
+          <li>Aim to deliver at least add/delete/find support for floating tasks. You should be able to do this
+            by deleting/renaming the given Address Book code, without having to add too much new code.
+          </li>
+          <li>
+            Change code in small steps, run tests after each step, commit each step, and merge often.
+          </li>
+          <li>Following things can be dropped if you find them too much trouble.
+            They are not compulsory to have in the final version.
+            <ul>
+              <li>Automated GUI testing</li>
+              <li>Using Gradle to build the project</li>
+              <li>Using Travis for CI</li>
+              <li>Using regular expressions for parsing: feel free to switch to a simpler technique.</li>
+              <li>Using new Java 8 lambdas and streams : feel free to use normal <code>for</code> loops instead.</li>
+            </ul>
+          </li>
+          <li><strong>If you feel Level 4 code is too daunting</strong> for you to use as the starting point,
+            you may use Level 3 code as your starting point instead.</li>
+        </ul>
       </div>
     </div>
-    <div class="activity activity-week8">
-      <h3>Ask for help if you have fallen behind too far [Individual]</h3>
-      <div>
-        <span class="important">
-          We just passed the halfway point of the module and we have been pushing you to learn things by
-          yourself. However, we don’t want to leave anybody behind either. If you think you have fallen too
-          far behind and feel like you cannot catch up, please let your tutor know, or email the lecturer.
-          We’ll try to help you catch up.
-        </span>
-      </div>
-    </div>
+
   </div>
 </div>
 
-<div class="tutorial content-week8">
-  <h3 id="tutorial-content-week8" class="buttoned">
-    <span>Tutorial 7: V0.1 demo, coupling and cohesion</span>
-  </h3>
-  <div>
-    <div class="tutorial tutorial-week8">
-      <h3> Demo V0.1 [Team]</h3>
-      <div>
-        Do a demo of your V0.1 to your tutor. It is an informal demo to show what you have done so far.
-        This demo can be done by one person. We expect you to take turns in doing the demo. Those who did not
-        do the demo this time are expected to demo in future weeks.
-        This is a live demo (i.e. use the actual product for the demo).
-        <br/>
-        Demo duration ~5min.
-        No need for slides.
-      </div>
-    </div>
-    <div class="tutorial tutorial-week8">
-      <h3> Explain coupling and cohesion in your component [Individual]</h3>
-      <div>
-        Explain coupling and cohesion of the design of your component.
-        <br/>
-        Note: If you don’t have neat (can be hand drawn, but should be neat) diagrams for your architecture
-        and component designs at this stage, it is a sign that you are simply hacking together code and there
-        is no effort to follow a design.
-      </div>
-    </div>
-    <div class="tutorial tutorial-week8">
-      <h3> Ask for help if needed [Team]</h3>
-      <div>
-        Inform your tutor if you there is something you cannot manage on your own and need our help.
-      </div>
-    </div>
-    <div class="tutorial tutorial-week8">
-      <h3> Refine the milestone plan [Team]</h3>
-      <div>
-        Now that you have some idea about the effort it takes to implement some user stories, refine the
-        milestone plan for V0.2-V05. i.e. which story will be delivered when.
-        Use HubTurbo to show the milestone plan to the tutor. 
-        <div class="additional-info">Tip: Create a board called 'Milestone Plan', containing a panel for 
-        each milestone. Show that board to the tutor.
-        </div>
-      </div>
-    </div>
-    <div class="tutorial tutorial-week8">
-      <h3> Refine Task Schedule [Individual]</h3>
-      <div>
-        Each person should refine in the Issue tracker your task schedule for the next week. <br>
-        One member should use HubTurbo to show the latest work allocation to the tutor.
-      </div>
-    </div>
-    <div class="tutorial tutorial-week8">
-      <h3> After the tutorial: Submit week 7 wrap up session [Individual]</h3>
-      <div>
-        From this week onwards, the <em>weekly wrap up session</em> on TEAMMATES contains a compulsory question.
-        Please remember to submit it after the tutorial.
-        <p>
-        <img src="../images/weeklyWrapupQuestion.png" width="750">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="ilo content-week8">
-  <h3 id="ilo-content-week8" class="buttoned"><span>Intended Learning Outcomes</span></h3>
-  <div>
-    <div class="ilo ilo-week8">
-      <h3>Can relate coupling and cohesion to a design.</h3>
-      <div>
-        You should be able to justify some design decisions using the concepts coupling and cohesion.
-        e.g. We chose design 1 over design 2 for the Parser component because in design 1 the Parser does not 
-        execute commands, which makes it more cohesive.
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<!--
 <div class="lecture content-week8">
   <h3 id="lecture-content-week8" class="buttoned"><span>Lecture 8: From program to a product idea</span></h3>
   <div>
@@ -176,7 +121,6 @@
                 </td>
             <td>
               <p>
-              <!--Slides <span class="dim">{link coming soon}</span>-->
               <a href="../files/slides/L8P1. Deja vu - Using patterns to solve recurring problems.pptx" target="_blank">Slides</a>
               </p>
               <span class="dim">
@@ -234,7 +178,6 @@
                 </td>
             <td>
               <p>
-              <!--Slides <span class="dim">{link coming soon}</span>-->
               <a href="../files/slides/L8P2. Gems of wisdom - software development principles.pptx" target="_blank">Slides</a>
               </p>
               <span class="dim">
@@ -280,12 +223,12 @@
     <div class="lecture lecture-week8">
       <h3>Recap [20 minutes]</h3>
       <div>
-        <!--<span class="dim">Slides {link coming soon}</span>-->
         <a href="../files/slides/L8recap.pptx" target="_blank">Slides</a>
       </div>
     </div>
   </div>
-  
+
 </div>
 </div>
+-->
 
