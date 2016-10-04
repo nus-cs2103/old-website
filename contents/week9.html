@@ -1,128 +1,84 @@
-<div class="deadline content-week9">
-  <h3 id="deadline1-content-week9" class="buttoned"><span>Deadlines </span></h3>
-  <div>
-    <div class="deadline deadline1-week9">
-      <h3>[Mon (<span class="date-marker" week="9" day="1"></span>) 23:59] Project manual V0.1 submission</h3>
-        <div>
-          <span class="embedded-link" onclick="pullContent('handbook-v01Manual', '#embedded-week9-v01deadline', 'Handbook: Project manual V0.1 submission');">
-            more info </span>
-            <div id="embedded-week9-v01deadline"></div>
-        </div>
-    </div>
-    <div class="deadline deadline1-week9">
-      <h3>[Tue (<span class="date-marker" week="9" day="2"></span>)-Wed (<span class="date-marker" week="9" day="3"></span>)] Peer evaluation 2</h3>
-        <div>
-          Now that you are done with V0.1, tell your team members what you think of their contribution so far.
-        </div>
-    </div>
-  </div>
-</div>
-
 <div class="things-to-do content-week9">
   <h3 id="things-to-do-content-week9" class="buttoned"><span>Things to do</span></h3>
-    <div>
-      <div class="things-to-do things-to-do-week9">
-        <h3>Resolve Team Issues</h3>
-          <div>
-            <ul>
-              <li>
-                If your team is facing difficulties due to differences in skill/motivation/availability among team 
-                members, read 
-                <span onclick="pullContent('handbook-appendixF', '#embedded-week9-teamwork', 'Handbook: Appendix F (What to do if there are teamwork issues)');">
-                <span class="embedded-link">Handbook: Appendix F (What to do if there are teamwork issues)</span>.
-                </span>
-                <div id="embedded-week9-teamwork"></div>
-              </li>
-              <li>
-                If you find some team members messing up the team repo frequently, you can attempt the 
-                safer (but a bit more complicated) workflow described in the 'A safer workflow using forks and 
-                pull requests' section of the 
-                <span onclick="pullContent('handbook-appendixE', '#embedded-week9-handbook', 'Handbook: Appendix E (Using GitHub Project Hosting)');">
-                <span class="embedded-link">Handbook: Appendix E (Using GitHub Project Hosting).</span>
-                </span>
-                <div id="embedded-week9-handbook"></div>                   
-              </li>
-              <li>
-                 Until now, stronger coders in the team may have written code in all components of the 
-                 product, to get the product up and running. It is fine for strong programmers take such initiative 
-                 in getting the product off the ground. However, as the product gets more stable, try to limit your 
-                 work to your own components only. When you need changes in a component handled by 
-                 another team member, ask that member to do the change. While this may slow down your 
-                 progress a bit, it is an essential part of working in a team. Editing others' code freely might affect 
-                 your team's morale too.
-               </li>
-             </ul>
-           </div>
-       </div>
-       <div class="things-to-do things-to-do-week9">
-         <h3>Take a peek at what's needed for the final exam</h3>
-           <div>
-             <ul>
-               <li>
-                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-exams', '#embedded-week9-exams', 'Handbook: Exams');">
-                 past exam papers</span> and note how the questions are 
-                 related to what you are doing in the project. This should motivate you to work harder in the 
-                 project. If you do the project well, you will do the exam well too. 
-                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-v05Evaluation', '#embedded-week9-exams', 'Handbook: V0.5 grading criteria');">
-                 V0.5 grading criteria</span>. In particular, note how we have 
-                 allocated marks for project management. Those who use the issue tracker well can earn more marks.
-                <div id="embedded-week9-exams"></div> 
-               </li>
-             </ul>
-           </div>
-       </div>
+  <div>
+    <div class="things-to-do things-to-do-week9">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('handbook-project-v02', '#embedded-week9-handbook');">
+              <span class="embedded-link">V0.2 Requirements</span>
+            </span>
+            <div id="embedded-week9-handbook"></div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="activity content-week9">
   <h3 id="activity-content-week9" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
       <div class="activity activity-week9">
-        <h3>Start moving your code toward V0.2 [Team]</h3>
-          <div>
-            It may be a good idea to have an internal V0.15 milestone between V0.1 and V0.2 milestones.
-          </div>
+        <h3>T8A1. Define the milestones <img src="../images/star.png"/></h3>
+        <div>
+          <ul>
+            <li>If you haven't done so yet, create labels and milestones in your team repo as given in our GitHub
+              setup instructions.
+            </li>
+            <li>Record each of the user stories you plan to deliver as an issue in the issue tracker.<br>
+              e.g. <code> Title: As a user I can add a deadline</code><br>
+              <code>Description: ... so that I can keep track of my deadlines</code></li>
+            <li>Assign the <code>type.*</code> and <code>priority.*</code> labels to those issues.</li>
+            <li>Assign the above issues to suitable milestones (in GitHub).</li>
+            <li>Set the deadlines for milestones (in GitHub). Your internal milestones can be set earlier than
+              the deadlines we have set, to give you a buffer.</li>
+          </ul>
+        </div>
       </div>
       <div class="activity activity-week9">
-        <h3>Relate patterns and principles to the project [Individual, 2pts]</h3>
-          <div>
-            Identify patterns and principles (at least one principle and one pattern) related to your part of 
-            the project. You should be able to explain the identified patterns and principles using diagrams 
-            in the project manual V0.1. This is also a good test of whether your project manual V0.1 has 
-            enough diagrams. If it doesn't, make a note to add more diagrams for the next project manual 
-            submission.
-            Optionally, you may discuss your findings with your team and refine further before coming to 
-            the tutorial. It is OK if you haven't actually applied these patterns/principles to the project yet. 
-            You can still describe how you could have applied them or even why you would not apply them 
-            for a particular scenario.
-          </div>
+        <h3>T8A2. Reach V0.2 <img src="../images/star.png"/></h3>
+        <div>
+          As you work towards V0.2, learn from the last week's experience and refine the workflow as necessary.
+        </div>
       </div>
       <div class="activity activity-week9">
-        <h3>Defend your code [Individual, 3 pts]</h3>
+        <h3>T8A3. Complete Developer Guide Appendices <img src="../images/star.png"/></h3>
+        <div>
+          Complete the appendices of the Developer Guide. <br>
+          You are not required to (but welcome to)  update the other parts of the Developer Guide at this point.
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A4. Defend your code  <img src="../images/2stars.png"/></h3>
           <div>
-            Ensure that at least one team member has done each of these and each team member has done at least one of these.
+            This is an individual activity.<br>
+            Try to use these in the code your write for the project.<br>
+            You can refer to the respective learning outcomes in
+            <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md"
+                  target="_blank">AddressBook - Level 4</a> for examples of how these are used already in the
+            AddressBook and for more resources on how to use them.
             <ul>
               <li>
-                assertions
+                Assertions
               </li>
               <li>
-                exceptions
+                Exceptions
               </li>
               <li>
-                logging
+                Logging
+              </li>
+              <li>
+                Defensive coding
               </li>
             </ul>
           </div>
       </div>
-      <div class="activity activity-week9">
-        <h3>Update the issue tracker [Individual, 2pts]</h3>
-          <div>
-            As before.
-          </div>
-      </div>
     </div>
 </div>
-
+<!--
 <div class="tutorial content-week9">
   <h3 id="tutorial-content-week9" class="buttoned"><span>Tutorial 8: Patterns, Principles, Defensive coding</span></h3>
     <div>
