@@ -243,10 +243,6 @@
 [![Unknown](https://travis-ci.org/CS2103AUG2016-T17-C3/main.svg?branch=master)](https://travis-ci.org/CS2103AUG2016-T17-C3/main)
 [![Unknown](https://coveralls.io/repos/github/CS2103AUG2016-T17-C3/main/badge.svg?branch=master)](https://coveralls.io/github/CS2103AUG2016-T17-C3/main?branch=master)
 
-[**T17-C4**](https://github.com/CS2103AUG2016-T17-C4/main/blob/master/docs/AboutUs.md) 
-[![Unknown](https://travis-ci.org/CS2103AUG2016-T17-C4/main.svg?branch=master)](https://travis-ci.org/CS2103AUG2016-T17-C4/main)
-[![Unknown](https://coveralls.io/repos/github/CS2103AUG2016-T17-C4/main/badge.svg?branch=master)](https://coveralls.io/github/CS2103AUG2016-T17-C4/main?branch=master)
-
 -----
 [**F09-C1**](https://github.com/CS2103AUG2016-F09-C1/main/blob/master/docs/AboutUs.md) 
 [![Unknown](https://travis-ci.org/CS2103AUG2016-F09-C1/main.svg?branch=master)](https://travis-ci.org/CS2103AUG2016-F09-C1/main)
