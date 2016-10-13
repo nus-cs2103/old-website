@@ -1,31 +1,18 @@
-<div class="deadline content-week10">
-  <h3 id="deadline1-content-week10" class="buttoned"><span>Deadlines</span></h3>
-  <div>
-    <div class="deadline deadline1-week10">
-      <h3>[Mon (<span class="date-marker" week="10" day="1"></span>) 23:59] CE3 submission</h3>
-      <div>
-        <span class="embedded-link" onclick="pullContent('handbook-ce3', '#embedded-week10-CE3deadline', '[Handbook extract] CE3: TextBuddyPro');">
-            more info </span>
-            <div id="embedded-week10-CE3deadline"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="things-to-do content-week10">
   <h3 id="things-to-do-content-week10" class="buttoned"><span>Things to do</span></h3>
   <div>
     <div class="things-to-do things-to-do-week10">
       <h3>Handbook sections to read</h3>
       <div>
-      <ul>
-        <li>
-        Project: 
-        <span class="embedded-link" onclick="pullContent('handbook-v04Product', '#embedded-week10-v04', 'V0.4 [release candidate] Additional Requirements');">
-            V0.4 [release candidate] Additional Requirements</span>
-        </li>
-      </ul>
-      <div id="embedded-week10-v04"></div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('handbook-project-v03', '#embedded-week10-handbook');">
+              <span class="embedded-link">V0.3 Requirements</span>
+            </span>
+            <div id="embedded-week10-handbook"></div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -35,71 +22,65 @@
   <h3 id="activity-content-week10" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="activity activity-week10">
-      <h3>Reach V0.2 [Team, 5pts]</h3>
+      <h3>T9A1. Set up Travis <img src="../images/3stars.png"/></h3>
       <div>
-        This should be a working version that is better than the previous version in some way. 
-        If required, update the project manual. For these intermediate milestones, the amount 
-        of improvements between versions is not important. What matters is you moved the 
-        product forward and everyone played a role in doing so. If your team is busy with 
-        other modules, you can chose to do less (but you should do some), improvements. 
-        But doing very little up to V0.4 and doing a lot in V0.5 is not acceptable.<br>
-
-        Remember to <span class="highlighted-darktext">
-        <a target="_blank" href="http://git-scm.com/book/en/Git-Basics-Tagging">git tag</a>
-        your V0.1 and V0.2 in the repo.</span><br><br>
-
-        <span class="highlighted-darktext">There should not be any pushing/pulling or tinkering with code 
-        during the tutorial.</span> You are expected to have a stable V0.2 version in the
-         repo before you come in. This V0.2 may or may not be the latest code in the repo.<br>
-        <br>
-          Grading: 
-          <ul>
-            <li>2 points will be given for having a proper release. i.e. tagged as V0.2 in the repo, tagged version loaded into
-              demo computer, and ready to start the demo.</li>
-            <li>3 points will be given based on the progress of the product. Those that are ready to start 
-              <span class="highlighted-darktext"><a target="_blank" href="http://en.wikipedia.org/wiki/Eating_your_own_dog_food">
-              dog fooding</a> </span> will earn an extra bonus point.</li>
-          </ul>
+        <span class="highlighted">You can view the status of all projects and get a rough idea of how each member is
+          contributing from <a href="https://github.com/nus-cs2103/website/blob/master/contents/teams.md" target="_blank">
+            this 'Teams Dashboard' page</a>.</span><br>
+        Congrats to those who have set up Travis already. Although not compulsory, we highly recommend
+        setting up Travis CI for your project. It will help you to detect bugs early and maintain a good test
+        coverage. Refer to the
+        <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#use-continuous-integration-lo-continuousintegration" target="_blank">
+          relevant learning outcome in Address Book Level 4</a> for more info.
       </div>
     </div>
     <div class="activity activity-week10">
-      <h3>Do some systematic unit testing [Individual, 2.5+2.5=5pts]</h3>
+      <h3>T9A2. Reach V0.3 <img src="../images/star.png"/></h3>
       <div>
-        (a) [2.5 pts] Ensure at least some automated tests exist for your part of the code.<br>
-        Note: If you are doing the GUI component, you might find it harder to do unit 
-        testing in there. In that case, you can get some more work assigned to you 
-        (e.g., writing a utility class) from somewhere else for which you can write unit tests. 
-        The important thing is to show us that you can write unit unit tests. Locating a place 
-        to do that is up to you.<br>
-        <br>
-        (b) [2.5 pts] Insert at least some comments in the code to explain the relation between your 
-        test cases and the test case design heuristics covered in the lecture.<br>
-        e.g., /* This is a <strong>boundary case</strong> for the ‘negative value’ <strong>partition</strong> */<br>
-        Note: For some SUTs, it is not easy to identify partitions and boundaries. Try harder. 
-        If still cannot, look elsewhere. The important thing is to show us that you can apply 
-        test case design heuristics in practice. Locating a good example to do that is up to you.<br>
-        During the tutorial you will be asked questions such as the below. Please read the relevant sections of the
-        module handout to beef up your knowledge about test case design heuristics.
+        Similar to V0.2, but follow V0.3 requirements instead.
+        In particular,
         <ul>
-          <li>What is an <em>equivalence partition</em>?</li>
-          <li>How does it help to improve E&E of testing?</li>
-          <li>For a selected test case: What partition does this test input belong to? 
-          What is another input from the same partition?</li>
-          <li>What is a <em>boundary value</em>?</li>
-          <li>and so on...</li>
+          <li>Do a 'release' on GitHub.</li>
+          <li>Update User Guide and Developer Guide. <br>
+            Tips:
+            <ul>
+              <li>Each member is required to do a fair share of documentation. We recommend each student to
+                maintain the developer docs and user docs for the components and features she is in charge of.
+              </li>
+              <li>If you use the <code>docs\diagrams\Diagrams.pptx</code> as the source for diagrams,
+                you may want to split it into one pptx file per diagram to minimize merge conflicts
+              </li>
+            </ul>
+          </li>
         </ul>
+        </p>
       </div>
     </div>
     <div class="activity activity-week10">
-      <h3>Update the issue tracker [Individual, 2pts]</h3>
+      <h3>T9A3. Use test case design heuristics <img src="../images/2stars.png"/></h3>
       <div>
-        Update the issue tracker to reflect what you have done for the past week and what you
-        plan to do in the next week.
+        Refer to the
+        <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#apply-test-case-design-heuristics-lo-testcasedesignheuristics" target="_blank">
+          relevant learning outcome in Address Book Level 4</a> and the relevant lecture handout.
+        Try to apply those heuristics in the test cases you write too. Add extra comments in your code
+        (similar to those in <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/src/test/java/seedu/address/commons/util/StringUtilTest.java" target="_blank">
+        <code>StringUtilTest.java</code></a>) to show how you applied the heuristics.<br>
+        Note: The java file linked above is a more recent version of the code you cloned in week 7.
+      </div>
+    </div>
+    <div class="activity activity-week10">
+      <h3>T9A4. Use EclEmma to measure test coverage <img src="../images/3stars.png"/></h3>
+      <div>
+        Refer to the
+        <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#use-code-coverage-lo-codecoverage" target="_blank">
+          relevant learning outcome in Address Book Level 4</a>.<br>
+        Install EclEmma Eclipse plugin and use it to measure test coverage in your code.
       </div>
     </div>
   </div>
 </div>
 
+<!--
 <div class="tutorial content-week10">
   <h3 id="tutorial-content-week10" class="buttoned"><span>Tutorial 9: Starting systematic testing</span></h3>
   <div>
@@ -322,11 +303,11 @@
     <div class="lecture lecture-week10">
       <h3>Recap [10 minutes] </h3>
       <div>
-        <!--Slides <span class="dim">{link coming soon}</span>-->
-        <a href="../files/slides/L10Recap.pptx" target="_blank">Slides</a> 
+        <a href="../files/slides/L10Recap.pptx" target="_blank">Slides</a>
       </div>
     </div>
     
   </div>
 </div>
+-->
 
