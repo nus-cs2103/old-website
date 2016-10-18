@@ -1,32 +1,80 @@
 <div class="things-to-do content-week11">
-    <h3 id="things-to-do-content-week11" class="buttoned"><span>Things to do</span></h3>
-    <div>
-        <div class="things-to-do things-to-do-week11">
-            <h3>Handbook sections to read</h3>
-            <div>
-                <ul>
-                    <li>
-                        Project:
-                        <span onclick="getContentUsingAjax('handbook-v05Requirements', '#embedded-week11-handbook');">
-                            <span class="embedded-link">V0.5 [production release] Additional Requirements</span>
-                        </span> | 
-                        <span onclick="getContentUsingAjax('handbook-v05Submission', '#embedded-week11-handbook');">
-                            <span class="embedded-link">V0.5 Submission</span>
-                        </span> | 
-                        <span onclick="getContentUsingAjax('handbook-individualReport', '#embedded-week11-handbook');">
-                            <span class="embedded-link">Individual report</span>
-                        </span> | 
-                        <span onclick="getContentUsingAjax('handbook-v05Evaluation', '#embedded-week11-handbook');">
-                            <span class="embedded-link">V0.5 Evaluation</span>
-                        </span>
-                        <div id="embedded-week11-handbook"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <h3 id="things-to-do-content-week11" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week11">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project: <a href="handbook.html#handbook-project-v04" target="_blank">V0.4 Requirements</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
+<div class="activity content-week11">
+  <h3 id="activity-content-week11" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <div class="activity activity-week11">
+      <h3>T10A1. Do a peer code review <img src="../images/2stars.png"/></h3>
+      <div>
+        <ul>
+        <li>For at least one PR created by you, get a team member to do a code review (on GitHub) before merging the PR.
+        </li>
+        <li>Review at least one PR created by a team member.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="activity activity-week11">
+      <h3>T10A2. Reach V0.4 <img src="../images/star.png"/></h3>
+      <div>
+        Similar to V0.3, but follow V0.4 requirements instead.
+        In particular,
+        <ul>
+          <li>Remember to collate code/tests/docs written by you
+            (see <a href="handbook.html#handbook-project-v04" target="_blank">V0.4 Requirements</a> for more info).<br>
+          Your tutor will do a brief review of the collated code to give you some feedback about your code quality.</li>
+          <li>Dogfood your product and find ways to improve it.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="activity activity-week11">
+      <h3>T10A3. Relate Design Patterns to the project <img src="../images/2stars.png"/></h3>
+      <div>
+        Refer to the learning outcome
+        <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#apply-design-patterns-lo-designpatterns" target="_blank">
+          Apply Design Patterns [LO-DesignPatterns]</a> and the relevant lecture handout.
+        Find which design patterns are used in the AddressBook design. Are they still in your design too? <br>
+        Find if those patterns can be applied in other places of your design.
+      </div>
+    </div>
+    <div class="activity activity-week11">
+      <h3>T10A4. Distinguish between unit, integration, and system testing. <img src="../images/2stars.png"/></h3>
+      <div>
+        Refer to the learning outcomes to find examples of unit/integration/system tests in AddressBook<br>
+        <ul>
+          <li>
+            <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#write-integration-tests-lo-integrationtests"
+              target="_blank"> Write Integration Tests [LO-IntegrationTests]</a></li>
+          <li>
+            <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md#perform-system-testing-lo-systemtesting"
+              target="_blank"> Perform System Testing [LO-SystemTesting]</a></li>
+        </ul>
+        Find tests in your projects that are
+        <ul>
+          <li>unit tests</li>
+          <li>integration tests</li>
+          <li>unit+integration tests</li>
+          <li>system tests</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="activity content-week11">
     <h3 id="activity-content-week11" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
@@ -180,35 +228,7 @@
 
 
 <div class="lecture content-week11">
-    <h3 id="lecture-content-week11" class="buttoned"><span>Lecture 11: Reusing existing things, module wrap up</span></h3>
-    <div>
-        <div class="lecture lecture-week11">
-            <h3>Part 1 - Less work, more results - reusing existing artifacts [20 minutes]</h3>
-            <div>
-                <table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/frameworks.png">
-                        </td>
-                        <td>
-                            <p>
-                                Slides <span class="dim">{link coming soon}</span>
-                                <a href="../files/slides/L11P1. Less work, more results - reusing existing artifacts.pptx">Slides</a>
-                            </p>
-                            <span class="dim">
-                            <p>
-                                <strong>Overview:</strong> Often, we reuse platforms, frameworks,
-                                and libraries instead of building everything from scratch.
-                            </p>
-                            <p>
-                                <strong>Topics:</strong> platforms, frameworks and libraries
-                            </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+
         <div class="lecture lecture-week11">
             <h3>Part 2 - Module Recap: Demo, Exam, SE, Module, Uni, ... [80 minutes]</h3>
             <div>
@@ -219,7 +239,7 @@
                         </td>
                         <td>
                             <p>
-                                <!--Slides <span class="dim">{link coming soon}</span>-->
+                                Slides <span class="dim">{link coming soon}</span>
                                 <a href="../files/slides/L11P2. Module wrap up.pptx">Slides</a>
                             </p>
                             <span class="dim">
@@ -298,3 +318,4 @@
     </div>
 </div>
 
+-->
