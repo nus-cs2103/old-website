@@ -14,11 +14,12 @@
 </p>
 <ul>
   <li>
-    Download the <a href="https://github.com/collate/collate" target="_blank">collate tool</a>.
+    Download <code>Collate-TUI.jar</code> from the <a href="https://github.com/collate/collate" target="_blank">Collate
+    Tool project</a>.
   </li>
   <li>
     Mark your code with a <code>//@@author matric-number</code>. Note the double <code>@</code>. The comment syntax
-    may vary based on file type e.g. for html
+    may vary based on file type e.g. for markdown, fxml, html
     <pre class="prettyprint"><code class="lang-html shell"><<!--\-->!-- @@author matric-number --></code></pre>
   </li>
   <p>
@@ -35,7 +36,10 @@ method 4 ...</code></pre>
   <li>
     The <code>//@@author</code> tag should appear only at the beginning of the code a person wrote. The code up to the
     next <code>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written
-    by that author.
+    by that author.<br>
+    However, you may put an empty <code>//@@author   </code> (i.e. no matric number) to indicate the
+    end of the code segment you wrote, if you don't know who wrote the code segment below yours. The author of that
+    code segment can add the matric number to the empty tag later.
   </li>
   <li>
     If a method was written by more than one person, the <code>//@@author</code> tag should indicate the person who
@@ -76,10 +80,44 @@ method 2 ...</code></pre>
 method 1 ...
 method 2 ...</code></pre>
   </ul>
+  <li>
+    You need to put the,
+    <ul>
+      <li>collated functional code in <code>collated/main</code> folder,</li>
+      <li>collated test code in <code>collated/test</code> folder, and</li>
+      <li>collated documentation in <code>collated/docs</code> folder</li>
+    </ul>
+    Given below are DOS sample commands you can put in a batch file and run it to collate the code.
+  <pre class="prettyprint"><code class="shell">
+java -jar Collate-TUI.jar collate from src/main to collated/main include java, fxml, css
+
+java -jar Collate-TUI.jar collate from src/test to collated/test include java
+
+java -jar Collate-TUI.jar collate from docs to collated/docs include md, html</code></pre>
+  The output should be something like the structure given below.
+    <pre class="prettyprint"><code class="shell">
+collated/
+    main/
+      A000000.md
+      A111111.md
+      A222222.md
+      A222222reused.md
+    test/
+      A000000.md
+      A111111.md
+      A222222.md
+    docs/
+      A000000.md
+      A111111.md
+      A222222.md
+    </code></pre>
+  </li>
 </ul>
 
 <p>
-  <strong>Submission</strong>: Push the code to GitHub and tag as <code>V0.4</code>.
+  <strong>Submission</strong>: Push the code
+  (<span class="highlighted">including the <code>collated</code> folder</span> and files created above)
+  to GitHub and tag as <code>V0.4</code>.
 </p>
 <p>
   <strong>Grading</strong>: To pass this checkpoint, your product should satisfy the description given above and the
@@ -88,7 +126,10 @@ method 2 ...</code></pre>
 <h3>V0.4 Documentation</h3>
 <div id="handbook-project-v04-documentation"></div>
 <p>
-  Recommended to update the documentation to match the product, at least w.r.t. major changes since previous version.
+  Recommended to update the documentation to match the product, at least w.r.t. major changes since previous version.<br>
+  <span class="highlighted">Update the AboutUs.md page</span> to reflect
+  <a href="https://github.com/nus-cs2103/website/blob/master/contents/AboutUs.md" target="_blank">this sample</a>.
+  Use the appropriate hyperlinks (as given in the sample) to substantiate your claimed contribution.
 </p>
 <p>
   <strong>Submission</strong>: Must be included in the version tagged <code>V0.4</code>.

@@ -1,4 +1,4 @@
-#### [John Doe](http://www.comp.nus.edu.sg/~damithch) @damithc
+#### [John Doe](http://www.comp.nus.edu.sg/~damithch) [@damithc](https://github.com/damithc)
 <img src="https://github.com/se-edu/addressbook-level4/blob/master/docs/images/DamithRajapakse.jpg" width="150"><br>
 
 * Components in charge of: [Storage](https://github.com/se-edu/addressbook-level4/blob/master/docs/DeveloperGuide.md#storage-component)
@@ -8,8 +8,8 @@
    * [Delete person](https://github.com/se-edu/addressbook-level4/blob/master/docs/UserGuide.md#deleting-a-person--delete)
 * Code written: [[functional code](A123456.md)][[test code](A123456.md)][[docs](A123456.md)]
 * Other major contributions:
-  * Did the initial refactoring from AddressBook to ToDoList [PR [#133](https://github.com/se-edu/addressbook-level4/pull/152) ]
+  * Did the initial refactoring from AddressBook to ToDoList [[#133](https://github.com/se-edu/addressbook-level4/pull/152) ]
   * Set up Travis and Coveralls 
 
-#### Jane Doe
+#### Jane Doe @janedoe
 ...
