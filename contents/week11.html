@@ -82,237 +82,130 @@
   </div>
 </div>
 
-<!--
-<div class="activity content-week11">
-    <h3 id="activity-content-week11" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
-    <div>
-        <div class="activity activity-week11">
-            <h3>Read some design tips</h3>
-            <div>
-                If you haven’t already, Also look at
-                <a target="_blank" href="https://docs.google.com/document/d/1_4r9JmKvXkcqfATgNe3xPvRHnM32QuJOu4DfegUpd7I/pub?embedded=true">
-                CS2103 Project: Points to Ponder</a> for some design tips useful when refining the
-                product design.
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Use other models [Individual, 2pts]</h3>
-            <div>
-                Do one of the following (try to ensure at least one member does each):
-                <ul>
-                    <li>
-                        <strong>Relate</strong> (no need to draw) at least 2 “non-examinable” UML
-                        models to your project. Explain why/where the model is potentially applicable
-                        or why it is not applicable to the project.
-                    </li>
-                    <li>
-                        <strong>Draw</strong> an activity diagram to represent a workflow/algorithm
-                        in your part of the project. If your part of the project does not have any
-                        workflows, you can draw an activity diagram to represent the workflow of a
-                        user using your team’s product.<br>Bring the diagram to the tutorial.
-                    </li>
-                    <li>
-                        <strong>Draw</strong> an OODM for your project. Remember, OODM is about the
-                        problem domain, not about the solution. Classes such as GUI, Manager,
-                        Storage should not appear in the OODM but it can have classes such as Task
-                        and Reminder.<br>It should be about how a person deals with his/her schedules
-                        and tasks. Bring the diagram to the tutorial.
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Do some integration/system testing [Team, 5pts]</h3>
-            <div>
-                Ensure you have *some* automated integration and/or system tests in place.<br>i.e.
-                testing beyond individual unit testing and covering a major part of the system, not
-                just one method/class.<br>e.g. a test that takes the full user command as the input
-                and verify that it is executed properly.
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Contribute to V0.3 [Individual, 2pts]</h3>
-            <div>
-                Commit code for this version.<br>
-                Try to ensure your latest version of the product works before commiting code. i.e. do not commit
-                code that breaks the product.<br>
-                You are encouraged to <span class="highlighted">add tags in the repo to identify intermediate working 
-                versions</span>. e.g. V0.2.1. That way, you can fall back on the latest working version if the 
-                intended V0.3 was not reached by the deadline.
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Reach V0.3, with time to spare [Team, 3+2=5pts]</h3>
-            <div>
-                <strong>[3pts]</strong> V0.3 should be noticeably better than the previous version, 
-                The code <span class="highlighted">should be tagged as V0.3 in the repo.</span><br>
-                <br>
-                <strong>[2pts]</strong> The current version should be ready for 
-                <a target="_blank" href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food">dog fooding</a>.<br>
-                <br>
-                <strong>[+1 bonus point]</strong> Reach V0.3 with at least 12 hours in advance. This is to encourage you to have buffers.
-                i.e. set internal deadlines ahead of external deadlines.
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Be ready to demo, with good demo data [Individual, 2+1=3pts]</h3>
-            <div>
-                <strong>[1pts]</strong> <span class="highlighted">ALL members should have a demo-ready V0.3
-                version</span> in your computer when you come to the tutorial.<br>Any of you should
-                be able to do the demo at a moment’s notice.<br>
-                <br>
-                <strong>[2pt]</strong> Add <span class="highlighted">at least 20 realistic tasks</span> in the
-                demo database covering a wide variety of tasks. Even better if you use the product 
-                to track your own schedule for real.
-            </div>
-        </div>
-        
-        <div class="activity activity-week11">
-            <h3>Project planning [Individual, 2pts]</h3>
-            <div>
-                As before. All V0.3 issues must be closed and each person must have some issued allocated to them 
-                for V0.4.
-            </div>
-        </div>
-        <div class="activity activity-week11">
-            <h3>Revisit marking scheme</h3>
-            <div>
-                This may be a good time to revisit the 
-                <span onclick="getContentUsingAjax('handbook-v05Evaluation', '#embedded-week11-evaluation');">
-                  <span class="embedded-link">V0.5 marking scheme</span> 
-                </span> given in the Handbook while you still have time to tweak things to get more marks.
-                <div id="embedded-week11-evaluation"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="tutorial content-week11">
-    <h3 id="tutorial-content-week11" class="buttoned"><span>Tutorial 10: More models</span></h3>
-    <div>
-        <div class="tutorial tutorial-week11">
-            <h3>Demo V0.3</h3>
-            <div>
-                Every member must show their demo-ready version of the product containing demo data. 
-                Your tutor will ask one of you to do the demo.
-            </div>
-        </div>
-        <div class="tutorial tutorial-week11">
-            <h3>Show results of pre-tutorial learning activities to tutor</h3>
-            <div>
-                Show models, integration/system tests, revision history, and the issue tracker to the tutor.
-            </div>
-        </div>
-        <div class="tutorial tutorial-week11">
-            <h3>After the tutorial</h3>
-            <div>
-                Dogfood your product (i.e. use it for your own task tracking) intensively and use
-                that experience to improve it as much as you can during the next 1.5 weeks.
-            </div>
-        </div>
+  <h3 id="tutorial-content-week11" class="buttoned"><span>Tutorial 10: V0.4, Patterns, Testing types </span></h3>
+  <div>
+    <div class="tutorial tutorial-week11">
+      <h3>Demo V0.4</h3>
+      <div>
+        Do the demo as specified in V0.4 requirements.<br>
+        Also show evidence of meeting other V0.4 requirements e.g. code has been collated correctly.
+      </div>
     </div>
+    <div class="tutorial tutorial-week11">
+      <h3>Patterns</h3>
+      <div>
+        Discuss patterns used or could have used in your design.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week11">
+      <h3>Testing types</h3>
+      <div>
+        Show examples of the specified testing types in your code.
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="ilo content-week11">
-    <h3 id="ilo-content-week11" class="buttoned"><span>Intended Learning Outcomes</span></h3>
-    <div>
-        <div class="ilo ilo-week11">
-            <h3>Knows about UML models. Can use some of them.</h3>
-            <div>
-              Should be able to use use case diagrams, sequence diagrams, class diagrams, object diagrams, activity
-              diagrams, OO domain models.<br>
-              Should be aware of remaining UML models. e.g. state machine diagrams, package diagrams, component 
-              diagrams, etc.
-            </div>
-        </div>
-        <div class="ilo ilo-week11">
-            <h3>Can automate integration testing.</h3>
-            <div>
-              Based on the relevant pre-tutorial activity.
-            </div>
-        </div>
-    </div>
-</div>
-
+<!--
 
 <div class="lecture content-week11">
+  <h3 id="lecture-content-week11" class="buttoned"><span>Lecture 11</span></h3>
 
-        <div class="lecture lecture-week11">
-            <h3>Part 2 - Module Recap: Demo, Exam, SE, Module, Uni, ... [80 minutes]</h3>
-            <div>
-                <table class="padded-borderless lecture-content-table">
-                    <tr>
-                        <td>
-                            <img src="../images/mindMap.png">
-                        </td>
-                        <td>
-                            <p>
-                                Slides <span class="dim">{link coming soon}</span>
-                                <a href="../files/slides/L11P2. Module wrap up.pptx">Slides</a>
-                            </p>
-                            <span class="dim">
-                            <p>
-                                <strong>Overview:</strong> In this lecture we take a quick pass over various topics
-                                we have covered in the module to see how they fit into a big picture. We also cover
-                                a few useful pointers about the upcoming final project demo, the exam, and how to get
-                                the best out of your remaining time in the University.
-                            </p>
-                            <p>
-                                <strong>Topics:</strong> SE, demo, exam, university life
-                            </p>
-                            </span>
-                        </td>
-                    </tr>
-                </table>
+  <div>
+    <div class="lecture lecture-week11">
+      <h3>Part 1 - Module Recap [20 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/BigPictureSmall.png">
+            </td>
+            <td>
+              <p>
+                [No handout]
+                [Slides]
+              </p>
+              <span class="dim">
+              <p>
+                  <strong>Overview:</strong> In this lecture we take a quick pass over various topics
+                  we have covered in the module to see how they fit into a big picture.
+              </p>
+              </span>
+            </td>
+          </tr>
+        </table>
 
-                <h4>Resources</h4>
+        <h4>Resources</h4>
         <ul>
           <li>
-            <p>How the module content fit together:</p>
-            <ul>
-              <li>
-                <a href="http://www.comp.nus.edu.sg/~cs2103/AY1415S2/files/Topics%20-%20big%20picture.pptx" target="_blank">
-                  The WHAT and WHEN perspective
-                </a>
-              </li>
-              <li>
-                The WHY perspective (mind map) - given as a hard copy during lecture.
-              </li>
-            </ul>
+            <a href="../files/Topics%20-%20big%20picture.pptx"
+                   target="_blank"><span class="highlighted">The Big Picture: how the Module Topics Fit Together</span></a>
           </li>
           <li>
-            <a href="http://www.comp.nus.edu.sg/~cs2103/AY1415S2/files/UML%20reference%20sheet.pdf"
-            target="_blank">
-              Summary of UML diagrams
-            </a>
+            <a href="../files/UML%20reference%20sheet.pdf"
+               target="_blank"><span class="highlighted">Summary of UML diagrams</span></a>
           </li>
           <li>
             <p>Interesting Readings:</p>
             <ul>
               <li>[Web article]
-                <a
-                  href="https://affectiveliving.wordpress.com/2014/03/08/what-students-really-need-to-hear/"
-                  target="_blank">
-                  What students really need to hear
-                </a>
+                <a href="https://affectiveliving.wordpress.com/2014/03/08/what-students-really-need-to-hear/"
+                    target="_blank"> What students really need to hear </a> - <br>
+                <span class="dim">"You see, the main event of school is not academic learning.
+                It never has been. It never will be. The main event is ..."</span>
               </li>
               <li>[Web article]
-                <a
-                  href="https://blog.newrelic.com/2014/06/03/10-secrets-learned-software-engineering-degree-probably-didnt/"
-                  target="_blank">
+                <a href="https://blog.newrelic.com/2014/06/03/10-secrets-learned-software-engineering-degree-probably-didnt/"
+                    target="_blank">
                   10 Secrets You Should Have Learned with Your Software Engineering Degree – But Probably Didn't
-                </a>
+                </a> (See how many of those we covered in CS2103).
               </li>
               <li>[Web article]
-                <a href="https://www.quora.com/Why-do-professors-teach-1-+-1-and-then-ask-you-19-8-*-76-in-exams/answer/Michael-Lamar" target="_blank">
+                <a href="https://www.quora.com/Why-do-professors-teach-1-+-1-and-then-ask-you-19-8-*-76-in-exams/answer/Michael-Lamar"
+                   target="_blank">
                   Why do professors teach 1 + 1 and then ask you 19.8 * 76 in exams?
                 </a>
               </li>
               <li>[Web article]
-                <a href="http://lifehacker.com/elon-musk-on-learning-new-things-view-knowledge-as-a-t-1677850415" target="_blank">
+                <a href="http://lifehacker.com/elon-musk-on-learning-new-things-view-knowledge-as-a-t-1677850415"
+                   target="_blank">
                   Elon Musk on Learning New Things: View Knowledge as a Tree
                 </a> - something related to ‘learn as a cat, not a mouse’ tip mentioned during the lecture
               </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week11">
+      <h3>Part 2 - Tips for Killer Product Presentations [40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/mindMap.png">
+            </td>
+            <td>
+              <p>
+                [No handout]
+                [Slides]
+              </p>
+              <span class="dim">
+              <p>
+                <strong>Overview:</strong> Some tips you can use to improve any product presentation.
+                Many of these are applicable to the final product demo.
+              </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+
+        <h4>Resources</h4>
+        <ul>
+          <li>
+            <p>Interesting Readings:</p>
+            <ul>
               <li>[Web article]
                 <a href="http://guykawasaki.com/how-to-be-a-demo-god/" target="_blank">
                   How to be a demo God
@@ -321,9 +214,9 @@
             </ul>
           </li>
         </ul>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
 
 -->
