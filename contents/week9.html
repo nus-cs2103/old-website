@@ -1,128 +1,147 @@
-<div class="deadline content-week9">
-  <h3 id="deadline1-content-week9" class="buttoned"><span>Deadlines </span></h3>
-  <div>
-    <div class="deadline deadline1-week9">
-      <h3>[Mon (<span class="date-marker" week="9" day="1"></span>) 23:59] Project manual V0.1 submission</h3>
-        <div>
-          <span class="embedded-link" onclick="pullContent('handbook-v01Manual', '#embedded-week9-v01deadline', 'Handbook: Project manual V0.1 submission');">
-            more info </span>
-            <div id="embedded-week9-v01deadline"></div>
-        </div>
-    </div>
-    <div class="deadline deadline1-week9">
-      <h3>[Tue (<span class="date-marker" week="9" day="2"></span>)-Wed (<span class="date-marker" week="9" day="3"></span>)] Peer evaluation 2</h3>
-        <div>
-          Now that you are done with V0.1, tell your team members what you think of their contribution so far.
-        </div>
-    </div>
-  </div>
-</div>
-
 <div class="things-to-do content-week9">
   <h3 id="things-to-do-content-week9" class="buttoned"><span>Things to do</span></h3>
-    <div>
-      <div class="things-to-do things-to-do-week9">
-        <h3>Resolve Team Issues</h3>
-          <div>
-            <ul>
-              <li>
-                If your team is facing difficulties due to differences in skill/motivation/availability among team 
-                members, read 
-                <span onclick="pullContent('handbook-appendixF', '#embedded-week9-teamwork', 'Handbook: Appendix F (What to do if there are teamwork issues)');">
-                <span class="embedded-link">Handbook: Appendix F (What to do if there are teamwork issues)</span>.
-                </span>
-                <div id="embedded-week9-teamwork"></div>
-              </li>
-              <li>
-                If you find some team members messing up the team repo frequently, you can attempt the 
-                safer (but a bit more complicated) workflow described in the 'A safer workflow using forks and 
-                pull requests' section of the 
-                <span onclick="pullContent('handbook-appendixE', '#embedded-week9-handbook', 'Handbook: Appendix E (Using GitHub Project Hosting)');">
-                <span class="embedded-link">Handbook: Appendix E (Using GitHub Project Hosting).</span>
-                </span>
-                <div id="embedded-week9-handbook"></div>                   
-              </li>
-              <li>
-                 Until now, stronger coders in the team may have written code in all components of the 
-                 product, to get the product up and running. It is fine for strong programmers take such initiative 
-                 in getting the product off the ground. However, as the product gets more stable, try to limit your 
-                 work to your own components only. When you need changes in a component handled by 
-                 another team member, ask that member to do the change. While this may slow down your 
-                 progress a bit, it is an essential part of working in a team. Editing others' code freely might affect 
-                 your team's morale too.
-               </li>
-             </ul>
-           </div>
-       </div>
-       <div class="things-to-do things-to-do-week9">
-         <h3>Take a peek at what's needed for the final exam</h3>
-           <div>
-             <ul>
-               <li>
-                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-exams', '#embedded-week9-exams', 'Handbook: Exams');">
-                 past exam papers</span> and note how the questions are 
-                 related to what you are doing in the project. This should motivate you to work harder in the 
-                 project. If you do the project well, you will do the exam well too. 
-                 Have a look at <span class="embedded-link" onclick="pullContent('handbook-v05Evaluation', '#embedded-week9-exams', 'Handbook: V0.5 grading criteria');">
-                 V0.5 grading criteria</span>. In particular, note how we have 
-                 allocated marks for project management. Those who use the issue tracker well can earn more marks.
-                <div id="embedded-week9-exams"></div> 
-               </li>
-             </ul>
-           </div>
-       </div>
+  <div>
+    <div class="things-to-do things-to-do-week9">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('handbook-project-v02', '#embedded-week9-handbook');">
+              <span class="embedded-link">V0.2 Requirements</span>
+            </span>
+            <div id="embedded-week9-handbook"></div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="activity content-week9">
   <h3 id="activity-content-week9" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
     <div>
       <div class="activity activity-week9">
-        <h3>Start moving your code toward V0.2 [Team]</h3>
-          <div>
-            It may be a good idea to have an internal V0.15 milestone between V0.1 and V0.2 milestones.
-          </div>
+        <h3>T8A0. Refine your product's user experience <img src="../images/star.png"/></h3>
+        <div>
+          Read the <a href="https://docs.google.com/document/d/1kAth-pTOzwCJFVjS6KU8O50bCvijDqpb6GsOyJTD0Ds/pub?embedded=true" target="_blank">
+          common problems in V0.0</a> and improve your product design as necessary. Flaws in product design can cost
+          you marks in the final project grading.
+        </div>
       </div>
       <div class="activity activity-week9">
-        <h3>Relate patterns and principles to the project [Individual, 2pts]</h3>
-          <div>
-            Identify patterns and principles (at least one principle and one pattern) related to your part of 
-            the project. You should be able to explain the identified patterns and principles using diagrams 
-            in the project manual V0.1. This is also a good test of whether your project manual V0.1 has 
-            enough diagrams. If it doesn't, make a note to add more diagrams for the next project manual 
-            submission.
-            Optionally, you may discuss your findings with your team and refine further before coming to 
-            the tutorial. It is OK if you haven't actually applied these patterns/principles to the project yet. 
-            You can still describe how you could have applied them or even why you would not apply them 
-            for a particular scenario.
-          </div>
+        <h3>T8A1. Define the milestones <img src="../images/star.png"/></h3>
+        <div>
+          <ul>
+            <li>If you haven't done so yet, create labels and milestones in your team repo as given in our GitHub
+              setup instructions.
+            </li>
+            <li>Record each of the user stories you plan to deliver as an issue in the issue tracker.<br>
+              e.g. <code> Title: As a user I can add a deadline</code><br>
+              <code>Description: ... so that I can keep track of my deadlines</code></li>
+            <li>Assign the <code>type.*</code> and <code>priority.*</code> labels to those issues.</li>
+            <li>Assign the above issues to suitable milestones (in GitHub).</li>
+            <li>Set the deadlines for milestones (in GitHub). Your internal milestones can be set earlier than
+              the deadlines we have set, to give you a buffer.</li>
+          </ul>
+          <p>
+            Note that you can change the milestone plan along the way as necessary.
+            However, if you do not have a working product at the milestone deadline, or the milestone plan doesn't
+            match the project at the milestone, we'll consider that as <span class="highlighted">a 'missed milestone'
+            which will count against the 'project management' component of your final grade</span>.
+          </p>
+          <p>
+            Use Github Milestones, Issues, PRs, Tags, Releases, and Labels to track your project schedule.
+            You can also use GitHub's new <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU" target="_blank">
+            Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.
+          </p>
+        </div>
       </div>
       <div class="activity activity-week9">
-        <h3>Defend your code [Individual, 3 pts]</h3>
+        <h3>T8A2. Reach V0.2 <img src="../images/star.png"/></h3>
+        <div>
+          As you work towards V0.2, learn from the last week's experience and refine the workflow as necessary.
+          <p>
+            IMPORTANT: To consider the milestone as 'reached', <span class="highlighted">you should have the
+            following done *before* the tutorial begins</span>:
+          <ul>
+            <li>A working product tagged as V0.2 and pushed to the main repo.</li>
+            <li>All tests passing.</li>
+            <li>Milestone V0.2 updated to match the product and closed.</li>
+          </ul>
+          Doing a 'release' on GitHub is optional for V0.2 but compulsory from V0.3.
+          </p>
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A3. Complete Developer Guide Appendices <img src="../images/star.png"/></h3>
+        <div>
+          Complete the User Guide (as per V0.0) if you haven't done so already.<br>
+          Complete the appendices of the Developer Guide. <br>
+          You are not required to (but welcome to)  update the other parts of the Developer Guide at this point.
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A4. Defend your code  <img src="../images/2stars.png"/></h3>
           <div>
-            Ensure that at least one team member has done each of these and each team member has done at least one of these.
+            This is an individual activity.<br>
+            Try to use these in the code your write for the project.<br>
+            You can refer to the respective learning outcomes in
+            <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/LearningOutcomes.md"
+                  target="_blank">AddressBook - Level 4</a> for examples of how these are used already in the
+            AddressBook and for more resources on how to use them.
             <ul>
               <li>
-                assertions
+                Assertions
               </li>
               <li>
-                exceptions
+                Exceptions
               </li>
               <li>
-                logging
+                Logging
+              </li>
+              <li>
+                Defensive coding
               </li>
             </ul>
-          </div>
-      </div>
-      <div class="activity activity-week9">
-        <h3>Update the issue tracker [Individual, 2pts]</h3>
-          <div>
-            As before.
           </div>
       </div>
     </div>
 </div>
 
+<div class="tutorial content-week9">
+  <h3 id="tutorial-content-week9" class="buttoned"><span>Tutorial 8: V0.2, Defensive Coding </span></h3>
+  <div>
+    <div class="tutorial tutorial-week9">
+      <h3>Demo V0.2</h3>
+      <div>
+        <ol>
+          <li>Revert your code to the version tagged as V0.2</li>
+          <li>Demo your V0.2 to the tutor to prove it meets V0.2 milestone requirements.</li>
+          <li>Run the tests to show they pass.</li>
+          <li>Show your repo to tutor to confirm that,
+            <ul>
+              <li>org and repo names are as expected</li>
+              <li>milestone V0.2 matches the current version</li>
+              <li>milestone V0.2 and its issues are assigned and closed</li>
+            </ul>
+          </li>
+          <li>Show your User Guide and Developer Guide appendices to confirm they have been completed.</li>
+        </ol>
+        Ask your tutor if you are considered as 'reached V0.2'. As mentioned before, missing milestones
+        V0.2 .. V0.5 will be counted against your final project marks.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week9">
+      <h3>Plan V0.3</h3>
+      <div>
+        Update V0.3 milestone on GitHub to match your actual plan for the next week.<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
 <div class="tutorial content-week9">
   <h3 id="tutorial-content-week9" class="buttoned"><span>Tutorial 8: Patterns, Principles, Defensive coding</span></h3>
     <div>
@@ -206,121 +225,195 @@
     </div>
 </div>
 
+-->
+
+
 
 <div class="lecture content-week9">
-  <h3 id="lecture-content-week9" class="buttoned"><span>Lecture 9: Product functional. What about quality?</span></h3>
-    <div>
-      <div class="lecture lecture-week9">
-        <h3>Part 1 - Quality Assurance: Testing and Beyond [35 minutes]</h3>
-          <div>
-            <table class="padded-borderless lecture-content-table">
-              <tr>
-                <td>
-                <img src="../images/qa methods.png">
-                </td>
-                <td>
-                  <p>
-                    <!--Slides <span class="dim">{link coming soon}</span>-->
-                    <a href="../files/slides/L9P1. Quality Assurance - Testing and Beyond.pptx" target="_blank">Slides</a>
-                  </p>
-                  <span class="dim">
-                    <p>
-                      <strong>Overview:</strong> The full system should be put through intensive 
-                      testing before release, even if components had been tested 
-                      earlier. Other QA techniques such as code reviews, static 
-                      analysis etc. can complement testing.
-                    </p>
-                    <p>
-                      <strong>Topics:</strong> system testing, acceptance testing,  test coverage, GUI testing,  other QA techniques
-                    </p>
-                  </span>
-                </td>
-              </tr>
-            </table>
-            <p>
-              Resources:
-            </p>
+  <h3 id="lecture-content-week9" class="buttoned"><span>Lecture 9</span></h3>
+
+  <div>
+    <div class="lecture lecture-week9">
+      <h3>Part 1 - The M in RTFM: When Code is not Enough [15 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/documentation.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../files/handouts/%5bL9P1%5d%20The%20M%20in%20RTFM%20-%20When%20Code%20Is%20Not%20Enough.pdf" target="_blank">Handout</a>]
+                [<a href="../files/slides/L9P1.%20The%20M%20in%20RTFM%20-%20When%20Code%20is%20not%20Enough.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+              <p>
+                <strong>Overview:</strong> While most of the design and implementation details can be learned
+                from well-written code, some additional information such as high-level design can be
+                documented in a developer guide for the benefit of other teammate and future developers.
+              </p>
+              <p>
+                <strong>Topics:</strong> Writing developer documentation.
+              </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Generating API docs from code comments: In Eclipse, choose Project → Generate Javadoc.<br>
+            <a target="_blank" href="http://www.tutorialspoint.com/java/java_documentation.htm">
+              A very short introduction to how to write javadoc comments</a>.
+            <a target="_blank" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">
+              A more detailed guide</a>.
+          </li>
+          <li>
+            Some side readings:
             <ul>
               <li>
-                Code coverage tools: You are not required to use code coverage tools in the project.
+                [Web article] <a target="_blank" href="https://coding.abel.nu/2013/01/on-code-documentation/">
+                On Code Documentation or How to find your way Around a Resort</a>
               </li>
-              <ul>
-                <li>
-                  You can watch <a target="_blank" href="https://www.youtube.com/watch?v=NXYIFiNLwPo">this video</a> 
-                  to get an idea of how a coverage tool works. It describes EclEmma, a coverage tool for Java.
-                </li>
-                <li>
-                  [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2010/07/code-coverage-goal-80-and-no-less.html"> 
-                  How much coverage is enough coverage?</a> - A *must read* post from the Google Testing Blog.
-                </li>
-              </ul>
-              <li>
-                Interesting side reading
-              </li>
-              <ul>
-                <li>
-                  [Dev opinion] <a target="_blank" href="http://dzone.com/articles/dont-waste-time-code-reviews">
-                  Don't waste time on code reviews</a>
-                </li>
-                <li>
-                  [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2012/09/conversation-with-test-engineer.html"> 
-                  Conversation with a Test Engineer at Google</a> - A post from the Google Testing Blog.
-                </li>
-                <li>
-                  [eBook] If testing intrigues and interests you (a sign that there is a great software engineer inside you), 
-                  you will like <a target="_blank" href="http://www.scribd.com/doc/69769/TheWayOfTestivus">The Way of Testivus</a> (funny, and full of wisdom :-)
-                </li>
-                <li>
-                  [Web article] <a target="_blank" href="http://mashable.com/2013/10/29/dogfooding/#P7iYxbCK25qn">If You Want to Talk 
-                  Like a Silicon Valley CEO, Learn This Phrase</a>, An article from the Mashable about dogfooding
-                </li>
-                <li>
-                  [Web article] <a target="_blank" href="http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172222-a-second-for-45-minutes">
-                  How to lose $172,222 a second for 45 minutes</a> - An article about a software bug that make a company lose $460 million
-                </li>
-                <li>
-                  [Post from Google Testing Blog] <a target="_blank" href="http://googletesting.blogspot.sg/2014/07/measuring-coverage-at-google.html">
-                  Measuring coverage at Google</a>
-                </li>
-              </ul>
             </ul>
-          </div>
+          </li>
+        </ul>
       </div>
-      <div class="lecture lecture-week9">
-        <h3>Part 2 - Heuristics for Better Test Case Design [45 minutes]</h3>
-          <div>
-            <table class="padded-borderless lecture-content-table">
-              <tr>
-                <td>
-                  <img src="../images/testcases.png">
-                </td>
-                <td>
-                  <p>
-                    <!--Slides <span class="dim">{link coming soon}</span>-->
-                    <a href="../files/slides/L9P2. Heuristics for Better Test Case Design.pptx" target="_blank">Slides</a>
-                  </p>
-                  <span class="dim">
-                    <p>
-                      <strong>Overview:</strong> Techniques such as equivalence partitioning and 
-                      boundary value analysis can be used to increase 
-                      effectiveness and efficiency of testing.
-                    </p>
-                    <p>
-                      <strong>Topics:</strong> test case design approaches,  test case design techniques
-                    </p>
-                  </span>
-                </td>
-              </tr>
-            </table>
-          </div>
-      </div>
-      <div class="lecture lecture-week9">
-        <h3>Recap [25 minutes]</h3>
-          <div>
-            <!--Slides <span class="dim">{link coming soon}</span>-->
-            <a href="../files/slides/L9Recap.pptx" target="_blank">Slides</a>
-          </div>
-      </div>       
     </div>
+    <div class="lecture lecture-week9">
+      <h3>Part 2 - Déjà vu: Using patterns to solve recurring problems [40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/patterns.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../files/handouts/%5bL9P2%5d%20Deja%20vu%20-%20Using%20patterns%20to%20solve%20recurring%20problems.pdf" target="_blank">Handout</a>]
+                [<a href="../files/slides/L9P2.%20Deja%20vu%20-%20Using%20patterns%20to%20solve%20recurring%20problems.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Patterns are tried and trusted solutions to recurring problems.
+                Applying right patterns often improves our work products.
+                </p>
+                <p>
+                <strong>Topics:</strong> patterns
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Something we have already covered, presented as a pattern and an anti-pattern:
+            <a target="_blank" href="http://codebetter.com/jeremymiller/2006/12/03/composed-method-pattern/">
+              Composed method pattern (and Arrowhead anti-pattern)
+            </a>,
+            <a target="_blank" href="http://www.codinghorror.com/blog/2006/01/flattening-arrow-code.html">
+              another take one the same issue
+            </a>
+            - Note that these code-level patterns are sometimes called <em>coding idioms</em>.
+          </li>
+          <li>
+            Some good books on design patterns:
+            <a target="_blank"
+               href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">
+              The famous ‘Gang of Four’ patterns book
+            </a>,
+            <a target="_blank" href="http://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124/">
+              Head first design patterns
+            </a>
+          </li>
+          <li>
+            Singleton is a neat pattern and it is easy to explain too. That is why it is used often to
+            illustrate the concept of design patterns. However, there is a concern that Singletons are evil,
+            especially when used excessively.
+            <a target="_blank" href="http://blogs.msdn.com/b/scottdensmore/archive/2004/05/25/140827.aspx">
+              Here’s a blog post (from MSDN blogs) that supports that concern</a>.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week9">
+      <h3>Part 3 - Gems of wisdom: software development principles [10 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../images/principles.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../files/handouts/%5bL9P3%5d%20Gems%20of%20wisdom%20-%20software%20development%20principles.pdf" target="_blank">Handout</a>]
+                [<a href="../files/slides/L9P3.%20Gems%20of%20wisdom%20-%20software%20development%20principles.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Principles are little gems of wisdom gained from past experience.
+                It is another way to learn from others' past experience.
+                </p>
+                <p>
+                <strong>Topics:</strong> principles
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <a target="_blank" href="http://www.comp.nus.edu.sg/~damithch/pages/SE-quotes.htm?type%3DstudentQuotes">
+              Selected software engineering quotes for students -
+              These quotes capture gems of wisdom in an easy-to-remember format.
+            </a> - These quotes capture
+            gems of wisdom in an easy-to-remember format.
+          </li>
+          <li>
+            For those who want to go a bit more deeper into SE principles (certainly beyond the scope of this
+            module), this is a good place to start:
+            <a target="_blank" href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">
+              Principles of OOD
+            </a>, an article by Robert C. Martin
+            (aka Uncle Bob)
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/watch?v=acjvKJiOvXw">
+              A useful Google Tech Talk on “OO Design for Testability”
+            </a> that also refers to how Law of
+            Demeter principle and Singleton patterns affects testability.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week9">
+      <h3>Recap [15 minutes]</h3>
+      <div>
+        [<a href="../files/slides/L9Recap.pptx" target="_blank">Slides</a>]
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="deadline content-week9">
+  <h3 id="deadline1-content-week9" class="buttoned"><span>Deadlines</span></h3>
+  <div>
+    <div class="deadline deadline1-week9">
+      <h3>[Sat (<span class="date-marker" week="9" day="6"></span>) 23:59] Mid Phase C Peer Evaluation</h3>
+      <div>
+        Please go to <a href="https://teammatesv4.appspot.com" target="_blank">TEAMMATES</a> and submit your
+        evaluation of team members.
+      </div>
+    </div>
+  </div>
+</div>
+
 
