@@ -15,7 +15,7 @@
 
 -----
 
-**Team**|**Contributions**|**Build status**|**Coverage status**|**Size**    
+**Team**|**Contributors**|**Build status**|**Coverage**|**Size**    
 -----|-----|-----|-----|----
 [W09-C1](https://github.com/CS2103AUG2016-W09-C1/main/blob/master/docs/AboutUs.md)|[Contributors](https://github.com/CS2103AUG2016-W09-C1/main/graphs/contributors?from=2016-09-30&to=2016-11-08&type=c)|[![Unknown](https://travis-ci.org/CS2103AUG2016-W09-C1/main.svg?branch=master)](https://travis-ci.org/CS2103AUG2016-W09-C1/main)|[![Unknown](https://coveralls.io/repos/github/CS2103AUG2016-W09-C1/main/badge.svg?branch=master)](https://coveralls.io/github/CS2103AUG2016-W09-C1/main?branch=master)|<img src="../images/Greenbox.png" height="12" width="71 alt="Relevant lines covered:"71"><img src="../images/Redbox.png" height="12" width="23 alt="Lines not covered:"23"><img src="../images/Violetbox.png" height="12" width="86 alt="Estimated test code:"86">
 [W09-C2](https://github.com/CS2103AUG2016-W09-C2/main/blob/master/docs/AboutUs.md)|[Contributors](https://github.com/CS2103AUG2016-W09-C2/main/graphs/contributors?from=2016-09-30&to=2016-11-08&type=c)|[![Unknown](https://travis-ci.org/CS2103AUG2016-W09-C2/main.svg?branch=master)](https://travis-ci.org/CS2103AUG2016-W09-C2/main)|[![Unknown](https://coveralls.io/repos/github/CS2103AUG2016-W09-C2/main/badge.svg?branch=master)](https://coveralls.io/github/CS2103AUG2016-W09-C2/main?branch=master)|<img src="../images/Greenbox.png" height="12" width="121 alt="Relevant lines covered:"121"><img src="../images/Redbox.png" height="12" width="15 alt="Lines not covered:"15"><img src="../images/Violetbox.png" height="12" width="145 alt="Estimated test code:"145">
