@@ -43,9 +43,7 @@ method 4 ...</code></pre>
   </li>
   <li>
     If a method was written by more than one person, the <code>//@@author</code> tag should indicate the person who
-    wrote most of that method. i.e., <code>//@@author</code> tag should not appear inside a method.
-  </li>
-  <li>
+    wrote most of that method. i.e., <code>//@@author</code> tag should not appear inside a method.<br>
     If some part of the code was done collectively, you should still divide it up to reflect the amount of work each
     person contributed. For example, if 3 people wrote 150 lines of code and put in equal effort in doing so,
     you can divide the methods among yourselves roughly 50 lines to each person.
@@ -54,6 +52,22 @@ method 4 ...</code></pre>
     the designated author should refactor the code to make it high quality.<br>
     Tip: GitHub has a 'blame' feature and a 'history' feature that can help you determine who wrote a piece of code.
   </li>
+  <li>
+    Do not put the <code>//@@author</code> inside java header comments as only the content below that tag will be
+    collated.
+  </li>
+  e.g. INCORRECT
+  <pre class="prettyprint"><code class="shell">/**
+  * Returns true if ...
+  * @@author A0909865T
+  */</code></pre>
+  <br>
+  e.g. CORRECT 
+  <pre class="prettyprint"><code class="shell">//@@author A0909865T
+/**
+  * Returns true if ...
+  */</code></pre>
+  <br>
   <li>
     If you wrote a significant amount of code that was not used in the final product, you may use <code>//@@author
     matric-number-unused</code> to mark them.
