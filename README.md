@@ -28,7 +28,7 @@ If you would like to contribute code, here is the procedure:
    * When in doubt, you can refer to these style guides from the 
      TEAMMATES project:
      [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true),
-     [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub), 
+     [CSS](https://cdn.rawgit.com/nus-cs2103/website/master/contents/coding-standards-css.html), 
      [HTML](https://cdn.rawgit.com/nus-cs2103/website/master/contents/coding-standards-html.html)
 6. Test the code in your computer. <br>
    Tip: When testing local html files, some JavaScripts might not work
