@@ -5,10 +5,18 @@
  - [General](#general)
  - [CSS Files](#css-files)
  - [Selectors](#selectors)
+   - [Selector Formatting](#selector-formatting)
+   - [Use of Efficient selectors](#use-of-efficient-selectors)
  - [Classes](#classes)
- - [Sections](#sections)
+   - [Naming Standards](#naming-standards)
+ - [Sections](#sections)   
  - [Attributes](#attributes)
+   - [Order of attributes](#order-of-attributes)
+   - [Attribute Formatting](#attribute-formatting)
+   - [General Details](#general-details)
  - [Resources](#resources)
+   - [Highly Recommended](#highly-recommended)
+   - [Other Readings](#other-readings)
 
 <br>
 ## General<a name="general"></a>
@@ -69,7 +77,11 @@
     <!-- no inline styling in tags -->
     <div id=”mainDiv” style=”border: thin solid black; margin: auto”>
    ```  
-   
+```
+   The whole idea is to have Separation of Concerns (SoC). If css rules are specified everywhere, editing them 
+   in the future will be a hassle and redundant overriding of css rules may occur. If all are in one place 
+   management is also easier.
+```
 <br>
 ## Sections<a name="sections"></a>
 → [teammatesCommon.css](https://www.google.com/url?q=http://github.com/TEAMMATES/repo/blob/master/src/main/webapp/stylesheets/teammatesCommon.css&sa=D&ust=1480622085998000&usg=AFQjCNFloDL_D6ufw4UC66VBkxhBJ3tM-g) has been divided into 4 sections - Generic, NavBar, Header, MainContent. Place the new css rules in the appropriate section.
@@ -81,7 +93,7 @@
 
 <br>
 ## Selectors<a name="selectors"></a>
-### Selector Formatting:
+### Selector Formatting:<a name="selector-formatting"></a>
 →  The selector(s) must be specified in separate lines 
 
 ```html
@@ -110,7 +122,7 @@
    (from the hierarchy) without actually reading HTML files.
 ```
 
-### Use of Efficient Selectors:
+### Use of Efficient Selectors:<a name="use-of-efficient-selectors"></a>
 
 → Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing           efficient CSS](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS%23Guidelines_for_Efficient_CSS&sa=D&ust=1480622086019000&usg=AFQjCNEyqjnbD45y_Rw9xotN4CDhlJ8iwA) for examples
 
@@ -131,7 +143,7 @@
 <br>
 ## Classes<a name="classes"></a>
 
-### Naming Standards
+### Naming Standards<a name="naming-standards"></a>
 → Use all lowercase letters <br>
 → Separate words with hyphens (‘-’) and no other separator <br>
 → We use 2 kinds of classes: Atomic and Component
@@ -160,17 +172,17 @@
    (eg: .panel-details rather than .top-details-box)
 ```
    
-→ When adding classes to style elements in the page, follow the following steps:
+→ When adding classes to style elements in the page, follow the following steps:<br>
 
-   ⇒ Try and style the entire component using bootstrap <br>
-   ⇒ For any additional css, if the component is used in many places create a functional name for the class <br>
-   ⇒ If the component does not have any recurring function, utilise the generic classes to achieve the styling. <br>
-   **Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ Try and style the entire component using bootstrap <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ For any additional css, if the component is used in many places create a functional name for the class <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ If the component does not have any recurring function, utilise the generic classes to achieve the styling. <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
 <br>
 ## Attributes<a name="attributes"></a> 
 
-### Order of Attributes
+### Order of Attributes<a name="order-of-attributes"></a>
 
 → Alphabetize the attributes, disregarding any browser prefix. <br>
 → All browser prefixed versions of an attribute must be written together.
@@ -199,7 +211,7 @@
    This way looking for an attribute is faster.
    ```
 
-### Attribute Formatting
+### Attribute Formatting<a name="attribute-formatting"></a>
 
 → Semicolon after every attribute specification <br>
 → Space after colon <br>
@@ -208,7 +220,7 @@
 → Attributes must have one more indentation than the selector <br>
 → indent attributes that require browser specifications so that the actual attribute being declared are in one column --refer to [Writing Your Best Code](https://www.google.com/url?q=http://learn.shayhowe.com/html-css/writing-your-best-code/%23css-coding-practices&sa=D&ust=1480717086146000&usg=AFQjCNEmbPGCl_znVtLr8ud0kbW3_jbbwQ) for examples <br>
 
-### General Details
+### General Details<a name="general-details"></a>
 
 → Use shorthands as much as possible (eg border: 2px 0 1px 4px) <br>
 → DO NOT use `!important` specifier <br>
@@ -224,11 +236,11 @@
 
 ## Resources<a name="resources"></a>   
 
-### Highly Recommended
+### Highly Recommended<a name="highly-recommended"></a>
  - [Google CSS Style Guide](https://www.google.com/url?q=https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml&sa=D&ust=1480461672641000&usg=AFQjCNFamL4PYjTTMrqBsHCGBgQdl5IZCg)
  - [Writing Your Best Code](https://www.google.com/url?q=http://learn.shayhowe.com/html-css/writing-your-best-code/%23css-coding-practices&sa=D&ust=1480461672642000&usg=AFQjCNHtGiad1-XEIElzKPKmTxUYP1t1AQ)
 
-### Other Readings
+### Other Readings<a name="other-readings"></a>
  - [Isobar Coding Standards](https://www.google.com/url?q=http://isobar-idev.github.io/code-standards/&sa=D&ust=1480461672643000&usg=AFQjCNHERbOy_onAr0b5IDIplnahd4PknA)
  - [30 CSS Best Practices For Beginners](https://www.google.com/url?q=http://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741&sa=D&ust=1480461672644000&usg=AFQjCNFAgLMbsNjA-2kz3uWDkN39Dc3NMA)
  - [Writing efficient CSS (MDN article)](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS&sa=D&ust=1480461672644000&usg=AFQjCNHphBRs8U7j2qvrWW0cGYuHvjOeOg)
