@@ -105,7 +105,7 @@ NO inline style sheets or inline styles in the html/jsp files.
    ```
 >This eases reading as well as helps in revision control as conflicts reduce.
 
-Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent to the more          specific selector --refer to [here](http://isobar-idev.github.io/code-standards/#_css_formatting) for examples
+Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent to the more          specific selector --refer to [here](http://isobar-idev.github.io/code-standards/#_css_formatting) for examples.
 
 
 >  This gives a nice hierarchical structure to the file and helps to visually group css rules by indentation. 
@@ -133,9 +133,9 @@ Do not qualify class/ID selectors using tag names (do not use: div.mainContent, 
 ## Classes<a name="classes"></a>
 
 ### Naming Standards<a name="naming-standards"></a>
-Use all lowercase letters <br>
-Separate words with hyphens (‘-’) and no other separator <br>
-We use 2 kinds of classes: Atomic and Component
+Use all lowercase letters. <br>
+Separate words with hyphens (‘-’) and no other separator. <br>
+We use 2 kinds of classes: Atomic and Component.
 
 ```css
    /* Component Class */
@@ -201,12 +201,12 @@ We use 2 kinds of classes: Atomic and Component
 
 ### Attribute Formatting<a name="attribute-formatting"></a><br>
 
-Semicolon after every attribute specification. <br>
-Space after colon. <br>
-Drop the units for 0 values (eg: margin: 0). <br>
-All attribute(s) are to be specified in individual lines. <br>
-Attributes must have one more indentation than the selector. <br>
-Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples <br>
+- Semicolon after every attribute specification. <br>
+- Space after colon. <br>
+- Drop the units for 0 values (eg: margin: 0). <br>
+- All attribute(s) are to be specified in individual lines. <br>
+- Attributes must have one more indentation than the selector. <br>
+- Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples. <br>
 
 ### General Details<a name="general-details"></a>
 
