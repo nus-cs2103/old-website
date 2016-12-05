@@ -20,12 +20,12 @@
 ## General<a name="general"></a>
  We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml) as our primary guide and have made a few changes to suit TEAMMATES project. The Google Style Document shall be used for any topics not covered in this document.
 
- We are using Bootstrap front-end framework to ease our styling efforts
+ We are using Bootstrap front-end framework to ease our styling efforts.
 
 >  Use bootstrap classes wherever possible and as much as possible. In those rare occasions that additional 
    rules are needed, follow the standard given below. 
 
- We only have one CSS file for the entire website
+ We only have one CSS file for the entire website.
 
 
 >  Since the golden rule is to use as much bootstrap classes as possible, we do not expect much additional css 
@@ -33,7 +33,7 @@
    having just one file helps to isolate the css rules in one file rather than to search multiple files. Finally 
    there is a performance boost when only one file is used as there are fewer HTML requests and better use of caching.
 
- We are not using CSS3 selectors  --reconsider this rule when IE12 releases
+ We are not using CSS3 selectors  --reconsider this rule when IE12 release.
 
 >Although they are powerful, cross browser compatibility is difficult to achieve and many rules are supported by different browsers starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp) ). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
 
@@ -53,7 +53,7 @@
    comes to life. As of now we are using css files as stylers of html pages and thus the dependency must be clearly visible 
    in the html page.
    
-NO inline style sheets or inline styles in the html/jsp files
+NO inline style sheets or inline styles in the html/jsp files.
 
 ```css
     /* write styles only in the external file teammatesCommon.css */
@@ -87,7 +87,7 @@ NO inline style sheets or inline styles in the html/jsp files
 
 ## Selectors<a name="selectors"></a>
 ### Selector Formatting:<a name="selector-formatting"></a>
-   The selector(s) must be specified in separate lines 
+   The selector(s) must be specified in separate lines. 
 
 ```css
     /* Each selector in a new line */
@@ -201,17 +201,17 @@ We use 2 kinds of classes: Atomic and Component
 
 ### Attribute Formatting<a name="attribute-formatting"></a><br>
 
-Semicolon after every attribute specification <br>
-Space after colon <br>
-Drop the units for 0 values (eg: margin: 0) <br>
-All attribute(s) are to be specified in individual lines <br>
-Attributes must have one more indentation than the selector <br>
+Semicolon after every attribute specification. <br>
+Space after colon. <br>
+Drop the units for 0 values (eg: margin: 0). <br>
+All attribute(s) are to be specified in individual lines. <br>
+Attributes must have one more indentation than the selector. <br>
 Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples <br>
 
 ### General Details<a name="general-details"></a>
 
-Use shorthands as much as possible (eg border: 2px 0 1px 4px) <br>
-DO NOT use `!important` specifier <br>
+Use shorthands as much as possible (eg border: 2px 0 1px 4px). <br>
+DO NOT use `!important` specifier. <br>
 
 ```css
    /* not recommended */
