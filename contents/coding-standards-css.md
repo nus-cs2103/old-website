@@ -18,7 +18,7 @@
    - [Other Readings](#other-readings)
 
 ## General<a name="general"></a>
- We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml&amp;sa=D&amp;ust=1480461672565000&amp;usg=AFQjCNENvrZEYTgdQkanPde16QEu-FqFHA) as our primary guide and have made a few changes to suit TEAMMATES project. The Google Style Document shall be used for any topics not covered in this document.
+ We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml) as our primary guide and have made a few changes to suit TEAMMATES project. The Google Style Document shall be used for any topics not covered in this document.
 
  We are using Bootstrap front-end framework to ease our styling efforts
 
@@ -35,11 +35,11 @@
 
  We are not using CSS3 selectors  --reconsider this rule when IE12 releases
 
->Although they are powerful, cross browser compatibility is difficult to achieve and many rules are supported by different browsers starting from different versions (refer: [W3CSchools List](https://www.google.com/urlq=http://www.w3schools.com/cssref/css3_browsersupport.asp&amp;sa=D&amp;ust=1480461672574000&amp;usg=AFQjCNHJOKLPktm0j5dN20ldwPZmumz1bQ) ). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
+>Although they are powerful, cross browser compatibility is difficult to achieve and many rules are supported by different browsers starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp) ). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
 
 ## CSS Files<a name="css-files"></a>
 
- Include any additional css specifications in one file - [teammatesCommon.css](https://www.google.com/url?q=http://github.com/TEAMMATES/repo/blob/master/src/main/webapp/stylesheets/teammatesCommon.css&sa=D&ust=1480481409238000&usg=AFQjCNH-oKQpY9ou8MhyUre63_A8KXY-Eg) <br>
+ Include any additional css specifications in one file - [teammatesCommon.css](https://github.com/TEAMMATES/teammates/blob/master/src/main/webapp/stylesheets/teammatesCommon.css) <br>
 
  In the future if we have more files, CSS file includes must be done using `<link>` tags in the html/jsp files and NOT using `@import`   in other css files.
 
@@ -80,7 +80,7 @@ NO inline style sheets or inline styles in the html/jsp files
    management is also easier.
 
 ## Sections<a name="sections"></a>
-[teammatesCommon.css](https://www.google.com/url?q=http://github.com/TEAMMATES/repo/blob/master/src/main/webapp/stylesheets/teammatesCommon.css&sa=D&ust=1480622085998000&usg=AFQjCNFloDL_D6ufw4UC66VBkxhBJ3tM-g) has been divided into 4 sections - Generic, NavBar, Header, MainContent. Place the new css rules in the appropriate section.
+[teammatesCommon.css](https://github.com/TEAMMATES/teammates/blob/master/src/main/webapp/stylesheets/teammatesCommon.css) has been divided into 4 sections - Generic, NavBar, Header, MainContent. Place the new css rules in the appropriate section.
 
 >  By segmenting the file in this logical way, it is easy to locate css rules and to ensure that a new rule 
    being added is not already present.
@@ -105,7 +105,7 @@ NO inline style sheets or inline styles in the html/jsp files
    ```
 >This eases reading as well as helps in revision control as conflicts reduce.
 
-Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent to the more          specific selector --refer to [here](https://www.google.com/url?q=http://isobar-idev.github.io/code-standards/%23_css_formatting&sa=D&ust=1480630746836000&usg=AFQjCNGKmXgb45H-LsiHmt_ZoAYWg7fSDA) for examples
+Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent to the more          specific selector --refer to [here](http://isobar-idev.github.io/code-standards/#_css_formatting) for examples
 
 
 >  This gives a nice hierarchical structure to the file and helps to visually group css rules by indentation. 
@@ -115,7 +115,7 @@ Group related/hierarchical style specifications (eg :hover, child specifier, etc
 
 ### Use of Efficient Selectors:<a name="use-of-efficient-selectors"></a>
 
-Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing           efficient CSS](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS%23Guidelines_for_Efficient_CSS&sa=D&ust=1480622086019000&usg=AFQjCNEyqjnbD45y_Rw9xotN4CDhlJ8iwA) for examples
+Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing           efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples
 
 
 >  This speeds up the css match lookup. If such a qualification is actually required, either use another 
@@ -124,7 +124,7 @@ Do not qualify class/ID selectors using tag names (do not use: div.mainContent, 
    (see naming standards for classes).
 
 
- Use Child selector rather than descendant selector (use ‘#container > span’ rather than ‘#container span’) -- refer to [Writing efficient CSS](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS%23Guidelines_for_Efficient_CSS&sa=D&ust=1480622086019000&usg=AFQjCNEyqjnbD45y_Rw9xotN4CDhlJ8iwA) for examples
+ Use Child selector rather than descendant selector (use ‘#container > span’ rather than ‘#container span’) -- refer to [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples
 
 
 >  This is a strong recommendation as descendant selector is extremely expensive, especially when the 
@@ -133,9 +133,9 @@ Do not qualify class/ID selectors using tag names (do not use: div.mainContent, 
 ## Classes<a name="classes"></a>
 
 ### Naming Standards<a name="naming-standards"></a>
- Use all lowercase letters <br>
- Separate words with hyphens (‘-’) and no other separator <br>
- We use 2 kinds of classes: Atomic and Component
+Use all lowercase letters <br>
+Separate words with hyphens (‘-’) and no other separator <br>
+We use 2 kinds of classes: Atomic and Component
 
 ```css
    /* Component Class */
@@ -206,7 +206,7 @@ Space after colon <br>
 Drop the units for 0 values (eg: margin: 0) <br>
 All attribute(s) are to be specified in individual lines <br>
 Attributes must have one more indentation than the selector <br>
-indent attributes that require browser specifications so that the actual attribute being declared are in one column --refer to [Writing Your Best Code](https://www.google.com/url?q=http://learn.shayhowe.com/html-css/writing-your-best-code/%23css-coding-practices&sa=D&ust=1480717086146000&usg=AFQjCNEmbPGCl_znVtLr8ud0kbW3_jbbwQ) for examples <br>
+Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples <br>
 
 ### General Details<a name="general-details"></a>
 
@@ -224,11 +224,11 @@ DO NOT use `!important` specifier <br>
 ## Resources<a name="resources"></a>   
 
 ### Highly Recommended<a name="highly-recommended"></a>
- - [Google CSS Style Guide](https://www.google.com/url?q=https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml&sa=D&ust=1480461672641000&usg=AFQjCNFamL4PYjTTMrqBsHCGBgQdl5IZCg)
- - [Writing Your Best Code](https://www.google.com/url?q=http://learn.shayhowe.com/html-css/writing-your-best-code/%23css-coding-practices&sa=D&ust=1480461672642000&usg=AFQjCNHtGiad1-XEIElzKPKmTxUYP1t1AQ)
+ - [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
+ - [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices)
 
 ### Other Readings<a name="other-readings"></a>
- - [Isobar Coding Standards](https://www.google.com/url?q=http://isobar-idev.github.io/code-standards/&sa=D&ust=1480461672643000&usg=AFQjCNHERbOy_onAr0b5IDIplnahd4PknA)
- - [30 CSS Best Practices For Beginners](https://www.google.com/url?q=http://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741&sa=D&ust=1480461672644000&usg=AFQjCNFAgLMbsNjA-2kz3uWDkN39Dc3NMA)
- - [Writing efficient CSS (MDN article)](https://www.google.com/url?q=https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS&sa=D&ust=1480461672644000&usg=AFQjCNHphBRs8U7j2qvrWW0cGYuHvjOeOg)
- - [A list of CSS style guides](https://www.google.com/url?q=http://css-tricks.com/css-style-guides/&sa=D&ust=1480461672645000&usg=AFQjCNG4XuhlqAJNkU_Yn_V9BuSwRjqMaw)
+ - [Isobar Coding Standards](http://isobar-idev.github.io/code-standards/)
+ - [30 CSS Best Practices For Beginners](https://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741)
+ - [Writing efficient CSS (MDN article)](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
+ - [A list of CSS style guides](https://css-tricks.com/css-style-guides)
