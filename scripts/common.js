@@ -244,8 +244,8 @@ function addStickyBehaviour(accordionHeaderSelector) {
     $(window).scroll(function(){
         var stickyHeader = $(accordionHeaderSelector);
         var placeholder = $(accordionHeaderSelector + '-placeholder');
-        var isActive = stickyHeader.hasClass('ui-accordion-header-active');
-        var isSticky = stickyHeader.hasClass('ui-accordion-header-sticky');
+        var isExpanded = header.hasClass('ui-accordion-header-active');
+        var isFrozen = header.hasClass('ui-accordion-header-sticky');
         var isAdd = false;
         var isRemove = false;
         if (isActive) {
