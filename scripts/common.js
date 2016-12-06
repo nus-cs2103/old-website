@@ -285,21 +285,25 @@ function addStickyBehaviour(accordionHeaderSelector) {
         var isFrozen = header.hasClass('ui-accordion-header-sticky');
         if (isExpanded) {
             if (!isFrozen) {
+                // Check if scrolled past the header
                 if (header.top() < $(this).scrollTop()) {
+                    // Check if freezing the header will not exceed the week
                     if ($(this).scrollTop() + header.outerHeight() < accordion.bottom()) {
                         header.freeze();
                     }
                 }
-            } else {
+            } else { // isFixedTop
                 if (header.top() < accordion.top()) {
+                    // Scrolled above the week
                     header.unfreeze();
                 } else {
+                    // Check if scrolled past the week
                     if (header.bottom() > accordion.bottom()) {
                         header.unfreeze();
                     }
                 }
             }
-        } else {
+        } else { // !isExpanded
             if (isFrozen) {
                 header.unfreeze();
             }
