@@ -251,8 +251,10 @@ function addStickyBehaviour(accordionHeaderSelector) {
             }
         }
         if (isAdd) {
+            stickyHeader.css({ width: String(stickyHeader.width()) });
             stickyHeader.addClass('ui-accordion-header-sticky');
         } else if (isRemove) {
+            stickyHeader.css({ width: '' });
             stickyHeader.removeClass('ui-accordion-header-sticky');
         }
     });
