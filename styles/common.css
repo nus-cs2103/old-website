@@ -251,6 +251,12 @@ code{
     border-color: #d9534f;
 }
 
+.ui-accordion-header-sticky {
+    position: fixed !important;
+    top: -2px;
+    z-index: 1;
+}
+
 /*
  * buttons
  */

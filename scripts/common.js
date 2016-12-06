@@ -232,6 +232,32 @@ function addAutoExpandSubheadingsBehaviour(component) {
     });
 }
 
+function addStickyBehaviour(accordionHeaderSelector) {
+    $(window).scroll(function(){
+        var stickyHeader = $(accordionHeaderSelector);
+        var isActive = stickyHeader.hasClass('ui-accordion-header-active');
+        var isSticky = stickyHeader.hasClass('ui-accordion-header-sticky');
+        var isAdd = false;
+        var isRemove = false;
+        if (isActive) {
+            if (!isSticky) {
+                if (stickyHeader.offset().top < $(this).scrollTop()) {
+                    isAdd = true;
+                }
+            }
+        } else {
+            if (isSticky) {
+                isRemove = true;
+            }
+        }
+        if (isAdd) {
+            stickyHeader.addClass('ui-accordion-header-sticky');
+        } else if (isRemove) {
+            stickyHeader.removeClass('ui-accordion-header-sticky');
+        }
+    });
+}
+
 /**
  * Iterates through 'date-marker' span class and generates the corresponding dates based on the moduleStartDate.
  * Refer to the top of the file to set the start of the module date.
@@ -283,6 +309,7 @@ $(document).ready(function() {
         var id = $(this).attr('id');
         var week = id.substr(('header-content-week').length);
         addCollapseAndExpandButtonsForWeek('#' + id, 'content-week' + week);
+        addStickyBehaviour('#' + id);
     });
     var headerHeight = 40;
     var topMargin = 5;
