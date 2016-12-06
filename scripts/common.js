@@ -276,6 +276,20 @@ function addAutoScrollToClickedWeekHeader() {
     });
 }
 
+function addModalToImg() {
+    var popupClassName = 'image-popup-fit-width';
+    $('img').wrap(function() {
+        return '<a class="' + popupClassName + '" href="' + $(this).attr('src') + '"></a>';
+    });
+    $('.' + popupClassName).magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        image: {
+            verticalFit: false
+        }
+    });
+}
+
 $(document).ready(function() {
 
     makeAccordion('.weeklyschedule');
@@ -338,4 +352,8 @@ $(document).ready(function() {
         }
     });
 
+});
+
+$(window).load(function() {
+    addModalToImg();
 });
