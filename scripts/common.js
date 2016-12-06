@@ -244,6 +244,10 @@ function addStickyBehaviour(accordionHeaderSelector) {
                 if (stickyHeader.offset().top < $(this).scrollTop()) {
                     isAdd = true;
                 }
+            } else {
+                if (stickyHeader.offset().top < placeholder.offset().top) {
+                    isRemove = true;
+                }
             }
         } else {
             if (isSticky) {
