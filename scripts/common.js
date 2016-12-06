@@ -232,6 +232,39 @@ function addAutoExpandSubheadingsBehaviour(component) {
     });
 }
 
+function addTopAndBottomFunctions(object) {
+    object.top = function() {
+        return object.offset().top;
+    }
+    object.bottom = function() {
+        return object.top() + object.outerHeight();
+    }
+}
+
+function addMakePlaceholderFunction(accordionHeader) {
+    accordionHeader.makePlaceholder = function() {
+        var placeholder = $('<div></div>');
+        placeholder.attr('id', accordionHeader.attr('id') + '-placeholder');
+        placeholder.css({ height: String(accordionHeader.height()) });
+        placeholder.addClass('ui-accordion-header');
+        accordionHeader.placeholder = placeholder;
+    }
+}
+
+function addFreezeAndUnfreezeFunctions(accordionHeader) {
+    accordionHeader.freeze = function() {
+        accordionHeader.makePlaceholder();
+        accordionHeader.parent().prepend(accordionHeader.placeholder);
+        accordionHeader.css({ width: String(accordionHeader.width()) });
+        accordionHeader.addClass('ui-accordion-header-sticky');
+    }
+    accordionHeader.unfreeze = function() {
+        accordionHeader.placeholder.remove();
+        accordionHeader.css({ width: '' });
+        accordionHeader.removeClass('ui-accordion-header-sticky');
+    }
+}
+
 /**
  * Freezes the *expanded* accordion header when:
  * - scrolled past the header.
@@ -241,51 +274,35 @@ function addAutoExpandSubheadingsBehaviour(component) {
  * - scrolled past the week.
  */
 function addStickyBehaviour(accordionHeaderSelector) {
+    var header = $(accordionHeaderSelector);
+    var accordion = header.parent();
+    addTopAndBottomFunctions(accordion);
+    addTopAndBottomFunctions(header);
+    addMakePlaceholderFunction(header);
+    addFreezeAndUnfreezeFunctions(header);
     $(window).scroll(function(){
-        var stickyHeader = $(accordionHeaderSelector);
-        var placeholder = $(accordionHeaderSelector + '-placeholder');
         var isExpanded = header.hasClass('ui-accordion-header-active');
         var isFrozen = header.hasClass('ui-accordion-header-sticky');
-        var isAdd = false;
-        var isRemove = false;
-        if (isActive) {
-            if (!isSticky) {
-                if (stickyHeader.offset().top < $(this).scrollTop()) {
-                    var accordion = stickyHeader.parent();
-                    accordion.bottom = accordion.offset().top + accordion.outerHeight();
-                    if (stickyHeader.outerHeight() + $(this).scrollTop() < accordion.bottom) {
-                        isAdd = true;
+        if (isExpanded) {
+            if (!isFrozen) {
+                if (header.top() < $(this).scrollTop()) {
+                    if ($(this).scrollTop() + header.outerHeight() < accordion.bottom()) {
+                        header.freeze();
                     }
                 }
             } else {
-                if (stickyHeader.offset().top < placeholder.offset().top) {
-                    isRemove = true;
+                if (header.top() < accordion.top()) {
+                    header.unfreeze();
                 } else {
-                    stickyHeader.bottom = stickyHeader.offset().top + stickyHeader.outerHeight();
-                    var accordion = stickyHeader.parent();
-                    accordion.bottom = accordion.offset().top + accordion.outerHeight();
-                    if (stickyHeader.bottom > accordion.bottom) {
-                        isRemove = true;
+                    if (header.bottom() > accordion.bottom()) {
+                        header.unfreeze();
                     }
                 }
             }
         } else {
-            if (isSticky) {
-                isRemove = true;
+            if (isFrozen) {
+                header.unfreeze();
             }
-        }
-        if (isAdd) {
-            var placeholder = $('<div></div>');
-            placeholder.attr('id', stickyHeader.attr('id') + '-placeholder');
-            placeholder.css({ height: String(stickyHeader.height()) });
-            placeholder.addClass('ui-accordion-header');
-            stickyHeader.parent().prepend(placeholder);
-            stickyHeader.css({ width: String(stickyHeader.width()) });
-            stickyHeader.addClass('ui-accordion-header-sticky');
-        } else if (isRemove) {
-            placeholder.remove();
-            stickyHeader.css({ width: '' });
-            stickyHeader.removeClass('ui-accordion-header-sticky');
         }
     });
 }
