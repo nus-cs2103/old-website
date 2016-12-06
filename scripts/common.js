@@ -243,11 +243,22 @@ function addStickyBehaviour(accordionHeaderSelector) {
         if (isActive) {
             if (!isSticky) {
                 if (stickyHeader.offset().top < $(this).scrollTop()) {
-                    isAdd = true;
+                    var accordion = stickyHeader.parent();
+                    accordion.bottom = accordion.offset().top + accordion.outerHeight();
+                    if (stickyHeader.outerHeight() + $(this).scrollTop() < accordion.bottom) {
+                        isAdd = true;
+                    }
                 }
             } else {
                 if (stickyHeader.offset().top < placeholder.offset().top) {
                     isRemove = true;
+                } else {
+                    stickyHeader.bottom = stickyHeader.offset().top + stickyHeader.outerHeight();
+                    var accordion = stickyHeader.parent();
+                    accordion.bottom = accordion.offset().top + accordion.outerHeight();
+                    if (stickyHeader.bottom > accordion.bottom) {
+                        isRemove = true;
+                    }
                 }
             }
         } else {
