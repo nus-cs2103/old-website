@@ -235,6 +235,7 @@ function addAutoExpandSubheadingsBehaviour(component) {
 function addStickyBehaviour(accordionHeaderSelector) {
     $(window).scroll(function(){
         var stickyHeader = $(accordionHeaderSelector);
+        var placeholder = $(accordionHeaderSelector + '-placeholder');
         var isActive = stickyHeader.hasClass('ui-accordion-header-active');
         var isSticky = stickyHeader.hasClass('ui-accordion-header-sticky');
         var isAdd = false;
@@ -255,9 +256,15 @@ function addStickyBehaviour(accordionHeaderSelector) {
             }
         }
         if (isAdd) {
+            var placeholder = $('<div></div>');
+            placeholder.attr('id', stickyHeader.attr('id') + '-placeholder');
+            placeholder.css({ height: String(stickyHeader.height()) });
+            placeholder.addClass('ui-accordion-header');
+            stickyHeader.parent().prepend(placeholder);
             stickyHeader.css({ width: String(stickyHeader.width()) });
             stickyHeader.addClass('ui-accordion-header-sticky');
         } else if (isRemove) {
+            placeholder.remove();
             stickyHeader.css({ width: '' });
             stickyHeader.removeClass('ui-accordion-header-sticky');
         }
