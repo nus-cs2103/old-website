@@ -232,6 +232,14 @@ function addAutoExpandSubheadingsBehaviour(component) {
     });
 }
 
+/**
+ * Freezes the *expanded* accordion header when:
+ * - scrolled past the header.
+ *
+ * Unfreezes the *frozen* accordion header when:
+ * - scrolled above the week, or
+ * - scrolled past the week.
+ */
 function addStickyBehaviour(accordionHeaderSelector) {
     $(window).scroll(function(){
         var stickyHeader = $(accordionHeaderSelector);
