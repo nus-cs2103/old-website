@@ -251,8 +251,8 @@ code{
     border-color: #d9534f;
 }
 
-.ui-accordion-header-sticky {
-    position: fixed !important;
+.ui-accordion-header-active.ui-accordion-header-sticky {
+    position: fixed;
     top: -2px;
     z-index: 1;
 }
