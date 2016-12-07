@@ -314,13 +314,14 @@ function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
                 header.unfreeze();
             }
         } else { // !isFrozen
-            if (isExpanded) {
-                if (header.top() < $(this).scrollTop()) { // Scrolled past header
-                    if ($(this).scrollTop() + header.outerHeight() < accordion.bottom()) {
-                        // Freezing the header will not exceed the week accordion
-                        header.freeze();
-                    }
-                }
+            if (!isExpanded) {
+                return;
+            } else if (header.top() > $(this).scrollTop()) { // Not scrolled past header
+                return;
+            }
+            var isFreezingExceedsWeek = $(this).scrollTop() + header.outerHeight() > accordion.bottom();
+            if (!isFreezingExceedsWeek) {
+                header.freeze();
             }
         }
     });
