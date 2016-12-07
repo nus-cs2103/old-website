@@ -311,7 +311,7 @@ function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
             if (!isExpanded || isScrolledAboveWeek || isScrolledPastWeek) {
                 header.unfreeze();
             }
-        } else if (!isFrozen) {
+        } else { // !isFrozen
             var isScrolledPastHeader = header.top() < $(this).scrollTop();
             var isFreezingExceedsWeek = $(this).scrollTop() + header.outerHeight() > accordion.bottom();
             if (isExpanded && isScrolledPastHeader && !isFreezingExceedsWeek) {
