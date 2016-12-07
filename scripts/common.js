@@ -232,15 +232,25 @@ function addAutoExpandSubheadingsBehaviour(component) {
     });
 }
 
+/**
+ * Adds the 'top' and 'bottom' functions to any jQuery object.
+ * These return the offset positions relative to the document.
+ */
 function addTopAndBottomFunctions(object) {
     object.top = function() {
         return object.offset().top;
     }
     object.bottom = function() {
-        return object.top() + object.outerHeight();
+        return object.offset().top + object.outerHeight();
     }
 }
 
+/**
+ * Adds the 'makePlaceholder' function to week headings (jQuery object).
+ * The placeholder is a 'div' with the original id appended with '-placeholder'.
+ * The placeholder is created, as the name implies, but not automatically added.
+ * The reference to the placeholder is stored as attribute in the jQuery object.
+ */
 function addMakePlaceholderFunction(accordionHeader) {
     accordionHeader.makePlaceholder = function() {
         var placeholder = $('<div></div>');
@@ -251,6 +261,12 @@ function addMakePlaceholderFunction(accordionHeader) {
     }
 }
 
+/**
+ * Adds the 'freeze' and 'unfreeze' functions to week headings (jQuery object).
+ * A week heading that is 'frozen' has its position fixed at the top of a page.
+ * A placeholder is used to avoid jerky transition, since fixing a html element
+ *  will cause 'position: relative' elements to shift up to fill vacated space.
+ */
 function addFreezeAndUnfreezeFunctions(accordionHeader) {
     accordionHeader.freeze = function() {
         accordionHeader.makePlaceholder();
