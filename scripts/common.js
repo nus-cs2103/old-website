@@ -282,12 +282,15 @@ function addFreezeAndUnfreezeFunctions(accordionHeader) {
 }
 
 /**
+ * Adds the 'sticky' behaviour to week headings.
  * Freezes the *expanded* accordion header when:
  * - scrolled past the header.
- *
  * Unfreezes the *frozen* accordion header when:
  * - scrolled above the week, or
  * - scrolled past the week.
+ * Disambiguation of terms:
+ * - 'sticky' describes the above dynamic behaviour.
+ * - 'frozen' describes the current state, whether position is fixed at the top.
  */
 function addStickyBehaviour(accordionHeaderSelector) {
     var header = $(accordionHeaderSelector);
