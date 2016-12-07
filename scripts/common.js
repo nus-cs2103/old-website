@@ -268,6 +268,8 @@ function addMakePlaceholderFunction(accordionHeader) {
  *  will cause 'position: relative' elements to shift up to fill vacated space.
  */
 function addFreezeAndUnfreezeFunctions(accordionHeader) {
+    addMakePlaceholderFunction(accordionHeader);
+
     accordionHeader.freeze = function() {
         accordionHeader.makePlaceholder();
         accordionHeader.parent().prepend(accordionHeader.placeholder);
@@ -297,7 +299,6 @@ function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
     var accordion = header.parent();
     addTopAndBottomFunctions(accordion);
     addTopAndBottomFunctions(header);
-    addMakePlaceholderFunction(header);
     addFreezeAndUnfreezeFunctions(header);
     $(window).scroll(function(){
         var isExpanded = header.hasClass('ui-accordion-header-active');
