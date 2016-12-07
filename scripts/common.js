@@ -304,24 +304,17 @@ function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
 
     $(window).scroll(function(){
         var isFrozen = header.hasClass('ui-accordion-header-sticky');
-        var isCollapsed = !header.hasClass('ui-accordion-header-active');
+        var isExpanded = header.hasClass('ui-accordion-header-active');
         if (isFrozen) {
-            if (isCollapsed) {
-                header.unfreeze();
-            } else if (header.top() < accordion.top()) { // Scrolled above week
-                header.unfreeze();
-            } else if (header.bottom() > accordion.bottom()) { // Scrolled past week
+            var isScrolledAboveWeek = header.top() < accordion.top();
+            var isScrolledPastWeek = header.bottom() > accordion.bottom();
+            if (!isExpanded || isScrolledAboveWeek || isScrolledPastWeek) {
                 header.unfreeze();
             }
-        } else { // !isFrozen
-            if (isCollapsed) {
-                return;
-            }
-            if (header.top() > $(this).scrollTop()) { // Not scrolled past header
-                return;
-            }
+        } else if (!isFrozen) {
+            var isScrolledPastHeader = header.top() < $(this).scrollTop();
             var isFreezingExceedsWeek = $(this).scrollTop() + header.outerHeight() > accordion.bottom();
-            if (!isFreezingExceedsWeek) {
+            if (isExpanded && isScrolledPastHeader && !isFreezingExceedsWeek) {
                 header.freeze();
             }
         }
