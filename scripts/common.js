@@ -292,7 +292,7 @@ function addFreezeAndUnfreezeFunctions(accordionHeader) {
  * - 'sticky' describes the above dynamic behaviour.
  * - 'frozen' describes the current state, whether position is fixed at the top.
  */
-function addStickyBehaviour(accordionHeaderSelector) {
+function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
     var header = $(accordionHeaderSelector);
     var accordion = header.parent();
     addTopAndBottomFunctions(accordion);
@@ -381,7 +381,7 @@ $(document).ready(function() {
         var id = $(this).attr('id');
         var week = id.substr(('header-content-week').length);
         addCollapseAndExpandButtonsForWeek('#' + id, 'content-week' + week);
-        addStickyBehaviour('#' + id);
+        addStickyBehaviourToWeekHeadings('#' + id);
     });
     var headerHeight = 40;
     var topMargin = 5;
