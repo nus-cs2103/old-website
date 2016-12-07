@@ -297,35 +297,30 @@ function addFreezeAndUnfreezeFunctions(accordionHeader) {
 function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
     var header = $(accordionHeaderSelector);
     var accordion = header.parent();
+
     addTopAndBottomFunctions(accordion);
     addTopAndBottomFunctions(header);
     addFreezeAndUnfreezeFunctions(header);
+
     $(window).scroll(function(){
-        var isExpanded = header.hasClass('ui-accordion-header-active');
         var isFrozen = header.hasClass('ui-accordion-header-sticky');
-        if (isExpanded) {
-            if (!isFrozen) {
-                // Check if scrolled past the header
-                if (header.top() < $(this).scrollTop()) {
-                    // Check if freezing the header will not exceed the week
+        var isExpanded = header.hasClass('ui-accordion-header-active');
+        if (isFrozen) {
+            if (!isExpanded) { // Header collapsed
+                header.unfreeze();
+            } else if (header.top() < accordion.top()) { // Scrolled above week
+                header.unfreeze();
+            } else if (header.bottom() > accordion.bottom()) { // Scrolled past week
+                header.unfreeze();
+            }
+        } else { // !isFrozen
+            if (isExpanded) {
+                if (header.top() < $(this).scrollTop()) { // Scrolled past header
                     if ($(this).scrollTop() + header.outerHeight() < accordion.bottom()) {
+                        // Freezing the header will not exceed the week accordion
                         header.freeze();
                     }
                 }
-            } else { // isFixedTop
-                if (header.top() < accordion.top()) {
-                    // Scrolled above the week
-                    header.unfreeze();
-                } else {
-                    // Check if scrolled past the week
-                    if (header.bottom() > accordion.bottom()) {
-                        header.unfreeze();
-                    }
-                }
-            }
-        } else { // !isExpanded
-            if (isFrozen) {
-                header.unfreeze();
             }
         }
     });
