@@ -40,18 +40,6 @@ img {
 	height: auto;
 }
 
-/* 740px since max-width of body is set to 740px
-   Any device whose view is below 740px will use this*/
-@media screen and (max-device-width: 740px) {
-	body{
-		max-width: 100%;
-	}
-
-    #overlay {
-        width: 50%;
-    }
-}
-
 #back-to-top-button{
 	display: none;
 	position: fixed;
@@ -82,4 +70,16 @@ img {
     font-family: sans-serif;
     color: #ffffff;
     transform: translate(-50%, -50%);
+}
+
+/* 740px since max-width of body is set to 740px
+   Any device whose view is below 740px will use this*/
+@media screen and (max-device-width: 740px) {
+    body{
+        max-width: 100%;
+    }
+
+    #overlay {
+        width: 50%;
+    }
 }
