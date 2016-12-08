@@ -444,6 +444,10 @@ img {
     body{
         max-width: 100%;
     }
+
+    #overlay {
+        width: 50%;
+    }
 }
 
 /* For any device whose view is 500px or below */
