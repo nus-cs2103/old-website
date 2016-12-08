@@ -11,7 +11,6 @@ setTimeout(function () {
                 $('#' + section).html(data);
                 var isLastSection = (i == sections.length-1);
                 if (isLastSection) {
-                    $('#modal').remove();
                     $('#overlay').remove();
                 }
             }
