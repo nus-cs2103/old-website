@@ -233,6 +233,95 @@ function addAutoExpandSubheadingsBehaviour(component) {
 }
 
 /**
+ * Adds the 'top' and 'bottom' functions to any jQuery object.
+ * These return the offset positions relative to the document.
+ */
+function addTopAndBottomFunctions(object) {
+    object.top = function() {
+        return object.offset().top;
+    }
+    object.bottom = function() {
+        return object.offset().top + object.outerHeight();
+    }
+}
+
+/**
+ * Adds the 'makePlaceholder' function to week headings (jQuery object).
+ * The placeholder is a 'div' with the original id appended with '-placeholder'.
+ * The placeholder is created, as the name implies, but not automatically added.
+ * The reference to the placeholder is stored as attribute in the jQuery object.
+ */
+function addMakePlaceholderFunction(accordionHeader) {
+    accordionHeader.makePlaceholder = function() {
+        var placeholder = $('<div></div>');
+        placeholder.attr('id', accordionHeader.attr('id') + '-placeholder');
+        placeholder.css({ height: String(accordionHeader.height()) });
+        placeholder.addClass('ui-accordion-header');
+        accordionHeader.placeholder = placeholder;
+    }
+}
+
+/**
+ * Adds the 'freeze' and 'unfreeze' functions to week headings (jQuery object).
+ * A week heading that is 'frozen' has its position fixed at the top of a page.
+ * A placeholder is used to avoid jerky transition, since fixing a html element
+ *  will cause 'position: relative' elements to shift up to fill vacated space.
+ */
+function addFreezeAndUnfreezeFunctions(accordionHeader) {
+    addMakePlaceholderFunction(accordionHeader);
+
+    accordionHeader.freeze = function() {
+        accordionHeader.makePlaceholder();
+        accordionHeader.parent().prepend(accordionHeader.placeholder);
+        accordionHeader.css({ width: String(accordionHeader.width()) });
+        accordionHeader.addClass('ui-accordion-header-sticky');
+    }
+    accordionHeader.unfreeze = function() {
+        accordionHeader.placeholder.remove();
+        accordionHeader.css({ width: '' });
+        accordionHeader.removeClass('ui-accordion-header-sticky');
+    }
+}
+
+/**
+ * Adds the 'sticky' behaviour to week headings.
+ * Freezes the *expanded* accordion header when:
+ * - scrolled past the header.
+ * Unfreezes the *frozen* accordion header when:
+ * - scrolled above the week, or
+ * - scrolled past the week.
+ * Disambiguation of terms:
+ * - 'sticky' describes the above dynamic behaviour.
+ * - 'frozen' describes the current state, whether position is fixed at the top.
+ */
+function addStickyBehaviourToWeekHeadings(accordionHeaderSelector) {
+    var header = $(accordionHeaderSelector);
+    var accordion = header.parent();
+
+    addTopAndBottomFunctions(accordion);
+    addTopAndBottomFunctions(header);
+    addFreezeAndUnfreezeFunctions(header);
+
+    $(window).scroll(function(){
+        var isFrozen = header.hasClass('ui-accordion-header-sticky');
+        var isExpanded = header.hasClass('ui-accordion-header-active');
+        if (isFrozen) {
+            var isScrolledAboveWeek = header.top() < accordion.top();
+            var isScrolledPastWeek = header.bottom() > accordion.bottom();
+            if (!isExpanded || isScrolledAboveWeek || isScrolledPastWeek) {
+                header.unfreeze();
+            }
+        } else { // !isFrozen
+            var isScrolledPastHeader = header.top() < $(this).scrollTop();
+            var isFreezingExceedsWeek = $(this).scrollTop() + header.outerHeight() > accordion.bottom();
+            if (isExpanded && isScrolledPastHeader && !isFreezingExceedsWeek) {
+                header.freeze();
+            }
+        }
+    });
+}
+
+/**
  * Iterates through 'date-marker' span class and generates the corresponding dates based on the moduleStartDate.
  * Refer to the top of the file to set the start of the module date.
  * To specify a date, add '<span class="date-marker" week="1" day="1"></span>' in the html file.
@@ -283,6 +372,7 @@ $(document).ready(function() {
         var id = $(this).attr('id');
         var week = id.substr(('header-content-week').length);
         addCollapseAndExpandButtonsForWeek('#' + id, 'content-week' + week);
+        addStickyBehaviourToWeekHeadings('#' + id);
     });
     var headerHeight = 40;
     var topMargin = 5;
