@@ -9,12 +9,15 @@ setTimeout(function () {
             },
             success: function(data) {
                 $('#' + section).html(data);
+                var isLastSection = (i == sections.length-1);
+                if (isLastSection) {
+                    $('#modal').remove();
+                    $('#overlay').remove();
+                }
             }
         });
     }
 }, 0);
-$('#modal').remove();
-$('#overlay').remove();
 
 function isTableOfContentVisible() {
     var windowTop = $(window).scrollTop();
