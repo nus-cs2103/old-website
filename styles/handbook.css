@@ -40,14 +40,6 @@ img {
 	height: auto;
 }
 
-/* 740px since max-width of body is set to 740px
-   Any device whose view is below 740px will use this*/
-@media screen and (max-device-width: 740px) {
-	body{
-		max-width: 100%;
-	}
-}
-
 #back-to-top-button{
 	display: none;
 	position: fixed;
@@ -63,4 +55,31 @@ img {
 #back-to-top-button:hover{
 	color: #3c763d;
 	background: #dff0d8;
+}
+
+#overlay {
+    width: 20%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    line-height: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: large;
+    font-family: sans-serif;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+/* 740px since max-width of body is set to 740px
+   Any device whose view is below 740px will use this*/
+@media screen and (max-device-width: 740px) {
+    body{
+        max-width: 100%;
+    }
+
+    #overlay {
+        width: 50%;
+    }
 }

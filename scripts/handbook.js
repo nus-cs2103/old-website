@@ -1,18 +1,19 @@
-for (var i in sections) {
-    var section = sections[i];
-    $.ajax({
-        type: 'GET',
-        async: false,
-        url: section + '.html',
-        error: function() {
-        },
-        success: function(data) {
-            $('#' + section).html(data);
-        }
-    });
-}
-$('#modal').remove();
-$('#overlay').remove();
+setTimeout(function () {
+    for (var i in sections) {
+        var section = sections[i];
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: section + '.html',
+            error: function() {
+            },
+            success: function(data) {
+                $('#' + section).html(data);
+            }
+        });
+    }
+    $('#overlay').remove();
+}, 0);
 
 function isTableOfContentVisible() {
     var windowTop = $(window).scrollTop();
