@@ -64,7 +64,7 @@ NO inline style sheets or inline styles in the html/jsp files.
    }
    ``` 
 ```css
-    <!-- no inline stylesheets →
+    <!-- no inline stylesheets -->
     <style>
     #mainDiv {
         color: white;
@@ -129,7 +129,6 @@ Do not qualify class/ID selectors using tag names (do not use: div.mainContent, 
 Use all lowercase letters. <br>
 Separate words with hyphens (‘-’) and no other separator. <br>
 We use 2 kinds of classes: Atomic and Component.
-
 ```css
    /* Component Class */
    .comment-list
