@@ -59,17 +59,18 @@ NO inline style sheets or inline styles in the html/jsp files.
    /* write styles only in the external file teammatesCommon.css */
    #mainDiv {
        border: thin solid black;
-        color:white;
-        margin: auto;
+       color:white;
+       margin: auto;
    }
    ``` 
+   
 ```css
-    <!-- no inline stylesheets -->
-    <style>
-    #mainDiv {
-        color: white;
-    }
-    </style>
+   <!-- no inline stylesheets -->
+   <style>
+   #mainDiv {
+       color: white;
+   }
+   </style>
 
    <!-- no inline styling in tags -->
    <div id="mainDiv" style="border: thin solid black; margin: auto">
@@ -88,11 +89,11 @@ NO inline style sheets or inline styles in the html/jsp files.
 ### Selector Formatting:<a name="selector-formatting"></a>
    The selector(s) must be specified in separate lines. 
 ```css
-    /* Each selector in a new line */
-    .button-sort-ascending:hover,
-    .button-sort-none:hover {
-    cursor: pointer;
-    }
+   /* Each selector in a new line */
+   .button-sort-ascending:hover,
+   .button-sort-none:hover {
+   cursor: pointer;
+   }
    ```
 ```css   
    /* do not write them in the same line */
@@ -108,7 +109,6 @@ Group related/hierarchical style specifications (eg :hover, child specifier, etc
    In addition this gives an immediate idea as to how certain classes are being used in the HTML files 
    (from the hierarchy) without actually reading HTML files.
 
-
 ### Use of Efficient Selectors:<a name="use-of-efficient-selectors"></a>
 
 Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples.
@@ -123,12 +123,12 @@ Do not qualify class/ID selectors using tag names (do not use: div.mainContent, 
 >  This is a strong recommendation as descendant selector is extremely expensive, especially when the 
    specified ancestor has a lot of descendants.
 
-
 ## Classes<a name="classes"></a>
 ### Naming Standards<a name="naming-standards"></a>
 Use all lowercase letters. <br>
 Separate words with hyphens (‘-’) and no other separator. <br>
 We use 2 kinds of classes: Atomic and Component.
+
 ```css
    /* Component Class */
    .comment-list
@@ -138,11 +138,12 @@ We use 2 kinds of classes: Atomic and Component.
    .border-gray
    ```
 ```css
-    /* do not use these */
-    .commentList
-    .sort_icon
-    .centeralign
+   /* do not use these */
+   .commentList
+   .sort_icon
+   .centeralign
    ```
+   
 >  Atomic Classes describe atomic attributes like border-gray, align-center that can be used on any element. 
    They have at most 2 rules in them. Start their names with the attribute, followed by the value.  
    (eg: .align-center and not .center-align)
@@ -150,21 +151,19 @@ We use 2 kinds of classes: Atomic and Component.
 >  Component Classes are used for components that have a particular role that (preferably) recurs in multiple 
    pages. To name these classes, describe the function of the element rather than its location. 
    (eg: .panel-details rather than .top-details-box)
-   
+  
  When adding classes to style elements in the page, follow the following steps:<br>
-
+ 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ Try and style the entire component using bootstrap. <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ For any additional css, if the component is used in many places create a functional name for the class. <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ If the component does not have any recurring function, utilise the generic classes to achieve the styling. <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
-
 ## Attributes<a name="attributes"></a> 
 ### Order of Attributes<a name="order-of-attributes"></a>
-
+ 
  Alphabetize the attributes, disregarding any browser prefix. <br>
  All browser prefixed versions of an attribute must be written together.
-
 ```css
    /* code the attributes in alphabetical order */
    .sort-icon {
@@ -173,7 +172,7 @@ We use 2 kinds of classes: Atomic and Component.
        height: 17px;
        margin-top: 1px;
        width: 12px;
-    }
+   }
    ```
 ```css
    .sort-icon {
@@ -182,7 +181,7 @@ We use 2 kinds of classes: Atomic and Component.
        display: block;
        margin-top: 1px;
        float: right;
-    }  
+   }  
    ```   
 >  This way looking for an attribute is faster.
   
