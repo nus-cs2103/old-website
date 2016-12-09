@@ -9,13 +9,10 @@ setTimeout(function () {
             },
             success: function(data) {
                 $('#' + section).html(data);
-                var isLastSection = (i == sections.length-1);
-                if (isLastSection) {
-                    $('#overlay').remove();
-                }
             }
         });
     }
+    $('#overlay').remove();
 }, 0);
 
 function isTableOfContentVisible() {
