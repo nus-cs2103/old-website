@@ -16,13 +16,13 @@ If you would like to contribute code, here is the procedure:
 2. Make sure what you want to contribute is already listed as an open issue in our issue tracker.
    If it is not, post it as an issue first and wait for it to get accepted (an issue is considered
    'accepted' when it is assigned a `priority.*` label).
-2. You may choose an issue labeled `forFirstTimers` as your first issue, if there are any.
+3. You may choose an issue labeled `forFirstTimers` as your first issue, if there are any.
    But do not do more than one `forFirstTimers` issues.
-3. Clone your fork onto your Computer.
-4. Create a branch. The branch name should be in the format `issue-number-some-key-words`,
+4. Clone your fork onto your Computer.
+5. Create a branch. The branch name should be in the format `issue-number-some-key-words`,
    i.e. issue number followed by 2-4 key words related to the issue description,
    e.g. `12-broken-link-week1-schedule`.
-5. Implement your fix in the new branch.
+6. Implement your fix in the new branch.
    * Use 2 spaces for indenting (not `tab`, not 4 or 8 spaces).
    * Minimize inline styles.
    * When in doubt, you can refer to these style guides from the
@@ -30,11 +30,11 @@ If you would like to contribute code, here is the procedure:
      [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true),
      [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub),
      [HTML](https://cdn.rawgit.com/nus-cs2103/website/master/contents/coding-standards-html.html)
-6. Test the code in your computer.<br>
+7. Test the code in your computer.<br>
    Tip: When testing local html files, some JavaScripts might not work
    in Firefox or Chrome. In that case you can use IE. Alternatively, you can [start a web server
    in your Computer](https://gist.github.com/willurd/5720255).
-7. When the fix is ready,
+8. When the fix is ready,
    1. Ensure that your fork has the latest code from this repo (the repo you forked from is called
       the `upstream` repo). The code in the upstream repo may have been updated while you were fixing the issue.
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/).
@@ -51,13 +51,13 @@ If you would like to contribute code, here is the procedure:
       is closed automatically when the PR is merged.<br>
       Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/78)
       is an example.
-   3. Check the diff view of the PR to ensure it contains the intended changes only.
-8. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
+   4. Check the diff view of the PR to ensure it contains the intended changes only.
+9. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
    revise the code, push the new commits to your branch, and post a comment to say the pull request
    is ready for review again.
-9. When your code is acceptable, it will be merged to this repo. Your fix will be included in the
+10. When your code is acceptable, it will be merged to this repo. Your fix will be included in the
    next release of the website.
-10. After your fix is merged, you may wish to create another PR to add your name to the [`CONTRIBUTORS.md`](CONTRIBUTORS.md) file.
+11. After your fix is merged, you may wish to create another PR to add your name to the [`CONTRIBUTORS.md`](CONTRIBUTORS.md) file.
     There is no need to create a corresponding issue for that PR.
 
 ## Acknowledgements
