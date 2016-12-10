@@ -21,7 +21,7 @@ If you would like to contribute code, here is the procedure:
 4. Clone your fork onto your Computer.
 5. Create a branch. The branch name should be in the format `issue-number-some-key-words`,
    i.e. issue number followed by 2-4 key words related to the issue description,
-   e.g. `12-broken-link-week1-schedule`.
+   e.g. `112-fix-loading-overlay-handbook`.
 6. Implement your fix in the new branch.
    * Use 2 spaces for indenting (not `tab`, not 4 or 8 spaces).
    * Minimize inline styles.
@@ -46,10 +46,10 @@ If you would like to contribute code, here is the procedure:
       e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
    3. Create a pull request (PR) against the `master` branch of this repo.<br>
       When naming the PR, copy and paste the name of the issue you are fixing, including the original issue number.<br>
-      e.g. `Handbook TOC links are not working in iPhone browser #19`<br>
-      In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #24` so that the corresponding issue
+      e.g. `Fix size and position of 'Page Loading...' overlay in handbook page #112`.<br>
+      In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #112`) so that the corresponding issue
       is closed automatically when the PR is merged.<br>
-      Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/78)
+      Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/202)
       is an example.
    4. Check the diff view of the PR to ensure it contains the intended changes only.
 9. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
