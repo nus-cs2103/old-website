@@ -21,7 +21,7 @@ If you would like to contribute code, here is the procedure:
 4. Clone your fork onto your Computer.
 5. Create a branch. The branch name should be in the format `issue-number-some-key-words`,
    i.e. issue number followed by 2-4 key words related to the issue description,
-   e.g. `12-broken-link-week1-schedule`.
+   e.g. `112-fix-loading-overlay-handbook`.
 6. Implement your fix in the new branch.
    * Use 2 spaces for indenting (not `tab`, not 4 or 8 spaces).
    * Minimize inline styles.
@@ -40,16 +40,16 @@ If you would like to contribute code, here is the procedure:
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/).
    2. Stage your changes:<br>
       Your reviewer might want to see how your changes look like to a viewer of the website. To create a [*staging
-      site*](https://en.wikipedia.org/wiki/Staging_site) using [*GitHub Pages* feature](https://help.github.com/categories/github-pages-basics/), create a branch called `gh-pages`, merge your branch to the `gh-pages` branch
-      and push the `gh-pages` branch to your fork. A running version of the website should now be available from
-      the corresponding `github.io` URL. Here is an example [http://bobby-lin.github.io/website/](http://bobby-lin.github.io/website/).
-   3. Push the code to your fork and create a pull request (PR) against the master
-      branch of this repo.<br>
-      When naming the PR, copy paste the name of the issue you are fixing, including the original issue number.<br>
-      e.g. `Handbook TOC links are not working in iPhone browser #19`<br>
-      In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #24` so that the corresponding issue
+      site*](https://en.wikipedia.org/wiki/Staging_site) using [*RawGit*](https://rawgit.com/), commit your changes
+      and push the branch to your fork. A running version of the website should now be available from
+      the corresponding `rawgit.com` URL of the form `http://rawgit.com/user/repo/branch/`,<br>
+      e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
+   3. Create a pull request (PR) against the `master` branch of this repo.<br>
+      When naming the PR, copy and paste the name of the issue you are fixing, including the original issue number.<br>
+      e.g. `Fix size and position of 'Page Loading...' overlay in handbook page #112`.<br>
+      In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #112`) so that the corresponding issue
       is closed automatically when the PR is merged.<br>
-      Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/78)
+      Remember to mention the URL of the staging site in your PR description. [Here](https://github.com/nus-cs2103/website/pull/202)
       is an example.
    4. Check the diff view of the PR to ensure it contains the intended changes only.
 9. Your code will be reviewed by someone from the dev team. If the reviewer requests changes,
