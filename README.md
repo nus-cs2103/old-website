@@ -40,9 +40,10 @@ If you would like to contribute code, here is the procedure:
       If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/).
    2. Stage your changes:<br>
       Your reviewer might want to see how your changes look like to a viewer of the website. To create a [*staging
-      site*](https://en.wikipedia.org/wiki/Staging_site) using [*GitHub Pages* feature](https://help.github.com/categories/github-pages-basics/), create a branch called `gh-pages`, merge your branch to the `gh-pages` branch
-      and push the `gh-pages` branch to your fork. A running version of the website should now be available from
-      the corresponding `github.io` URL. Here is an example [http://bobby-lin.github.io/website/](http://bobby-lin.github.io/website/).
+      site*](https://en.wikipedia.org/wiki/Staging_site) using [*RawGit*](https://rawgit.com/), commit your changes
+      and push the branch to your fork. A running version of the website should now be available from
+      the corresponding `rawgit.com` URL of the form `http://rawgit.com/user/repo/branch/`,<br>
+      e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
    3. Push the code to your fork and create a pull request (PR) against the master
       branch of this repo.<br>
       When naming the PR, copy paste the name of the issue you are fixing, including the original issue number.<br>
