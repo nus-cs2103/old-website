@@ -19,11 +19,11 @@ If you would like to contribute code, here is the procedure:
 2. You may choose an issue labeled `forFirstTimers` as your first issue, if there are any.
    But do not do more than one `forFirstTimers` issues.
 3. Clone your fork onto your Computer.
-4. Create a branch. The branch name should be in the format `issue-number-some-key-words`
-   i.e. issue number followed by 2-4 key words related to the issue description
-   e.g. `12-broken-link-week1-schedule`
+4. Create a branch. The branch name should be in the format `issue-number-some-key-words`,
+   i.e. issue number followed by 2-4 key words related to the issue description,
+   e.g. `12-broken-link-week1-schedule`.
 5. Implement your fix in the new branch.
-   * Use 2 spaces for indenting (not `tab`, not 4 or 8 spaces)
+   * Use 2 spaces for indenting (not `tab`, not 4 or 8 spaces).
    * Minimize inline styles.
    * When in doubt, you can refer to these style guides from the
      TEAMMATES project:
@@ -33,11 +33,11 @@ If you would like to contribute code, here is the procedure:
 6. Test the code in your computer.<br>
    Tip: When testing local html files, some JavaScripts might not work
    in Firefox or Chrome. In that case you can use IE. Alternatively, you can [start a web server
-   in your Computer](https://gist.github.com/willurd/5720255)
+   in your Computer](https://gist.github.com/willurd/5720255).
 7. When the fix is ready,
    1. Ensure that your fork has the latest code from this repo (the repo you forked from is called
-      the 'upstream` repo). The code in the upstream repo may have been updated while you were fixing the issue.
-      If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/)
+      the `upstream` repo). The code in the upstream repo may have been updated while you were fixing the issue.
+      If that is the case, [sync your fork with upstream repo](https://help.github.com/articles/syncing-a-fork/).
    2. Stage your changes:<br>
       Your reviewer might want to see how your changes look like to a viewer of the website. To create a [*staging
       site*](https://en.wikipedia.org/wiki/Staging_site) using [*GitHub Pages* feature](https://help.github.com/categories/github-pages-basics/), create a branch called `gh-pages`, merge your branch to the `gh-pages` branch
