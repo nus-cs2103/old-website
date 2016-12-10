@@ -44,9 +44,8 @@ If you would like to contribute code, here is the procedure:
       and push the branch to your fork. A running version of the website should now be available from
       the corresponding `rawgit.com` URL of the form `http://rawgit.com/user/repo/branch/`,<br>
       e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
-   3. Push the code to your fork and create a pull request (PR) against the master
-      branch of this repo.<br>
-      When naming the PR, copy paste the name of the issue you are fixing, including the original issue number.<br>
+   3. Create a pull request (PR) against the `master` branch of this repo.<br>
+      When naming the PR, copy and paste the name of the issue you are fixing, including the original issue number.<br>
       e.g. `Handbook TOC links are not working in iPhone browser #19`<br>
       In the PR description, mention `Fixes #IssueNumber` (e.g. `Fixes #24` so that the corresponding issue
       is closed automatically when the PR is merged.<br>
