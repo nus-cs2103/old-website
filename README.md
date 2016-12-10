@@ -56,7 +56,7 @@ If you would like to contribute code, here is the procedure:
    revise the code, push the new commits to your branch, and post a comment to say the pull request
    is ready for review again.
 10. When your code is acceptable, it will be merged to this repo. Your fix will be included in the
-   next release of the website.
+    next release of the website.
 11. After your fix is merged, you may wish to create another PR to add your name to the [`CONTRIBUTORS.md`](CONTRIBUTORS.md) file.
     There is no need to create a corresponding issue for that PR.
 
