@@ -38,7 +38,7 @@ if (preview != null) {
 
 /**
  * Loads a single section on demand using ajax.
- * On success, execute the callback if defined.
+ * On success, execute the callback.
  */
 function loadSectionUsingAjax(section, callback) {
     $.ajax({
@@ -48,9 +48,7 @@ function loadSectionUsingAjax(section, callback) {
         },
         success: function(data) {
             $('#' + section).html(data);
-            if (typeof callback != 'undefined') {
-                callback();
-            }
+            callback();
         }
     });
 }
