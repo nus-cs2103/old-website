@@ -61,7 +61,7 @@ if (preview != null) {
     });
 
     // Appendix B
-    var policySection = 'handbook-policy';
+    var policySection = 'handbook-appendixB-policies';
     var policyAnchors = $('a[href^="#policy-"]');
     handleClickEventForAppendix(policySection, policyAnchors);
 
