@@ -299,6 +299,7 @@ code {
     border: 1px solid;
     color: #FFFFFF;
     float: right;
+    margin-top: -2px;
     padding: 1px 12px;
 	
 }
@@ -311,22 +312,6 @@ code {
     float: right;
     padding: 1px 12px;
 	
-}
-/*
-.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
-	background-color: transparent !important;
-	border-radius: 3px;
-	color: #000000 !important;
-	
-}
-*/
-
-.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:hover {
-	background-color: red !important;
-    border-radius: 3px !important;
-	-moz-border-radius: 3px !important;
-    -webkit-border-radius: 3px !important;
-    -khtml-border-radius: 3px !important;
 }
 
 /*
@@ -437,6 +422,7 @@ table.two-column-content td {
 	left: -10px;
 	padding: 7px 10px;
 	position: relative;
+	vertical-align: middle;
 	width: 100%;
 }
 
@@ -446,6 +432,7 @@ table.two-column-content td {
     font-size: 1 em;
     font-weight: normal;
     text-align: center;
+    vertical-align: middle;
     width: 100%;
 }
 
