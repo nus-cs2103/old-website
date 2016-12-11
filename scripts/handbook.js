@@ -5,9 +5,18 @@ if (preview != null) {
     $(window).scrollTop($('#' + section).prev().offset().top);
 }
 
-setTimeout(function () {
-    for (var i in sections) {
-        var section = sections[i];
+/**
+ * Load sections incrementally, through recursive call in ajax callback.
+ * If the last section is loaded, remove the loading overlay and return.
+ * Otherwise, load the next section in setTimeout(0) to allow rendering.
+ */
+function loadSectionsIncrementally(index) {
+    if (index == sections.length) {
+        $('#overlay').remove();
+        return;
+    }
+    setTimeout(function () {
+        var section = sections[index];
         $.ajax({
             type: 'GET',
             async: false,
@@ -16,11 +25,13 @@ setTimeout(function () {
             },
             success: function(data) {
                 $('#' + section).html(data);
+                loadSectionsIncrementally(index + 1);
             }
         });
-    }
-    $('#overlay').remove();
-}, 0);
+    }, 0);
+}
+
+loadSectionsIncrementally(0);
 
 function isTableOfContentVisible() {
     var windowTop = $(window).scrollTop();
