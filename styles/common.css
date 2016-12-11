@@ -289,6 +289,19 @@ code {
     background-color: #ffff00 !important;
     color: #000 !important;
 }
+/*
+ * embedded button
+ */
+
+button.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+	background-color: transparent !important;
+	color: #FFFFFF !important;
+}
+
+button.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:hover {
+	background-color: red !important;
+	color: #000000;
+}
 
 /*
  * tables
