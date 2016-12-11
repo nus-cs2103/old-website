@@ -10,10 +10,11 @@ function removeOverlay() {
  * The header is before the div.
  */
 function jumpToSectionHeading(section) {
-    var header = $('#' + section).prev();
-    $(window).scrollTop(header.offset().top);
+    var headerPosition = $('#' + section).prev().offset().top;
+    $(window).scrollTop(headerPosition);
 }
 
+$('a').off(); // Remove default behaviour, add jumpToSectionHeading later
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var part = preview[1];
