@@ -71,24 +71,6 @@ function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
     });
 }
 
-var preview = window.location.href.match(/\?preview=([^&#]*)/);
-if (preview != null && preview[1] == 'all') {
-    // Preview all sections
-    loadSectionsIncrementally(0);
-    $('a').click(function() {
-        var section = this.hash.substring(1);
-        jumpToSectionHeading(section);
-    });
-} else {
-    addLoadOnDemandToAnchors();
-    if (preview != null) {
-        // Preview a single section
-        var section = 'handbook-' + preview[1];
-        $('a[href="#' + section + '"]').click();
-    }
-    $('#overlay').remove();
-}
-
 /**
  * Loads a single section on demand using ajax.
  * On success, execute the callback.
@@ -137,6 +119,25 @@ function isTableOfContentVisible() {
 }
 
 $(document).ready(function() {
+    var preview = window.location.href.match(/\?preview=([^&#]*)/);
+
+    if (preview != null && preview[1] == 'all') {
+        // Preview all sections
+        loadSectionsIncrementally(0);
+        $('a').click(function() {
+            var section = this.hash.substring(1);
+            jumpToSectionHeading(section);
+        });
+    } else {
+        addLoadOnDemandToAnchors();
+        if (preview != null) {
+            // Preview a single section
+            var section = 'handbook-' + preview[1];
+            $('a[href="#' + section + '"]').click();
+        }
+        $('#overlay').remove();
+    }
+
     var buttonAnimationDuration = 200;
     var speed = 1;
 
