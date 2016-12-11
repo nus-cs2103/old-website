@@ -132,7 +132,11 @@ $(document).ready(function() {
         addLoadOnDemandToAnchors();
         if (preview != null) {
             // Preview a single section
-            var section = 'handbook-' + preview[1];
+            var section = preview[1];
+            if (section.match(/^policy-/) == null) {
+                // Not a policy section (Appendix B)
+                section = 'handbook-' + section;
+            }
             $('a[href="#' + section + '"]').click();
         }
         $('#overlay').remove();
