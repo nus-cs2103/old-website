@@ -16,10 +16,15 @@ function jumpToSectionHeading(section) {
 
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
-    var section = 'handbook-' + preview[1];
-    var callback = removeOverlay;
-    jumpToSectionHeading(section);
-    loadSectionUsingAjax(section, callback);
+    var part = preview[1];
+    if (part == 'all') {
+        loadSectionsIncrementally(0);
+    } else {
+        var section = 'handbook-' + part;
+        var callback = removeOverlay;
+        jumpToSectionHeading(section);
+        loadSectionUsingAjax(section, callback);
+    }
 } else {
     $('a').click(function() {
         var section = $(this).attr('href').substring(1);
