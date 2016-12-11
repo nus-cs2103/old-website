@@ -5,16 +5,28 @@ function removeOverlay() {
     $('#overlay').remove();
 }
 
+/**
+ * Jumps to a section's heading.
+ * The header is before the div.
+ */
+function jumpToSectionHeading(section) {
+    var header = $('#' + section).prev();
+    $(window).scrollTop(header.offset().top);
+}
+
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var section = 'handbook-' + preview[1];
     var callback = removeOverlay;
-    $(window).scrollTop($('#' + section).prev().offset().top);
+    jumpToSectionHeading(section);
     loadSectionUsingAjax(section, callback);
 } else {
     $('a').click(function() {
         var section = $(this).attr('href').substring(1);
-        loadSectionUsingAjax(section);
+        var callback = function() {
+            jumpToSectionHeading(section);
+        };
+        loadSectionUsingAjax(section, callback);
     });
     removeOverlay();
 }
