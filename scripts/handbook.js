@@ -25,12 +25,12 @@ function addLoadOnDemandToAnchors() {
     // Appendix B
     var policySection = 'handbook-appendixB-policies';
     var policyAnchors = $('a[href^="#policy-"]');
-    handleClickEventForAppendix(policySection, policyAnchors);
+    handleClickForAppendixAnchors(policySection, policyAnchors);
 
     // Appendix C
     var faqSection = 'handbook-appendixC-faq';
     var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
-    handleClickEventForAppendix(faqSection, faqAnchors);
+    handleClickForAppendixAnchors(faqSection, faqAnchors);
 }
 
 /**
@@ -57,18 +57,22 @@ function handleClickForAllAnchors(allAnchors) {
  * Handles onclick event for Appendix B and C anchors.
  * These anchors link subsections in common HTML file.
  */
-function handleClickEventForAppendix(containerSection, subsectionAnchors) {
-    subsectionAnchors.off();  // Remove behaviour 1
-    subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
+function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
+    subsectionAnchors.off(); // Remove previous behaviour.
+
+    // Behaviour 1: For first click, load 'containerSection' using ajax then jump to 'subsection' heading.
+    subsectionAnchors.click(function() {
         var subsection = this.hash.substring(1);
         var callback = function() {
             jumpToSectionHeading(subsection);
         };
         loadSectionUsingAjax(containerSection, callback);
-        subsectionAnchors.off();         // Remove behaviour 2
-        subsectionAnchors.click(function(event) { // Add final behaviour: For subsequent clicks, jump to its header
-            event.preventDefault();               // Prevent default behaviour of anchor tags
-            subsection = this.hash.substring(1);
+        subsectionAnchors.off(); // Remove behaviour 1
+
+        // Behaviour 2: For subsequent clicks, jump to 'subsection' heading only.
+        subsectionAnchors.click(function(event) {
+            event.preventDefault(); // Prevent default behaviour of anchor tags
+            var subsection = this.hash.substring(1);
             jumpToSectionHeading(subsection);
         });
     });
