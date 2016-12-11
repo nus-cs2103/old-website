@@ -15,6 +15,30 @@ function jumpToSectionHeading(section) {
 }
 
 /**
+ * Adds load-on-demand capability for anchors in table-of-contents.
+ * This function can be triggered by clicking on any of the anchors.
+ */
+function addLoadOnDemandToAnchors() {
+    $('a').click(function() { // Add behaviour 1: For most anchors
+        var section = this.hash.substring(1);
+        var callback = function() {
+            jumpToSectionHeading(section);
+        };
+        loadSectionUsingAjax(section, callback);
+    });
+
+    // Appendix B
+    var policySection = 'handbook-appendixB-policies';
+    var policyAnchors = $('a[href^="#policy-"]');
+    handleClickEventForAppendix(policySection, policyAnchors);
+
+    // Appendix C
+    var faqSection = 'handbook-appendixC-faq';
+    var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
+    handleClickEventForAppendix(faqSection, faqAnchors);
+}
+
+/**
  * Handles onclick event for Appendix B and C anchors.
  * These anchors link subsections in common HTML file.
  */
@@ -35,6 +59,7 @@ function handleClickEventForAppendix(containerSection, subsectionAnchors) {
     });
 }
 
+addLoadOnDemandToAnchors();
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var part = preview[1];
@@ -56,23 +81,6 @@ if (preview != null) {
         });
     }
 } else {
-    $('a').click(function() { // Add behaviour 1: For most anchors
-        var section = this.hash.substring(1);
-        var callback = function() {
-            jumpToSectionHeading(section);
-        };
-        loadSectionUsingAjax(section, callback);
-    });
-
-    // Appendix B
-    var policySection = 'handbook-appendixB-policies';
-    var policyAnchors = $('a[href^="#policy-"]');
-    handleClickEventForAppendix(policySection, policyAnchors);
-
-    // Appendix C
-    var faqSection = 'handbook-appendixC-faq';
-    var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
-    handleClickEventForAppendix(faqSection, faqAnchors);
     removeOverlay();
 }
 
