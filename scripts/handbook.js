@@ -21,8 +21,10 @@ if (preview != null) {
         loadSectionsIncrementally(0);
     } else {
         var section = 'handbook-' + part;
-        var callback = removeOverlay;
-        jumpToSectionHeading(section);
+        var callback = function() {
+            jumpToSectionHeading(section);
+            removeOverlay();
+        };
         loadSectionUsingAjax(section, callback);
     }
 } else {
