@@ -299,7 +299,7 @@ code {
     border: 1px solid;
     color: #FFFFFF;
     float: right;
-    padding: 1px 10px;
+    padding: 1px 12px;
 	
 }
 
@@ -309,7 +309,7 @@ code {
     border: 1px solid;
     color: #FFFFFF;
     float: right;
-    padding: 1px 10px;
+    padding: 1px 12px;
 	
 }
 /*
@@ -443,7 +443,7 @@ table.two-column-content td {
 .embeddedHeading {
     background-color: transparent;
     color: #FFFFFF;
-    font-size: 1.2em;
+    font-size: 1 em;
     font-weight: normal;
     text-align: center;
     width: 100%;
