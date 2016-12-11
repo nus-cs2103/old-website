@@ -19,6 +19,10 @@ if (preview != null) {
     var part = preview[1];
     if (part == 'all') {
         loadSectionsIncrementally(0);
+        $('a').click(function() {
+            var section = this.hash.substring(1);
+            jumpToSectionHeading(section);
+        });
     } else {
         var section = 'handbook-' + part;
         var callback = function() {
@@ -26,6 +30,9 @@ if (preview != null) {
             removeOverlay();
         };
         loadSectionUsingAjax(section, callback);
+        $('a[href="#' + section + '"]').click(function() {
+            jumpToSectionHeading(section);
+        });
     }
 } else {
     $('a').click(function() {
@@ -98,12 +105,6 @@ $(document).ready(function() {
     $('#back-to-top-button').button();
     $('#back-to-top-button').click(function(e) {
         scrollToPosition(0);
-    });
-
-    $('a').click(function() {
-        var adjustment = 73;
-        var header = this.hash;
-        scrollToPosition($(header).offset().top - adjustment);
     });
 
     $(window).scroll(function() {
