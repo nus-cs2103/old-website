@@ -71,14 +71,7 @@ if (preview != null) {
         });
     } else {
         var section = 'handbook-' + part;
-        var callback = function() {
-            jumpToSectionHeading(section);
-            removeOverlay();
-        };
-        loadSectionUsingAjax(section, callback);
-        $('a[href="#' + section + '"]').click(function() {
-            jumpToSectionHeading(section);
-        });
+        $('a[href="#' + section + '"]').click();
     }
 } else {
     removeOverlay();
