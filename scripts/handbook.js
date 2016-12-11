@@ -14,7 +14,6 @@ function jumpToSectionHeading(section) {
     $(window).scrollTop(headerPosition);
 }
 
-$('a').off(); // Remove default behaviour, add jumpToSectionHeading later
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var part = preview[1];
@@ -49,12 +48,13 @@ if (preview != null) {
     subsectionAnchors.click(function() {     // Add behaviour 2
         var subsection = this.hash.substring(1);
         subsectionAnchors.off();             // Remove behaviour 2
-        subsectionAnchors.click(function() { // Add behaviour 3
+        subsectionAnchors.click(function(event) { // Add behaviour 3
+            event.preventDefault();               // Prevent default behaviour of anchor tags
+            subsection = this.hash.substring(1);
             jumpToSectionHeading(subsection);
         });
-        var subsectionAnchor = $(this);
         var callback = function() {
-            subsectionAnchor.click(); // Trigger behaviour 3
+            jumpToSectionHeading(subsection);
         };
         loadSectionUsingAjax(containerSection, callback);
     });
