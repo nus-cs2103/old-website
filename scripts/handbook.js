@@ -19,7 +19,6 @@ function loadSectionsIncrementally(index) {
         var section = sections[index];
         $.ajax({
             type: 'GET',
-            async: false,
             url: section + '.html',
             error: function() {
             },
