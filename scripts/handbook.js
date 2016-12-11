@@ -14,6 +14,23 @@ function jumpToSectionHeading(section) {
     $(window).scrollTop(headerPosition);
 }
 
+function handleClickEventForAppendix(containerSection, subsectionAnchors) {
+    subsectionAnchors.off();  // Remove behaviour 1
+    subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
+        var subsection = this.hash.substring(1);
+        var callback = function() {
+            jumpToSectionHeading(subsection);
+        };
+        loadSectionUsingAjax(containerSection, callback);
+        subsectionAnchors.off();         // Remove behaviour 2
+        subsectionAnchors.click(function(event) { // Add final behaviour: For subsequent clicks, jump to its header
+            event.preventDefault();               // Prevent default behaviour of anchor tags
+            subsection = this.hash.substring(1);
+            jumpToSectionHeading(subsection);
+        });
+    });
+}
+
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var part = preview[1];
@@ -43,22 +60,10 @@ if (preview != null) {
         loadSectionUsingAjax(section, callback);
     });
 
-    var containerSection = 'handbook-appendixC-faq';
-    var subsectionAnchors = $('a[href="#' + containerSection + '"]').next().find('a');
-    subsectionAnchors.off();  // Remove behaviour 1
-    subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
-        var subsection = this.hash.substring(1);
-        var callback = function() {
-            jumpToSectionHeading(subsection);
-        };
-        loadSectionUsingAjax(containerSection, callback);
-        subsectionAnchors.off();         // Remove behaviour 2
-        subsectionAnchors.click(function(event) { // Add final behaviour: For subsequent clicks, jump to its header
-            event.preventDefault();               // Prevent default behaviour of anchor tags
-            subsection = this.hash.substring(1);
-            jumpToSectionHeading(subsection);
-        });
-    });
+    // Appendix C
+    var faqSection = 'handbook-appendixC-faq';
+    var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
+    handleClickEventForAppendix(faqSection, faqAnchors);
     removeOverlay();
 }
 
