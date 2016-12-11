@@ -36,12 +36,27 @@ if (preview != null) {
         });
     }
 } else {
-    $('a').click(function() {
-        var section = $(this).attr('href').substring(1);
+    $('a').click(function() { // Add behaviour 1
+        var section = this.hash.substring(1);
         var callback = function() {
             jumpToSectionHeading(section);
         };
         loadSectionUsingAjax(section, callback);
+    });
+    var containerSection = 'handbook-appendixC-faq';
+    var subsectionAnchors = $('a[href="#' + containerSection + '"]').next().find('a');
+    subsectionAnchors.off();                 // Remove behaviour 1
+    subsectionAnchors.click(function() {     // Add behaviour 2
+        var subsection = this.hash.substring(1);
+        subsectionAnchors.off();             // Remove behaviour 2
+        subsectionAnchors.click(function() { // Add behaviour 3
+            jumpToSectionHeading(subsection);
+        });
+        var subsectionAnchor = $(this);
+        var callback = function() {
+            subsectionAnchor.click(); // Trigger behaviour 3
+        };
+        loadSectionUsingAjax(containerSection, callback);
     });
     removeOverlay();
 }
