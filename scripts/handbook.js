@@ -19,13 +19,8 @@ function jumpToSectionHeading(section) {
  * This function can be triggered by clicking on any of the anchors.
  */
 function addLoadOnDemandToAnchors() {
-    $('a').click(function() { // Add behaviour 1: For most anchors
-        var section = this.hash.substring(1);
-        var callback = function() {
-            jumpToSectionHeading(section);
-        };
-        loadSectionUsingAjax(section, callback);
-    });
+    var allAnchors = $('a');
+    handleClickForAllAnchors(allAnchors);
 
     // Appendix B
     var policySection = 'handbook-appendixB-policies';
@@ -36,6 +31,26 @@ function addLoadOnDemandToAnchors() {
     var faqSection = 'handbook-appendixC-faq';
     var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
     handleClickEventForAppendix(faqSection, faqAnchors);
+}
+
+/**
+ * Handles onclick event for all anchors.
+ */
+function handleClickForAllAnchors(allAnchors) {
+    // Behaviour 1: For first click, load 'section' using ajax then jump to 'section' heading.
+    allAnchors.click(function() {
+        var section = this.hash.substring(1);
+        var callback = function() {
+            jumpToSectionHeading(section);
+        };
+        loadSectionUsingAjax(section, callback);
+        $(this).off(); // Remove behaviour 1
+
+        // Behaviour 2: For subsequent clicks, jump to 'section' heading only.
+        $(this).click(function() {
+            jumpToSectionHeading(section);
+        });
+    });
 }
 
 /**
