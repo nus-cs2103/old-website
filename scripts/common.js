@@ -215,6 +215,10 @@ function loadContent(week) {
                     $('.' + type + '.content-week' + week).hide();
                 }
             });
+
+            if (typeof preview != 'undefined') {
+                $('#expandall-content-week' + week).click();
+            }
         }
     });
 }

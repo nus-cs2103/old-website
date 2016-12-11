@@ -1,3 +1,10 @@
+var preview = window.location.href.match(/\?preview=([^&#]*)/);
+if (preview != null) {
+    var section = 'handbook-' + preview[1];
+    sections = [section];
+    $(window).scrollTop($('#' + section).prev().offset().top);
+}
+
 setTimeout(function () {
     for (var i in sections) {
         var section = sections[i];
