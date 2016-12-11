@@ -289,6 +289,24 @@ code {
     background-color: #ffff00 !important;
     color: #000 !important;
 }
+/*
+ * embedded button
+ */
+
+.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+	background-color: transparent !important;
+	border-radius: 3px;
+	color: #000000 !important;
+	
+}
+
+.btn-dismiss.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:hover {
+	background-color: red !important;
+    border-radius: 3px !important;
+	-moz-border-radius: 3px !important;
+    -webkit-border-radius: 3px !important;
+    -khtml-border-radius: 3px !important;
+}
 
 /*
  * tables
@@ -391,13 +409,10 @@ table.two-column-content td {
 }
 
 .embeddedHeading{
-    color: white;
-    background-color: gray;
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left:20px;
-    padding-right:30px;
-    font-weight: bold;
+    color: #959393;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: center;
     width: 100%;
 }
 
