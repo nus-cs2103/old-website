@@ -9,7 +9,7 @@ function jumpToSectionHeading(section) {
 
 /**
  * Adds load-on-demand capability for anchors in table-of-contents.
- * This function can be triggered by clicking on any of the anchors.
+ * This capability is triggered when any of the anchors is clicked.
  */
 function addLoadOnDemandToAnchors() {
     var allAnchors = $('a');
