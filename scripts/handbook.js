@@ -14,6 +14,10 @@ function jumpToSectionHeading(section) {
     $(window).scrollTop(headerPosition);
 }
 
+/**
+ * Handles onclick event for Appendix B and C anchors.
+ * These anchors link subsections in common HTML file.
+ */
 function handleClickEventForAppendix(containerSection, subsectionAnchors) {
     subsectionAnchors.off();  // Remove behaviour 1
     subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
