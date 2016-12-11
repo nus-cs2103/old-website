@@ -35,20 +35,21 @@ if (preview != null) {
         });
     }
 } else {
-    $('a').click(function() { // Add behaviour 1
+    $('a').click(function() { // Add behaviour 1: For most anchors
         var section = this.hash.substring(1);
         var callback = function() {
             jumpToSectionHeading(section);
         };
         loadSectionUsingAjax(section, callback);
     });
+
     var containerSection = 'handbook-appendixC-faq';
     var subsectionAnchors = $('a[href="#' + containerSection + '"]').next().find('a');
-    subsectionAnchors.off();                 // Remove behaviour 1
-    subsectionAnchors.click(function() {     // Add behaviour 2
+    subsectionAnchors.off();  // Remove behaviour 1
+    subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
         var subsection = this.hash.substring(1);
-        subsectionAnchors.off();             // Remove behaviour 2
-        subsectionAnchors.click(function(event) { // Add behaviour 3
+        subsectionAnchors.off();         // Remove behaviour 2
+        subsectionAnchors.click(function(event) { // Add final behaviour: For subsequent clicks, jump to its header
             event.preventDefault();               // Prevent default behaviour of anchor tags
             subsection = this.hash.substring(1);
             jumpToSectionHeading(subsection);
