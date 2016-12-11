@@ -1,8 +1,41 @@
+/**
+ * Removes the loading overlay.
+ */
+function removeOverlay() {
+    $('#overlay').remove();
+}
+
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
 if (preview != null) {
     var section = 'handbook-' + preview[1];
-    sections = [section];
+    var callback = removeOverlay;
     $(window).scrollTop($('#' + section).prev().offset().top);
+    loadSectionUsingAjax(section, callback);
+} else {
+    $('a').click(function() {
+        var section = $(this).attr('href').substring(1);
+        loadSectionUsingAjax(section);
+    });
+    removeOverlay();
+}
+
+/**
+ * Loads a single section on demand using ajax.
+ * On success, execute the callback if defined.
+ */
+function loadSectionUsingAjax(section, callback) {
+    $.ajax({
+        type: 'GET',
+        url: section + '.html',
+        error: function() {
+        },
+        success: function(data) {
+            $('#' + section).html(data);
+            if (typeof callback != 'undefined') {
+                callback();
+            }
+        }
+    });
 }
 
 /**
@@ -27,8 +60,6 @@ function loadSectionsIncrementally(index) {
         }
     });
 }
-
-loadSectionsIncrementally(0);
 
 function isTableOfContentVisible() {
     var windowTop = $(window).scrollTop();
