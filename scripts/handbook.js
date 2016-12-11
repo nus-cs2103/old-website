@@ -99,16 +99,10 @@ function loadSectionsIncrementally(index) {
         return;
     }
     var section = sections[index];
-    $.ajax({
-        type: 'GET',
-        url: section + '.html',
-        error: function() {
-        },
-        success: function(data) {
-            $('#' + section).html(data);
-            loadSectionsIncrementally(index + 1);
-        }
-    });
+    var callback = function() {
+        loadSectionsIncrementally(index + 1);
+    }
+    loadSectionUsingAjax(section, callback);
 }
 
 function isTableOfContentVisible() {
