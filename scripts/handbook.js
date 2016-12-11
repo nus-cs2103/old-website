@@ -60,6 +60,11 @@ if (preview != null) {
         loadSectionUsingAjax(section, callback);
     });
 
+    // Appendix B
+    var policySection = 'handbook-policy';
+    var policyAnchors = $('a[href^="#policy-"]');
+    handleClickEventForAppendix(policySection, policyAnchors);
+
     // Appendix C
     var faqSection = 'handbook-appendixC-faq';
     var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
