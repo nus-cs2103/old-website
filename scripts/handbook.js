@@ -127,8 +127,8 @@ $(document).ready(function() {
         if (preview != null) {
             // Preview a single section
             var section = preview[1];
-            if (section.match(/^policy-/) == null) {
-                // Not a policy section (Appendix B)
+            var isPolicySection = (section.match(/^policy-/) == null);
+            if (!isPolicySection) {
                 section = 'handbook-' + section;
             }
             $('a[href="#' + section + '"]').click();
