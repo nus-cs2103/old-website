@@ -1,3 +1,12 @@
+var preview = window.location.href.match(/\?preview=([^&#]*)/);
+if (preview != null) {
+    var section = 'handbook-' + preview[1];
+    sections = [section];
+    $('#table-of-contents').html('');
+    $('#' + section).prev().prevUntil('#table-of-contents').remove();
+    $('#' + section).nextUntil('script').remove();
+}
+
 setTimeout(function () {
     for (var i in sections) {
         var section = sections[i];
