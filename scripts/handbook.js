@@ -1,11 +1,4 @@
 /**
- * Removes the loading overlay.
- */
-function removeOverlay() {
-    $('#overlay').remove();
-}
-
-/**
  * Jumps to a section's heading.
  * The header is before the div.
  */
@@ -93,7 +86,7 @@ if (preview != null && preview[1] == 'all') {
         var section = 'handbook-' + preview[1];
         $('a[href="#' + section + '"]').click();
     }
-    removeOverlay();
+    $('#overlay').remove();
 }
 
 /**
