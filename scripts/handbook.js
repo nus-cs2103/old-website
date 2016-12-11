@@ -8,26 +8,24 @@ if (preview != null) {
 /**
  * Load sections incrementally, through recursive call in ajax callback.
  * If the last section is loaded, remove the loading overlay and return.
- * Otherwise, load the next section in setTimeout(0) to allow rendering.
+ * Otherwise, load the next section.
  */
 function loadSectionsIncrementally(index) {
     if (index == sections.length) {
         $('#overlay').remove();
         return;
     }
-    setTimeout(function () {
-        var section = sections[index];
-        $.ajax({
-            type: 'GET',
-            url: section + '.html',
-            error: function() {
-            },
-            success: function(data) {
-                $('#' + section).html(data);
-                loadSectionsIncrementally(index + 1);
-            }
-        });
-    }, 0);
+    var section = sections[index];
+    $.ajax({
+        type: 'GET',
+        url: section + '.html',
+        error: function() {
+        },
+        success: function(data) {
+            $('#' + section).html(data);
+            loadSectionsIncrementally(index + 1);
+        }
+    });
 }
 
 loadSectionsIncrementally(0);
