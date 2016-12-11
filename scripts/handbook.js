@@ -48,16 +48,16 @@ if (preview != null) {
     subsectionAnchors.off();  // Remove behaviour 1
     subsectionAnchors.click(function() { // Add behaviour 2: For first click, trigger ajax load of containerSection
         var subsection = this.hash.substring(1);
+        var callback = function() {
+            jumpToSectionHeading(subsection);
+        };
+        loadSectionUsingAjax(containerSection, callback);
         subsectionAnchors.off();         // Remove behaviour 2
         subsectionAnchors.click(function(event) { // Add final behaviour: For subsequent clicks, jump to its header
             event.preventDefault();               // Prevent default behaviour of anchor tags
             subsection = this.hash.substring(1);
             jumpToSectionHeading(subsection);
         });
-        var callback = function() {
-            jumpToSectionHeading(subsection);
-        };
-        loadSectionUsingAjax(containerSection, callback);
     });
     removeOverlay();
 }
