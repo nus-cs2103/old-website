@@ -78,21 +78,21 @@ function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
     });
 }
 
-addLoadOnDemandToAnchors();
 var preview = window.location.href.match(/\?preview=([^&#]*)/);
-if (preview != null) {
-    var part = preview[1];
-    if (part == 'all') {
-        loadSectionsIncrementally(0);
-        $('a').click(function() {
-            var section = this.hash.substring(1);
-            jumpToSectionHeading(section);
-        });
-    } else {
-        var section = 'handbook-' + part;
+if (preview != null && preview[1] == 'all') {
+    // Preview all sections
+    loadSectionsIncrementally(0);
+    $('a').click(function() {
+        var section = this.hash.substring(1);
+        jumpToSectionHeading(section);
+    });
+} else {
+    addLoadOnDemandToAnchors();
+    if (preview != null) {
+        // Preview a single section
+        var section = 'handbook-' + preview[1];
         $('a[href="#' + section + '"]').click();
     }
-} else {
     removeOverlay();
 }
 
