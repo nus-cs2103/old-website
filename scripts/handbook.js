@@ -119,7 +119,11 @@ $(document).ready(function() {
     var preview = window.location.href.match(/\?preview=([^&#]*)/);
 
     if (preview) {
-        var section = 'handbook-' + preview[1];
+        var section = preview[1];
+        var isNotPolicySection = (section.match(/^policy-/) == null);
+        if (isNotPolicySection) {
+            section = 'handbook-' + section;
+        }
         addLoadOnDemandToAnchors();
         $('a[href="#' + section + '"]').click();
         $('#overlay').remove();
