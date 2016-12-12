@@ -113,9 +113,9 @@ function isTableOfContentVisible() {
 }
 
 $(document).ready(function() {
-    var preview = window.location.href.match(/\?preview=([^&#]*)/);
+    var preview = window.location.hash.substring(1);
 
-    if (preview == null) {
+    if (!preview) {
         loadSectionsIncrementally(0);
         $('a').click(function() {
             var section = this.hash.substring(1);
@@ -124,12 +124,7 @@ $(document).ready(function() {
     } else {
         addLoadOnDemandToAnchors();
             // Preview a single section
-            var section = preview[1];
-            var isPolicySection = (section.match(/^policy-/) == null);
-            if (!isPolicySection) {
-                section = 'handbook-' + section;
-            }
-            $('a[href="#' + section + '"]').click();
+        $('a[href="#' + preview + '"]').click();
         $('#overlay').remove();
     }
 
