@@ -51,7 +51,7 @@ function handleClickForAllAnchors(allAnchors) {
  * These anchors link subsections in common HTML file.
  */
 function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
-    subsectionAnchors.off(); // Remove previous behaviour.
+    subsectionAnchors.off(); // Remove previous behaviour
 
     // Behaviour 1: For first click, load 'containerSection' using ajax then jump to 'subsection' heading.
     subsectionAnchors.click(function() {
@@ -65,7 +65,7 @@ function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
         // Behaviour 2: For subsequent clicks, jump to 'subsection' heading only.
         subsectionAnchors.click(function(event) {
             event.preventDefault(); // Prevent default behaviour of anchor tags
-            var subsection = this.hash.substring(1);
+            var subsection = this.hash.substring(1); // Different from previous
             jumpToSectionHeading(subsection);
         });
     });
