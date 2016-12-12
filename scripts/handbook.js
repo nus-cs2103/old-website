@@ -90,20 +90,22 @@ function loadSectionUsingAjax(section, callback) {
 }
 
 /**
- * Load sections incrementally, through recursive call in ajax callback.
- * If the last section is loaded, remove the loading overlay and return.
- * Otherwise, load the next section.
+ * Load all sections asynchronously.
+ * Increment number of sections loaded in callback.
+ * If all sections loaded, remove the loading overlay.
  */
-function loadSectionsIncrementally(index) {
-    if (index == sections.length) {
-        $('#overlay').remove();
-        return;
+function loadAllSections() {
+    var sectionsLoaded = 0;
+    for (var i in sections) {
+        var section = sections[i];
+        var callback = function() {
+            sectionsLoaded++;
+            if (sectionsLoaded == sections.length) {
+                $('#overlay').remove();
+            }
+        };
+        loadSectionUsingAjax(section, callback);
     }
-    var section = sections[index];
-    var callback = function() {
-        loadSectionsIncrementally(index + 1);
-    }
-    loadSectionUsingAjax(section, callback);
 }
 
 function isTableOfContentVisible() {
@@ -121,7 +123,7 @@ $(document).ready(function() {
         $('a[href="#' + preview + '"]').click();
         $('#overlay').remove();
     } else {
-        loadSectionsIncrementally(0);
+        loadAllSections();
         addJumpToSectionHeadingBehavior($('a'));
     }
 
