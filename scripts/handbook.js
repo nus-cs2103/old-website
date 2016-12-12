@@ -40,38 +40,35 @@ function addLoadOnDemandToAnchors() {
 
 /**
  * Handles onclick event for all anchors.
+ * For first click, load 'section' using ajax then jump to 'section' heading.
+ * For subsequent clicks, jump to 'section' heading only.
  */
 function handleClickForAllAnchors(allAnchors) {
-    // Behaviour 1: For first click, load 'section' using ajax then jump to 'section' heading.
     allAnchors.click(function() {
+        var thisAnchor = $(this);
         var section = this.hash.substring(1);
         var callback = function() {
             jumpToSectionHeading(section);
+            addJumpToSectionHeadingBehavior(thisAnchor);
         };
         loadSectionUsingAjax(section, callback);
-
-        // Behaviour 2: For subsequent clicks, jump to 'section' heading only.
-        addJumpToSectionHeadingBehavior($(this));
     });
 }
 
 /**
- * Handles onclick event for Appendix B and C anchors.
- * These anchors link subsections in common HTML file.
+ * Handles onclick event for Appendix B and C anchors (subsections in common HTML file).
+ * For first click, load 'containerSection' using ajax then jump to 'subsection' heading.
+ * For subsequent clicks, jump to 'subsection' heading only.
  */
 function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
     subsectionAnchors.off(); // Remove previous behaviour
-
-    // Behaviour 1: For first click, load 'containerSection' using ajax then jump to 'subsection' heading.
     subsectionAnchors.click(function() {
         var subsection = this.hash.substring(1);
         var callback = function() {
             jumpToSectionHeading(subsection);
+            addJumpToSectionHeadingBehavior(subsectionAnchors);
         };
         loadSectionUsingAjax(containerSection, callback);
-
-        // Behaviour 2: For subsequent clicks, jump to 'subsection' heading only.
-        addJumpToSectionHeadingBehavior(subsectionAnchors);
     });
 }
 
