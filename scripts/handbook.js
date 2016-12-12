@@ -84,7 +84,18 @@ function loadSectionUsingAjax(section, callback) {
         },
         success: function(data) {
             $('#' + section).html(data);
-            callback();
+            var images = $('#' + section + ' img');
+            if (images.length == 0) {
+                callback();
+            } else {
+                var imagesLoaded = 0;
+                images.on('load', function() {
+                    imagesLoaded++;
+                    if (imagesLoaded == images.length) {
+                        callback();
+                    }
+                });
+            }
         }
     });
 }
