@@ -116,11 +116,12 @@ function isTableOfContentVisible() {
 }
 
 $(document).ready(function() {
-    var preview = window.location.hash.substring(1);
+    var preview = window.location.href.match(/\?preview=([^&#]*)/);
 
     if (preview) {
+        var section = 'handbook-' + preview[1];
         addLoadOnDemandToAnchors();
-        $('a[href="#' + preview + '"]').click();
+        $('a[href="#' + section + '"]').click();
         $('#overlay').remove();
     } else {
         loadAllSections();
