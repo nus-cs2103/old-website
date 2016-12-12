@@ -402,11 +402,11 @@ table.two-column-content td {
 }
 
 .embedded {
-    padding: 0px 10px 10px 10px;
+    background-color: #efefef;
     border: 1px solid #7A629B;
     border-radius: 3px;
     margin: 10px auto;
-    background-color: #efefef;
+    padding: 0 10px 10px 10px;
 }
 
 #embedded-heading-container {
