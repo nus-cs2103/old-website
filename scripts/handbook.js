@@ -115,17 +115,16 @@ function isTableOfContentVisible() {
 $(document).ready(function() {
     var preview = window.location.hash.substring(1);
 
-    if (!preview) {
+    if (preview) {
+        addLoadOnDemandToAnchors();
+        $('a[href="#' + preview + '"]').click();
+        $('#overlay').remove();
+    } else {
         loadSectionsIncrementally(0);
         $('a').click(function() {
             var section = this.hash.substring(1);
             jumpToSectionHeading(section);
         });
-    } else {
-        addLoadOnDemandToAnchors();
-            // Preview a single section
-        $('a[href="#' + preview + '"]').click();
-        $('#overlay').remove();
     }
 
     var buttonAnimationDuration = 200;
