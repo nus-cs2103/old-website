@@ -8,6 +8,18 @@ function jumpToSectionHeading(section) {
 }
 
 /**
+ * Adds jumps-to-section-heading behaviour for anchors.
+ * Previous behaviour is remove and default is blocked.
+ */
+function addJumpToSectionHeadingBehavior(anchors) {
+    anchors.off(); // Remove previous behaviour
+    anchors.click(function(event) {
+        event.preventDefault(); // Prevent default behaviour
+        jumpToSectionHeading(this.hash.substring(1));
+    });
+}
+
+/**
  * Adds load-on-demand capability for anchors in table-of-contents.
  * This capability is triggered when any of the anchors is clicked.
  */
@@ -37,12 +49,9 @@ function handleClickForAllAnchors(allAnchors) {
             jumpToSectionHeading(section);
         };
         loadSectionUsingAjax(section, callback);
-        $(this).off(); // Remove behaviour 1
 
         // Behaviour 2: For subsequent clicks, jump to 'section' heading only.
-        $(this).click(function() {
-            jumpToSectionHeading(section);
-        });
+        addJumpToSectionHeadingBehavior($(this));
     });
 }
 
@@ -60,14 +69,9 @@ function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
             jumpToSectionHeading(subsection);
         };
         loadSectionUsingAjax(containerSection, callback);
-        subsectionAnchors.off(); // Remove behaviour 1
 
         // Behaviour 2: For subsequent clicks, jump to 'subsection' heading only.
-        subsectionAnchors.click(function(event) {
-            event.preventDefault(); // Prevent default behaviour of anchor tags
-            var subsection = this.hash.substring(1); // Different from previous
-            jumpToSectionHeading(subsection);
-        });
+        addJumpToSectionHeadingBehavior(subsectionAnchors);
     });
 }
 
@@ -121,10 +125,7 @@ $(document).ready(function() {
         $('#overlay').remove();
     } else {
         loadSectionsIncrementally(0);
-        $('a').click(function() {
-            var section = this.hash.substring(1);
-            jumpToSectionHeading(section);
-        });
+        addJumpToSectionHeadingBehavior($('a'));
     }
 
     var buttonAnimationDuration = 200;
