@@ -291,6 +291,24 @@ code {
 }
 
 /*
+ * embedded button
+ */
+
+.btn-dismiss-embedded {
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid;
+    color: white;
+    float: right;
+    margin-top: -2px;
+    padding: 1px 12px 1px 12px;
+}
+
+.btn-dismiss-embedded:hover {
+    background-color: red;
+}
+
+/*
  * tables
  */
 
@@ -384,20 +402,23 @@ table.two-column-content td {
 }
 
 .embedded {
-    padding: 10px 10px;
-    border: 1px dashed #000;
-    margin: 10px auto;
     background-color: #efefef;
+    border: 1px solid #7A629B;
+    border-radius: 3px;
+    margin: 10px auto;
+    padding: 0 10px 10px 10px;
 }
 
-.embeddedHeading{
+.embedded-heading {
     color: white;
-    background-color: gray;
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-left:20px;
-    padding-right:30px;
-    font-weight: bold;
+}
+
+#embedded-heading-container {
+    background-color: #7A629B;
+    border-radius: 3px;
+    left: -10px;
+    padding: 7px 10px 7px 10px;
+    position: relative;
     width: 100%;
 }
 
