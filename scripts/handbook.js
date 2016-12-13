@@ -4,13 +4,15 @@
  * Account for Safari scrolling.
  */
 function jumpToSectionHeading(section) {
-    var headerPosition = $('#' + section).prev().offset().top;
     var isSafariBrowser = !navigator.userAgent.includes('Chrome') && navigator.userAgent.includes('Safari');
-    if(isSafariBrowser) {
-        $(window.top).scrollTop(headerPosition);
-    } else {
-        $(window).scrollTop(headerPosition);
+    var windowToScroll = window;
+    var headingsFrameOffset = 0;
+    if(isSafariBrowser && (windowToScroll != window.top)) {
+        windowToScroll = window.top;
+        headingsFrameOffset = 60; // From index.html
     }
+    var headerPosition = $('#' + section).prev().offset().top;
+    $(windowToScroll).scrollTop(headerPosition + headingsFrameOffset);
 }
 
 /**
