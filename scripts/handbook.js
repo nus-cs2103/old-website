@@ -105,14 +105,14 @@ function loadSectionUsingAjax(section, callback) {
  * Increment number of sections loaded in callback.
  * If all sections loaded, remove the loading overlay.
  */
-function loadAllSections() {
+function loadAllSectionsUsingAjax(callbackOnLoadAll) {
     var sectionsLoaded = 0;
     for (var i in sections) {
         var section = sections[i];
         var callback = function() {
             sectionsLoaded++;
             if (sectionsLoaded == sections.length) {
-                $('#overlay').remove();
+                callbackOnLoadAll();
             }
         };
         loadSectionUsingAjax(section, callback);
@@ -126,7 +126,11 @@ function isTableOfContentVisible() {
     return windowTop < tableBottom;
 }
 
-$(document).ready(function() {
+/**
+ * Loads sections based on whether preview has been requested.
+ * If not preview, hold $(document).ready until ajax callback.
+ */
+function loadSectionsBeforeDocumentReady() {
     var preview = window.location.href.match(/\?preview=([^&#]*)/);
 
     if (preview) {
@@ -139,10 +143,19 @@ $(document).ready(function() {
         $('a[href="#' + section + '"]').click();
         $('#overlay').remove();
     } else {
-        loadAllSections();
+        $.holdReady(true);
+        var callback = function() {
+            $.holdReady(false);
+            $('#overlay').remove();
+        }
+        loadAllSectionsUsingAjax(callback);
         addJumpToSectionHeadingBehavior($('a'));
     }
+}
 
+loadSectionsBeforeDocumentReady();
+
+$(document).ready(function() {
     var buttonAnimationDuration = 200;
     var speed = 1;
 
