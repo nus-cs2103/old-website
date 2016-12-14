@@ -218,6 +218,8 @@ function loadContent(week) {
 
             if (typeof preview != 'undefined') {
                 expandWeekFully(week);
+            } else if (isCurrentWeek(week)) {
+                expandWeekFully(week);
             }
         }
     });
@@ -350,6 +352,16 @@ function getDate(week, day) {
     var daysPassed = weeksPassed * 7 + day - 1;
     date.setTime(MODULE_START_DATE.getTime() + daysPassed * MILLI_SECS_PER_DAY);
     return date;
+}
+
+/**
+ * Determines if a given week is the current week.
+ * Uses the ISO 8601 week, which starts on Monday.
+ */
+function isCurrentWeek(week) {
+    var weekOfYear = $.datepicker.iso8601Week(getDate(week, 1));
+    var currentWeekOfYear = $.datepicker.iso8601Week(new Date());
+    return weekOfYear == currentWeekOfYear;
 }
 
 /**
