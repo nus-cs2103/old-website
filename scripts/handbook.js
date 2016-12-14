@@ -143,7 +143,9 @@ function loadSectionsBeforeDocumentReady() {
         $('a[href="#' + section + '"]').click();
         $('#overlay').remove();
     } else {
+        $.holdReady(true);
         var callback = function() {
+            $.holdReady(false);
             $('#overlay').remove();
         }
         loadAllSectionsUsingAjax(callback);
