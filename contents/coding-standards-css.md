@@ -39,15 +39,15 @@
 
 ## CSS Files<a name="css-files"></a>
 
- Include any additional css specifications in one file - [teammatesCommon.css]  (https://github.com/TEAMMATES/teammates/blob/master/src/main/webapp/stylesheets/teammatesCommon.css) <br>
+ Include any additional css specifications in one file - [common.css](https://github.com/nus-cs2103/website/blob/master/styles/common.css) <br>
 
  In the future if we have more files, CSS file includes must be done using `<link>` tags in the html/jsp files and NOT using `@import`  in other css files.
 
 ```html
-   <link rel="stylesheets" href="../teammatesCommon.css" type="text/css">
+   <link rel="stylesheets" href="../common.css" type="text/css">
    ```
 ```html
-   @import "teammatesCommon.css";
+   @import "common.css";
    ```   
 > **`@import`** can be slow and may result in the page being rendered without css for a while before the page magically 
    comes to life. As of now we are using css files as stylers of html pages and thus the dependency must be clearly visible 
@@ -56,7 +56,7 @@
 NO inline style sheets or inline styles in the html/jsp files.
 
 ```css
-   /* write styles only in the external file teammatesCommon.css */
+   /* write styles only in the external file common.css */
    #mainDiv {
        border: thin solid black;
        color:white;
@@ -80,7 +80,7 @@ NO inline style sheets or inline styles in the html/jsp files.
    management is also easier.
 
 ## Sections<a name="sections"></a>
-[teammatesCommon.css](https://github.com/TEAMMATES/teammates/blob/master/src/main/webapp/stylesheets/teammatesCommon.css) has been divided into 4 sections - Generic, NavBar, Header, MainContent. Place the new css rules in the appropriate section.
+[common.css](https://github.com/nus-cs2103/website/blob/master/styles/common.css) has been divided into many sections - accordions, buttons, table and so on. Place the new css rules in the appropriate section.
 
 >  By segmenting the file in this logical way, it is easy to locate css rules and to ensure that a new rule 
    being added is not already present.
