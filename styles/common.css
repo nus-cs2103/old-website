@@ -358,6 +358,10 @@ table.two-column-content td {
  * paragraph texts
  */
 
+ tooltip {
+     border-bottom: 1px dashed black;
+ }
+ 
  .deadline > div > ul > li {
     font-weight: bold;
  }
