@@ -217,7 +217,7 @@ function loadContent(week) {
             });
 
             if (typeof preview != 'undefined') {
-                $('#expandall-content-week' + week).click();
+                expandWeekFully(week);
             }
         }
     });
@@ -350,6 +350,13 @@ function getDate(week, day) {
     var daysPassed = weeksPassed * 7 + day - 1;
     date.setTime(MODULE_START_DATE.getTime() + daysPassed * MILLI_SECS_PER_DAY);
     return date;
+}
+
+/**
+ * Expands a week fully, by clicking its expand all button.
+ */
+function expandWeekFully(week) {
+    $("#expandall-content-week" + week).click();
 }
 
 function addAutoScrollToClickedWeekHeader() {
