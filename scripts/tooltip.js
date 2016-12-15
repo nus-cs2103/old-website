@@ -1,5 +1,19 @@
+// Maps a string to a definition (in the form of a HTML string)
 var definitions = {
 };
+
+// Maps a string to a list of aliases
+var aliases = {
+}
+
+for (let term in aliases) {
+    let definition = definitions[term];
+    let values = aliases[term];
+    for (let i in values) {
+        alias = values[i];
+        definitions[alias] = definition;
+    }
+}
 
 var count = 0;
 $('tooltip').each(function() {
