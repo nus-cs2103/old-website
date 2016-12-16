@@ -1,7 +1,7 @@
 // Change this to set the module start date
 // Format: 'Year.Month.Date'
 // E.g. '2015.8.10'
-var MODULE_START_DATE = setModuleStartDate('2016.8.8');
+var MODULE_START_DATE = setModuleStartDate('2017.1.9');
 var MONTH_NAMES_SHORT_FORM = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function setModuleStartDate(inputDate) {
