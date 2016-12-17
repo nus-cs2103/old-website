@@ -29,12 +29,12 @@
   <h3 id="activity-content-week7" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="activity activity-week7">
-      <h3>T6A1. Work in a 2KLoC code base, as a team<img src="../images/2stars.png"/></h3>
+      <h3>T6A1. Work in a 2KLoC code base, as a team<img src="../images/star.png"/></h3>
       <div>
-        <p>To be done <span class="highlighted">with your Phase C team members</span>.
-        <p>Set up a GitHub organization for your Phase C, as described
-          <a href="http://www.comp.nus.edu.sg/~cs2103/AY1617S1/contents/handbook.html#handbook-appendixE-github"
-             target="_blank">here</a>. No need to set up a repo for the project yet. Setting up the org is enough.</p>
+        <p>To be done <span class="highlighted">with your Phase B team members</span>.
+        <p>Set up a GitHub organization for your Phase B, as described
+          <a href="handbook.html#handbook-appendixE-github" target="_blank">here</a>.
+          No need to set up a repo for the project yet. Setting up the org is enough.</p>
         <p>Complete the exercise in
           <a href="https://github.com/nus-cs2103-AY1617S1/rcs#follow-the-feature-branch-workflow-lo-featurebranchworkflow"
              target="_blank"> Revision Control Software: Follow the Feature Branch Workflow [LO-FeatureBranchWorkflow]</a>
@@ -77,29 +77,55 @@
       </div>
     </div>
     <div class="activity activity-week7">
-      <h3>T6A2. Get started on the project requirements and design <img src="../images/star.png"/></h3>
+      <h3>T6A2. Set up the sample project<img src="../images/star.png"/></h3>
       <div>
-        <p>To be done <span class="highlighted">with your Phase C team members</span>.
-        </p>
-        Start drafting <span onclick="getContentUsingAjax('handbook-project-v00', '#embedded-week7-t6a2');"><span
+        Only one team member:
+        <ol>
+          <li>Ensure the GitHub organization name is as specified in
+            <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week7-github');">
+              <span class="embedded-link">our requirements</span>. <br>
+            Note: GitHub allows renaming orgs/repos.
+          </span>
+            <div id="embedded-week7-github"></div></li>
+          <li>Fork <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4" target="_blank">Address Book
+            Level 4 </a> to your team org.
+          </li>
+          <li>Rename the forked repo as <code>main</code>.
+            This repo is to be used as the repo for your project.</li>
+          <li>Clone the repo to your computer.</li>
+          <li>Edit this element <code>&lt;name&gt;addressbook-level4&lt;/name&gt;</code> and the line below that
+            in the <code>.project</code> file to match the *product name* (not repo name) of your project.
+            e.g. <code>SuperToDo</code><br>
+            Commit the change.</li>
+          <li>Push to the <cod>main</cod> repo you created above.</li>
+          <li>Ensure your team members have the desired level of access to your team repo</li>
+        </ol>
+        All team members:
+        <ol>
+          <li>Clone to your Computer the <code>main</code> repo your team member created in your team's GitHub org.</li>
+          <li>Set it up as an Eclipse project (follow the instructions carefully).</li>
+        </ol>
+      </div>
+    </div>
+    <div class="activity activity-week7">
+      <h3>T6A3. Reach V0.0 <img src="../images/star.png"/></h3>
+      <div>
+        Prepare <span onclick="getContentUsingAjax('handbook-project-v00', '#embedded-week7-t6a2');"><span
               class="embedded-link">V0.0 Deliverables</span></span>
         <div id="embedded-week7-t6a2"></div>
 
-        <p><strong>Suggested sequence</strong> : document product survey --> document user stories --> prioritize use stories -->
+        <p><strong>Suggested sequence</strong> : document product survey --> brainstorm user stories --> prioritize use stories -->
           select user stories to include in your product --> design the product --> write the user guide <br>
           Fill up Glossary and NFRs in parallel to the above.
         </p>
-        <p>You may use a simple collaboration medium such as Google Docs for the above. You can transfer the content to
-          your GitHub repo in week 8 after the content has become somewhat stable. Given that you will be converting the
-          document to Markdown later, minimize effort spent on formatting.</p>
-        <p>
-          Submission: Proper submission will be in Week 8 (after converting to markdown and pushing to the repo).
-          In tutorial 7, just show your intermediate drafts to the tutor.
+        <p>When creating these documents, initially you may use a simple collaboration medium such as Google Docs.
+          You can transfer the content to your GitHub repo after the content has become somewhat stable. </p>
+          Tip: find an Eclipse plugin to preview Markdown documents.
         </p>
       </div>
     </div>
     <div class="activity activity-week7">
-      <h3>T6A3. DIP, DI, OCP, C&C <img src="../images/2stars.png"/></h3>
+      <h3>T6A4. DIP, DI, OCP, C&C <img src="../images/2stars.png"/></h3>
       <div>
         <p>Complete *some* of the exercises given in: <br>
 
@@ -114,7 +140,7 @@
         </p>
         <p>
           Submission:
-          Create a PR with your code (similar to past weeks) but <span class="highlighted">use your Phase C team ID</span>
+          Create a PR with your code (similar to past weeks) but <span class="highlighted">use your Phase B team ID</span>
           [<span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week7-pr-steps', 'tutorial-pr-instructions');"><span class="embedded-link">Instructions</span></span>]
         <div id="embedded-week7-pr-steps"></div>
         </p>
@@ -124,7 +150,7 @@
 </div>
 
 <div class="tutorial content-week7">
-  <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: Getting started with the project, Feature branch
+  <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: V0.0, Feature branch
     flow, DIP, DI, OCP, C&C</span></h3>
   <div>
     <div class="tutorial tutorial-week7">
