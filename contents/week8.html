@@ -30,35 +30,11 @@
   <h3 id="activity-content-week8" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
   <div>
     <div class="activity activity-week8">
-      <h3>T7A1. Set up the sample project<img src="../images/star.png"/></h3>
+      <h3>T7A1. Set up the sample project (continued)<img src="../images/star.png"/></h3>
       <div>
-        Only one team member:
         <ol>
-          <li>Ensure the GitHub organization name is as specified in
-            <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week8-github');">
-              <span class="embedded-link">our requirements</span>. <br>
-            Note: GitHub allows renaming orgs/repos.
-          </span>
-            <div id="embedded-week8-github"></div></li>
-          <li>Fork <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4" target="_blank">Address Book
-            Level 4 </a> to your team org.
-          </li>
-          <li>Rename the forked repo as <code>main</code>.
-            This repo is to be used as the repo for your project.</li>
-          <li>Clone the repo to your computer.</li>
-          <li>Edit this element <code>&lt;name&gt;addressbook-level4&lt;/name&gt;</code> and the line below that
-            in the <code>.project</code> file to match the *product name* (not repo name) of your project.
-            e.g. <code>SuperToDo</code><br>
-            Commit the change.</li>
-          <li>Push to the <cod>main</cod> repo you created above.</li>
-          <li>Ensure your team members have the desired level of access to your team repo</li>
-        </ol>
-        All team members:
-        <ol>
-          <li>Clone to your Computer the <code>main</code> repo your team member created in your team's GitHub org.
-          </li>
-          <li>Set it up as an Eclipse project (follow the instructions carefully).</li>
-          <li>Ensure you can pass all the tests.</li>
+          <li>Ensure you can pass all the tests locally.</li>
+          <li>Set up Travis for your fork.</li>
           <li>Read the <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4/blob/master/docs/DeveloperGuide.md#design"
                           target="_blank">'Design' Section of the Developer Guide</a>
             to get a high-level understanding of the design before you start reading the code.</li>
@@ -69,38 +45,12 @@
     <div class="activity activity-week8">
       <h3>T7A2. Complete V0.0<img src="../images/star.png"/></h3>
       <div>
-        Work as a team to complete V0.0 that you started last week.
+        Complete any remaining parts of V0.0 that you could not finish in the previous week.
         Transfer the content to the relevant pages in your main repo.
-        <ul>
-          <li>Refer to the 'workflow' section given at the end of
-            <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week8-workflow');">
-            <span class="embedded-link">our GitHub instructions</span> to find possible workflow options.<br>
-            </span><div id="embedded-week8-workflow"></div>
-          </li>
-          <li><span class="highlighted">MUST DO</span> : Complete the <code>UserGuide.md</code> page.
-            This page should tell us in detail what is the product you plan to deliver at the end of the semester.
-            Remember to include detailed command formats and UI mock ups.
-            We are going to use it to give feedback about your product design over the next week.
-          </li>
-          <li>Update the <code>AboutUs.md</code> page. In particular, indicate which member is in charge of
-          which component (i.e. UI, Logic, Storage, etc.).<br>
-            <span class="dim">Note: Being 'in charge' of a component does not mean you work in that component only.
-            Rather, you are expected to know it well and possibly review/approve
-            changes done to that component by others.</span><br>
-            Delete details/photos of original developers. Include your own details and photos instead.<br>
-            Include the name and photo of the project mentor (i.e. your phase C tutor). His/her photo can be taken
-            from the <a href="https://docs.google.com/document/d/1O3HF7qsh6KVeLesPmcQ0nPxSqhrkJxvS-OA_g-k-two/pub?embedded=true" target="_blank">
-              Teaching Team</a> page.
-           </li>
-          <li>Update the <code>README.md</code> page to match your project. In particular, add a UI mockup of
-          your intended final product. Also, remember to acknowledge the original source of the code
-          i.e. The sample project created by SE-EDU initiative at <code>https://github.com/se-edu/</code></li>
-          <li>Complete the appendices of the <code>DeveloperGuide.md</code> within the next two weeks.</li>
-        </ul>
-        Submission:<br>
-        Create a PR from your team repo <code>master</code> branch to
+        <br>
+        Submission: Create a PR from your team repo <code>master</code> branch to
         <code>https://github.com/nus-cs2103-AY1617S1/addressbook-level4</code>.
-        Name it <code>[T7][Your-Team-ID]</code> e.g. <code>[T7][W09-C3]</code>
+        Name it <code>[T7][Your-Team-ID]</code> e.g. <code>[T7][W09-B3]</code>
       </div>
     </div>
 
@@ -109,28 +59,18 @@
       <div>
         Work as a team to deliver V0.1. Note the following:
         <ul>
-          <li>Aim to deliver at least add/delete/find support for floating tasks. You should be able to do this
-            by deleting/renaming the given Address Book code, without having to add too much new code.
+          <li>Refer to the 'workflow' section given at the end of
+            <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week8-workflow');">
+            <span class="embedded-link">our GitHub instructions</span> to find possible workflow options.<br>
+            </span><div id="embedded-week8-workflow"></div>
           </li>
-          <li><span class="highlighted">Please watch the webcast if you missed Lecture 7</span>.
-            We noticed that in the previous week many teams wasted time designing an unrealistic UI for their product
-            because they did not pay attention to the sample UI shown in Lecture 6. Lecture 7 too
-            contained some information important for V0.1.</li>
+          <li><span class="highlighted">Divide components (GUI, Model, etc.) among team members</span>.
+            Learn the code of your component. In V0.1 (and V0.2), try to limit your work to your component only.
+          </li>
           <li>
-            Change code in small steps, run tests after each step, commit each step, and merge often.
+            <span class="highlighted">Change code in small steps</span>, run tests after each step,
+            commit each step, and merge often.
           </li>
-          <li>Following things can be dropped if you find them too much trouble.
-            They are not compulsory to have in the final version.
-            <ul>
-              <li>Automated GUI testing</li>
-              <li>Using Gradle to build the project</li>
-              <li>Using Travis for CI</li>
-              <li>Using regular expressions for parsing: feel free to switch to a simpler technique.</li>
-              <li>Using new Java 8 lambdas and streams : feel free to use normal <code>for</code> loops instead.</li>
-            </ul>
-          </li>
-          <li><strong>If you feel Level 4 code is too daunting</strong> for you to use as the starting point,
-            you may use Level 3 code as your starting point instead.</li>
         </ul>
         Submission:<br>
         No separate submission required as your T7A3 work will be captured in the T7A2 submission above.
