@@ -45,7 +45,7 @@ To create a [*staging site*](https://en.wikipedia.org/wiki/Staging_site) using
 [*RawGit*](https://rawgit.com/), commit your changes and push the branch to your fork.
 A running version of the website should now be available from the corresponding
 `rawgit.com` URL of the form `http://rawgit.com/user/repo/branch/`,  
-e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
+e.g. http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/.
 
 ## Tool Stack
 
