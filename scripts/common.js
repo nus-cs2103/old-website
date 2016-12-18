@@ -38,8 +38,25 @@ function pullContent(fileName, elementSelector, title, sectionName) {
                ' $(\'' + elementSelector + '\').removeClass(\'embedded\');" ' +
                'class="btn-dismiss-embedded">X</button></div><br> '+linkNotice+' </div>');
             $(elementSelector + ' > div > .btn-dismiss').button();
+
+            if ($('.prettyprint:not(.prettyprinted)').length > 0) {
+                prettyPrintCodeSamples();
+            }
         }
-    }); 
+    });
+}
+
+/**
+ * Pretty-prints code samples.
+ * If PR is undefined, get run_prettify.js with 'sunburst' skin,
+ * else, call prettyPrint() that is defined in the above script.
+ */
+function prettyPrintCodeSamples() {
+    if (typeof PR == "undefined") {
+        $.getScript("https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst");
+    } else {
+        PR.prettyPrint();
+    }
 }
 
 function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId) {
