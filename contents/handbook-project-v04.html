@@ -1,8 +1,12 @@
 <div id="handbook-project-v04-product"></div>
 <h3>V0.4 Product</h3>
 <p>Functionality expectations: This version should have decent implementations of all major features you intend to
-  release, although some finer
-  tweaks may be missing and not completely stable.</p>
+  release, although some finer tweaks may be missing and not completely stable.</p>
+<p>
+  <span class="highlighted"><strong>Dogfood your product</strong> and find ways to improve it.</span>
+  Remember to keep the dogfooding version of the app (i.e. the jar file) in a separate folder as evidence of dogfooding.
+  i.e. Don't use the IDE for dogfooding (Dogfooding is an acceptance test; it should be done in the user environment)
+</p>
 <p>
   <strong> Mark your code</strong> with special tag <code>@@author</code> so that we can extract code written by each of
   you using the collate tool (for evaluation purposes). After that, Use the collate tool to extract individual code and
@@ -69,8 +73,12 @@ method 4 ...</code></pre>
   */</code></pre>
   <br>
   <li>
-    If you wrote a significant amount of code that was not used in the final product, you may use <code>//@@author
-    matric-number-unused</code> to mark them.
+    If you wrote a significant amount of code that was not used in the final product,
+    <ul>
+      <li>Create a folder called <code>{project root}/unused</code></li>
+      <li>Move unused files to that folder (those files should contain unused code only)</li>
+      <li>use <code>//@@author matric-number</code> to mark unused code in those files.</li>
+    </ul>
   </li>
   e.g.
   <pre class="prettyprint"><code class="shell">//@@author A0909865T-unused
@@ -79,7 +87,8 @@ method 2 ...</code></pre>
   Please put a comment in the code to explain why it was not used.
   <br>
   <li>
-    The <code>//@@author</code> tag should be used to mark *all* code/documentation you claim credit for.<br>
+    The <code>//@@author</code> tag should be used to mark *all* code/test you claim credit for.
+    There is no need to mark documentation files. <br>
     You will be penalized if you try to boost the length of your collated files using unethical means such as
     duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant
     tests. Even repetitive code blocks within test methods should be extracted out as utility methods to
@@ -91,7 +100,7 @@ method 2 ...</code></pre>
   <ul>
     <li>
       <strong> INCLUDE</strong>: everything that required significant ‘writing’ effort. e.g. comments,
-      test code, documentation, styling (e.g. css), xml, even test data files. But do not include chunks of text
+      test code, styling (e.g. css), xml, even test data files. But do not include chunks of text
       that were trivially copy pasted e.g. a test data file with 1000 tasks that was used to test performance.
     </li>
     <li>
@@ -118,7 +127,7 @@ method 2 ...</code></pre>
     <ul>
       <li>collated functional code in <code>collated/main</code> folder,</li>
       <li>collated test code in <code>collated/test</code> folder, and</li>
-      <li>collated documentation in <code>collated/docs</code> folder</li>
+      <li>collated unused code in <code>collated/unused</code> folder</li>
     </ul>
     Given below are DOS sample commands you can put in a batch file and run it to collate the code.
   <pre class="prettyprint"><code class="shell">
@@ -126,7 +135,7 @@ java -jar Collate-TUI.jar collate from src/main to collated/main include java, f
 
 java -jar Collate-TUI.jar collate from src/test to collated/test include java
 
-java -jar Collate-TUI.jar collate from docs to collated/docs include md, html</code></pre>
+java -jar Collate-TUI.jar collate from unused to collated/unused include md, html</code></pre>
   The output should be something like the structure given below.
     <pre class="prettyprint"><code class="shell">
 collated/
@@ -139,10 +148,8 @@ collated/
       A000000.md
       A111111.md
       A222222.md
-    docs/
+    unused/
       A000000.md
-      A111111.md
-      A222222.md
     </code></pre>
   </li>
 </ol>
