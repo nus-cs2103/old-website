@@ -5,6 +5,9 @@
     * [Preview a handbook section](#preview-a-handbook-section)
     * [Preview local files in Google Chrome](#preview-local-files-in-google-chrome)
 * [How to stage changes](#how-to-stage-changes)
+* [Tool Stack](#tool-stack)
+    * [Development environment](#development-environment)
+    * [Tools used in implementation](#tools-used-in-implementation)
 
 ## Coding Standards
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
@@ -33,3 +36,22 @@ To create a [*staging site*](https://en.wikipedia.org/wiki/Staging_site) using
 A running version of the website should now be available from the corresponding
 `rawgit.com` URL of the form `http://rawgit.com/user/repo/branch/`,  
 e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/).
+
+## Tool Stack
+
+#### Development environment
+* **GitHub**
+  Used to host the repo and code reviewing.
+* **Google Chrome DevTools**
+  Used to iterate, debug and profile the site.
+* **Atom**
+  Used as a text editor, automatically removes trailing whitespaces and newlines.
+* **SourceTree**
+  Used as a GUI client for Git.
+
+#### Tools used in implementation
+* **HTML** [version 5], **JavaScript**, **CSS**
+* **jQuery** [version 1.11.3]
+  jQuery is a JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.
+* **jQuery UI** [version 1.11.3]
+  jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library.
