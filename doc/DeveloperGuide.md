@@ -52,11 +52,11 @@ e.g. [http://rawgit.com/acjh/website/112-fix-loading-overlay-handbook/](http://r
 #### Development environment
 * **GitHub**
   Used to host the repo and code reviewing.
-* **Google Chrome DevTools**
+* **Google Chrome DevTools** (recommended)
   Used to iterate, debug and profile the site.
-* **Atom**
+* **Atom** (recommended)
   Used as a text editor, automatically removes trailing whitespaces and newlines.
-* **SourceTree**
+* **SourceTree** (recommended)
   Used as a GUI client for Git.
 
 #### Tools used in implementation
