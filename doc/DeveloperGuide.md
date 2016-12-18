@@ -27,11 +27,11 @@ Refer to: https://github.com/oss-generic/process/#guidelines-for-new-contributor
 ## How to preview changes
 
 #### Preview a week in schedule
-[`.../contents/week.html?preview=1`](http://rawgit.com/acjh/website/89-make-page-fragments-previewable/contents/week.html?preview=1)
+[`.../contents/week.html?preview=1`](http://nus-cs2103.github.io/website/contents/week.html?preview=1)
 > `preview` can be any of weeks `0`-`14`.
 
 #### Preview a handbook section
-[`.../contents/handbook.html?preview=preliminaries`](http://rawgit.com/acjh/website/89-make-page-fragments-previewable/contents/handbook.html?preview=preliminaries)
+[`.../contents/handbook.html?preview=preliminaries`](http://nus-cs2103.github.io/website/contents/handbook.html?preview=preliminaries)
 > `preview` can be any section/subsection `id` in handbook.html, **without** the `handbook-` prefix.
 
 #### Preview local files in Google Chrome
