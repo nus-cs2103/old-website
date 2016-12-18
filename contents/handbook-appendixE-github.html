@@ -31,7 +31,7 @@
     </li>
     </li>
     <li>
-      <span class="highlighted">If your PR adapted/referred code from elsewhere</span>  (e.g. a stackoverflow post or a
+      <span class="highlighted">If your PR adapted/referred code from elsewhere</span> (e.g. a stackoverflow post or a
       classmate's PR -- which is allowed, even encouraged), acknowledge the source in your PR description text.<br>
       e.g. <code>Some code adapted from #2431 (I followed the same technique for parsing user command)</code>
     </li>
@@ -65,7 +65,7 @@
   </li>
   <li>Add your team members to either the owners team or the developers team.</li>
 </ul>
-
+<div id="repo-setup">
 <strong>Repo setup</strong>
 <ul>
   <li>Create a <span class="highlighted">repo called <code>main</code></span> under your organization
@@ -107,15 +107,21 @@
   </ul>
   <li>You may configure other project settings as you wish. e.g. more labels, more milestones</li>
 </ul>
+</div>
+<div id="guidelines-for-project-schedule-tracking">
+<strong>Guidelines for Project Schedule Tracking</strong>
+<p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels)
+  for assigning, scheduling, and tracking ALL project tasks,
+  including user stories. Update the issue tracker regularly to reflect the current status of the project.
+  You can also use GitHub's new <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU" target="_blank">
+   Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
 
-<strong>Guidelines for Task Tracking using the Issue Tracker </strong>
-<p>In general, use the issue tracker for assigning, scheduling, and tracking ALL project tasks,
-  including user stories. Update the issue tracker regularly to reflect the current status of the
-  project.</p>
-<p></p>
-
-<p>Recommended practices when using the Issue tracker:</p>
+<p>Using Issues:</p>
 <ul>
+  <li>Record each of the user stories you plan to deliver as an issue in the issue tracker.<br>
+    e.g. <code> Title: As a user I can add a deadline</code><br>
+    <code>Description: ... so that I can keep track of my deadlines</code></li>
+  <li>Assign the <code>type.*</code> and <code>priority.*</code> labels to those issues.</li>
   <li>When you start implementing a story, break it down to tasks. Define reasonable sized, standalone
     tasks. A task should be able to done by one person, in a few hours. e.g. <br/>
     Good: Update class diagram in the project manual for V0.5<br/>
@@ -146,8 +152,31 @@
   <li>Use status labels to indicate which tasks are completed, which are ongoing, and which are to be
     done by next milestone.
   </li>
-  <li>Use milestones to indicate which issues are to be handled for which milestone.</li>
 </ul>
+<p>Using Milestones:</p>
+<ul>
+  <li>Use milestones to indicate which issues are to be handled for which milestone by assigning
+    issues to suitable milestones.</li>
+  <li>Set the deadlines for milestones (in GitHub). Your internal milestones can be set earlier than
+    the deadlines we have set, to give you a buffer.
+  </li>
+  <li>
+    Note that you can change the milestone plan along the way as necessary.
+  </li>
+  <li>
+    IMPORTANT: To consider the milestone as 'reached', <span class="highlighted">you should have the
+    following done *before* the tutorial begins. 'Missed milestones'
+    will count against the 'project management' component of your final grade</span>:
+    <ul>
+      <li>A working product tagged with the correct tag (e.g. V0.2) and pushed to the main repo.</li>
+      <li>All tests passing on Travis.</li>
+      <li>Milestone updated to match the product.</li>
+      <li>Milestone closed. All issues assigned to that milestone should be closed too.</li>
+      <li>Doing a 'release' on GitHub is optional for V0.1 and V0.2 but compulsory from V0.3.</li>
+    </ul>
+  </li>
+</ul>
+</div>
 
 <p><strong>Workflow</strong></p>
 You may use any of the workflows described
@@ -157,9 +186,14 @@ You can start with a simpler workflow first and move to more complex ones as nec
 <p>Here are some examples (ordered in increasing complexity):</p>
 <ul>
   <li>Members push to the <code>master</code> branch (i.e. centralized workflow).</li>
-  <li>Members push to feature branches of team repo and merge when ready (i.e. feature branch workflow without PRs).</li>
-  <li>Members push to feature branches of team repo and create PRs in team repo (i.e. feature branch workflow with PRs).</li>
-  <li>Members fork the team repo to their own account, push code to their own fork, and then create PRs from their fork to team
-    repo using either the centralized or the feature branch workflow.</li>
+  <li>Members push to feature branches of team repo and merge when ready (i.e. feature branch workflow without PRs).
+  </li>
+  <li>Members push to feature branches of team repo and create PRs in team repo (i.e. feature branch workflow with
+    PRs).
+  </li>
+  <li>Members fork the team repo to their own account, push code to their own fork, and then create PRs from their fork
+    to team
+    repo using either the centralized or the feature branch workflow.
+  </li>
 </ul>
 

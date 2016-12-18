@@ -30,59 +30,34 @@
         </div>
       </div>
       <div class="activity activity-week9">
-        <h3>T8A1. Define the milestones <img src="../images/star.png"/></h3>
+        <h3>T8A1. Start project schedule tracking <img src="../images/star.png"/></h3>
         <div>
           <ul>
-            <li>If you haven't done so yet, create labels and milestones in your team repo as given in our GitHub
-              setup instructions.
+            <li>If you haven't done so yet, create labels and milestones in your team repo as given in our
+              <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week9-t8a1a', 'repo-setup');">
+                <span class="embedded-link">GitHub Repo Setup</span> instructions.
+              </span>
+              <div id="embedded-week9-t8a1a"></div>
             </li>
-            <li>Record each of the user stories you plan to deliver as an issue in the issue tracker.<br>
-              e.g. <code> Title: As a user I can add a deadline</code><br>
-              <code>Description: ... so that I can keep track of my deadlines</code></li>
-            <li>Assign the <code>type.*</code> and <code>priority.*</code> labels to those issues.</li>
-            <li>Assign the above issues to suitable milestones (in GitHub).</li>
-            <li>Set the deadlines for milestones (in GitHub). Your internal milestones can be set earlier than
-              the deadlines we have set, to give you a buffer.</li>
+            <li>Start using GitHub (Issues, Milestones, etc.) for managing your project schedule
+              <span onclick="getContentUsingAjax('handbook-appendixE-github', '#embedded-week9-t8a1b', 'guidelines-for-project-schedule-tracking');">
+                <span class="embedded-link">as specified in the handbook</span>.
+                Note that <span class="highlighted">you'll lose marks if you don't 'reach' the milestone</span> as
+                specified in those instrutions.
+              </span>
+              <div id="embedded-week9-t8a1b"></div>
+            </li>
           </ul>
-          <p>
-            Note that you can change the milestone plan along the way as necessary.
-            However, if you do not have a working product at the milestone deadline, or the milestone plan doesn't
-            match the project at the milestone, we'll consider that as <span class="highlighted">a 'missed milestone'
-            which will count against the 'project management' component of your final grade</span>.
-          </p>
-          <p>
-            Use Github Milestones, Issues, PRs, Tags, Releases, and Labels to track your project schedule.
-            You can also use GitHub's new <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU" target="_blank">
-            Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.
-          </p>
         </div>
       </div>
       <div class="activity activity-week9">
         <h3>T8A2. Reach V0.2 <img src="../images/star.png"/></h3>
         <div>
           As you work towards V0.2, learn from the last week's experience and refine the workflow as necessary.
-          <p>
-            IMPORTANT: To consider the milestone as 'reached', <span class="highlighted">you should have the
-            following done *before* the tutorial begins</span>:
-          <ul>
-            <li>A working product tagged as V0.2 and pushed to the main repo.</li>
-            <li>All tests passing.</li>
-            <li>Milestone V0.2 updated to match the product and closed.</li>
-          </ul>
-          Doing a 'release' on GitHub is optional for V0.2 but compulsory from V0.3.
-          </p>
         </div>
       </div>
       <div class="activity activity-week9">
-        <h3>T8A3. Complete Developer Guide Appendices <img src="../images/star.png"/></h3>
-        <div>
-          Complete the User Guide (as per V0.0) if you haven't done so already.<br>
-          Complete the appendices of the Developer Guide. <br>
-          You are not required to (but welcome to)  update the other parts of the Developer Guide at this point.
-        </div>
-      </div>
-      <div class="activity activity-week9">
-        <h3>T8A4. Defend your code  <img src="../images/2stars.png"/></h3>
+        <h3>T8A3. Defend your code  <img src="../images/2stars.png"/></h3>
           <div>
             This is an individual activity.<br>
             Try to use these in the code your write for the project.<br>
@@ -116,17 +91,18 @@
       <h3>Demo V0.2</h3>
       <div>
         <ol>
-          <li>Revert your code to the version tagged as V0.2</li>
+          <li>If have created a releas, use that jar file for the demo. If not, revert your code to the version tagged
+            as V0.2</li>
           <li>Demo your V0.2 to the tutor to prove it meets V0.2 milestone requirements.</li>
-          <li>Run the tests to show they pass.</li>
           <li>Show your repo to tutor to confirm that,
             <ul>
+              <li>tests are passing on Travis.</li>
               <li>org and repo names are as expected</li>
               <li>milestone V0.2 matches the current version</li>
-              <li>milestone V0.2 and its issues are assigned and closed</li>
+              <li>milestone V0.2 issues are assigned and closed</li>
+              <li>milestone V0.2 is closed</li>
             </ul>
           </li>
-          <li>Show your User Guide and Developer Guide appendices to confirm they have been completed.</li>
         </ol>
         Ask your tutor if you are considered as 'reached V0.2'. As mentioned before, missing milestones
         V0.2 .. V0.5 will be counted against your final project marks.
