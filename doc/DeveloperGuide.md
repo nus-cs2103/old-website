@@ -1,4 +1,5 @@
 # Developer Guide
+* [Guidelines for New Contributors](#guidelines-for-new-contributors)
 * [Coding Standards](#coding-standards)
 * [How to preview changes](#how-to-preview-changes)
     * [Preview a week in schedule](#preview-a-week-in-schedule)
@@ -8,6 +9,15 @@
 * [Tool Stack](#tool-stack)
     * [Development environment](#development-environment)
     * [Tools used in implementation](#tools-used-in-implementation)
+
+## Guidelines for New Contributors
+* Asking a Question
+* Posting an Issue
+* Submitting Your First PR
+* Naming Conventions (Branch name and PR title)
+* Git Usage Guidelines (Commit messages)
+
+Refer to: https://github.com/oss-generic/process/#guidelines-for-new-contributors
 
 ## Coding Standards
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
