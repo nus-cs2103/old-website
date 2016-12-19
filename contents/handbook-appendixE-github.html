@@ -1,15 +1,24 @@
-<p>For phases A and B, you only need a personal GitHub account. You are advised to choose a sensible GitHub username
-  as you are likely to use it for years to come in professional context.
-  <br>
-  The instructions below are for setting up a GitHub organization for your team, which you should do at the start of
-  Phase C.</p>
+<h2>Create a GitHub profile</h2>
+<p>Create a personal GitHub account.<br>
+  1. You are advised to choose a sensible GitHub username as you are likely to use it for years to come
+  in professional contexts.<br>
+  2. Strongly recommended: Complete your GitHub profile. In particular,<br>
+  * Specify your full name. <br>
+  * Upload a suitable profile photo (i.e. a recent photo of your face).<br>
+
+  <div class="additional-info">
+  <strong>Why am I being pushed to complete my GitHub profile?</strong><br>
+  The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your
+  info in your long-term GitHub account, you can remove those details after the module is over or create a separate
+  GitHub account just for the module.
+  </div>
 
 <div id="tutorial-pr-instructions">
   <h2>Submitting Pull Requests for tutorials</h2>
   <ol>
     <li>Fork the repo to your personal GitHub account, if you haven't done so already.</li>
     <li>Create a branch named after tutorial activity e.g. <code>T2A2</code><br>
-      <span class="highlighted">Remember to switch to master branch before creating to new branch.</span></li>
+      <span class="highlighted">Remember to switch to master branch before creating the new branch.</span></li>
     <li>Commit your changes to that branch. Push to your fork.</li>
     <li>Create a Pull Request against the master branch of the repo<br>
       <code>https://github.com/<strong>nus-cs2103-AY1617S1</strong>/{repo_name}</code><br>
@@ -43,78 +52,107 @@
   </ol>
 </div>
 
-<h2>Organization setup</h2>
-<p>You can create your GitHub account after receiving your team ID. Here are the instructions
-  (<span class="highlighted"> please follow the organization/repo name format closely because we use scripts to
+
+<div id="organization-setup">
+  <h2>Organization setup</h2>
+  The instructions below are for setting up a GitHub organization for your team, which you should do at the start of
+  Phase B.
+  <p>You can create your GitHub account after receiving your phase B team ID. Here are the instructions
+    (<span class="highlighted"> please follow the organization/repo name format closely because we use scripts to
         download your code. If the names are not as expected, our scripts will not work</span>):</p>
-<p></p>
-<ul>
-  <li>One team member (e.g. team leader) should create an organization with the following details:</li>
-</ul>
-<ul>
-  <li><span class="highlighted">Organization name : <code>CS2103AUG2016-TEAM_ID</code></span>. e.g. 
-    <span class="code">CS2103AUG2016-W09-C3</span></li>
-  <li>Plan:  Open Source ($0/month) </li>
-</ul>
-<ul>
-  <li>After that, the same person can add members to the organization:</li>
-</ul>
-<ul>
-  <li>Create a team called developers to your organization (in addition to the owners team) and give
-    that team write permission.
-  </li>
-  <li>Add your team members to either the owners team or the developers team.</li>
-</ul>
+  <p></p>
+  <ul>
+    <li>One team member (e.g. team leader) should create an organization with the following details:</li>
+  </ul>
+  <ul>
+    <li><span class="highlighted">Organization name : <code>CS2103AUG2016-TEAM_ID</code></span>. e.g. 
+      <span class="code">CS2103AUG2016-W09-B3</span></li>
+    <li>Plan:  Open Source ($0/month) </li>
+  </ul>
+  <ul>
+    <li>After that, the same person can add members to the organization:</li>
+  </ul>
+  <ul>
+    <li>Create a team called developers to your organization (in addition to the owners team) and give
+      that team write permission.
+    </li>
+    <li>Add your team members to either the owners team or the developers team.</li>
+  </ul>
+</div>
+
+
 <div id="repo-setup">
 <h2>Repo setup</h2>
-<ul>
-  <li>Create a <span class="highlighted">repo called <code>main</code></span> under your organization
-    e.g. <code>CS2103AUG2016-W09-C3/main</code><br/>
-    <img src="../images/repo setup.png" width="600"/><br>
-    Do not tick the 'Initialize this repository with a README' option.
-  </li>
-</ul>
-<h2>Issue tracker setup</h2>
-<ul>
-  <li>When you create a repo, you get an issue tracker for that repo automatically.<br/>
-  </li>
-  <li>Delete existing labels and add the following labels.
+  Only one team member:
+  <ol>
+    <li>Fork <a href="https://github.com/nus-cs2103-AY1617S1/addressbook-level4" target="_blank">Address Book
+      Level 4 </a> to your team org.
+    </li>
+    <li>Rename the forked repo as <code>main</code>.
+      This repo is to be used as the repo for your project.</li>
+    <li>Clone the repo to your computer.</li>
+    <li>Edit this element <code>&lt;name&gt;addressbook-level4&lt;/name&gt;</code> and the line below that
+      in the <code>.project</code> file to match the *product name* (not repo name) of your project.
+      e.g. <code>SuperToDo</code><br>
+      Commit the change.</li>
+    <li>Push to the <cod>main</cod> repo you created above.</li>
+    <li>Ensure your team members have the desired level of access to your team repo</li>
+  </ol>
+  All team members:
+  <ol>
+    <li>Clone to your Computer the <code>main</code> repo your team member created in your team's GitHub org.</li>
+    <li>Set it up as an Eclipse project (follow the instructions carefully).</li>
+  </ol>
+
+  <p>Note that some of our download scripts depend on the following folder paths. Please do not alter those
+    paths in your project.<br>
+    <code>/src/main</code><br>
+    <code>/src/test</code><br>
+    <code>/doc</code></p>
+</div>
+
+<div id="issue-tracker-setup">
+  <h2>Issue tracker setup</h2>
+  When you create a repo, you get an issue tracker for that repo automatically. Configure it as follows:
+  <ul>
+    </li>
+    <li>Delete existing labels and add the following labels.
+      <ul>
+        <li><code>type.epic</code> : A big feature which can be broken down into smaller stories e.g. search
+        </li>
+        <li><code>type.story</code> : A user story</li>
+        <li><code>type.enhancement</code>: An enhancement to an existing story</li>
+        <li><code>type.task</code> : Something that needs to be done, but not a story, bug, or an epic. e.g.
+          Move testing code into a new folder)
+        </li>
+        <li><code>type.bug</code> : A bug</li>
+        <li><code>status.ongoing</code> : The issue is currently being worked on. note: remove this label
+          before closing an issue.
+        </li>
+        <li><code>priority.high</code> : Must do</li>
+        <li><code>priority.medium</code> : Nice to have</li>
+        <li><code>priority.low</code> : Unlikely to do<br/>
+        </li>
+      </ul>
+    </li>
+    <li>Create following milestones</li>
     <ul>
-      <li><code>type.epic</code> : A big feature which can be broken down into smaller stories e.g. search
-      </li>
-      <li><code>type.story</code> : A user story</li>
-      <li><code>type.enhancement</code>: An enhancement to an existing story</li>
-      <li><code>type.task</code> : Something that needs to be done, but not a story, bug, or an epic. e.g.
-        Move testing code into a new folder)
-      </li>
-      <li><code>type.bug</code> : A bug</li>
-      <li><code>status.ongoing</code> : The issue is currently being worked on. note: remove this label
-        before closing an issue.
-      </li>
-      <li><code>priority.high</code> : Must do</li>
-      <li><code>priority.medium</code> : Nice to have</li>
-      <li><code>priority.low</code> : Unlikely to do<br/>
+      <li>
+        <code>V0.0</code>, <code>V0.1</code>, <code>V0.2</code>, <code>V0.3</code>, <code>V0.4</code>, <code>V0.5rc</code>,
+        <code>V0.5</code>
       </li>
     </ul>
-  </li>
-  <li>Create following milestones</li>
-
-  <ul>
-    <li>
-      <code>V0.0</code>, <code>V0.1</code>, <code>V0.2</code>, <code>V0.3</code>, <code>V0.4</code>, <code>V0.5rc</code>,
-      <code>V0.5</code>
-    </li>
+    <li>You may configure other project settings as you wish. e.g. more labels, more milestones</li>
   </ul>
-  <li>You may configure other project settings as you wish. e.g. more labels, more milestones</li>
-</ul>
 </div>
-<div id="guidelines-for-project-schedule-tracking">
-<h2>Guidelines for Project Schedule Tracking</h2>
+
+<div id="project-schedule-tracking">
+<h2>Project Schedule Tracking</h2>
 <p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels)
-  for assigning, scheduling, and tracking ALL project tasks,
+  for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks,
   including user stories. Update the issue tracker regularly to reflect the current status of the project.
   You can also use GitHub's new <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU" target="_blank">
-   Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
+  Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
 
 <h3>Using Issues:</h3>
 <ul>
@@ -178,22 +216,22 @@
 </ul>
 </div>
 
-<p><h2>Workflow</h2></p>
-You may use any of the workflows described
-<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/" target="_blank">here</a> and their variations.
-You can start with a simpler workflow first and move to more complex ones as necessary.
+<div id="workflow">
+  <h2>Workflow</h2>
+  You may use any of the workflows described
+  <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/" target="_blank">here</a> and their variations.
+  You can start with a simpler workflow first and move to more complex ones as necessary.
 
-<p>Here are some examples (ordered in increasing complexity):</p>
-<ul>
-  <li>Members push to the <code>master</code> branch (i.e. centralized workflow).</li>
-  <li>Members push to feature branches of team repo and merge when ready (i.e. feature branch workflow without PRs).
-  </li>
-  <li>Members push to feature branches of team repo and create PRs in team repo (i.e. feature branch workflow with
-    PRs).
-  </li>
-  <li>Members fork the team repo to their own account, push code to their own fork, and then create PRs from their fork
-    to team
-    repo using either the centralized or the feature branch workflow.
-  </li>
-</ul>
-
+  <p>Here are some examples (ordered in increasing complexity):</p>
+  <ul>
+    <li>Members push to the <code>master</code> branch (i.e. centralized workflow).</li>
+    <li>Members push to feature branches of team repo and merge when ready (i.e. feature branch workflow without PRs).
+    </li>
+    <li>Members push to feature branches of team repo and create PRs in team repo (i.e. feature branch workflow with
+      PRs).
+    </li>
+    <li>Members fork the team repo to their own account, push code to their own fork, and then create PRs from their
+      fork to team repo using either the centralized or the feature branch workflow.
+    </li>
+  </ul>
+</div>
