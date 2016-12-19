@@ -1,165 +1,166 @@
 <p>
-    Note that project grading is <span class="highlighted">not competitive (not bell curved)</span>. <span
-        class="highlighted">CS2103T projects will be assessed separately from CS2103 projects. </span> This is to
-    account for the perceived difference in workload.
-    Given below is the marking scheme.
+  Note that project grading is <span class="highlighted">not competitive (not bell curved)</span>. <span
+    class="highlighted">CS2103T projects will be assessed separately from CS2103 projects. </span> This is to
+  account for the perceived difference in workload.
+  Given below is the marking scheme.
 </p>
 <p>
-    <strong>Total</strong>: 50 marks (25 individual marks + 25 team marks)
+  <strong>Total</strong>: 50 marks (25 individual marks + 25 team marks)
 </p>
 <ol type="a">
-    <li><strong>Product features </strong> [team][10 marks] - How good is your software as a product?
-        <p>
-            Based on the features implemented, how well they fit together to make a good product, and how well they are
-            demonstrated.
-        </p>
-        <p>
-            ‘Half-baked’ (i.e. not production quality) or 'ill-fitting' (feature does not go well with the other
-            features) features will not earn marks at all and could even be penalized. It may be better to remove such
-            features before submission. </p>
-    </li>
-
-    <li>
-        <strong>Design </strong>[team][5 marks] - How good is your internal design?
-        <p>
-            Evaluated <span class="highlighted">solely based on what we can learn from the developer guide.</span>
-            Evaluated by lecturer.
-        </p>
-        Criteria considered:
-        <ul>
-            <li>
-                Conformance with the multi-level top-down approach (i.e. design at high-level first, and do the
-                lower-level design of each component later)
-            </li>
-            <li>
-                Conformance with the OO paradigm
-            </li>
-            <li>
-                Application of patterns and principles
-            </li>
-        </ul>
-    </li>
-
-    <li>
-        <strong>Implementation</strong> [individual][15 marks] - How good is your implementation?
-        A measure of the quality and the quantity of code you have written yourself. On average, a student is expected
-        to
-        write 0.5-1.5 KLoC.
-        Evaluated based on an inspection of the collated code (submitted in your *.md files) by at least two tutors.
-        <br>
-        Criteria considered:
-        <ul>
-            <li>
-                Following SLAP (IMPORTANT).
-            </li>
-            <li>
-                Following the coding standard given (IMPORTANT).
-            </li>
-            <li>
-                Using at least some assertions.
-            </li>
-            <li>
-                Using at least some logging.
-            </li>
-            <li>
-                Using at least some unit tests.
-            </li>
-            <li>
-                Commenting at the right level.
-            </li>
-            <li>
-                Exception handling.
-            </li>
-            <li>
-                Neatness and human readability.
-            </li>
-        </ul>
-        Expectations:
-        <ul>
-            <li>
-                Each person is expected to implment one or more features.
-                Each person is expected to write backend code, frontend code, test code, user documentation, and
-                developer
-                documentation.
-            </li>
-        </ul>
-    </li>
-
-    <li>
-        <strong>QA</strong> [team][10 marks] - How good is your Quality Assurance?
-        Evaluated based on our own testing. A well written user guide and a product that conforms to the user guide
-        (i.e. no
-        bugs) will give you a high mark.
-        <p>
-            Things that may be considered: number of bugs, level of test automation.
-        </p>
-    </li>
+  <li><strong>Product features </strong> [team][10 marks] - How good is your software as a product?
     <p>
-        Expectations:
+      Based on the features implemented, how well they fit together to make a good product, and how well they are
+      demonstrated.
     </p>
+    <p>
+      ‘Half-baked’ (i.e. not production quality) or 'ill-fitting' (feature does not go well with the other
+      features) features will not earn marks at all and could even be penalized. It may be better to remove such
+      features before submission. </p>
+  </li>
+
+  <li>
+    <strong>Design </strong>[individual][5 marks] - How good is your internal design?
+    <p>
+      Evaluated <span class="highlighted">solely based on what we can learn from the developer guide.</span>
+      Evaluated by lecturer. You will be graded individually on the design of your component and how well
+      you have described it. Collective design decisions such as architecture will affect the grade of all team
+      members.
+    </p>
+    Criteria considered:
     <ul>
-        <li>
-            There is no requirement for a minimum covereage level. Note that in a production environment you are often
-            required to have at least 90% of the code covered by tests. In this project, it can be less.
-        </li>
-        <li>
-            How much of each type of testing should you do? We expect you to decide. You learned different types of
-            testing and what they try to achieve. Based on that, you should decide how much of each type is required.
-            Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the
-            effort required.
-        </li>
-        <li>
-            Applying TDD is optional. If you plan to test something, it is better to apply TDD because TDD ensures that
-            you write functional code in a testable way. If you do it the normal way, you often find that it is hard to
-            test
-            the functional code because the code has low testability.
-        </li>
+      <li>
+        Conformance with the multi-level top-down approach (i.e. design at high-level first, and do the
+        lower-level design of each component later)
+      </li>
+      <li>
+        Conformance with the OO paradigm
+      </li>
+      <li>
+        Application of patterns and principles
+      </li>
+      <li>
+        Quality of documentation e.g. using the right diagram at the right place.
+      </li>
     </ul>
+  </li>
 
-    <li>
-        <strong>Documentation</strong> [individual][5 marks] - How well does your user guide and developer guide achieve
-        their objectives? Evaluated based on the parts you have written for the user guide and developer guide.
-        Evaluated by
-        lecturer and TA. <br>
-        Criteria considered:
-        <ul>
-            <li>
-                Explanation should be clear and written to match the audience.
-            </li>
-            <li>
-                Design explained in top-down, multi-level fashion.
-            </li>
-            <li>
-                Good use of visuals to complement text.
-            </li>
-        </ul>
-    </li>
+  <li>
+    <strong>Implementation</strong> [individual][15 marks] - How good is your implementation?
+    A measure of the <span class="highlighted">quality and the quantity</span> of code you have written yourself.
+    On average, a student is expected to write 0.5-1.5 KLoC.
+    Evaluated based on an inspection of the collated code (submitted in your *.md files) by at least two tutors.
+    <br>
+    Criteria considered:
+    <ul>
+      <li>
+        Following SLAP (IMPORTANT).
+      </li>
+      <li>
+        Following the coding standard given (IMPORTANT).
+      </li>
+      <li>
+        Using at least some assertions.
+      </li>
+      <li>
+        Using at least some logging.
+      </li>
+      <li>
+        Using at least some unit tests.
+      </li>
+      <li>
+        Commenting at the right level.
+      </li>
+      <li>
+        Exception handling.
+      </li>
+      <li>
+        Neatness and human readability.
+      </li>
+    </ul>
+    Expectations:
+    <ul>
+      <li>
+        Each person is expected to implement one or more features individually in addition to features implemented collectively.
+        Each person is expected to write backend code, frontend code, test code, user documentation, and
+        developer documentation.
+      </li>
+    </ul>
+  </li>
 
+  <li>
+    <strong>QA</strong> [team: 5 marks], [individual: 5 marks] - How good is your Quality Assurance?
+    Evaluated based on our own testing. A well written user guide and a product that conforms to the user guide
+    (i.e. no bugs) will give you a high mark.
+    <p>
+      Things considered for team grade: Bugs including validation issues (i.e. not meeting project requirements)
+    </p>
+    <p>
+      Things considered for individual grade: Quality and quantity of the test code in your collated code.
+    </p>
+  </li>
+  <p>
+    Expectations:
+  </p>
+  <ul>
     <li>
-        <STRONG>Project management</STRONG> [team: 5 marks][individual: 5 marks] - How well you worked together as a
-        team to follow a systematic process?<br>
-        For the team component, we look for,
-        <ul>
-            <li>
-                Good version control, based on the repo.
-            </li>
-            <li>
-                Good task definition, assignment and tracking, based on the issue tracker.
-            </li>
-            <li>
-                Good use of buffers (opposite: everything at the last minute)
-            </li>
-            <li>
-                Iterative (opposite: fake iterative, doing most of the work in one iteration). <br>
-                Passed almost all checkpoints from V0.0 to V0.5
-            </li>
-        </ul>
-        The individual component is determined by peer evaluation from your project team members.
+      There is no requirement for a minimum coverage level. Note that in a production environment you are often
+      required to have at least 90% of the code covered by tests. In this project, it can be less.
     </li>
+    <li>
+      How much of each type of testing should you do? We expect you to decide. You learned different types of
+      testing and what they try to achieve. Based on that, you should decide how much of each type is required.
+      Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the
+      effort required.
+    </li>
+    <li>
+      Applying TDD is optional. If you plan to test something, it is better to apply TDD because TDD ensures that
+      you write functional code in a testable way. If you do it the normal way, you often find that it is hard to
+      test
+      the functional code because the code has low testability.
+    </li>
+  </ul>
+
+  <li>
+    <strong>Documentation</strong> [team][5 marks] - How well does your user guide achieves
+    its objectives? Evaluated by lecturer and TA. <br>
+    Criteria considered:
+    <ul>
+      <li>
+        Explanation should be clear and written to match the audience.
+      </li>
+      <li>
+        Good use of visuals to complement text.
+      </li>
+    </ul>
+    Note: Developer Guide is graded under the 'Design' component.
+  </li>
+
+  <li>
+    <STRONG>Project management</STRONG> [team: 5 marks][individual: 5 marks] - How well you worked together as a
+    team to follow a systematic process?<br>
+    For the team component, we look for,
+    <ul>
+      <li>
+        Good version control, based on the repo.
+      </li>
+      <li>
+        Good task definition, assignment and tracking, based on the issue tracker.
+      </li>
+      <li>
+        Good use of buffers (opposite: everything at the last minute)
+      </li>
+      <li>
+        Iterative (opposite: fake iterative, doing most of the work in one iteration). <br>
+        Passed almost all checkpoints from V0.0 to V0.5
+      </li>
+    </ul>
+    The individual component is determined by peer evaluation from your project team members.
+  </li>
 
 </ol>
 
 <p>
-    <strong>Penalty for late submission:</strong> <span class="highlighted">-1 mark for each hour delayed.</span>
-    Even a 1-second delay is penalized, irrespective of the reason. Based on the time shown by IVLE.
+  <strong>Penalty for late submission:</strong> <span class="highlighted"> -1 mark for each hour delayed.</span>
+  Even a 1-second delay is penalized, irrespective of the reason. Based on the time shown by IVLE.
 </p>
