@@ -205,6 +205,8 @@ function checkIfAllComponentsChecked() {
     return isAllChecked;
 }
 
+var totalWeeks = 15;
+var weeksLoaded = 0;
 function loadContent(week) {
     $.ajax({
         type: 'GET',
@@ -235,8 +237,13 @@ function loadContent(week) {
 
             if (typeof preview != 'undefined') {
                 expandWeekFully(week);
+                totalWeeks = 1;
             } else if (isCurrentWeek(week)) {
                 expandWeekFully(week);
+            }
+
+            if (++weeksLoaded == totalWeeks) {
+                $.getScript('../scripts/tooltip.js');
             }
         }
     });
