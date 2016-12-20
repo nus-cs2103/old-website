@@ -1,10 +1,18 @@
 /**
  * Jumps to a section's heading.
  * The header is before the div.
+ * Account for Safari scrolling.
  */
 function jumpToSectionHeading(section) {
+    var isSafariBrowser = !navigator.userAgent.includes('Chrome') && navigator.userAgent.includes('Safari');
+    var windowToScroll = window;
+    var headingsFrameOffset = 0;
+    if(isSafariBrowser && (windowToScroll != window.top)) {
+        windowToScroll = window.top;
+        headingsFrameOffset = 60; // From index.html
+    }
     var headerPosition = $('#' + section).prev().offset().top;
-    $(window).scrollTop(headerPosition);
+    $(windowToScroll).scrollTop(headerPosition + headingsFrameOffset);
 }
 
 /**
