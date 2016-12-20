@@ -1,4 +1,4 @@
-# Teams Dashboard
+# Teams Dashboard [AY1617-Sem I]
 
 [**AddressBook Level 4**](https://github.com/nus-cs2103-AY1617S1/addressbook-level4) 
 [![Build Status](https://travis-ci.org/se-edu/addressbook-level4.svg?branch=master)](https://travis-ci.org/se-edu/addressbook-level4)
