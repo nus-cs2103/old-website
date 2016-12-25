@@ -157,6 +157,10 @@ function loadSections() {
     } else {
         var callback = function() {
             $('#overlay').remove();
+            // If there is an anchor tag in url, make sure to jump to the specific section.
+            if (location.hash) {
+                location.href = location.hash;
+            }
         }
         loadAllSectionsUsingAjax(callback);
         addJumpToSectionHeadingBehavior($('a'));
