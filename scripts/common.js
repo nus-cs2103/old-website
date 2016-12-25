@@ -244,9 +244,20 @@ function loadContent(week) {
 
             if (++weeksLoaded == totalWeeks) {
                 $.getScript('../scripts/tooltip.js');
+                expandSectionForAnchor(location.hash);
             }
         }
     });
+}
+
+/**
+ * Expands the section as referenced by an anchored link.
+ * Reveal the section if nested, then expand the section.
+ * If anchor is empty string, this function does nothing.
+ */
+function expandSectionForAnchor(anchor) {
+    $(anchor).parent().parent().prev('.ui-accordion-header').click();
+    $(anchor).find('.btn-expand').click();
 }
 
 function addAutoExpandSubheadingsBehaviour(component) {
