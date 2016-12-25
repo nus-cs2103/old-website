@@ -256,8 +256,15 @@ function loadContent(week) {
  * If anchor is empty string, this function does nothing.
  */
 function expandSectionForAnchor(anchor) {
-    $(anchor).parent().parent().prev('.ui-accordion-header').click();
-    $(anchor).find('.btn-expand').click();
+    var headers = $(anchor).parents('.ui-accordion-content').prev('.ui-accordion-header');
+    headers.click();
+    $(anchor).click();
+
+    setTimeout(function() {
+        var headerHeight = headers.last().outerHeight();
+        var position = $(anchor).offset().top - headerHeight;
+        $(window).scrollTop(position);
+    }, 500); // Wait for scroll animation in "addAutoScrollToClickedWeekHeader"
 }
 
 function addAutoExpandSubheadingsBehaviour(component) {
