@@ -1,6 +1,7 @@
 # Content Author Guide
 * [Syntax](#syntax)
     * [Embedded Links](#embedded-links)
+    * [Tooltips](#tooltips)
 
 ## Syntax
 
@@ -20,3 +21,21 @@ e.g. `<span onclick="getContentUsingAjax('handbook-teams', '#embedded-week1-team
 > **Limitations**  
 \- Embedded links are limited to **schedule.html** referencing local files (Issues #230, #232).  
 \- HTML syntax for embedded links are overly verbose (PR #174).
+
+### Tooltips
+Tooltips are used for short supplementary information, triggered by a hover.  
+Tooltips are enabled for content in **schedule.html** through **common.js**.
+
+Adding a tooltip:
+
+1. Wrap the keyword in the `<tooltip>` tag,  
+e.g. `<tooltip>IDE</tooltip>`
+
+2. Register `tooltips` in [tooltip.js](../scripts/tooltip.js) with the form: `'keyword' : 'tooltip'`,  
+e.g. `'IDE' : 'Integrated Development Environment'`
+
+3. Register `aliases` in [tooltip.js](../scripts/tooltip.js) with the form: `'keyword' : ['alias1', 'alias2']`,  
+e.g. `'IDE' : ['IDEs']`
+
+> **Limitation**  
+\- Multiple definitions are not yet supported (Issue #235).
