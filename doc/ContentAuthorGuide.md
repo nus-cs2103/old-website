@@ -4,6 +4,8 @@
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
     * [Difficulty Stars](#difficulty-stars)
+* [Best Practices](#best-practices)
+    * [Coding Standards](#coding-standards)
 
 ## Syntax
 
@@ -65,3 +67,10 @@ Each tutorial has a list of learning activities. Stars are used for categories.
 
 * 3 stars: Advanced / Beyond the module syllabus  
 `<img src="../images/3stars.png">`
+
+## Best Practices
+
+### Coding Standards
+* [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
+* [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub)
+* [HTML](https://oss-generic.github.io/process/codingstandards/coding-standards-html.html)
