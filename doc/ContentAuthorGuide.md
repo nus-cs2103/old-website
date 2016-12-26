@@ -2,6 +2,7 @@
 * [Syntax](#syntax)
     * [Embedded Links](#embedded-links)
     * [Tooltips](#tooltips)
+    * [Useful Style Classes](#useful-style-classes)
 
 ## Syntax
 
@@ -39,3 +40,15 @@ e.g. `'IDE' : ['IDEs']`
 
 > **Limitation**  
 \- Multiple definitions are not yet supported (Issue #235).
+
+### Useful Style Classes
+These style classes are used frequently (sorted here in alphabetical order):
+
+* `dim` for less important additional information
+> color: gray
+
+* `highlighted` for important bits of information
+> background-color: yellow
+
+* `important` for extra-important bits of information (used sparingly)
+> color: maroon
