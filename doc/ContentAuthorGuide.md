@@ -3,6 +3,7 @@
     * [Embedded Links](#embedded-links)
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
+    * [Difficulty Stars](#difficulty-stars)
 
 ## Syntax
 
@@ -52,3 +53,15 @@ These style classes are used frequently (sorted here in alphabetical order):
 
 * `important` for extra-important bits of information (used sparingly)
 > color: maroon
+
+### Difficulty Stars
+Each tutorial has a list of learning activities. Stars are used for categories.
+
+* Single star: Basic / Skills to pass the module  
+`<img src="../images/star.png">`
+
+* 2 stars: Intermediate / Skills for a good grade  
+`<img src="../images/2stars.png">`
+
+* 3 stars: Advanced / Beyond the module syllabus  
+`<img src="../images/3stars.png">`
