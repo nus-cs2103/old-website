@@ -7,6 +7,8 @@
 * [Best Practices](#best-practices)
     * [Coding Standards](#coding-standards)
     * [Committing Changes](#committing-changes)
+* [How to Preview Changes](#how-to-preview-changes)
+* [Tool Stack](#tool-stack)
 
 ## Syntax
 
@@ -81,3 +83,9 @@ Each tutorial has a list of learning activities. Stars are used for categories.
 * Write short, descriptive commit messages.
 * Use the imperative mood when writing commit messages.  
   e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
+
+## How to Preview Changes
+Refer to: [DeveloperGuide.md#how-to-preview-changes](DeveloperGuide.md#how-to-preview-changes)
+
+## Tool Stack
+Refer to: [DeveloperGuide.md#tool-stack](DeveloperGuide.md#tool-stack)
