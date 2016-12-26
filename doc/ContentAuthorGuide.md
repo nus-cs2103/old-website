@@ -6,6 +6,7 @@
     * [Difficulty Stars](#difficulty-stars)
 * [Best Practices](#best-practices)
     * [Coding Standards](#coding-standards)
+    * [Committing Changes](#committing-changes)
 
 ## Syntax
 
@@ -74,3 +75,9 @@ Each tutorial has a list of learning activities. Stars are used for categories.
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
 * [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub)
 * [HTML](https://oss-generic.github.io/process/codingstandards/coding-standards-html.html)
+
+### Committing Changes
+* Commit each distinct change as a separate commit.
+* Write short, descriptive commit messages.
+* Use the imperative mood when writing commit messages.  
+  e.g. `Add README.md` rather than `Added README.md` or `Adding README.md`
