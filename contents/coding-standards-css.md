@@ -26,11 +26,8 @@ We are not using CSS3 selectors.
 
 >  Although they are powerful, cross browser compatibility is difficult to achieve and many rules are supported by different browsers      starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp)). Also, we can      stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
 
-
 ## CSS Files<a name="css-files"></a>
-
 In the future if we have more files, CSS file includes must be done using `<link>` tags in the html/jsp files and NOT using `@import` in other css files.
-
 ```html
    <link rel="stylesheets" href="../common.css" type="text/css">
    ```
@@ -42,7 +39,6 @@ In the future if we have more files, CSS file includes must be done using `<link
    in the html page.
 
 NO inline style sheets or inline styles in the html/jsp files.
-
 ```css
    /* write styles only in the external file common.css */
    #mainDiv {
@@ -51,7 +47,6 @@ NO inline style sheets or inline styles in the html/jsp files.
        margin: auto;
    }
    ```
-
 ```css
    <!-- no inline stylesheets -->
    <style>
@@ -75,7 +70,7 @@ The CSS styles are divided into three seperate files for three sections - [commo
 
 ## Selectors<a name="selectors"></a>
 ### Selector Formatting:<a name="selector-formatting"></a>
-   The selector(s) must be specified in separate lines.
+The selector(s) must be specified in separate lines.
 ```css
    /* Each selector in a new line */
    .button-sort-ascending:hover,
@@ -89,6 +84,7 @@ The CSS styles are divided into three seperate files for three sections - [commo
    cursor: pointer;
    }
    ```
+
 >  This eases reading as well as helps in revision control as conflicts reduce.
 
 Group related/hierarchical style specifications (eg :hover, child specifier, etc) and provide an additional indent to the more specific selector -- refer to [here](http://isobar-idev.github.io/code-standards/#_css_formatting) for examples.
@@ -98,7 +94,6 @@ Group related/hierarchical style specifications (eg :hover, child specifier, etc
    (from the hierarchy) without actually reading HTML files.
 
 ### Use of Efficient Selectors:<a name="use-of-efficient-selectors"></a>
-
 Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples.
 
 >  This speeds up the css match lookup. If such a qualification is actually required, either use another
@@ -116,7 +111,6 @@ Use Child selector rather than descendant selector (use '#container > span' rath
 Use all lowercase letters. <br>
 Separate words with hyphens ('-') and no other separator. <br>
 We use 2 kinds of classes: Atomic and Component.
-
 ```css
    /* Component Class */
    .comment-list
@@ -131,7 +125,6 @@ We use 2 kinds of classes: Atomic and Component.
    .sort_icon
    .centeralign
    ```
-
 >  Atomic Classes describe atomic attributes like border-gray, align-center that can be used on any element.
    They have at most 2 rules in them. Start their names with the attribute, followed by the value.
    (eg: .align-center and not .center-align)
@@ -149,7 +142,6 @@ When adding classes to style elements in the page, follow the following steps:<b
 
 ## Attributes<a name="attributes"></a>
 ### Order of Attributes<a name="order-of-attributes"></a>
-
 Alphabetize the attributes, disregarding any browser prefix. <br>
 All browser prefixed versions of an attribute must be written together.
 ```css
@@ -174,7 +166,6 @@ All browser prefixed versions of an attribute must be written together.
 >  This way looking for an attribute is faster.
 
 ### Attribute Formatting<a name="attribute-formatting"></a><br>
-
 - Semicolon after every attribute specification. <br>
 - Space after colon. <br>
 - Drop the units for 0 values (eg: margin: 0). <br>
@@ -183,7 +174,6 @@ All browser prefixed versions of an attribute must be written together.
 - Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples. <br>
 
 ### General Details<a name="general-details"></a>
-
 Use shorthands as much as possible (eg border: 2px 0 1px 4px). <br>
 DO NOT use `!important` specifier. <br>
 ```css
