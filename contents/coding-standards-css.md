@@ -18,7 +18,7 @@
    - [Other Readings](#other-readings)
 
 ## General<a name="general"></a>
-We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml) as our primary guide and have made a few changes to suit WEBSITE project. The Google Style Document shall be used for any topics not covered in this document.
+We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml) as our primary guide and have made a few changes to suit nus-cs2103 project. The Google Style Document shall be used for any topics not covered in this document.
 
 >  If the project is using Bootstrap/jQuery, use bootstrap classes wherever possible and as much as possible.
 
