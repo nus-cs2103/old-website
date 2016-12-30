@@ -50,7 +50,11 @@ e.g. `'IDE' : ['IDEs']`
 ### Useful Style Classes
 These style classes are used frequently (sorted here in alphabetical order):
 
-* `dim` for less important additional information
+* `additional-info` for information that is in a separate `<div>`
+> padding: 10px 10px  
+> background-color: gray
+
+* `dim` for less important additional information that is inline
 > color: gray
 
 * `highlighted` for important bits of information
