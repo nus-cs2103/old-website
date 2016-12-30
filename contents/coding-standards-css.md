@@ -75,13 +75,13 @@ The selector(s) must be specified in separate lines.
    /* Each selector in a new line */
    .button-sort-ascending:hover,
    .button-sort-none:hover {
-   cursor: pointer;
+       cursor: pointer;
    }
    ```
 ```css
    /* do not write them in the same line */
    .button-sort-ascending:hover, .button-sort-none:hover {
-   cursor: pointer;
+       cursor: pointer;
    }
    ```
 
