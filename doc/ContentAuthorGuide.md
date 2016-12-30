@@ -4,6 +4,7 @@
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
     * [Code Tags](#code-tags)
+    * [Syntax Highlighting](#syntax-highlighting)
     * [Difficulty Stars](#difficulty-stars)
 * [Best Practices](#best-practices)
     * [Coding Standards](#coding-standards)
@@ -69,6 +70,11 @@ Use `<code>` tags to represent fragments of computer code in monospace font.
 > font-family: courier  
 > font-size: small  
 > background-color: gray
+
+### Syntax Highlighting
+Language-specific syntax highlighting is achieved by enclosing code samples in:  
+`<pre class="prettyprint"><code class="language-java>` `</code></pre>`  
+> Other valid code classes: `lang-html`, `shell`
 
 ### Difficulty Stars
 Each tutorial has a list of learning activities. Stars are used for categories.
