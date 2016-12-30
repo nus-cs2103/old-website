@@ -3,6 +3,7 @@
     * [Embedded Links](#embedded-links)
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
+    * [Code Tags](#code-tags)
     * [Difficulty Stars](#difficulty-stars)
 * [Best Practices](#best-practices)
     * [Coding Standards](#coding-standards)
@@ -62,6 +63,12 @@ These style classes are used frequently (sorted here in alphabetical order):
 
 * `important` for extra-important bits of information (used sparingly)
 > color: maroon
+
+### Code Tags
+Use `<code>` tags to represent fragments of computer code in monospace font.
+> font-family: courier  
+> font-size: small  
+> background-color: gray
 
 ### Difficulty Stars
 Each tutorial has a list of learning activities. Stars are used for categories.
