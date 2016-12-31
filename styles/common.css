@@ -372,7 +372,13 @@ table.two-column-content td {
 }
 
 .highlighted-darktext {
-    color: #2b2b2b;
+    color: #2b2b2b; 
+}
+
+.ui-accordion-header > .highlighted-darktext {
+    background-color: inherit;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .important {
