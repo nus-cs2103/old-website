@@ -6,27 +6,27 @@
  - [Sections](#sections)
  - [Selectors](#selectors)
    - [Selector Formatting](#selector-formatting)
-   - [Use of Efficient selectors](#use-of-efficient-selectors)
+   - [Use of Efficient SELECTORS](#use-of-efficient-selectors)
  - [Classes](#classes)
    - [Naming Standards](#naming-standards)
  - [Attributes](#attributes)
-   - [Order of attributes](#order-of-attributes)
+   - [Order of ATTRIBUTES](#order-of-attributes)
    - [Attribute Formatting](#attribute-formatting)
    - [General Details](#general-details)
  - [Resources](#resources)
    - [Highly Recommended](#highly-recommended)
    - [Other Readings](#other-readings)
 
-# General
+## General
 We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml) as our primary guide and have made a few changes to suit nus-cs2103 project. The Google Style Document shall be used for any topics not covered in this document.
 
->  If the project is using Bootstrap/jQuery, use bootstrap classes wherever possible and as much as possible.
+>  If the project is using Bootstrap/jQuery, use Bootstrap classes wherever possible and as much as possible.
 
 We are not using CSS3 selectors.
 
->  Although they are powerful, cross browser compatibility is difficult to achieve and many rules are supported by different browsers      starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp)). Also, we can      stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
+>  Although they are powerful, cross-browser compatibility is difficult to achieve and many rules are supported by different browsers  starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp)). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
 
-# CSS Files
+## CSS Files
 In the future if we have more files, CSS file includes must be done using `<link>` tags in the html/jsp files and NOT using `@import` in other css files.
 ```html
    <link rel="stylesheets" href="../common.css" type="text/css">
@@ -34,9 +34,9 @@ In the future if we have more files, CSS file includes must be done using `<link
 ```html
    @import "common.css";
    ```
-> **`@import`** can be slow and may result in the page being rendered without css for a while before the page magically
-   comes to life. As of now we are using css files as stylers of html pages and thus the dependency must be clearly visible
-   in the html page.
+> **`@import`** can be slow and may result in the page being rendered without css for a while before the page magically comes 
+to life. As of now we are using css files as stylers of html pages and thus the dependency must be clearly visible in the html 
+page.
 
 NO inline style sheets or inline styles in the html/jsp files.
 ```css
@@ -62,14 +62,14 @@ NO inline style sheets or inline styles in the html/jsp files.
    in the future will be a hassle and redundant overriding of css rules may occur. If all are in one place
    management is also easier.
 
-# Sections
+## Sections
 The CSS styles are divided into three seperate files for three sections - [common, handbook, markdown](https://github.com/nus-cs2103/website/blob/master/styles). Also [common.css](https://github.com/nus-cs2103/website/blob/master/styles/common.css) has been divided into many sections - accordions, buttons, table, embedded handbook section and so on. Place the new css rules in the appropriate section.
 
 >  By segmenting the file(s) in this logical way, it is easy to locate css rules and to ensure that a new rule
    being added is not already present.
 
-# Selectors
-## Selector Formatting:
+## Selectors
+### Selector Formatting:
 The selector(s) must be specified in separate lines.
 ```css
    /* Each selector in a new line */
@@ -93,7 +93,7 @@ Group related/hierarchical style specifications (eg :hover, child specifier, etc
    In addition this gives an immediate idea as to how certain classes are being used in the HTML files
    (from the hierarchy) without actually reading HTML files.
 
-## Use of Efficient Selectors:
+### Use of Efficient SELECTORS:
 Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples.
 
 >  This speeds up the css match lookup. If such a qualification is actually required, either use another
@@ -106,10 +106,10 @@ Use Child selector rather than descendant selector (use '#container > span' rath
 >  This is a strong recommendation as descendant selector is extremely expensive, especially when the
    specified ancestor has a lot of descendants.
 
-# Classes
-## Naming Standards
-Use all lowercase letters. <br>
-Separate words with hyphens ('-') and no other separator. <br>
+## Classes
+### Naming Standards
+Use all lowercase letters.<br>
+Separate words with hyphens ('-') and no other separator.<br>
 We use 2 kinds of classes: Atomic and Component.
 ```css
    /* Component Class */
@@ -135,14 +135,14 @@ We use 2 kinds of classes: Atomic and Component.
 
 When adding classes to style elements in the page, follow the following steps:<br>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ Try and style the entire component using bootstrap. <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ For any additional css, if the component is used in many places create a functional name for the class. <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ If the component does not have any recurring function, utilise the generic classes to achieve the styling. <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ Try and style the entire component using bootstrap.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ For any additional css, if the component is used in many places create a functional name for the class.<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⇒ If the component does not have any recurring function, utilise the generic classes to achieve the styling.<br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
-# Attributes
-## Order of Attributes
-Alphabetize the attributes, disregarding any browser prefix. <br>
+## Attributes
+### Order of ATTRIBUTES
+Alphabetize the attributes, disregarding any browser prefix.<br>
 All browser prefixed versions of an attribute must be written together.
 ```css
    /* code the attributes in alphabetical order */
@@ -165,17 +165,17 @@ All browser prefixed versions of an attribute must be written together.
    ```
 >  This way looking for an attribute is faster.
 
-## Attribute Formatting<br>
-- Semicolon after every attribute specification. <br>
-- Space after colon. <br>
-- Drop the units for 0 values (eg: margin: 0). <br>
-- All attribute(s) are to be specified in individual lines. <br>
-- Attributes must have one more indentation than the selector. <br>
-- Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples. <br>
+### Attribute Formatting
+- Semicolon after every attribute specification.<br>
+- Space after colon.<br>
+- Drop the units for 0 values (eg: margin: 0).<br>
+- All attribute(s) are to be specified in individual lines.<br>
+- Attributes must have one more indentation than the selector.<br>
+- Indent attributes that require browser specifications so that the actual attribute being declared are in one column -- refer to [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices) for examples.<br>
 
-## General Details
-Use shorthands as much as possible (eg border: 2px 0 1px 4px). <br>
-DO NOT use `!important` specifier. <br>
+### General Details
+Use shorthands as much as possible (eg border: 2px 0 1px 4px).<br>
+DO NOT use `!important` specifier.<br>
 ```css
    /* not recommended */
    margin: 10px 0 !important;
@@ -183,12 +183,12 @@ DO NOT use `!important` specifier. <br>
 >  Using the **!important** specifier overrides the natural flow of specificity and cascading hierarchy of css styles.
    Unless absolutely necessary do not use it. If there is such a situation clearly state the reason with comments (/*  */).
 
-# Resources
-## Highly Recommended
+## Resources
+### Highly Recommended
  - [Google CSS Style Guide](https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
  - [Writing Your Best Code](http://learn.shayhowe.com/html-css/writing-your-best-code/#css-coding-practices)
 
-## Other Readings
+### Other Readings
  - [Isobar Coding Standards](http://isobar-idev.github.io/code-standards/)
  - [30 CSS Best Practices For Beginners](https://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741)
  - [Writing efficient CSS (MDN article)](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
