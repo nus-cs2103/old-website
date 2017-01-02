@@ -6,11 +6,11 @@
  - [Sections](#sections)
  - [Selectors](#selectors)
    - [Selector Formatting](#selector-formatting)
-   - [Use of Efficient SELECTORS](#use-of-efficient-selectors)
+   - [Use of Efficient **Selectors**](#use-of-efficient-selectors)
  - [Classes](#classes)
    - [Naming Standards](#naming-standards)
  - [Attributes](#attributes)
-   - [Order of ATTRIBUTES](#order-of-attributes)
+   - [Order of **attributes**](#order-of-attributes)
    - [Attribute Formatting](#attribute-formatting)
    - [General Details](#general-details)
  - [Resources](#resources)
@@ -24,7 +24,7 @@ We are using the [Google CSS Style Guide](https://google-styleguide.googlecode.c
 
 We are not using CSS3 selectors.
 
->  Although they are powerful, cross-browser compatibility is difficult to achieve and many rules are supported by different browsers  starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp)). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
+>  Although they are powerful, cross-browser compatibility is difficult to achieve and many rules are supported by different browsers starting from different versions (refer: [W3CSchools List](http://www.w3schools.com/cssref/css3_browsersupport.asp)). Also, we can stick to more functional names for the css and use classes to achieve our needs → more readable and easier to manage.
 
 ## CSS Files
 In the future if we have more files, CSS file includes must be done using `<link>` tags in the html/jsp files and NOT using `@import` in other css files.
@@ -69,7 +69,7 @@ The CSS styles are divided into three seperate files for three sections - [commo
    being added is not already present.
 
 ## Selectors
-### Selector Formatting:
+### Selector Formatting
 The selector(s) must be specified in separate lines.
 ```css
    /* Each selector in a new line */
@@ -93,7 +93,7 @@ Group related/hierarchical style specifications (eg :hover, child specifier, etc
    In addition this gives an immediate idea as to how certain classes are being used in the HTML files
    (from the hierarchy) without actually reading HTML files.
 
-### Use of Efficient SELECTORS:
+### Use of Efficient **Selectors**:
 Do not qualify class/ID selectors using tag names (do not use: div.mainContent, simply use .mainContent) -- refer to [Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS#Guidelines_for_Efficient_CSS) for examples.
 
 >  This speeds up the css match lookup. If such a qualification is actually required, either use another
@@ -141,7 +141,7 @@ When adding classes to style elements in the page, follow the following steps:<b
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Exception:** If a particular element requires too many generic classes ( > 5) create a functional class name for it.
 
 ## Attributes
-### Order of ATTRIBUTES
+### Order of **attributes**
 Alphabetize the attributes, disregarding any browser prefix.<br>
 All browser prefixed versions of an attribute must be written together.
 ```css
