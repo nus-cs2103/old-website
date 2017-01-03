@@ -10,7 +10,7 @@ The released version may be behind the latest version in this repo.
 
 The easiest way to contribute is to post bugs and suggestion in our issue tracker.
 
-If you would like to contribute code, refer to our [Developer Guide](docs/DeveloperGuide.md).
+If you would like to contribute code, refer to our [Developer Guide](doc/DeveloperGuide.md).
 
 ## Acknowledgements
 Many thanks to our [contributors](CONTRIBUTORS.md).
