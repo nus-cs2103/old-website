@@ -10,7 +10,7 @@ $.ajax({
             url: "https://api.github.com/markdown",
             data: JSON.stringify({
                 "text": data,
-                "mode": "gfm"
+                "mode": "markdown"
             }),
             error: function(jqXHR, textStatus, error) {
                 redirectToGithub();

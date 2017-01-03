@@ -182,7 +182,7 @@
   header-content-week3
   ```
 
-## Indentation<a name="indentation"></a>
+## Indentation
 - Indentation should be 2 spaces for html files.
 - Spaces should be used instead of `tab`.
 
