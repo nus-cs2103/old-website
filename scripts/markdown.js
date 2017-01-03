@@ -1,3 +1,5 @@
+var markdownUrl = $('.markdown-body').attr('data-url');
+
 $.ajax({
     type: 'GET',
     url: markdownUrl,
@@ -27,7 +29,7 @@ function redirectToGithub() {
 }
 
 function displayResult(html) {
-    $(document.body).html($('<div class="markdown-body">' + html + '</div>'));
+    $('.markdown-body').html(html);
 }
 
 function processAndDisplayResult(html) {
