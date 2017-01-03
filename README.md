@@ -12,5 +12,7 @@ The easiest way to contribute is to post bugs and suggestion in our issue tracke
 
 If you would like to contribute code, refer to our [Developer Guide](docs/DeveloperGuide.md).
 
+If you would like to contribute content, refer to our [Content Author Guide](doc/ContentAuthorGuide.md).
+
 ## Acknowledgements
 Many thanks to our [contributors](CONTRIBUTORS.md).
