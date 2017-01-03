@@ -24,6 +24,10 @@ Adding an embedded link:
     * param-name: name of the file to load from (without .html)
     * param-selector: `#selector` for element in this page to load into
     * param-id: section id for element in file to load from (optional)
+    <br><br>
+
+    > To use a custom title (not **Extract from handbook**) for the embedded content, use `pullContent`  
+      (instead of `getContentUsingAjax`) that takes an additional `'param-title'` as its 2nd argument.
 
 2. Mark a `div` element with the id for `param-2` where content is loaded into.  
    In most cases, this can be right after the paragraph with the embedded link.  
