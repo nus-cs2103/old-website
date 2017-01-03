@@ -19,12 +19,11 @@ Embedded links are used to load supplementary sections, triggered by a click.
 
 Adding an embedded link:
 
-1. Enclose link text in `<span onclick="getContentUsingAjax('param-1', 'param-2', 'param-3');" class="embedded-link">` `</span>`,  
+1. Enclose link text in `<span onclick="getContentUsingAjax('param-name', 'param-selector', 'param-id');" class="embedded-link">` `</span>`,  
    e.g. `<span onclick="getContentUsingAjax('handbook-teams', '#embedded-week1-teams');" class="embedded-link">`**Teams**`</span>`
-    * param-1: name of the file to load from (without .html)
-    * param-2: `#selector` for element in this page to load into
-    * param-3: section id for element in file to load from (optional)
-   <br><br>
+    * param-name: name of the file to load from (without .html)
+    * param-selector: `#selector` for element in this page to load into
+    * param-id: section id for element in file to load from (optional)
 
 2. Mark a `div` element with the id for `param-2` where content is loaded into.  
    In most cases, this can be right after the paragraph with the embedded link.  
