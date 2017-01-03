@@ -32,3 +32,12 @@ function redirectToGithub() {
 function displayResult(html) {
     $(document.body).html($('<div class="markdown-body">' + html + '</div>'));
 }
+
+function processAndDisplayResult(html) {
+    // Pre-process the result as necessary
+
+    // Display the result in the page; this is the minimum requirement of the function
+    displayResult(html);
+
+    // Post-process the result as necessary
+}
