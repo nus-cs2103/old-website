@@ -240,6 +240,10 @@ function loadContent(week) {
                 totalWeeks = 1;
             } else if (isCurrentWeek(week)) {
                 expandWeekFully(week);
+
+                if (week == 1) {
+                    expandWeekFully(0);
+                }
             }
 
             if (++weeksLoaded == totalWeeks) {
