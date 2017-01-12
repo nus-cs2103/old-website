@@ -20,8 +20,6 @@ function makeAccordion(elementSelector) {
     });
 }
 
-$.getScript('../scripts/embedded.js');
-
 /**
  * Pretty-prints code samples.
  * If PR is undefined, get run_prettify.js with 'sunburst' skin,
