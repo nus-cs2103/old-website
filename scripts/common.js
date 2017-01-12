@@ -67,6 +67,8 @@ function loadInnerPanels(divId) {
             div.addClass("ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active");
             panel.after(div);
         });
+        panel.removeClass('load-during-expansion');
+        panel.removeAttr('data-url');
     });
 }
 
