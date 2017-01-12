@@ -240,6 +240,14 @@ function loadContent(week) {
                 totalWeeks = 1;
             } else if (isCurrentWeek(week)) {
                 expandWeekFully(week);
+
+                // Students may miss Week 0 content if only Week 1 is expanded in the first week.
+                // This expands Week 0 after waiting for scroll animation to complete for Week 1.
+                if (week == 1) {
+                    setTimeout(function() {
+                        expandWeekFully(0);
+                    }, 500);
+                }
             }
 
             if (++weeksLoaded == totalWeeks) {
