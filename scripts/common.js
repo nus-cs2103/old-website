@@ -242,7 +242,9 @@ function loadContent(week) {
                 expandWeekFully(week);
 
                 if (week == 1) {
-                    expandWeekFully(0);
+                    setTimeout(function() {
+                        expandWeekFully(0);
+                    }, 500); // Wait for scroll animation to complete for Week 1
                 }
             }
 
