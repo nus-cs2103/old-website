@@ -1,6 +1,7 @@
 # Content Author Guide
 * [Syntax](#syntax)
     * [Embedded Links](#embedded-links)
+    * [Component Panels](#component-panels)
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
     * [Code Tags](#code-tags)
@@ -36,6 +37,23 @@ Adding an embedded link:
 > **Limitations**  
 \- Embedded links are limited to **schedule.html** referencing local files (Issues #230, #232).  
 \- HTML syntax for embedded links are overly verbose (PR #174).
+
+### Component Panels
+Component panels are the lowest-level panels in the Schedule page.  
+Content is loaded from a separate file when a panel first expands.  
+The file can be reused with different titles to match the context.
+
+Inner panels should be `h3` elements nested in the `div`:
+```html
+<div class="divId">
+  <h3 class="load-during-expansion" data-url="url">Title</h3>
+</div>
+```
+where `divId` has a form `component-week#` e.g. `activity-week2`,  
+      `url` links to a file with HTML meant to be inside a `div`.
+
+> Component panels are enabled in **schedule.html** and **week.html**  
+> through the `loadInnerPanels(divId)` function in **common.js**.
 
 ### Tooltips
 Tooltips are used for short supplementary information, triggered by a hover.  
