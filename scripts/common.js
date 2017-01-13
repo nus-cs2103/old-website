@@ -53,7 +53,7 @@ function pullContent(fileName, elementSelector, title, sectionName) {
  *     <h3 class="load-during-expansion" data-url="url"></h3>
  *   </div>
  * where 'divId' has a form 'component-week#' e.g. 'activity-week2',
- *       'url' links to a file with one <h3> and one <div> elements.
+ *       'url' links to a file with HTML meant to be inside a <div>.
  */
 function loadInnerPanels(divId) {
     $('.' + divId + ' > .load-during-expansion').each(function() {
