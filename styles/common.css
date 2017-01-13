@@ -365,6 +365,26 @@ table.two-column-content td {
     padding: 10px 10px;
 }
 
+.sidebar-info {
+    background-color: #dff0d8;
+    float: left;
+    margin: 0 10px 0 0;
+    max-width: 25%;
+    padding: 10px 10px;
+}
+
+.sidebar-main {
+    background-color: #d9edf7;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.sidebar-main:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
 .warning-info {
     background-color: #fcf8e3;
     padding: 10px 10px;
