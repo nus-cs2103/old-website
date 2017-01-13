@@ -60,11 +60,9 @@ function loadInnerPanels(divId) {
         var panel = $(this);
         var url = panel.attr('data-url');
         $.get(url, function(data) {
-            var h3 = $(data).filter('h3');
-            panel.append(h3.html());
-
-            var div = $(data).filter('div');
+            var div = $('<div></div>');
             div.addClass("ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active");
+            div.html(data);
             panel.after(div);
         });
         panel.removeClass('load-during-expansion');
