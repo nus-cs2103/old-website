@@ -38,7 +38,7 @@ Adding an embedded link:
 <script type="text/javascript" src="../scripts/embedded.js"></script>
 ```
 
-> **Limitations**  
+> **Limitation**  
 \- HTML syntax for embedded links are overly verbose (PR #174).
 
 ### Tooltips
