@@ -33,8 +33,12 @@ Adding an embedded link:
    In most cases, this can be right after the paragraph with the embedded link.  
    e.g. `<div id="embedded-week1-teams"></div>`
 
+> Embedded links are enabled by including this script tag in a HTML file:
+```html
+<script type="text/javascript" src="../scripts/embedded.js"></script>
+```
+
 > **Limitations**  
-\- Embedded links are limited to **schedule.html** referencing local files (Issues #230, #232).  
 \- HTML syntax for embedded links are overly verbose (PR #174).
 
 ### Tooltips
