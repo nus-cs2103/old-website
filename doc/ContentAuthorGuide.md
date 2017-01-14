@@ -98,7 +98,9 @@ Use `<code>` tags to represent fragments of computer code in monospace font.
 
 ### Syntax Highlighting
 Language-specific syntax highlighting is achieved by enclosing code samples in:  
-`<pre class="prettyprint"><code class="language-java>` `</code></pre>`  
+```html
+<pre class="prettyprint"><code class="language-java"> </code></pre>
+```
 > Other valid code classes: `lang-html`, `shell`
 
 ### Difficulty Stars
