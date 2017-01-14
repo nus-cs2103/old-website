@@ -3,6 +3,7 @@
     * [Embedded Links](#embedded-links)
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
+    * [Contextual Backgrounds](#contextual-backgrounds)
     * [Code Tags](#code-tags)
     * [Syntax Highlighting](#syntax-highlighting)
     * [Difficulty Stars](#difficulty-stars)
@@ -58,10 +59,6 @@ e.g. `'IDE' : ['IDEs']`
 ### Useful Style Classes
 These style classes are used frequently (sorted here in alphabetical order):
 
-* `additional-info` for information that is in a separate `<div>`
-> padding: 10px 10px  
-> background-color: gray
-
 * `dim` for less important additional information that is inline
 > color: gray
 
@@ -70,6 +67,43 @@ These style classes are used frequently (sorted here in alphabetical order):
 
 * `important` for extra-important bits of information (used sparingly)
 > color: maroon
+
+### Contextual Backgrounds
+Contextual backgrounds are used for admonition blocks to convey meaning through color.
+
+* `additional-info`
+> background-color: gray  
+> padding: 10px 10px
+
+* `important-info`
+> background-color: pastel red  
+> padding: 10px 10px
+
+* `quote-info`
+> background-color: light gray  
+> border-left: 10px solid gray  
+> padding: 10px 10px
+
+* `sidebar-info` should be followed by an element with `class="sidebar-main"`
+> background-color: pastel green  
+> float: left  
+> margin: 0 10px 0 0  
+> max-width: 25%  
+> padding: 10px 10px
+
+* `sidebar-main`
+> background-color: pastel blue  
+> padding: 10px 0  
+> width: 100%
+
+* `sidebar-main:after` automatically targets the `:after` pseudo-element
+> clear: both  
+> content: ''  
+> display: block
+
+* `warning-info`
+> background-color: pastel yellow  
+> padding: 10px 10px
 
 ### Code Tags
 Use `<code>` tags to represent fragments of computer code in monospace font.
