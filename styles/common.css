@@ -421,6 +421,7 @@ table.two-column-content td {
     background-color: #7A629B;
     border-radius: 3px;
     left: -10px;
+    min-height: 18px;
     padding: 7px 10px 7px 10px;
     position: relative;
     width: 100%;
