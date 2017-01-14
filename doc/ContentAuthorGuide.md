@@ -40,7 +40,8 @@ Adding an embedded link:
 
 ### Component Panels
 Component panels are the lowest-level panels in the Schedule page.  
-Content is loaded from a separate file when a panel first expands.  
+One way to populate panels, other than including content directly,  
+is by specifying a file to load from when the panel first expands.  
 The file can be reused with different titles to match the context.
 
 Inner panels should be `h3` elements nested in the `div`:
