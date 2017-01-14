@@ -365,7 +365,7 @@ table.two-column-content td {
     padding: 10px 10px;
 }
 
-.sidebar-info {
+.bg-sidebar-info {
     background-color: #dff0d8;
     float: left;
     margin: 0 10px 0 0;
@@ -373,13 +373,13 @@ table.two-column-content td {
     padding: 10px 10px;
 }
 
-.sidebar-main {
+.bg-sidebar-main {
     background-color: #d9edf7;
     padding: 10px 0;
     width: 100%;
 }
 
-.sidebar-main:after {
+.bg-sidebar-main:after {
     clear: both;
     content: '';
     display: block;

@@ -84,19 +84,19 @@ Contextual backgrounds are used for admonition blocks to convey meaning through 
 > border-left: 10px solid gray  
 > padding: 10px 10px
 
-* `sidebar-info` should be followed by an element with `class="sidebar-main"`
+* `bg-sidebar-info` should be followed by an element with `class="bg-sidebar-main"`
 > background-color: pastel green  
 > float: left  
 > margin: 0 10px 0 0  
 > max-width: 25%  
 > padding: 10px 10px
 
-* `sidebar-main`
+* `bg-sidebar-main`
 > background-color: pastel blue  
 > padding: 10px 0  
 > width: 100%
 
-* `sidebar-main:after` automatically targets the `:after` pseudo-element
+* `bg-sidebar-main:after` automatically targets the `:after` pseudo-element
 > clear: both  
 > content: ''  
 > display: block
