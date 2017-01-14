@@ -71,39 +71,18 @@ These classes are used frequently to style inline content.
 ### Contextual Backgrounds
 Contextual backgrounds are used for admonition blocks to convey meaning through color.
 
-* `bg-additional`
-> background-color: gray  
-> padding: 10px 10px
-
-* `bg-important`
-> background-color: pastel red  
-> padding: 10px 10px
-
-* `bg-quote`
-> background-color: light gray  
-> border-left: 10px solid gray  
-> padding: 10px 10px
-
-* `bg-sidebar-info` should be followed by an element with `class="bg-sidebar-main"`
-> background-color: pastel green  
-> float: left  
-> margin: 0 10px 0 0  
-> max-width: 25%  
-> padding: 10px 10px
-
-* `bg-sidebar-main`
-> background-color: pastel blue  
-> padding: 10px 0  
-> width: 100%
-
-* `bg-sidebar-main:after` automatically targets the `:after` pseudo-element
-> clear: both  
-> content: ''  
-> display: block
-
-* `bg-warning`
-> background-color: pastel yellow  
-> padding: 10px 10px
+Adding contextual backgrounds:
+```html
+<p class="bg-additional">bg-additional</p>
+<p class="bg-important">bg-important</p>
+<p class="bg-quote">bg-quote</p>
+<p class="bg-sidebar-info">bg-sidebar-info</p>
+<p class="bg-sidebar-main">bg-sidebar-main</p>
+<p class="bg-warning">bg-warning</p>
+```
+![](contextual-backgrounds.png)
+> Classes may be used with `span`, but preferably blocks (e.g. `p` or `div`).  
+> However, sidebar elements must be used with blocks and preceded by a block.
 
 ### Code Tags
 Use `<code>` tags to represent fragments of computer code in monospace font.
