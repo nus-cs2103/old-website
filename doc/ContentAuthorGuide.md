@@ -75,11 +75,11 @@ Contextual backgrounds are used for admonition blocks to convey meaning through 
 > background-color: gray  
 > padding: 10px 10px
 
-* `important-info`
+* `bg-important`
 > background-color: pastel red  
 > padding: 10px 10px
 
-* `quote-info`
+* `bg-quote`
 > background-color: light gray  
 > border-left: 10px solid gray  
 > padding: 10px 10px
@@ -101,7 +101,7 @@ Contextual backgrounds are used for admonition blocks to convey meaning through 
 > content: ''  
 > display: block
 
-* `warning-info`
+* `bg-warning`
 > background-color: pastel yellow  
 > padding: 10px 10px
 
