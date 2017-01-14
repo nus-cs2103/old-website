@@ -57,9 +57,9 @@ e.g. `'IDE' : ['IDEs']`
 \- Multiple definitions are not yet supported (Issue #235).
 
 ### Useful Style Classes
-These style classes are used frequently (sorted here in alphabetical order):
+These classes are used frequently to style inline content.
 
-* `dim` for less important additional information that is inline
+* `dim` for less important additional information
 > color: gray
 
 * `highlighted` for important bits of information
