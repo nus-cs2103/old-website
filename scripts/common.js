@@ -47,6 +47,30 @@ function pullContent(fileName, elementSelector, title, sectionName) {
 }
 
 /**
+ * Loads inner panels in the Schedule page during expansion.
+ * Inner panels should be <h3> elements nested in the <div>:
+ *   <div class="divId">
+ *     <h3 class="load-during-expansion" data-url="url"></h3>
+ *   </div>
+ * where 'divId' has a form 'component-week#' e.g. 'activity-week2',
+ *       'url' links to a file with HTML meant to be inside a <div>.
+ */
+function loadInnerPanels(divId) {
+    $('.' + divId + ' > .load-during-expansion').each(function() {
+        var panel = $(this);
+        var url = panel.attr('data-url');
+        $.get(url, function(data) {
+            var div = $('<div></div>');
+            div.addClass("ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active");
+            div.html(data);
+            panel.after(div);
+        });
+        panel.removeClass('load-during-expansion');
+        panel.removeAttr('data-url');
+    });
+}
+
+/**
  * Pretty-prints code samples.
  * If PR is undefined, get run_prettify.js with 'sunburst' skin,
  * else, call prettyPrint() that is defined in the above script.
@@ -79,6 +103,7 @@ function addCollapseAndExpandButtonsForComponents(accordionHeaderSelector, divId
     $(accordionHeaderSelector + ' > .btn-expand').on('click', function(e) {
         e.stopPropagation();
         var divId = $(this).attr('id').substr(('expand-').length);
+        loadInnerPanels(divId);
         var collapseInnerAccordionsButtons = $('.' + divId + ' h3 > .btn-collapse');
         $(collapseInnerAccordionsButtons).click();
         var collapsedAccordions = $('.' + divId + ' > h3:not(.ui-accordion-header-active)');
