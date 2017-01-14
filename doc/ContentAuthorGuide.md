@@ -71,7 +71,7 @@ These classes are used frequently to style inline content.
 ### Contextual Backgrounds
 Contextual backgrounds are used for admonition blocks to convey meaning through color.
 
-* `additional-info`
+* `bg-additional`
 > background-color: gray  
 > padding: 10px 10px
 
