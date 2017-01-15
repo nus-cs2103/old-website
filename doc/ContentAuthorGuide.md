@@ -4,6 +4,7 @@
     * [Component Panels](#component-panels)
     * [Tooltips](#tooltips)
     * [Useful Style Classes](#useful-style-classes)
+    * [Contextual Backgrounds](#contextual-backgrounds)
     * [Code Tags](#code-tags)
     * [Syntax Highlighting](#syntax-highlighting)
     * [Difficulty Stars](#difficulty-stars)
@@ -79,13 +80,9 @@ e.g. `'IDE' : ['IDEs']`
 \- Multiple definitions are not yet supported (Issue #235).
 
 ### Useful Style Classes
-These style classes are used frequently (sorted here in alphabetical order):
+These classes are used frequently to style inline content.
 
-* `additional-info` for information that is in a separate `<div>`
-> padding: 10px 10px  
-> background-color: gray
-
-* `dim` for less important additional information that is inline
+* `dim` for less important additional information
 > color: gray
 
 * `highlighted` for important bits of information
@@ -93,6 +90,22 @@ These style classes are used frequently (sorted here in alphabetical order):
 
 * `important` for extra-important bits of information (used sparingly)
 > color: maroon
+
+### Contextual Backgrounds
+Contextual backgrounds are used for admonition blocks to convey meaning through color.
+
+Adding contextual backgrounds:
+```html
+<p class="bg-additional">bg-additional</p>
+<p class="bg-important">bg-important</p>
+<p class="bg-quote">bg-quote</p>
+<p class="bg-sidebar-info">bg-sidebar-info</p>
+<p class="bg-sidebar-main">bg-sidebar-main</p>
+<p class="bg-warning">bg-warning</p>
+```
+![](contextual-backgrounds.png)
+> Classes may be used with `span`, but preferably blocks (e.g. `p` or `div`).  
+> However, sidebar elements must be used with blocks and preceded by a block.
 
 ### Code Tags
 Use `<code>` tags to represent fragments of computer code in monospace font.

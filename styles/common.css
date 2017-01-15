@@ -349,9 +349,45 @@ table.two-column-content td {
  * divs
  */
 
-.additional-info {
+.bg-additional {
     padding: 10px 10px;
     background-color: #efefef;
+}
+
+.bg-important {
+    background-color: #f2dede;
+    padding: 10px 10px;
+}
+
+.bg-quote {
+    background-color: #f9f9f9;
+    border-left: 10px solid #ccc;
+    padding: 10px 10px;
+}
+
+.bg-sidebar-info {
+    background-color: #dff0d8;
+    float: left;
+    margin: 0 10px 0 0;
+    max-width: 25%;
+    padding: 10px 10px;
+}
+
+.bg-sidebar-main {
+    background-color: #d9edf7;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.bg-sidebar-main:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.bg-warning {
+    background-color: #fcf8e3;
+    padding: 10px 10px;
 }
 
 /*
