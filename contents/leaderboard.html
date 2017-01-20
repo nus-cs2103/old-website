@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard - CS2103/T</title>
+  <style>
+    .leaderboard {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #leaderboard-data {
+        height: 100%;
+        width: 100%;
+        font-size: 0;
+    }
+    #leaderboard-header {
+        height: 100px;
+        width: 5500px;
+        overflow: hidden;
+    }
+    .leaderboard-iframe {
+        width: 5500px;
+        border: none;
+    }
+    #leaderboard-data-iframe {
+        height: 100%;
+    }
+    #leaderboard-header-iframe {
+        height: 5100px;
+    }
+  </style>
+  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+  <div class="leaderboard" id="leaderboard-data">
+    <iframe class="leaderboard-iframe" id="leaderboard-data-iframe"
+     src="https://docs.google.com/spreadsheets/d/1OD_SPNX8QeDO25kj8JQc7zvd7acxI16hyXhdGncRWvI/pubhtml"></iframe>
+  </div>
+  <div class="leaderboard" id="leaderboard-header">
+    <iframe class="leaderboard-iframe" id="leaderboard-header-iframe"
+     src="https://docs.google.com/spreadsheets/d/1OD_SPNX8QeDO25kj8JQc7zvd7acxI16hyXhdGncRWvI/pubhtml"></iframe>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('#leaderboard-data').scroll(function() {
+        $('#leaderboard-header').scrollLeft($(this).scrollLeft());
+      });
+    });
+  </script>
+</body>
+</html>
