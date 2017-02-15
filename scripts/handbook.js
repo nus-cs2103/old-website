@@ -87,10 +87,11 @@ function handleClickForAppendixAnchors(containerSection, subsectionAnchors) {
 function loadSectionUsingAjax(section, callback) {
     $.ajax({
         type: 'GET',
-        url: section + '.html',
+        url: section.replace('handbook-', 'handbook/') + '.html',
         error: function() {
         },
         success: function(data) {
+            section = section.replace('handbook/', 'handbook-');
             $('#' + section).html(data);
             var images = $('#' + section + ' img');
             if (images.length == 0) {
