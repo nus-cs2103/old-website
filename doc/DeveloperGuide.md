@@ -67,7 +67,7 @@ Refer to: https://github.com/oss-generic/process/#guidelines-for-new-contributor
 
 #### Preview a handbook section
 [`.../contents/handbook.html?preview=preliminaries`](http://nus-cs2103.github.io/website/contents/handbook.html?preview=preliminaries)
-> `preview` can be any section/subsection `id` in handbook.html, **without** the `handbook-` prefix.
+> `preview` can be any section/subsection `id` in handbook.html
 
 #### Preview local files in Google Chrome
 You will need to start Chrome with the flag `--allow-file-access-from-files`:
