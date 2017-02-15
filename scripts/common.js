@@ -209,7 +209,7 @@ var weeksLoaded = 0;
 function loadContent(week) {
     $.ajax({
         type: 'GET',
-        url: 'week' + week + '.html',
+        url: 'schedule/week' + week + '.html',
         error: function() {
 
         },
