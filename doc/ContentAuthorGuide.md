@@ -136,7 +136,7 @@ Each tutorial has a list of learning activities. Stars are used for categories.
 
 ### Coding Standards
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
-* [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub)
+* [CSS](../codingStandards/coding-standards-css.md)
 * [HTML](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)
 
 ### Committing Changes
