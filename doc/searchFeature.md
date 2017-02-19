@@ -370,7 +370,7 @@ Keywords or subcategories that are part of category can be added inside the `mai
 | href                 | *url*                   | Specifies link to the relevant location           |
 | related (optional)   | *text*                  | Specifies other keywords related to this keyword  |
 
-To understand more, you can take a look at source file of [search.html](https://github.com/nus-cs2103/website/blob/master/contents/search.html).
+To understand more, you can take a look at source file of [search/index.html](https://github.com/nus-cs2103/website/blob/master/contents/search/index.html).
 
 ## Possible Improvements
 
