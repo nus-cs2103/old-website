@@ -58,12 +58,12 @@ Inner panels should be `h3` elements nested in the `div`:
 where `divId` has a form `component-week#` e.g. `activity-week2`,  
       `url` links to a file with HTML meant to be inside a `div`.
 
-> Component panels are enabled in **schedule.html** and **week.html**  
+> Component panels are enabled in **schedule/index.html** and **schedule/week.html**  
 > through the `loadInnerPanels(divId)` function in **common.js**.
 
 ### Tooltips
 Tooltips are used for short supplementary information, triggered by a hover.  
-Tooltips are enabled for content in **schedule.html** through **common.js**.
+Tooltips are enabled for content in **schedule/index.html** through **common.js**.
 
 Adding a tooltip:
 

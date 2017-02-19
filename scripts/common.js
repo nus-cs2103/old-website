@@ -209,7 +209,7 @@ var weeksLoaded = 0;
 function loadContent(week) {
     $.ajax({
         type: 'GET',
-        url: 'schedule/week' + week + '.html',
+        url: 'week' + week + '.html',
         error: function() {
 
         },
@@ -250,7 +250,7 @@ function loadContent(week) {
             }
 
             if (++weeksLoaded == totalWeeks) {
-                $.getScript('../scripts/tooltip.js');
+                $.getScript('../../scripts/tooltip.js');
                 expandSectionForAnchor(location.hash);
             }
         }
@@ -455,7 +455,7 @@ $(document).ready(function() {
     $('#content').css('height', 'auto');
 
     for (var week = 0; week <= 14; week++) {
-        $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="../images/ajax-preload.gif"/>');
+        $('#content-week' + week).html('<img height="40" width="40" class="margin-center-horizontal" src="../../images/ajax-preload.gif"/>');
         loadContent(week);
     }
 

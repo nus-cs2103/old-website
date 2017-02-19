@@ -62,7 +62,7 @@ Refer to: https://github.com/oss-generic/process/#guidelines-for-new-contributor
 ## How to preview changes
 
 #### Preview a week in schedule
-[`.../contents/week.html?preview=1`](http://nus-cs2103.github.io/website/contents/week.html?preview=1)
+[`.../contents/schedule/week.html?preview=1`](http://nus-cs2103.github.io/website/contents/schedule/week.html?preview=1)
 > `preview` can be any of weeks `0`-`14`.
 
 #### Preview a handbook section
