@@ -108,7 +108,7 @@ Code sample for storing a keyword and its parent keyword inside plain HTML file:
     </table></a>
     <ul class="category-list nav ng-transclude">
       <li class="keyword">
-        <a href="handbook.html#where-to-find-handouts">
+        <a href="handbook/index.html#where-to-find-handouts">
         <table>
           <tr>
             <td><span aria-hidden="true" class="glyphicon glyphicon-book"></span></td>
@@ -181,7 +181,7 @@ Code sample for storing a keyword and its parent keyword inside JSON file:
   {
     "text":"Where to find handouts?",
     "parent":"Handouts",
-    "href":"handbook.html#where-to-find-handouts"
+    "href":"handbook/index.html#where-to-find-handouts"
   }
 ]
 ```
@@ -242,7 +242,7 @@ Code sample for storing a keyword and its parent keyword inside HTML file using 
 
 ```html
 <category text="Handouts">
-  <keyword text="Where to find handouts" href="handbook.html#where-to-find-handouts"></keyword>
+  <keyword text="Where to find handouts" href="handbook/index.html#where-to-find-handouts"></keyword>
 </category>
 ```
 

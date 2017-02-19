@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ: Unit Testing</title>
-  <link rel="stylesheet" type="text/css" href="../styles/common.css">
+  <link rel="stylesheet" type="text/css" href="../../styles/common.css">
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
@@ -30,7 +30,7 @@
 
 <br>
 <h3><a name="test-void"></a>How to test void methods?</h3>
-<div>Use other means to check the effect of the method. E.g., if you are testing a 
+<div>Use other means to check the effect of the method. E.g., if you are testing a
 <code>deleteFile(fileName)</code> method, you could do something like this.
 <pre class="prettyprint"><code class="language-java">deleteFile(fileName);
 assertFalse(isFileExists(fileName));
@@ -38,7 +38,7 @@ assertFalse(isFileExists(fileName));
 </div>
 
 <br>
-<div>In addition, you can refactor to make methods return values. For example, consider the following 
+<div>In addition, you can refactor to make methods return values. For example, consider the following
 method.
 <pre class="prettyprint"><code class="language-java">void display() {
     // for each line in file
@@ -49,38 +49,38 @@ It can be refactored like this:
     String content = getFileContent(fileName);
     print(content);
 }</code></pre>
-Now, you can unit test <code>getFileContent(fileName)</code> method. There is no need to unit 
-test <code>display()</code> method because most of it’s logic is in <code>getFileContent(fileName)</code> 
+Now, you can unit test <code>getFileContent(fileName)</code> method. There is no need to unit
+test <code>display()</code> method because most of it’s logic is in <code>getFileContent(fileName)</code>
 that is already unit tested.
 </div>
 
 <br>
 <h3><a name="is-it-enough"></a>Is it enough to check for the correctness of status message only?</h3>
-<div>Some of your methods returns the status of the method execution as a string. Just checking the return 
-message of such methods is not enough if the command is expected to change the state of the data. You 
-can use techniques used for testing void methods (given above) to check the correct execution of the 
+<div>Some of your methods returns the status of the method execution as a string. Just checking the return
+message of such methods is not enough if the command is expected to change the state of the data. You
+can use techniques used for testing void methods (given above) to check the correct execution of the
 method, in addition to checking the status message.</div>
 
 <br>
 <h3><a name="test-private"></a>How to test private methods?</h3>
-<div>For now, make them public. In Java, there is 
+<div>For now, make them public. In Java, there is
 <a href="http://stackoverflow.com/questions/34571/how-to-test-a-class-that-has-private-methods-fields-or-inner-classes" target="_blank">
-a way to access private methods using reflection</a>. Alternatively, we can omit testing private methods because only public 
+a way to access private methods using reflection</a>. Alternatively, we can omit testing private methods because only public
 methods are exposed to others. If public methods are working correctly, private methods must be working correctly too.<br>
 A more extensive discussion of this issue can be found <a href="http://www.artima.com/suiterunner/private.html" target="_blank">here.</a></div>
 
 <br>
 <h3><a name="test-reading-user"></a>How to test the reading of user commands?</h3>
-<div>That part is hard to test. Separate the ‘reading user command’ part from the rest and test the rest. 
+<div>That part is hard to test. Separate the ‘reading user command’ part from the rest and test the rest.
 See <code>CityConnectTest.java</code>(in the Schedule page) for an example.</div>
 
 <br>
 <h3><a name="test-text-display"></a>How to test displaying of text to the user?</h3>
-<div>Similar to the previous question. Separate the generating of the text to display from displaying the 
+<div>Similar to the previous question. Separate the generating of the text to display from displaying the
 text. The former is the more complicated part which should be unit tested.
 <pre class="prettyprint"><code class="language-java">String result = executeCommand(command); //unit test this method
 displayToUser(result); //simple, no need to unit test</code></pre>
-If your software is completely text based, you can use the I/O redirection method covered in lecture 1 
+If your software is completely text based, you can use the I/O redirection method covered in lecture 1
 to test the software including the input and output.
 <pre class="prettyprint"><code class="language-java">TextBuddy.exe < input.txt > output.txt
 FC output.txt expected.txt</code></pre></div>
@@ -88,22 +88,22 @@ FC output.txt expected.txt</code></pre></div>
 
 <br>
 <h3><a name="method-test-another"></a>Can we use one method in our code to test another method?</h3>
-<div>Yes, it is acceptable. You can use methods that are already unit-tested to test other methods. 
-e.g., you can use <code>clear()</code> and <code>add()</code> methods when testing the <code>sort()</code> 
+<div>Yes, it is acceptable. You can use methods that are already unit-tested to test other methods.
+e.g., you can use <code>clear()</code> and <code>add()</code> methods when testing the <code>sort()</code>
 method.</div><br>
-<div>Note: This is not strictly ‘unit testing’ as we are not testing the unit in complete isolation from 
-the rest of the code, but it is acceptable because other units are already tested and are under your 
+<div>Note: This is not strictly ‘unit testing’ as we are not testing the unit in complete isolation from
+the rest of the code, but it is acceptable because other units are already tested and are under your
 control too.</div>
 
 <br>
 <h3><a name="why-write-test"></a>Why write tests? Manual testing is much easier.</h3>
-<div>Automated tests are not just to check if the code works NOW, but they help to ensure it keeps working 
+<div>Automated tests are not just to check if the code works NOW, but they help to ensure it keeps working
 FOREVER. Their main purpose is regression testing.</div>
 
 <br>
 <h3><a name="why-TDD"></a>Why TDD?</h3>
-<div>Writing tests first makes you write more testable code. If you write the functional code first, you often 
-find such code is harder to test. Furthermore, it encourages you to think WHAT the code should do before you 
+<div>Writing tests first makes you write more testable code. If you write the functional code first, you often
+find such code is harder to test. Furthermore, it encourages you to think WHAT the code should do before you
 figure out HOW the code should do it.</div>
 <p>--- End of document ---</p>
 </body>

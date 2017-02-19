@@ -91,7 +91,6 @@ function loadSectionUsingAjax(section, callback) {
         error: function() {
         },
         success: function(data) {
-            section = section.substring(section.lastIndexOf('/') + 1);
             $('#' + section).html(data);
             var images = $('#' + section + ' img');
             if (images.length == 0) {

@@ -5,7 +5,7 @@ function getContentUsingAjax(fileName, elementSelector, sectionName) {
 function pullContent(fileName, elementSelector, title, sectionName) {
     var toBeLoaded = fileName + '.html' + (sectionName == undefined ? '' : ' #' + sectionName);
     var section = fileName.substring(fileName.lastIndexOf('/') + 1);
-    var directLink = 'handbook.html#' + section;
+    var directLink = 'handbook/index.html#' + section;
     var linkNotice = '<span class="important">{Some links in this embedded content box might not work. ' +
         'If you need to follow the links, please go to the <a href="' + directLink + '" target="_blank">relevant section</a> ' +
         'of the handbook instead}</span>';
