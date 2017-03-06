@@ -432,8 +432,9 @@ table.two-column-content td {
  */
 
 .embedded-link {
-    color: darkblue;
-    text-decoration: underline;
+    color: black;
+    border-bottom: 1px dashed #999;
+    text-decoration: none;
     cursor: pointer;
 }
 
