@@ -56,18 +56,18 @@ Refer to: https://github.com/oss-generic/process/#guidelines-for-new-contributor
 
 ## Coding Standards
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
-* [CSS](https://nus-cs2103.github.io/website/contents/coding-standards-css.html)
+* [CSS](../codingStandards/coding-standards-css.md)
 * [HTML](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)
 
 ## How to preview changes
 
 #### Preview a week in schedule
-[`.../contents/week.html?preview=1`](http://nus-cs2103.github.io/website/contents/week.html?preview=1)
+[`.../contents/schedule/week.html?preview=1`](http://nus-cs2103.github.io/website/contents/schedule/week.html?preview=1)
 > `preview` can be any of weeks `0`-`14`.
 
 #### Preview a handbook section
-[`.../contents/handbook.html?preview=preliminaries`](http://nus-cs2103.github.io/website/contents/handbook.html?preview=preliminaries)
-> `preview` can be any section/subsection `id` in handbook.html, **without** the `handbook-` prefix.
+[`.../contents/handbook/index.html?preview=preliminaries`](http://nus-cs2103.github.io/website/contents/handbook/index.html?preview=preliminaries)
+> `preview` can be any section/subsection `id` in handbook/index.html
 
 #### Preview local files in Google Chrome
 You will need to start Chrome with the flag `--allow-file-access-from-files`:

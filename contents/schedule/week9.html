@@ -1,0 +1,317 @@
+<div class="things-to-do content-week9">
+  <h3 id="things-to-do-content-week9" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week9">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('../handbook/project-v02', '#embedded-week9-handbook');">
+              <span class="embedded-link">V0.2 Requirements</span>
+            </span>
+            <div id="embedded-week9-handbook"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="activity content-week9">
+  <h3 id="activity-content-week9" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+    <div>
+      <div class="activity activity-week9">
+        <h3>T8A0. Refine your product's user experience <img src="../../images/star.png"/></h3>
+        <div>
+          Read the <a href="https://docs.google.com/document/d/1kAth-pTOzwCJFVjS6KU8O50bCvijDqpb6GsOyJTD0Ds/pub?embedded=true" target="_blank">
+          common problems in V0.0</a> and improve your product design as necessary. Flaws in product design can cost
+          you marks in the final project grading.
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A1. Start project schedule tracking <img src="../../images/star.png"/></h3>
+        <div>
+          <ul>
+            <li>If you haven't done so yet, create labels and milestones in your team repo as given in our
+              <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week9-t8a1a', 'repo-setup');">
+                <span class="embedded-link">GitHub Repo Setup</span> instructions.
+              </span>
+              <div id="embedded-week9-t8a1a"></div>
+            </li>
+            <li>Start using GitHub (Issues, Milestones, etc.) for managing your project schedule
+              <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week9-t8a1b', 'project-schedule-tracking');">
+                <span class="embedded-link">as specified in the handbook</span>.
+                Note that <span class="highlighted">you'll lose marks if you don't 'reach' the milestone</span> as
+                specified in those instrutions.
+              </span>
+              <div id="embedded-week9-t8a1b"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A2. Reach V0.2 <img src="../../images/star.png"/></h3>
+        <div>
+          As you work towards V0.2, learn from the last week's experience and refine the workflow as necessary.
+        </div>
+      </div>
+      <div class="activity activity-week9">
+        <h3>T8A3. Defend your code  <img src="../../images/2stars.png"/></h3>
+          <div>
+            This is an individual activity.<br>
+            Try to use these in the code your write for the project.<br>
+            You can refer to the respective learning outcomes in
+            <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level4/blob/master/docs/LearningOutcomes.md"
+                  target="_blank">AddressBook - Level 4</a> for examples of how these are used already in the
+            AddressBook and for more resources on how to use them.
+            <ul>
+              <li>
+                Assertions
+              </li>
+              <li>
+                Exceptions
+              </li>
+              <li>
+                Logging
+              </li>
+              <li>
+                Defensive coding
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="tutorial content-week9">
+  <h3 id="tutorial-content-week9" class="buttoned"><span>Tutorial 8: V0.2, Defensive Coding </span></h3>
+  <div>
+    <div class="tutorial tutorial-week9">
+      <h3>Demo V0.2</h3>
+      <div>
+        <ol>
+          <li>If have created a releas, use that jar file for the demo. If not, revert your code to the version tagged
+            as V0.2</li>
+          <li>Demo your V0.2 to the tutor to prove it meets V0.2 milestone requirements.</li>
+          <li>Show your repo to tutor to confirm that,
+            <ul>
+              <li>tests are passing on Travis.</li>
+              <li>org and repo names are as expected</li>
+              <li>milestone V0.2 matches the current version</li>
+              <li>milestone V0.2 issues are assigned and closed</li>
+              <li>milestone V0.2 is closed</li>
+            </ul>
+          </li>
+        </ol>
+        Ask your tutor if you are considered as 'reached V0.2'. As mentioned before, missing milestones
+        V0.2 .. V0.5 will be counted against your final project marks.
+      </div>
+    </div>
+    <div class="tutorial tutorial-week9">
+      <h3>Plan V0.3</h3>
+      <div>
+        Update V0.3 milestone on GitHub to match your actual plan for the next week.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week9">
+      <h3>[After the tutorial] Submit peer evaluations</h3>
+      <div>
+        Note that you need to submit the second peer evaluation for phase B this week.<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lecture content-week9">
+  <h3 id="lecture-content-week9" class="buttoned"><span>Lecture 9</span></h3>
+
+  <div>
+    <div class="lecture lecture-week9">
+      <h3>Part 1 - The M in RTFM: When Code is not Enough [15 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/documentation.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL9P1%5d%20The%20M%20in%20RTFM%20-%20When%20Code%20Is%20Not%20Enough.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L9P1.%20The%20M%20in%20RTFM%20-%20When%20Code%20is%20not%20Enough.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+              <p>
+                <strong>Overview:</strong> While most of the design and implementation details can be learned
+                from well-written code, some additional information such as high-level design can be
+                documented in a developer guide for the benefit of other teammate and future developers.
+              </p>
+              <p>
+                <strong>Topics:</strong> Writing developer documentation.
+              </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Generating API docs from code comments: In Eclipse, choose Project → Generate Javadoc.<br>
+            <a target="_blank" href="http://www.tutorialspoint.com/java/java_documentation.htm">
+              A very short introduction to how to write javadoc comments</a>.
+            <a target="_blank" href="http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">
+              A more detailed guide</a>.
+          </li>
+          <li>
+            Some side readings:
+            <ul>
+              <li>
+                [Web article] <a target="_blank" href="https://coding.abel.nu/2013/01/on-code-documentation/">
+                On Code Documentation or How to find your way Around a Resort</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week9">
+      <h3>Part 2 - Déjà vu: Using patterns to solve recurring problems [40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/patterns.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL9P2%5d%20Deja%20vu%20-%20Using%20patterns%20to%20solve%20recurring%20problems.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L9P2.%20Deja%20vu%20-%20Using%20patterns%20to%20solve%20recurring%20problems.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Patterns are tried and trusted solutions to recurring problems.
+                Applying right patterns often improves our work products.
+                </p>
+                <p>
+                <strong>Topics:</strong> patterns
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Something we have already covered, presented as a pattern and an anti-pattern:
+            <a target="_blank" href="http://codebetter.com/jeremymiller/2006/12/03/composed-method-pattern/">
+              Composed method pattern (and Arrowhead anti-pattern)
+            </a>,
+            <a target="_blank" href="http://www.codinghorror.com/blog/2006/01/flattening-arrow-code.html">
+              another take one the same issue
+            </a>
+            - Note that these code-level patterns are sometimes called <em>coding idioms</em>.
+          </li>
+          <li>
+            Some good books on design patterns:
+            <a target="_blank"
+               href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">
+              The famous ‘Gang of Four’ patterns book
+            </a>,
+            <a target="_blank" href="http://www.amazon.com/First-Design-Patterns-Elisabeth-Freeman/dp/0596007124/">
+              Head first design patterns
+            </a>
+          </li>
+          <li>
+            Singleton is a neat pattern and it is easy to explain too. That is why it is used often to
+            illustrate the concept of design patterns. However, there is a concern that Singletons are evil,
+            especially when used excessively.
+            <a target="_blank" href="http://blogs.msdn.com/b/scottdensmore/archive/2004/05/25/140827.aspx">
+              Here’s a blog post (from MSDN blogs) that supports that concern</a>.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week9">
+      <h3>Part 3 - Gems of wisdom: software development principles [10 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/principles.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL9P3%5d%20Gems%20of%20wisdom%20-%20software%20development%20principles.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L9P3.%20Gems%20of%20wisdom%20-%20software%20development%20principles.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                <strong>Overview:</strong> Principles are little gems of wisdom gained from past experience.
+                It is another way to learn from others' past experience.
+                </p>
+                <p>
+                <strong>Topics:</strong> principles
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <a target="_blank" href="http://www.comp.nus.edu.sg/~damithch/pages/SE-quotes.htm?type%3DstudentQuotes">
+              Selected software engineering quotes for students -
+              These quotes capture gems of wisdom in an easy-to-remember format.
+            </a> - These quotes capture
+            gems of wisdom in an easy-to-remember format.
+          </li>
+          <li>
+            For those who want to go a bit more deeper into SE principles (certainly beyond the scope of this
+            module), this is a good place to start:
+            <a target="_blank" href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">
+              Principles of OOD
+            </a>, an article by Robert C. Martin
+            (aka Uncle Bob)
+          </li>
+          <li>
+            <a target="_blank" href="https://www.youtube.com/watch?v=acjvKJiOvXw">
+              A useful Google Tech Talk on “OO Design for Testability”
+            </a> that also refers to how Law of
+            Demeter principle and Singleton patterns affects testability.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week9">
+      <h3>Recap [15 minutes]</h3>
+      <div>
+        [<a href="../../files/slides/L9Recap.pptx" target="_blank">Slides</a>]
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="deadline content-week9">
+  <h3 id="deadline1-content-week9" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline1-week9">
+      <h3>[Sat (<span class="date-marker" week="9" day="6"></span>) 23:59] Complete phase B second peer evaluation</h3>
+      <div>
+        Similar to before. Pay attention to
+        <span onclick="getContentUsingAjax('../handbook/peerEvaluations', '#embedded-week9-teammates', 'giving-peer-feedback');" class="embedded-link">
+          these guidelines
+        </span>
+        on giving peer feedback.
+        <div id="embedded-week9-teammates"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

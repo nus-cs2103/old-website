@@ -36,12 +36,12 @@ function addLoadOnDemandToAnchors() {
     handleClickForAllAnchors(allAnchors);
 
     // Appendix B
-    var policySection = 'handbook-appendixB-policies';
+    var policySection = 'appendixB-policies';
     var policyAnchors = $('a[href^="#policy-"]');
     handleClickForAppendixAnchors(policySection, policyAnchors);
 
     // Appendix C
-    var faqSection = 'handbook-appendixC-faq';
+    var faqSection = 'appendixC-faq';
     var faqAnchors = $('a[href="#' + faqSection + '"]').next().find('a');
     handleClickForAppendixAnchors(faqSection, faqAnchors);
 }
@@ -147,10 +147,6 @@ function loadSections() {
 
     if (preview) {
         var section = preview[1];
-        var isNotPolicySection = (section.match(/^policy-/) == null);
-        if (isNotPolicySection) {
-            section = 'handbook-' + section;
-        }
         addLoadOnDemandToAnchors();
         $('a[href="#' + section + '"]').click();
         $('#overlay').remove();

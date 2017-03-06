@@ -1,0 +1,358 @@
+<div class="things-to-do content-week2">
+  <h3 id="things-to-do-content-week2" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week2">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('../handbook/teams', '#embedded-week2-handbook');">
+              <span class="embedded-link">Forming Teams</span>
+            </span> |
+            <span onclick="getContentUsingAjax('../handbook/peerEvaluations', '#embedded-week2-handbook');">
+              <span class="embedded-link">Peer Evaluations </span>
+            </span>|
+            <span onclick="getContentUsingAjax('../handbook/participation', '#embedded-week2-handbook');">
+              <span class="embedded-link">Participation marks </span>
+            </span>|
+            <span onclick="getContentUsingAjax('../handbook/tools', '#embedded-week2-handbook');">
+              <span class="embedded-link">Tools</span>
+            </span>
+            <div id="embedded-week2-handbook"></div>
+          </li>
+          <li>
+            Policies:
+            <span onclick="getContentUsingAjax('../handbook/policy', '#embedded-week2-policies', 'policy-followingInstructions');">
+              <span class="embedded-link">Policy on following instructions </span>
+            </span> |
+            <span onclick="getContentUsingAjax('../handbook/policy', '#embedded-week2-policies', 'policy-techHelp');">
+              <span class="embedded-link"> Policy on tech help </span>
+            </span>
+            <div id="embedded-week2-policies"></div>
+          </li>
+          <li>
+            FAQ:
+            <span onclick="getContentUsingAjax('../handbook/appendixC-faq', '#embedded-week2-faqs', 'faq-slideFormat');">
+              <span class="embedded-link">Why slides are not detailed enough, handouts are wordy? </span>
+            </span>|
+            <span onclick="getContentUsingAjax('../handbook/appendixC-faq', '#embedded-week2-faqs', 'faq-selfStudy');">
+              <span class="embedded-link">Why so much self-study? </span>
+            </span>|
+            <span onclick="getContentUsingAjax('../handbook/appendixC-faq', '#embedded-week2-faqs', 'faq-favoriteTool');">
+              <span class="embedded-link">Why I'm not allowed to use my favorite OS/IDE/etc? </span>
+            </span>
+            <div id="embedded-week2-faqs"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="things-to-do things-to-do-week2">
+      <h3>Submit IVLE quiz</h3>
+      <div>
+        Note that IVLE quizzes open on Fridays just after the lecture and closes on the following Tuesday 2359.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="activity content-week2">
+  <h3 id="activity-content-week2" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <span class="dim">{Pre-Tutorial Learning Activity = Work to be done before coming to the tutorial.
+        These can earn participation marks}<br> </span>
+    <div class="activity activity-week2">
+      <h3 class="load-during-expansion" data-url="activities/IDEs.html">T1A1. Get started with IDEs <img src="../../images/star.png"/></h3>
+    </div>
+    <div class="activity activity-week2">
+      <h3>T1A2. Debugging in IDEs <img src="../../images/2stars.png"/></h3>
+      <div>
+        Complete the exercise for the learning outcome:<br>
+        <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level1#use-a-debugger-lo-debugging" target="_blank">
+          AddressBook-Level1: Use a debugger [LO-Debugging]</a>
+        <p>
+          Submission: Demo your debugging skills to the tutor during the tutorial. There's no need to find a bug. Just
+          show
+          how you can insert break points, step through code, inspect variable values, step in to methods, etc.
+        </p>
+      </div>
+    </div>
+    <div class="activity activity-week2">
+      <h3>T1A3. Start using a task management tool <img src="../../images/2stars.png"/></h3>
+      <div>
+        If you don't use a scheduling/task tracking tool (also known as <tooltip>GTD</tooltip> tools) to manage your schedules/tasks, start
+        using one. There are many available (e.g. Google Calendar + Google Tasks, Todo.txt, Fantastical, Wunderlist, Any.do,
+        Remember The Milk, etc.
+        <a target="_blank" href="http://www.priacta.com/Articles/Comparison_of_GTD_Software.php">here's</a> a long list).
+        Not only it will help to keep track of your work, but also it will help you better understand the product domain
+        of the module project. <span class="dim">If you feel sceptical about this, check out rule #1 in
+        <a target="_blank" href="http://www.daniel-wong.com/2015/01/14/straight-a-student/">this</a> article.</span><br>
+        To encourage you to do the above, we resist sending you reminders about module deadlines etc.
+        You are expected to keep track of the them yourself.<br>
+        <span class="important">{This learning activity is to experience the user's point of view of
+          the problem you are going to solve in your project later.}
+        </span>
+        <p>
+          Submission: Show to the tutor your current schedule as seen on the UI of the software you are using.
+        </p>
+      </div>
+    </div>
+    <div class="activity activity-week2">
+      <h3>T1A4. Regression testing using text input/output <img src="../../images/2stars.png"/></h3>
+      <div>
+        Complete the exercise for the learning outcome:<br>
+        <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level1#automate-cli-testing-lo-automatedclitesting" target="_blank">
+          AddressBook-Level1: Automate CLI testing [LO-AutomatedCliTesting]</a>
+        <p>
+          Submission: Demo how you run the tests to the tutor.
+        </p>
+      </div>
+    </div>
+    <div class="activity activity-week2">
+      <h3>T1A5. Use Java Collections, Enums, Varargs <img src="../../images/2stars.png"/></h3>
+      <div>
+        <p>
+          If you have not used Java Collections classes (<code>ArrayList, HashMap, HashMap, etc.</code>),
+          <code>Enums</code>, or <code>Varargs</code>, complete the exercises for the corresponding learning outcomes below:
+        <ol type="a">
+          <li><a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level1#use-collections-lo-collections" target="_blank">
+            AddressBook-Level1: Use Collections [LO-Collections]</a>
+          </li>
+          <li><a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level1#use-enums-lo-enums" target="_blank">
+            AddressBook-Level1: Use Enums [LO-Enums]</a>
+          </li>
+          <li><a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level1#use-varargs-lo-varargs" target="_blank">
+            AddressBook-Level1: Use Varargs [LO-Varargs]</a>
+          </li>
+        </ol>
+        </p>
+        <p> Submission: Show your code to the tutor during the tutorial. </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tutorial content-week2">
+  <h3 id="tutorial-content-week2" class="buttoned"><span>Tutorial 1: IDE Usage</span></h3>
+  <div>
+    <div class="tutorial tutorial-week2">
+      <h3> For CS2103 students only</h3>
+      <div>
+        If you do not have confirmed tutorial group yet, attend the slot you chose in the 'Temporary Tutorial
+        Registration' on IVLE.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week2">
+      <h3> Forming teams</h3>
+      <div>
+        <strong>CS2103T</strong>: Sit with members of your your phase A team (formed by CS2101).<br>
+        <strong>CS2103</strong>: Form tentative phase A teams for this week. Teams will be finalized next week.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week2">
+      <h3>Demo results of pre-tutorial learning activities</h3>
+      <div>
+        Demo to the tutor results of your pre-tutorial learning activities.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week2">
+      <h3>After the tutorial</h3>
+      <div>
+        If you have further questions about the lecture topics that you could not resolve even after the tutorial,
+        your can talk to the lecturer or use an avenue listed
+        <span onclick="getContentUsingAjax('../handbook/appendixD-help', '#embedded-week2-aftertutorial');">
+              <span class="embedded-link">here</span>.
+        </span>
+        <div id="embedded-week2-aftertutorial"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lecture content-week2">
+  <h3 id="lecture-content-week2" class="buttoned"><span>Lecture 2: The program can be small, but the code need not be smelly.</span>
+  </h3>
+  <div>
+    <div class="lecture lecture-week2">
+      <h3>[45 minutes] Part 1 - Good code, bad code: Toward production quality code</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/good code.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL2P1%5d%20Good%20Code,%20Bad%20Code%20-%20Toward%20Production%20Quality%20Code.pdf" target="_blank">
+                Handout</a>]
+                <!-- [Slides] -->
+                [<a target="_blank" href="../../files/slides/L2P1.%20%20Good%20Code,%20Bad%20Code.pptx">
+                Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                    <strong>Overview:</strong> Good code conforms to an accepted coding standard and follow good
+                  coding practices such as avoiding 'magic numbers'. Adding lengthy comments does not necessarily
+                  produce good code. One practice that is hard to learn but very important is to stay within the
+                  same level of abstraction inside a method.
+                </p>
+                <p>
+                    <strong>Topics:</strong> code quality
+                </p>
+                </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <span class="highlighted important">Our coding standard is <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html" target="_blank">
+              here</a></span>
+          </li>
+          <li>
+            Interesting side reading
+            <ul>
+              <li>
+                [Article] <a target="_blank" href="http://en.wikipedia.org/wiki/Indent_style">Wikipedia entry on many
+                styles of code indentation</a>
+              </li>
+              <li>
+                [Blog post] <a target="_blank"
+                               href="http://www.codovation.com/2012/07/7-quality-principles-we-can-learn-from-the-big-tech-companies-google-facebook-microsoft/">
+                7 Quality Principles we can learn from Google, Facebook, Microsoft</a>
+              </li>
+              <li>
+                [Blog post] <a target="_blank" href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from
+                Apple's #gotofail Security Bug</a> - How following a coding style could have prevented a major security
+                bug.
+              </li>
+              <li>
+                [Blog post] <a target="_blank"
+                               href="http://coding.smashingmagazine.com/2012/10/25/why-coding-style-matters/">
+                Why coding style matters</a> - A view from a practicing software developer
+              </li>
+              <li>
+                [Blog post] <a target="_blank"
+                               href="http://eli.thegreenplace.net/2013/01/05/understanding-your-own-code/">
+                Understanding your own code</a> - Blogger Eli Bendersky says 'Code that isn't readable is as bad as, or
+                worse than code that doesn't work'
+              </li>
+              <li>
+                [Web article] <a target="_blank" href="http://blog.goyello.com/2013/01/21/top-9-principles-clean-code/">
+                Top 9 qualities of clean code</a>
+              </li>
+              <li>
+                [Developer opinions]
+                <a target="_blank" href="http://joshsymonds.com/blog/2013/11/03/what-makes-a-good-programmer-good/">
+                  What makes a good programmer good</a> |
+                <a target="_blank" href="http://henrikwarne.com/2014/06/30/what-makes-a-good-programmer/">
+                  What makes a good programmer</a> |
+                <a target="_blank"
+                   href="http://www.quora.com/How-do-I-train-myself-to-code-faster-and-with-fewer-bugs/answer/Glyn-Williams">
+                  How do I train myself to code faster and with fewer bugs?</a> |
+                <a target="_blank"
+                   href="http://www.itworld.com/article/2898840/developers-say-the-best-code-is-readable-code.html">
+                  What is 'good code'?</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Humor: <a target="_blank" href="http://www.willa.me/2013/11/the-six-most-common-species-of-code.html?m=1">
+            The six most common species of code</a> (checkout number 6!),
+            <a target="_blank" href="https://lh4.googleusercontent.com/-sLk_c2oD3FM/VBtJSemTqpI/AAAAAAAAtis/VmVoFgGuQG4/w1372-h1298-no/code_comment_styles.png">
+              Commenting style</a>,
+              <a target="_blank" href="http://xkcd.com/1513/">XKCD on code quality</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week2">
+      <h3>[15 minutes] Part 2 - Refactoring: from Turkey to Peacock in thousand steps</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/bad code.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL2P2%5d%20Refactoring%20-%20From%20Turkey%20to%20Peacock%20in%20Thousand%20Steps.pdf" target="_blank">Handout</a>]
+                <!-- [Slides] -->
+                [<a target="_blank" href="../../files/slides/L2P2.%20%20Refactoring%20-From%20Turkey%20to%20Peacock%20in%20Thousand%20Steps.pptx">
+                Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                    Overview: Improving code quality should be done as refactoring rather than rewriting.
+                  Refactoring should go hand in hand with regression testing.
+                </p>
+                <p>
+                    Topics: refactoring
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            [Forum thread] <a target="_blank" href="http://programmers.stackexchange.com/questions/8988/how-much-time-should-i-dedicate-to-refactoring-my-code">
+            How much refactoring should I do?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week2">
+      <h3>[20 minutes] Part 3 - Your own private time machine: Introduction to revision control</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/rcs.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL2P3%5d%20Your%20Own%20Private%20Time%20Machine%20-%20Introduction%20to%20Revision%20Control.pdf" target="_blank">
+                Handout</a>]
+                <!-- [Slides] -->
+                [<a target="_blank" href="../../files/slides/L2P3.%20%20Your%20Own%20Private%20Time%20Machine%20-%20Introduction%20to%20Revision%20Control.pptx">
+                Slides</a>]
+              </p>
+              <p>
+                Overview: As the code is being changed, you might want to use a revision control software to keep track
+                of the code changes.
+              </p>
+              <p>
+                Topics: revision control (individual)
+              </p>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/nus-cs2103-AY1617S2/rcs#ex--github-helloworld-tutorial" target="_blank">
+              Suggested Git learning sequence</a>
+          </li>
+          <li>
+            Recommended GUI Client:
+            <a target="_blank" href="https://www.atlassian.com/software/sourcetree/overview">SourceTree</a>,
+            available for both Windows and Mac
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week2">
+      <h3>[35 minutes] Recap</h3>
+      <div>
+        [<a href="../../files/slides/L2Recap.pptx" target="_blank">Slides</a>]
+        <!-- [Slides] -->
+      </div>
+    </div>
+  </div>
+</div>

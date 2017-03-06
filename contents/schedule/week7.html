@@ -1,0 +1,318 @@
+<div class="things-to-do content-week7">
+  <h3 id="things-to-do-content-week7" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week7">
+      <h3>Read up more about project requirements</h3>
+      <div>
+        Refresh your memory about project requirements:
+        <span onclick="getContentUsingAjax('../handbook/project-product', '#embedded-week7-project');"><span
+            class="embedded-link">The Product</span></span> |
+        <span onclick="getContentUsingAjax('../handbook/project-scope', '#embedded-week7-project');"><span
+            class="embedded-link">Project Scope</span></span> |
+        <span onclick="getContentUsingAjax('../handbook/project-constraints', '#embedded-week7-project');"><span
+            class="embedded-link">Project Constraints</span></span> |
+        <span onclick="getContentUsingAjax('../handbook/project-deliverables', '#embedded-week7-project');"><span
+            class="embedded-link">Deliverables</span></span>|
+        <span onclick="getContentUsingAjax('../handbook/project-v00', '#embedded-week7-project');"><span
+            class="embedded-link">V0.0</span></span>
+        <div id="embedded-week7-project"></div>
+
+        <p>Project requirements was also covered during lecture 1. If you missed that lecture, please view the
+          webcast.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="activity content-week7">
+  <h3 id="activity-content-week7" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <div class="activity activity-week7">
+      <h3>T6A1. Work in a 2KLoC code base, as a team<img src="../../images/star.png"/></h3>
+      <div>
+        <p>To be done <span class="highlighted">with your Phase B team members</span>.
+        <p>Set up a GitHub organization for your Phase B, as described
+        <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week7-orgsetup', 'organization-setup');" class="embedded-link">
+          here
+        </span>.
+        No need to set up a repo for the project yet. Setting up the organization is enough.</p>
+        <div id="embedded-week7-orgsetup"></div>
+        <p>Complete the exercise in
+          <a href="https://github.com/nus-cs2103-AY1617S2/rcs#follow-the-feature-branch-workflow-lo-featurebranchworkflow"
+             target="_blank"> Revision Control Software: Follow the Feature Branch Workflow [LO-FeatureBranchWorkflow]</a>
+          but do note the following:</p>
+        <ul>
+          <li>[Step 1]
+            <ul>
+              <li>Use the GitHub organization your created above.
+              </li>
+              <li>Repo to be forked to your new organization:
+                <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3" target="_blank">Address Book
+                  Level 3</a>.
+              </li>
+            </ul>
+          <li>[Step 2]
+            <ul>
+              <li>You can either clone the forked repo (i.e. <code>/yourorg/addressbook-level3</code>) to your computer or
+                add that repo as a 'remote' to your existing addressbook-level3 clone on your computer.
+                (a local repo can have multiple remote repos as long as they share a common revision history).</li>
+              <li>Feature to add: Do the exercise in
+                <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3/blob/master/doc/LearningOutcomes.md#work-in-a-2kloc-code-base-lo-2kloc"
+                   target="_blank"> AddressBook-Level3: Work in a 2KLoC code base [LO-2KLoC]</a>,
+                but take note of the following.</li>
+              <ul>
+                <li>
+                  Choose features that can produce knowledge/code that can be reused in your own project later.
+                  Here are some examples.
+                  <ul>
+                  <li><span class="highlighted">To be added</span></li>
+                  <li></li>
+                  <li></li>
+                  </ul>
+                </li>
+                <li>Discuss with team members and decide which feature each of you will implement (to avoid
+                  duplicating the same feature).
+                </li>
+                <li>Name your branch as <code>some-keywords-related-to-the-enhancement</code> e.g. <code>add-edit-command</code>
+                  instead of following the usual branch naming convention for tutorial activities.
+                </li>
+              </ul>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Submission: This is a team submission. Create a PR from the <code>master</code> branch your team repo to
+          <code>nus-cs2103-AY1617S2/addressbook-level3</code>. PR name is similar to previous tutorial activities,
+          but omit the student name. e.g. <code>[T6A2][T11-B3]</code>
+        </p>
+      </div>
+    </div>
+    <div class="activity activity-week7">
+      <h3>T6A2. Set up the sample project<img src="../../images/star.png"/></h3>
+      <div>
+        Ensure your team's GitHub organization name is as specified in
+          <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week7-github', 'organization-setup');">
+            <span class="embedded-link">our requirements</span>.
+          </span>
+        Follow the
+          <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week7-github', 'repo-setup');">
+            <span class="embedded-link">repo setup</span>
+          </span> and
+          <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week7-github', 'issue-tracker-setup');">
+            <span class="embedded-link">issue tracker setup</span>
+          </span>
+        instructions in our handbook to set up the repo for your project. <br>
+        <div id="embedded-week7-github"></div>
+      </div>
+    </div>
+    <div class="activity activity-week7">
+      <h3>T6A3. Reach V0.0 <img src="../../images/star.png"/></h3>
+      <div>
+        Prepare <span onclick="getContentUsingAjax('../handbook/project-v00', '#embedded-week7-t6a2');"><span
+              class="embedded-link">V0.0 Deliverables</span></span>
+        <div id="embedded-week7-t6a2"></div>
+
+        <p><strong>Suggested sequence</strong> : document product survey --> brainstorm user stories --> prioritize use stories -->
+          select user stories to include in your product --> design the product --> write the user guide <br>
+          Fill up Glossary and NFRs in parallel to the above.
+        </p>
+        <p>When creating these documents, initially you may use a simple collaboration medium such as Google Docs.
+          You can transfer the content to your GitHub repo after the content has become somewhat stable. </p>
+          Tip: find an Eclipse plugin to preview Markdown documents.
+        </p>
+      </div>
+    </div>
+    <div class="activity activity-week7">
+      <h3>T6A4. DIP, DI, OCP, C&C <img src="../../images/2stars.png"/></h3>
+      <div>
+        <p>Complete *some* of the exercises given in: <br>
+
+          <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-dependency-inversion-principle-lo-dip" target="_blank">
+            AddressBook-Level3: Apply Dependency Inversion Principle [LO-DIP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3/blob/master/doc/LearningOutcomes.md#use-dependency-injection-lo-di" target="_blank">
+            AddressBook-Level3: Use Dependency Injection [LO-DI]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3/blob/master/doc/LearningOutcomes.md#apply-open-closed-principle-lo-ocp" target="_blank">
+            AddressBook-Level3: Apply Open-Closed Principle [LO-OCP]</a><br>
+          <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level3/blob/master/doc/LearningOutcomes.md#analyze-coupling-and-cohesion-of-designs-lo-couplingcohesion" target="_blank">
+            AddressBook-Level3: Analyze Coupling and Cohesion of designs [LO-CouplingCohesion]</a><br>
+        </p>
+        <p>
+          Submission:
+          Create a PR with your code (similar to past weeks) but <span class="highlighted">use your Phase B team ID</span>
+          [<span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week7-pr-steps', 'tutorial-pr-instructions');"><span class="embedded-link">Instructions</span></span>]
+        <div id="embedded-week7-pr-steps"></div>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tutorial content-week7">
+  <h3 id="tutorial-content-week7" class="buttoned"><span>Tutorial 6: V0.0, Feature branch
+    flow, DIP, DI, OCP, C&C</span></h3>
+  <div>
+    <div class="tutorial tutorial-week7">
+      <h3>Discuss pre-tutorial learning activities</h3>
+      <div>
+        As usual, discuss with tutor/peers pre-tutorial learning activities.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week7">
+      <h3>[After the tutorial] Submit peer evaluations</h3>
+      <div>
+        Note that you need to submit the first peer evaluation for phase B this week.<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="lecture content-week7">
+  <h3 id="lecture-content-week7" class="buttoned"><span>Lecture 7</span></h3>
+  <div>
+
+
+    <div class="lecture lecture-week7">
+      <h3>Part 1 - The View from the Top: Architecture [40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/archi roadmap.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL7P1%5d%20The%20View%20from%20the%20Top%20-%20Architecture.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L7P1.%20The%20View%20from%20the%20Top%20-%20Architecture.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                  <p>
+                      Overview: The architectural design should break the product into a small number of well-specified components that can be developed in parallel.
+                      UML sequence diagrams can be used to figure out the API of those components.
+                  </p>
+                  <p>
+                      Topics: software architecture, components and APIs, modeling component behavior using seq diagrams, different approaches to design
+                  </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            <span class="highlighted">[Must watch]</span> A three-minutes video we created for you
+            <a target="_blank" href="https://www.youtube.com/watch?v=Un80XoRT1ME">Game of Tic-Tac-Toe: A worked example of designing architecture and discovering component APIs</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week7">
+      <h3>Part 2 - Putting up defenses to protect our code [30 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/defensive.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL7P2%5d%20Putting%20up%20defenses%20to%20protect%20our%20code.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L7P2.%20Putting%20up%20defenses%20to%20protect%20our%20code.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+              <p>
+                <strong>Overview:</strong> Proper error handling is a must for any production system. The
+                defensive coding approach can lower the risk of component failure even further.
+              </p>
+              <p>
+                <strong>Topics:</strong> assertions, logging,  defensive programming
+              </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Refer <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level4/blob/master/docs/LearningOutcomes.md" target="_blank">
+             Address Book (Level 4) Learning Outcomes page</a> for more resources.
+          </li>
+          <li>
+            Interesting reading:
+            <ul>
+              <li>
+                [Quora answer] <a target="_blank" href="https://www.quora.com/What-is-the-code-quality-at-Google-like/answer/Jeremy-Hoffman">
+                What is the code quality at Google like?</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week7">
+      <h3>Part 3 - How to Avoid a Big Bang: Integrating Software Components [15 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/BigBang.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL7P3%5d%20How%20to%20Avoid%20a%20Big%20Bang%20-%20Integrating%20Software%20Components.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L7P3.%20How%20to%20Avoid%20a%20Big%20Bang%20-%20Integrating%20Software%20Components.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                  <p>
+                    Overview: Your integration approach play an important role in how you implement components.
+                    When integrating work done by multiple developers, revision control software can be a big help.
+                  </p>
+                  <p>
+                      Topics: Integration, Build automation, Continuous Integration, Dependency Management
+                  </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Refer <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level4/blob/master/docs/LearningOutcomes.md" target="_blank">
+            Address Book (Level 4) Learning Outcomes page</a> for more resources.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week7">
+      <h3>Recap [20 minutes]</h3>
+      <div>
+        [<a href="../../files/slides/L7Recap.pptx" target="_blank">Slides</a>]
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="deadline content-week8">
+  <h3 id="deadline1-content-week8" class="buttoned"><span>Deadlines </span></h3>
+  <div>
+    <div class="deadline deadline1-week8">
+      <h3>[Sat (<span class="date-marker" week="7" day="6"></span>) 23:59] Complete phase B first peer evaluation</h3>
+      <div>
+        Similar to before. Pay attention to
+        <span onclick="getContentUsingAjax('../handbook/peerEvaluations', '#embedded-week8-teammates', 'giving-peer-feedback');" class="embedded-link">
+          these guidelines
+        </span>
+        on giving peer feedback.
+        <div id="embedded-week8-teammates"></div>
+      </div>
+    </div>
+  </div>
+</div>

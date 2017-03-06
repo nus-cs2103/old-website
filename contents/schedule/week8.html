@@ -1,0 +1,289 @@
+<div class="things-to-do content-week8">
+  <h3 id="things-to-do-content-week8" class="buttoned"><span>Things to do</span></h3>
+  <div>
+    <div class="things-to-do things-to-do-week8">
+      <h3>Handbook sections to read</h3>
+      <div>
+        <ul>
+          <li>
+            Project:
+            <span onclick="getContentUsingAjax('../handbook/project-v00', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.0 Requirements</span>
+            </span> |
+            <span onclick="getContentUsingAjax('../handbook/project-v01', '#embedded-week8-handbook');">
+              <span class="embedded-link">V0.1 Requirements</span>
+            </span>|
+            <span onclick="getContentUsingAjax('../handbook/appendixF-teamworkIssues', '#embedded-week8-handbook');">
+              <span class="embedded-link">
+                <span class="highlighted">What to do if you have problematic team members</span>
+              </span>
+            </span>
+            <div id="embedded-week8-handbook"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="activity content-week8">
+  <h3 id="activity-content-week8" class="buttoned"><span>Pre-Tutorial Learning Activities</span></h3>
+  <div>
+    <div class="activity activity-week8">
+      <h3>T7A1. Set up the sample project (continued)<img src="../../images/star.png"/></h3>
+      <div>
+        <ol>
+          <li>Ensure you can pass all the tests locally.</li>
+          <li>Set up Travis for your fork. After setting up Travis correctly, you should be able to view the build
+            status of your project from the 'Dashboard' link in the module website (see the main menu at the top).
+            [FYI, <a href="https://github.com/nus-cs2103-AY1617S2/website/blob/master/dashboard/Teams-AY1617S1.md" target="_blank">
+              here</a> is the dashboard page from the previous semester]
+          </li>
+          <li>Read the <a href="https://github.com/nus-cs2103-AY1617S2/addressbook-level4/blob/master/docs/DeveloperGuide.md#design"
+                          target="_blank">'Design' Section of the Developer Guide</a>
+            to get a high-level understanding of the design before you start reading the code.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="activity activity-week8">
+      <h3>T7A2. Complete V0.0<img src="../../images/star.png"/></h3>
+      <div>
+        Complete any remaining parts of V0.0 that you could not finish in the previous week.
+        Transfer the content to the relevant pages in your main repo.
+        <br>
+        Submission: Create a PR from your team repo <code>master</code> branch to
+        <code>https://github.com/nus-cs2103-AY1617S2/addressbook-level4</code>.
+        Name it <code>[T7][Your-Team-ID]</code> e.g. <code>[T7][W09-B3]</code>
+      </div>
+    </div>
+
+    <div class="activity activity-week8">
+      <h3>T7A3. Reach V0.1<img src="../../images/star.png"/></h3>
+      <div>
+        Work as a team to deliver V0.1. Note the following:
+        <ul>
+          <li>Refer to
+            <span onclick="getContentUsingAjax('../handbook/appendixE-github', '#embedded-week8-workflow', 'workflow');">
+            <span class="embedded-link">our instructions in the handbook</span> to find possible workflow options.<br>
+            </span><div id="embedded-week8-workflow"></div>
+          </li>
+          <li><span class="highlighted">Divide components (GUI, Model, etc.) among team members</span>.
+            Learn the code of your component. In V0.1 (and V0.2), try to limit your work to your component only.
+          </li>
+          <li>
+            <span class="highlighted">Change code in small steps</span>, run tests after each step,
+            commit each step, and merge often.
+          </li>
+        </ul>
+        Submission:<br>
+        No separate submission required as your T7A3 work will be captured in the T7A2 submission above.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="tutorial content-week8">
+  <h3 id="tutorial-content-week8" class="buttoned"><span>Tutorial 7: V0.0, V0.1 </span></h3>
+  <div>
+    <div class="tutorial tutorial-week8">
+      <h3>V0.0</h3>
+      <div>
+        Give an overview of your product using the user guide.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week8">
+      <h3>V0.1</h3>
+      <div>
+        Demo your V0.1 to the tutor.<br>
+      </div>
+    </div>
+    <div class="tutorial tutorial-week8">
+      <h3>Get started on the project plan</h3>
+      <div>
+        If there is time left, you can get started on T8A1.<br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="lecture content-week8">
+<h3 id="lecture-content-week8" class="buttoned"><span>Lecture 8</span></h3>
+  <div>
+    <div class="lecture lecture-week8">
+      <h3>Part 1 - Herding Cats: Making Teams Work [30 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/roles.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL8P1%5d%20Herding%20Cats%20-%20Making%20Teams%20Work.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L8P1.%20Herding%20Cats%20-%20Making%20Teams%20Work.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                <p>
+                  Overview: Working in a team requires project to be broken down to well-specified tasks of manageable size
+												and scheduled in a way that minimize risk of overrunning milestone deadlines.
+                </p>
+                <p>
+                  Topics: work breakdown structures,  scheduling and tracking, team structures
+                </p>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <p>Resources: </p>
+        <ul>
+          <li>
+            Tools
+            <ul>
+              <li>
+                <a target="_blank" href="http://doodle.com/">Doodle</a> can be used to find common time slots for team meetings
+              </li>
+            </ul>
+          </li>
+          <li>
+            Side Readings
+            <ul>
+              <li>
+                <a target="_blank" href="http://www.comp.nus.edu.sg/~damithch/guide3e/Ch5.html#Tips_for_handling_problematic_">How to handle problematic team members</a>
+                - an extract from free eBook <a target="_blank" href="http://www.comp.nus.edu.sg/~damithch/guide3e/">
+                Practical Tips for Software-Intensive Student Projects</a>
+              </li>
+              <li>
+                In this <a target="_blank" href="http://www.geekwire.com/2015/secrets-of-computer-science-tips-for-aspiring-programmers-and-advice-for-their-teachers/">article</a>,
+                read the question Did anything you learned in school help prepare you for the work environment?
+              </li>
+            </ul>
+          </li>
+          <li>
+            Humor
+            <ul>
+              <li>
+                <a target="_blank" href="http://www.techrepublic.com/blog/10-things/10-types-of-programmers-youll-encounter-in-the-field/">Types of Programmers</a>
+                - A humorous post on types of programmers you’ll find in modern software shops. The Ninja, The Code Cowboy, The Mediocre Man, etc.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week8">
+      <h3>Part 2 - Quality Assurance: Testing and Beyond [35 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/qa methods.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL8P2%5d%20Quality%20Assurance%20-%20Testing%20and%20Beyond.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L8P2.%20Quality%20Assurance%20-%20Testing%20and%20Beyond.pptx" target="_blank">Slides</a>]
+              </p>
+              <span class="dim">
+                    <p>
+                      <strong>Overview:</strong> The full system should be put through intensive
+                      testing before release, even if components had been tested
+                      earlier. Other QA techniques such as code reviews, static
+                      analysis etc. can complement testing.
+                    </p>
+                    <p>
+                      <strong>Topics:</strong> validation vs verification, unit testing, integration testing,
+                      system testing, acceptance testing, test coverage, GUI testing,  other QA techniques
+                    </p>
+                  </span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          Resources:
+        </p>
+        <ul>
+          <li>
+            Code coverage tools: You are not required to use code coverage tools in the project.
+          </li>
+          <ul>
+            <li>
+              You can watch <a target="_blank" href="https://www.youtube.com/watch?v=NXYIFiNLwPo">this video</a>
+              to get an idea of how a coverage tool works. It describes EclEmma, a coverage tool for Java.
+            </li>
+            <li>
+              [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2010/07/code-coverage-goal-80-and-no-less.html">
+              How much coverage is enough coverage?</a> - A *must read* post from the Google Testing Blog.
+            </li>
+          </ul>
+          <li>
+            Interesting side reading
+          </li>
+          <ul>
+            <li>
+              [Dev opinion] <a target="_blank" href="http://dzone.com/articles/dont-waste-time-code-reviews">
+              Don't waste time on code reviews</a>
+            </li>
+            <li>
+              [Blog post] <a target="_blank" href="http://googletesting.blogspot.sg/2012/09/conversation-with-test-engineer.html">
+              Conversation with a Test Engineer at Google</a> - A post from the Google Testing Blog.
+            </li>
+            <li>
+              [eBook] If testing intrigues and interests you (a sign that there is a great software engineer inside you),
+              you will like <a target="_blank" href="http://www.scribd.com/doc/69769/TheWayOfTestivus">The Way of Testivus</a> (funny, and full of wisdom :-)
+            </li>
+            <li>
+              [Web article] <a target="_blank" href="http://mashable.com/2013/10/29/dogfooding/#P7iYxbCK25qn">If You Want to Talk
+              Like a Silicon Valley CEO, Learn This Phrase</a>, An article from the Mashable about dogfooding
+            </li>
+            <li>
+              [Web article] <a target="_blank" href="http://pythonsweetness.tumblr.com/post/64740079543/how-to-lose-172222-a-second-for-45-minutes">
+              How to lose $172,222 a second for 45 minutes</a> - An article about a software bug that make a company lose $460 million
+            </li>
+            <li>
+              [Post from Google Testing Blog] <a target="_blank" href="http://googletesting.blogspot.sg/2014/07/measuring-coverage-at-google.html">
+              Measuring coverage at Google</a>
+            </li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+    <div class="lecture lecture-week8">
+      <h3>Part 3 - Heuristics for Better Test Case Design - Part I [20 + 40 minutes]</h3>
+      <div>
+        <table class="padded-borderless lecture-content-table">
+          <tr>
+            <td>
+              <img src="../../images/testcases.png">
+            </td>
+            <td>
+              <p>
+                [<a href="../../files/handouts/%5bL8P3%5d%20Heuristics%20for%20Better%20Test%20Case%20Design.pdf" target="_blank">Handout</a>]
+                [<a href="../../files/slides/L8P3.%20Heuristics%20for%20Better%20Test%20Case%20Design%20(part%201).pptx" target="_blank">Slides part 1</a>]
+                [<a href="../../files/slides/L8P3.%20Heuristics%20for%20Better%20Test%20Case%20Design%20(part%20II).pptx" target="_blank">Slides part 2</a>]
+              </p>
+              <span class="dim">
+                    <p>
+                      <strong>Overview:</strong> Techniques such as equivalence partitioning and
+                      boundary value analysis can be used to increase
+                      effectiveness and efficiency of testing.
+                    </p>
+                    <p>
+                      <strong>Topics:</strong> test case design approaches,  test case design techniques
+                    </p>
+                  </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="lecture lecture-week8">
+      <h3>Recap [5 minutes]</h3>
+      <div>
+        [<a href="../../files/slides/L8Recap.pptx" target="_blank">Slides</a>]
+      </div>
+    </div>
+  </div>
+</div>

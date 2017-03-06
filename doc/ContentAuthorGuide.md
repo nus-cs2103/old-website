@@ -22,7 +22,7 @@ Embedded links are used to load supplementary sections, triggered by a click.
 Adding an embedded link:
 
 1. Enclose link text in `<span onclick="getContentUsingAjax('param-name', 'param-selector', 'param-id');" class="embedded-link">` `</span>`,  
-   e.g. `<span onclick="getContentUsingAjax('handbook-teams', '#embedded-week1-teams');" class="embedded-link">`**Teams**`</span>`
+   e.g. `<span onclick="getContentUsingAjax('handbook/teams', '#embedded-week1-teams');" class="embedded-link">`**Teams**`</span>`
     * param-name: name of the file to load from (without .html)
     * param-selector: `#selector` for element in this page to load into
     * param-id: section id for element in file to load from (optional)
@@ -58,12 +58,12 @@ Inner panels should be `h3` elements nested in the `div`:
 where `divId` has a form `component-week#` e.g. `activity-week2`,  
       `url` links to a file with HTML meant to be inside a `div`.
 
-> Component panels are enabled in **schedule.html** and **week.html**  
+> Component panels are enabled in **schedule/index.html** and **schedule/week.html**  
 > through the `loadInnerPanels(divId)` function in **common.js**.
 
 ### Tooltips
 Tooltips are used for short supplementary information, triggered by a hover.  
-Tooltips are enabled for content in **schedule.html** through **common.js**.
+Tooltips are enabled for content in **schedule/index.html** through **common.js**.
 
 Adding a tooltip:
 
@@ -136,7 +136,7 @@ Each tutorial has a list of learning activities. Stars are used for categories.
 
 ### Coding Standards
 * [JavaScript](https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true)
-* [CSS](https://docs.google.com/document/d/1wA9paRA9cS7ByStGbhRRUZLEzEzimrNQjIDPVqy1ScI/pub)
+* [CSS](../codingStandards/coding-standards-css.md)
 * [HTML](https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html)
 
 ### Committing Changes
