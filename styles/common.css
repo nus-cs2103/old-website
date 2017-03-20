@@ -439,12 +439,12 @@ table.two-column-content td {
 
 .embedded-link:after {
     content: "  ";
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     display: inline-block;
-    background: url("/images/expand.png");
-    -webkit-background-size: 20px 20px;
-    background-size: 20px 20px;
+    background: url("../images/expand.png");
+    -webkit-background-size: 10px 10px;
+    background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: 75% 75%;
 }
