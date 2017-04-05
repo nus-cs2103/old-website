@@ -432,13 +432,24 @@ table.two-column-content td {
  */
 
 .embedded-link {
-    color: blue;
-    text-decoration: underline;
+    border-bottom: 1px dashed #999;
     cursor: pointer;
+}
+
+.embedded-link::after {
+    background: url("../images/expand.png");
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 0.5ex;
+    width: 10px;
 }
 
 .embedded-link:active {
     color: purple;
+    background-position: 75% 75%;
 }
 
 .embedded {
