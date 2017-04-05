@@ -433,24 +433,23 @@ table.two-column-content td {
 
 .embedded-link {
     border-bottom: 1px dashed #999;
-    text-decoration: none;
     cursor: pointer;
 }
 
-.embedded-link:after {
-    content: "  ";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
+.embedded-link::after {
     background: url("../images/expand.png");
-    -webkit-background-size: 10px 10px;
     background-size: 10px 10px;
     background-repeat: no-repeat;
-    background-position: 75% 75%;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 0.5ex;
+    width: 10px;
 }
 
 .embedded-link:active {
     color: purple;
+    background-position: 75% 75%;
 }
 
 .embedded {
